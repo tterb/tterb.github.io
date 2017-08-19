@@ -19,89 +19,85 @@
 
     // Size
 	$size: (
-		element-height:		2.75em,
-		element-margin:		   2em,
-		letter-spacing:	   0.075em,
-		letter-spacing-alt:	0.225em
+		element-height:	       2.75em,
+		element-margin:		      2em,
+		letter-spacing:	      0.075em,
+		letter-spacing-alt:	  0.225em
 	);
 
     // Font
 	$font: (
-		prose-weight:             400,
-		prose-weight-bold:        700,
-		weight:				      400,
-		weight-bold:	   	      600,
-		weight-extrabold:	      800,
-		fixed-family: 		   ('Source Code Pro', 'Inconsolata', 'Monaco', monospace),
-		fixed-size:               1em,
-		inline-fixed-size:     1.05em,
-		fixed-lheight:         1.75em,
-		ctrl-family:		   ('Open Sans', 'Roboto', Helvetica, sans-serif),
-		ctrl-size-xxlarge:       15pt,
-		ctrl-size-xlarge:        13pt,
-		ctrl-size-large:         12pt,
-		ctrl-size-small:         11pt,
-		ctrl-size-xsmall:         9pt,
-		ctrl-lheight-normal:   1.55em,
-		ctrl-lheight-small:    1.35em,
-		ctrl-lheight-smaller:  1.25em,
-		ctrl-lheight-smallest:  0.9em,
-		ctrl-form-size:           1em,
-		ctrl-form-label-size:   0.9em,
-		ctrl-bttn-size:         0.8em,
-		ctrl-bttn-bigsize:     1.35em,
-		ctrl-bttn-lheight:    3.125em,
+        hdr-family:           ('Open Sans', 'Montserrat', Helvetica, sans-serif),
+        hdr-size-xxxlarge:     2.25em,
+        hdr-size-xxlarge:      1.75em,
+        hdr-size-xlarge:       1.35em,
+        hdr-size-large:        1.25em,
+        hdr-size-normal:       1.15em,
+        hdr-size-med:           1.1em,
+        hdr-size-small:           1em,
+        hdr-size-smaller:       0.9em,
+        hdr-size-xsmall:        0.8em,
+        hdr-size-xxsmall:      0.75em,
+        hdr-lheight-large:     1.75em,
+        hdr-lheight-normal:    1.65em,
+        hdr-lheight-small:      1.5em,
+        hdr-lheight-smaller:      1em,
+        hdr-thin:                 100,
+        hdr-light:                300,
+        hdr-normal:               400,
+        hdr-bold:                 600,
+        hdr-extrabold:            700,
+        hdr-black:                800,
+        ctrl-family:		('Open Sans', 'Roboto', Helvetica, sans-serif),
+        ctrl-size-xxlarge:       15pt,
+        ctrl-size-xlarge:        14pt,
+        ctrl-size-large:         13pt,
+        ctrl-size-small:         12pt,
+        ctrl-size-xsmall:         9pt,
+        ctrl-lheight-normal:   1.55em,
+        ctrl-lheight-small:    1.35em,
+        ctrl-lheight-smaller:  1.25em,
+        ctrl-lheight-smallest:  0.9em,
+        ctrl-form-size:           1em,
+        ctrl-form-label-size:   0.9em,
+        ctrl-bttn-size:         0.8em,
+        ctrl-bttn-bigsize:     1.35em,
+        ctrl-bttn-lheight:    3.125em,
         ctrl-thin:                100,
         ctrl-light:               300,
         ctrl-normal:              400,
         ctrl-bold:                500,
         ctrl-extrabold:           700,
         ctrl-black:               900,
-		prose-family:			('Merriweather', 'Georgia', 'Garamond', serif),
-		prose-size-xxlarge:      15pt,
-		prose-size-xlarge:       13pt,
-		prose-size-large:        12pt,
-		prose-size-med:          11pt,
-		prose-size-small:        10pt,
-		prose-size-xsmall:        8pt,
+        prose-family:	   	   ('Lora', 'Georgia', 'Garamond', serif),
+    	prose-size-xxlarge:      15pt,
+    	prose-size-xlarge:       14pt,
+    	prose-size-large:        13pt,
+    	prose-size-med:          12pt,
+    	prose-size-small:        10pt,
+    	prose-size-xsmall:        8pt,
         prose-lheight-large:   1.75em,
-		prose-lheight-normal:  1.65em,
+    	prose-lheight-normal:  1.65em,
         prose-lheight-med:      1.5em,
-		prose-lheight-small:   1.35em,
-		prose-lheight-smaller: 1.25em,
-		prose-lheight-smallest: 0.9em,
-		prose-light:              300,
+    	prose-lheight-small:   1.35em,
+    	prose-lheight-smaller: 1.25em,
+    	prose-lheight-smallest: 0.9em,
+    	prose-light:              300,
         prose-normal:             400,
-        prose-bold:               700,
-        prose-extrabold:          900,
-		hdr-family:            ('Open Sans', 'Montserrat', Helvetica, sans-serif),
-		hdr-size-xxxlarge:     2.25em,
-		hdr-size-xxlarge:      1.75em,
-		hdr-size-xlarge:       1.35em,
-		hdr-size-large:        1.25em,
-		hdr-size-normal:       1.15em,
-		hdr-size-med:           1.1em,
-		hdr-size-small:           1em,
-		hdr-size-smaller:       0.9em,
-	    hdr-size-xsmall:        0.8em,
-	    hdr-size-xxsmall:      0.75em,
-		hdr-lheight-large:     1.75em,
-		hdr-lheight-normal:    1.65em,
-		hdr-lheight-small:      1.5em,
-		hdr-lheight-smaller:      1em,
-        hdr-thin:                 100,
-		hdr-light:                300,
-        hdr-normal:               400,
-        hdr-bold:                 600,
-        hdr-extrabold:            700,
-        hdr-black:                800,
-        letter-spacing:        0.075em
+        prose-bold:               600,
+        prose-extrabold:          700,
+        prose-black:              900,
+    	fixed-family: 		    ('Source Code Pro', 'Inconsolata', 'Monaco', monospace),
+    	fixed-size:              10pt,
+    	fixed-inline-size:     10.5pt,
+    	fixed-lheight:         1.75em,
+        letter-spacing:       0.075em
 	);
 
     // Palette - 2e3842 - #303840
 	$palette: (
 		bg:					#30333b,
-		fg-bold:			rgba(255,255,255,0.95),
+		fg-bold:			rgba(255,255,255,0.9),
 		fg:					mix(#30333b, #ffffff, 25%),
 		fg-light:			rgba(255,255,255,0.5),
 		border:				#ffffff,
@@ -113,7 +109,7 @@
 		// 21b2a6 - 28b7b3 - 51aea6 - 51a0a6
 		accent1: (
 			bg:				#6098a1,
-			fg-bold:		#ffffff,
+			fg-bold:		rgba(255,255,255,0.95),
 			fg:				mix(#6098a1, #ffffff, 15%),
 			fg-light:		mix(#6098a1, #ffffff, 40%),
 			shadow:         desaturate(darken(#6098a1, 12%), 10%),
@@ -125,7 +121,7 @@
 
 		accent2: (
 			bg:				#00ffcc,
-			fg-bold:		#ffffff,
+			fg-bold:		rgba(255,255,255,0.95),
 			fg:				mix(#00ffcc, #ffffff, 22%),
 			fg-light:		mix(#00ffcc, #ffffff, 40%),
 			shadow:         desaturate(darken(#00ffcc, 20%), 30%),
@@ -137,7 +133,7 @@
 
 		accent3: (
 			bg:				#00f0ff,
-			fg-bold:		#ffffff,
+			fg-bold:		rgba(255,255,255,0.95),
 			fg:				mix(#00f0ff, #ffffff, 25%),
 			fg-light:		mix(#00f0ff, #ffffff, 40%),
 			shadow:         desaturate(darken(#00f0ff, 15%), 30%),
@@ -149,7 +145,7 @@
 
 		accent4: (
 			bg:				#95cde0, // #76ddff,
-			fg-bold:		#ffffff,
+			fg-bold:		rgba(255,255,255,0.95),
 			fg:				mix(#95cde0, #ffffff, 25%),
 			fg-light:		mix(#95cde0, #ffffff, 40%),
 			shadow:         desaturate(darken(#95cde0, 20%), 30%),
@@ -161,7 +157,7 @@
 		// 505393 - 555393 - 525889
 		accent5: (
 			bg:				#585e89,
-			fg-bold:		#ffffff,
+			fg-bold:		rgba(255,255,255,0.95),
 			fg:				mix(#585e89, #ffffff, 25%),
 			fg-light:		mix(#585e89, #ffffff, 40%),
 			shadow:         desaturate(darken(#585e89, 10%), 5%),
@@ -173,7 +169,7 @@
 		// ed4933 - f4453b - ea4945 - e64642
 		accent6: (
 			bg:				#d74246,
-			fg-bold:		#ffffff,
+			fg-bold:		rgba(255,255,255,0.95),
 			fg:				mix(#d74246, #ffffff, 25%),
 			fg-light:		mix(#d74246, #ffffff, 40%),
 			shadow:         desaturate(darken(#d74246, 10%), 15%),
@@ -194,32 +190,3 @@
 			border2-bg:		rgba(0,0,0,0.1)
 		)
 	);
-
-	// #303840
-	// #3891a6
-	// #d2d7e8
-	// #6e8898
-	// #6e7dab
-	// #d74246
-
-	// #303840
-	// #666a86
-	// #83a0a0
-	// #17BEBB
-	// #788aa3
-	// #d74246
-
-	// #303840
-	// #a3c4bc
-    // #587B7F
-    // #297373
-    // #0F8B8D
-	// #d74246
-
-	// #303840
-	// #8D99AE
-	// #EDF2F4
-	// #A6D9F7
-	// #DAF5FF
-	// #9D8CA1
-	// #d74246

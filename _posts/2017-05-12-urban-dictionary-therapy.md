@@ -55,15 +55,15 @@ No matter what the issue, **Urban Dictionary Therapy** provides a perfect answer
 
 ## Setup:
 This package requires that you have Python3, as well as BeautifulSoup4. On OS X and Linux systems Python3 should be installed by default. Once Python is installed you can download [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) with the command:
-```
-  >$ pip3 install bs4
+```shell
+  $ pip3 install bs4
 ```
 ***Note:*** To my knowledge, Python3 is also included in the new *Bash on Windows* linux-subsystem for Windows 10.  
 
 
-Furthermore, you can also make the program executable from anywhere in your file-system with the command ```./UDTherapy.py``` by adding the program directory to your *PATH* and by modifying the program permissions using the command:  
-```bash
-  >$ chmod +x UDTherapy.py
+Furthermore, you can also make the program executable from anywhere in your file-system with the command `./UDTherapy.py` by adding the program directory to your *PATH* and by modifying the program permissions using the command:  
+```shell
+  $ chmod +x UDTherapy.py
 ```
 
 <br><br>

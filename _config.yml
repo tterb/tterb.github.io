@@ -1,5 +1,6 @@
 # Welcome to Jekyll!
 
+
 # In addition to these settings, there is a file _data/tokens-template.yml
 # that you'll want to customize for your site. It's named 'tokens' because
 # that was it's original purpose, but because tokens.yml is .gitexcluded, it's
@@ -18,10 +19,10 @@ owner:
   url: https://JonSn0w.github.io
 first_published: 2015 # if migrating another site, the year of your first publish
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://JonSn0w.github.io" # the base hostname & protocol for your site
-repository: JonSn0w/JosnSn0w.github.io
+url: "http://brettstevensn.me" # the base hostname & protocol for your site
+
 # on landing page
-# - set the greeting only if you want to display the first blue section
+# - set the greeting only if you want to display the first green section
 greeting:
   title: Hello!
 # - title for your blog's featured posts
@@ -39,12 +40,21 @@ social:
   twitter: https://twitter.com/BStevensonDev
   email: /contact/
   #flickr:
+  #instagram:
+  #youtube-square:
   #spotify:
   #stack-overflow:
   #vimeo:
   #reddit:
+  #stubleupon:
+  #delicious:
   #pied-piper:
   #digg:
+  #soundcloud:
+  #deviantart:
+  #angellist:
+  #tumblr-square:
+  #stackexchange:
   #weibo:
   #trello:
   #foursquare:
@@ -52,9 +62,16 @@ social:
   #bitbucket-square:
   #vk:
   #slack:
-
-mailaction: https://getsimpleform.com/messages?form_api_token=b2c41d3e99fac447c26b268851e42028
-# mailaction: https://formspree.io/BStevensonDev@gmail.com
+  #vine:
+  #weixin:
+  #yelp:
+  #skyatlas:
+  #leanpub:
+  #connectdevelop:
+  #ils:
+  #forumbee:
+  #tripadvisor:
+  #amazon:
 
 # if you use this repo's `ruby compose.rb` script to initiate new posts, put the
 # command to invoke your editor here. (I didn't spend time dealing with spaces
@@ -62,7 +79,7 @@ mailaction: https://getsimpleform.com/messages?form_api_token=b2c41d3e99fac447c2
 # environment, I just put a subl.cmd file in my PATH that points to the full
 # path to Sublime's subl.exe.) Also, put your most common post extension.
 compose:
-  editor: atom
+  editor: subl
   extension: md
 
 # choose where to put back and next links:
@@ -78,12 +95,13 @@ custom_extensions: no
 
 # Build settings
 permalink: /:categories/:title.html
+# permalink: /:title.html
 markdown: kramdown
 highlighter: rouge
 sass:
  style: compressed
 exclude: ['stuff.html','site.bat','compose.rb','README.md','Gulpfile.js','package.json','node_modules', 'jspm_packages']
-include: ['_pages','_projects','_designs','.htaccess']
+include: ['_pages','.htaccess']
 defaults:
   - scope:
       path: _pages
@@ -97,14 +115,6 @@ defaults:
       path: _drafts
     values:
       layout: post
-  - scope:
-      path: _projects
-    values:
-      layout: page
-  - scope:
-      path: _designs
-    values:
-      layout: page
 
 # to initialize arrays in assignments (assign myarr = site.empty_array)
 # (easier to grok than assign myarr = '' | split',')

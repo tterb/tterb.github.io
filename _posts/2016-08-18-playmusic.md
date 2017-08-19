@@ -6,8 +6,7 @@ keywords: "google, play, music, desktop, player, gpm, rainmeter, skin, packages,
 date: 2016-08-18
 categories: blog project
 options: readme
-image: images/designs/PlayMusic.png
-thumbnail: /images/posts/thumbnails/googleplaymusic.jpg
+image: googleplaymusic.jpg
 header: https://cloud.githubusercontent.com/assets/16360374/23640973/ac0fe0a0-02a5-11e7-91a1-fc9eb72514de.png
 repo: PlayMusic
 tags:
@@ -32,7 +31,7 @@ tags:
 	<img src="https://img.shields.io/github/issues-raw/JonSn0w/PlayMusic.svg?maxAge=25000" height="20" title="Issues">
   </a>
   <a href="http://www.deviantart.com/art/PlayMusic-620128929">
-  		<img src="https://img.shields.io/badge/downloads-%204%2C377-green.svg" height="20" title="Downloads">
+  		<img src="https://img.shields.io/badge/downloads-%205%2C389-green.svg" height="20" title="Downloads">
   </a>
   <span class="badge-paypal">
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" title="Donate to this project using Paypal">

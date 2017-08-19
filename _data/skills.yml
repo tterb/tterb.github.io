@@ -1,0 +1,35 @@
+# skills section data
+
+name: Java
+xp: 9
+color: #95cde0
+
+name: Lua
+xp: 6
+color: #95cde0
+
+name: Python
+xp: 9
+color: #95cde0
+
+name: Perl
+xp: 4
+color: #95cde0
+
+name: Web Dev
+xp: 6
+color: #95cde0
+
+name: Javascript
+xp: 7
+color: #95cde0
+
+name: C++
+xp: 5
+color: #95cde0
+
+
+label: Ability
+id: cs
+aspects: Java, Lua, Python, Perl, Web Dev, Javascript, C++
+percentage: 9, 6, 9, 4, 6, 7, 5

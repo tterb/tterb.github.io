@@ -20,6 +20,7 @@ var gulp = require('gulp'),
     uncss = require('gulp-uncss'),
     minifyCSS = require('gulp-minify-css'),
     critical = require('critical');
+    download = require('gulp-download');
 
 // Jekyll
 gulp.task('jekyll', function() {
@@ -121,6 +122,12 @@ gulp.task('uncss', function() {
     .pipe(gulp.dest('css/uncss/'));
 });
 
+// Google Analytics
+gulp.task('fetch-analytics', function() {
+  return download('https://www.google-analytics.com/analytics.js')
+    .pipe(gulp.dest('js/'));
+});
+
 // // Deployment
 // gulp.task('sync', function() {
 //     return gulp.src(['_site/**'])
@@ -135,8 +142,10 @@ gulp.task('uncss', function() {
 // });
 
 // Run (Default)
-gulp.task('default', ['javascript', 'optimize-css', 'include-css',  'optimize-html', 'styles:critical']);
+gulp.task('default', ['javascript', 'optimize-css', 'include-css',  'optimize-html', 'optimize-images', 'styles:critical', 'fetch-analytics']);
 
+// Run: Build
+gulp.task('build', ['javascript', 'optimize-css', 'include-css',  'optimize-html', 'optimize-images', 'styles:critical', 'fetch-analytics']);
+
+// Run: Clean
 gulp.task('clean', ['uncss']);
-// Run
-gulp.task('build', ['javascript', 'optimize-css', 'include-css',  'optimize-html', 'styles:critical']);

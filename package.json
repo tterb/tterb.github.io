@@ -8,7 +8,9 @@
     "gulp": "^3.9.1",
     "imagemin-pngquant": "^5.0.0",
     "jspm": "^0.16.53",
-    "octicons": "^5.0.1"
+    "octicons": "^5.0.1",
+    "chart.js": "^2.4.0",
+    "ng2-charts": "1.4.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

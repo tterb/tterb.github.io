@@ -6,8 +6,7 @@ keywords: "how, upgrade, SSD, harddrive, razer, blade, laptop, data, recovery, t
 date: 2016-10-05
 categories: blog
 options: fullhead
-image: images/posts/razer-blade.jpg
-thumbnail: /images/posts/thumbnails/razer-blade.jpg
+image: razer-blade.jpg
 tags:
   - upgrade
   - ssd

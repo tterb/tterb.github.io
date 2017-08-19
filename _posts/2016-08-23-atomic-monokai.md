@@ -98,7 +98,7 @@ ______________________________________________________________________________
 
   This package is distributed using *[apm]*. After [installing apm], you can install the syntax theme with the command:  
 
-```
+```shell
 $ apm install atomic-monokai-syntax
 ```
 <br>
