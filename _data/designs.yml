@@ -1,0 +1,30 @@
+- title: Low Poly Island
+  desc: A 3D modeled, Super Mario-inspired, floating island scene created using Cinema 4D.
+  tool: cinema4d
+  image: LowPolyIsland.png
+
+- title: Atom File Icons
+  desc: A set of icons that have been designed to be tastefully unique enough to ease navigation of large projects
+  tool: illustrator
+  image: AtomFileTypes.png
+
+- title: Atomic Design
+  desc: A UI-theme that provides a modern and refined interface for Atom, aiming to improve user experience and adaptability
+  image: AtomicDesign.png
+  tool: code
+  tag: UI-design
+
+- title: PlayMusic
+  desc: A mockup created to provide a preview of the features and variants of the <a href="http://brettstevenson.me/PlayMusic/">PlayMusic</a> rainmeter skin
+  tool: illustrator
+  image: PlayMusic.png
+
+- title: TypeFace
+  desc: A familiar face created in Adobe Illustrator using only manipulated type characters
+  tool: illustrator
+  image: TypeFace.png
+
+- title: Flat Monokai
+  desc: A flat interpretation of the <a href="http://brettstevenson.me/Atomic-Monokai-Syntax/">Atomic Monokai</a> syntax-highlighting package for Atom
+  tool: illustrator
+  image: FlatMonokai.png

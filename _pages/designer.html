@@ -1,0 +1,71 @@
+---
+key: 2
+title: Designer
+permalink: /designer/
+options: fullwidth
+desc: As a designer, my primary focus is in UI/UX and graphic design, where I utilize tools such as Adobe Illustrator, Photoshop, Cinema 4D, as well as various web-based languages, preprocessors, and frameworks.
+image: design.jpg
+background-image: design.jpg
+sitemap:
+  priority: 0.9
+---
+
+<body>
+  <section id="designer" class="wrapper special">
+    <!-- {% include breadcrumb.html %} -->
+    <section id="about" class="wrapper style1 special">
+      <div class="inner">
+        <header class="major">
+          <h2>About</h2>
+          <p>{{ page.desc }}</p>
+        </header>
+        <style>
+          @font-face{font-family:'FontAwesome';src:url('../fonts/fontawesome-webfont.eot?v=4.4.0');src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+          .fa-code:before{content:"\f121";}.fa-github:before{content:"\f09b"}.fa-deviantart:before{content:"\f1bd";}.fa-twitter:before{content:"\f099"}.fa-linkedin-square:before{content:"\f08c"}.fa-envelope:before{content:"\f0e0"}
+        </style>
+        <ul class="icons major">
+          <li><span class="icon icon-font major style3"><span class="ico-pen-tool"></span></span></li>
+          <li><span class="icon icon-font major style3"><span class="ico-paintcan"></span></span></li>
+          <li><span class="icon icon-font major style3"><span class="ico-brackets"></span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <div id="design-gallery" class="wrapper style2 special">
+      <section id="gallery" class="wrapper style2 special">
+        <header class="major">
+          <h2>Gallery</h2>
+        </header>
+        <div class="m-p-g">
+          <div class="m-p-g__thumbs" data-google-image-layout data-max-height="360">
+            <!-- {% assign sorted_designs = site.pages | sort:"key" | reverse %} -->
+            {% for design in site.data.designs %}
+              <div id="flip-container">
+                <div id="flip-card" class="shadow">
+                  <div class="front face">
+                    <img  src="{{ site.baseurl }}{% if design.image %}/images/designs/{{ design.image }}{% else %}banner.jpg{% endif %}" data-full="{{ site.baseurl }}{% if design.image %}/images/designs/{{ design.image }}{% else %}banner.jpg{% endif %}"/>
+                  </div>
+                  <div class="back face center" data-full="{% if design.image %}/images/designs/{{ design.image }}{% else %}banner.jpg{% endif %}">
+                    <div class="click-area m-p-g__thumbs-img" data-full="{{ site.baseurl }}{% if design.image %}/images/designs/{{ design.image }}{% else %}banner.jpg{% endif %}"></div>
+                    <h4>{{ design.title }}</h4>
+                    <p>{{ design.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
+                    {% if design.tool %}
+                      <span class="tool-icon {{ design.tool }}"></span>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="m-p-g__fullscreen" style="border:0;"></div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <script src="{{ site.baseurl }}/js/material-photo-gallery.min.js"></script>
+  <script>
+	    var elem = document.querySelector('.m-p-g');
+	    document.addEventListener('DOMContentLoaded',
+      function() { var gallery = new MaterialPhotoGallery(elem); });
+  </script>
+</body>

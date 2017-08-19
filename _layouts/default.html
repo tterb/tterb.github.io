@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+  {% include head.html %}
+    <body>
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        {% include header.html %}
+        {% if page.header %}
+            {{ content }}
+        {% else %}
+            <article {% if page.background-image %} id="main" {% elsif page.options contains 'minihead' %} id="minihead" {% else %} id="standard" {% endif %}>
+                {% include header-inner.html %} {{ content }}
+            </article>
+        {% endif %}
+
+        {% include footer.html %} {% include scripts.html %}
+
+        <script src="{{ site.baseurl }}/js/jekyll-search.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                json: '{{ site.baseurl }}/search.json',
+                searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+                noResultsText: 'No results found',
+                limit: 10,
+                fuzzy: false,
+                exclude: ['Welcome']
+            })
+        </script>
+
+    </div>
+    <noscript>
+      <link rel="stylesheet" href="font-awesome.min.css">
+      <link rel="stylesheet" href="iconfont.min.css">
+      <link rel="stylesheet" href="syntax-highlighting.css">
+      <link rel="stylesheet" href="vender/disqus.css">
+    </noscript>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!-- Footer -->
+<footer id="footer">
+  <style>
+    @font-face{font-family:'FontAwesome';src:url('../fonts/fontawesome-webfont.eot?v=4.4.0');src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+    .fa-github:before{content:"\f09b";}.fa-deviantart:before{content:"\f1bd";}.fa-dribbble:before{content:"\f17d"}.fa-twitter:before{content:"\f099";}.fa-linkedin-square:before{content:"\f08c";}.fa-envelope-o:before{content:"\f003";}
+  </style>
+  <ul class="icons">
+    {% for socloc in site.social %}
+      {% if socloc[1] %}
+        {% if socloc[0] == 'email' %}
+          <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-envelope-o" style="position:relative;top:4px;"><span class="label">E-mail</span></a></li>
+        {% else %}
+          <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-{{ socloc[0] }}">
+          <span class="label">{{ socloc[0] }}</span></a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <ul class="copyright">
+    <li>&copy;
+      {% assign thisyear = site.time | date: "%Y" %}
+      {% if site.first_published %}
+        {% capture diff %}
+          {{ site.first_published | minus:thisyear }}
+        {% endcapture %}
+        {% if diff contains '-' %}
+          {{ site.first_published }},
+        {% endif %}
+      {% endif %}
+      {{ thisyear }}
+      {% if site.owner.name %}
+        {{ site.owner.name }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </li>
+    <li>Built with <a href="http://jekyllrb.com" target="_blank" style="&:hover{color:_palette(accent6, fg)}">Jekyll</a></li>
+  </ul>
+</footer>

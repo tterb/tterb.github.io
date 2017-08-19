@@ -1,0 +1,24 @@
+
+- title: Hyde
+  permalink: /Hyde/
+  repo: Hyde
+  desc: An Electron-based markdown editor that aims to improve the accessibility of Jekyll as a blogging platform for developers and non-developers, alike.
+  image: Hyde.png
+
+- title: PlayMusic
+  permalink: /PlayMusic/
+  repo: PlayMusic
+  desc: A Rainmeter skin that provides Google Play Music users the ability to access their music tastefully from their desktop.
+  image: PlayMusic.png
+
+- title: Atomic Design UI
+  permalink: /Atomic-Design-UI/
+  repo: atomic-design-ui
+  desc: A theme that provides a dark, modern, and refined interface for Atom, featuring modifications that focus on improving the user experience and adaptability.
+  image: AtomicDesign.png
+
+- title: Github Calendar
+  permalink: /projects/GithubCalendar/
+  repo: githubcalendar
+  desc: A customizable Rainmeter skin that displays the GitHub contribution calendar from the user's profile onto their desktop.
+  image: GithubCalendar.png
