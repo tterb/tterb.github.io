@@ -25,7 +25,7 @@ tags:
 <br>  
 
   *Author*: Brett Stevenson  
-  *Contact*: &#98;&#115;&#116;&#101;&#118;&#101;&#110;&#115;&#111;&#110;&#100;&#101;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;  
+  *Contact*: BStevensonDev@gmail.com  
   *Version*: v1.1.3  
   [License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE)
 <br/><br>  

@@ -3,7 +3,7 @@ priority: 0.7
 title: Upgrading the SSD on a Razer Blade (pt 2)
 keywords: "how,upgrade,SSD,harddrive,razer,blade,laptop,data,recovery,tutorial,jekyll,blog"
 date: 2016-10-06
-categories: blog
+categories: blog article
 options: halfhead
 tags:
   - how

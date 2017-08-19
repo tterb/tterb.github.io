@@ -6,7 +6,8 @@ keywords: "Windows, Windows 10, ten, Windows 10 S, Microsoft, app store, app, st
 date: 2017-06-20
 categories: blog
 options: halfhead 
-image: windows_banner.jpg
+image: /images/posts/windows_banner.jpg
+thumbnail: /images/posts/thumbnails/windows_banner.jpg
 tags:
   - Windows
   - Windows 10

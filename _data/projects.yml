@@ -1,13 +1,7 @@
 
-- title: Hyde
-  permalink: /Hyde/
-  repo: Hyde
-  desc: An Electron-based markdown editor that aims to improve the accessibility of Jekyll as a blogging platform for developers and non-developers, alike.
-  image: Hyde.png
-
 - title: PlayMusic
   permalink: /PlayMusic/
-  repo: PlayMusic
+  repo: playmusic
   desc: A Rainmeter skin that provides Google Play Music users the ability to access their music tastefully from their desktop.
   image: PlayMusic.png
 
@@ -16,6 +10,12 @@
   repo: atomic-design-ui
   desc: A theme that provides a dark, modern, and refined interface for Atom, featuring modifications that focus on improving the user experience and adaptability.
   image: AtomicDesign.png
+
+- title: Atomic Monokai
+  permalink: /Atomic-Monokai-Syntax/
+  repo: atomic-monokai-syntax
+  desc: A Monokai-flavored syntax theme for Atom, which is strategically structured to ensure accurate highlighting for each language.
+  image: AtomicMonokai.png
 
 - title: Github Calendar
   permalink: /projects/GithubCalendar/

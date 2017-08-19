@@ -20,5 +20,4 @@ gem 'jekyll', '>= 3.1.2'
 #  gem "jekyll-github-metadata", "~> 1.0"
 # end
 
-gem 'bourbon'
 gem 'exifr'

@@ -6,7 +6,8 @@ keywords: "atomic, design, ui, theme, monokai, atom, code, text, editor, syntax,
 date: 2016-08-23
 categories: blog project
 options: readme
-image: atomic-design.png
+images: images/posts/thumbnails/atomic-design.png
+thumbnail: /images/posts/thumbnails/atomic-design.png
 header: https://cloud.githubusercontent.com/assets/16360374/22689194/ab4e61f4-ece4-11e6-8732-b613ffaeb2e7.png
 repo: Atomic-Design-UI
 tags:

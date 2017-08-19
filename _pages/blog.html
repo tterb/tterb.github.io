@@ -24,7 +24,7 @@ sitemap:
           <li>
             <section class="featured-box">
               <a href="{{ post.url | prepend: site.baseurl }}" class="image featured">
-                <img src="{{ post.image | prepend: "/images/posts/thumbnails/" | prepend: site.baseurl }}" alt="{{ post.title }}"/>
+                <img src="{{ post.thumbnail }}" alt="{{ post.title }}"/>
               </a>
               <div class="content">
                 <p class="featured-title">{{ post.title }}</p>

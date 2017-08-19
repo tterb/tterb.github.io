@@ -78,13 +78,12 @@ custom_extensions: no
 
 # Build settings
 permalink: /:categories/:title.html
-# permalink: /:title.html
 markdown: kramdown
 highlighter: rouge
 sass:
  style: compressed
 exclude: ['stuff.html','site.bat','compose.rb','README.md','Gulpfile.js','package.json','node_modules', 'jspm_packages']
-include: ['_pages','.htaccess']
+include: ['_pages','_projects','_designs','.htaccess']
 defaults:
   - scope:
       path: _pages
@@ -98,6 +97,14 @@ defaults:
       path: _drafts
     values:
       layout: post
+  - scope:
+      path: _projects
+    values:
+      layout: page
+  - scope:
+      path: _designs
+    values:
+      layout: page
 
 # to initialize arrays in assignments (assign myarr = site.empty_array)
 # (easier to grok than assign myarr = '' | split',')
