@@ -5,7 +5,7 @@ desc: Some insight into how to improve the performance of your Jekyll website
 date: 2017-04-10
 categories: blog
 options: halfhead
-image: web_performance.png
+image: web-performance.png
 tags:
   - jekyll
   - blog
