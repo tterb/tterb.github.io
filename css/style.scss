@@ -3,13 +3,13 @@
 ---
 
 @import 'layout';
-@import 'resume';
-@import 'progressbars';
 @import 'bourbon/bourbon';
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/skel';
 @import 'libs/vars';
+@import 'resume';
+@import 'progressbars';
 @import 'syntax-highlighting';
 
 $baseurl:         '{{ site.baseurl }}/images';
@@ -5171,7 +5171,6 @@ body.body-small .icon-font {
         color: rgba(0,0,0,0.5);
     }
 }
-
 
 // #mailing-list {
 // 	font-family: _font(ctrl-family) !important;
