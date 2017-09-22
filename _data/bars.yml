@@ -10,9 +10,9 @@
 -   id: C++
     descr: C++
     xp: 5
--   id: CSS
-    descr: CSS
-    xp: 8
+-   id: HTML/CSS
+    descr: HTML/CSS
+    xp: 7
 -   id: Lua
     descr: Lua
     xp: 4

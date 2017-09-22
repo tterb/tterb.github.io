@@ -2,7 +2,7 @@
  * RESUME
  ***/
 
-$sidebar-color: #2c323d;
+$sidebar-color: #2a303a;
 
 .resume {
     height: 100%;
@@ -21,7 +21,7 @@ $sidebar-color: #2c323d;
         z-index: 99999;
         .img-container {
             width: 100%;
-            margin: 2em auto 2.25em;
+            margin: 2em auto 2.5em;
             img {
                 background-size: cover;
                 height: 180px;
@@ -36,8 +36,11 @@ $sidebar-color: #2c323d;
                 margin-bottom: 0.15em;
             }
             .skill-container {
-              width: 70%;
+              width: 72%;
               margin: 0 auto;
+              .progress {
+                margin-top: 3px;
+              }
             }
         }
         .section {
@@ -62,27 +65,30 @@ $sidebar-color: #2c323d;
             li {
                 padding-right: 0.45em;
                 &:hover, &:active {
-                    color: _palette(accent6, bg);
+                    color: tint(#65c1c8, 35%);
                 }
             }
         }
     }
     #contact {
-        padding-top: 3.1em;
+        position: relative;
+        top: 2.5em;
+        // padding-top: 3.1em;
     }
     .resume-content {
         display: inline;
         position: absolute;
         background-color: _palette(white);
-        height: 400%;
+        // height: 400%;
         width: calc(72% + (20px/2));
         left: 27%;
         right: 0;
         float: right;
         padding-left: 3em;
+        padding-bottom: 5em;
         z-index: -999;
         .head {
-            margin: 1.5em 0 2.5em 0;
+            margin: 1.5em 0 2.75em 0;
             h1 {
                 font-size: 6em;
                 font-weight: _font(hdr-black);
@@ -96,8 +102,9 @@ $sidebar-color: #2c323d;
                 font-weight: _font(ctrl-bold);
                 letter-spacing: 0.1em;
                 text-transform: none;
-                color: desaturate(lighten($sidebar-color, 30%), 3%);
+                color: desaturate(lighten($sidebar-color, 30%), 10%);
                 padding-left: 8px;
+                opacity: 0.75;
             }
         }
         p {
@@ -156,7 +163,7 @@ $sidebar-color: #2c323d;
                         font-size: 1.35em;
                         letter-spacing: 0.02em;
                         line-height: 1.25;
-                        color: #303030;
+                        color: #3a3a3a;
                         margin: 0.75em auto 0.1em;
                     }
                     h6 {
