@@ -3,6 +3,8 @@
 ---
 
 @import 'layout';
+@import 'resume';
+@import 'progressbars';
 @import 'bourbon/bourbon';
 @import 'libs/functions';
 @import 'libs/mixins';
@@ -15,16 +17,6 @@ $spacing-unit:     4px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-$red-color: #F44336;
-$orange-color: #FB8C00;
-$yellow-color: #FFEB3B;
-$lime-color: #C6FF00;
-$green-color: #4CAF50;
-$teal-color: #26A69A;
-$blue-color: #2196F3;
-$pink-color: #E91E63;
-$purple-color: #9C27B0;
-$white-color: #fefefe;
 
     @include skel-breakpoints((
         xlarge: '(max-width: 1680px)',
@@ -2415,10 +2407,10 @@ body.is-loading {
     padding: 1.5em 0 0 0;
     h3 {
         font-family: open sans, lucida grande, lucida sans unicode, helvetica, arial, sans-serif;
-        font-size: 250%;
+        font-size: 30%;
         font-weight: _font(hdr-bold);
         line-height: _font(ctrl-lheight-normal);
-        letter-spacing: 0.085em;
+        letter-spacing: 0.05em;
         text-transform: none;
         // color: mix(#585E89, #ffffff, 10%);
         color: tint(#585E89, 90%); // Tint is a mix of color with white
@@ -5262,181 +5254,6 @@ body.body-small .icon-font {
 //         float: right;
 //     }
 // }
-
-/***
- * RESUME
- ***/
-
-$sidebar-color: #2f3a40;
-
-.resume {
-    height: 100%;
-    width: 100%;
-    background-color: _palette(white);
-    color: #333;
-    font-family: _font(hdr-family);
-    #sidebar {
-        position: fixed;
-        height: 100%;
-        width: calc(28% - (20px/2));
-        background-color: $sidebar-color;
-        color: tint(#2f3a40, 80%);
-        float: left;
-        box-shadow: 0 0 15px rgba(0,0,0,0.8);
-        z-index: 99999;
-        .img-container {
-            width: 100%;
-            margin: 2em auto 2.25em;
-            img {
-                background-size: cover;
-                height: 180px;
-                width: 180px;
-                border-radius: 100%;
-                margin: 0 calc(49% - 90px);
-                vertical-align: middle;
-            }
-        }
-        .section {
-            width: 95%;
-            margin: auto;
-        }
-        h3 {
-            font-size: 1.75em;
-            font-weight: 200;
-            letter-spacing: 0.04em;
-            text-align: center;
-            white-space: nowrap;
-            opacity: 0.8;
-            margin: auto;
-        }
-        .icons {
-            font-size: 1.5em;
-            color: rgba(255,255,255, 0.6);
-            width: auto;
-            margin: 0 8.15% 1em;
-            padding-top: 1.25em;
-            li {
-                padding-right: 0.65em;
-                &:hover, &:active {
-                    color: _palette(accent6, bg);
-                }
-            }
-        }
-    }
-    .resume-content {
-        display: inline;
-        position: absolute;
-        background-color: _palette(white);
-        height: 400%;
-        width: calc(72% + (20px/2));
-        left: 27%;
-        right: 0;
-        float: right;
-        padding-left: 3em;
-        z-index: -999;
-        .head {
-            margin: 1.5em 0 2.25em 0;
-            h1 {
-                font-size: 6em;
-                font-weight: _font(hdr-black);
-                letter-spacing: 0.045em;
-                color: darken($sidebar-color, 4%);
-                margin-bottom: 0.2em;
-            }
-            h4 {
-                font-family: _font(ctrl-family);
-                font-size: 1.15em;
-                font-weight: _font(ctrl-bold);
-                letter-spacing: 0.1em;
-                text-transform: none;
-                color: desaturate(lighten($sidebar-color, 30%), 3%);
-                padding-left: 8px;
-            }
-        }
-        .resume-section {
-            margin-bottom: 1.5em;
-            #title {
-                font-size: 2.5em;
-                letter-spacing: 0.025em;
-                color: #444;
-                border-bottom: 1px solid rgba(0,0,0,0.325);
-                margin-bottom: 0.25em;
-            }
-            p {
-                padding-right: 3.15em;
-            }
-        }
-        #work {
-            height: 15%;
-        }
-        #school {
-            height: 8.5%;
-        }
-        #project {
-            height: 23%;
-        }
-        .sub {
-            width: 100%;
-            background-color: _palette(white);
-            .left {
-                display: inline;
-                width: calc(30% - 10px);
-                float: left;
-                margin-right: 10px;
-                h4 {
-                    font-size: 1.5em;
-                    letter-spacing: 0.015em;
-                    color: #4A4A4A;
-                    border-bottom: 3px solid _palette(accent4, bg);
-                    white-space: nowrap;
-                }
-            }
-            .right {
-                display: inline;
-                width: 70%;
-                float: right;
-                margin-top: 1.05em;
-                .entry{
-                    margin: 2em 0 0;
-                    h5 {
-                        font-size: 1.35em;
-                        letter-spacing: 0.015em;
-                        line-height: 1.25;
-                        color: #303030;
-                        margin: 0.75em auto 0.1em;
-                    }
-                    h6 {
-                        font-size: 9pt;
-                        font-weight: _font(hdr-normal);
-                        letter-spacing: 0.0175em;
-                        text-transform: none;
-                        color: desaturate(lighten($sidebar-color, 25%), 5%);
-                        margin-bottom: 0.5em;
-                        padding-left: 2px;
-                    }
-                    p {
-                        color: #444 !important;
-                        padding-left: 2px;
-                        padding-right: 2em;
-                    }
-                    strong {
-                        font-weight: _font(ctrl-bold) !important;
-                    }
-                    a {
-                        color: darken(_palette(accent4, bg), 12%);
-                        &:hover, &:active {
-                            color: tint(_palette(accent4, bg), 10%);
-                        }
-                    }
-                }
-            }
-        }
-        hr {
-            color: rgba(0,0,0,0.25);
-            margin: 1.25em 0;
-        }
-    }
-}
 
 {% if site.custom_extensions == 'yes' %}
 {% include _my/custom.scss %}
