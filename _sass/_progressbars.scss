@@ -1,0 +1,101 @@
+/**
+ * Progress bars
+ */
+
+ $red-color: #F44336;
+ $orange-color: #FB8C00;
+ $yellow-color: #FFEB3B;
+ $lime-color: #C6FF00;
+ $green-color: #4CAF50;
+ $teal-color: #26A69A;
+ $blue-color: #2196F3;
+ $pink-color: #E91E63;
+ $purple-color: #9C27B0;
+ $white-color: #fefefe;
+
+ .progress {
+    width: 100%;
+    height: 5px;
+    background: #dddddd;
+    border-radius: 2px;
+    margin-top: 5px;
+
+     .progress-1 {
+         width: 10%;
+         height: 100%;
+         background-color: $red-color;
+         border-radius: 2px;
+    }
+
+     .progress-2 {
+         width: 20%;
+         height: 100%;
+         background-color: $red-color;
+         border-radius: 2px;
+    }
+
+     .progress-3 {
+         width: 30%;
+         height: 100%;
+         background-color: $orange-color;
+         border-radius: 2px;
+    }
+
+     .progress-4 {
+         width: 40%;
+         height: 100%;
+         background-color: $orange-color;
+         border-radius: 2px;
+    }
+
+     .progress-5 {
+         width: 50%;
+         height: 100%;
+         background-color: $yellow-color;
+         border-radius: 2px;
+    }
+
+     .progress-6 {
+         width: 60%;
+         height: 100%;
+         background-color: $pink-color;
+         border-radius: 2px;
+    }
+
+     .progress-7 {
+         width: 70%;
+         height: 100%;
+         background-color:  $green-color;
+         border-radius: 2px;
+    }
+
+     .progress-8 {
+         width: 80%;
+         height: 100%;
+         background-color:  $blue-color;
+         border-radius: 2px;
+    }
+
+     .progress-9 {
+         width: 90%;
+         height: 100%;
+         background-color: $teal-color;
+         border-radius: 2px;
+    }
+
+     .progress-10{
+         width: 100%;
+         height: 100%;
+         background-color: $green-color;
+         border-radius: 2px;
+    }
+
+ }
+
+.white-text {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  line-height: 0;
+  margin-left: 4px;
+  margin-bottom: 0;
+}

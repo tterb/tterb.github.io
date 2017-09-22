@@ -15,19 +15,16 @@ sitemap:
       <img src="{{ page.image | prepend: "/images/" | prepend: site.baseurl }}" class="resume-image"/>
     </div>
     <div class="side-skills">
-      <h3>Skills</h3>
+        <h3>Skills</h3>
+        {% for lang in site.data.bars %}
+          <div class="skill-container">
+            <span class="white-text">{{ lang.id }}</span>
+            <div class="progress margin-bot">
+              <div class="progress-{{ lang.xp }}"></div>
+            </div>
+          </div>
+        {% endfor %}
     </div>
-    <!-- <section class="col col-3">
-      <div class="block">
-        <div class="block-body">
-          <h3 class="margin-bot">Languages</h3>
-          {% for skill in site.data.skills %}
-            <span class="post-meta">{{skill.name}}</span>
-            <div class="progress margin-bot"><div class="progress-{{ skill.xp }} {{ skill.color }}"></div></div>
-          {% endfor %}
-        </div>
-      </div>
-    </section> -->
     <style>
       @font-face{font-family:'FontAwesome';src:url('../fonts/fontawesome-webfont.eot?v=4.4.0');src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
       .fa-github:before{content:"\f09b";}.fa-deviantart:before{content:"\f1bd";}.fa-dribbble:before{content:"\f17d"}.fa-twitter:before{content:"\f099";}.fa-linkedin-square:before{content:"\f08c";}.fa-envelope-o:before{content:"\f003";}
@@ -40,8 +37,10 @@ sitemap:
             {% if socloc[0] == 'email' %}
               <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-envelope-o"><span class="label">E-mail</span></a></li>
             {% else %}
-              <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-{{ socloc[0] }}">
-              <span class="label">{{ socloc[0] }}</span></a></li>
+              {% unless socloc[0] == 'dribbble' %}
+                <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-{{ socloc[0] }}">
+                <span class="label">{{ socloc[0] }}</span></a></li>
+              {% endunless %}
             {% endif %}
           {% endif %}
         {% endfor %}
@@ -53,7 +52,7 @@ sitemap:
       <h1 class="name">Brett Stevenson</h1>
       <h4 class="desc">Developer &#x1f784; Designer &#x1f784; Student</h4>
     </div>
-    <hr>
+    <!-- <hr> -->
     <div class="resume-section">
       <h2 id="title">Developer</h2>
       <p>As a developer, I have experience working in both front and back-end development and enjoy experimenting with new frameworks and platforms, while striving to create tools that myself and others can enjoy. While I have experience working with a variety of languages and platforms, more importantly, this experience has provided me with a deep and comprehensive understanding of the fundamental concepts of programming, allowing me to easily adapt to new languages and environments.</p>
@@ -65,12 +64,12 @@ sitemap:
       <div class="right">
           <div class=entry>
               <h5>Open Source</h5>
-              <h6><i>Developer</i> &#x1f784; 2015-current</h6>
-              <p>Since my introduction to the open-source community, I've been  inspired by the authenticity and limitlessness of cooperatively developing great software.</p>
+              <h6><i>Developer</i> &#x1f784; 2015&#x2013;Current</h6>
+              <p>Since my introduction to the open-source community, I've been inspired by the expansiveness of freely and cooperatively developing great software.</p>
           </div>
           <div class=entry>
               <h5>Web Development</h5>
-              <h6><i>Developer/Designer</i> &#x1f784; 2014-2015</h6>
+              <h6><i>Developer/Designer</i> &#x1f784; 2014&#x2013;2015</h6>
               <p>Prior to my pursuit of a degree in Computer Science, I explored website development when a group I participated in was in need of a website. This experience led to further freelance web development offers and the discovery of my love for programming.</p>
           </div>
       </div>
@@ -82,8 +81,8 @@ sitemap:
       <div class="right">
         <div class=entry>
           <h5>Cabrillo College</h5>
-          <h6><i>Computer Science</i> &#x1f784; 2015-2017</h6>
-          <p>Upon moving to Santa Cruz, California, I enrolled in Cabrillo College where I began my pursuit of a degree in Computer Science, while also taking courses to explore my passions for graphic design and digital media.</p>
+          <h6><i>Computer Science</i> &#x1f784; 2015&#x2013;2017</h6>
+          <p>Upon moving to Santa Cruz, California, I enrolled in Cabrillo College where I began pursuing a degree in Computer Science, while also taking courses to explore my passions for graphic design and digital media.</p>
         </div>
       </div>
     </div>
@@ -94,17 +93,17 @@ sitemap:
       <div class="right">
         <div class=entry>
           <h5>Hyde</h5>
-          <h6><i>Javascript</i> &#x1f784; 2017-Current</h6>
+          <h6><i>Javascript</i> &#x1f784; 2017&#x2013;Current</h6>
           <p>An Electron-based markdown editor that aims to improve the accessibility of Jekyll as a blogging platform for developers and non-developers, alike.</p>
         </div>
         <div class=entry>
           <h5>PlayMusic</h5>
-          <h6><i>Lua</i> &#x1f784; 2016-Current</h6>
+          <h6><i>Lua</i> &#x1f784; 2016&#x2013;Current</h6>
           <p>A Rainmeter skin that provides thousands of Google Play Music users the ability to access their active media tastefully from their desktop.</p>
         </div>
         <div class=entry>
-          <h5>More...</h5>
-          <p>Though, this is only a small sample of my many active projects. If you're interested, feel free to explore more of my projects on <strong><a href="https://github.com/JonSn0w" target="_blank">GitHub</a></strong></p>
+          <h5>Much More...</h5>
+          <p>Though, this is only a small sample of my many active projects and contributions. If you'd like to see more, feel free to explore more of my projects on <strong><a href="https://github.com/JonSn0w" target="_blank">GitHub</a></strong></p>
         </div>
       </div>
     </div>

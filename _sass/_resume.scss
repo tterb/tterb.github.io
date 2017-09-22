@@ -1,0 +1,194 @@
+/***
+ * RESUME
+ ***/
+
+$sidebar-color: #2c323d;
+
+.resume {
+    height: 100%;
+    width: 100%;
+    background-color: _palette(white);
+    color: #333;
+    font-family: _font(hdr-family);
+    #sidebar {
+        position: fixed;
+        height: 100%;
+        width: calc(28% - (20px/2));
+        background-color: $sidebar-color;
+        color: tint(#2f3a40, 80%);
+        float: left;
+        box-shadow: 0 0 15px rgba(0,0,0,0.8);
+        z-index: 99999;
+        .img-container {
+            width: 100%;
+            margin: 2em auto 2.25em;
+            img {
+                background-size: cover;
+                height: 180px;
+                width: 180px;
+                border-radius: 100%;
+                margin: 0 calc(49% - 90px);
+                vertical-align: middle;
+            }
+        }
+        .side-skills {
+            h3 {
+                margin-bottom: 0.15em;
+            }
+            .skill-container {
+              width: 70%;
+              margin: 0 auto;
+            }
+        }
+        .section {
+            width: 95%;
+            margin: auto;
+        }
+        h3 {
+            font-size: 1.75em;
+            font-weight: 200;
+            letter-spacing: 0.04em;
+            text-align: center;
+            white-space: nowrap;
+            opacity: 0.8;
+            margin: auto;
+        }
+        .icons {
+            font-size: 1.5em;
+            color: rgba(255,255,255, 0.5);
+            width: 67.5%;
+            margin: 0.15em auto 1em;
+            padding-top: 0.5em;
+            li {
+                padding-right: 0.45em;
+                &:hover, &:active {
+                    color: _palette(accent6, bg);
+                }
+            }
+        }
+    }
+    #contact {
+        padding-top: 3.1em;
+    }
+    .resume-content {
+        display: inline;
+        position: absolute;
+        background-color: _palette(white);
+        height: 400%;
+        width: calc(72% + (20px/2));
+        left: 27%;
+        right: 0;
+        float: right;
+        padding-left: 3em;
+        z-index: -999;
+        .head {
+            margin: 1.5em 0 2.5em 0;
+            h1 {
+                font-size: 6em;
+                font-weight: _font(hdr-black);
+                letter-spacing: 0.045em;
+                color: darken($sidebar-color, 4%);
+                margin-bottom: 0.15em;
+            }
+            h4 {
+                font-family: _font(ctrl-family);
+                font-size: 1.15em;
+                font-weight: _font(ctrl-bold);
+                letter-spacing: 0.1em;
+                text-transform: none;
+                color: desaturate(lighten($sidebar-color, 30%), 3%);
+                padding-left: 8px;
+            }
+        }
+        p {
+          font-size: 14px;
+          letter-spacing: 0.03em;
+        }
+        .resume-section {
+            margin-bottom: 1.5em;
+            #title {
+                color: #444;
+                font-size: 2.5em;
+                letter-spacing: 0.025em;
+                line-height: 1.5;
+                border-bottom: 1px solid rgba(0,0,0,0.125);
+                margin-bottom: 0.4em;
+            }
+            p {
+                margin-bottom: 2.25em;
+                padding-right: 3.15em;
+            }
+        }
+        #work {
+            height: 15%;
+        }
+        #school {
+            height: 8.5%;
+        }
+        #project {
+            height: 23%;
+        }
+        .sub {
+            display: inline-block;
+            background-color: _palette(white);
+            width: 100%;
+            .left {
+                display: inline;
+                width: calc(28% - 10px);
+                float: left;
+                margin-right: 10px;
+                h4 {
+                    font-size: 1.5em;
+                    letter-spacing: 0.015em;
+                    color: #4A4A4A;
+                    border-bottom: 3px solid _palette(accent4, bg);
+                    white-space: nowrap;
+                }
+            }
+            .right {
+                display: inline;
+                width: 71%;
+                float: right;
+                margin-top: 1.05em;
+                .entry{
+                    margin: 2em 0 0;
+                    h5 {
+                        font-size: 1.35em;
+                        letter-spacing: 0.02em;
+                        line-height: 1.25;
+                        color: #303030;
+                        margin: 0.75em auto 0.1em;
+                    }
+                    h6 {
+                        font-size: 9pt;
+                        font-weight: _font(hdr-normal);
+                        letter-spacing: 0.0175em;
+                        text-transform: none;
+                        color: desaturate(lighten($sidebar-color, 25%), 5%);
+                        margin-top: 0.15em;
+                        margin-bottom: 0.75em;
+                        padding-left: 2px;
+                    }
+                    p {
+                        color: #444 !important;
+                        padding-left: 2px;
+                        padding-right: 2em;
+                    }
+                    strong {
+                        font-weight: _font(ctrl-bold) !important;
+                    }
+                    a {
+                        color: darken(_palette(accent4, bg), 12%);
+                        &:hover, &:active {
+                            color: tint(_palette(accent4, bg), 10%);
+                        }
+                    }
+                }
+            }
+        }
+        hr {
+            color: rgba(0,0,0,0.25);
+            margin: 1.25em 0;
+        }
+    }
+}
