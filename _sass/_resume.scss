@@ -13,7 +13,8 @@ $sidebar-color: #2a303a;
     #sidebar {
         position: fixed;
         height: 100%;
-        width: calc(28% - (20px/2));
+        width: 28%;
+        max-width: 300px;
         background-color: $sidebar-color;
         color: tint(#2f3a40, 80%);
         float: left;
@@ -23,20 +24,19 @@ $sidebar-color: #2a303a;
             width: 100%;
             margin: 2em auto 2.5em;
             img {
+                display: block;
                 background-size: cover;
-                height: 180px;
-                width: 180px;
+                width: 70%;
+                height: auto;
+                max-width: 200px;
                 border-radius: 100%;
-                margin: 0 calc(49% - 90px);
+                margin: 0 auto;
                 vertical-align: middle;
             }
         }
         .side-skills {
-            h3 {
-                margin-bottom: 0.15em;
-            }
             .skill-container {
-              width: 72%;
+              width: 80%;
               margin: 0 auto;
               .progress {
                 margin-top: 3px;
@@ -57,35 +57,46 @@ $sidebar-color: #2a303a;
             margin: auto;
         }
         .icons {
-            font-size: 1.5em;
             color: rgba(255,255,255, 0.5);
-            width: 67.5%;
-            margin: 0.15em auto 1em;
+            text-align: center;
+            margin: 0 0.6em 1em auto;
             padding-top: 0.5em;
             li {
-                padding-right: 0.45em;
+                font-size: 155%;
+                margin: 0 auto;
+                padding: 0.25em;
                 &:hover, &:active {
                     color: tint(#65c1c8, 35%);
+                }
+                &:last-child {
+                    font-size: 145%;
                 }
             }
         }
     }
     #contact {
         position: relative;
-        top: 2.5em;
-        // padding-top: 3.1em;
+        top: 2.35vh;
+        padding: 1.5em 0 0.15em 0;
+        ul {
+            padding: 0;
+            li {
+                padding: 0;
+            }
+        }
     }
     .resume-content {
         display: inline;
         position: absolute;
         background-color: _palette(white);
-        // height: 400%;
-        width: calc(72% + (20px/2));
-        left: 27%;
+        width: 100%;
+        max-width: calc(100% - 300px);
+        // left: 27%;
         right: 0;
-        float: right;
+        // float: right;
         padding-left: 3em;
-        padding-bottom: 5em;
+        padding-right: 1%;
+        padding-bottom: 4em;
         z-index: -999;
         .head {
             margin: 1.5em 0 2.75em 0;
@@ -94,6 +105,7 @@ $sidebar-color: #2a303a;
                 font-weight: _font(hdr-black);
                 letter-spacing: 0.045em;
                 color: darken($sidebar-color, 4%);
+                max-width: 700px;
                 margin-bottom: 0.15em;
             }
             h4 {
@@ -109,7 +121,7 @@ $sidebar-color: #2a303a;
         }
         p {
           font-size: 14px;
-          letter-spacing: 0.03em;
+          letter-spacing: 0.035em;
         }
         .resume-section {
             margin-bottom: 1.5em;
@@ -119,11 +131,12 @@ $sidebar-color: #2a303a;
                 letter-spacing: 0.025em;
                 line-height: 1.5;
                 border-bottom: 1px solid rgba(0,0,0,0.125);
+                margin-right: 3.5%;
                 margin-bottom: 0.4em;
             }
             p {
                 margin-bottom: 2.25em;
-                padding-right: 3.15em;
+                padding-right: 1.15em;
             }
         }
         #work {
@@ -159,12 +172,19 @@ $sidebar-color: #2a303a;
                 margin-top: 1.05em;
                 .entry{
                     margin: 2em 0 0;
+                    padding-right: 1em;
                     h5 {
+                        color: #3a3a3a;
                         font-size: 1.35em;
                         letter-spacing: 0.02em;
                         line-height: 1.25;
-                        color: #3a3a3a;
                         margin: 0.75em auto 0.1em;
+                        a {
+                            color: #3a3a3a;
+                            &:hover {
+                                color: darken(_palette(accent4, bg), 14%) !important;
+                            }
+                        }
                     }
                     h6 {
                         font-size: 9pt;
@@ -173,13 +193,13 @@ $sidebar-color: #2a303a;
                         text-transform: none;
                         color: desaturate(lighten($sidebar-color, 25%), 5%);
                         margin-top: 0.15em;
-                        margin-bottom: 0.75em;
+                        margin-bottom: 0.5em;
                         padding-left: 2px;
                     }
                     p {
                         color: #444 !important;
                         padding-left: 2px;
-                        padding-right: 2em;
+                        // padding-right: 2em;
                     }
                     strong {
                         font-weight: _font(ctrl-bold) !important;

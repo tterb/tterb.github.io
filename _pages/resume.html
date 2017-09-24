@@ -14,13 +14,13 @@ sitemap:
     <div class="img-container">
       <img src="{{ page.image | prepend: "/images/" | prepend: site.baseurl }}" class="resume-image"/>
     </div>
-    <div class="side-skills">
+    <div class="side-skills section" >
         <h3>Skills</h3>
-        {% for lang in site.data.bars %}
+        {% for skill in site.data.bars %}
           <div class="skill-container">
-            <span class="white-text">{{ lang.id }}</span>
+            <span class="white-text">{{ skill.id }}</span>
             <div class="progress margin-bot">
-              <div class="progress-{{ lang.xp }}"></div>
+              <div class="progress-{{ skill.xp }}"></div>
             </div>
           </div>
         {% endfor %}
@@ -92,17 +92,17 @@ sitemap:
       </div>
       <div class="right">
         <div class=entry>
-          <h5>Hyde</h5>
+          <h5><a href="https://github.com/JonSn0w/Hyde" target="_blank">Hyde</a></h5>
           <h6><i>Javascript</i> &#x1f784; 2017&#x2013;Current</h6>
           <p>An Electron-based markdown editor that aims to improve the accessibility of Jekyll as a blogging platform for developers and non-developers, alike.</p>
         </div>
         <div class=entry>
-          <h5>PlayMusic</h5>
+          <h5><a href="https://github.com/JonSn0w/PlayMusic" target="_blank">PlayMusic</a></h5>
           <h6><i>Lua</i> &#x1f784; 2016&#x2013;Current</h6>
           <p>A Rainmeter skin that provides thousands of Google Play Music users the ability to access their active media tastefully from their desktop.</p>
         </div>
         <div class=entry>
-          <h5>Much More...</h5>
+          <h5 style="margin-bottom: 0.5em;"><a href="https://github.com/JonSn0w" target="_blank">Much More...</a></h5>
           <p>Though, this is only a small sample of my many active projects and contributions. If you'd like to see more, feel free to explore more of my projects on <strong><a href="https://github.com/JonSn0w" target="_blank">GitHub</a></strong></p>
         </div>
       </div>
