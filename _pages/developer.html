@@ -100,12 +100,15 @@ sitemap:
                   </div>
                   {% if project.repo %}
                   <ul id="github-buttons" class="list-inline">
-                    <!-- <li><span class="icon icon-font"><span class="ico-eye"></span></span> -->
+                    <li>
+                      <!-- <span class="icon icon-font"><span class="ico-eye"></span></span> -->
                       <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/subscription" data-icon="octicon-eye" data-text="Watch" data-show-count="true" aria-label="Watch {{ project.repo }} on GitHub"></a>
                     </li>
-                    <!-- <li><span class="icon icon-font"><span class="ico-heart"></span></span> -->
+                    <li>
+                      <!-- <span class="icon icon-font"><span class="ico-heart"></span></span> -->
                       <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}"
                       data-icon="octicon-star"
+                      data-show-count="true"
                       data-count-href="/JonSn0w/{{ project.repo }}/stargazers"
                       data-show-count="/repos/JonSn0w/{{ project.repo }}#stargazers_count"
                       data-count-aria-label="# stargazers on GitHub"
@@ -119,10 +122,11 @@ sitemap:
                       data-count-aria-label="# forks on GitHub"
                       aria-label="Fork {{ project.title }} on GitHub">Fork</a>
                     </li> -->
-              			<!-- <li><span class="icon icon-font"><span class="ico-cloud-download"></span></span> -->
+              			<li>
+                      <!-- <span class="icon icon-font"><span class="ico-cloud-download"></span></span> -->
               			  <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/archive/master.zip"
               			  data-icon="octicon-cloud-download"
-              			  aria-label="Download {{ project.title }} on GitHub">Download</a>
+              			  aria-label="Download {{ project.title }} on GitHub" alt="Download {{ project.title }} on GitHub">Download</a>
               			</li>
                   </ul>
                     <!-- <div class="gh-buttons">

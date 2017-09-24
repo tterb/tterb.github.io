@@ -2406,9 +2406,9 @@ body.is-loading {
     margin: 0.75em 0 0 0;
     padding: 1.5em 0 0 0;
     h3 {
-        font-family: open sans, lucida grande, lucida sans unicode, helvetica, arial, sans-serif;
-        font-size: 30%;
-        font-weight: _font(hdr-bold);
+        font-family: _font(hdr-family);
+        font-size: 300%;
+        font-weight: _font(hdr-extrabold);
         line-height: _font(ctrl-lheight-normal);
         letter-spacing: 0.05em;
         text-transform: none;
@@ -2545,6 +2545,7 @@ body.is-loading {
         .count {
             position: relative;
             left: 2.25em;
+            margin-left: 0 !important;
         }
     }
 }
@@ -3676,7 +3677,7 @@ padding-left: 0;
 .m-p-g {
     max-width: 100%;
     margin: 0 auto;
-
+    padding: 0 1em;
     &__thumbs {
         &-img {
             position: relative;
