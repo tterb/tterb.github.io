@@ -2555,6 +2555,11 @@ body.is-loading {
 //     color: _palette(accent5, shadow);
 // }
 
+.icon.fa-circle {
+    font-size: 30% !important;
+    top: -3.5px;
+}
+
 body.is-mobile {
     #main {
         > header {
