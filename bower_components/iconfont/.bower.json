@@ -1,7 +1,7 @@
 {
   "name": "iconfont",
   "version": "2.0.1",
-  "homepage": "http://brettstevenson.me/fonts/iconfont",
+  "homepage": "http://brettstevenson.io/fonts/iconfont",
   "authors": [
     "Brett Stevenson <bstevensondev@gmail.com>"
   ],
@@ -14,7 +14,7 @@
     "fonts/iconfont.ttf",
     "fonts/iconfont.woff"
   ],
-  "description": "A selection of custom icons, created for use on brettstevenson.me.",
+  "description": "A selection of custom icons, created for use on brettstevenson.io.",
   "keywords": [
     "programmng",
     "software",

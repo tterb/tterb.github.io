@@ -15,7 +15,7 @@
   tag: UI-design
 
 - title: PlayMusic
-  desc: A mockup created to provide a preview of the features and variants of the <a href="http://brettstevenson.me/PlayMusic/">PlayMusic</a> rainmeter skin
+  desc: A mockup created to provide a preview of the features and variants of the <a href="http://brettstevenson.io/PlayMusic/">PlayMusic</a> rainmeter skin
   tool: illustrator
   image: PlayMusic.png
 
@@ -25,6 +25,6 @@
   image: TypeFace.png
 
 - title: Flat Monokai
-  desc: A flat interpretation of the <a href="http://brettstevenson.me/Atomic-Monokai-Syntax/">Atomic Monokai</a> syntax-highlighting package for Atom
+  desc: A flat interpretation of the <a href="http://brettstevenson.io/Atomic-Monokai-Syntax/">Atomic Monokai</a> syntax-highlighting package for Atom
   tool: illustrator
   image: FlatMonokai.png

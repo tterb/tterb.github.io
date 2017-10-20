@@ -19,7 +19,7 @@ owner:
   url: https://JonSn0w.github.io
 first_published: 2015 # if migrating another site, the year of your first publish
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://brettstevenson.me" # the base hostname & protocol for your site
+url: "https://brettstevenson.io" # the base hostname & protocol for your site
 
 # on landing page
 # - set the greeting only if you want to display the first green section
@@ -51,7 +51,6 @@ social:
   #pied-piper:
   #digg:
   #soundcloud:
-  #deviantart:
   #angellist:
   #tumblr-square:
   #stackexchange:
