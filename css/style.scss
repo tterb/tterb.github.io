@@ -1065,7 +1065,7 @@ button, .button {
 
     &.special {
         background-color: _palette(accent6, bg);
-        box-shadow: 0 3px 0 0 _palette(accent6, shadow) !important;
+        box-shadow: 0 3px 0 0 darken(_palette(accent6, shadow),3%) !important;
         color: _palette(accent6, fg-bold) !important;
 
         &:hover {
@@ -2183,6 +2183,25 @@ body.is-loading {
         &:nth-child(-1) {
             border-bottom-right-radius: 5px;
         }
+    }
+    .face {
+      > img {
+        max-width: 100% !important;
+        top: 0;
+      }
+      &.back {
+        padding: 1em;
+        h4 {
+          margin-top: 0.25em !important;
+        }
+        p {
+          font-size: 10.5pt;
+        }
+        .project-icon {
+          font-size: 2.5em;
+          bottom: -0.5em;
+        }
+      }
     }
 }
 
@@ -3991,7 +4010,6 @@ padding-left: 0;
     overflow: hidden;
     vertical-align: middle;
     @include backface-visibility(hidden);
-
     > img {
         display: inline-block;
         position: relative;
@@ -4002,6 +4020,7 @@ padding-left: 0;
         top: -10%;
         min-width: 100%;
         min-height: 100%;
+        max-width: 100%;
         width: auto;
         margin: auto;
         border-radius: 0;
