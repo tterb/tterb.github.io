@@ -31,9 +31,9 @@
 }
 
 @mixin transition-all() {
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    transition: all 0.35s;
+	-webkit-transition: all 0.35s;
+	-moz-transition: all 0.35s;
+	transition: all 0.35s;
 }
 
 /// Applies padding to an element, taking the current element-margin value into account.
@@ -49,13 +49,13 @@
 }
 
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+	@media screen and (max-width: $device) {
+		@content;
+	}
 }
 
 @mixin respond-to($breakpoint) {
-    @media only screen and (max-width: $breakpoint + px) {
-        @content;
-    }
+	@media only screen and (max-width: $breakpoint + px) {
+		@content;
+	}
 }

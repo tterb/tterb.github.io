@@ -10,91 +10,91 @@ $on-laptop:        800px;
  * Clearfix
  */
 %clearfix {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 /**
  * Grid
  */
 .col-wrapper {
-    font-size: 15px;
-    color: #fefefe;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
+  font-size: 15px;
+  color: #fefefe;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
 }
 
 .columns {
-    display: inline;
+  display: inline;
 }
 
 .col {
-    // display: block;
-    float: left;
-    margin-bottom: $spacing-unit / 4;
-    padding-left: $spacing-unit / 2;
+  // display: block;
+  float: left;
+  margin-bottom: $spacing-unit / 4;
+  padding-left: $spacing-unit / 2;
 }
 
 .col-2 {
-    @include calc(width, "70% - (#{$spacing-unit}/ 2)");
+  @include calc(width, "70% - (#{$spacing-unit}/ 2)");
 }
 
 .col-3 {
-    @include calc(width, "30% - (#{$spacing-unit}/ 2)");
+  @include calc(width, "30% - (#{$spacing-unit}/ 2)");
 }
 
 .col-4 {
-    @include calc(width, "100% - (#{$spacing-unit}/ 2)");
+  @include calc(width, "100% - (#{$spacing-unit}/ 2)");
 }
 
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
 @include media-query($on-laptop) {
-    .col-1,
-    .col-2,
-    .col-3,
-    .col-4 {
-        @include calc(width, "100% - (#{$spacing-unit}/ 2)");
-    }
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4 {
+    @include calc(width, "100% - (#{$spacing-unit}/ 2)");
+  }
 }
 
 @include media-query($on-palm) {
-    .col {
-        float: none;
-        @include calc(width, "100% - (#{$spacing-unit}/ 2)");
-    }
+  .col {
+    float: none;
+    @include calc(width, "100% - (#{$spacing-unit}/ 2)");
+  }
 }
 
 .margin-bot {
-    color: #fefefe !important;
-    margin-bottom: $spacing-unit;
+  color: #fefefe !important;
+  margin-bottom: $spacing-unit;
 }
 
 .post-meta {
-    position: relative;
-    font-size: _font(prose-size-large) !important;
-    color: #fefefe;
-    left: 5px;
-    text-align: left;
-    // float: left;
+  position: relative;
+  font-size: _font(prose-size-large) !important;
+  color: #fefefe;
+  left: 5px;
+  text-align: left;
+  // float: left;
 }
 
 /**
  * Blocks
  */
 .block {
-    min-height: $height-unit + $block-padding * 2;
-    .block-body {
-        margin: 0 4.5em $block-padding 30px;
-        min-height: $height-unit;
-        height: 100%;
-        text-align: left;
-    }
+  min-height: $height-unit + $block-padding * 2;
+  .block-body {
+    margin: 0 4.5em $block-padding 30px;
+    min-height: $height-unit;
+    height: 100%;
+    text-align: left;
+  }
 }
