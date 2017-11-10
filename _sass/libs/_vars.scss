@@ -96,15 +96,15 @@ $font: (
 
   // Palette - 2e3842 - #303840
 $palette: (
-	bg:					#30333b,
-	fg-bold:			rgba(255,255,255,0.9),
-	fg:					mix(#30333b, #ffffff, 25%),
-	fg-light:			rgba(255,255,255,0.5),
-	border:				#ffffff,
-	border-bg:			rgba(144,144,144,0.25),
-	border2:			#ffffff,
-	border2-bg:			rgba(144,144,144,0.5),
-  white:              #fafafa,
+	bg:					   #30333b,
+	fg-bold:			 rgba(255,255,255,0.9),
+	fg:					   mix(#30333b, #ffffff, 25%),
+	fg-light:			 rgba(255,255,255,0.5),
+	border:				 #ffffff,
+	border-bg:		 rgba(144,144,144,0.25),
+	border2:			 #ffffff,
+	border2-bg:		 rgba(144,144,144,0.5),
+  white:         rgba(255,255,255,0.95),
 
 	// 21b2a6 - 28b7b3 - 51aea6 - 51a0a6
 	accent1: (
