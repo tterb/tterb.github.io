@@ -79,12 +79,14 @@
                 <img src="{{ site.baseurl }}{% if project.image %}/images/landing/{{ project.image }}{% else %}banner.jpg{% endif %}" data-full="{{ site.baseurl }}{% if project.image %}/images/landing/{{ project.image }}{% else %}banner.jpg{% endif %}"/>
               </div>
               <div class="back face center" data-full="{% if project.image %}/images/landing/{{ project.image }}{% else %}banner.jpg{% endif %}">
+                <a href="{{ site.baseurl }}{% if project.permalink %}{{ project.permalink }}{% else %}{{ project.repo }}{% endif %}">
                 <div class="click-area m-p-g__thumbs-img" data-full="{{ site.baseurl }}{% if project.permalink %}{{ project.permalink }}{% else %}{{ project.repo }}{% endif %}"></div>
                 <h4>{{ project.title }}</h4>
                 <p>{{ project.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
                 {% if project.icon %}
                   <span class="project-icon icon fa-{{ project.icon }}"></span>
                 {% endif %}
+                </a>
               </div>
             </div>
           </div>

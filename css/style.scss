@@ -1684,29 +1684,24 @@ button, .button {
   @include vendor('transition', 'transform #{_duration(menu)} ease');
   @include position(fixed, 0 0 null null);
   -webkit-overflow-scrolling: touch;
-  background: mix(_palette(accent1, bg), _palette(bg), 60%);
+  background: mix(_palette(accent1, bg), _palette(bg), 5%);
   color: _palette(fg-bold);
   height: 100%;
   max-width: 80%;
   overflow-y: auto;
+  box-shadow: -1px 0 24px rgba(0,0,0,0.35);
   padding: 3em 1.5em;
-  // position: fixed;
-  // right: 0;
-  // top: 0;
   width: 18em;
   z-index: _misc(z-index-base) + 2;
-  
   ul {
     list-style: none;
     padding: 0;
-    
     > li {
-      border-top: solid 1px _palette(accent1, border);
-      margin: 0.5em 0 0 0;
-      padding: 0.5em 0 0 0;
       font-family: _font(hdr-family);
       font-size: _font(hdr-size-normal);
-      
+      border-top: solid 1px _palette(border-bg);
+      margin: 0.5em 0 0 0;
+      padding: 0.5em 0 0 0;
       &:first-child {
         border-top: 0 !important;
         margin-top: 0 !important;
@@ -1715,9 +1710,9 @@ button, .button {
       
       > a {
         display: block;
-        font-size: _font(hdr-size-smaller);
-        letter-spacing: _size(letter-spacing-alt);
-        color: inherit;
+        color: rgba(255,255,255,0.75);
+        font-size: 1em;
+        letter-spacing: 0.15em;
         outline: 0;
         border: 0;
         text-decoration: none;
@@ -1725,8 +1720,8 @@ button, .button {
         
         &:hover, &:active {
           color: _palette(white);
-          font-weight: _font(hdr-extrabold);
-          letter-spacing: 0.125em;
+          font-weight: _font(hdr-bold);
+          letter-spacing: 0.15em;
         }
         
         @include breakpoint(small) {
@@ -1737,19 +1732,22 @@ button, .button {
   }
   
   .close {
-    @include position(absolute, 0 0 null null);
+    @include position(absolute, 7px 15px null null);
     display: block;
     background-image: url('images/close.svg');
     background-position: 4.85em 1em;
     background-repeat: no-repeat;
+    font-size: 0.5em;
     border: 0;
-    cursor: pointer;
     height: 3em;
-    // position: absolute;
-    // right: 0;
-    // top: 0;
-    vertical-align: middle;
     width: 7em;
+    opacity: 0.5;
+    transition: opacity 250ms ease-in-out; 
+    cursor: pointer;
+    vertical-align: middle;
+    &:hover, &:active {
+      opacity: 0.9;
+    }
   }
   
   @include breakpoint(small) {
@@ -2180,18 +2178,38 @@ body.is-loading {
     }
     &.back {
       padding: 1.25em 2.75em;
-      h4 {
-        letter-spacing: 0.065em;
-        line-height: 1.15;
-        margin-top: 0.25em !important;
-      }
-      p {
-        font-size: 10.5pt;
-      }
-      .project-icon {
-        color: rgba(255,255,255,0.85);
-        font-size: 2.5em;
-        bottom: -0.65em;
+      a {
+        h4 {
+          display: block;
+          color: #fafafa;
+          font-family: _font(hdr-family);
+          font-size: 2.5em;
+          font-weight: 100;
+          letter-spacing: 0.065em;
+          line-height: 1.15;
+          text-transform: none;
+          margin: 0.25em auto 0.55em;
+        }
+        p {
+          font-family: _font(ctrl-family);
+          font-size: _font(prose-size-small);
+          font-weight: _font(prose-light);
+          letter-spacing: 0.08em;
+          color: rgba(245,245,245,0.7) !important;
+          margin: 0 1.25em 0.5em;
+          a {
+            color: lighten(_palette(accent2, bg), 10%) !important;
+            color: _palette(accent2, bg) !important;
+            &:hover {
+              color: _palette(accent2, bg) !important;
+            }
+          }
+        }
+        .project-icon {
+          color: rgba(255,255,255,0.85);
+          font-size: 2.5em;
+          bottom: -0.65em;
+        }
       }
     }
   }
