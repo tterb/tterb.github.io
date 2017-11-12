@@ -15,13 +15,13 @@
 - title: Atomic Design
   permalink: /projects/Atomic-Design-UI/
   repo: atomic-design-ui
-  desc: A dark, modern, and refined interface for Atom, featuring modifications that focus on improving the user experience and adaptability.
+  desc: A refined dark interface for Atom, featuring modifications that focus on improving the user experience and adaptability.
   icon: laptop
   image: AtomicDesign.png
   
 - title: GitHub Calendar
   permalink: /projects/GithubCalendar/
   repo: githubcalendar
-  desc: A customizable Rainmeter skin that displays the user's GitHub contribution calendar onto their desktop.
+  desc: A Rainmeter skin that displays the user's GitHub contribution calendar on their desktop.
   icon: github
   image: GithubCalendar.png
