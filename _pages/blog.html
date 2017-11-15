@@ -56,7 +56,7 @@ sitemap:
             <br/><hr/><h5 class="year">{{ n }}</h5>
           {% endif %}
           <li class="archive-post">
-            <span class="date">{{ post.date | date: "%b %d" }}</span>&nbsp;
+            <p class="date-container"><span class="date">{{ post.date | date: "%b %d" }}</span></p>&nbsp;
             <a href="{{ post.url }}" style="white-space: nowrap;">
               <b class="title">{{ post.title }}</b>
             </a>&nbsp;
