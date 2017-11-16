@@ -1,85 +1,68 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
-<div class="radar-container" id="canvas-holder">
-  <canvas id="radarChart" />
-</div>
+<script src="{{ '/js/radar-chart.js' | prepend: site.baseurl }}"></script>	
 <script>
-  // Radar Chart Options
-  var radarOptions = {  
-    //Boolean - If we show the scale above the chart data			
-    scaleOverlay: false,
-    //Boolean - If we want to override with a hard coded scale
-    scaleOverride: false,
-    //Boolean - Whether to show lines for each scale point
-    scaleShowLine: true,
-    //String - Colour of the scale line	
-    scaleLineColor: "rgba(255,255,255,0.25)",
-    //Number - Pixel width of the scale line	
-    scaleLineWidth: 1,
-    //Boolean - Whether to show labels on the scale	
-    scaleShowLabels: false,
-    //Interpolated JS string - can access value
-    scaleLabel: "<%=value%>",
-    //Boolean - Show a backdrop to the scale label
-    scaleShowLabelBackdrop: true,
-    //String - The colour of the label backdrop	
-    scaleBackdropColor: "rgba(255,255,255,0.25)",
-    //Number - The backdrop padding above & below the label in pixels
-    scaleBackdropPaddingY: 2,
-    //Number - The backdrop padding to the side of the label in pixels	
-    scaleBackdropPaddingX: 2,
-    //Boolean - Whether we show the angle lines out of the radar
-    angleShowLineOut: true,
-    //String - Colour of the angle line
-    angleLineColor: "rgba(255,255,255,0.3)",
-    //Number - Pixel width of the angle line
-    angleLineWidth: 1,			
-    //String - Point label font declaration
-    pointLabelFontFamily: "_font(hdr-family)",
-    //String - Point label font weight
-    pointLabelFontStyle: "normal",
-    //Number - Point label font size in pixels	
-    pointLabelFontSize: 11,
-    //String - Point label font colour	
-    pointLabelFontColor: "rgba(255,255,255,0.7)",
-    //Boolean - Whether to show a dot for each point
-    pointDot: true,
-    //Number - Radius of each point dot in pixels
-    pointDotRadius: 3,
-    //Number - Pixel width of point dot stroke
-    pointDotStrokeWidth: 1,
-    //Boolean - Whether to show a stroke for datasets
-    datasetStroke: true,
-    //Number - Pixel width of dataset stroke
-    datasetStrokeWidth: 1,
-    //Boolean - Whether to fill the dataset with a colour
-    datasetFill: true,
-    //Boolean - Whether to animate the chart
-    animation: true,
-    //Number - Number of animation steps
-    animationSteps: 60,
-    //String - Animation easing effect
-    animationEasing: "easeOutQuart",
-    //Function - Fires when the animation is complete
-    onAnimationComplete: null,
-    //make it respond damnit!
-    responsive: true
-  }
-
-  // Radar Data
-  var radarData = {
-    labels: "{{ site.data.skills.aspects }}".split(","),
-    datasets: [{
-      fillColor: "rgba(60, 175, 226, .6)",
-      strokeColor: "rgba(60, 175, 226, .8)",
-      data: [{{ site.data.skills.percentage }}]
-    }]
-  }
-
-  //Get the context of the Radar Chart canvas element we want to select
-  var ctx3 = document.getElementById("radarChart").getContext("2d");
-
-  // Create the Radar Chart
-  var myRadarChart = new Chart(ctx3).Radar(radarData, radarOptions);
+  
+  /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
+  
+	////////////////////////////////////////////////////////////// 
+	//////////////////////// Set-Up ////////////////////////////// 
+	////////////////////////////////////////////////////////////// 
+	var margin = {top: 50, right: 75, bottom: 50, left: 75},
+		width = Math.min(350, window.innerWidth - 10) - margin.left - margin.right,
+		height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 10);
+			
+	////////////////////////////////////////////////////////////// 
+	////////////////////////// Data ////////////////////////////// 
+	////////////////////////////////////////////////////////////// 
+	var data = [
+			  [//Skills
+				{axis:"Java",value:0.45},
+				{axis:"Lua",value:0.28},
+				{axis:"Python",value:0.42},
+				{axis:"Javascript",value:0.35},
+				{axis:"Perl",value:0.25},
+				{axis:"Web Dev",value:0.35},	
+				{axis:"Bash",value:0.22},
+				{axis:"C++",value:0.375}
+			],[//Progress
+				{axis:"Java",value:0.15},
+				{axis:"Lua",value:0.25},
+				{axis:"Python",value:0.3},
+				{axis:"Javascript",value:0.46},
+				{axis:"Perl",value:0.12},
+				{axis:"Web Dev",value:0.38},	
+				{axis:"Bash",value:0.31},
+				{axis:"C++",value:0.15}
+			  ]
+				// ,[//Nokia Smartphone
+				// {axis:"Battery Life",value:0.26},
+				// {axis:"Brand",value:0.10},
+				// {axis:"Contract Cost",value:0.30},
+				// {axis:"Design And Quality",value:0.14},
+				// {axis:"Have Internet Connectivity",value:0.22},
+				// {axis:"Large Screen",value:0.04},
+				// {axis:"Price Of Device",value:0.41},
+				// {axis:"To Be A Smartphone",value:0.30}
+			  // ]
+			];
+	////////////////////////////////////////////////////////////// 
+	//////////////////// Draw the Chart ////////////////////////// 
+	////////////////////////////////////////////////////////////// 
+	// var color = d3.scale.ordinal()
+	// 	.range(["#EDC951","#CC333F","#00A0B0"]);
+	var color = d3.scale.ordinal()
+		.range(["#60bac7","#d74246","#00ffcc"]);
+		
+	var radarChartOptions = {
+	  w: width,
+	  h: height,
+	  margin: margin,
+	  maxValue: 0.5,
+	  levels: 5,
+	  roundStrokes: true,
+	  color: color
+	};
+	//Call function to draw the Radar chart
+	RadarChart(".radarChart", data, radarChartOptions);
 </script>
