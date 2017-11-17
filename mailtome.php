@@ -2,7 +2,7 @@
 ---
 <?php
 /**
- * Captcha bit from http://99webtools.com/blog/php-simple-captcha-script/
+ * Captcha credit to http://99webtools.com/blog/php-simple-captcha-script/
  */
 session_start();
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
@@ -14,10 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
      ) {
     $name = $_POST["name"] ? $_POST["name"] : '[no name given]';
     $msg = <<<EOM
-From your arkadianriver.com website...
-
+From your website...
 Mail received from $name, at {$_POST["email"]}.
-
 {$_POST["textbody"]}
 EOM;
     $headers = 'From: {{ site.data.tokens.fromaddy }}'."\r\n".
@@ -31,8 +29,7 @@ EOM;
       header('Location: '. $_POST["failure"]);
     }
   } else {
-    die("Wrong Captcha code entered");
+    die("Wrong Captcha code entered. Use the browser back button and try again.");
   }
 }
-
 ?>
