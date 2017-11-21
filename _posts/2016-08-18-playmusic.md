@@ -16,7 +16,6 @@ tags:
   - rainmeter
   - skin
   - blog
-  - featured
 ---
 
 <!-- Badges -->
