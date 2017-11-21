@@ -112,6 +112,22 @@ defaults:
     values:
       layout: post
 
+html_proofer:
+  check_favicon: true
+  check_html: true
+  file_ignore:
+    - /a.*regexp*/
+    - a_string
+    - bower_components/*
+    - fonts/*
+    - _posts/*
+    - blog/*
+  url_ignore:
+    - /Hyde/
+    - /PlayMusic/
+    - /Atomic-Design-UI/
+    - /GithubCalendar/
+
 # to initialize arrays in assignments (assign myarr = site.empty_array)
 # (easier to grok than assign myarr = '' | split',')
 empty_array: []
