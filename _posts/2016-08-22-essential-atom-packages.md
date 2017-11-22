@@ -24,7 +24,7 @@ tags:
 ---
 
 <!-- Intro -->
-   As a long-time Sublime Text user, I've made the transition to using &nbsp; <img class="inline" src="http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/Atomic%20Monokai/atom_zps8lz1oett.png" width="20"/> [**Atom**](https://atom.io/) as my go-to code editor, and while I enjoy it's more hackable aspects, I had been unable to find a monokai syntax theme that felt familiar amongst the available prospects. 
+   As a long-time Sublime Text user, I've made the transition to using &nbsp; <img class="inline" src="http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/Atomic%20Monokai/atom_zps8lz1oett.png" width="20" alt="atom"/> [**Atom**](https://atom.io/) as my go-to code editor, and while I enjoy it's more hackable aspects, I had been unable to find a monokai syntax theme that felt familiar amongst the available prospects. 
    This is why I decided to create the [**Atomic Monokai**](https://atom.io/atomic-monokai-syntax) syntax-theme.  
    I also know from experience that changes like these can be a little bewildering, so I thought others might benefit from a simple resource to started configuring their Atomic workspace.  
 

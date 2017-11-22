@@ -26,24 +26,24 @@ tags:
 <!-- Badges -->
 <p align="right">
 	<a href="https://atom.io/themes/atomic-design-ui">
-		<img src="https://img.shields.io/apm/v/atomic-design-ui.svg?" height="20" title="Version">&nbsp;
+		<img src="https://img.shields.io/apm/v/atomic-design-ui.svg?" height="20" alt="version" title="Version">&nbsp;
 	</a>
 	<a href="https://opensource.org/licenses/MIT">
-		<img src="https://img.shields.io/apm/l/atomic-design-ui.svg?" height="20" title="License">&nbsp;
+		<img src="https://img.shields.io/apm/l/atomic-design-ui.svg?" height="20" alt="license" title="License">&nbsp;
 	</a>
-    <img src="https://img.shields.io/apm/dm/atomic-design-ui.svg?maxAge=2592000?" height="20" title="Downloads">&nbsp;
+    <img src="https://img.shields.io/apm/dm/atomic-design-ui.svg?maxAge=2592000?" height="20" alt="downloads" title="Downloads">&nbsp;
 	<a href="https://atom.io/themes/atomic-design-ui">
-		<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" height="20" title="Open Source">&nbsp;
+		<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" height="20" alt="open source" title="Open Source">&nbsp;
 	</a>
 </p>
 
 <!-- Screenshot -->
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/22501240/cceae3f4-e81c-11e6-88d2-b50141920552.png" width="950" title="Preview">
+  <img src="https://cloud.githubusercontent.com/assets/16360374/22501240/cceae3f4-e81c-11e6-88d2-b50141920552.png" width="950" alt="preview" title="Preview">
 </p>
 
 <!-- Description -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/22630325/e71b3d12-ebac-11e6-864a-de9714611240.png" width="900" title="Description">
+<img src="https://cloud.githubusercontent.com/assets/16360374/22630325/e71b3d12-ebac-11e6-864a-de9714611240.png" width="900" alt="description" title="Description">
 
   *Atomic Design* aims to provide a modern and refined interface to compliment any dark syntax-theme, featuring modifications that focus on improving the user experience and adaptability. Similarly, this theme also includes a custom icon set and improved integration of some of the most common [Atom packages].
   The screenshot above features the **[Atomic Monokai]** syntax-theme and *Source Code Pro* via the [Fonts] package.
@@ -57,7 +57,7 @@ tags:
 
 ______________________________________________________________________________
 <!-- Features -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/22630566/57595f88-ebb1-11e6-835d-e84330b188e3.png" width="900" title="Features">
+<img src="https://cloud.githubusercontent.com/assets/16360374/22630566/57595f88-ebb1-11e6-835d-e84330b188e3.png" width="900" alt="features" title="Features">
 
 <br>
 <h3 align="center">Dark Refined Interface</h3>
@@ -90,7 +90,7 @@ project files, while also preventing the alignment issues that plague <br> many 
 <p align="center">
   This UI-theme includes custom settings, which allow users to fine-tune various aspects of <br>
   the interface to suit their preference. These settings are accessible via <br>
-  the <img src="https://cloud.githubusercontent.com/assets/16360374/22728369/572ca3fc-ed92-11e6-8f35-5f1da6078b4f.png" height="23"> button,
+  the <img src="https://cloud.githubusercontent.com/assets/16360374/22728369/572ca3fc-ed92-11e6-8f35-5f1da6078b4f.png" height="23" alt="settings"> button,
   once the theme is enabled.
 </p>
 
@@ -98,7 +98,7 @@ project files, while also preventing the alignment issues that plague <br> many 
 
 ______________________________________________________________________________
 <!-- Install -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/22630327/e71bd0c4-ebac-11e6-956d-8b1e8da21d1b.png" width="900" title="Install">
+<img src="https://cloud.githubusercontent.com/assets/16360374/22630327/e71bd0c4-ebac-11e6-956d-8b1e8da21d1b.png" width="900" alt="install" title="Install">
 This package is distributed via *[apm]*. After [installing apm], you can install the UI-theme with this command.
 
 ```shell
@@ -121,7 +121,7 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________
 <!-- Screenshots -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/22630324/e71af8ac-ebac-11e6-9458-fe0301d4c028.png" width="900" title="Screenshot">
+<img src="https://cloud.githubusercontent.com/assets/16360374/22630324/e71af8ac-ebac-11e6-9458-fe0301d4c028.png" width="900" alt="screenshot" title="Screenshot">
 
   * **[Java]**
   * **[HTML]**
@@ -134,11 +134,11 @@ ______________________________________________________________________________
 
 <!-- ______________________________________________________________________________   -->
 <p align="right">
-     <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" title="Donate to this project using PayPal">
- <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="20" title="Donate"></a></span>&nbsp;&nbsp;
-   	<a href="https://gitter.im/Atomic-Design-UI/Lobby">
-        <img src="https://badges.gitter.im/Atomic-Design-UI/Lobby.svg" height="20" title="Gitter">
-    </a>
+  <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" alt="donate" title="Donate">
+    <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="20" alt="donate" title="Donate"></a></span>&nbsp;&nbsp;
+   <a href="https://gitter.im/Atomic-Design-UI/Lobby">
+    <img src="https://badges.gitter.im/Atomic-Design-UI/Lobby.svg" height="20" alt="gitter" title="Gitter">
+  </a>
 </p>
 
 

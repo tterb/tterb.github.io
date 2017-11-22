@@ -29,19 +29,19 @@ tags:
 <!-- Badges -->
 <p align="right">
 	<a href="https://atom.io/themes/atomic-delight-syntax">
-		<img src="https://img.shields.io/apm/v/atomic-delight-syntax.svg?" height="20" title="Version">&nbsp;&nbsp;
+		<img src="https://img.shields.io/apm/v/atomic-delight-syntax.svg?" height="20" alt="version" title="Version">&nbsp;&nbsp;
 	</a>  
 	<a href="https://opensource.org/licenses/MIT">
-		<img src="https://img.shields.io/apm/l/atomic-delight-syntax.svg?" height="20" title="License">&nbsp;&nbsp;
+		<img src="https://img.shields.io/apm/l/atomic-delight-syntax.svg?" height="20" alt="license" title="License">&nbsp;&nbsp;
 	</a>  
-    <img src="https://img.shields.io/apm/dm/atomic-delight-syntax.svg?maxAge=2592000?" height="20" title="Downloads">&nbsp;&nbsp;
+    <img src="https://img.shields.io/apm/dm/atomic-delight-syntax.svg?maxAge=2592000?" height="20" alt="downloads" title="Downloads">&nbsp;&nbsp;
 	<a href="https://atom.io/themes/atomic-delight-syntax">
-		<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" height="20" title="Open Source">&nbsp;&nbsp;
+		<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" height="20" alt="open source" title="Open Source">&nbsp;&nbsp;
 	</a>
 </p>
 <br>
 	<p align="center">
-        <img src="https://cloud.githubusercontent.com/assets/16360374/20731580/d7ad7bbc-b63f-11e6-8410-a26fd36b4b8e.png" width="950" title="Screenshot">
+        <img src="https://cloud.githubusercontent.com/assets/16360374/20731580/d7ad7bbc-b63f-11e6-8410-a26fd36b4b8e.png" width="950" alt="screenshot" title="Screenshot">
     </p>
 <br>
 
@@ -76,10 +76,10 @@ ________________________________________________________________________________
 _______________________________________________________________________________
 
 <p align="right">
-    <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" title="Donate to this project using PayPal">
-    <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="20" title="Donate"></a></span>&nbsp;&nbsp;
+    <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" alt="donate" title="Donate">
+    <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="20" alt="donate" title="Donate"></a></span>&nbsp;&nbsp;
  	<a href="https://gitter.im/Atomic-Design-UI/Lobby">
-      <img src="https://badges.gitter.im/Atomic-Design-UI/Lobby.svg" height="20" title="Gitter">
+      <img src="https://badges.gitter.im/Atomic-Design-UI/Lobby.svg" height="20" alt="gitter" title="Gitter">
   </a>
 </p>
 

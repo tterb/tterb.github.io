@@ -24,7 +24,7 @@ tags:
 ---
 
   <p align="center">
-    <img src="https://cloud.githubusercontent.com/assets/16360374/20456020/80f8afd0-ae1f-11e6-8cab-b147675cd539.jpg" height="200" title="Razer Blade">
+    <img src="https://cloud.githubusercontent.com/assets/16360374/20456020/80f8afd0-ae1f-11e6-8cab-b147675cd539.jpg" height="200" alt="razer blade" title="Razer Blade">
   </p>
 <br>
 
@@ -44,20 +44,20 @@ tags:
   * After your laptop is powered off, you will first need to remove the 10 T5 screws on the underside, shown in the photo below. This is where the aforementioned [T5 torx screwdriver] will come in handy. I would also recommend keeping the screws in a small empty cup, prescription bottle, or whatever else you have at your disposal, as they are small and you don't want to lose track of them.
   <br>
   <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/20454747/a82808b0-adfe-11e6-975f-e01a3eb4b2d8.jpg" height="350" title="Screws">
+  <img src="https://cloud.githubusercontent.com/assets/16360374/20454747/a82808b0-adfe-11e6-975f-e01a3eb4b2d8.jpg" height="350" alt="screws" title="Screws">
   </p>
 
   * Next you will want to remove the backplate and identify the where the SSD, located under the ribbon cable circled below in red. To disconnect the ribbon cable, you will want to carefully lift up on the small black tab on its connector, which will release the ribbon cable.
   ***Note:*** The placement may differ on other laptops, but should be similarly visible.
   <br>
   <p align="center">
-    <img src="https://cloud.githubusercontent.com/assets/16360374/20454874/f68ce730-ae00-11e6-80fb-c6522741915d.jpg" height="300" title="Components">
+    <img src="https://cloud.githubusercontent.com/assets/16360374/20454874/f68ce730-ae00-11e6-80fb-c6522741915d.jpg" height="300" alt="components" title="Components">
   </p>
 
   * You will now want to remove the phillips-head screw attaching the SSD to the motherboard, at which time you will be free to gently remove the hard drive from its connector. Though, when removing the drive be careful to maintain the placement of the sticky pad beneath it, as you will use it to help adhere the new drive to the board.
   <br>
   <p align="center">
-  	<img src="https://cloud.githubusercontent.com/assets/16360374/20454748/abc02c28-adfe-11e6-8ea8-dff5bf482dd1.jpg" height="350" title="Hard drive">
+  	<img src="https://cloud.githubusercontent.com/assets/16360374/20454748/abc02c28-adfe-11e6-8ea8-dff5bf482dd1.jpg" height="350" alt="hard drive" title="Hard drive">
   </p>
 
   * Once the old hard drive is removed, you may now remove your new drive from the SSD enclosure and install it in place of the old drive. First inserting it into the M.2 SATA III connector, then screwing it into the motherboard.

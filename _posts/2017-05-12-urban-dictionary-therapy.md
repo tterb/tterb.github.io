@@ -32,7 +32,7 @@ tags:
 ---
 
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/25802132/cfcd58de-33a5-11e7-8cf8-81f18f6f7af8.png" width="750"/>
+  <img src="https://cloud.githubusercontent.com/assets/16360374/25802132/cfcd58de-33a5-11e7-8cf8-81f18f6f7af8.png" width="750" alt="preview"/>
 </p>
 
 ## Description:

@@ -25,26 +25,26 @@ tags:
 <!-- Badges -->
 <p align="right">
     <a href="https://atom.io/themes/atomic-monokai-syntax">
-	    <img src="https://img.shields.io/apm/v/atomic-monokai-syntax.svg?" height="20" title="Version">&nbsp;
+	    <img src="https://img.shields.io/apm/v/atomic-monokai-syntax.svg?" height="20" alt="version">&nbsp;
     </a>  
     <a href="https://opensource.org/licenses/MIT">
-	    <img src="https://img.shields.io/apm/l/atomic-monokai-syntax.svg?" height="20" title="License">&nbsp;
+	    <img src="https://img.shields.io/apm/l/atomic-monokai-syntax.svg?" height="20" alt="license">&nbsp;
     </a>  
-    <img src="https://img.shields.io/apm/dm/atomic-monokai-syntax.svg?maxAge=2592000?style=" height="20" title="Downloads">&nbsp;
+    <img src="https://img.shields.io/apm/dm/atomic-monokai-syntax.svg?maxAge=2592000?style=" height="20" alt="downloads">&nbsp;
     <a href="https://atom.io/themes/atomic-monokai-syntax">
-	    <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" height="20" title="Open-source">&nbsp;
+	    <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" height="20" alt="open-source">&nbsp;
     </a>
 </p>
 
 <!-- Preview -->
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/23335163/52ae46ac-fb64-11e6-88ae-35efbe69b16a.png" width="800" title="Preview">
+  <img src="https://cloud.githubusercontent.com/assets/16360374/23335163/52ae46ac-fb64-11e6-88ae-35efbe69b16a.png" width="800" alt="preview" title="Preview">
 </p>
 
 <!-- ## Description:   -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/23330493/da478f08-fb03-11e6-9ed2-c62cedc0024e.png" width="900" title="Description">  
+<img src="https://cloud.githubusercontent.com/assets/16360374/23330493/da478f08-fb03-11e6-9ed2-c62cedc0024e.png" width="900" alt="description" title="Description">  
 
-  As a long-time Sublime Text user, I've made the transition to using &nbsp; <img src="https://cloud.githubusercontent.com/assets/16360374/17991222/82596480-6af1-11e6-9c96-3e2996a8be5a.png" width="20"/> **[Atom]** as my go-to code editor, and while I enjoy it's more *hackable* aspects, I hadn't been unable to find a monokai syntax-theme that felt familiar amongst the available prospects. I'm actively working to improve the syntax-highlighting for individual languages, so feel free to submit any languages you would like to see improvements on.  
+  As a long-time Sublime Text user, I've made the transition to using &nbsp; <img src="https://cloud.githubusercontent.com/assets/16360374/17991222/82596480-6af1-11e6-9c96-3e2996a8be5a.png" width="20" alt="atom"/> **[Atom]** as my go-to code editor, and while I enjoy it's more *hackable* aspects, I hadn't been unable to find a monokai syntax-theme that felt familiar amongst the available prospects. I'm actively working to improve the syntax-highlighting for individual languages, so feel free to submit any languages you would like to see improvements on.  
   <br>
   ***Update:*** I've also developed a complimentary UI for this syntax-theme, so if you like this package, check out **[Atomic Design UI]**.  
 <br>
@@ -53,17 +53,17 @@ tags:
 ______________________________________________________________________________  
 
 <!-- Features -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/23330491/da4642ec-fb03-11e6-804b-75df1f142ddb.png" width="900" title="Features">  
+<img src="https://cloud.githubusercontent.com/assets/16360374/23330491/da4642ec-fb03-11e6-804b-75df1f142ddb.png" width="900" alt="features" title="Features">  
 <br>
 
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/22630170/8218b992-eba9-11e6-9b7c-53ddbe10eb03.png" width="425" title="Palette"/>
+  <img src="https://cloud.githubusercontent.com/assets/16360374/22630170/8218b992-eba9-11e6-9b7c-53ddbe10eb03.png" width="425" alt="palette" title="Palette"/>
 </p>
 <br>  
 
 <!-- The Colors -->
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/23390073/a86fce22-fd20-11e6-931e-4c14215522d0.png" height="36" title="Colors"/>
+  <img src="https://cloud.githubusercontent.com/assets/16360374/23390073/a86fce22-fd20-11e6-931e-4c14215522d0.png" height="36"alt="colors" title="Colors"/>
 </p>
 <p align="center">
   Each of the colors used in this theme have been carefully selected and tweaked <br> overtime to provide optimal contrast and readability in any context.
@@ -73,7 +73,7 @@ ______________________________________________________________________________
 
 <!-- Language-specific -->
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/23390074/a8708be6-fd20-11e6-9cb1-5313e3cd1482.png" height="36" title="Language-specific"/>
+  <img src="https://cloud.githubusercontent.com/assets/16360374/23390074/a8708be6-fd20-11e6-9cb1-5313e3cd1482.png" height="36" alt="language-specific" title="Language-specific"/>
 </p>
 <p align="center">
   This syntax-theme has been strategically structured to allow individual attention <br> to be given to ensuring accurate highlighting for each supported language
@@ -83,7 +83,7 @@ ______________________________________________________________________________
 
 <!-- Active Development -->
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/23390075/a8707b24-fd20-11e6-84fb-5ad2ca958880.png" height="36" title="Active Development"/>
+  <img src="https://cloud.githubusercontent.com/assets/16360374/23390075/a8707b24-fd20-11e6-84fb-5ad2ca958880.png" height="36" alt="active" title="Active Development"/>
 </p>
 <p align="center">
   <i>Atomic Monokai</i> is actively developed in order to improve language-specific <br> syntax-highlighting for an increasing collection of programming languages.<br> Have a language that you'd like to see supported? Suggest it <a href="https://github.com/JonSn0w/Atomic-Monokai-Syntax/issues/new">here</a>
@@ -94,7 +94,7 @@ ______________________________________________________________________________
 ______________________________________________________________________________  
 
 <!-- ## Install: -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/23330492/da47704a-fb03-11e6-826e-283cd245f733.png" width="900" title="Install">  
+<img src="https://cloud.githubusercontent.com/assets/16360374/23330492/da47704a-fb03-11e6-826e-283cd245f733.png" width="900" alt="install" title="Install">  
 
   This package is distributed using *[apm]*. After [installing apm], you can install the syntax theme with the command:  
 
@@ -108,7 +108,7 @@ After installation, the theme can be activated by going to the **Themes** sectio
 ______________________________________________________________________________  
 
 <!-- ## Screenshots: -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/23330494/da47eb42-fb03-11e6-8d28-a7f16c07d0da.png" width="900" title="Screenshot">  
+<img src="https://cloud.githubusercontent.com/assets/16360374/23330494/da47eb42-fb03-11e6-8d28-a7f16c07d0da.png" width="900" alt="screenshot" title="Screenshot">  
 
   * **[C++]**  
   * **[C#]**  
@@ -141,11 +141,11 @@ ______________________________________________________________________________
 ______________________________________________________________________________  
 
 <p align="right">
-     <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" title="Donate to this project using PayPal">
- <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="20" title="Donate"></a></span>&nbsp;&nbsp;
-    <a href="https://gitter.im/Atomic-Monokai/Lobby">
-        <img src="https://badges.gitter.im/Atomic-Monokai/Lobby.svg" height="20" title="Gitter">
-    </a>
+  <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" title="Donate to this project using PayPal">
+    <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="20" alt="donate" title="Donate"></a></span>&nbsp;&nbsp;
+  <a href="https://gitter.im/Atomic-Monokai/Lobby">
+    <img src="https://badges.gitter.im/Atomic-Monokai/Lobby.svg" height="20" alt="gitter" title="Gitter">
+  </a>
 </p>
 
 
