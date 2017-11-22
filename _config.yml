@@ -89,6 +89,9 @@ works_in_progress: yes
 # set this to yes
 custom_extensions: no
 
+# Contact page action
+mailaction: https://formspree.io/bstevensondev@gmail.com
+
 # Build settings
 permalink: /:categories/:title.html
 # permalink: /:title.html
