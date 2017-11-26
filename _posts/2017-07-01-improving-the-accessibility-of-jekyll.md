@@ -48,8 +48,8 @@ tags:
   
   <br>
   
-  <div class="button bottom">
-    <a class="icon fa-envelope-o" style="padding-left: 4px;" href="{{ site.baseurl }}/contact.html">Contact Me</a>
+  <div class="button bottom special">
+    <a class="" style="padding-left: 4px;" href="{{ site.baseurl }}/contact.html">Contact Me</a>
   </div>
 
 

@@ -46,7 +46,7 @@ tags:
 <hr>
 
 ### The Results
-  Here's my resulting Gulpfile, You can download, modify and use my current gulpfile optimization automation script via this **[gist]**.
+  I've provided my resulting Gulpfile below, though you can also download, modify and use my current gulpfile via this **[gist]**.
 
 ```javascript
 var gulp = require('gulp'),
@@ -187,7 +187,7 @@ gulp.task('clean', ['uncss']);
 
 <hr>
 
-<h2 style="margin-top:1.75em"><a href='#update' id='update' class='anchor' aria-hidden='true'>Updates</a></h2>
+<h2><a href='#update' id='update' class='anchor' aria-hidden='true'>Updates</a></h2>
 
 ### Leveraging browser caching
   Since sharing my original post, I have since found a way to resolve the persistent "Leverage browser caching" issue, which was ironically referencing Google's own analytics tools. 
