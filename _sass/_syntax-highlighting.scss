@@ -17,19 +17,19 @@ $err: #960050;
 
 .highlight,
 pre.highlight {
-  background: $base;
+  background: transparent;
   color: $text;
 }
 
 .highlight {
-  background: $base;
+  background: transparent;
   //  @extend %vertical-rhythm;
   
   .highlighter-rouge & {
-    background: $base;
+    background: transparent;
   }
   
-  pre { background: $base; }
+  pre { background: transparent; }
   .hll { background: $base; }
   .c { color: $subtle; font-style: italic; }
   .err { color: $err; }
