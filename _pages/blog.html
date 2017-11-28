@@ -42,7 +42,7 @@ sitemap:
     </ul>
   {% endif %}
 
-  <div id="search" style="width:85%;margin:2.5em auto 1.75em">
+  <div id="search">
     {% include search.html %}
   </div>
 
@@ -57,10 +57,10 @@ sitemap:
           {% endif %}
           <li class="archive-post">
             <p class="date-container"><span class="date">{{ post.date | date: "%b %d" }}</span></p>&nbsp;
-            <a href="{{ post.url }}" style="white-space: nowrap;">
-              <b class="title">{{ post.title }}</b>
-            </a>&nbsp;
-            {{ post.desc | strip_html | truncatewords: 12 }}
+            <a class="archive-link" href="{{ post.url }}" style="white-space: nowrap;">
+              <b class="title">{{ post.title }}</b>&nbsp;
+              {{ post.desc | strip_html | truncatewords: 12 }}
+            </a>
           </li>
         {% endfor %}
       </ul>
