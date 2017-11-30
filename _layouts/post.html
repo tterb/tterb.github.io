@@ -5,19 +5,19 @@
 <html>
   {% include head.html %}
   {% include header.html %}
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <!-- <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title> -->
   <body itemscope itemtype="http://schema.org/Article">
     <main class="content" role="main">
       <article class="post">
         {% if page.options contains "fullhead" %}
           <section class="post-image">
             {% if page.image %}
-              <div id="post-banner" class="post-image" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/images/posts/{{ page.image | prepend: site.baseurl }});height:100vh;"></div>
+              <div id="post-banner" alt="banner" class="post-image" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/images/posts/{{ page.image | prepend: site.baseurl }});height:100vh;"></div>
             {% endif %}
             <div class="post-meta">
               <h1 class="post-title">{{ page.title }}</h1>
               <div class="cf post-meta-text">
-                <div class="author-image" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
+                <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.owner.name }}</h4>
               <span id="post-date">on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
               </div>
@@ -31,7 +31,7 @@
             <div class="post-meta">
               <h1 class="post-title">{{ page.title }}</h1>
               <div class="cf post-meta-text">
-                <div class="author-image" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
+                <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
                 <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person" style="font-weight:500;">{{ site.owner.name }}</h4>
                 <span id="date">on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
               </div>
@@ -40,7 +40,7 @@
         {% elsif page.options contains "readme" %}
           <section class="readme">
             {% if page.header %}
-              <img class="post-header" src="{{ page.header | prepend: site.baseurl }}" alt="{{ page.title }}"/>
+              <img class="post-header" alt="header" src="{{ page.header | prepend: site.baseurl }}" alt="{{ page.title }}"/>
               <hr>
             <!-- <h4>{{ page.desc }}</h4> -->
             {% else %}
@@ -58,7 +58,7 @@
             <div class="post-meta" style="height:50%;">
               <h1 class="post-title">{{ page.title }}</h1>
               <div class="cf post-meta-text">
-                <div class="author-image" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
+                <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
                 <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.owner.name }}</h4>
                 <span id="date">on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
               </div>
@@ -86,7 +86,7 @@
             <div class="isLeft">
               <h5 class="index-headline featured"><span>Written by</span></h5>
               <section class="author">
-                <div class="author-image" style="background-image: url({{site.blog_logo | prepend: site.baseurl}})">Blog Logo</div>
+                <div class="author-image" alt="avatar" style="background-image: url({{site.blog_logo | prepend: site.baseurl}})">Blog Logo</div>
                 <h4>{{ site.owner.name }}</h4>
                 <p class="bio">{{author.bio}}</p>
                 <hr style="width: 63%;margin-top:10px;margin-bottom:8px;">
