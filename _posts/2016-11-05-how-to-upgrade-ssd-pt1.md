@@ -22,7 +22,7 @@ tags:
 <br>
 
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/20456077/939ebbfa-ae21-11e6-925c-6a0d4c60a4ca.png" height="275" alt="razer blade" title="Razer Blade">
+  <img src="https://cloud.githubusercontent.com/assets/16360374/20456077/939ebbfa-ae21-11e6-925c-6a0d4c60a4ca.png" height="275" alt="razer blade" title="Razer Blade"/>
 </p>
 <br>
 
@@ -49,7 +49,7 @@ tags:
 
   Now, you're going to insert the new M.2 SATA III SSD into the hard drive enclosure. I used the [ZTC Thunder] enclosure, as it was compatible, affordable, and had good reviews. So you aren't sure which one to buy, that one is a safe bet. Though, no matter which one you get, once disassembled, the circuit board that the hard drive is connected to will be almost identical. First, you will want to plug the hard drive into the connector, then use the provided screw(s) and standoff to secure the SSD to the board and reassemble your enclosure.
   <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/20453970/89a96ac4-ade9-11e6-9a3b-5dc8290c8ada.jpg" height="325" align="center" alt="enclosure" title="Enclosure">
+    <img src="https://cloud.githubusercontent.com/assets/16360374/20453970/89a96ac4-ade9-11e6-9a3b-5dc8290c8ada.jpg" height="325" align="center" alt="enclosure" title="Enclosure"/>
   </p>
 
 ## Step Three: **Cloning**
@@ -63,7 +63,7 @@ tags:
   * After opening the Macrium Reflect software, you will see both your new and internal hard drive within the **Create a Backup** tab. You will now want to select your internal drive, titled "*MBR*" in the example image, and insure that your new hard drive is in the lower window. Now click the ***Clone this disk*** button circled in red, below.
   <br>
   <p align="center">
-    <img src="https://cloud.githubusercontent.com/assets/16360374/20454261/29f2ed38-adf0-11e6-959e-8c12611a4dbb.png" height="300" alt="example" title="example">
+    <img src="https://cloud.githubusercontent.com/assets/16360374/20454261/29f2ed38-adf0-11e6-959e-8c12611a4dbb.png" height="300" alt="example" title="example"/>
   </p><br>
 
   * This will open a new dialogue window. In the destination section, click the ***Select a disk to clone to...*** link and select your new SSD.
@@ -72,7 +72,7 @@ tags:
   Though, if there are already established partitions on your new target disk, you'll need to select each one and click the ***Delete Existing partition*** link before you'll be able to drag and resize partitions from the source drive.
   <br>
   <p align="center">
-	<img src="https://cloud.githubusercontent.com/assets/16360374/20454353/78777002-adf3-11e6-940a-27002b3846d9.png" height="350" alt="example" title="example">
+	<img src="https://cloud.githubusercontent.com/assets/16360374/20454353/78777002-adf3-11e6-940a-27002b3846d9.png" height="350" alt="example" title="example"/>
   </p><br>
 
   * In most cases, your new hard drive will be larger than your existing internal drive. So you will now want to use the circled icon to resize the primary partition that you've dragged to your new drive to fill the remaining capacity. You can do this by dragging the icon to the right until it fills the remaining space, in turn, maximizing the storage that will be at your disposal after installation. Once the partition size has been set, you can now click ***Ok***.
@@ -80,7 +80,7 @@ tags:
   * You will then be shown a summary screen where you can  review your settings checked that everything is in order. Once you're finished reviewing your options, click ***Finish***.
   <br>
   <p align="center">
-    <img src="https://cloud.githubusercontent.com/assets/16360374/20454386/9d73af46-adf4-11e6-9d66-5c71dab08c20.png" height="350" alt="example" title="example">
+    <img src="https://cloud.githubusercontent.com/assets/16360374/20454386/9d73af46-adf4-11e6-9d66-5c71dab08c20.png" height="350" alt="example" title="example"/>
   </p><br>
 
   <p class="h-note"> Depending on the amount of data on your internal drive, cloning may take awhile. So I would recommend you do this when you won't be needing to use your computer too heavily.</p>
@@ -101,4 +101,4 @@ Once the cloning process is complete, **[continue to Part 2]**
 [Compressed air]: https://www.amazon.com/Compressed-Professional-Blow-Off-Electronics/dp/B015UNJZAC/ref=sr_1_2?ie=UTF8&qid=1479548500&sr=8-2-spons&keywords=compressed+air&psc=1
 [free options]: https://www.lifewire.com/free-backup-software-tools-2617964
 [ZTC Thunder]: https://www.amazon.com/gp/product/B00KQ4LNJC/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1
-[continue to Part 2]: https://JonSn0w.github.io/blog/article/how-to-upgrade-ssd-pt1.html
+[continue to Part 2]: https://JonSn0w.github.io/blog/how-to-upgrade-ssd-pt2.html

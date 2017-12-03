@@ -41,8 +41,8 @@ tags:
 </p>
 <br>
 	<p align="center">
-        <img src="https://cloud.githubusercontent.com/assets/16360374/20731580/d7ad7bbc-b63f-11e6-8410-a26fd36b4b8e.png" width="950" alt="screenshot" title="Screenshot">
-    </p>
+    <img src="https://cloud.githubusercontent.com/assets/16360374/20731580/d7ad7bbc-b63f-11e6-8410-a26fd36b4b8e.png" width="950" alt="screenshot" title="Screenshot">
+  </p>
 <br>
 
 ## Description:  
@@ -50,7 +50,7 @@ tags:
   Created with the knowledge that many programmers prefer to have both a light and a dark syntax-theme to cycle between, this syntax and UI-theme allows programmers to do so with a sense of familiarity.
 
 
-________________________________________________________________________________  
+___________________________  
 
 ## Install:  
   These packages are distributed with [*apm*]. After [installing apm], you can install these themes with the commands.  
@@ -62,18 +62,20 @@ $ apm install atomic-delight-ui
 
   After installation, these theme can be easily activated by going to the **Themes** section in the *Settings* view and selecting them from the *UI* and *Syntax* drop-down menus.  
 <br>  
-________________________________________________________________________________  
+___________________________  
+
 ## Screenshots:  
   * *Coming soon...*
 
 <br>
-________________________________________________________________________________  
+___________________________  
+
 ## Other Recommended Packages:  
 <br>
   *For more useful packages, check out my list of* [***Essential Atom Packages***], *which I'll continue to keep up to date as I explore and familiarize myself with the editor and it's community.*  
 
 <br>  
-_______________________________________________________________________________
+___________________________  
 
 <p align="right">
     <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" alt="donate" title="Donate">

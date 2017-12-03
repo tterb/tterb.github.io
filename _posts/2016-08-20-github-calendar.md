@@ -30,7 +30,7 @@ tags:
   [License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE.md)
 <br/><br>  
 
-_________________________________________________________________________  
+___________________________   
 
 ## <img title="" alt="description" src="http://image.flaticon.com/icons/svg/149/149187.svg" height="30" width="30" align="absmiddle">&nbsp;&nbsp;DESCRIPTION:  
 
@@ -48,7 +48,7 @@ _________________________________________________________________________
 ***Note:*** To update the skin's calendar data, left-click the ![alt tag](http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/GithubCalendar/github_logo_zps1ftioupk.png) in the bottom-right corner of the skin.
 <br>  
 
-_________________________________________________________________________  
+___________________________  
 
 ## <img title="" alt="setup" src="https://cloud.githubusercontent.com/assets/16360374/19178642/68628960-8c09-11e6-9a94-cd8461164666.png" height="30" width="30" align="absmiddle">&nbsp;&nbsp;SETUP:  
 
@@ -59,5 +59,3 @@ _________________________________________________________________________
   * **Enjoy!**  
 
 <br><br>  
-
-_________________________________________________________________________  

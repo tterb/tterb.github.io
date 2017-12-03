@@ -40,7 +40,7 @@ tags:
   I'll do my best to fulfill any submitted icon requests, but also feel free to create/contribute your own using the provided tools.
 <br>  
 
-_________________________________________________________________________   
+___________________________  
 
 
 ## Includes:  
@@ -61,4 +61,4 @@ _________________________________________________________________________
   * [**Text**](https://github.com/JonSn0w/Atom-File-Icons/blob/master/PNG/txt.png)  
 <br>  
 
-______________________________________________________________________________  
+___________________________  

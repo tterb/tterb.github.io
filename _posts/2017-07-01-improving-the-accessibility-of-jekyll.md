@@ -49,7 +49,7 @@ tags:
   <br>
   
   <div class="button bottom special">
-    <a class="" style="padding-left: 4px;" href="{{ site.baseurl }}/contact.html">Contact Me</a>
+    <a class="" href="{{ '/contact/' | prepend: site.baseurl }}" style="padding-left: 4px;">Contact Me</a>
   </div>
 
 
