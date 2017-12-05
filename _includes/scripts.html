@@ -6,6 +6,22 @@
 <script src="{{ '/js/util.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/main.min.js' | prepend: site.baseurl }}"></script>
 
+<!-- Menu-toggle animation -->
+<script>
+$('#menuToggle').on('click', function() {
+  $(this).toggleClass('active');
+});
+</script>
+
+<!-- Improve code-block formatting -->
+<script>
+$('code').each(function() {
+  if($(this).height() < 30) {
+    $(this).css('padding', '1em 1.35em');
+  }
+});
+</script>
+
 {% for include in page.script-includes %}
   {% assign test1 = include | slice: 0,2 %}
   {% if test1 == "//" %}
