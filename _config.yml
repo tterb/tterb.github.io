@@ -32,9 +32,10 @@ closing-head: Thanks for visiting
 closing-para: Feel free to contact me with any questions, concerns, or just to say hello.
 blog_logo: "/images/logo.png"
 # on all pages (and the first three you list display with greeting, if included)
+
 social:
   github: https://github.com/JonSn0w
-  deviantart: http://bstevenson.deviantart.com/
+  deviantart: https://bstevenson.deviantart.com/
   dribbble: https://dribbble.com/JonSn0w
   linkedin-square: https://www.linkedin.com/in/brett-stevenson-0a035a72
   twitter: https://twitter.com/BStevensonDev
@@ -99,7 +100,7 @@ markdown: kramdown
 highlighter: rouge
 sass:
  style: compressed
-exclude: ['stuff.html','site.bat','compose.rb','README.md','Gulpfile.js','package.json','node_modules', 'jspm_packages']
+exclude: ['stuff.html','site.bat','compose.rb','README.md','Gulpfile.js','.sass-lint.yml','package.json','node_modules', 'jspm_packages','fonts/*.html']
 include: ['_pages','.htaccess']
 defaults:
   - scope:
@@ -118,6 +119,8 @@ defaults:
 html_proofer:
   check_favicon: true
   check_html: true
+  allow_hash_href: true
+  http_status_ignore: [999,403]
   file_ignore:
     - /a.*regexp*/
     - a_string
