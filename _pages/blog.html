@@ -13,32 +13,31 @@ sitemap:
 {% if site.posts %}
   {% if site.tags.featured %}
   <section id="blog" class="wrapper alt style6">
-    <br />
     <div class="inner">
       <header class="major"><h2>Featured</h2></header>
     </div>
     <ul class="post-list">
-      {% assign sorted_posts = site.posts | sort: 'key' %}
-      {% for post in sorted_posts %}
-        {% if post.tags contains "featured" %}
-          <li>
-            <section class="featured-box">
-              <a href="{{ post.url | prepend: site.baseurl }}" class="image featured">
-                <img src="{{ post.image | prepend: "/images/posts/thumbnails/" | prepend: site.baseurl }}" alt="{{ post.title }}"/>
-              </a>
-              <div class="content">
-                <p class="featured-title">{{ post.title }}</p>
-                <p class="featured-desc">
-                  {{ post.desc | strip_html | truncatewords: 12 }}
-                </p>
-              </div>
-              <div class="footer">
-                <a href="{{ post.url | prepend: site.baseurl }}" class="featured-button">More...</a>
-              </div>
-            </section>
-          </li>
-        {% endif %}
-      {% endfor %}
+    {% assign sorted_posts = site.posts | sort: 'key' %}
+    {% for post in sorted_posts %}
+      {% if post.tags contains "featured" %}
+        <li>
+          <section class="featured-box">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="image featured">
+              <img src="{{ post.image | prepend: '/images/posts/thumbnails/' | prepend: site.baseurl }}" alt="{{ post.title }}"/>
+            </a>
+            <div class="content">
+              <p class="featured-title">{{ post.title }}</p>
+              <p class="featured-desc">
+                {{ post.desc | strip_html | truncatewords: 12 }}
+              </p>
+            </div>
+            <div class="footer">
+              <a href="{{ post.url | prepend: site.baseurl }}" class="featured-button">More...</a>
+            </div>
+          </section>
+        </li>
+      {% endif %}
+    {% endfor %}
     </ul>
   {% endif %}
 
@@ -46,24 +45,24 @@ sitemap:
     {% include search.html %}
   </div>
 
-    <div id="archive">
-      <ul style="list-style-type: none;">
-        {% assign p = 'now' | date: "%Y" %}
-        {% for post in site.categories.blog %}
-          {% assign n = post.date | date: "%Y" %}
-          {% if n != p %}
-            {% assign p = n %}
-            <br/><hr/><h5 class="year">{{ n }}</h5>
-          {% endif %}
-          <li class="archive-post">
-            <p class="date-container"><span class="date">{{ post.date | date: "%b %d" }}</span></p>&nbsp;
-            <a class="archive-link" href="{{ post.url }}" style="white-space: nowrap;">
-              <b class="title">{{ post.title }}</b>&nbsp;
-              {{ post.desc | strip_html | truncatewords: 12 }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
+  <div id="archive">
+    <ul>
+    {% assign p = 'now' | date: "%Y" %}
+    {% for post in site.categories.blog %}
+      {% assign n = post.date | date: "%Y" %}
+      {% if n != p %}
+        {% assign p = n %}
+        <br/><hr/><h5 class="year">{{ n }}</h5>
+      {% endif %}
+      <li class="archive-post">
+        <p class="date-container"><span class="date">{{ post.date | date: "%b %d" }}</span></p>&nbsp;
+        <a class="archive-link" href="{{ post.url }}">
+          <b class="title">{{ post.title }}</b>&nbsp;
+          {{ post.desc | strip_html | truncatewords: 12 }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
 {% endif %}
