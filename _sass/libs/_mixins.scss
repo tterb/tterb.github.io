@@ -54,8 +54,85 @@
 	}
 }
 
+@mixin font-size($size) {
+  font-size:$size;
+  font-size: ($size / 16px) * 1rem;
+}
+
+@mixin box-shadow( $h: 10px , $v: 10px , $b: 0px , $s: 0px , $c: rgba(#000, 0.55) ) {
+  -webkit-box-shadow: $h $v $b $s $c;
+	-moz-box-shadow: $h $v $b $s $c;
+	box-shadow: $h $v $b $s $c;
+}
+
 @mixin respond-to($breakpoint) {
 	@media only screen and (max-width: $breakpoint + px) {
 		@content;
 	}
+}
+
+@mixin box-sizing($type) {
+	-webkit-box-sizing:$type;
+	-moz-box-sizing:$type;
+	box-sizing:$type;
+}
+
+// Accomodate older versions of IE
+@mixin opacity($opacity, $is_imp: false) {
+	@if $is_imp == false {
+  	opacity: $opacity;
+  	filter: alpha(opacity=($opacity * 100));
+	} @else {
+		opacity: $opacity !important;
+		filter: alpha(opacity=($opacity * 100));
+	}
+}
+
+@mixin prefix-gradient($pos, $color-stops...) {
+	@if $pos == "top" or $pos == "to bottom" {
+		// top to bottom
+		$direction: top;
+		$to-direction: to bottom;
+	} @else if $pos == "bottom" or $pos == "to top" {
+		// bottom to top
+		$direction: bottom;
+		$to-direction: to top;
+	} @else if $pos == "left" or $pos == "to right" {
+		// left to right
+		$direction: left;
+		$to-direction: to right;
+	} @else if $pos == "right" or $pos == "to left" {
+		// right to left
+		$direction: right;
+		$to-direction: to left;
+	}
+	background: -webkit-linear-gradient($direction, $color-stops);
+	background: -moz-linear-gradient($direction, $color-stops);
+	background: -o-linear-gradient($direction, $color-stops);
+	background: linear-gradient($to-direction, $color-stops);
+}
+
+@mixin ease-linear-gradient($pos, $color) {
+	$rng: 100 - $start;
+	@include prefix-gradient($pos, $important, 
+		rgba($color, 1) $start,
+		rgba($color, 0.738) $start + $rng * 0.19,
+		rgba($color, 0.541) $start + $rng * 0.34,
+		rgba($color, 0.382) $start + $rng * 0.47,
+		rgba($color, 0.278) $start + $rng * 0.565,
+		rgba($color, 0.194) $start + $rng * 0.65,
+		rgba($color, 0.126) $start + $rng * 0.73,
+		rgba($color, 0.075) $start + $rng * 0.802,
+		rgba($color, 0.042) $start + $rng * 0.861,
+		rgba($color, 0.021) $start + $rng * 0.91,
+		rgba($color, 0.008) $start + $rng * 0.952,
+		rgba($color, 0.002) $start + $rng * 0.982,
+		rgba($color, 0) $start + $rng);
+}
+
+@mixin clip-path($clip) {
+  -webkit-clip-path: $clip;
+  -moz-clip-path: $clip;
+  -ms-clip-path: $clip;
+  clip-path: $clip;
 }
