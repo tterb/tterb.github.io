@@ -3,38 +3,18 @@
   {% include head.html %}
   <body>
     <!-- Page Wrapper -->
-    <div id="page-wrapper">
-      {% include header.html %}
-      {% if page.header %}
-        {{ content }}
-      {% else %}
-        <article {% if page.background-image %} id="main" {% elsif page.options contains 'minihead' %} id="minihead" {% else %} id="standard" {% endif %}>
-          {% include header-inner.html %} {{ content }}
-        </article>
-      {% endif %}
+    <!-- <div id="page-wrapper"> -->
+    {% include header.html %}
+    {% if page.header %}
+      {{ content }}
+    {% else %}
+      <article {% if page.background-image %} id="main" {% elsif page.options contains 'minihead' %} id="minihead" {% else %} id="standard" {% endif %}>
+        {% include header-inner.html %} {{ content }}
+      </article>
+    {% endif %}
 
-      {% include footer.html %} 
-      {% include scripts.html %}
-
-      <script src="{{ '/js/jekyll-search.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-
-      <script type="text/javascript">
-        SimpleJekyllSearch({
-          searchInput: document.getElementById('search-input'),
-          resultsContainer: document.getElementById('results-container'),
-          json: '{{ "/search.json" | prepend: site.baseurl }}',
-          searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-          noResultsText: 'No results found',
-          limit: 10,
-          fuzzy: false,
-          exclude: ['Welcome']
-        })
-      </script>
-    </div>
-    <noscript>
-      <link rel="stylesheet" href="{{ '/css/font-awesome.min.css' | prepend: site.baseurl }}">
-      <link rel="stylesheet" href="{{ '/css/iconfont.min.css' | prepend: site.baseurl }}">
-      <link rel="stylesheet" href="{{ '/css/vendor/disqus.css' | prepend: site.baseurl }}">
-    </noscript>
+    {% include footer.html %} 
+    {% include scripts.html %}
+    <!-- </div> -->
   </body>
 </html>
