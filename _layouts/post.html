@@ -1,12 +1,10 @@
----
----
-
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  {% include header.html %}
+  <!-- {% include header.html %} -->
   <!-- <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title> -->
   <body itemscope itemtype="http://schema.org/Article">
+  {% include header.html %}
     <main class="content" role="main">
       <article class="post">
         {% if page.options contains "fullhead" %}
@@ -41,10 +39,9 @@
           <section class="readme">
             {% if page.header %}
               <img class="post-header" alt="header" src="{{ page.header | prepend: site.baseurl }}" alt="{{ page.title }}"/>
-              <hr>
             <!-- <h4>{{ page.desc }}</h4> -->
             {% else %}
-              <h1 class="post-header">{{ page.title }}</h1><hr>
+              <h1 class="post-header">{{ page.title }}</h1>
             {% endif %}
             {% if page.options contains "subhead" %}
               <h4 class="post-subheader">{{ page.desc }}</h4>
@@ -55,7 +52,7 @@
             {% if page.image %}
               <div id="post-banner" class="post-image" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/images/posts/{{ page.image | prepend: site.baseurl }});height:40vh;"></div>
             {% endif %}
-            <div class="post-meta" style="height:50%;">
+            <div class="post-meta" style="height:46%;">
               <h1 class="post-title">{{ page.title }}</h1>
               <div class="cf post-meta-text">
                 <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
