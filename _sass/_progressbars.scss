@@ -28,6 +28,7 @@ $accent-color: #65c1c8;
     //  background-color: $red-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 
   .progress-2 {
@@ -36,6 +37,7 @@ $accent-color: #65c1c8;
     //  background-color: $red-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 
   .progress-3 {
@@ -44,6 +46,7 @@ $accent-color: #65c1c8;
     //  background-color: $orange-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 
   .progress-4 {
@@ -52,6 +55,7 @@ $accent-color: #65c1c8;
     //  background-color: $orange-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 
   .progress-5 {
@@ -60,6 +64,7 @@ $accent-color: #65c1c8;
     //  background-color: $yellow-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 
   .progress-6 {
@@ -68,6 +73,7 @@ $accent-color: #65c1c8;
     //  background-color: $pink-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 
   .progress-7 {
@@ -76,6 +82,7 @@ $accent-color: #65c1c8;
     //  background-color:  $green-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 
   .progress-8 {
@@ -84,6 +91,7 @@ $accent-color: #65c1c8;
     //  background-color:  $blue-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 
   .progress-9 {
@@ -92,6 +100,7 @@ $accent-color: #65c1c8;
     //  background-color: $teal-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 
   .progress-10{
@@ -100,11 +109,12 @@ $accent-color: #65c1c8;
     //  background-color: $green-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 }
 
 .white-text {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.8);
   font-size: 13px;
   line-height: 0;
   margin-left: 4px;

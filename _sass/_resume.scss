@@ -30,6 +30,7 @@ $sidebar-color: #2a303a;
         height: auto;
         max-width: 200px;
         border-radius: 100%;
+        box-shadow: 1px 1px 20px rgba(0,0,0,0.55);
         margin: 0 auto;
         vertical-align: middle;
       }
@@ -37,8 +38,10 @@ $sidebar-color: #2a303a;
     .side-skills {
       .skill-container {
         width: 80%;
-        margin: 0 auto;
+        margin: 1px auto;
         .progress {
+          // background: rgba(#000, 0.5);
+          box-shadow: 2px 1px 3px rgba(#000,0.45);
           margin-top: 3px;
         }
       }
@@ -48,28 +51,41 @@ $sidebar-color: #2a303a;
       margin: auto;
     }
     h3 {
+      @include opacity(0.85);
       font-size: 1.75em;
-      font-weight: 200;
+      font-weight: 400;
       letter-spacing: 0.04em;
+      line-height: 1.95;
       text-align: center;
       white-space: nowrap;
-      opacity: 0.8;
       margin: auto;
     }
     .icons {
-      color: rgba(255,255,255, 0.5);
+      color: rgba(255,255,255, 0.65);
       text-align: center;
+      line-height: 1.5;
       margin: 0 0.6em 1em auto;
-      padding-top: 0.5em;
+      padding-top: 0;
       li {
         font-size: 155%;
         margin: 0 auto;
         padding: 0.25em;
-        &:hover, &:active {
-          color: tint(#65c1c8, 35%);
+        text-shadow: 0 0 5px rgba(#000,0.65) !important;
+        &:hover a, &:active a {
+          color: tint(#65c1c8, 85%) !important;
+        }
+        &:first-child {
+          position: relative;
+          font-size: 160%;
+        }
+        &:nth-child(2) {
+          position: relative;
+          font-size: 145%;
         }
         &:last-child {
+          position: relative;
           font-size: 145%;
+          top: -2px;
         }
       }
     }
@@ -77,7 +93,7 @@ $sidebar-color: #2a303a;
   #contact {
     position: relative;
     top: 2.35vh;
-    padding: 1.5em 0 0.15em 0;
+    padding: 2em 0 0.15em 0;
     ul {
       padding: 0;
       li {
@@ -88,54 +104,56 @@ $sidebar-color: #2a303a;
   .resume-content {
     display: inline;
     position: absolute;
-    background-color: _palette(white);
+    background-color: #fff;
     width: 100%;
-    max-width: calc(100% - 300px);
+    max-width: calc(100% - 250px);
     // left: 27%;
     right: 0;
-    // float: right;
-    padding-left: 3em;
+    padding-left: 2em;
     padding-right: 1%;
     padding-bottom: 4em;
     z-index: -999;
     .head {
       margin: 1.5em 0 2.75em 0;
       h1 {
-        font-size: 6em;
+        // font-size: 6em;
+        font-size: 10.25vw;
         font-weight: _font(hdr-black);
-        letter-spacing: 0.045em;
-        color: darken($sidebar-color, 4%);
+        letter-spacing: 0.035em;
+        color: darken($sidebar-color, 2%);
         max-width: 700px;
-        margin-bottom: 0.15em;
+        margin-bottom: 0.125em;
       }
       h4 {
+        color: rgba(#000, 0.45);
         font-family: _font(ctrl-family);
-        font-size: 1.15em;
+        // font-size: 1.25em;
+        font-size: 2.25vw;
         font-weight: _font(ctrl-bold);
         letter-spacing: 0.1em;
         text-transform: none;
-        color: desaturate(lighten($sidebar-color, 30%), 10%);
-        padding-left: 8px;
-        opacity: 0.75;
+        padding-left: 6px;
       }
     }
     p {
       font-size: 14px;
-      letter-spacing: 0.035em;
+      letter-spacing: 0.045em;
+      line-height: 1.5;
     }
     .resume-section {
       margin-bottom: 1.5em;
       #title {
         color: #444;
         font-size: 2.5em;
-        letter-spacing: 0.025em;
+        letter-spacing: 0.02em;
         line-height: 1.5;
         border-bottom: 1px solid rgba(0,0,0,0.125);
         margin-right: 3.5%;
         margin-bottom: 0.4em;
       }
       p {
-        margin-bottom: 2.25em;
+        width: 98%;
+        margin: 0 auto 2.25em;
         padding-right: 1.15em;
       }
     }
@@ -150,16 +168,17 @@ $sidebar-color: #2a303a;
     }
     .sub {
       display: inline-block;
-      background-color: _palette(white);
+      // background-color: _palette(white);
       width: 100%;
       .left {
         display: inline;
         width: calc(28% - 10px);
         float: left;
         margin-right: 10px;
+        margin-left: 2px;
         h4 {
-          font-size: 1.5em;
-          letter-spacing: 0.015em;
+          font-size: 1.65em;
+          letter-spacing: 0.02em;
           color: #4A4A4A;
           border-bottom: 3px solid _palette(accent4, bg);
           white-space: nowrap;
@@ -176,7 +195,7 @@ $sidebar-color: #2a303a;
           h5 {
             color: #3a3a3a;
             font-size: 1.35em;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.025em;
             line-height: 1.25;
             margin: 0.75em auto 0.1em;
             a {
@@ -192,9 +211,15 @@ $sidebar-color: #2a303a;
             letter-spacing: 0.0175em;
             text-transform: none;
             color: desaturate(lighten($sidebar-color, 25%), 5%);
-            margin-top: 0.15em;
-            margin-bottom: 0.5em;
+            margin-top: 0;
+            margin-bottom: 0.55em;
             padding-left: 2px;
+            .fa-dot-circle-o {
+              // @include opacity(0.85);
+              font-size: 0.45em;
+              top: -2px !important;
+              padding: 0 3px;
+            }
           }
           p {
             color: #444 !important;
@@ -205,9 +230,10 @@ $sidebar-color: #2a303a;
             font-weight: _font(ctrl-bold) !important;
           }
           a {
-            color: darken(_palette(accent4, bg), 12%);
+            // color: darken(_palette(accent4, bg), 12%);
+            color: #30a5c0;
             &:hover, &:active {
-              color: tint(_palette(accent4, bg), 10%);
+              color: saturate(_palette(accent4, bg), 15%);
             }
           }
         }
