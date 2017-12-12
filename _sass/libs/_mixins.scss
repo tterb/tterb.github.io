@@ -1,5 +1,19 @@
 /// Makes an element's :before pseudoelement a FontAwesome icon.
 /// @param {string} $content Optional content value to use.
+@mixin fa($content: false) {
+	&::before {
+		@if $content {
+			content: $content;
+		}
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: 'FontAwesome';
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+	}
+}
+
 @mixin icon($content: false) {
 	text-decoration: none;
 	&:before {
@@ -8,22 +22,7 @@
 		}
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		text-transform: none !important;
-	}
-}
-
-@mixin iconfont($content: false) {
-	text-decoration: none;
-	&:before {
-		@if $content {
-			content: $content;
-		}
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-		font-family: IconFont;
+		font-family: 'IconFont';
 		font-style: normal;
 		font-weight: normal;
 		text-transform: none !important;
@@ -77,6 +76,13 @@
 	box-sizing:$type;
 }
 
+@mixin clip-path($clip) {
+  -webkit-clip-path: $clip;
+  -moz-clip-path: $clip;
+  -ms-clip-path: $clip;
+  clip-path: $clip;
+}
+
 // Accomodate older versions of IE
 @mixin opacity($opacity, $is_imp: false) {
 	@if $is_imp == false {
@@ -128,11 +134,4 @@
 		rgba($color, 0.008) $start + $rng * 0.952,
 		rgba($color, 0.002) $start + $rng * 0.982,
 		rgba($color, 0) $start + $rng);
-}
-
-@mixin clip-path($clip) {
-  -webkit-clip-path: $clip;
-  -moz-clip-path: $clip;
-  -ms-clip-path: $clip;
-  clip-path: $clip;
 }

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <!-- {% include header.html %} -->
-  <!-- <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title> -->
   <body itemscope itemtype="http://schema.org/Article">
   {% include header.html %}
     <main class="content" role="main">
@@ -38,8 +36,7 @@
         {% elsif page.options contains "readme" %}
           <section class="readme">
             {% if page.header %}
-              <img class="post-header" alt="header" src="{{ page.header | prepend: site.baseurl }}" alt="{{ page.title }}"/>
-            <!-- <h4>{{ page.desc }}</h4> -->
+              <img class="post-header" alt="{{ page.title }}" src="{{ page.header | prepend: site.baseurl }}"/>
             {% else %}
               <h1 class="post-header">{{ page.title }}</h1>
             {% endif %}
@@ -83,7 +80,7 @@
             <div class="isLeft">
               <h5 class="index-headline featured"><span>Written by</span></h5>
               <section class="author">
-                <div class="author-image" alt="avatar" style="background-image: url({{site.blog_logo | prepend: site.baseurl}})">Blog Logo</div>
+                <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
                 <h4>{{ site.owner.name }}</h4>
                 <p class="bio">{{author.bio}}</p>
                 <hr style="width: 63%;margin-top:10px;margin-bottom:8px;">
@@ -117,7 +114,7 @@
         <div class="inner">
           <h1 class="blog-title">{{ site.title }}</h1>
           <h2 class="blog-description">{{ site.description }}</h2>
-          <a href="{{ "blog/" | prepend: site.baseurl }}" class="btn">Back to Posts</a>
+          <a href="{{ '/blog/' | prepend: site.baseurl }}" class="btn">Back to Posts</a>
         </div>
       </div>
     {% endif %}

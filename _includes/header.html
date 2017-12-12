@@ -1,6 +1,6 @@
 
 <header id="header"{% if page.layout == 'landing' %} class="landing alt" {% elsif page.options contains 'readme' %} class="readme" {% elsif page.layout == 'post' %}{% unless page.options contains 'readme' %} class="alt" {% endunless %}{% endif %}>
-  <h1><a href="{{ site.baseurl }}/index.html">{{ site.title }}</a></h1>
+  <h1><a href="{{ '/index.html' | prepend: site.baseurl }}">{{ site.title }}</a></h1>
   <nav id="nav">
     <ul>
       <li class="special">
@@ -16,7 +16,7 @@
                 {% endunless %}
               {% endif %}
             {% endfor %}
-            <li class="menu-page-link"><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="icon fa-feed"> RSS Feed</a></li>
+            <li class="menu-page-link"><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-feed"></i> RSS Feed</a></li>
           </ul>
         </div>
       </li>
