@@ -59,12 +59,11 @@
             </div>
           </section>
         {% endif %}
-
+        
         {% if page.options contains "readme" %}
           <section class="readme-content">
             <a name="top"></a>
             {% if page.preview %}<img id="preview" src="{{ page.preview }}" alt="Preview" target="_blank"/>{% endif %}
-            <br>
             {{content}}
             <a href="#" id="back-to-top" title="Back to top"><img src="/images/arrow.png" alt="Back to top"></a>
           </section>
