@@ -27,7 +27,7 @@ $size: (
 
 // Font
 $font: (
-  hdr-family:      ('Open Sans', 'Montserrat', Helvetica, sans-serif),
+  hdr-family:      ('Avenir Next','Open Sans', 'Montserrat', Helvetica, sans-serif),
   hdr-size-xxxlarge:     2.25em,
   hdr-size-xxlarge:      1.9em,
   hdr-size-xlarge:       1.35em,
@@ -48,7 +48,7 @@ $font: (
   hdr-normal:               400,
   hdr-light:                300,
   hdr-thin:                 100,
-  ctrl-family:		       ('Open Sans', 'Roboto', Helvetica, sans-serif),
+  ctrl-family:		       ('Avenir Next','Open Sans', 'Roboto', Helvetica, sans-serif),
   ctrl-size-xxlarge:       15pt,
   ctrl-size-xlarge:        14pt,
   ctrl-size-large:         13pt,
@@ -77,8 +77,8 @@ $font: (
 	prose-size-small:        10pt,
 	prose-size-xsmall:        8pt,
   prose-lheight-large:     1.75,
-	prose-lheight-normal:    1.65,
-  prose-lheight-med:        1.5,
+	prose-lheight-normal:    1.55,
+  prose-lheight-med:       1.45,
 	prose-lheight-small:     1.35,
 	prose-lheight-smaller:   1.25,
 	prose-lheight-smallest:   0.9,
@@ -88,10 +88,10 @@ $font: (
   prose-normal:             400,
 	prose-light:              300,
 	fixed-family: 		     ('Source Code Pro', 'Inconsolata', 'Monaco', monospace),
-	fixed-size:              10pt,
-	fixed-inline-size:     10.5pt,
-	fixed-lheight:           1.75,
-  letter-spacing:       0.075em
+	fixed-size:             10.5pt,
+	fixed-inline-size:     10.75pt,
+	fixed-lheight:            1.75,
+  letter-spacing:        0.075em
 );
 
 // Palette - 2e3842 - #303840
