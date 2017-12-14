@@ -9,7 +9,9 @@ $sidebar-color: #2a303a;
   width: 100%;
   background-color: _palette(white);
   color: #333;
-  font-family: _font(hdr-family);
+  * {
+    font-family: 'Open Sans','Montserrat', sans-serif !important;
+  }
   #sidebar {
     position: fixed;
     height: 100%;
@@ -106,7 +108,7 @@ $sidebar-color: #2a303a;
     position: absolute;
     background-color: #fff;
     width: 100%;
-    max-width: calc(100% - 250px);
+    max-width: 72%;
     // left: 27%;
     right: 0;
     padding-left: 2em;
@@ -126,18 +128,22 @@ $sidebar-color: #2a303a;
       }
       h4 {
         color: rgba(#000, 0.45);
-        font-family: _font(ctrl-family);
+        // font-family: _font(ctrl-family);
         // font-size: 1.25em;
         font-size: 2.25vw;
         font-weight: _font(ctrl-bold);
         letter-spacing: 0.1em;
+        text-shadow: none !important;
         text-transform: none;
         padding-left: 6px;
+        i {
+          text-shadow: none !important;
+        }
       }
     }
     p {
       font-size: 14px;
-      letter-spacing: 0.045em;
+      letter-spacing: 0.035em;
       line-height: 1.5;
     }
     .resume-section {
@@ -152,9 +158,9 @@ $sidebar-color: #2a303a;
         margin-bottom: 0.4em;
       }
       p {
-        width: 98%;
-        margin: 0 auto 2.25em;
-        padding-right: 1.15em;
+        width: 93%;
+        margin: 0 6% 2.25em 1%;
+        // padding-right: 1em;
       }
     }
     #work {
@@ -208,13 +214,12 @@ $sidebar-color: #2a303a;
           h6 {
             font-size: 9pt;
             font-weight: _font(hdr-normal);
-            letter-spacing: 0.0175em;
+            letter-spacing: 0.0275em;
             text-transform: none;
             color: desaturate(lighten($sidebar-color, 25%), 5%);
-            margin-top: 0;
-            margin-bottom: 0.55em;
+            margin: 0 0 0.55em;
             padding-left: 2px;
-            .fa-dot-circle-o {
+            .fa-circle {
               // @include opacity(0.85);
               font-size: 0.45em;
               top: -2px !important;
