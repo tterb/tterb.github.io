@@ -18,10 +18,9 @@ $accent-color: #65c1c8;
 .progress {
   width: 100%;
   height: 5px;
-  background: #dddddd;
+  background: lighten(_palette(bg), 5%);
   border-radius: 2px;
   margin-top: 5px;
-
   .progress-1 {
     width: 10%;
     height: 100%;
@@ -30,7 +29,6 @@ $accent-color: #65c1c8;
     border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-2 {
     width: 20%;
     height: 100%;
@@ -39,7 +37,6 @@ $accent-color: #65c1c8;
     border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-3 {
     width: 30%;
     height: 100%;
@@ -48,7 +45,6 @@ $accent-color: #65c1c8;
     border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-4 {
     width: 40%;
     height: 100%;
@@ -57,7 +53,6 @@ $accent-color: #65c1c8;
     border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-5 {
     width: 50%;
     height: 100%;
@@ -66,7 +61,6 @@ $accent-color: #65c1c8;
     border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-6 {
     width: 60%;
     height: 100%;
@@ -75,7 +69,6 @@ $accent-color: #65c1c8;
     border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-7 {
     width: 70%;
     height: 100%;
@@ -84,7 +77,6 @@ $accent-color: #65c1c8;
     border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-8 {
     width: 80%;
     height: 100%;
@@ -93,7 +85,6 @@ $accent-color: #65c1c8;
     border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-9 {
     width: 90%;
     height: 100%;
@@ -102,7 +93,6 @@ $accent-color: #65c1c8;
     border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-10{
     width: 100%;
     height: 100%;
