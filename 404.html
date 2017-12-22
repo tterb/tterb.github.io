@@ -1,0 +1,24 @@
+---
+layout: none
+title: 404
+options: fullwidth, nomenu, nolanding, nobreadcrumb
+permalink: /404.html
+---
+
+<section id="four-oh-four">
+  <img src="{{ 'images/404.jpg' | prepend: site.baseurl }}" alt="404"/>
+  <div id="error-container">
+    <div class="overlay"></div>
+    <div class="message">
+      <h2>ERROR 404<br/>Not Found</h2>
+      <p>You may have mis-typed the URL,<br/>or maybe the page has been moved.<br/>Anyways, there is nothing to see here...<br/>The following links can get you back to where you were:</p>
+      <ul class="link-list">
+        <li><a href="{{ site.baseurl }}">Home</a></li><span class="fa fa-circle"></span>
+        <li><a href="{{ '/developer' | prepend: site.baseurl }}">Developer</a></li><span class="fa fa-circle"></span>
+        <li><a href="{{ '/designer' | prepend: site.baseurl }}">Designer</a></li><span class="fa fa-circle"></span>
+        <li><a href="{{ '/blog' | prepend: site.baseurl }}">Blog</a></li><span class="fa fa-circle"></span>
+        <li><a href="{{ '/contact' | prepend: site.baseurl }}">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
