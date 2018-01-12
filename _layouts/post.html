@@ -1,27 +1,23 @@
----
----
-
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  {% include header.html %}
-  <!-- <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title> -->
   <body itemscope itemtype="http://schema.org/Article">
+  {% include header.html %}
     <main class="content" role="main">
       <article class="post">
         {% if page.options contains "fullhead" %}
-          <section class="post-image">
+          <section class="post-image fullhead">
             {% if page.image %}
-              <div id="post-banner" alt="banner" class="post-image" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/images/posts/{{ page.image | prepend: site.baseurl }});height:100vh;"></div>
+              <div id="post-banner" alt="banner" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/images/posts/{{ page.image | prepend: site.baseurl }});height:100vh;"></div>
             {% endif %}
-            <div class="post-meta">
+            <div class="post-meta fullhead">
               <h1 class="post-title">{{ page.title }}</h1>
               <div class="cf post-meta-text">
                 <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.owner.name }}</h4>
               <span id="post-date">on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
               </div>
-              <div style="text-align:center; width:100%; margin:1em auto 0;">
+              <div class="scroll-arrow">
                 <a href="#top" class="more scrolly"><i class="fa fa-angle-down"></i></a>
               </div>
             </div>
@@ -32,7 +28,7 @@
               <h1 class="post-title">{{ page.title }}</h1>
               <div class="cf post-meta-text">
                 <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
-                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person" style="font-weight:500;">{{ site.owner.name }}</h4>
+                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.owner.name }}</h4>
                 <span id="date">on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
               </div>
             </div>
@@ -40,11 +36,10 @@
         {% elsif page.options contains "readme" %}
           <section class="readme">
             {% if page.header %}
-              <img class="post-header" alt="header" src="{{ page.header | prepend: site.baseurl }}" alt="{{ page.title }}"/>
-              <hr>
+              <img class="post-header" alt="{{ page.title }}" src="{{ page.header | prepend: site.baseurl }}"/>
             <!-- <h4>{{ page.desc }}</h4> -->
             {% else %}
-              <h1 class="post-header">{{ page.title }}</h1><hr>
+              <h1 class="post-header">{{ page.title }}</h1>
             {% endif %}
             {% if page.options contains "subhead" %}
               <h4 class="post-subheader">{{ page.desc }}</h4>
@@ -53,9 +48,9 @@
         {% else %}
           <section class="post-image" style="height:50%;">
             {% if page.image %}
-              <div id="post-banner" class="post-image" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/images/posts/{{ page.image | prepend: site.baseurl }});height:40vh;"></div>
+              <div id="post-banner" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/images/posts/{{ page.image | prepend: site.baseurl }});"></div>
             {% endif %}
-            <div class="post-meta" style="height:50%;">
+            <div class="post-meta" style="height:46%;">
               <h1 class="post-title">{{ page.title }}</h1>
               <div class="cf post-meta-text">
                 <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
@@ -65,7 +60,11 @@
             </div>
           </section>
         {% endif %}
-
+        {% if page.options contains "update" %}
+          <div class="update-container">
+            <span class="update-date">This page was last updated at {{ "now" | date: "%b %d, %y" }}</span>
+          </div>
+        {% endif %}
         {% if page.options contains "readme" %}
           <section class="readme-content">
             <a name="top"></a>
@@ -81,12 +80,13 @@
             {{content}}
             <a href="#" id="back-to-top" title="Back to top"><img src="/images/arrow.png" alt="Back to top"></a>
           </section>
-
+        {% endif %}
+        {% if page.options contains "closer" %}
           <div class="bottom-teaser cf">
             <div class="isLeft">
               <h5 class="index-headline featured"><span>Written by</span></h5>
               <section class="author">
-                <div class="author-image" alt="avatar" style="background-image: url({{site.blog_logo | prepend: site.baseurl}})">Blog Logo</div>
+                <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
                 <h4>{{ site.owner.name }}</h4>
                 <p class="bio">{{author.bio}}</p>
                 <hr style="width: 63%;margin-top:10px;margin-bottom:8px;">
@@ -95,7 +95,7 @@
             </div>
           </div>
         {% endif %}
-        <!-- {% if site.disqus %}
+        {% if site.disqus %}
           <div id="disqus_thread"></div>
           <script type="text/javascript">
               /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -109,22 +109,21 @@
               })();
           </script>
           <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        {% endif %} -->
+        {% endif %}
       </article>
     </main>
 
-    {% if page.options contains "closer" %}
-      <div class="bottom-closer">
-        <div id="closer-image" class="background-closer-image" {% if site.cover %} style="background: linear-gradient(
-        rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url({{ site.cover | prepend: site.baseurl }});background-size:cover;"{% endif %}>Image</div>
-        <div class="inner">
-          <h1 class="blog-title">{{ site.title }}</h1>
-          <h2 class="blog-description">{{ site.description }}</h2>
-          <a href="{{ "blog/" | prepend: site.baseurl }}" class="btn">Back to Posts</a>
-        </div>
-      </div>
-    {% endif %}
-    {% include footer.html %}{% include scripts.html %}
+    {% include scripts.html %}
+    {% include footer.html %}
     <script type="text/javascript" src="{{ '/js/scroll-top.min.js' | prepend: site.baseurl }}"></script>
+    {% if page.options contains "dropcap" %}
+      <script type="text/javascript" src="{{ '/js/dropcap.min.js' | prepend: site.baseurl }}"></script>
+      <script>
+        $(document).ready(function() {
+          var dropcaps = document.querySelectorAll(".dropcap");
+          window.Dropcap.layout(dropcaps, 2);
+        });
+      </script>
+    {% endif %}
   </body>
 </html>
