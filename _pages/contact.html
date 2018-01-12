@@ -24,7 +24,7 @@ script: |
   });
 ---
 
-<section id="contact">
+<section id="contact" class="wrapper style2">
   <form id="sendemail" action="{{ site.mailaction }}" method="POST">
     <input type='hidden' name='redirect_to' value='{{ '/contact-success' | prepend: site.baseurl | prepend: site.url }}'/>
     <input type="hidden" value="dog" id="type1"/>
