@@ -3,6 +3,8 @@
                        $g5: null, $g6: null,
                        $g7: null, $g8: null,
                        $g9: null, $g10: null,
+                       $g11: null, $g12: null,
+                       $g13: null, $g14: null,
                        $fallback: null) {
   @include _bourbon-deprecate-for-prefixing("linear-gradient");
 
@@ -13,7 +15,7 @@
 
   // If $pos is missing from mixin, reassign vars and add default position
   @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
-    $g10: $g9; $g9: $g8; $g8: $g7; $g7: $g6; $g6: $g5;
+    $g14: $g13; $g13: $g12; $g11: $g10; $g10: $g9; $g9: $g8; $g8: $g7; $g7: $g6; $g6: $g5;
     $g5: $g4; $g4: $g3; $g3: $g2; $g2: $g1; $g1: $pos;
     $pos: null;
   }
@@ -24,7 +26,7 @@
     $pos-spec:   nth($positions, 2);
   }
 
-  $full: $g1, $g2, $g3, $g4, $g5, $g6, $g7, $g8, $g9, $g10;
+  $full: $g1, $g2, $g3, $g4, $g5, $g6, $g7, $g8, $g9, $g10, $g11, $g12, $g13, $g14;
 
   // Set $g1 as the default fallback color
   $fallback-color: nth($g1, 1);

@@ -16,95 +16,95 @@ $accent-color: #65c1c8;
 // $accent-color: #6fdfcd;
 
 .progress {
+  background: lighten(_palette(accent1, bg), 6%);
   width: 100%;
   height: 5px;
-  background: #dddddd;
   border-radius: 2px;
   margin-top: 5px;
-
   .progress-1 {
     width: 10%;
     height: 100%;
     //  background-color: $red-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-2 {
     width: 20%;
     height: 100%;
     //  background-color: $red-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-3 {
     width: 30%;
     height: 100%;
     //  background-color: $orange-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-4 {
     width: 40%;
     height: 100%;
     //  background-color: $orange-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-5 {
     width: 50%;
     height: 100%;
     //  background-color: $yellow-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-6 {
     width: 60%;
     height: 100%;
     //  background-color: $pink-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-7 {
     width: 70%;
     height: 100%;
     //  background-color:  $green-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-8 {
     width: 80%;
     height: 100%;
     //  background-color:  $blue-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-9 {
     width: 90%;
     height: 100%;
     //  background-color: $teal-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
-
   .progress-10{
     width: 100%;
     height: 100%;
     //  background-color: $green-color;
     background-color: $accent-color;
     border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 }
 
 .white-text {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.8);
   font-size: 13px;
   line-height: 0;
   margin-left: 4px;
