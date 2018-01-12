@@ -5,15 +5,74 @@
 <script src="{{ '/js/skel.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/util.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/main.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/svgmagic.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/shuffle.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/magnific-popup.min.js' | prepend: site.baseurl }}"></script>
+<link  rel="stylesheet"href="{{ '/css/magnific-popup.css' | prepend: site.baseurl }}"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.3/webcomponents.min.js"></script>
+<link rel="import" href="/bower_components/awesome-button/awesome-button.html"/>
 
 <!-- Improve code-block formatting -->
 <script>
+
+$(document).ready(function(){
+   $('img').svgmagic();
+});
+
 $('code').each(function() {
-  if($(this).height() < 30) {
-    $(this).css('padding', '1em 1.35em');
-  }
+  if($(this).height() < 30)
+    $(this).css('padding', '0.7em 1.25em');
 });
 </script>
+
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  window.sr = ScrollReveal({ duration: 1000, reset: true });
+  sr.reveal('#banner .btn-circle', 10);
+  sr.reveal('#one .inner', 10);
+  sr.reveal('#two .inner', 10);
+  sr.reveal('#back-to-top', 25);
+  // sr.reveal('.preview-section .feature-list li', 25);
+  // sr.reveal('.repo-icons a', 20);
+  // sr.reveal('.tag-line');
+  
+  $('.works').shuffle({
+  	itemSelector: '.works-item',
+  	gutterWidth: 30
+  });
+
+  $('.filter li').on('click', function() {
+  	var $this = $(this),
+  	isActive = $this.hasClass( 'active' ),
+  	group = isActive ? 'all' : $this.data('group');
+  	if ( !isActive ) {
+  		$('.filter .active').removeClass('active');
+  	}
+  	$this.toggleClass('active');
+  	$('.works').shuffle( 'shuffle', group );
+  });
+
+  $('.filtered .works-item-link').magnificPopup({
+  	type: 'inline',
+  	gallery: {
+  		enabled: true
+  	},
+  	mainClass: 'unica',
+  	removalDelay: 300
+  });
+}(jQuery));
+</script>
+
+
+<noscript>
+  <link rel="stylesheet" href="{{ '/css/normalize.min.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/fonts/FontAwesome/fontawesome.min.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/fonts/Iconfont/iconfont.min.css' | prepend: site.baseurl }}">
+  <!-- <link rel="stylesheet" href="{{ '/css/vendor/disqus.css' | prepend: site.baseurl }}"> -->
+</noscript>
 
 {% for include in page.script-includes %}
   {% assign test1 = include | slice: 0,2 %}
