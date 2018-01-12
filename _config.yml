@@ -120,11 +120,12 @@ html_proofer:
   check_favicon: true
   check_html: true
   allow_hash_href: true
-  http_status_ignore: [999,403]
+  http_status_ignore: [999,522,403]
   file_ignore:
     - /a.*regexp*/
     - a_string
     - bower_components/*
+    - bower_components/**/*.html
     - fonts/*
     - _posts/*
     - blog/*
