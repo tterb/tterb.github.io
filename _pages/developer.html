@@ -4,149 +4,165 @@ title: Developer
 permalink: /developer/
 options: fullwidth
 desc: As a developer, I have experience working in both front and back-end development and enjoy experimenting with new frameworks and platforms, while striving to create tools that myself and others can enjoy.
-image: dev.png
-background-image: dev.png
+image: dev.jpg
+background-image: dev.jpg
 sitemap:
   priority: 0.9
 ---
 
-<body>
-<!-- <link href="{{"/css/skills.css" | prepend: site.baseurl }}" rel="stylesheet"> -->
-  <!-- <script src="https://JonSn0w.github.io/github-buttons/buttons.js"></script> -->
-  <script src="http://brettstevenson.me/github-buttons/buttons.js"></script>
-  <section id="developer" class="wrapper special">
-    <section id="about" class="wrapper style1 special">
-      <div class="inner">
-        <header class="major">
-          <h2>About</h2>
-          <p>{{ page.desc }}</p>
-        </header>
-        <!-- <style>
-          @font-face{font-family:'FontAwesome';src:url('../fonts/fontawesome-webfont.eot?v=4.4.0');src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
-          .fa-code:before{content:"\f121";}.fa-github:before{content:"\f09b"}.fa-deviantart:before{content:"\f1bd";}.fa-twitter:before{content:"\f099"}.fa-linkedin-square:before{content:"\f08c"}.fa-envelope:before{content:"\f0e0"}
-        </style>
-        <ul class="icons major">
-          <li><span class="icon icon-font major style3"><span class="ico-pen-tool"></span></span></li>
-          <li><span class="icon icon-font major style3"><span class="ico-paintcan"></span></span></li>
-          <li><span class="icon icon-font major style3"><span class="ico-brackets"></span></span></li>
-        </ul> -->
-        <section id="dev_calendar">
-          <script src="{{ '/js/github-calendar.min.js' | prepend: site.baseurl }}"></script>
-          <div class="calendar">
-            Loading contribution data...
-          </div>
-          <script>GitHubCalendar(".calendar", "JonSn0w");</script>
-        </section>
-      </div>
-    </section>
-    <!-- <section id="dev_skills" class="wrapper style2 special">
-      <div class="inner">
-        <header class="major">
-          <h2>Skills</h2>
-        </header>
-      </div>
-      <section class="col col-2">
-        <p>Though I have experience working with a variety of languages and platforms, more importantly, this experience has provided me with a deep and comprehensive understanding of the fundamental concepts of programming, allowing me to easily adapt to new languages and environments.</p>
-        <!-/- Accordingly, I have experience working in a variety of programming languages and have developed an affinity for expanding and adapting my knowledge to fit any setting. -->
-        <!-- <iframe width="300" height="300" src="https://JonSn0w.github.io/github-profile-languages/api.html?JonSn0w" frameborder="0"></iframe> -/->
-      </section>
-      {% include radar-chart.html %}
+<script src="https://JonSn0w.github.io/github-buttons/buttons.js"></script>
+<!-- <script>
+function($) {
+  $(document).ready(function() {
+    resize_to_fit();
+  });
+  function resize_to_fit() {
+    var fontsize = $('.title h3').css('font-size');
+    $('.title h3').css('fontSize', parseFloat(fontsize) - 1);
+
+    if($('.title h3').height() >= $('.title').height()) {
+      resize_to_fit();
+    }
+  }
+}
+</script> -->
+<section id="developer" class="wrapper special">
+  <section id="about" class="wrapper style1 special">
+    <div class="inner">
+      <header class="major">
+        <h2>About</h2>
+        <p>{{ page.desc }}</p>
+      </header>
+      <!-- <style>
+        @font-face{font-family:'FontAwesome';src:url('../fonts/FontAwesome/FontAwesome-webfont.eot?v=4.4.0');src:url('../fonts/FontAwesome/FontAwesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('../fonts/FontAwesome/FontAwesome-webfont.woff2?v=4.4.0') format('woff2'),url('../fonts/FontAwesome/FontAwesome-webfont.woff?v=4.4.0') format('woff'),url('../fonts/FontAwesome/FontAwesome-webfont.ttf?v=4.4.0') format('truetype'),url('../fonts/FontAwesome/FontAwesome-webfont.svg?v=4.4.0#FontAwesomeregular') format('svg');font-weight:normal;font-style:normal}
+        .fa-code:before{content:"\f121";}.fa-github:before{content:"\f09b"}.fa-deviantart:before{content:"\f1bd";}.fa-twitter:before{content:"\f099"}.fa-linkedin-square:before{content:"\f08c"}.fa-envelope:before{content:"\f0e0"}
+      </style>
+      <ul class="icons major">
+        <li><span class="icon icon-font major style3"><span class="ico-pen-tool"></span></span></li>
+        <li><span class="icon icon-font major style3"><span class="ico-paintcan"></span></span></li>
+        <li><span class="icon icon-font major style3"><span class="ico-brackets"></span></span></li>
+      </ul> -->
       <section id="dev_calendar">
-          <script src="{{ '/js/github-calendar.min.js' | prepend: site.baseurl }}"></script>
-          <div class="calendar">
-            Loading contribution data...
-          </div>
-          <script>GitHubCalendar(".calendar", "JonSn0w");</script>
+        <script src="{{ '/js/github-calendar.min.js' | prepend: site.baseurl }}"></script>
+        <div class="calendar">
+          Loading contribution data...
+        </div>
+        <script>GitHubCalendar(".calendar", "JonSn0w");</script>
       </section>
-      <!-/- <section class="col col-3">
-        <div class="block">
-          <div class="block-body"> -->
-            <!-- <h3 class="margin-bot">Languages</h3> -->
-            <!-- {% for skill in site.data.skills %}
-              <span class="post-meta">{{skill.name}}</span>
-              <div class="progress margin-bot"><div class="progress-{{ skill.xp }} {{ skill.color }}"></div></div>
-            {% endfor %}
-          </div>
-        </div>
-    </section> -/->
-    </section> -->
-    <section id="dev_gallery" class="wrapper style3 special">
-      <section id="projects" class="wrapper style3 special">
-        <!-- <header class="major"> -->
-        <div class="inner">
-          <header class="major">
-            <h2>Projects</h2>
-          </header>
-        </div>
-        <style>
-            @font-face{font-family:'IconFont';src:url('../fonts/iconfont/iconfont.eot?v=4.4.0');src:url('../fonts/iconfont/iconfont.eot?#iefix&v=4.4.0')format('embedded-opentype'),url('../fonts/iconfont/iconfont.woff?v=4.4.0') format('woff'),url('../fonts/iconfont/iconfont.ttf?v=4.4.0') format('truetype'),url('../fonts/iconfont/iconfont.svg?v=4.4.0#iconfont/iconfontregular') format('svg');font-weight:normal;font-style:normal}
-            .ico-eye:before{content: "\49";} .ico-heart:before { content: "\4a"; } .ico-cloud-download:before { content: "\4c"; margin-top: 2px; }
-        </style>
-        <!-- {% assign sorted_projects = site.pages | sort:"key" %} -->
-        {% for project in site.data.projects %}
-            <section class="spotlight">
-            	<div class="image">
-                <a href="{{ project.url | prepend:site.baseurl }}">
-                  <img src="{% if project.image %}/images/projects/{{ project.image }}{% endif %}" alt="" />
-                </a>
-              </div>
-              <div class="content">
-                <a href="{{ project.url | prepend:site.baseurl }}">
-                  <div class="title">
-                    <h3>{{ project.title }}</h3>
-                  </div>
-                  <div class="desc">
-                    <p>{{ project.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
-                  </div>
-                  {% if project.repo %}
-                  <ul id="github-buttons" class="list-inline">
-                    <li>
-                      <!-- <span class="icon icon-font"><span class="ico-eye"></span></span> -->
-                      <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/subscription" data-icon="octicon-eye" data-text="Watch" data-show-count="true" aria-label="Watch {{ project.repo }} on GitHub"></a>
-                    </li>
-                    <li>
-                      <!-- <span class="icon icon-font"><span class="ico-heart"></span></span> -->
-                      <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}"
-                      data-icon="octicon-star"
-                      data-show-count="true"
-                      data-count-href="/JonSn0w/{{ project.repo }}/stargazers"
-                      data-show-count="/repos/JonSn0w/{{ project.repo }}#stargazers_count"
-                      data-count-aria-label="# stargazers on GitHub"
-                      aria-label="Star {{ project.title }} on GitHub">Star</a>
-                    </li>
-                    <!-- <li>
-                      <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}"
-                      data-icon="octicon-repo-forked"
-                      data-count-href="/JonSn0w/{{ project.repo }}/forks"
-                      data-show-count="/repos/JonSn0w/{{ project.repo }}#forks_count"
-                      data-count-aria-label="# forks on GitHub"
-                      aria-label="Fork {{ project.title }} on GitHub">Fork</a>
-                    </li> -->
-              			<li>
-                      <!-- <span class="icon icon-font"><span class="ico-cloud-download"></span></span> -->
-              			  <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/archive/master.zip"
-              			  data-icon="octicon-cloud-download"
-              			  aria-label="Download {{ project.title }} on GitHub" alt="Download {{ project.title }} on GitHub">Download</a>
-              			</li>
-                  </ul>
-                    <!-- <div class="gh-buttons">
-                      <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/subscription" data-icon="octicon-eye" data-text="Watch" data-show-count="true" aria-label="Watch {{ project.repo }} on GitHub"></a>
-                      <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}" data-icon="octicon-star" data-text="Star" data-show-count="true" aria-label="Star {{ project.repo }} on GitHub"></a>
-                      <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/archive/master.zip" data-icon="octicon-cloud-download" data-text="Download" aria-label="Download {{ project.repo }} on GitHub"></a>
-                    </div> -->
-                  {% endif %}
-                </a>
-              </div>
-            </section>
-        {% endfor %}
-      <div class="button bottom">
-        <style>
-          @font-face{font-family:'FontAwesome';src:url('../fonts/fontawesome-webfont.eot?v=4.4.0');src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
-          .fa-github:before{content:"\f09b"}
-        </style>
-        <span class="fa fa-github"></span>
-        <a href="{{ site.social.github }}">More on GitHub</a>
-      </div>
-    </section></section>
+    </div>
   </section>
-</body>
+  <!-- <section id="dev_skills" class="wrapper style2 special">
+    <div class="inner">
+      <header class="major">
+        <h2>Skills</h2>
+      </header>
+    </div>
+    <section class="col col-2">
+      <p>Though I have experience working with a variety of languages and platforms, more importantly, this experience has provided me with a deep and comprehensive understanding of the fundamental concepts of programming, allowing me to easily adapt to new languages and environments.</p>
+      <!-/- Accordingly, I have experience working in a variety of programming languages and have developed an affinity for expanding and adapting my knowledge to fit any setting. -->
+      <!-- <iframe width="300" height="300" src="https://JonSn0w.github.io/github-profile-languages/api.html?JonSn0w" frameborder="0"></iframe> -/->
+    </section>
+    <section class="col col-3 radar-chart">
+      <div class="radarChart"></div>
+      {% include radar-chart.html %}
+    </section>
+  </section> -->
+  <!-- <section id="dev_gallery" class="wrapper style3 special"> -->
+    <section id="projects" class="wrapper style3 special">
+      <!-- <div class="inner">
+        <header class="major">
+          <h2>Projects</h2>
+        </header>
+      </div> -->
+      <style>
+          @font-face{font-family:'IconFont';src:url('../fonts/iconfont/iconfont.eot?v=4.4.0');src:url('../fonts/iconfont/iconfont.eot?#iefix&v=4.4.0')format('embedded-opentype'),url('../fonts/iconfont/iconfont.woff?v=4.4.0') format('woff'),url('../fonts/iconfont/iconfont.ttf?v=4.4.0') format('truetype'),url('../fonts/iconfont/iconfont.svg?v=4.4.0#iconfont/iconfontregular') format('svg');font-weight:normal;font-style:normal}
+          .ico-eye:before{content: "\49";} .ico-heart:before { content: "\4a"; } .ico-cloud-download:before { content: "\4c"; margin-top: 2px; }
+      </style>
+      {% for project in site.data.projects %}
+          <section class="spotlight">
+          	<div class="image">
+              <a href="{{ project.url | prepend:site.baseurl }}">
+                <img src="{% if project.image %}/images/projects/{{ project.image }}{% endif %}" alt="{{ project.title }}"/>
+              </a>
+            </div>
+            <div class="content">
+              <a href="{{ project.url | prepend:site.baseurl }}">
+                <div class="title">
+                  <h3>{{ project.title }}</h3>
+                </div>
+                <div class="desc">
+                  <p>{{ project.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
+                </div>
+                {% if project.repo %}
+                <ul class="github-buttons list-inline">
+                  <li>
+                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}"
+                    data-icon="octicon-star"
+                    data-show-count="true"
+                    data-count-href="/JonSn0w/{{ project.repo }}/stargazers"
+                    data-count-aria-label="# stargazers on GitHub"
+                    aria-label="Star {{ project.title }} on GitHub">Star</a>
+                  </li>
+                  <li>
+                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/subscription" data-icon="octicon-eye" data-text="Watch" data-show-count="true" aria-label="Watch {{ project.repo }} on GitHub"></a>
+                  </li>
+                  <!-- <li>
+                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}"
+                    data-icon="octicon-repo-forked"
+                    data-count-href="/JonSn0w/{{ project.repo }}/forks"
+                    data-show-count="/repos/JonSn0w/{{ project.repo }}#forks_count"
+                    data-count-aria-label="# forks on GitHub"
+                    aria-label="Fork {{ project.title }} on GitHub">Fork</a>
+                  </li> -->
+            			<li>
+            			  <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/archive/master.zip"
+            			  data-icon="octicon-cloud-download"
+            			  aria-label="Download {{ project.title }} on GitHub" alt="Download {{ project.title }} on GitHub">Download</a>
+            			</li>
+                </ul>
+                  <!-- <div class="gh-buttons">
+                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/subscription" data-icon="octicon-eye" data-text="Watch" data-show-count="true" aria-label="Watch {{ project.repo }} on GitHub"></a>
+                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}" data-icon="octicon-star" data-text="Star" data-show-count="true" aria-label="Star {{ project.repo }} on GitHub"></a>
+                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/archive/master.zip" data-icon="octicon-cloud-download" data-text="Download" aria-label="Download {{ project.repo }} on GitHub"></a>
+                  </div> -->
+                {% endif %}
+              </a>
+            </div>
+          </section>
+      {% endfor %}
+  </section>
+<section id="three" class="wrapper style2 special angled">
+  <div class="inner">
+    <header class="major">
+      <h2>Projects</h2>
+    </header>
+    <div class="project-tiles">
+    {% for project in site.data.projects %}
+      <div class="tile">
+        <img alt="{{ project.title }}" src="{{ site.baseurl }}{% if project.image %}/images/projects/{{ project.image }}{% else %}banner.jpg{% endif %}" data-full="{{ site.baseurl }}{% if project.image %}/images/projects/{{ project.image }}{% else %}banner.jpg{% endif %}"/>
+        <div class="mask">
+          <h4>{{ project.title }}</h4>
+          <p>{{ project.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
+          <!-- <awesome-button href="{{ site.baseurl }}{% if project.permalink %}{{ project.permalink }}{% else %}{{ project.repo }}{% endif %}">More</awesome-button> -->
+          <a class="button special info" href="{{ site.baseurl }}{% if project.permalink %}{{ project.permalink }}{% else %}{{ project.repo }}{% endif %}">Read More</a>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+  
+</section>
+  <section id="four" class="wrapper style4">
+    <div class="inner">
+      <header>
+        <h2>Want to see more?</h2>
+        <p>Check out more of my projects and contributions on GitHub or contact me for more information.</p>
+      </header>
+      <ul class="actions vertical">
+        <li><a href="{{ site.social.github }}" class="button fit special">GitHub</a></li>
+        <li><a href="{{ '/contact/' | prepend: site.baseurl }}" class="button fit">Contact</a></li>
+      </ul>
+    </div>
+  </section>
+</section>
