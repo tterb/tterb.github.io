@@ -1,30 +1,43 @@
 - title: Low Poly Island
   desc: A 3D modeled, Super Mario-inspired, floating island scene created using Cinema 4D.
-  tool: cinema4d
+  tool: Cinema4D
   image: LowPolyIsland.png
 
 - title: Atom File Icons
   desc: A set of icons that have been designed to be tastefully unique enough to ease navigation of large projects
-  tool: illustrator
+  tool: Illustrator
   image: AtomFileTypes.png
 
 - title: Atomic Design
   desc: A UI-theme that provides a modern and refined interface for Atom, aiming to improve user experience and adaptability
   image: AtomicDesign.png
-  tool: code
-  tag: UI-design
+  tool: Code
+  tag: UI
 
 - title: PlayMusic
-  desc: A mockup created to provide a preview of the features and variants of the <a href="http://brettstevenson.io/PlayMusic/">PlayMusic</a> rainmeter skin
-  tool: illustrator
+  desc: A mockup created to provide a preview of the features and variants of the <a href="http://brettstevenson.io/PlayMusic/">PlayMusic</a> Rainmeter skin
+  tool: Illustrator
   image: PlayMusic.png
+  tag: UI
 
 - title: TypeFace
   desc: A familiar face created in Adobe Illustrator using only manipulated type characters
-  tool: illustrator
   image: TypeFace.png
+  tool: Illustrator
+
+- title: Notifications
+  desc: A collection of custom UI notifications designed for <a href="http://brettstevenson.io/Hyde/">Hyde</a>
+  image: Notifications.png
+  tool: Illustrator
+  tag: UI
 
 - title: Flat Monokai
   desc: A flat interpretation of the <a href="http://brettstevenson.io/Atomic-Monokai-Syntax/">Atomic Monokai</a> syntax-highlighting package for Atom
-  tool: illustrator
   image: FlatMonokai.png
+  tool: Illustrator
+
+- title: Logo Design
+  desc: A logo design inspired by the work of Illustrator, <a href="https://dribbble.com/yoga">Yoga Perdana</a>
+  image: YogaDesign.png
+  tool: illustrator
+  tag: logo

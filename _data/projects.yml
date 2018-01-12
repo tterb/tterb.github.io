@@ -8,7 +8,7 @@
 - title: PlayMusic
   permalink: /PlayMusic/
   repo: PlayMusic
-  desc: A Rainmeter skin that provides Google Play Music users the ability to access their music tastefully from their desktop.
+  desc: A Rainmeter skin that provides thousands of Google Play Music users with the ability to access their music tastefully from their desktop.
   image: PlayMusic.png
 
 - title: Atomic Design UI
@@ -17,8 +17,14 @@
   desc: A theme that provides a dark, modern, and refined interface for Atom, featuring modifications that focus on improving the user experience and adaptability.
   image: AtomicDesign.png
 
+- title: UD Therapy
+  permalink: /projects/Urban-Dictionary-Therapy/
+  repo: Urban-Dictionary-Therapy
+  desc: A simple command-line rehabilitation program for coping with those long frustrating days of programming.
+  image: UDTherapy.png
+
 - title: Github Calendar
   permalink: /projects/GithubCalendar/
   repo: githubcalendar
-  desc: A customizable Rainmeter skin that displays the GitHub contribution calendar from the user's profile onto their desktop.
+  desc: A Rainmeter skin that displays the GitHub contribution calendar from the user's profile onto their desktop.
   image: GithubCalendar.png
