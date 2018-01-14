@@ -17,10 +17,6 @@ sitemap:
           <h2>About</h2>
           <p>{{ page.desc }}</p>
         </header>
-        <!-- <style>
-          @font-face{font-family:'FontAwesome';src:url('../fonts/FontAwesome/FontAwesome-webfont.eot?v=4.4.0');src:url('../fonts/FontAwesome/FontAwesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('../fonts/FontAwesome/FontAwesome-webfont.woff2?v=4.4.0') format('woff2'),url('../fonts/FontAwesome/FontAwesome-webfont.woff?v=4.4.0') format('woff'),url('../fonts/FontAwesome/FontAwesome-webfont.ttf?v=4.4.0') format('truetype'),url('../fonts/FontAwesome/FontAwesome-webfont.svg?v=4.4.0#FontAwesomeregular') format('svg');font-weight:normal;font-style:normal}
-          .fa-code:before{content:"\f121";}.fa-github:before{content:"\f09b"}.fa-deviantart:before{content:"\f1bd";}.fa-twitter:before{content:"\f099"}.fa-linkedin-square:before{content:"\f08c"}.fa-envelope:before{content:"\f0e0"}
-        </style> -->
         <ul class="icons major">
           <li><span class="icon icon-font major style3"><span class="ico-pen-tool"></span></span></li>
           <li><span class="icon icon-font major style3"><span class="ico-paintcan"></span></span></li>
@@ -51,22 +47,19 @@ sitemap:
           <h2>Gallery</h2>
         </header>
         <div class="design-tiles tile-container">
-          <div class="m-p-g">
-            <div class="m-p-g__thumbs" data-google-image-layout data-max-height="360">
-            {% for design in site.data.designs %}
-              <div class="tile">
-                <img src="{{ site.baseurl }}{% if design.image %}/images/designs/{{ design.image }}{% else %}banner.jpg{% endif %}" data-full="{{ site.baseurl }}{% if design.image %}/images/designs/{{ design.image }}{% endif %}" alt="{{ design.title }}"/>
-                <div class="mask">
-                  <div class="click-area m-p-g__thumbs-img" data-full="{{ site.baseurl }}{% if design.image %}/images/designs/{{ design.image }}{% endif %}"></div>
-                  <h4>{{ design.title }}</h4>
-                  <p>{{ design.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
-                  <a class="button special info" href="{{ site.baseurl }}{% if design.permalink %}{{ design.permalink }}{% else %}{{ design.repo }}{% endif %}" style="padding:6px 25px;">View</a>
-                </div>
+          <!-- <div class="m-p-g__thumbs" data-google-image-layout data-max-height="360"> -->
+          {% for design in site.data.designs %}
+            {% if design.image %}
+            <div class="tile">
+              <img title="{{ design.title }}" src="{{ design.image | prepend: '/images/designs/' | prepend: baseurl }}" alt="{{ design.title }}"/>
+              <div class="mask" title="{{ design.title }}" desc="{{ design.desc | markdownify | strip_html | strip_newlines | escape_once }}" data-mfp-src="{{ site.baseurl }}{% if design.image %}/images/designs/{{ design.image }}{% else %}banner.jpg{% endif %}">
+                <h4>{{ design.title }}</h4>
+                <p>{{ design.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
+                <a class="button special info" href="{{ site.baseurl }}{% if design.image %}/images/designs/{{ design.image }}{% else %}banner.jpg{% endif %}" data-full="{% if design.image %}{{ design.image | prepend: '/images/designs/' | prepend: baseurl }}{% endif %}" style="padding:6px 25px;">View</a>
               </div>
-            {% endfor %}
             </div>
-            <div class="m-p-g__fullscreen" style="border:0;"></div>
-          </div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -83,9 +76,3 @@ sitemap:
       </div>
     </section>
   </section>
-  <script src="{{ site.baseurl }}/js/photo-gallery.min.js"></script>
-  <script>
-	    var elem = document.querySelector('.m-p-g');
-	    document.addEventListener('DOMContentLoaded',
-      function() { var gallery = new MaterialPhotoGallery(elem); });
-  </script>

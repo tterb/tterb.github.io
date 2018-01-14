@@ -51,24 +51,6 @@
     top: -17vw;
   }
   
-  // .inner {
-  //   display: block;
-  //   margin: -15.75vw auto 0;
-  // }
-  
-  // .design-tiles {
-  //   display: inline-block !important;
-  // }
-  
-  // h2 {
-  //   font-family: _font(hdr-family);
-  //   // color: rgba(#fff, 0.85);
-  //   line-height: _font(hdr-lheight-large);
-  //   letter-spacing: 0.15em;
-  //   margin-bottom: 0.5em;
-  //   border-bottom: solid 2px _palette(accent5, border);
-  // }
-  
   .tile {
     @include transform(scale(1));
     font-family: _font(hdr-family) !important;
@@ -78,22 +60,9 @@
     .mask {
       padding: 0.75em;
     }
-    // img {
-      // @include filter(grayscale(0%));
-    // }
-    // h4 {
-      // color: rgba(#fff, 0.8);
-      // font-size: 1.85em;
-      // line-height: 1.25;
-      // margin-top: 8%;
-    // }
     p {
-      font-size: 1.65vw;
+      font-size: 1.8vw;
       color: rgba(#fff, 0.925);
-      // font-family: _font(hdr-family) !important;
-      // font-size: 15px;
-      // margin: 0 auto 1.5em !important;
-      // padding: 0;
     }
     &:hover {
       @include transform(scale(1, 1.0025));
@@ -102,9 +71,6 @@
         vertical-align: top !important;
       }
     }
-    // &:nth-child(n+5) {
-    //   margin-top: 5px;
-    // }
   }
   @include breakpoint(small) {
     padding: 1em 0 5em;
