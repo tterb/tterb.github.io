@@ -3,7 +3,6 @@
 #developer {
   padding: 0 !important;
   h2 {
-    // color: _palette(fg-bold);
     letter-spacing: 0.125em;
     text-align: center;
   }
@@ -16,7 +15,7 @@
 }
 
 #about {
-  padding: 0 0 3em;
+  padding: 0 0 16vw;
 }
 
 #dev {
@@ -88,9 +87,6 @@
     }
     > a {
       @include position(relative, -1.75px null null -9px);
-      // position: relative;
-      // top: -1.75px;
-      // left: -9px;
       text-align: left;
     }
   }
@@ -101,34 +97,6 @@
         margin-right: 0.75em !important;
       }
     }
-    // > section:nth-child(5) {
-    //   margin-bottom: 3em;
-    // }
-    // > div {
-    // 	margin: 0.75em auto;
-    // 	background-color: _palette(accent6, bg);
-    // }
-    // > div.button.bottom {
-    //     background-color: _palette(accent6, bg);
-    // 	box-shadow: 0 3px 0 0 _palette(accent6, shadow);
-    // 	> span {
-    // 		position: relative;
-    // 		top: 0.5px;
-    // 		left: -3px;
-    // 		&:before {
-    // 			font-family: 'FontAwesome';
-    // 			font-size: 1.8em;
-    // 			content: '\f09b';
-    // 			margin: 0.5em 0.5em 0 0.5em;
-    // 		}
-    // 	}
-    // 	> a {
-    // 		position: relative;
-    // 		top: -1.65px;
-    // 		left: -9px;
-    // 		text-align: left;
-    // 	}
-    // }
   }
   
   .spotlight {
@@ -236,8 +204,8 @@
   }
 }
 
-#dev_calendar {
-  margin-top: 2.25em;
+#dev-calendar {
+  margin-top: 2em;
   padding-bottom: 1em;
   h2 {
     display: none;
