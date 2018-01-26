@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body itemscope itemtype="http://schema.org/Article">
+  <!-- <body itemscope itemtype="http://schema.org/Article"> -->
   {% include header.html %}
     <main class="content" role="main">
       <article class="post">
@@ -48,7 +48,7 @@
         {% else %}
           <section class="post-image" style="height:50%;">
             {% if page.image %}
-              <div id="post-banner" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/images/posts/{{ page.image | prepend: site.baseurl }});"></div>
+              <div id="post-banner" style="background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/images/posts/{{ page.image | prepend: site.baseurl }});"></div>
             {% endif %}
             <div class="post-meta" style="height:46%;">
               <h1 class="post-title">{{ page.title }}</h1>
@@ -70,15 +70,14 @@
             <a name="top"></a>
             {% if page.preview %}<img id="preview" src="{{ page.preview }}" alt="Preview" target="_blank"/>{% endif %}
             <br>
-            {{content}}
-            <a href="#" id="back-to-top" title="Back to top"><img src="/images/arrow.png" alt="Back to top"></a>
+            {{ content }}
+            <a href="#" id="back-to-top" title="Back to top"><img src="/css/images/top-arrow.png" alt="Back to top"/></a>
           </section>
         {% else %}
           <section class="written-content">
-            <br>
             <a name="top"></a>
-            {{content}}
-            <a href="#" id="back-to-top" title="Back to top"><img src="/images/arrow.png" alt="Back to top"></a>
+            {{ content }}
+            <a href="#" id="back-to-top" title="Back to top"><img src="/css/images/top-arrow.png" alt="Back to top"/></a>
           </section>
         {% endif %}
         {% if page.options contains "closer" %}
@@ -88,7 +87,7 @@
               <section class="author">
                 <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
                 <h4>{{ site.owner.name }}</h4>
-                <p class="bio">{{author.bio}}</p>
+                <p class="bio">{{ author.bio }}</p>
                 <hr style="width: 63%;margin-top:10px;margin-bottom:8px;">
                 <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
               </section>
@@ -115,7 +114,6 @@
 
     {% include scripts.html %}
     {% include footer.html %}
-    <script type="text/javascript" src="{{ '/js/scroll-top.min.js' | prepend: site.baseurl }}"></script>
     {% if page.options contains "dropcap" %}
       <script type="text/javascript" src="{{ '/js/dropcap.min.js' | prepend: site.baseurl }}"></script>
       <script>
@@ -125,5 +123,5 @@
         });
       </script>
     {% endif %}
-  </body>
+  <!-- </body> -->
 </html>
