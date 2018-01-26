@@ -57,23 +57,23 @@
   li {
     font-size: _font(prose-size-med);
   }
-  pre {
-    margin: 2em 0 !important;
-    code {
-      font-family: _font(fixed-family);
-      font-size: 1.05em;
-      letter-spacing: 0.05em;
-      background-color: #444142;
-      color: #eaeaea;
-      border-radius: 9px;
-      margin: 0 0.75em;
-      padding: 0.5em;
-      box-shadow: inset 0px 0px 14px rgba(#000, 0.9);
-    }
-  }
-  img {
+  // .highlight {
+  //   margin: 2em 0 !important;
+  //   code {
+  //     font-family: _font(fixed-family);
+  //     font-size: 1.05em;
+  //     letter-spacing: 0.05em;
+  //     background-color: #444142;
+  //     color: #eaeaea;
+  //     border-radius: 10px;
+  //     margin: 0 0.75em;
+  //     padding: 0.5em;
+  //     box-shadow: inset 0px 0px 14px rgba(#000, 0.9);
+  //   }
+  // }
+  // img {
     // margin: 0.5em 0 0.75em 0;
-  }
+  // }
   #post-date {
     font-family: _font(ctrl-family);
     font-size: _font(ctrl-size-xsmall);
@@ -87,12 +87,7 @@
   width: 100%;
   .post-image {
     @include position(relative, 0 0 0 0);
-    // position: relative;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
-    margin-bottom: 3.5vw;
+    // margin-bottom: 3.5vw;
     overflow: hidden;
     #post-banner {
       height: 45vh;
@@ -103,12 +98,7 @@
     @media(min-width: 300px) {
       #post-banner {
         @include position(relative, 0 0 0 0);
-        // position: relative;
         background-size: cover !important;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
         text-indent: -9999px;
         padding-top: 0;
         z-index: 1;
@@ -117,12 +107,7 @@
     @media(max-width: 300px) {
       #post-banner {
         @include position(relative, 0 0 0 0);
-        // position: relative;
         background-size: cover !important;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
         text-indent: -9999px;
         padding-top: 0;
         z-index: 1;
@@ -245,9 +230,9 @@
   .written-content {
     font-family: _font(ctrl-family);
     color: _palette(fg-dark);
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
-    padding: 0.2em 0 4em;
+    padding: 2.5em 30px 4em;
     overflow: hidden;
     h1, h2, h3, h4, h5, h6 {
       font-family: _font(ctrl-family);
@@ -274,46 +259,56 @@
       // }
     }
     h1 {
-      font-size: _font(prose-head-xlarge);
+      font-size: _font(prose-size-h1);
       font-weight: _font(prose-extrabold);
       letter-spacing: 0.045em;
       line-height: 1.5;
       margin-bottom: 0.55em;
+      margin-top: 50px;
+      margin-bottom: 25px;
     }
     h2 {
-      font-size: _font(prose-head-large);
+      font-size: _font(prose-size-h2);
       font-weight: _font(prose-extrabold);
       letter-spacing: 0.015em;
-      line-height: 1.75;
+      line-height: 1.65;
       border-bottom: 1px solid #e0e0e0;
-      margin-bottom: 0.7em;
+      // margin-bottom: 0.7em;
+      margin-top: 40px;
+      margin-bottom: 20px;
       strong {
         font-weight: 900 !important;
       }
     }
     h3 {
-      font-size: _font(prose-head-normal);
+      font-size: _font(prose-size-h3);
       font-weight: _font(prose-extrabold);
       letter-spacing: 0.04em;
-      margin-bottom: 0.55em;
+      // margin-bottom: 0.55em;
+      margin-top: 30px;
+      margin-bottom: 15px;
     }
     h4 {
-      font-size: _font(prose-head-small);
+      font-size: _font(prose-size-h4);
       font-weight: _font(prose-extrabold);
       letter-spacing: 0.035em;
     }
     h5 {
-      font-size: _font(prose-head-xsmall);
+      font-size: _font(prose-size-h5);
       font-weight: _font(prose-extrabold);
       letter-spacing: 0.035em;
     }
     p {
       color: rgba(#000, 0.85);
       font-size: _font(prose-size-med);
-      letter-spacing: 0.025em;
+      letter-spacing: 0.006em;
       line-height: _font(prose-lheight-med);
       text-shadow: none;
-      margin-bottom: 1.35em;
+      // margin-bottom: 1.35em;
+      margin-top: 25px;
+      margin-bottom: 0;
+      --x-height-multiplier: 0.375;
+      --baseline-multiplier: 0.17;
       br {
         display: block !important;
         content: " " !important;
@@ -328,12 +323,20 @@
       margin-right: .45rem;
     }
     img {
-      max-width: 100%;
-      max-height: 900px;
+      max-width: 98%;
+      // max-height: 900px;
       margin: 10px auto;
+      box-shadow: 0 0 10px rgba(#000,0.4);
       &.inline {
         margin: 0px 3px -3px !important;
       }
+    }
+    .img-caption {
+      font-size: _font(prose-size-small);
+      line-height: _font(prose-lheight-normal);
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
     }
     a {
       @include transition(color 300ms ease-in-out 0s);
@@ -379,6 +382,9 @@
     ul, ol, dl, li {
       font-family: _font(ctrl-family);
     }
+    ul, ol {
+      margin-top: 15px;
+    }
     ol li {
       list-style-type: decimal;
     }
@@ -390,7 +396,8 @@
     }
     li ul {
       padding-top: 0.5em;
-      padding-bottom: 0.5em;
+      padding-bottom: 0.25em;
+      margin-top: 0;
       margin-bottom: 0;
     }
     hr {
@@ -399,6 +406,21 @@
       height: 5.5px;
       border: 0;
       margin-top: 2.5em;
+    }
+    pre.highlight {
+      margin: 2em 0 !important;
+      code {
+        background-color: #292C32;
+        color: rgba(#fff,0.65);
+        font-family: _font(fixed-family);
+        font-size: _font(fixed-size);
+        letter-spacing: normal;
+        line-height: 1.45;
+        border-radius: 10px;
+        margin: 0 0.75em;
+        padding: 0.75em 1em 1em;
+        box-shadow: inset 0 0 15px rgba(#000, 0.9);
+      }
     }
     blockquote {
       background: transparent;
@@ -409,28 +431,24 @@
       border-radius: 4px;
       margin: 2em auto 2.5em !important;
       padding: 0;
-      &::before {
-        @include position(relative, 0.235em null null 0);
+      &::before, &::after {
         display: block;
-        content: open-quote;
         color: #878787;
         font-family: sans-serif !important;
-        font-size: 6em;
-        line-height: .1em;
+        font-size: 6.25em;
+        line-height: 0.075em;
         text-shadow: none;
+      }
+      &::before {
+        @include position(relative, 0.235em null null 0);
+        content: open-quote;
         float: left;
         vertical-align: -.4em;
         margin: 0 0.075em 0 0;
       }
       &::after {
         @include position(relative, 0.285em 0 null null);
-        display: block;
         content: close-quote;
-        color: #878787;
-        font-family: sans-serif !important;
-        font-size: 6em;
-        line-height: .1em;
-        text-shadow: none;
         float: right;
         vertical-align: -.6em;
         margin-left: 0.175em !important;
@@ -438,12 +456,17 @@
       p {
         display: flex;
         background: rgba(#686B6D, 0.05);
+        font-size: 1em;
+        line-height: 1.4;
         width: 95% !important;
         border-radius: 4px;
         box-shadow: 0 1px 5px rgba(0,0,0,0.25);
         margin: 0 auto !important;
-        padding: 0.75em 1.5em 1em !important;
+        padding: 0.75em 1.4em 1em !important;
       }
+    }
+    &:first-child {
+      margin-top: 0 !important;
     }
   }
   
@@ -453,7 +476,7 @@
     color: rgba(#fff, 0.85) !important;
     font-weight: 700;
     letter-spacing: 0.075em;
-    line-height: 3.25;
+    line-height: 2.25;
     text-align: center;
     justify-content: center !important;
     margin-top: 3.25em !important;
@@ -719,11 +742,11 @@
 
 .readme {
   color: #333;
-  padding: 60px 45px 0;
+  padding: 60px 50px 0;
   .post-header {
-    width: 55%;
-    height: auto !important;
-    margin: 12px 0 0;
+    width: auto;
+    max-height: 80px;
+    margin: 18px 0 5px;
   }
   h4 {
     font-size: _font(hdr-size-small);
@@ -746,8 +769,8 @@
   font-size: _font(prose-size-med);
   line-height: _font(prose-lheight-normal);
   color: #333;
-  width: 95%;
-  padding: 45px;
+  width: 100%;
+  padding: 55px;
   padding-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -797,7 +820,7 @@
     }
   }
   img {
-    max-width: 100%;
+    max-width: 98%;
     margin: 20px auto;
   }
   a {
@@ -890,7 +913,7 @@
 
 .h-note, .h-tip, .h-warning {
   color: rgba(#000, 0.85);
-  font-size: 0.925em;
+  font-size: 0.975em;
   letter-spacing: 0.035em;
   line-height: 1.45 !important;
   text-shadow: none;
@@ -900,7 +923,7 @@
   border-radius: 8px;
   box-shadow: 0.5px 1px 10px rgba(#000, 0.25);
   margin: 1.5em auto !important;
-  padding: 8px 20px 15px;
+  padding: 6px 20px 15px;
   overflow: hidden;
   &:before {
     display: block;
@@ -916,6 +939,7 @@
     padding-bottom: 5px;
   }
   p {
+    line-height: 1.4 !important;
     margin-bottom: 0.15em !important;
   }
 }
@@ -948,8 +972,8 @@
 }
 
 .h-warning {
-  background: rgba(255,123,0,0.075);
-  border-left-color: rgba(#F90,0.75);
+  background: rgba(255,153,0,0.075);
+  border-left-color: rgba(#FCAB08,0.75);
   &::before {
     // font-family: 'FontAwesome';
     // content: '\f06a';
@@ -981,20 +1005,20 @@
 }
 
 #back-to-top {
-  @include transition(opacity 200ms ease-out 0s);
-  @include opacity(0);
+  @include transition(opacity 250ms ease-in-out 0s);
+  @include opacity(0.6);
   position: fixed;
-  bottom: 40px;
-  right: 25px;
-  z-index: _misc(z-index-base) * 5;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
   width: 42px !important;
   height: 42px !important;
-  text-align: center;
-  line-height: 30px;
-  cursor: pointer;
+  bottom: 40px;
+  right: 25px;
   border: 0;
   border-radius: 2px;
-  text-decoration: none;
+  z-index: _misc(z-index-base) * 5;
+  cursor: pointer;
   &:hover, &:active {
     @include opacity(0.9);
   }
