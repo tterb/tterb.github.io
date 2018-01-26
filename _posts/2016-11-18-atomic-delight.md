@@ -9,21 +9,14 @@ options: readme
 repo: Atomic-Delight-UI
 header: https://cloud.githubusercontent.com/assets/16360374/20373562/755d85e6-ac27-11e6-933e-ff55e40488c2.png
 tags:
-  - atomic
-  - delight
-  - syntax
-  - ui
-  - theme
-  - atom
-  - text
-  - editor
-  - monokai
+  - atomic delight
+  - syntax theme
+  - UI
+  - Atom
+  - code editor
   - design
-  - light
-  - bright
-  - modern
   - jekyll
-  - blog
+  - project
 ---
 
 <!-- Badges -->
@@ -47,7 +40,7 @@ tags:
 
 ## Description:  
   **Atomic Delight** syntax and UI-themes are delightfully light variants of the popular [*Atomic Monokai*] syntax-theme and its corresponding [*Atomic Design*] UI-theme.
-  Created with the knowledge that many programmers prefer to have both a light and a dark syntax-theme to cycle between, this syntax and UI-theme allows programmers to do so with a sense of familiarity.
+  Created with the knowledge that many programmers prefer to have both a light and a dark syntax-theme to cycle between, this syntax and UI&ndash;theme allows programmers to do so with a sense of familiarity.
 
 
 ___________________________  
@@ -72,7 +65,7 @@ ___________________________
 
 ## Other Recommended Packages:  
 <br>
-  *For more useful packages, check out my list of* [***Essential Atom Packages***], *which I'll continue to keep up to date as I explore and familiarize myself with the editor and it's community.*  
+  *For more useful packages, check out my list of* [***Essential Atom Packages***], *which I&rsquo;ll continue to keep up to date as I explore and familiarize myself with the editor and it&rsquo;s community.*  
 
 <br>  
 ___________________________  

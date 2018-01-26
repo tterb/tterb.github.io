@@ -1,26 +1,20 @@
 ---
 priority: 0.7
 title: Upgrading the SSD on a Razer Blade (pt 2)
-keywords: "how,upgrade,SSD,harddrive,razer,blade,laptop,data,recovery,tutorial,jekyll,blog"
+keywords: "how,upgrade,SSD,harddrive,razer,blade,laptop,data,recovery,tutorial"
 date: 2016-10-06
 categories: blog
 options: halfhead
 tags:
-  - how
-  - upgrade
   - SSD
-  - harddrive
-  - razer
-  - blade
+  - Razer
+  - Razer Blade
   - laptop
-  - data
   - recovery
   - tutorial
-  - jekyll
   - tech
-  - diy
-  - howto
-  - blog
+  - tools
+  - how-to
 ---
 
 <p align="center">
@@ -38,10 +32,10 @@ tags:
 <br>
 ## Step Four: **Installation**
 
-  Now that you've cloned your internal drive, you're ready to get started installing your new hard drive.
+  Now that you&rsquo;ve cloned your internal drive, you&rsquo;re ready to get started installing your new hard drive.
 <br>
 
-  * After your laptop is powered off, you will first need to remove the 10 T5 screws on the underside, shown in the photo below. This is where the aforementioned [T5 torx screwdriver] will come in handy. I would also recommend keeping the screws in a small empty cup, prescription bottle, or whatever else you have at your disposal, as they are small and you don't want to lose track of them.
+  * After your laptop is powered off, you will first need to remove the 10 T5 screws on the underside, shown in the photo below. This is where the aforementioned [T5 torx screwdriver] will come in handy. I would also recommend keeping the screws in a small empty cup, prescription bottle, or whatever else you have at your disposal, as they are small and you don&rsquo;t want to lose track of them.
   <br>
   <p align="center">
     <img src="https://cloud.githubusercontent.com/assets/16360374/20454747/a82808b0-adfe-11e6-975f-e01a3eb4b2d8.jpg" height="350" alt="screws" title="Screws"/>
@@ -54,7 +48,7 @@ tags:
     <img src="https://cloud.githubusercontent.com/assets/16360374/20454874/f68ce730-ae00-11e6-80fb-c6522741915d.jpg" height="300" alt="components" title="Components"/>
   </p>
 
-  * You will now want to remove the phillips-head screw attaching the SSD to the motherboard, at which time you will be free to gently remove the hard drive from its connector. Though, when removing the drive be careful to maintain the placement of the sticky pad beneath it, as you will use it to help adhere the new drive to the board.
+  * You will now want to remove the phillips&ndash;head screw attaching the SSD to the motherboard, at which time you will be free to gently remove the hard drive from its connector. Though, when removing the drive be careful to maintain the placement of the sticky pad beneath it, as you will use it to help adhere the new drive to the board.
   <br>
   <p align="center">
   	<img src="https://cloud.githubusercontent.com/assets/16360374/20454748/abc02c28-adfe-11e6-8ea8-dff5bf482dd1.jpg" height="350" alt="hard drive" title="Hard drive"/>
@@ -68,7 +62,7 @@ tags:
 
 ## Step Five (*optional*): **Spring cleaning**
 
-  While you've already got your laptop open, you might as well utilize the opportunity to do a little maintenance. If you already have [compressed air] on hand, it can be beneficial to blow out some of the dust and debris that tends to collect around your fans and other internals. As a result, your laptop should run cooler, causing its fans to spin up less often.
+  While you&rsquo;ve already got your laptop open, you might as well utilize the opportunity to do a little maintenance. If you already have [compressed air] on hand, it can be beneficial to blow out some of the dust and debris that tends to collect around your fans and other internals. As a result, your laptop should run cooler, causing its fans to spin up less often.
   <br>
   <p class="h-warning">Also, I must advise that you **[don't use a vacuum]** for this cleaning as it can cause static electricity, which is bad news for the sensitive components inside your laptop.</p>
 

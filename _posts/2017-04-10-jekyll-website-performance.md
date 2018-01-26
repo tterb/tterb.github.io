@@ -9,17 +9,14 @@ image: web-performance.png
 tags:
   - jekyll
   - blog
-  - website
+  - web development
   - performance
-  - speed
-  - google
+  - Google
   - PageSpeed
   - gulp
   - grunt
-  - css
-  - scss
   - javascript
-  - CloudFlare
+  - cloudflare
 ---
 
   Upon launching my new redesigned website, I've been spending the some time optimizing the site performance and load speeds using **[Google PageSpeed Insights]**.  
@@ -33,8 +30,8 @@ tags:
   <p class="h-note" style="margin-bottom:3em">In an effort not to repeat the information in the articles listed below, I'll only share findings that weren't explicitly discussed in any of the following resources.</p>
 
 ### Optimize your own images
-  As with most websites, when I first launched the new design, the biggest hindrance to my websites loading speed was the size of the images on my page. Though, after observing the disappointing quality of the *"optimized"* images provided by PageSpeed Insights, I instead elected to use **[GIMP]** to manually decrease and compress my images to preserve the image quality until PageSpeeds requirements were satisfied.  
-  I would highly recommend doing the same, particularly for images that are featured in multiple places throughout your website.  
+  As with most websites, when I first launched the new design, the biggest hindrance to my websites loading speed was the size of the images on my page. Though, after observing the disappointing quality of the *&ldquo;optimized&rdquo;* images provided by PageSpeed Insights, I instead elected to use **[GIMP]** to manually decrease and compress my images to preserve the image quality until PageSpeeds requirements were satisfied.  
+  I would highly recommend doing the same, particularly for images that are featured in various places throughout your website.  
 
 <hr> 
 
@@ -46,7 +43,7 @@ tags:
 <hr>
 
 ### The Results
-  I've provided my resulting Gulpfile below, though you can also download, modify and use my current gulpfile via this **[gist]**.
+  I&rsquo;ve provided my resulting Gulpfile below, though it&rsquo;s also available via **[gist]**.   
 
 ```javascript
 var gulp = require('gulp'),
@@ -190,7 +187,7 @@ gulp.task('clean', ['uncss']);
 <h2><a href='#update' id='update' class='anchor' aria-hidden='true'>Updates</a></h2>
 
 ### Leveraging browser caching
-  Since sharing my original post, I have since found a way to resolve the persistent "Leverage browser caching" issue, which was ironically referencing Google's own analytics tools. 
+  Since sharing my original post, I&rsquo;ve since found a way to resolve the persistent &ldquo;Leverage browser caching&rdquo; issue, which was ironically referencing Google&rsquo;s own analytics tools. 
   
 ```javascript
 // Google Analytics
@@ -200,7 +197,7 @@ gulp.task('fetch-analytics', function() {
 });
 ```
   
-  This way, a new version of the `analytics.js` file is downloaded on each deployment, rather than utilizing Google's remote file. Therefore, you should also instead include your local `analytics.js` file in your html. 
+  This way, a new version of the `analytics.js` file is downloaded on each deployment, rather than utilizing Google&rsquo;s remote file. Therefore, you should also instead include your local `analytics.js` file in your html. 
 
 
 <!--------------------------------- Links ------------------------------------->

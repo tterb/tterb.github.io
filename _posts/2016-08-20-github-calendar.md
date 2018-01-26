@@ -9,13 +9,9 @@ options: readme subhead
 header: http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/GithubCalendar/git2_zpsjx72lsmu.png
 repo: GithubCalendar
 tags:
-  - github
-  - contribution
-  - calendar
-  - rainmeter
-  - skin
-  - desktop
-  - blog
+  - Github
+  - Rainmeter
+  - projects
 ---  
 
 <br>  
@@ -24,18 +20,12 @@ tags:
   </p>
 <br>  
 
-  *Author*: Brett Stevenson  
-  *Contact*: &#98;&#115;&#116;&#101;&#118;&#101;&#110;&#115;&#111;&#110;&#100;&#101;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;  
-  *Version*: v1.1.3  
-  [License](https://github.com/JonSn0w/GitHubCalendar/blob/master/LICENSE.md)
-<br/><br>  
-
 ___________________________   
 
 ## <img title="" alt="description" src="http://image.flaticon.com/icons/svg/149/149187.svg" height="30" width="30" align="absmiddle">&nbsp;&nbsp;DESCRIPTION:  
 
   This skin features a C# program, which collectively uses [Selenium Webdriver](http://www.seleniumhq.org/projects/webdriver/) and [phantomJS](http://phantomjs.org) to gather the data from  
-  the user's GitHub profile and writes it to the "data.txt" file. The data is then read by the Lua script, which  
+  the user&rsquo;s GitHub profile and writes it to the &ldquo;data.txt&rdquo; file. The data is then read by the Lua script, which  
   provides the necessary information to the GitHubCalendar skin.  
 <br>  
 
@@ -45,7 +35,7 @@ ___________________________
   * Add mutable scaling functionality to calendar.  
 <br>  
 
-***Note:*** To update the skin's calendar data, left-click the ![alt tag](http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/GithubCalendar/github_logo_zps1ftioupk.png) in the bottom-right corner of the skin.
+***Note:*** To update the skin&rsquo;s calendar data, left-click the ![alt tag](http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/GithubCalendar/github_logo_zps1ftioupk.png) in the bottom&ndash;right corner of the skin.
 <br>  
 
 ___________________________  
@@ -54,7 +44,7 @@ ___________________________
 
   * This skin requires that you have **Rainmeter** installed, which you can download [here](https://www.rainmeter.net/).  
   * Open the *.rmskin* package file to install, configure, and load the skin.  
-  * Enter your GitHub username into the newly opened Configuration window and press 'Enter'.  
+  * Enter your GitHub username into the newly opened Configuration window and press &lsquo;Enter&rsquo;.  
   * Press the green button to load your GitHub Contribution Calendar.  
   * **Enjoy!**  
 

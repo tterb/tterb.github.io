@@ -10,12 +10,10 @@ image: googleplaymusic.jpg
 header: https://cloud.githubusercontent.com/assets/16360374/23640973/ac0fe0a0-02a5-11e7-91a1-fc9eb72514de.png
 repo: PlayMusic
 tags:
-  - google
-  - play
+  - Google
   - music
-  - rainmeter
-  - skin
-  - blog
+  - Rainmeter
+  - projects
 ---
 
 <!-- Badges -->
@@ -61,7 +59,7 @@ tags:
 
 <br>  
 
-<!-- ***Note:***&nbsp; Due to current limitations, it's not possible to integrate remote control of GPMDP into the skin, though the developers have been made aware of this feature request and I believe this functionality can be expected in future updates.
+<!-- ***Note:***&nbsp; Due to current limitations, it&rsquo;s not possible to integrate remote control of GPMDP into the skin, though the developers have been made aware of this feature request and I believe this functionality can be expected in future updates.
 <br> -->
 
 ------------------------------------------------------------------------------
@@ -124,7 +122,7 @@ The addition of selectable accent colors allows users to add a splash of color t
 [<img title="" alt="Setup" src="https://cloud.githubusercontent.com/assets/16360374/22623857/445972e4-eb1e-11e6-9608-fce5c7d4f52d.png" width="900" />]()
 
   This skin requires you have **[Google Play Music Desktop Player]** installed to function properly.
-  After installation, you must also enable *Playback API* in GPMDP's Desktop Settings, shown in the image below, as this allows GPMDP to interface with external applications.
+  After installation, you must also enable *Playback API* in GPMDP&rsquo;s Desktop Settings, shown in the image below, as this allows GPMDP to interface with external applications.
 
   <p align="center">
     <img src="https://cloud.githubusercontent.com/assets/16360374/22547192/66e31a98-e8f5-11e6-82d5-20c956411f50.png" width="720" alt="settings" title="Desktop Settings"/>

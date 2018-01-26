@@ -9,17 +9,14 @@ options: readme
 header: https://cloud.githubusercontent.com/assets/16360374/21070257/355d0990-be37-11e6-8461-827b5c2dfe6d.png
 repo: Atomic-Monokai-Syntax
 tags:
-  - atomic
+  - Atom
   - monokai
   - syntax
-  - theme
-  - atom
-  - github
-  - text
-  - code
-  - editor
-  - sublime
-  - blog
+  - UI
+  - Github
+  - code editor
+  - Sublime Text
+  - projects
 ---
 
 <!-- Badges -->
@@ -44,9 +41,9 @@ tags:
 <!-- ## Description:   -->
 <img src="https://cloud.githubusercontent.com/assets/16360374/23330493/da478f08-fb03-11e6-9ed2-c62cedc0024e.png" width="900" alt="description" title="Description"/>  
 
-  As a long-time Sublime Text user, I've made the transition to using &nbsp; <img src="https://cloud.githubusercontent.com/assets/16360374/17991222/82596480-6af1-11e6-9c96-3e2996a8be5a.png" width="20" alt="atom"/> **[Atom]** as my go-to code editor, and while I enjoy it's more *hackable* aspects, I hadn't been unable to find a monokai syntax-theme that felt familiar amongst the available prospects. I'm actively working to improve the syntax-highlighting for individual languages, so feel free to submit any languages you would like to see improvements on.  
+  As a long&ndash;time Sublime Text user, I&rsquo;ve made the transition to using &nbsp; <img src="https://cloud.githubusercontent.com/assets/16360374/17991222/82596480-6af1-11e6-9c96-3e2996a8be5a.png" width="20" alt="atom"/> **[Atom]** as my go&ndash;to code editor, and while I enjoy it&rsquo;s more *hackable* aspects, I hadn&rsquo;t been unable to find a monokai syntax&ndash;theme that felt familiar amongst the available prospects. I&rsquo;m actively working to improve the syntax&ndash;highlighting for individual languages, so feel free to submit any languages you would like to see improvements on.  
   <br>
-  ***Update:*** I've also developed a complimentary UI for this syntax-theme, so if you like this package, check out **[Atomic Design UI]**.  
+  ***Update:*** I&rsquo;ve also developed a complimentary UI for this syntax-theme, so if you like this package, check out **[Atomic Design UI]**.  
 <br>
 
 
@@ -86,7 +83,7 @@ ______________________________________________________________________________
   <img src="https://cloud.githubusercontent.com/assets/16360374/23390075/a8707b24-fd20-11e6-84fb-5ad2ca958880.png" height="36" alt="active" title="Active Development"/>
 </p>
 <p align="center">
-  <i>Atomic Monokai</i> is actively developed in order to improve language-specific <br> syntax-highlighting for an increasing collection of programming languages.<br> Have a language that you'd like to see supported? Suggest it <a href="https://github.com/JonSn0w/Atomic-Monokai-Syntax/issues/new">here</a>
+  <i>Atomic Monokai</i> is actively developed in order to improve language&ndash;specific <br> syntax&ndash;highlighting for an increasing collection of programming languages.<br> Have a language that you&rsquo;d like to see supported? Suggest it <a href="https://github.com/JonSn0w/Atomic-Monokai-Syntax/issues/new">here</a>
 </p>
 
 <br>
@@ -128,14 +125,14 @@ ______________________________________________________________________________
 
 ### Other Packages:
 
-  * **[Minimap]** - featured in the above screenshot, *Minimap* applies a "*Sublime-esque*" view to the right-side of the frame.
-  * **[Toolbar]** - adds a customizable toolbar to your Atom editor, allowing easy access to all  your most used commands.
-  * **[Project Manager]** - delivers a familiar workflow for navigating projects and project-specific settings.
-  * **[Highlight Selected]** - highlights all instances of the selected element within the open file.
+  * **[Minimap]** &ndash; featured in the above screenshot, *Minimap* applies a "*Sublime-esque*" view to the right-side of the frame.
+  * **[Toolbar]** &ndash; adds a customizable toolbar to your Atom editor, allowing easy access to all  your most used commands.
+  * **[Project Manager]** &ndash; delivers a familiar workflow for navigating projects and project&ndash;specific settings.
+  * **[Highlight Selected]** &ndash; highlights all instances of the selected element within the open file.
   * ***[More...]***  
 
 
-*For more useful packages, check out my [Essential Atom Packages], which I'll continue to keep up to date as I explore and familiarize myself with the editor and it's community.*
+*For more useful packages, check out my [Essential Atom Packages], which I&rsquo;ll continue to keep up to date as I explore and familiarize myself with the editor and it&rsquo;s community.*
 <br>
 
 ______________________________________________________________________________  

@@ -10,16 +10,12 @@ image: atomic-design.png
 header: https://cloud.githubusercontent.com/assets/16360374/22689194/ab4e61f4-ece4-11e6-8732-b613ffaeb2e7.png
 repo: Atomic-Design-UI
 tags:
-  - atomic
+  - Atom
   - design
-  - ui
-  - theme
-  - dark
+  - UI
   - syntax
-  - atom
-  - text
-  - editor
-  - blog
+  - code editor
+  - projects
   - featured
 ---
 
@@ -45,8 +41,8 @@ tags:
 <!-- Description -->
 <img src="https://cloud.githubusercontent.com/assets/16360374/22630325/e71b3d12-ebac-11e6-864a-de9714611240.png" width="900" alt="description" title="Description"/>
 
-  *Atomic Design* aims to provide a modern and refined interface to compliment any dark syntax-theme, featuring modifications that focus on improving the user experience and adaptability. Similarly, this theme also includes a custom icon set and improved integration of some of the most common [Atom packages].
-  The screenshot above features the **[Atomic Monokai]** syntax-theme and *Source Code Pro* via the [Fonts] package.
+  *Atomic Design* aims to provide a modern and refined interface to compliment any dark syntax&ndash;theme, featuring modifications that focus on improving the user experience and adaptability. Similarly, this theme also includes a custom icon set and improved integration of some of the most common [Atom packages].
+  The screenshot above features the **[Atomic Monokai]** syntax&ndash;theme and *Source Code Pro* via the [Fonts] package.
 
 **In Progress**
   * Experimenting with functionalities to improve adaptability.
@@ -63,17 +59,15 @@ ___________________________
 <br>
 <h3 align="center">Dark Refined Interface</h3>
 <p align="center">
-  <i>Atomic Design</i> features a carefully selected color-palette and meticulously styled components, <br>
+  <i>Atomic Design</i> features a carefully selected color&ndash;palette and meticulously styled components, <br>
   which provides the interface with a sense of depth, receptiveness, and adaptability. <br>
-  Allowing this theme to be wonderfully complimented by any dark syntax theme.
-  <!-- modern, refined, dark, conscious design, carefully designed
-  carefully selected palette, meticulous components styling, distinct, familiar, contrast -->
+  Allowing this theme to be wonderfully complimented by any dark syntax theme.  
 </p>
 <br>
 
 <h3 align="center">Package Styling</h3>
 <p align="center">
-  This UI-theme includes supplementary styling for an expanding collection of popular Atom <br>
+  This UI&ndash;theme includes supplementary styling for an expanding collection of popular Atom <br>
   packages, providing the same refined interface to all aspects of the user experience.
 </p>
 <br>
@@ -82,14 +76,14 @@ ___________________________
 <p align="center">
   <i>Atomic Design</i> also features a custom icon set, which aims to integrate distinct custom icons <br>
   with the best aspects of popular icon packages to provide improved
-  visual-grepping of <br>
+  visual&ndash;grepping of <br>
   project files, while also preventing the alignment issues that plague <br> many icon package and theme combinations.
 </p>
 <br>
 
 <h3 align="center">Modular Theme-Settings</h3>
 <p align="center">
-  This UI-theme includes custom settings, which allow users to fine-tune various aspects of <br>
+  This UI&ndash;theme includes custom settings, which allow users to fine&ndash;tune various aspects of <br>
   the interface to suit their preference. These settings are accessible via <br>
   the <img src="https://cloud.githubusercontent.com/assets/16360374/22728369/572ca3fc-ed92-11e6-8f35-5f1da6078b4f.png" height="23" alt="settings"/> button,
   once the theme is enabled.
@@ -101,7 +95,7 @@ ___________________________
 
 <!-- Install -->
 <img src="https://cloud.githubusercontent.com/assets/16360374/22630327/e71bd0c4-ebac-11e6-956d-8b1e8da21d1b.png" width="900" alt="install" title="Install">
-This package is distributed via *[apm]*. After [installing apm], you can install the UI-theme with this command.
+This package is distributed via *[apm]*. After [installing apm], you can install the UI&ndash;theme with this command.
 
 ```shell
 $ apm install atomic-design-ui
