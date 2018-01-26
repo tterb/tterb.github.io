@@ -54,6 +54,9 @@ $('code').each(function() {
 </script>
 
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+{% if page.layout == "post" %}
+  <script type="text/javascript" src="{{ '/js/scroll-top.min.js' | prepend: site.baseurl }}"></script>
+{% endif %}
 <script>
 (function ($) {
   "use strict";
