@@ -941,8 +941,9 @@ input[type="reset"],
 input[type="button"],
 button, .button {
   @include vendor('appearance', 'none');
-  @include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
-  @include transition(all 300ms ease 0ms, !important);
+  // @include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
+  // @include transition()
+  @include transition(all 500ms ease-in-out 0ms, !important);
   display: inline-block;
   background-color: transparent;
   color: _palette(fg-bold);
@@ -1828,7 +1829,7 @@ body.is-menu-visible {
           font-size: _font(hdr-size-xsmall);
           letter-spacing: _size(letter-spacing-alt);
           border: 0;
-          padding: 1.5em 1.5em 0 0;
+          padding: 1.75em 1.3em 0 0;
           margin-right: 1em;
           text-transform: uppercase;
           &:hover, &:active {
@@ -2230,7 +2231,7 @@ body.is-loading {
   padding: 2.5em 0 9em 0;
   .inner {
     position: relative;
-    top: -100%;
+    top: -102%;
     height: 30vw;
     img {
       max-height: 27.15vw;
@@ -2381,22 +2382,21 @@ body.is-loading {
       padding: 0 3vw 0 2.5vw;
       h2 {
         color: _palette(fg-bold);
-        // font-size: 2.35em;
         font-size: 4vw;
         letter-spacing: 0.05em;
         line-height: 1.25;
         text-align: left;
-        margin: 0.7em 0 0.15em 0;
+        margin: 0.7em 0 0.35em 0;
         text-shadow: 0px -2px 15px rgba(#000, 0.55) !important;
       }
-      
       p {
         color: rgba(#fff, 0.75);
         font-family: _font(ctrl-family);
         font-size: _font(hdr-size-med);
         letter-spacing: 0.05em;
+        line-height: 1.45;
         text-align: left;
-        width: 420px;
+        width: 440px;
       }
       
       button.fit {
@@ -2411,9 +2411,9 @@ body.is-loading {
     .actions {
       @include vendor('order', '2');
       li > a {
-        @include vendor('transition', 'background-color 0.5s ease');
+        @include transition(all 500ms ease-in-out 0ms);
         &:hover {
-          @include vendor('transition', 'background-color 0.5s ease');
+          @include transition(all 500ms ease-in-out 0ms);
         }
       }
       .button {
@@ -2622,7 +2622,7 @@ body.is-mobile {
   @include linear-gradient(lighten(_palette(bg), 1.5%), darken(_palette(bg), 6.5%));
   text-align: center;
   box-shadow: 0 -2px 4px rgba(#000, 0.4);
-  padding: 2.25em 3em 0.05em !important;
+  padding: 2em 3em 0.5em !important;
   .icons {
     font-size: 1.65em;
     margin: 0 0 0.5em 0;
@@ -3038,7 +3038,7 @@ body.is-mobile {
   display: inline-block;
   width: 45%;
   text-align: right;
-  margin-left: 6%;
+  margin-left: 5.5%;
   margin-right: 0 !important;
 }
 .col-6 {
@@ -3469,8 +3469,8 @@ body.body-small .icon-font {
     padding: 0 25px;
   }
   
-  a.info {
-    @include transition(all 300ms ease-in-out 0s);
+  a.button {
+    @include transition(all 350ms ease-in-out 0s, !important);
     @include opacity(0);
     display: inline-block;
     background-color: _palette(accent6, bg) !important;
@@ -3492,7 +3492,7 @@ body.body-small .icon-font {
     @include transform(scale(1, 1.0025));
     height: 320px;
     box-shadow: 0 1px 10px rgba(#000, 0.7);
-    h4, p, a.info {
+    h4, p, a.button {
       @include transform(translateY(0px));
       @include opacity(1);
     }
@@ -3506,9 +3506,6 @@ body.body-small .icon-font {
     }
     p {
       @include transition-delay(100ms);
-    }
-    a.info {
-      @include transition-delay(200ms);
     }
   }
 }
