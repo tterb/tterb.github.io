@@ -19,4 +19,9 @@ gem 'jekyll', '>= 3.1.2'
 #  gem "jekyll-github-metadata", "~> 1.0"
 # end
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'jemoji'
+gem 'jekyll-gist'
+gem 'jekyll-admin'
+gem 'jekyll-paginate'
+gem 'jekyll-github-metadata'
 gem 'html-proofer'
