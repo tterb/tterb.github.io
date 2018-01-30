@@ -116,6 +116,13 @@ defaults:
     values:
       layout: post
 
+plugins:
+  - jemoji
+  - jekyll-gist
+  - jekyll-admin
+  - jekyll-paginate
+  - jekyll-github-metadata
+
 html_proofer:
   check_favicon: true
   check_html: true
