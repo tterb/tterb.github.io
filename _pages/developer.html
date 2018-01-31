@@ -27,7 +27,7 @@ function($) {
 }
 </script> -->
 <section id="developer" class="wrapper special">
-  <section id="about" class="wrapper style1 special">
+  <section id="about" class="wrapper style1 special angled">
     <div class="inner">
       <header class="major">
         <h2>About</h2>
@@ -42,7 +42,7 @@ function($) {
         <li><span class="icon icon-font major style3"><span class="ico-paintcan"></span></span></li>
         <li><span class="icon icon-font major style3"><span class="ico-brackets"></span></span></li>
       </ul> -->
-      <section id="dev_calendar">
+      <section id="dev-calendar">
         <script src="{{ '/js/github-calendar.min.js' | prepend: site.baseurl }}"></script>
         <div class="calendar">
           Loading contribution data...
@@ -68,17 +68,17 @@ function($) {
     </section>
   </section> -->
   <!-- <section id="dev_gallery" class="wrapper style3 special"> -->
-    <section id="projects" class="wrapper style3 special">
+    <!-- <section id="projects" class="wrapper style3 special"> -->
       <!-- <div class="inner">
         <header class="major">
           <h2>Projects</h2>
         </header>
       </div> -->
-      <style>
+      <!-- <style>
           @font-face{font-family:'IconFont';src:url('../fonts/iconfont/iconfont.eot?v=4.4.0');src:url('../fonts/iconfont/iconfont.eot?#iefix&v=4.4.0')format('embedded-opentype'),url('../fonts/iconfont/iconfont.woff?v=4.4.0') format('woff'),url('../fonts/iconfont/iconfont.ttf?v=4.4.0') format('truetype'),url('../fonts/iconfont/iconfont.svg?v=4.4.0#iconfont/iconfontregular') format('svg');font-weight:normal;font-style:normal}
           .ico-eye:before{content: "\49";} .ico-heart:before { content: "\4a"; } .ico-cloud-download:before { content: "\4c"; margin-top: 2px; }
-      </style>
-      {% for project in site.data.projects %}
+      </style> -->
+      <!-- {% for project in site.data.projects %}
           <section class="spotlight">
           	<div class="image">
               <a href="{{ project.url | prepend:site.baseurl }}">
@@ -96,41 +96,24 @@ function($) {
                 {% if project.repo %}
                 <ul class="github-buttons list-inline">
                   <li>
-                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}"
-                    data-icon="octicon-star"
-                    data-show-count="true"
-                    data-count-href="/JonSn0w/{{ project.repo }}/stargazers"
-                    data-count-aria-label="# stargazers on GitHub"
-                    aria-label="Star {{ project.title }} on GitHub">Star</a>
+                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}" data-icon="octicon-star" data-show-count="true"
+                    data-count-href="/JonSn0w/{{ project.repo }}/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star {{ project.title }} on GitHub">Star</a>
                   </li>
                   <li>
                     <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/subscription" data-icon="octicon-eye" data-text="Watch" data-show-count="true" aria-label="Watch {{ project.repo }} on GitHub"></a>
                   </li>
-                  <!-- <li>
-                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}"
-                    data-icon="octicon-repo-forked"
-                    data-count-href="/JonSn0w/{{ project.repo }}/forks"
-                    data-show-count="/repos/JonSn0w/{{ project.repo }}#forks_count"
-                    data-count-aria-label="# forks on GitHub"
-                    aria-label="Fork {{ project.title }} on GitHub">Fork</a>
-                  </li> -->
             			<li>
             			  <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/archive/master.zip"
             			  data-icon="octicon-cloud-download"
             			  aria-label="Download {{ project.title }} on GitHub" alt="Download {{ project.title }} on GitHub">Download</a>
             			</li>
                 </ul>
-                  <!-- <div class="gh-buttons">
-                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/subscription" data-icon="octicon-eye" data-text="Watch" data-show-count="true" aria-label="Watch {{ project.repo }} on GitHub"></a>
-                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}" data-icon="octicon-star" data-text="Star" data-show-count="true" aria-label="Star {{ project.repo }} on GitHub"></a>
-                    <a class="github-button" href="https://github.com/JonSn0w/{{ project.repo }}/archive/master.zip" data-icon="octicon-cloud-download" data-text="Download" aria-label="Download {{ project.repo }} on GitHub"></a>
-                  </div> -->
                 {% endif %}
               </a>
             </div>
           </section>
-      {% endfor %}
-  </section>
+      {% endfor %}-->
+  <!-- </section> -->
 <section id="three" class="wrapper style2 special angled">
   <div class="inner">
     <header class="major">
@@ -152,7 +135,7 @@ function($) {
   </div>
 </section>
   
-</section>
+<!-- </section> -->
   <section id="four" class="wrapper style4">
     <div class="inner">
       <header>
