@@ -26,7 +26,7 @@
   }
   
   #about {
-    padding-bottom: 5em;
+    padding-bottom: 7em;
     &::before {
       @include linear-gradient(top left, transparent, transparent 50%, _palette(bg) 50%, _palette(bg));
     }
@@ -37,14 +37,14 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    padding-top: 2em !important;
+    padding: 2em 0 !important;
   }
 }
 
 #design-gallery {
   position: relative;
-  padding: 1em 0 6em;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 12px rgba(#000,0.3);
+  padding: 1em 0 6em !important;
   z-index: 10;
   &::before {
     @include linear-gradient(top right, transparent, transparent 50%, _palette(accent1, bg) 50%, _palette(accent1, bg));
@@ -63,6 +63,7 @@
     p {
       font-size: 1.8vw;
       color: rgba(#fff, 0.925);
+      padding: 0 15px;
     }
     &:hover {
       @include transform(scale(1, 1.0025));
@@ -81,4 +82,8 @@
       margin: 0.5em auto;
     }
   }  
+}
+
+button.mfp-prevent-close {
+  box-shadow: none;
 }

@@ -12,8 +12,6 @@
     text-align: center;
     margin: 0 0 2em;
     padding-top: 0.5em;
-    // margin-top: 0.5em;
-    // margin-bottom: 2.25em;
   }
   h2 {
     display: inline-block;
@@ -36,7 +34,6 @@
   height: 16em;
   border-radius: 2px;
   border-bottom: solid 1px #ccc;
-  // box-shadow: 3px 3px 7px rgba(#000, 0.4) !important;
   box-shadow: 2.5px 3px 6px rgba(0,0,0,0.4) !important;
   .image.featured {
     display: inline;
@@ -58,7 +55,7 @@
     color: rgba(#000, 0.75);
     height: 48%;
     width: 90%;
-    margin: 0.4em auto;
+    margin: 0.4em auto 0.25em;
     .featured-title {
       font-family: _font(hdr-family);
       font-weight: _font(hdr-black);
@@ -89,15 +86,16 @@
       font-size: _font(hdr-size-xxsmall);
       font-weight: _font(ctrl-bold);
       line-height: 2;
+      text-shadow: 0 1px 1px rgba(#000,0.5);
+      box-shadow: 0 0.25px 0 0 darken(_palette(accent6, shadow), 3%), inset 0 0 0 -5px rgba(#000, 0.25), inset 0 2px 1px 0 rgba(#fff, 0.05), 0 0.5px 1.5px rgba(#000, 0.35) !important;
       border-radius: 4px;
-      box-shadow: none !important;
       float: right;
       padding: 0.025em 0.55em 0;
       &:hover {
-        @include transition(all 500ms ease 0s);
+        @include transition(all 400ms ease 0s);
         @include linear-gradient(lighten(_palette(accent6, bg), 8%), darken(_palette(accent6, bg), 14%));
         color: _palette(accent6, fg-bold) !important;
-        text-shadow: 0 1px 1.5px rgba(#000,0.8);
+        text-shadow: 0 1px 1.5px rgba(#000,0.75);
         box-shadow: 0 0.25px 0 0 darken(_palette(accent6, shadow), 8%), inset 0 0 0 -5px rgba(#000, 0.2), inset 0 2px 1px 0 rgba(#fff, 0.035), 0 1px 2px rgba(#000, 0.65) !important;
       }
       &:active, &:focus, &:visited {
@@ -128,7 +126,7 @@
   display: block;
   font-size: _font(hdr-size-small);
   text-align: left;
-  width: 97vw;
+  width: 96vw;
   margin: auto;
   margin-bottom: 1.5em;
   vertical-align: middle;
@@ -155,15 +153,16 @@
 
 #archive {
   border: 0 !important;
+  margin: 0 0.75em;
   padding: 1.25em 1.55em 6em;
   .year {
     color: lighten(#30333b, 10%);
     font-size: 1.75em;
     font-weight: _font(ctrl-bold);
     font-size: normal !important;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.05em;
     line-height: 1 !important;
-    margin: 0.5em 0.75em 0.65em;
+    margin: 0.5em auto 0.65em;
   }
   
   ul {
@@ -207,16 +206,16 @@
     top: 3px;
     white-space: nowrap !important;
     &:hover .title, &:active .title {
-      color: saturate(lighten(_palette(accent2, bg), 15%), 5%) !important;
+      color: saturate(darken(_palette(accent2, bg), 8%), 5%) !important;
       text-shadow: 0 0.5px 1px rgba(0,0,0,0.2);
     }
     .title {
-      @include vendor('transition', 'all 300ms ease-in-out 0s');
+      @include transition(all 250ms ease-in-out 0s);
       font-family: _font(hdr-family);
       font-size: _font(hdr-size-large);
       font-weight: _font(hdr-bold);
       letter-spacing: .0475em;
-      color: rgba(#30333b, 0.85) !important;
+      color: rgba(#000, 0.7) !important;
       padding-left: 4px;
       cursor: pointer;
       &:hover, &:active {
@@ -227,11 +226,12 @@
   }
   
   hr {
+    @include opacity(0.5);
     position: relative;
     border-top: 1px solid rgba(48,56,64,0.2);
     width: 95%;
-    margin: 0.25em auto 0.75em;
-    opacity: 20%;
+    margin: 0.5em auto 1em;
+    // opacity: 0.5;
     &:nth-child(2) {
       border-color: rgba(#000, 0);
     }
@@ -284,8 +284,7 @@
   .tag-posts {
     list-style: none;
     vertical-align: top;
-    margin: 0.5em 0.6em;
-    margin-bottom: 2.5em;
+    margin: 0.5em 0.6em 2.5em;
     padding: 0;
     li {
       margin-bottom: 1em;
@@ -306,87 +305,3 @@
     }
   }
 }
-
-// #post {
-//   h2 {
-//     font-size: 2.35em;
-//     letter-spacing: 0.055em;
-//     margin: 0.35em 0;
-//     strong {
-//       font-size: 0.85em;
-//     }
-//   }
-//   h3 {
-//     font-size: 1.5em;
-//     letter-spacing: 0.075em;
-//     margin-top: 0.25em;
-//   }
-//   h4 {
-//     font-size: _font(hdr-size-small);
-//     font-weight: 700;
-//     letter-spacing: 0.05em;
-//     text-align: left;
-//     text-transform: none !important;
-//   }
-//   strong {
-//     font-family: _font(ctrl-family);
-//     font-weight: _font(prose-extrabold);
-//     letter-spacing: 0.05em;
-//     a {
-//       color: _palette(accent4, bg);
-//       &:hover, &:active {
-//         color: lighten(_palette(accent4, bg), 20%);
-//         border-bottom: 2px dotted _palette(accent4, bg);
-//       }
-//     }
-//   }
-//   p {
-//     font-family: _font(ctrl-family);
-//     font-size: _font(prose-size-med);
-//     // line-height: _font(hdr-lheight-large);
-//     margin-bottom: 0.65em;
-//     padding: 0 0.5em;
-//   }
-//   a {
-//     font-family: _font(ctrl-family);
-//     color: darken(_palette(accent4, bg), 40%);
-//     &:hover, &:active {
-//       color: darken(_palette(accent4, bg), 30%);
-//       // border-bottom: 2px dotted darken(_palette(accent4, bg), 30%);
-//     }
-//   }
-//   hr {
-//     background-color: rgba(#000, 0.2);
-//     height: 2px !important;
-//     margin: 0 0 1em;
-//   }
-//   ul {
-//     margin: 0 0 1em 1.5em;
-//   }
-//   li {
-//     font-size: _font(prose-size-med);
-//   }
-//   pre {
-//     margin: 2em 0 !important;
-//     code {
-//       font-family: _font(fixed-family);
-//       font-size: 1.05em;
-//       letter-spacing: 0.05em;
-//       background-color: #444142;
-//       color: #eaeaea;
-//       border-radius: 9px;
-//       margin: 0 0.75em;
-//       padding: 0.5em;
-//       box-shadow: inset 0px 0px 14px rgba(#000, 0.9);
-//     }
-//   }
-//   img {
-//     // margin: 0.5em 0 0.75em 0;
-//   }
-//   #post-date {
-//     font-family: _font(ctrl-family);
-//     font-size: _font(ctrl-size-xsmall);
-//     float: right;
-//     margin-top: 2.75%;
-//   }
-// }

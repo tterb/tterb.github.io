@@ -7,15 +7,19 @@
     text-align: center;
   }
   #four {
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/dev.png");
-    background-position: right;
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/dev.jpg");
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100% auto;
+    padding-top: 1.75em !important;
   }
 }
 
 #about {
-  padding: 0 0 16vw;
+  padding: 0 0 18vw;
+  .major {
+    margin-bottom: 1em;
+  }
 }
 
 #dev {
