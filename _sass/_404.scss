@@ -1,0 +1,73 @@
+#four-oh-four {
+  img {
+    @include filter(grayscale(55%));
+    position: absolute;
+    background-image: url("http://cdn.themehelite.com/themeforest/404doz/img/background-image.jpg"); 
+    background-color: rgb(51, 51, 51); 
+    background-position: center center; 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+  }
+  #error-container {
+    .overlay {
+      position: absolute;
+      background-color: #000;
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+    }
+  }
+  .message {
+    position: relative;
+    font-face: 'Dosis', sans-serif !important;
+    width: 78%;
+    margin: auto;
+    padding: 14vh 0 0;
+    z-index: 999;
+    h2 {
+      font-family: 'Dosis', sans-serif !important;
+      font-size: 550%;
+      font-weight: 300;
+      letter-spacing: 0.045em;
+      line-height: 1.15;
+      margin-bottom: 0.1em;
+    }
+    p {
+      color: rgba(#fff, 0.8);
+      font-size: 120%;
+      letter-spacing: 0.025em;
+      margin-bottom: 1.25em;
+    }
+    ul {
+      color: rgba(#fff, 0.7);
+      list-style: none;
+      margin-bottom: 0;
+      margin-left: 5px;
+      padding-left: 0;
+      li {
+        @include transition(all 250ms ease-in-out 0ms);
+        display: inline-block;
+        position: relative;
+        font-family: _font(ctrl-family);
+        font-size: 110%;
+        padding: 0 0.5em;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:hover, &:active {
+          color: rgba(#fff, 0.95);
+          font-weight: 500;
+          text-shadow: 0 0.5px 1px rgba(#000, 0.8); 
+        }
+      }
+      span {
+        position: relative;
+        font-size: 40%;
+        top: -3px;
+        padding: 0;
+      }
+    }
+  }
+}
