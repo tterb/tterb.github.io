@@ -3,7 +3,7 @@
 /// @param {string} $content Optional content value to use.
 @mixin fa($content: false) {
 	text-decoration: none;
-	&:before {
+	&::before {
 		@if $content {
 			content: $content;
 		}
@@ -18,7 +18,7 @@
 
 @mixin icon($content: false) {
 	text-decoration: none;
-	&:before {
+	&::before {
 		@if $content {
 			content: $content;
 		}
