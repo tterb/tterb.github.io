@@ -13,38 +13,39 @@
       font-family: ('Open Sans', Helvetica, sans-serif) !important;
       font-size: _font(hdr-size-small);
       padding-left: 0;
-      &:before {
+      &::before {
         font-size: _font(hdr-size-large);
       }
       &:hover {
-        color: _palette(accent1,fg-bold);
-        &:before {
-          color: _palette(accent1,fg);
+        color: _palette(accent1, fg-bold);
+        &::before {
+          color: _palette(accent1, fg);
         }
       }
     }
   }
   
   #about {
-    padding-bottom: 7em;
+    background: _palette(bg);
+    padding: 3em 0 6em;
     &::before {
       @include linear-gradient(top left, transparent, transparent 50%, _palette(bg) 50%, _palette(bg));
     }
   }
 
   #four {
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/design.jpg") !important;
+    background-image: -webkit-linear-gradient(top, rgba(#000, 0.5), rgba(#000, 0.5)), url("/images/design.jpg") !important;
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     padding: 2em 0 !important;
   }
 }
 
 #design-gallery {
   position: relative;
-  box-shadow: 0 2px 12px rgba(#000,0.3);
-  padding: 1em 0 6em !important;
+  box-shadow: 0 2px 12px rgba(#000, 0.3);
+  padding: 4em 0 6em !important;
   z-index: 10;
   &::before {
     @include linear-gradient(top right, transparent, transparent 50%, _palette(accent1, bg) 50%, _palette(accent1, bg));
@@ -60,9 +61,12 @@
     .mask {
       padding: 0.75em;
     }
+    h4 {
+      font-size: 3.6vw;
+    }
     p {
       font-size: 1.8vw;
-      color: rgba(#fff, 0.925);
+      color: rgba(#fff, 0.95);
       padding: 0 15px;
     }
     &:hover {
