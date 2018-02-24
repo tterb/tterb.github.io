@@ -96,12 +96,12 @@ gulp.task('optimize-images', function () {
 
 // Purge cache
 gulp.task('purge-cache', function() {
-	var options = {
-		token: config.cloudflareToken,
-		email: config.cloudflareEmail,
-		domain: config.cloudflareDomain
-	};
-	cloudflare(options);
+  var options = {
+    token: config.cloudflareToken,
+    email: config.cloudflareEmail,
+    domain: config.cloudflareDomain
+  };
+  cloudflare(options);
 });
 
 // Remove unused CSS
@@ -113,10 +113,11 @@ gulp.task('uncss', function() {
     .pipe(uncss({
       html: [
         'http://127.0.0.1:4000/',
-        'http://127.0.0.1:4000/development/',
-        'http://127.0.0.1:4000/designer/',
+        'http://127.0.0.1:4000/dev/',
+        'http://127.0.0.1:4000/design/',
         'http://127.0.0.1:4000/blog/',
         'http://127.0.0.1:4000/contact/'
+        'http://127.0.0.1:4000/404/'
       ]
     }))
     .pipe(gulp.dest('css/uncss/'));
@@ -142,7 +143,7 @@ gulp.task('fetch-analytics', function() {
 // });
 
 // Run (Default)
-gulp.task('default', ['javascript', 'optimize-css', 'include-css',  'optimize-html', 'optimize-images', 'styles:critical', 'fetch-analytics']);
+gulp.task('default', ['javascript', 'optimize-css', 'include-css',  'optimize-html', 'optimize-images', 'styles:critical']);
 
 // Run: Build
 gulp.task('build', ['javascript', 'optimize-css', 'include-css',  'optimize-html', 'optimize-images', 'styles:critical', 'fetch-analytics']);
