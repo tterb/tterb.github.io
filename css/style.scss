@@ -91,7 +91,7 @@ body, input, select, textarea {
 }
 
 a {
-  @include transition(all 250ms ease 0ms);
+  @include transition(all 250ms ease 0s);
   color: inherit;
   text-decoration: none;
   background: transparent;
@@ -1018,16 +1018,16 @@ button, .button {
     
     &:hover {
       @include transition(all 400ms ease-in-out 0s !important);
-      @include transform(translateY(2px));
-      @include linear-gradient(lighten(_palette(accent4, bg), 2%), darken(_palette(accent6, bg), 12%));
+      @include transform(translateY(0px));
+      @include linear-gradient(lighten(_palette(accent6, bg), 2%), darken(_palette(accent6, bg), 12%));
       box-shadow: 0 3px 0 0 darken(_palette(accent6, shadow), 10%), 0 1px 14px rgba(#000, 0.4), inset 0 0 0 -5px rgba(#000, 0.5), inset 0 2px 1px 0 rgba(#fff, 0.025) !important;
       color: _palette(accent6, fg-bold) !important;
       text-shadow: 0 1px 1.5px rgba(#000, 0.85);
     }
     
     &:active {
-      @include transition(box-shadow 300ms ease-in-out 0s);
-      @include transform(translateY(2px));
+      @include transition(box-shadow 300ms ease-in-out 0s, transform 150ms linear 0s);
+      @include transform(translateY(2.5px));
       @include linear-gradient(lighten(_palette(accent6, bg), 2%), darken(_palette(accent6, bg), 12%));
       box-shadow: 0 2px 0 0 darken(_palette(accent6, shadow), 10%), 0 1px 14px rgba(#000, 0.4), inset 0 0 0 -5px rgba(#000, 0.5), inset 0 2px 1px 0 rgba(#fff, 0.025) !important;
       color: _palette(accent6, fg-bold) !important;
@@ -1796,7 +1796,7 @@ body.is-menu-visible {
   h1 {
     @include vendor('transition', 'color 0.35s ease');
     @include vendor('transition', 'opacity #{_duration(transitions)} ease');
-    @include transition(all 100ms ease 0ms);
+    @include transition(all 100ms ease 0s);
     @include position(absolute, -0.075em null null 0.75em);
     height: inherit;
     line-height: 1.9;
@@ -1931,7 +1931,7 @@ body.is-menu-visible {
 }
 
 .menu-toggle {
-  @include transition(all 600ms ease-in-out 0ms);
+  @include transition(all 600ms ease-in-out 0s);
   position: relative;
   display: flex;
   width: 35px;
@@ -1944,7 +1944,7 @@ body.is-menu-visible {
   outline: 0;
   z-index: _misc(z-index-base) + 2;
   span, span::before, span::after {
-    @include transition(all 400ms ease 0ms);
+    @include transition(all 400ms ease 0s);
     position: absolute;
     display: block;
     background: #fff;
@@ -1963,7 +1963,7 @@ body.is-menu-visible {
     }
   }
   &.active {
-    @include transition(transform 1s linear 0ms);
+    @include transition(transform 1s linear 0s);
     position: fixed !important; 
     transform: translate(9px, -30px) !important;
     span {
@@ -2069,7 +2069,7 @@ body.is-menu-visible {
     @include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
     @include vendor('transition-delay', '3.5s');
     @include vendor('transform', 'translateY(0)');
-    @include transition(all 500ms ease 100ms);
+    @include transition(all 500ms ease 100s);
     @include opacity(0.7);
     position: absolute;
     content: '';
@@ -2258,7 +2258,7 @@ body.is-loading {
 .landing {
   &.alt {
     .menu-page-link {
-      @include transition(all 200ms ease 0ms); 
+      @include transition(all 200ms ease 0s); 
       color: rgba(#fff, 0.8);
       font-size: 115%;
       font-weight: 500;
@@ -2405,9 +2405,9 @@ body.is-loading {
     .actions {
       @include vendor('order', '2');
       li > a {
-        @include transition(all 500ms ease-in-out 0ms);
+        @include transition(all 500ms ease-in-out 0s);
         &:hover {
-          @include transition(all 500ms ease-in-out 0ms);
+          @include transition(all 500ms ease-in-out 0s);
         }
       }
       .button {
@@ -3365,7 +3365,7 @@ body.body-small .icon-font {
 }
 
 .tile {
-  @include transition(all 500ms ease 100ms);
+  @include transition(all 500ms ease 100s);
   @include transform(scale(1));
   display: inline-block;
   position: relative;
@@ -3494,7 +3494,7 @@ body.body-small .icon-font {
       @include opacity(1);
     }
     p {
-      @include transition-delay(100ms);
+      @include transition-delay(100s);
     }
   }
 }
