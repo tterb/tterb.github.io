@@ -9,21 +9,21 @@ priority: 1.0
 <section id="banner">
   <div class="inner">
     <h1 role="heading" aria-level="1">Hi<span class="accent" style="margin-right:-10px;">,</span> I<span class="accent">'</span>m <br/>{{ site.title }}<span class="accent">.</span></h1>
-    <p>Developer <span class="fa fa-circle"></span> Designer <span class="fa fa-circle"></span> Student</p>
+    <h3>Developer<span class="fa fa-circle"></span>Designer<span class="fa fa-circle"></span>Student</h3>
     <!-- <ul class="actions">
       <li><a id="bannerButton" href="#one" class="button special scrolly">Learn More</a></li>
         <p></p>
     </ul> -->
   </div>
-  <a href="#one" class=" btn-circle more scrolly"><i class="fa fa-angle-double-down animated"></i></a>
+  <a href="#one" class=" btn-circle more scrolly"><i class="fa fa-angle-double-down"></i></a>
 </section>
 
 <!-- One -->
 <section id="one" class="wrapper style1 special mid-content">
   <div class="gradient"></div>
-  <div class="inner" href="{{ '/developer' | prepend: site.baseurl }}">
+  <div class="inner" href="{{ '/dev' | prepend: site.baseurl }}">
     <div class="col col-3 content-desc">
-      <a href="{{ '/developer' | prepend: site.baseurl }}">
+      <a href="{{ '/dev' | prepend: site.baseurl }}">
         <h2>Hello World</h2>
         <p> As a developer, I have experience working in both front and back-end development and enjoy experimenting with new frameworks and platforms, while striving to create tools that myself and others can enjoy.</p>
       </a>
@@ -34,13 +34,13 @@ priority: 1.0
   </div>
 </section>
 
-<section id="two" class="wrapper style1 special angled mid-content">
-  <div class="inner" href="{{ '/designer' | prepend: site.baseurl }}">
+<section id="two" class="wrapper style1 special mid-content angled">
+  <div class="inner" href="{{ '/design' | prepend: site.baseurl }}">
     <div class="col col-5 img-container">
       <img src="{{ '/css/images/vector.svg' | prepend: site.baseurl }}" alt="col-img"/>
     </div>
     <div class="col col-6 content-desc">
-      <a href="{{ '/designer' | prepend: site.baseurl }}">
+      <a href="{{ '/design' | prepend: site.baseurl }}">
         <h2>Lorem Ipsum</h2>
         <!-- <h2>Pixel Perfect</h2> -->
         <p> As a designer, my primary focus is in UI and graphic design, where I utilize tools such as Adobe Illustrator, Photoshop, Cinema 4D, as well as various web-based languages, preprocessors, and frameworks.</p>
@@ -58,7 +58,7 @@ priority: 1.0
     <div class="project-tiles tile-container">
     {% for project in site.data.landing %}
       <div class="tile">
-        <img alt="{{ project.title }}" src="{{ site.baseurl }}{% if project.image %}/images/landing/{{ project.image }}{% else %}banner.jpg{% endif %}" data-full="{{ site.baseurl }}{% if project.image %}/images/landing/{{ project.image }}{% else %}banner.jpg{% endif %}"/>
+        <img alt="{{ project.title }}" src="{{ site.baseurl }}{% if project.image %}/images/landing/{{ project.image }}{% endif %}" data-full="{{ site.baseurl }}/images/landing/{{ project.image }}" class="{% if project.image %} tile-image {% else %} no-image {% endif %}"/>
         <div class="mask">
           <h4>{{ project.title }}</h4>
           <p>{{ project.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
