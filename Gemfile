@@ -22,6 +22,8 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'jemoji'
 gem 'jekyll-gist'
 gem 'jekyll-admin'
+gem 'jekyll-seo-tag'
 gem 'jekyll-paginate'
+gem 'jekyll-redirect-from'
 gem 'jekyll-github-metadata'
 gem 'html-proofer'
