@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
-    <!-- Page Wrapper -->
-    <!-- <div id="page-wrapper"> -->
+  <body class="{{ page.title | downcase }}">
+    <div id="page-wrapper" class="{{ page.title | downcase }}-wrapper">
       {% include header.html %}
       {% if page.header %}
         {{ content }}
       {% else %}
-        <article {% if page.background-image %} id="main" {% elsif page.options contains 'minihead' %} id="minihead" {% else %} id="standard" {% endif %}>
-          {% include header-inner.html %} {{ content }}
+        <article {% if page.background-image %} id="main" {% elsif page.options contains 'minihead' %} id="minihead" {% else %} id="fullhead" {% endif %}>
+          {% include header-inner.html %} 
+          {{ content }}
         </article>
       {% endif %}
-
       {% include footer.html %} 
       {% include scripts.html %}
-    <!-- </div> -->
+    </div>
   </body>
 </html>
