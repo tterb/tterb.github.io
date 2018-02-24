@@ -16,7 +16,7 @@ description: Developer &#x1f784; Designer &#x1f784; Student
 owner:
   name: Brett Stevenson # or company name
   email: BStevensonDev@gmail.com
-  url: https://JonSn0w.github.io
+  url: https://brettstevenson.io
 first_published: 2015 # if migrating another site, the year of your first publish
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://brettstevenson.io" # the base hostname & protocol for your site
@@ -25,8 +25,7 @@ url: "https://brettstevenson.io" # the base hostname & protocol for your site
 # - set the greeting only if you want to display the first green section
 greeting:
   title: Hello!
-# - title for your blog's featured posts
-features-title: Featured
+
 # - displayed at the bottom
 closing-head: Thanks for visiting
 closing-para: Feel free to contact me with any questions, concerns, or just to say hello.
@@ -120,7 +119,9 @@ plugins:
   - jemoji
   - jekyll-gist
   - jekyll-admin
+  - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-redirect-from
   - jekyll-github-metadata
 
 html_proofer:
