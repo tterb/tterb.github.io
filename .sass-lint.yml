@@ -10,12 +10,6 @@ rules:
   class-name-format:
     - 1
     - convention: 'hyphenatedlowercase'
-      ignore:
-        -CodeMirror
-        -switch__input
-        -switch__toggle
-        -switch__handle
-        -switch__touch
   id-name-format:
     - 1
     - convention: 'camelcase'
