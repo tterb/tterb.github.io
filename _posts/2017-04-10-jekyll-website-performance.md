@@ -1,7 +1,7 @@
 ---
 priority: 0.5
 title: Jekyll Website Performance
-desc: Some insight into how to improve the performance of your Jekyll website 
+description: Some insight into how to improve the performance of your Jekyll website 
 date: 2017-04-10
 categories: blog
 options: halfhead

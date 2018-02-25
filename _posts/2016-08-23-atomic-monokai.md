@@ -1,7 +1,7 @@
 ---
 priority: 0.6
 title: Atomic Monokai
-desc: A Monokai-flavored syntax-highlighting theme for Atom
+description: A Monokai-flavored syntax-highlighting theme for Atom
 keywords: "atomic, monokai, atom, code, text, editor, syntax, highlighting, theme, monokai, sublime, packages, spotlight, jekyll, blog, github"
 date: 2016-08-23
 categories: blog project

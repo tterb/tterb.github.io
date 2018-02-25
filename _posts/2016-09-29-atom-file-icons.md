@@ -1,7 +1,7 @@
 ---
 priority: 0.6
 title: Atom File Icons
-desc: A collection of custom file-type icons for Atom
+description: A collection of custom file-type icons for Atom
 keywords: "atom, file, icons, filetype, ico, png, icns, customization, theme, design, adobe, illustrator, spotlight, jekyll, blog, github"
 date: 2016-09-29
 categories: blog

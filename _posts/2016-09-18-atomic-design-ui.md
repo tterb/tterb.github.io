@@ -1,7 +1,7 @@
 ---
 priority: 0.7
 title: Atomic Design UI
-desc: A modern and refined interface for Atom that easily adapts to any dark syntax-theme
+description: A modern and refined interface for Atom that easily adapts to any dark syntax-theme
 keywords: "atomic, design, ui, theme, monokai, atom, code, text, editor, syntax, highlighting, theme, monokai, sublime, package, jekyll, blog, github"
 date: 2016-08-23
 categories: blog project

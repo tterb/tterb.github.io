@@ -1,7 +1,7 @@
 ---
 priority: 0.3
 title: Site Under Construction...
-desc: Still getting everything pieced together
+description: Still getting everything pieced together
 date: 2016-08-17
 categories: blog
 options: nohead

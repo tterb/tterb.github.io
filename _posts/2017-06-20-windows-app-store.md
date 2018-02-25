@@ -1,7 +1,7 @@
 ---
 priority: 0.7
 title: The Future of the Windows App Store
-desc: With Windows 10 S, there may still be hope for Windows users yet
+description: With Windows 10 S, there may still be hope for Windows users yet
 keywords: "Windows, Windows 10, ten, Windows 10 S, Microsoft, app store, app, store, application, mobile, tech, technology, Google, chromebook, chrome os, chrome, surface"
 date: 2017-06-20
 categories: blog

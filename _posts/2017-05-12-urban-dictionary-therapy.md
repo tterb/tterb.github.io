@@ -1,7 +1,7 @@
 ---
 priority: 0.6
 title: Urban Dictionary Therapy
-desc: A simple rehabilitation program for coping with long frustrating days of programming
+description: A simple rehabilitation program for coping with long frustrating days of programming
 keywords: "urban, dictionary, therapy, UDTherapy, command-line, cmd, command, prompt, terminal, bash, unix, tool, script, funny, web, scraper, python, , windows, OSX, linux, jekyll, blog, github"
 date: 2017-05-12
 categories: blog project

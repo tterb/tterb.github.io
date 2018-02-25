@@ -1,7 +1,7 @@
 ---
 priority: 0.5
 title: Atomic Delight
-desc: A delightfully light Syntax & UI-theme for Atom
+description: A delightfully light Syntax & UI-theme for Atom
 keywords: "atomic,delight,syntax,ui,theme,customization,atom,text,editor,monokai,design,light,bright,modern,jekyll,blog,github"
 date: 2016-11-16
 categories: blog project

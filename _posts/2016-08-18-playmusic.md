@@ -1,7 +1,7 @@
 ---
 priority: 0.7
 title: PlayMusic
-desc: A Simple Rainmeter skin for Google Play Music
+description: A Simple Rainmeter skin for Google Play Music
 keywords: "google, play, music, desktop, player, gpm, rainmeter, skin, packages, spotlight, jekyll, blog, github"
 date: 2016-08-18
 categories: blog project
@@ -22,13 +22,13 @@ tags:
     <img src="https://img.shields.io/badge/version-1.2.1-brightgreen.svg" height="21" alt="version"/>
   </a>
   <a href="http://www.gnu.org/licenses/agpl-3.0">
-		<img src="https://img.shields.io/badge/license-AGPL-blue.svg" height="23" alt="license"/>
+    <img src="https://img.shields.io/badge/license-AGPL-blue.svg" height="23" alt="license"/>
   </a>
   <a href="https://github.com/JonSn0w/PlayMusic/issues">
-	  <img src="https://img.shields.io/github/issues-raw/JonSn0w/PlayMusic.svg?maxAge=25000" height="23" alt="issues"/>
+    <img src="https://img.shields.io/github/issues-raw/JonSn0w/PlayMusic.svg?maxAge=25000" height="23" alt="issues"/>
   </a>
   <a href="http://www.deviantart.com/art/PlayMusic-620128929">
-  	<img src="https://img.shields.io/badge/downloads-%206%2C347-green.svg" height="23" alt="downloads"/>
+    <img src="https://img.shields.io/badge/downloads-%206%2C347-green.svg" height="23" alt="downloads"/>
   </a>
   <span class="badge-paypal">
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" title="Donate to this project using Paypal">
@@ -66,7 +66,7 @@ tags:
 
 [<img title="" alt="Features" src="https://cloud.githubusercontent.com/assets/16360374/22623859/446dbe70-eb1e-11e6-8f95-ec36076d7f52.png" width="900" />]()
 <p align="center">
-	<img src="https://cloud.githubusercontent.com/assets/16360374/23335412/21511926-fb6a-11e6-8bb5-249567ecd85a.png" height="240" alt="variants" title="Variants"/>
+  <img src="https://cloud.githubusercontent.com/assets/16360374/23335412/21511926-fb6a-11e6-8bb5-249567ecd85a.png" height="240" alt="variants" title="Variants"/>
 </p>
 <!-- ### Variants   -->
 <p align="center">

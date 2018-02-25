@@ -1,7 +1,7 @@
 ---
 priority: 0.6  
 title: Improving the Accessibility of Jekyll  
-desc: How can we make Jekyll a platform for every user?  
+description: How can we make Jekyll a platform for every user?  
 keywords: "hyde, md, markdown, jekyll, text, note, editor, gfm, github pages, blog, blogging, readme, markup, github, CodeMirror, syntax, highlighting"   
 date: 2017-07-01  
 categories: blog  

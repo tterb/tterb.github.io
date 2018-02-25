@@ -1,7 +1,7 @@
 ---
 priority: 0.4
 title: Github Calendar
-desc: A Rainmeter skin that displays the users GitHub contribution calendar
+description: A Rainmeter skin that displays the users GitHub contribution calendar
 keywords: "git, contribution, calendar, rainmeter, skin, desktop, jekyll, blog, github"
 date: 2016-08-20
 categories: blog project
