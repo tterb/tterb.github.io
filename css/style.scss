@@ -2071,7 +2071,7 @@ body.is-menu-visible {
     @include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
     @include vendor('transition-delay', '3.5s');
     @include vendor('transform', 'translateY(0)');
-    @include transition(all 500ms ease 100s);
+    @include transition(all 500ms ease 100ms);
     @include opacity(0.7);
     position: absolute;
     content: '';
@@ -2107,9 +2107,9 @@ body.is-menu-visible {
   }
   
   @include breakpoint(small) {
-    height: auto;
+    height: 70vh;
     min-height: 0;
-    padding: 9em 0.55em 5em;
+    padding: 11em 0.55em 5em;
     
     h1 {
       // font-size: 7vw !important;
@@ -2367,6 +2367,9 @@ body.is-loading {
     @include linear-gradient(top right, transparent, transparent 50%, _palette(accent1, bg) 50%, _palette(accent1, bg));
     top: -12vw;
   }
+  @include breakpoint(small) {
+    min-height: 650px;
+  }
 }
 
 #four {
@@ -2451,8 +2454,10 @@ body.is-loading {
         }
       }
     }
-    
-    @include breakpoint(small) {
+  }
+  @include breakpoint(small) {
+    max-height: 400px;
+    .inner {
       display: block;
       text-align: center;
       width: 85%;
@@ -2463,17 +2468,23 @@ body.is-loading {
       }
       p {
         text-align: center !important;
-        margin: 0.25em auto 1.25em;
+        margin: 0.75em auto;
+        padding: 0;
       }
       header {
-        padding-right: 0;
+        // padding-right: 0;
         width: 100%;
       }
       .actions {
-        margin-left: auto;
-        margin-right: auto;
         max-width: none;
-        width: 100%;
+        width: 75%;
+        margin: 2em auto 1.5em;
+        // margin-left: auto;
+        // margin-right: auto;
+        .button {
+          height: 3em;
+          line-height: 3;
+        }
       }
     }
   }
@@ -3367,7 +3378,7 @@ body.body-small .icon-font {
 }
 
 .tile {
-  @include transition(all 500ms ease 100s);
+  @include transition(all 500ms ease-in-out 100ms);
   @include transform(scale(1));
   display: inline-block;
   position: relative;
@@ -3380,7 +3391,6 @@ body.body-small .icon-font {
   box-shadow: 0 0 4px rgba(#000, 0.4);
   margin: -1.5px -0.5px;
   cursor: default;
-  perspective: 1000;
   overflow: hidden;
   &:nth-child(n+3) {
     vertical-align: top !important;
@@ -3435,10 +3445,10 @@ body.body-small .icon-font {
     color: rgba(#fff, 0.9) !important;
     font-size: 2.4em;
     letter-spacing: 0.05em;
-    line-height: 1.25;
+    line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
-    margin: 4% 0 0 0;
+    margin: 3% 0 0 0;
     padding: 2.5vh 1vw 1vh;
   }
   
@@ -3496,25 +3506,19 @@ body.body-small .icon-font {
       @include opacity(1);
     }
     p {
-      @include transition-delay(100s);
+      @include transition-delay(100ms);
     }
   }
-}
-
-// @include breakpoint(xlarge) {
-//   .tile {
-//     h4 {
-//       font-size: 3.5vw;
-//       margin-top: 2.5%;
-//     }
-//     p {
-//       font-size: 1.25vw !important;
-//     }
-//   }
-// }
-
-@include breakpoint(medium) {
-  .tile {
+  @include breakpoint(xlarge) {
+    h4 {
+      font-size: 3.5vw;
+      margin-top: 2.5%;
+    }
+    p {
+      font-size: 1.25vw !important;
+    }
+  }
+  @include breakpoint(medium) {
     h4 {
       margin-top: 0;
     }
@@ -3527,16 +3531,15 @@ body.body-small .icon-font {
       // font-size: 0.7em;
     }
   }
-}
 
-@include breakpoint(small) {
-  .tile {
+  @include breakpoint(small) {
     h4 {
       font-size: 3.75vw;
       margin-top: 0;
     }
     p {
       font-size: 14px;
+      line-height: 1.25;
       width: 100%;
       margin-bottom: 1.75em;
     }
@@ -3544,7 +3547,7 @@ body.body-small .icon-font {
       font-size: 0.7em;
     }
     &:hover {
-      height: 38vw;
+      height: 36vw;
     }
   }
 }
