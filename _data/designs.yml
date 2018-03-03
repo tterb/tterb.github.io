@@ -20,13 +20,14 @@
   image: PlayMusic.png
   tag: UI
 
-- title: TypeFace
-  desc: A familiar face created in Adobe Illustrator using only manipulated type characters
-  image: TypeFace.png
-  tool: Illustrator
+- title: Logo Design
+  desc: A logo design inspired by the work of Illustrator, <a href="https://dribbble.com/yoga">Yoga Perdana</a>
+  image: YogaDesign.png
+  tool: illustrator
+  tag: logo
 
 - title: Notifications
-  desc: A collection of custom UI notifications designed for <a href="http://brettstevenson.io/Hyde/">Hyde</a>
+  desc: A collection of Bootstrap-inspired, custom UI notifications designed for <a href="http://brettstevenson.io/Hyde/">Hyde</a>
   image: Notifications.png
   tool: Illustrator
   tag: UI
@@ -36,8 +37,7 @@
   image: FlatMonokai.png
   tool: Illustrator
 
-- title: Logo Design
-  desc: A logo design inspired by the work of Illustrator, <a href="https://dribbble.com/yoga">Yoga Perdana</a>
-  image: YogaDesign.png
-  tool: illustrator
-  tag: logo
+- title: TypeFace
+  desc: A familiar face created in Adobe Illustrator using only manipulated type characters
+  image: TypeFace.png
+  tool: Illustrator
