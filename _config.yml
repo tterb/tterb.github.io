@@ -99,7 +99,7 @@ markdown: kramdown
 highlighter: rouge
 sass:
  style: compressed
-exclude: ['stuff.html','site.bat','compose.rb','README.md','Gulpfile.js','.sass-lint.yml','package.json','node_modules', 'jspm_packages','fonts/*.html']
+exclude: ['site.bat','compose.rb','README.md','Gulpfile.js','.sass-lint.yml','package.json','node_modules','jspm_packages','fonts/*.html']
 include: ['_pages','.htaccess']
 defaults:
   - scope:
