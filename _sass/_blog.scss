@@ -18,7 +18,7 @@
     position: relative;
     color: _palette(bg);
     font-size: 3.25em;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     line-height: _font(hdr-lheight-small);
     text-align: center !important;
     margin: 0.55em 0 0;
@@ -34,7 +34,7 @@
   height: 16em;
   border-radius: 2px;
   border-bottom: solid 1px #ccc;
-  box-shadow: 2.5px 3px 6px rgba(0,0,0,0.4) !important;
+  box-shadow: 2.5px 3px 6px rgba(#000, 0.4) !important;
   .image.featured {
     display: inline;
     position: relative;
@@ -58,11 +58,11 @@
     margin: 0.4em auto 0.25em;
     .featured-title {
       font-family: _font(hdr-family);
-      font-weight: _font(hdr-black);
-      font-size: 2.25vw;
-      line-height: _font(prose-lheight-small);
+      font-weight: _font(hdr-bold);
+      font-size: 2.15vw;
+      line-height: 1.25;
       width: 100%;
-      margin: 0.4em auto 0.3em;
+      margin: 0.4em auto;
     }
     .featured-desc {
       font-family: _font(ctrl-family);
@@ -207,7 +207,7 @@
     white-space: nowrap !important;
     &:hover .title, &:active .title {
       color: saturate(darken(_palette(accent2, bg), 8%), 5%) !important;
-      text-shadow: 0 0.5px 1px rgba(0,0,0,0.2);
+      text-shadow: 0 0.5px 1px rgba(#000, 0.2);
     }
     .title {
       @include transition(all 250ms ease-in-out 0s);
@@ -299,7 +299,7 @@
         }
         &:hover .title, &:active .title {
           color: saturate(lighten(_palette(accent2, bg), 15%), 5%) !important;
-          text-shadow: 0 0.5px 1px rgba(0,0,0,0.2);
+          text-shadow: 0 0.5px 1px rgba(#000, 0.2);
         }
       }
     }
