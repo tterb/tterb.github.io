@@ -9,12 +9,10 @@ $on-laptop:        800px;
 /**
  * Clearfix
  */
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+%clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /**
