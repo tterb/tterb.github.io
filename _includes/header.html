@@ -1,5 +1,5 @@
 
-<header id="header"{% if page.layout == 'landing' %} class="landing alt" {% elsif page.options contains 'readme' %} class="readme" {% elsif page.layout == 'post' %}{% unless page.options contains 'readme' %} class="alt" {% endunless %}{% endif %}>
+<header id="header" {% if page.layout == 'landing' %} class="landing alt" {% elsif page.options contains 'readme' %} class="readme" {% elsif page.layout == 'post' %}{% unless page.options contains 'readme' %} class="alt" {% endunless %}{% endif %}>
   <h1><a href="{{ '/index.html' | prepend: site.baseurl }}">{{ site.title }}</a></h1>
   <nav id="nav">
     <ul>
@@ -11,7 +11,7 @@
               {% assign sorted_pages = site.pages | sort: 'key','last' %}
               {% for my_page in sorted_pages %}
                 {% if my_page.title %}
-                  {% unless my_page.options contains 'nomenu' %}
+                  {% unless my_page.options contains 'nomenu' or my_page.title == 'Contact' %}
                   <li class="menu-page-link"><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
                   {% endunless %}
                 {% endif %}
