@@ -20,7 +20,7 @@ sitemap:
     {% assign sorted_posts = site.posts | sort: 'key' %}
     {% for post in sorted_posts %}
       {% if post.tags contains "featured" %}
-        {% capture post_thumb %}{% file_exists {{ post.image | prepend: '/images/posts/thumbnails/' | prepend: site.baseurl }} %}{% endcapture %}
+        {% capture post_thumb %} {{ post.image | prepend: '/images/posts/thumbnails/' | prepend: site.baseurl }} {% endcapture %}
         <li>
           <section class="featured-box">
             <a href="{{ post.url | prepend: site.baseurl }}" class="image featured">
@@ -33,7 +33,7 @@ sitemap:
             <div class="content">
               <p class="featured-title">{{ post.title }}</p>
               <p class="featured-desc">
-                {{ post.desc | strip_html | truncatewords: 12 }}
+                {{ post.description | strip_html | truncatewords: 12, " [...]" }}
               </p>
             </div>
             <div class="footer">
@@ -63,7 +63,7 @@ sitemap:
         <p class="date-container"><span class="date">{{ post.date | date: "%b %d" }}</span></p>&nbsp;
         <a class="post-link" href="{{ post.url }}">
           <b class="title">{{ post.title }}</b>&nbsp;
-          {{ post.desc | strip_html | truncatewords: 12 }}
+          {{ post.description | strip_html | truncate: 64 }}
         </a>
       </li>
     {% endfor %}
