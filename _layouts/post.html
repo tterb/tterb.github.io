@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <!-- <body itemscope itemtype="http://schema.org/Article"> -->
   {% include header.html %}
     <main class="content" role="main">
       <article class="post">
@@ -60,11 +59,6 @@
             </div>
           </section>
         {% endif %}
-        {% if page.options contains "update" %}
-          <div class="update-container">
-            <span class="update-date">This page was last updated at {{ "now" | date: "%b %d, %y" }}</span>
-          </div>
-        {% endif %}
         {% if page.options contains "readme" %}
           <section class="readme-content">
             <a name="top"></a>
@@ -81,17 +75,27 @@
           </section>
         {% endif %}
         {% if page.options contains "closer" %}
-          <div class="bottom-teaser cf">
+          <div class="post-closer cf">
             <div class="isLeft">
               <h5 class="index-headline featured"><span>Written by</span></h5>
               <section class="author">
                 <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
-                <h4>{{ site.owner.name }}</h4>
-                <p class="bio">{{ author.bio }}</p>
-                <hr style="width: 63%;margin-top:10px;margin-bottom:8px;">
-                <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+                <div class="author-info">
+                  <h4>{{ site.owner.name }}</h4>
+                  <p class="bio">{{ author.bio }}</p>
+                  <hr style="width: 90%;">
+                  <p class="sub published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+                  {% if page.update %}
+                    <p class="sub updated">Last updated <time datetime="{{ page.update | date: "%F %R" }}">{{ page.update | date_to_string }}</time></p>
+                  {% endif %}
+                </div>
               </section>
             </div>
+          </div>
+        {% elsif page.update %}
+          <div class="update-container">
+            <!-- <span class="update-date">This page was last updated at {{ "now" | date: "%b %d, %Y" }}</span> -->
+            <span class="update-date">Last updated on <time datetime="{{ page.update | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
           </div>
         {% endif %}
         {% if site.disqus %}
@@ -123,5 +127,4 @@
         });
       </script>
     {% endif %}
-  <!-- </body> -->
 </html>
