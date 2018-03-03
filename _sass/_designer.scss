@@ -27,7 +27,7 @@
   
   #about {
     background: _palette(bg);
-    padding: 3em 0 6em;
+    padding: 3em 0 9em;
     &::before {
       @include linear-gradient(top left, transparent, transparent 50%, _palette(bg) 50%, _palette(bg));
     }
@@ -36,56 +36,10 @@
   #four {
     background-image: -webkit-linear-gradient(top, rgba(#000, 0.5), rgba(#000, 0.5)), url("/images/design.jpg") !important;
     background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     padding: 2em 0 !important;
   }
-}
-
-#design-gallery {
-  position: relative;
-  box-shadow: 0 2px 12px rgba(#000, 0.3);
-  padding: 4em 0 6em !important;
-  z-index: 10;
-  &::before {
-    @include linear-gradient(top right, transparent, transparent 50%, _palette(accent1, bg) 50%, _palette(accent1, bg));
-    top: -17vw;
-  }
-  
-  .tile {
-    @include transform(scale(1));
-    font-family: _font(hdr-family) !important;
-    min-width: 45%;
-    max-width: 45%;
-    height: 220px;
-    .mask {
-      padding: 0.75em;
-    }
-    h4 {
-      font-size: 3.6vw;
-    }
-    p {
-      font-size: 1.8vw;
-      color: rgba(#fff, 0.95);
-      padding: 0 15px;
-    }
-    &:hover {
-      @include transform(scale(1, 1.0025));
-      height: 320px;
-      &:nth-child(n+3) {
-        vertical-align: top !important;
-      }
-    }
-  }
-  @include breakpoint(small) {
-    padding: 1em 0 5em;
-    .m-p-g {
-      padding: 0;
-    }
-    #flip-container .face.back > h4 {
-      margin: 0.5em auto;
-    }
-  }  
 }
 
 button.mfp-prevent-close {
