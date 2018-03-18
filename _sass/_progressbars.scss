@@ -12,8 +12,13 @@ $blue-color: #2196F3;
 $pink-color: #E91E63;
 $purple-color: #9C27B0;
 $white-color: #fefefe;
-$accent-color: #65c1c8;
+$accent-color: #62c4cf;
 // $accent-color: #6fdfcd;
+
+@keyframes growFromLeft {
+  0% { transform: scaleX(0.01) }
+  100% { transform: scaleX(1) }
+}
 
 .progress {
   background: lighten(_palette(accent1, bg), 6%);
@@ -21,84 +26,92 @@ $accent-color: #65c1c8;
   height: 5px;
   border-radius: 2px;
   margin-top: 5px;
+  > div {
+    background-color: $accent-color;
+    height: 100%;
+    border-radius: 2px;
+    // box-shadow: inset -1px -1px 3px 0px rgba(#000, 0.4);
+    box-shadow: inset -1px -1px 3px 0px rgba(#000, 0.3);
+    transition: all 450ms ease-in 0ms;
+  }
   .progress-1 {
     width: 10%;
-    height: 100%;
+    // height: 100%;
     //  background-color: $red-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
   .progress-2 {
     width: 20%;
-    height: 100%;
+    // height: 100%;
     //  background-color: $red-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
   .progress-3 {
     width: 30%;
-    height: 100%;
+    // height: 100%;
     //  background-color: $orange-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
   .progress-4 {
     width: 40%;
     height: 100%;
     //  background-color: $orange-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
   .progress-5 {
     width: 50%;
-    height: 100%;
+    // height: 100%;
     //  background-color: $yellow-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
   .progress-6 {
     width: 60%;
-    height: 100%;
+    // height: 100%;
     //  background-color: $pink-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
   .progress-7 {
     width: 70%;
-    height: 100%;
+    // height: 100%;
     //  background-color:  $green-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
   .progress-8 {
     width: 80%;
-    height: 100%;
+    // height: 100%;
     //  background-color:  $blue-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
   .progress-9 {
     width: 90%;
-    height: 100%;
+    // height: 100%;
     //  background-color: $teal-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
   .progress-10{
     width: 100%;
-    height: 100%;
+    // height: 100%;
     //  background-color: $green-color;
-    background-color: $accent-color;
-    border-radius: 2px;
+    // background-color: $accent-color;
+    // border-radius: 2px;
     // box-shadow: inset -1px -1px 3px 0px rgba(#000,0.5);
   }
 }
@@ -106,6 +119,7 @@ $accent-color: #65c1c8;
 .white-text {
   color: rgba(255,255,255,0.8);
   font-size: 13px;
+  letter-spacing: 0.06em;
   line-height: 0;
   margin-left: 4px;
   margin-bottom: 0;
