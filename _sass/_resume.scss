@@ -133,11 +133,10 @@ $sidebar-color: #2a303a;
     display: block;
     position: absolute;
     background-color: #fdfdfd;
-    width: 78vw;
+    width: 75vw;
     right: 0;
     margin: 0;
     margin-left: 20vw;
-    padding-left: 3em;
     padding-right: 1.25vw;
     z-index: -999;
   }
@@ -173,7 +172,7 @@ $sidebar-color: #2a303a;
     }
   }
   p {
-    font-size: 14.5px;
+    font-size: 0.9em;
     letter-spacing: 0.03em;
     line-height: 1.55;
   }
