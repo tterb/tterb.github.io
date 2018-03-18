@@ -4,10 +4,15 @@
 
 $sidebar-color: #2a303a;
 
+@keyframes growFromLeft {
+  0% { transform: scaleX(0) }
+  75% { transform: scaleX(1.2) }
+  100% { transform: scaleX(1) }
+}
+
 .resume {
   background-color: _palette(white);
-  color: #333;
-  color: rgba(#000, 0.375);
+  color: rgba(#000, 0.85);
   height: 100%;
   width: 100%;
   * {
@@ -15,7 +20,7 @@ $sidebar-color: #2a303a;
   }
   .fa.fa-circle {
     font-size: 30% !important;
-    color: rgba(#000, 0.45) !important;
+    color: rgba(#000, 0.65) !important;
     text-shadow: none !important;
     top: -4px;
   }
@@ -26,10 +31,10 @@ $sidebar-color: #2a303a;
     background-color: $sidebar-color;
     color: tint(#2f3a40, 80%);
     height: 100%;
-    width: 28%;
+    width: 25vw;
     max-width: 350px;
     float: left;
-    box-shadow: 0 0 10px rgba(#000, 0.85);
+    box-shadow: 0 0 4px rgba(#000, 0.85);
     padding: 0 1vw;
     z-index: 99999;
     .img-container {
@@ -52,10 +57,16 @@ $sidebar-color: #2a303a;
         width: 80%;
         max-width: 225px;
         margin: 1px auto;
+        // .white-text {
+          // color: rgba(#fff, 0.75);
+        // }
         .progress {
-          // background: rgba(#000, 0.5);
-          box-shadow: 2px 1px 3px rgba(#000, 0.45);
+          background: lighten($sidebar-color, 5%);
+          box-shadow: 2px 1px 3px rgba(#000, 0.4);
           margin-top: 3px;
+          > div {
+            // box-shadow: 2px 1px 5px rgba(#000, 0.85);
+          }
         }
       }
     }
@@ -76,23 +87,28 @@ $sidebar-color: #2a303a;
     #contact {
       position: relative;
       top: 2.5vh;
-      padding: 2em 0 0;
+      padding: 3em 0 0;
       .icons {
         color: rgba(#fff, 0.55);
-        text-align: center;
+        // font-size: 110%;
         line-height: 1.5;
-        margin: 0.25em auto 1em;
-        padding: 0.25em;
+        text-align: center;
+        margin: 0.35em auto 1em;
+        padding: 0.25em 0.75em;
         li {
           // font-size: 3vw;
-          font-size: 160%;
+          font-size: 165%;
           width: 15%;
-          max-width: 30px;
+          min-width: 30px;
+          max-width: 35px;
           margin: 0 auto;
-          padding: 0;
+          padding: 0 5px;
           text-shadow: 0 0 5px rgba(#000,0.65) !important;
+          a {
+            // padding: 0 5px;
+          }
           &:hover a, &:active a {
-            color: tint(#65c1c8, 85%) !important;
+            color: rgba(#fff, 0.85) !important;
           }
           &:first-child {
             position: relative;
@@ -116,7 +132,7 @@ $sidebar-color: #2a303a;
   .resume-body {
     display: block;
     position: absolute;
-    background-color: #fff;
+    background-color: #fdfdfd;
     width: 78vw;
     right: 0;
     margin: 0;
@@ -131,21 +147,20 @@ $sidebar-color: #2a303a;
     float: left;
     margin: 0 auto;
     padding-left: 2em;
-    padding-bottom: 3em;
-    // z-index: -999;
+    padding-bottom: 4em;
   .head {
     margin: 1.5em 0 2.75em 0;
     h1 {
       font-size: 10.15vw;
       font-weight: _font(hdr-black);
       letter-spacing: 0.03em;
-      line-height: 1.05;
+      line-height: 1.025;
       color: darken($sidebar-color, 2%);
       max-width: 700px;
-      margin-bottom: 0.125em;
+      margin-bottom: 0.12em;
     }
     h4 {
-      color: rgba(#000, 0.45);
+      color: rgba(#000, 0.75);
       font-size: 2.2vw;
       font-weight: _font(ctrl-bold);
       letter-spacing: 0.085em;
@@ -165,7 +180,7 @@ $sidebar-color: #2a303a;
   .resume-section {
     margin-bottom: 1.5em;
     #title {
-      color: rgba(#000, 0.2);
+      color: rgba(#000, 0.8);
       font-size: 3.65vw;
       font-weight: 800;
       letter-spacing: 0.02em;
@@ -180,7 +195,7 @@ $sidebar-color: #2a303a;
     }
   }
   hr {
-    color: rgba(#000, 0.25);
+    color: rgba(#000, 0.85);
     margin: 1.25em 0;
   }
   #work {
@@ -192,7 +207,7 @@ $sidebar-color: #2a303a;
   #project {
     height: 23%;
   }
-  .sub {
+  .category {
     display: inline-block;
     width: 100%;
     .left {
@@ -206,9 +221,14 @@ $sidebar-color: #2a303a;
         font-weight: 800;
         letter-spacing: 0.02em;
         color: #4A4A4A;
-        color: rgba(#000, 0.2);
+        color: rgba(#000, 0.8);
         border-bottom: 3px solid _palette(accent4, bg);
         white-space: nowrap;
+        &::after {
+          background: _palette(accent4, bg);
+          height: 3px;
+          animation: 1s ease-out 0s 1 growFromLeft;
+        }
       }
     }
   }
@@ -218,20 +238,20 @@ $sidebar-color: #2a303a;
   display: inline;
   width: 71%;
   float: right;
-  margin-top: 0.9em;
+  margin-top: 0.75em;
   padding-left: 0.25em;
   .entry {
     margin: 2em 0 0;
     padding-right: 1em;
     h5 {
-      color: rgba(#000, 0.275);
+      color: rgba(#000, 0.8);
       font-size: 1.35em;
       font-weight: 800;
-      letter-spacing: 0.025em;
       line-height: 1.25;
-      margin: 0.75em auto 0.1em;
+      letter-spacing: 0.025em;
+      margin: 0.75em auto 0.15em;
       a {
-        color: rgba(#000, 0.55);
+        color: rgba(#000, 0.8);
         &:hover {
           color: darken(_palette(accent4, bg), 14%) !important;
         }
@@ -240,11 +260,14 @@ $sidebar-color: #2a303a;
     h6 {
       font-size: 9pt;
       font-weight: _font(hdr-normal);
-      letter-spacing: 0.0275em;
+      letter-spacing: 0.0375em;
       text-transform: none;
-      color: desaturate(lighten($sidebar-color, 25%), 5%);
+      color: desaturate(lighten($sidebar-color, 16%), 5%);
       margin: 0 0 0.55em;
       padding-left: 2px;
+      i {
+        font-size: 9.5pt;
+      }
       .fa-circle {
         font-size: 0.45em;
         top: -2px !important;
@@ -252,7 +275,7 @@ $sidebar-color: #2a303a;
       }
     }
     p {
-      color: #444 !important;
+      color: #404040 !important;
       padding-left: 2px;
     }
     strong {
@@ -266,6 +289,6 @@ $sidebar-color: #2a303a;
     }
   }
   &:last-child p {
-    margin-bottom: 1.55em;
+    margin: 0.35em 0 1.55em;
   }
 }
