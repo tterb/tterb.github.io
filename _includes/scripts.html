@@ -25,8 +25,8 @@ $(document).ready(function(){
       enabled: true,
       navigateByImgClick: true,
       arrowMarkup: '<button title="%title%" type="button" class="fa fa-chevron-%dir%"></button>',
-      tPrev: 'Previous (Left arrow key)', // title for left button
-      tNext: 'Next (Right arrow key)', // title for right button
+      tPrev: 'Previous', // title for left button
+      tNext: 'Next', // title for right button
       tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
     },
     image: {
@@ -92,6 +92,11 @@ $('code').each(function() {
     removalDelay: 300
   });
 }(jQuery));
+
+$('.mid-content .inner').click(function() {
+  window.location = $(this).attr('data-link'); 
+  return false;
+});
 </script>
 
 
