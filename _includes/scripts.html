@@ -6,16 +6,53 @@
 <script src="{{ '/js/util.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/main.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/js/shuffle.min.js' | prepend: site.baseurl }}"></script>
+<!-- <script src="{{ '/js/shuffle.min.js' | prepend: site.baseurl }}"></script> -->
+<script src="{{ '/js/smoothState.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/svgmagic.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/magnific-popup.min.js' | prepend: site.baseurl }}"></script>
 <link rel="stylesheet" href="{{ '/css/magnific-popup.css' | prepend: site.baseurl }}"/>
-<!-- <link rel="stylesheet" href="{{ '/css/animate.min.css' | prepend: site.baseurl }}"/> -->
+<link rel="stylesheet" href="{{ '/css/animate.min.css' | prepend: site.baseurl }}"/>
 
-<!-- Improve code-block formatting -->
+{% if page.layout == 'none' %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+  <script>
+    $(function() {
+      $('.typed').typed({ 
+        strings: [
+        "Oops! <br/>" + 
+        "><span class='caret'>$</span> You might have mis-typed the URL, <br/> ^1" +
+        "><span class='caret'>$</span> or maybe the page has been moved. <br/> ^500" +
+        "><span class='caret'>$</span> Anyways, there is nothing to see here... <br/> ^500" +
+        "><span class='caret'>$</span> Would you like to return to the <a href='#'>homepage</a> (Y/N)?"
+      ],
+        stringsElement: '#strings',
+        showCursor: true,
+        cursorChar: '|',
+        autoInsertCss: true,
+        typeSpeed: 10,
+        loop: false,
+        showCursor: false
+      });
+      $('#term-input').focus();
+    });
+  </script>
+  <script>
+  $('#term-input').on('keydown', function(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      console.log($(this).val())
+      if ($(this).val() === 'y') {
+        url = 'http://brettstevenson.io/index.html';
+        console.log(url)
+        $(location).attr('href', url);
+      }
+    }
+  });
+  </script>
+{% endif %}
+
 <script>
-
-$(document).ready(function(){
+$(document).ready(function() {
   $('img').svgmagic();
   
   $('.design-tiles').magnificPopup({
@@ -31,20 +68,11 @@ $(document).ready(function(){
     },
     image: {
       markup: '<div class="mfp-figure">'+'<div class="mfp-close fa fa-close"></div>'+'<div class="mfp-img"></div>'+'<div class="mfp-bottom-bar">'+'<div class="mfp-title"></div>'+'<div class="mfp-desc"></div>'+'<div class="mfp-counter"></div>'+'</div>'+'</div>', 
-      // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
       verticalFit: true
       // cursor: 'mfp-zoom-out-cur'
     },
     removalDelay: 300
-    // image: {
-    //   titleSrc: 'title'
-    // }
   });
-});
-
-$('code').each(function() {
-  if($(this).height() < 30)
-    $(this).css('padding', '0.7em 1.25em');
 });
 </script>
 
@@ -56,21 +84,21 @@ $('code').each(function() {
 (function ($) {
   "use strict";
   window.sr = ScrollReveal({ duration: 1000, reset: false });
-  sr.reveal('#banner h1', 10);
+  // sr.reveal('#banner h1', 10);
   sr.reveal('#one .inner', 10);
   sr.reveal('#two .inner', 10);
   
   // window.sreset = ScrollReveal({ duration: 1000, reset: true });
-  sr.reveal('#banner .btn-circle', 10);
+  // sr.reveal('#banner .btn-circle', 10);
   sr.reveal('#back-to-top', 25);
   // sr.reveal('.preview-section .feature-list li', 25);
   // sr.reveal('.repo-icons a', 20);
   // sr.reveal('.tag-line');
   
-  $('.works').shuffle({
-    itemSelector: '.works-item',
-    gutterWidth: 30
-  });
+  // $('.works').shuffle({
+  //   itemSelector: '.works-item',
+  //   gutterWidth: 30
+  // });
 
   $('.filter li').on('click', function() {
     var $this = $(this),
@@ -80,7 +108,7 @@ $('code').each(function() {
       $('.filter .active').removeClass('active');
     }
     $this.toggleClass('active');
-    $('.works').shuffle( 'shuffle', group );
+    // $('.works').shuffle( 'shuffle', group );
   });
 
   $('.filtered .works-item-link').magnificPopup({
