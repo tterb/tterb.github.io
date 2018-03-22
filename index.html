@@ -7,21 +7,17 @@ priority: 1.0
 
 <!-- Banner -->
 <section id="banner">
-  <div class="inner">
+  <div class="inner animated fadeIn">
     <h1 role="heading" aria-level="1">Hi<span class="accent" style="margin-right:-10px;">,</span> I<span class="accent">'</span>m <br/>{{ site.title }}<span class="accent">.</span></h1>
     <h3>Developer<span class="fa fa-circle"></span>Designer<span class="fa fa-circle"></span>Student</h3>
-    <!-- <ul class="actions">
-      <li><a id="bannerButton" href="#one" class="button special scrolly">Learn More</a></li>
-        <p></p>
-    </ul> -->
   </div>
-  <a href="#one" class=" btn-circle more scrolly"><i class="fa fa-angle-double-down"></i></a>
+  <a class="scroll-btn scrolly animated fadeInUp" href="#one"><span></span>Scroll</a>
 </section>
 
 <!-- One -->
 <section id="one" class="wrapper style1 special mid-content">
   <div class="gradient"></div>
-  <div class="inner" href="{{ '/dev' | prepend: site.baseurl }}">
+  <div class="inner" data-link="{{ '/dev' | prepend: site.baseurl }}">
     <div class="col col-3 content-desc">
       <a href="{{ '/dev' | prepend: site.baseurl }}">
         <h2>Hello World</h2>
@@ -35,14 +31,13 @@ priority: 1.0
 </section>
 
 <section id="two" class="wrapper style1 special mid-content angled">
-  <div class="inner" href="{{ '/design' | prepend: site.baseurl }}">
+  <div class="inner" data-link="{{ '/design' | prepend: site.baseurl }}">
     <div class="col col-5 img-container">
       <img src="{{ '/css/images/vector.svg' | prepend: site.baseurl }}" alt="col-img"/>
     </div>
     <div class="col col-6 content-desc">
       <a href="{{ '/design' | prepend: site.baseurl }}">
         <h2>Lorem Ipsum</h2>
-        <!-- <h2>Pixel Perfect</h2> -->
         <p> As a designer, my primary focus is in UI and graphic design, where I utilize tools such as Adobe Illustrator, Photoshop, Cinema 4D, as well as various web-based languages, preprocessors, and frameworks.</p>
       </a>
     </div>
@@ -62,7 +57,6 @@ priority: 1.0
         <div class="mask">
           <h4>{{ project.title }}</h4>
           <p>{{ project.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
-          <!-- <awesome-button href="{{ site.baseurl }}{% if project.permalink %}{{ project.permalink }}{% else %}{{ project.repo }}{% endif %}">More</awesome-button> -->
           <a class="button special info" href="{{ site.baseurl }}{% if project.permalink %}{{ project.permalink }}{% else %}{{ project.repo }}{% endif %}">Read More</a>
         </div>
       </div>
