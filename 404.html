@@ -6,19 +6,58 @@ permalink: /404.html
 ---
 
 <section id="four-oh-four">
-  <img src="{{ 'images/404.jpg' | prepend: site.baseurl }}" alt="404"/>
+  <!-- <img src="{{ 'images/404.jpg' | prepend: site.baseurl }}" alt="404"/> -->
+  <h1>404</h1>
   <div id="error-container">
-    <div class="overlay"></div>
-    <div class="message">
-      <h2>ERROR 404<br/>Not Found</h2>
-      <p>You may have mis-typed the URL,<br/>or maybe the page has been moved.<br/>Anyways, there is nothing to see here...<br/>The following links can get you back to where you were:</p>
-      <ul class="link-list">
-        <li><a href="{{ site.baseurl }}">Home</a></li><span class="fa fa-circle"></span>
-        <li><a href="{{ '/dev' | prepend: site.baseurl }}">Developer</a></li><span class="fa fa-circle"></span>
-        <li><a href="{{ '/design' | prepend: site.baseurl }}">Designer</a></li><span class="fa fa-circle"></span>
-        <li><a href="{{ '/blog' | prepend: site.baseurl }}">Blog</a></li><span class="fa fa-circle"></span>
-        <li><a href="{{ '/contact' | prepend: site.baseurl }}">Contact</a></li>
-      </ul>
+    <div class="terminal">
+      <div class="window-title">
+        <div class="win-buttons">
+          <a id="close" class="term-button" href="#"></a>
+          <a id="min" class="term-button" href="#"></a>
+          <a id="max" class="term-button" href="#"></a>
+        </div>
+        <span class="title">404</span></div>
+      <div class="message">
+        <span class='prompt'><span class='user'>root</span><span class="at">@</span><span class="path">~/404</span>><span class="caret">$</span> </span>
+        <span class="typed"></span>
+        <form>><span class="caret">$</span>
+          <input id="term-input" type="text"></input>
+        </form>
+      </div>
     </div>
   </div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+<script>
+  $(function() {
+    $('.typed').typed({ 
+      strings: [
+      "Oops! <br/>" + 
+      "><span class='caret'>$</span> You might have mis-typed the URL, <br/> ^1" +
+      "><span class='caret'>$</span> or maybe the page has been moved. <br/> ^500" +
+      "><span class='caret'>$</span> Anyways, there is nothing to see here... <br/> ^500" +
+      "><span class='caret'>$</span> Would you like to return to the <a href='#'>homepage</a> (Y/N)?"
+    ],
+      stringsElement: '#strings',
+      showCursor: true,
+      cursorChar: '|',
+      autoInsertCss: true,
+      typeSpeed: 10,
+      loop: false,
+      showCursor: false
+    });
+    $('#term-input').focus();
+  });
+
+  $('#term-input').on('keydown', function(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      console.log($(this).val())
+      if ($(this).val() === 'y') {
+        url = 'http://brettstevenson.io/index.html';
+        console.log(url)
+        $(location).attr('href', url);
+      }
+    }
+  });
+</script>
