@@ -1,13 +1,12 @@
 <!-- Footer -->
 <footer id="footer">
   <ul class="icons">
-    {% for socloc in site.social %}
-      {% if socloc[1] %}
-        {% if socloc[0] == 'email' %}
-          <li><a href="{{ socloc[1] }}" class="fa fa-envelope-o" style="position:relative;top:4px;"><span class="label">E-mail</span></a></li>
+    {% for social in site.social %}
+      {% if social[1] %}
+        {% if social[0] != 'email' %}
+          <li><a target="_blank" href="{{ social[1] }}"><span class="fab fa-{{ social[0] }}"></span></a></li>
         {% else %}
-          <li><a target="_blank" href="{{ socloc[1] }}" class="fa fa-{{ socloc[0] }}">
-          <span class="label">{{ socloc[0] }}</span></a></li>
+          <li><a href="{{ social[1] }}"><span class="far fa-envelope"></span></a></li>
         {% endif %}
       {% endif %}
     {% endfor %}
