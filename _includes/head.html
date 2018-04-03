@@ -4,27 +4,26 @@
   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <title>{% if page.title %}{{ page.title }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.desc %}{{ page.desc | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.baseurl }}"/>
   <link rel="stylesheet" href="{{ '/fonts/Avenir-Next/AvenirNext.min.css' | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ '/fonts/FontAwesome/FontAwesome.min.css' | prepend: site.baseurl }}"/>
-  <!-- <link href="{{"/bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet"> -->
+  <link rel="stylesheet" href="{{ '/css/magnific-popup.min.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="{{ '/css/animate.min.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="{{ '/css/tooltipster.bundle.min.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.baseurl }}"/>
   <!-- <link rel="stylesheet" href="{{ "/css/pygment.css" | prepend: site.baseurl }}"/> -->
-  <!--[if lte IE 8]><link rel="stylesheet" href="{{ "/css/ie8.css" | prepend: site.baseurl }}" /><![endif]-->
-  <!--[if lte IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" | prepend: site.baseurl }}" /><![endif]-->
-  
-  {% if page.background-image %}
-    {% assign first_char = page.background-image | slice: 0 %}
+
+  {% if page.image %}
+    {% assign first_char = page.image | slice: 0 %}
     {% if first_char == '/' %}
-      {% assign second_char = page.background-image | slice: 1 %}
+      {% assign second_char = page.image | slice: 1 %}
       {% if second_char == '/' %}
-        {% assign imageurl = page.background-image %}
+        {% assign imageurl = page.image %}
       {% else %}
-        {% assign imageurl = page.background-image | prepend: site.baseurl %}
+        {% assign imageurl = page.image | prepend: site.baseurl %}
       {% endif %}
     {% else %}
-      {% assign imageurl = page.background-image | prepend: "/images/" | prepend: site.baseurl %}
+      {% assign imageurl = page.image | prepend: "/images/" | prepend: site.baseurl %}
     {% endif %}
   <style>
     #main > header {

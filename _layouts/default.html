@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   {% include head.html %}
   <body class="{{ page.title | downcase }}">
-    <div id="page-wrapper" class="{{ page.title | downcase }}-wrapper">
+    {% if page.layout == 'landing' %}
+      <div id="{{ page.title | downcase }}-wrapper" class="page-wrapper animsition">
+    {% else %}
+      <div id="{{ page.title | downcase }}-wrapper" class="page-wrapper animsition">
+    {% endif %}
       {% include header.html %}
       {% if page.header %}
         {{ content }}
       {% else %}
-        <article {% if page.background-image %} id="main" {% elsif page.options contains 'minihead' %} id="minihead" {% else %} id="fullhead" {% endif %}>
-          {% include header-inner.html %} 
+        <article {% if page.image %} id="main" {% elsif page.options contains 'minihead' %} id="minihead" {% else %} id="fullhead" {% endif %}>
+          {% include header-inner.html %}
           {{ content }}
         </article>
       {% endif %}
-      {% include footer.html %} 
+      {% include footer.html %}
       {% include scripts.html %}
     </div>
   </body>
