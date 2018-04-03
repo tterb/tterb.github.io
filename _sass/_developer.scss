@@ -13,8 +13,7 @@
 
 #about {
   background: _palette(bg);
-  // padding: 0 0 18vw;
-  padding: 3em 0 7.5em;
+  padding: 3em 0 9em;
   .major {
     margin-bottom: 1em;
   }
@@ -81,7 +80,7 @@
     > span {
       @include position(relative, 0.5px null null -3px);
       &::before {
-        font-family: 'FontAwesome';
+        font-family: 'Font Awesome 5 Solid';
         font-size: 1.8em;
         content: '\f09b';
         margin: 0.5em 0.5em 0 0.5em;
@@ -100,7 +99,7 @@
       }
     }
   }
-  
+
   .spotlight {
     width: 100%;
     margin: auto;
@@ -134,7 +133,7 @@
         background-clip: text;
       }
     }
-    @include breakpoint(small) { 
+    @include breakpoint(small) {
       width: 100%;
       .content {
         h3 {
@@ -189,7 +188,7 @@
       height: 2px;
     }
   }
-  
+
   p {
     display: inline-block;
     font-family: _font(ctrl-family);
@@ -200,7 +199,7 @@
     float: left;
     margin: 2em 2em 1.5em 2.5em;
   }
-  
+
   > div > header {
     margin: 0 0 0 0;
   }
@@ -212,31 +211,31 @@
   h2 {
     display: none;
   }
-  
+
   .float-left.text-gray {
     font-size: 0;
   }
-  
+
   .calendar {
     width: 100%;
     min-height: 100px;
     border: none !important;
   }
-  
+
   .contrib-column {
     display: none;
   }
-  
+
   .calendar-graph text.wday {
     margin-right: .05em
   }
-  
+
   .calendar-graph text.wday,
   .calendar-graph text.month {
     font-size: 10px;
     fill: _palette(accent1, fg);
   }
-  
+
   .contrib-number {
     display: block;
     font-weight: 300;
@@ -244,11 +243,11 @@
     font-size: 24px;
     color: _palette(bg);
   }
-  
+
   .contrib-legend {
     display: none;
   }
-  
+
   > div > div.mb-5.border.border-gray-dark.rounded-1.py-2 > div.js-calendar-graph.is-graph-loading.graph-canvas.calendar-graph.height-full > svg > g > g:nth-child(n) > rect:nth-child(n) {
     opacity: 0.85;
   }
