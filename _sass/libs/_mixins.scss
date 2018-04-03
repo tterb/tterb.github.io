@@ -9,7 +9,7 @@
     }
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Solid';
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
@@ -132,7 +132,7 @@
 
 @mixin ease-linear-gradient($pos, $color, $start:0%, $important: null) {
   $rng: 100 - $start;
-  @include prefix-gradient($pos, $important, 
+  @include prefix-gradient($pos, $important,
     rgba($color, 1) $start,
     rgba($color, 0.738) $start + $rng * 0.19,
     rgba($color, 0.541) $start + $rng * 0.34,
