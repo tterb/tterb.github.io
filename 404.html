@@ -6,7 +6,6 @@ permalink: /404.html
 ---
 
 <section id="four-oh-four">
-  <!-- <img src="{{ 'images/404.jpg' | prepend: site.baseurl }}" alt="404"/> -->
   <h1>404</h1>
   <div id="error-container">
     <div class="terminal">
@@ -27,37 +26,3 @@ permalink: /404.html
     </div>
   </div>
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
-<script>
-  $(function() {
-    $('.typed').typed({ 
-      strings: [
-      "Oops! <br/>" + 
-      "><span class='caret'>$</span> You might have mis-typed the URL, <br/> ^1" +
-      "><span class='caret'>$</span> or maybe the page has been moved. <br/> ^500" +
-      "><span class='caret'>$</span> Anyways, there is nothing to see here... <br/> ^500" +
-      "><span class='caret'>$</span> Would you like to return to the <a href='#'>homepage</a> (Y/N)?"
-    ],
-      stringsElement: '#strings',
-      showCursor: true,
-      cursorChar: '|',
-      autoInsertCss: true,
-      typeSpeed: 10,
-      loop: false,
-      showCursor: false
-    });
-    $('#term-input').focus();
-  });
-
-  $('#term-input').on('keydown', function(e) {
-    if (e.keyCode === 13) {
-      e.preventDefault();
-      console.log($(this).val())
-      if ($(this).val() === 'y') {
-        url = 'http://brettstevenson.io/index.html';
-        console.log(url)
-        $(location).attr('href', url);
-      }
-    }
-  });
-</script>
