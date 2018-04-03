@@ -36,7 +36,7 @@ social:
   github: https://github.com/JonSn0w
   deviantart: https://bstevenson.deviantart.com/
   dribbble: https://dribbble.com/JonSn0w
-  linkedin-square: https://www.linkedin.com/in/brett-stevenson-0a035a72
+  linkedin-in: https://www.linkedin.com/in/brett-stevenson-0a035a72
   twitter: https://twitter.com/BStevensonDev
   email: /contact/
   #flickr:
@@ -99,7 +99,7 @@ markdown: kramdown
 highlighter: rouge
 sass:
  style: compressed
-exclude: ['site.bat','compose.rb','README.md','Gulpfile.js','.sass-lint.yml','package.json','node_modules','jspm_packages','fonts/*.html']
+exclude: ['site.bat','compose.rb','README.md','Gulpfile.js','.sass-lint.yml','package.json','node_modules','jspm_packages','fonts/*.html', '_pages/stuff.html', 'js/*_.*']
 include: ['_pages','.htaccess']
 defaults:
   - scope:
@@ -121,6 +121,7 @@ plugins:
   - jekyll-admin
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-autoprefixer
   - jekyll-redirect-from
   - jekyll-github-metadata
 
