@@ -2,18 +2,22 @@
 * Syntax highlighting styles
 */
 
-$base:       #282c34;
-$text:       #bbc2cf;
-$subtle:     #5f6673;
-$highlight:  #f8f8f2;
-$red:        #e06c75;
-$orange:     #d19a66;
-$yellow:     #eec983;
-$green:      #98c379;
-$blue:       #56b6c2;
-$purple:     #b879d5;
-$pink:       #f92672;
-$err:        #960050;
+$syntax-hue:          270;
+$syntax-saturation:    4%;
+$syntax-brightness:   15%;
+
+$base:       hsl($syntax-hue, $syntax-saturation, $syntax-brightness);
+$text:       hsl($syntax-hue, 9%, 87%);
+$subtle:     hsl($syntax-hue, 8%, 43%);
+$highlight:  hsl($syntax-hue, 9%, 90%);
+$red:        hsl(  5, 48%, 51%);
+$orange:     hsl( 21, 86%, 70%);
+$yellow:     hsl( 40, 98%, 78%);
+$green:      hsl( 98, 64%, 68%);
+$blue:       hsl(195, 83%, 73%);
+$purple:     hsl(246, 80%, 80%);
+$pink:       hsl(350, 100%, 70%);
+$err:        $red;
 
 .highlight,
 pre.highlight {
@@ -24,19 +28,19 @@ pre.highlight {
 .highlight {
   background: transparent;
   //  @extend %vertical-rhythm;
-  
+
   .highlighter-rouge & {
     background: transparent;
   }
-  
+
   pre { background: transparent; }
   .hll { background: $base; }
   .c { color: $subtle; font-style: italic; }
   .err { color: $err; }
-  .k { color: $purple; }
-  .l { color: $green; }
+  .k { color: $pink; }
+  .l { color: $yellow; }
   .n { color: $text; }
-  .o { color: $text; }
+  .o { color: $pink; }
   .p { color: $text; }
   .cm { color: $subtle; font-style: italic; }
   .cp { color: $subtle; font-style: italic; }
@@ -45,15 +49,15 @@ pre.highlight {
   .ge { font-style: italic; }
   .gs { font-weight: 700; }
   .kc { color: $purple; }
-  .kd { color: $purple; }
-  .kn { color: $purple; }
-  .kp { color: $purple; }
-  .kr { color: $purple; }
-  .kt { color: $purple; }
-  .ld { color: $green; }
+  .kd { color: $blue; }
+  .kn { color: $blue; }
+  .kp { color: $blue; }
+  .kr { color: $blue; }
+  .kt { color: $blue; }
+  .ld { color: $yellow; }
   .m { color: $orange; }
-  .s { color: $green; }
-  .na { color: $orange; }
+  .s { color: $yellow; }
+  .na { color: $text; }
   .nb { color: $yellow; }
   .nc { color: $yellow; }
   .no { color: $yellow; }
@@ -73,16 +77,16 @@ pre.highlight {
   .mh { color: $orange; }
   .mi { color: $orange; }
   .mo { color: $orange; }
-  .sb { color: $green; }
-  .sc { color: $green; }
-  .sd { color: $green; }
-  .s2 { color: $green; }
-  .se { color: $green; }
-  .sh { color: $green; }
-  .si { color: $green; }
-  .sx { color: $green; }
-  .sr { color: $blue; }
-  .s1 { color: $green; }
+  .sb { color: $yellow; }
+  .sc { color: $yellow; }
+  .sd { color: $yellow; }
+  .s2 { color: $yellow; }
+  .se { color: $purple; }
+  .sh { color: $yellow; }
+  .si { color: $yellow; }
+  .sx { color: $yellow; }
+  .sr { color: $pink; }
+  .s1 { color: $yellow; }
   .ss { color: $blue; }
   .bp { color: $yellow; }
   .vc { color: $yellow; }
