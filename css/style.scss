@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import 'layout'; 
+@import 'layout';
 @import 'bourbon/bourbon';
 @import 'libs/functions';
 @import 'libs/mixins';
@@ -10,6 +10,7 @@
 @import 'libs/vars';
 @import '404';
 @import 'blog';
+// @import 'blog2';
 @import 'designer';
 @import 'developer';
 @import 'mailing';
@@ -57,18 +58,33 @@ html {
   width: device-width;
 }
 
-* {
-  text-shadow: none;
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-body {
-  background: _palette(bg);
-  
-  &.is-loading {
-    *, *:before, *:after {
-      @include vendor('animation', 'none !important');
-      @include vendor('transition', 'none !important');
-    }
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translate3d(0, 100%, 0); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translate3d(100%, 0, 0); }
+  100% { opacity: 1; transform: none; }
+}
+
+.page-wrapper {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+  .fadeinup {
+    animation-name: fadeInUp;
+  }
+  .fadeinright {
+    animation-name: fadeInRight;
   }
 }
 
@@ -79,15 +95,15 @@ body, input, select, textarea {
   font-weight: _font(ctrl-normal);
   letter-spacing: _size(letter-spacing);
   line-height: _font(ctrl-lheight-normal);
-  
+
   @include breakpoint(xlarge) {
     font-size: _font(ctrl-size-xlarge);
   }
-  
+
   @include breakpoint(large) {
     font-size: _font(ctrl-size-large);
   }
-  
+
   @include breakpoint(ctrl-small) {
     font-size: _font(ctrl-size-small);
     letter-spacing: 0.035em;
@@ -99,7 +115,7 @@ a {
   color: inherit;
   text-decoration: none;
   background: transparent;
-  
+
   &:hover {
     border-bottom-color: transparent;
   }
@@ -131,11 +147,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: _font(hdr-lheight-smaller);
   margin: 0 0 (_size(element-margin) * 0.5) 0;
   text-transform: uppercase;
-  
+
   code {
     text-transform: none;
   }
-  
+
   a {
     color: inherit;
     text-decoration: none;
@@ -148,10 +164,10 @@ h1 {
 
 h2 {
   font-size: _font(hdr-size-xxxlarge);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.035em;
   line-height: _font(hdr-lheight-large);
   margin-bottom: 0.5em;
-  
+
   @include breakpoint(small) {
     font-size: _font(hdr-size-med);
     line-height: _font(hdr-lheight-normal);
@@ -162,7 +178,7 @@ h3 {
   font-size: 1.5em;
   line-height: _font(hdr-lheight-large);
   margin: 0 0 0.5em 0;
-  
+
   @include breakpoint(small) {
     font-size: _font(hdr-size-small);
     line-height: _font(hdr-lheight-normal);
@@ -198,7 +214,7 @@ hr {
   border: 0;
   border-bottom: solid 2px rgba(#000,0.095);
   margin: _size(element-margin) 0 (_size(element-margin) * 0.75);
-  
+
   &.major {
     margin: (_size(element-margin) * 2.25) 0;
   }
@@ -239,8 +255,8 @@ article .inner {
 }
 
 code {
-  background-color: rgba(68,65,66,0.9);
-  color: #eaeaea;
+  background-color: hsl(270, 4%, 15%);
+  color: hsl(270, 9%, 87%);
   font-family: _font(fixed-family);
   font-size: _font(fixed-size);
   letter-spacing: normal;
@@ -261,12 +277,12 @@ pre {
   font-family: _font(fixed-family);
   font-size: _font(fixed-size);
   margin: 0.5em 0 1.5em 0;
-  
+
   code {
     display: block;
+    background-color: hsl(270, 4%, 15%);
+    color: hsl(270, 9%, 87%);
     line-height: _font(fixed-lheight);
-    background-color: #2F333A;
-    // color: #ABB2BF;
     width: 95%;
     border-radius: 10px;
     margin: auto;
@@ -301,54 +317,54 @@ header {
     @include position(relative, -0.25em null null null);
     color: _palette(fg-light);
   }
-  
+
   .desc-inline {
     font-size: _font(hdr-size-xxsmall);
     font-weight: _font(ctrl-normal);
   }
-  
+
   h3 + p {
     font-size: _font(hdr-size-med);
   }
-  
+
   h4 + p, h5 + p, h6 + p {
     font-size: _font(hdr-size-smaller);
   }
-  
+
   &.major {
     margin: 0 0 (_size(element-margin) * 1.75) 0;
-    
+
     h2, h3, h4, h5, h6 {
       position: relative;
       border-bottom: solid 2px _palette(border);
       display: inline-block;
       padding-bottom: 0.15em;
-      
+
       &::after {
         content: '';
         display: block;
         height: 1px;
       }
     }
-    
+
     h2 {
       // font-size: 3.8em;
       font-size: 6vw;
       line-height: 1.5;
       padding-bottom: 0;
     }
-    
+
     p {
       color: _palette(fg);
       margin: 0.5em 0 2em 0;
       top: 0;
     }
-    
+
     @include breakpoint(small) {
       margin: 0 0 _size(element-margin) 0;
     }
   }
-  
+
   @include breakpoint(medium) {
     br {
       display: none;
@@ -386,17 +402,17 @@ select, textarea {
   background: rgba(#000, 0.05) !important;
   color: rgba(#000, 0.8);
   font-weight: 500;
-  border-radius: 11px;
-  border: 1px inset rgba(#000, 0.1);
-  outline: 0;
-  padding: 0 1em;
   text-decoration: none;
   width: 100%;
-  
+  border: 1px inset rgba(#000, 0.1);
+  border-radius: 12px;
+  padding: 0 1em;
+  outline: 0;
+
   &:invalid {
     box-shadow: none;
   }
-  
+
   &:focus {
     box-shadow: 0 0 0 2px _palette(accent1, bg);
   }
@@ -409,18 +425,15 @@ select, textarea {
   &::before {
     @include position(absolute, 0 0 null null);
     @include vendor('pointer-events', 'none');
-    color: _palette(border);
-    content: '\f078';
     display: block;
-    height: _size(element-height);
-    line-height: _size(element-height);
-    // position: absolute;
-    // right: 0;
+    color: _palette(border);
     text-align: center;
-    // top: 0;
+    line-height: _size(element-height);
+    content: '\f078';
     width: _size(element-height);
+    height: _size(element-height);
   }
-  
+
   select::-ms-expand {
     display: none;
   }
@@ -442,39 +455,35 @@ input[type="radio"], {
   @include vendor('appearance', 'none');
   @include opacity(0);
   display: block;
+  width: 1em;
   float: left;
   margin-right: -2em;
-  @include opacity(0);
-  width: 1em;
   z-index: -1;
-  
+
   & + label {
     @include icon;
     display: inline-block;
+    position: relative;
     color: _palette(fg);
-    cursor: pointer;
     font-size: _font(ctrl-form-size);
     font-weight: _font(ctrl-normal);
     padding-left: (_size(element-height) * 0.6) + 0.75em;
     padding-right: 0.75em;
-    position: relative;
-    
+    cursor: pointer;
+
     &::before {
       @include position(absolute, 0 null null 0);
       display: inline-block;
       background: _palette(border-bg);
-      border-radius: 3px;
       content: '';
-      height: (_size(element-height) * 0.6);
-      // left: 0;
       line-height: (_size(element-height) * 0.575);
-      // position: absolute;
       text-align: center;
-      // top: 0;
+      border-radius: 3px;
       width: (_size(element-height) * 0.6);
+      height: (_size(element-height) * 0.6);
     }
   }
-  
+
   &:checked + label {
     &::before {
       background: _palette(bg);
@@ -482,7 +491,7 @@ input[type="radio"], {
       content: '\f00c';
     }
   }
-  
+
   &:focus + label {
     &::before {
       box-shadow: 0 0 0 2px _palette(accent1, bg);
@@ -510,7 +519,6 @@ input, textarea {
   @include placeholder {
     @include opacity(0.8);
     color: rgba(#000, 0.4) !important;
-    // opacity: 0.8;
   }
 }
 .formerize-placeholder {
@@ -524,13 +532,13 @@ input, textarea {
   border: solid 2px _palette(border);
   margin-bottom: _size(element-margin);
   padding: 1.5em;
-  
+
   > :last-child,
   > :last-child > :last-child,
   > :last-child > :last-child > :last-child {
     margin-bottom: 0;
   }
-  
+
   &.alt {
     border: 0;
     border-radius: 0;
@@ -548,42 +556,40 @@ input, textarea {
     display: none;
   }
   &.major {
-    display: inline-block;
-    border-radius: 3px;
-    // background-color: rgba(#000, 0.05);
-    box-shadow: inset 0 0 12px 0px rgba(#000, 0.1);
-    border: solid 2px _palette(border);
-    border-radius: 100px;
-    font-size: _font(hdr-size-xxlarge);
     @include calc(width, "3em + 2px");
     @include calc(height, "3em + 2px");
+    display: inline-block;
+    font-size: _font(hdr-size-xxlarge);
     line-height: 3em;
     text-align: center;
-    
+    border: solid 2px _palette(border);
+    border-radius: 100px;
+    box-shadow: inset 0 0 12px 0px rgba(#000, 0.1);
+
     &::before {
       display: inline-block;
       font-size: 1.5em;
     }
-    
+
     @include breakpoint(small) {
       font-size: _font(hdr-size-xlarge);
     }
   }
-  
+
   &.style1 {
     color: _palette(bg);
     h2 {
       border-bottom-color: _palette(border)
     }
   }
-  
+
   &.style2 {
     color: _palette(accent3, bg);
     h2 {
       border-bottom-color: _palette(accent1, border)
     }
   }
-  
+
   &.style3 {
     color: desaturate(_palette(accent5, bg), 10%);
     h2 {
@@ -596,7 +602,6 @@ input, textarea {
   @include icon;
   position: relative;
   border-bottom: none;
-  
   > .label {
     display: none;
   }
@@ -605,32 +610,32 @@ input, textarea {
     @include calc(width, "3em + 2px");
     @include calc(height, "3em + 2px");
     display: inline-block;
-    border-radius: 3px;
-    box-shadow: inset 0 0 12px 0px rgba(#000, 0.1);
-    border: solid 2px _palette(border);
     font-size: _font(hdr-size-xxlarge);
     line-height: 3em;
     text-align: center;
-    
+    border: solid 2px _palette(border);
+    border-radius: 3px;
+    box-shadow: inset 0 0 12px 0px rgba(#000, 0.1);
+
     &::before {
       @include vendor('transform', 'rotate(45deg)');
       display: inline-block;
       font-size: 1.5em;
     }
-    
+
     @include breakpoint(small) {
       font-size: _font(hdr-size-med);
     }
   }
-  
+
   &.style1 {
     color: _palette(accent2, bg);
   }
-  
+
   &.style2 {
     color: _palette(accent3, bg);
   }
-  
+
   &.style3 {
     color: _palette(accent4, bg);
   }
@@ -638,42 +643,40 @@ input, textarea {
 
 /* Image */
 .image {
-  border-radius: 3px;
-  border: 0;
   display: inline-block;
   position: relative;
-  
+  border-radius: 3px;
+  border: 0;
+
   img {
-    border-radius: 3px;
     display: block;
+    border-radius: 3px;
   }
-  
+
   &.left {
     float: left;
-    margin: 0 2em 2em 0;
     top: 0.25em;
+    margin: 0 2em 2em 0;
   }
-  
+
   &.right {
     float: right;
-    margin: 0 0 2em 2em;
     top: 0.25em;
+    margin: 0 0 2em 2em;
   }
-  
+
   &.left,
   &.right {
     max-width: 40%;
-    
     img {
       width: 100%;
     }
   }
-  
+
   &.fit {
     display: block;
-    margin: 0 0 _size(element-margin) 0;
     width: 100%;
-    
+    margin: 0 0 _size(element-margin) 0;
     img {
       width: 100%;
     }
@@ -685,7 +688,7 @@ ol {
   list-style: decimal;
   margin: 0 0 _size(element-margin) 0;
   padding-left: 1.25em;
-  
+
   li {
     padding-left: 0.25em;
   }
@@ -693,53 +696,51 @@ ol {
 
 ul {
   margin: 0 0 _size(element-margin) 0em;
-  
+
   li {
     padding-left: 0.5em;
   }
-  
+
   &.alt {
     list-style: none;
     padding-left: 0;
-    
+
     li {
       border-top: solid 1px _palette(border);
       padding: 0.5em 0;
-      
+
       &:first-child {
         border-top: 0;
         padding-top: 0;
       }
     }
   }
-  
+
   &.icons {
     cursor: default;
     list-style: none;
     padding-left: 0;
-    
+
     li {
       display: inline-block;
       padding: 0 1em 0 0;
-      
       &:last-child {
         padding-right: 0 !important;
       }
     }
-    
+
     &.major {
       padding: 1em 0;
-      
+
       li {
         padding-right: 3.5em;
-        
         @include breakpoint(small) {
           padding: 0 1em !important;
         }
       }
     }
   }
-  
+
   &.actions {
     width: 17vw;
     list-style: none;
@@ -750,87 +751,78 @@ ul {
       display: inline-block;
       padding: 0 (_size(element-margin) * 0.75) 0 0;
       vertical-align: middle;
-      
       &:last-child {
         padding-right: 0;
       }
     }
-    
+
     &.small {
       li {
         padding: 0 (_size(element-margin) * 0.375) 0 0;
       }
     }
-    
+
     &.vertical {
       li {
         display: block;
         padding: (_size(element-margin) * 0.75) 0 0 0;
-        
         &:first-child {
           padding-top: 0;
         }
-        
         > * {
           margin-bottom: 0;
         }
       }
-      
+
       &.small {
         li {
           padding: (_size(element-margin) * 0.375) 0 0 0;
-          
           &:first-child {
             padding-top: 0;
           }
         }
       }
     }
-    
+
     &.fit {
+      @include calc(width, "100% + #{(_size(element-margin) * 0.75)}");
       display: table;
       margin-left: (_size(element-margin) * -0.75);
       padding: 0;
       table-layout: fixed;
-      @include calc(width, "100% + #{(_size(element-margin) * 0.75)}");
-      
+
       li {
         display: table-cell;
         padding: 0 0 0 (_size(element-margin) * 0.75);
-        
         > * {
           margin-bottom: 0;
         }
       }
-      
+
       &.small {
-        margin-left: (_size(element-margin) * -0.375);
         @include calc(width, "100% + #{(_size(element-margin) * 0.375)}");
+        margin-left: (_size(element-margin) * -0.375);
         // width: calc(100% + #{(_size(element-margin) * 0.375)});
-        
         li {
           padding: 0 0 0 (_size(element-margin) * 0.375);
         }
       }
     }
-    
+
     @include breakpoint(small) {
       li {
         display: block;
         padding: (_size(element-margin) * 0.5) 0 0 0;
         text-align: center;
         width: 100%;
-        
         &:first-child {
           padding-top: 0;
         }
-        
         > * {
+          width: 100%;
+          max-width: 25em;
           margin: 0 auto !important;
           margin-bottom: 2em;
-          max-width: 25em;
-          width: 100%;
-          
           &.icon {
             &::before {
               margin-left: -1em;
@@ -838,18 +830,17 @@ ul {
           }
         }
       }
-      
+
       #bannerButton {
         position: relative;
-        top: 3em;
         font-size: 10px;
+        top: 3em;
         max-width: 25vw !important;
       }
-      
+
       &.small {
         li {
           padding: (_size(element-margin) * 0.25) 0 0 0;
-          
           &:first-child {
             padding-top: 0;
           }
@@ -872,23 +863,21 @@ dl {
 table {
   margin: 0 0 _size(element-margin) 0;
   width: 100%;
-  
   tbody {
     tr {
       border: solid 1px _palette(border);
       border-left: 0;
       border-right: 0;
-      
       &:nth-child(2n + 1) {
-        background-color: rgba(#000, 0.125);//_palette(border-bg);
+        background-color: rgba(#000, 0.125);
       }
     }
   }
-  
+
   td {
     padding: 0.75em 0.75em;
   }
-  
+
   th {
     color: _palette(fg-bold);
     font-size: _font(hdr-size-smaller);
@@ -896,42 +885,38 @@ table {
     padding: 0 0.75em 0.75em 0.75em;
     text-align: left;
   }
-  
+
   thead {
     border-bottom: solid 2px _palette(border);
   }
-  
+
   tfoot {
     border-top: solid 2px _palette(border);
   }
-  
+
   &.alt {
     border-collapse: separate;
-    
+
     tbody {
       tr {
         td {
           border: solid 1px _palette(border);
           border-left-width: 0;
           border-top-width: 0;
-          
           &:first-child {
             border-left-width: 1px;
           }
         }
-        
-        &:first-child {
-          td {
-            border-top-width: 1px;
-          }
+        &:first-child td {
+          border-top-width: 1px;
         }
       }
     }
-    
+
     thead {
       border-bottom: 0;
     }
-    
+
     tfoot {
       border-top: 0;
     }
@@ -947,7 +932,7 @@ table {
   thead tr {
     @include position(absolute, -9999px null null -9999px);
   }
-  
+
   td {
     /* Behave  like a "row" */
     position: relative;
@@ -962,9 +947,6 @@ input[type="reset"],
 input[type="button"],
 button, .button {
   @include vendor('appearance', 'none');
-  // @include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
-  // @include transition()
-  // @include transition(all 500ms ease-in-out 0ms, !important);
   display: inline-block;
   background-color: transparent;
   color: _palette(fg-bold);
@@ -988,36 +970,34 @@ button, .button {
   overflow: hidden;
   outline: 0;
   cursor: pointer;
-  
+
   &:hover {
     @include transition(all 300ms ease 0ms, !important);
     background-color: rgba(200,200,200,0.25);
   }
-  
+
   &:active {
     background-color: _palette(border2-bg);
   }
-  
-  &.icon {
-    &::before {
-      margin-right: 0.5em;
-    }
+
+  &.icon::before {
+    margin-right: 0.5em;
   }
-  
+
   &.fit {
     display: block;
     margin: 0 0 (_size(element-margin) * 0.5) 0;
     width: 100%;
   }
-  
+
   &.small {
     font-size: _font(ctrl-bttn-size);
   }
-  
+
   &.big {
     font-size: _font(ctrl-bttn-bigsize);
   }
-  
+
   &.special {
     // @include transition(all 400ms ease-in-out 0s !important);
     @include transform(translateY(0));
@@ -1026,7 +1006,7 @@ button, .button {
     color: _palette(accent6, fg-bold) !important;
     text-shadow: 0 1px 1.5px rgba(#000, 0.6);
     border-radius: 5px;
-    
+
     &:hover {
       @include transition(all 400ms ease-in-out 0s !important);
       @include transform(translateY(0px));
@@ -1035,7 +1015,7 @@ button, .button {
       color: _palette(accent6, fg-bold) !important;
       text-shadow: 0 1px 1.5px rgba(#000, 0.85);
     }
-    
+
     &:active {
       @include transition(box-shadow 300ms ease-in-out 0s, transform 150ms linear 0s);
       @include transform(translateY(2.5px));
@@ -1045,19 +1025,19 @@ button, .button {
       text-shadow: 0 1px 1.5px rgba(#000, 0.85);
     }
   }
-  
+
   &.disabled,
   &:disabled {
     @include opacity(0.25);
     @include vendor('pointer-events', 'none');
     @include opacity(0.25);
   }
-  
+
   @include breakpoint(small) {
     height: 3.75em;
     line-height: 3.75em;
   }
-  
+
   &.bottom {
     position: relative;
     background-color: _palette(accent6, bg) !important;
@@ -1093,18 +1073,17 @@ button, .button {
   list-style: none;
   padding: 0;
   width: 100%;
-  
+
   a {
     @include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
     border-bottom: none;
     color: inherit;
     text-decoration: none;
-    
     &:hover {
       border-bottom-color: none;
     }
   }
-  
+
   li {
     @include padding(4em, 4em, (0,0,0,2em));
     display: block;
@@ -1112,63 +1091,56 @@ button, .button {
     text-align: left;
     width: 50%;
     padding: 3em 4em 2em 5.5em;
-    
+
     .container {
       @include padding(4em, 4em, (0,0,0,2em));
       width: 100%;
       height: 100%;
       margin: 0;
     }
-    
+
     @for $i from 1 through _misc(max-features) {
       $j: 0.035 * $i;
-      
       &:nth-child(#{$i}) {
         background-color: rgba(#000,  $j);
       }
     }
-    
+
     &::before {
       @include position(absolute, 1.75em null null 1.35em);
       display: block;
       color: _palette(accent2, bg);
       font-size: 1.95em;
     }
-    
     &:nth-child(1) {
       border-top-left-radius: 3px;
     }
-    
     &:nth-child(2) {
       border-top-right-radius: 3px;
     }
-    
     &:nth-last-child(1) {
       border-bottom-right-radius: 3px;
     }
-    
     &:nth-last-child(2) {
       border-bottom-left-radius: 3px;
     }
-    
+
     @include breakpoint(medium) {
       @include padding(3em, 2em);
       padding-top: 2em;
       text-align: center;
-      
       &::before {
         @include position(relative, 0 null null 0);
         font-size: 3.25em;
         margin: 0.25em 0 (_size(element-margin) * 0.25) 0;
       }
     }
-    
+
     @include breakpoint(small) {
       @include padding(3em, 0);
       background-color: transparent !important;
       border-top: solid 2px _palette(border);
       width: 100%;
-      
       &:first-child {
         border-top: 0;
       }
@@ -1195,7 +1167,7 @@ button, .button {
       border-bottom-color: none;
     }
   }
-  
+
   .image {
     @include vendor('order', '1');
     border-radius: 0;
@@ -1203,7 +1175,6 @@ button, .button {
     height: 100%;
     overflow: hidden;
     img {
-      // width: 100%;
       height: 100%;
       min-width: 100%;
       min-height: 100%;
@@ -1212,26 +1183,25 @@ button, .button {
       overflow: hidden;
     }
   }
-  
+
   .content {
     @include padding(1.5em, 2.5em);
     @include vendor('order', '2');
     font-family: _font(ctrl-family) !important;
+    text-align: left !important;
     width: 60%;
     max-width: 48em;
-    text-align: left !important;
     padding: 1em 2em;
     h2 {
       color: _palette(accent1, fg-bold);
       font-size: 4.75vw;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.035em;
       line-height: 1.25;
       margin: 0 0 0.45em 0;
       padding-bottom: 0;
       text-transform: none;
     }
     p {
-      // color: rgba(accent1, fg);
       font-size: 1.55vw;
       font-weight: 500;
       letter-spacing: 0.05em;
@@ -1239,19 +1209,19 @@ button, .button {
       margin: 0 0 1em 0.5em;
     }
   }
-  
+
   &:nth-child(2n) {
     @include vendor('flex-direction', 'row-reverse');
     box-shadow: inset 0 0 18px 0px rgba(#000, 0.5);
   }
-  
+
   @for $i from 1 through _misc(max-spotlights) {
     $j: 0.075 * $i;
     &:nth-child(#{$i}) {
       background-color: rgba(#000,  $j);
     }
   }
-  
+
   @include breakpoint(large) {
     .image {
       width: 47.5%;
@@ -1261,7 +1231,7 @@ button, .button {
       height: 16.5em;
     }
   }
-  
+
   @include breakpoint(medium) {
     .image {
       width: 47.5%;
@@ -1271,7 +1241,7 @@ button, .button {
       height: 16.5em;
     }
   }
-  
+
   @include breakpoint(small) {
     display: flex;
     .image {
@@ -1295,44 +1265,39 @@ button, .button {
       display: none;
     }
   }
-  
+
 }
 
 /* Wrapper */
 @mixin wrapper($p) {
   background-color: _palette($p, bg);
   color: _palette($p, fg);
-  
+
   // Basic
   strong, b {
     color: _palette($p, fg-bold);
   }
-  
+
   h2, h3, h4, h5, h6 {
     color: _palette($p, fg-bold);
   }
-  
+
   hr {
     border-color: _palette($p, border);
   }
-  
-  // blockquote {
-  //   border-color: _palette($p, border);
-  // }
 
   // Section/Article
   header {
     p {
       color: _palette($p, fg-light);
     }
-    
+
     &.major {
       margin: 0 0 2.5em 0;
       h2, h3, h4, h5, h6 {
-        // text-shadow: 0 -2px 14px rgba(#000, 0.4) !important;
         border-color: _palette($p, border);
       }
-      
+
       p {
         color: _palette($p, fg);
       }
@@ -1352,22 +1317,19 @@ button, .button {
     background: _palette($p, border-bg);
   }
 
-  .select-wrapper {
-    &::before {
-      color: _palette($p, border);
-    }
+  .select-wrapper::before {
+    color: _palette($p, border);
   }
 
   input[type="checkbox"],
   input[type="radio"], {
     & + label {
       color: _palette($p, fg);
-      
       &::before {
         background: _palette($p, border-bg);
       }
     }
-    
+
     &:checked + label {
       &::before {
         background: _palette($p, fg-bold);
@@ -1385,18 +1347,14 @@ button, .button {
   }
 
   // Icon
-  .icon {
-    &.major {
-      border-color: _palette($p, border);
-    }
+  .icon.major {
+    border-color: _palette($p, border);
   }
 
   // List
   ul {
-    &.alt {
-      li {
-        border-color: _palette($p, border);
-      }
+    &.alt li {
+      border-color: _palette($p, border);
     }
   }
 
@@ -1418,25 +1376,23 @@ button, .button {
       tr {
         background-color: rgba(#000, 0.035);
         border-color: _palette($p, border);
-        
         &:nth-child(2n) {
           background-color: rgba(#000, 0.035);
         }
-        
         &:nth-child(2n + 1) {
           background-color: _palette($p, border-bg);
         }
       }
     }
-    
+
     th {
       color: _palette($p, fg-bold);
     }
-    
+
     tfoot {
       border-color: _palette($p, border);
     }
-    
+
     &.alt tbody tr td {
       border-color: _palette($p, border);
     }
@@ -1450,24 +1406,19 @@ button, .button {
     @include vendor('appearance', 'none');
     @include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
     background-color: transparent;
-    // box-shadow: 0 3px 0 0 _palette($p, shadow);
     color: _palette($p, fg-bold);
-    
     &:hover {
       background-color: _palette($p, border-bg);
     }
-    
     &:active {
       background-color: _palette($p, border2-bg);
     }
   }
 
   // Features
-  .features {
-    li {
-      @include breakpoint(small) {
-        border-top-color: _palette($p, border);
-      }
+  .features li {
+    @include breakpoint(small) {
+      border-top-color: _palette($p, border);
     }
   }
 
@@ -1483,7 +1434,6 @@ button, .button {
     &:hover {
       background-color: lighten(_palette(accent6, bg), 5) !important;
     }
-    
     &:active {
       background-color: darken(_palette(accent6, bg), 5) !important;
     }
@@ -1495,39 +1445,36 @@ button, .button {
 }
 
 .wrapper {
-  // @include padding(0, 0);
   padding: 0;
   > .inner {
-    // width: 60em;
     width: 85vw;
     margin: 0 auto;
-    
+
     &.fullwidth {
       width: 100%;
       padding: 0;
     }
-    
+
     @include breakpoint(large) {
       width: 90%;
     }
     @include breakpoint(medium) {
       width: 100%;
     }
-    
+
     @include breakpoint(small) {
       width: 100%;
     }
-    
+
   }
-  
+
   &.alt {
     padding: 0;
   }
-  
+
   &.style1 {
-    // @include wrapper(accent8);
     header.major p {
-      max-width: 72%;
+      max-width: 80%;
       font-size: _font(hdr-size-med);
       margin: auto;
       @include breakpoint(small) {
@@ -1535,7 +1482,7 @@ button, .button {
       }
     }
   }
-  
+
   &.style2 {
     @include wrapper(accent1);
     background-color: _palette(accent1, bg);
@@ -1543,17 +1490,17 @@ button, .button {
       padding-top: 3vh !important;
     }
   }
-  
+
   &.style3 {
     @include wrapper(accent5);
     padding: 3em 0 6em 0;
   }
-  
+
   &.style4 {
     background-color: transparent;
     padding: 2.5em 0 2.75em 0;
   }
-  
+
   &.style5 {
     @include wrapper(accent7);
     padding: 0;
@@ -1577,7 +1524,7 @@ button, .button {
     background-color: #FFFFFF02;
     padding-bottom: 0;
     h2 {
-      letter-spacing: 0.05em;
+      letter-spacing: 0.035em;
       margin: 0 0 0.25em 0;
     }
     .spotlight {
@@ -1607,7 +1554,7 @@ button, .button {
     height:100px;
     margin-left: 20px;
     padding-left:20px;
-    
+
     @include breakpoint(small) {
       margin-left: 0px;
       width: 100%;
@@ -1616,14 +1563,14 @@ button, .button {
 }
 
 /* Page Wrapper + Menu */
-#page-wrapper {
+.page-wrapper {
   @include vendor('transition', 'opacity #{_duration(menu)} ease');
   @include opacity(1);
   background-size: contain;
   background-position: top;
   background-repeat: none !important;
   padding: 0;
-  
+
   &::before {
     @include position(fixed, 0 null null 0);
     background: rgba(#000, 0);
@@ -1674,7 +1621,7 @@ button, .button {
         margin-bottom: 0.5em !important;
         padding-bottom: 0.5em !important;
       }
-      
+
       > a {
         display: block;
         color: rgba(#fff, 0.75);
@@ -1684,13 +1631,13 @@ button, .button {
         border: 0;
         text-decoration: none;
         text-transform: uppercase;
-        
+
         &:hover, &:active {
           color: #fcfcfc;
           font-size: 1.05em;
           letter-spacing: 0.15em;
         }
-        
+
         @include breakpoint(small) {
           font-size: 0.9em;
           line-height: 2;
@@ -1700,7 +1647,7 @@ button, .button {
   }
   .close {
     @include position(absolute, 7px 15px null null);
-    @include transition(opacity 250ms ease-in-out 0s); 
+    @include transition(opacity 250ms ease-in-out 0s);
     @include opacity(0.5);
     display: none;
     background-image: url('images/close.svg');
@@ -1713,11 +1660,11 @@ button, .button {
     vertical-align: middle;
     cursor: pointer;
   }
-  
+
   @include breakpoint(small) {
     padding: 2em 1.5em;
   }
-  
+
   &.post-menu {
     background-color: _palette(bg) !important;
     ul > li {
@@ -1747,15 +1694,15 @@ button, .button {
 }
 
 body.is-menu-visible {
-  #page-wrapper {
-    &.landing-wrapper {
+  .page-wrapper {
+    #landing-wrapper {
       @include opacity(0.35);
     }
     &::before {
       display: block;
     }
   }
-  
+
   #menu {
     @include vendor('transform', 'translateX(0)');
     z-index: 99999;
@@ -1765,22 +1712,22 @@ body.is-menu-visible {
 /* Header */
 #header {
   @include vendor('transition', 'background-color #{_duration(transitions)} ease');
-  @include transition(all 700ms ease 0s);
+  @include transition(all 500ms ease 0s);
   @include position(absolute, 2px/3px null null 0);
   line-height: 3;
   height: 3em;
   width: 100%;
   z-index: _misc(z-index-base);
   z-index: 999999; // so 'X' appears above menu
-  
+
   h1 {
     @include vendor('transition', 'color 0.35s ease');
     @include vendor('transition', 'opacity #{_duration(transitions)} ease');
     @include transition(all 100ms ease 0s);
     @include position(absolute, -0.075em null null 0.75em);
+    // position: absolute;
     height: inherit;
     line-height: 1.9;
-    position: absolute;
     top: 0;
     left: 0.6em;
     text-transform: none;
@@ -1788,7 +1735,7 @@ body.is-menu-visible {
       @include vendor('transition', 'color 0.35s ease');
       color: #DADEE2;
     }
-    
+
     a {
       @include opacity(0.9);
       display: block;
@@ -1796,7 +1743,7 @@ body.is-menu-visible {
       height: inherit;
       font-size: _font(hdr-size-xsmall);
       font-weight: _font(hdr-extrabold);
-      letter-spacing: 0.1em;
+      letter-spacing: 0.025em;
       line-height: inherit;
       top: -2px;
       border: 0;
@@ -1805,11 +1752,11 @@ body.is-menu-visible {
       }
       &:hover, &:active {
         @include opacity(1);
-        color: #fff;
+        color: rgba(#fff, 0.95);
       }
     }
   }
-  
+
   nav {
     @include position(absolute, 0 0 null null);
     @include transition(transform 500ms ease 0s);
@@ -1860,7 +1807,8 @@ body.is-menu-visible {
           padding-right: 1.25em !important;
         }
         li {
-          padding-left: 0.75em;
+          margin-left: 0.75em;
+          padding: 0 0 0.5em 0;
           a {
             color: rgba(#fff, 0.9);
           }
@@ -1876,9 +1824,19 @@ body.is-menu-visible {
         color: lighten(_palette(bg), 25%);
       }
     }
+    .menu-toggle {
+      span, span::before, span::after {
+        background-color: rgba(#000, 0.6);
+      }
+      &.active {
+        span::before, span::after {
+          background-color: #fff;
+        }
+      }
+    }
   }
   &.alt {
-    @include transition(all 700ms ease 0s);
+    @include transition(all 500ms ease 0s);
     position: absolute !important;
     background: transparent !important;
     box-shadow: none !important;
@@ -1944,8 +1902,8 @@ body.is-menu-visible {
   }
   &.active {
     @include transition(transform 1s linear 0s);
-    position: fixed !important; 
-    transform: translate(9px, -30px) !important;
+    position: fixed !important;
+    transform: translate(9px, -30px);
     span {
       background-color: transparent;
       &::before {
@@ -1984,7 +1942,7 @@ body.is-menu-visible {
   overflow: hidden;
   .inner {
     position: relative;
-    top: -4vh;
+    top: -3.5vh;
   }
 
   h1 {
@@ -1993,7 +1951,8 @@ body.is-menu-visible {
     @include opacity(0.95);
     display: inline-block;
     position: relative;
-    font-family: 'Montserrat', 'Open Sans', 'Roboto', sans-serif !important;
+    color: rgba(#fff, 0.925);
+    font-family: 'Montserrat','Open Sans','Helvetica Neue',Arial, sans-serif !important;
     font-size: 9.75vw;
     font-weight: 800;
     letter-spacing: 0.06em;
@@ -2002,9 +1961,8 @@ body.is-menu-visible {
     text-shadow: 0 2px 15px rgba(#000, 0.85) !important;
     margin: 0;
     padding: 0 9.5vw 2.15vw 5.25vw;
-    // z-index: 1;
     .accent {
-      font-family: 'Open Sans', 'Montserrat', sans-serif !important;
+      font-family: 'Open Sans','Montserrat','Helvetica Neue',Arial, sans-serif !important;
       color: _palette(accent2, bg) !important;
       margin-left: -2px;
       margin-right: -5px;
@@ -2014,23 +1972,24 @@ body.is-menu-visible {
       padding-top: 2vh;
     }
   }
-  
+
   h3 {
     color: rgba(#fff, 0.75);
-    font-size: 2.1vw;
+    font-size: 2.25vw;
     font-weight: 500;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.11em;
     text-transform: uppercase;
     text-align: left;
     margin: 0 0 10.5vw 6vw;
+    svg.fa-circle {
+      fill: rgba(#fff, 0.25);
+      width: 6px !important;
+      top: 0.75px;
+      // padding: 0 9px;
+      margin: 0 9px 0 8px;
+    }
   }
-  
-  .fa.fa-circle {
-    font-size: 36% !important;
-    top: -3.75px;
-    padding: 0 9px;
-  }
-  
+
   // Learn More
   ul > li > a {
     @include transition(background-color 0.5s ease);
@@ -2038,11 +1997,11 @@ body.is-menu-visible {
       @include transition(background-color 0.5s ease);
     }
   }
-  
+
   ul.actions li {
     padding: 0;
   }
-  
+
   &::after {
     @include vendor('pointer-events', 'none');
     @include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
@@ -2056,36 +2015,34 @@ body.is-menu-visible {
     height: 100%;
     @include opacity(0);
   }
-  
+
   @include breakpoint(small) {
     height: 70vh;
     min-height: 0;
     padding: 11em 0.55em 5em;
-    
+
     h1 {
-      // font-size: 7vw !important;
-      // margin-bottom: 0.5em;
       padding: 0 9.5vw 2.15vw 5.25vw;
     }
-    
+
     p {
       font-size: 2.25vw;
       margin-bottom: 4em;
     }
-    
+
     br {
       display: none;
     }
-    
+
     ul {
       width: 65%;
       margin: auto;
     }
-    
+
     #bannerButton {
       font-size: 1.75vw;
     }
-    
+
     .more {
       display: none;
     }
@@ -2096,14 +2053,13 @@ body.is-menu-visible {
   position: absolute;
   display: inline-block;
   color: transparent !important;
+  text-align: center;
   top: 89vh;
   left: 50%;
-  text-align: center;
-  // padding-top: 40px;
   z-index: 9999;
   span {
     @include transform(rotate(-45deg));
-    @include animation(sdb 2s infinite);
+    @include animation(press 2s infinite);
     position: absolute;
     left: 50%;
     width: 24px;
@@ -2135,10 +2091,10 @@ body.is-menu-visible {
   100% { @include transform(translateY(0)); }
 }
 
-@include keyframes(sdb) {
+@include keyframes(press) {
   0% { @include transform(rotate(-45deg) translate(0, 0)); }
-  20% { @include transform(rotate(-45deg) translate(-10px, 10px)); }
-  40% { @include transform(rotate(-45deg) translate(0, 0)); }
+  15% { @include transform(rotate(-45deg) translate(-10px, 10px)); }
+  35% { @include transform(rotate(-45deg) translate(0, 0)); }
 }
 
 .wrapper.style1 {
@@ -2146,8 +2102,13 @@ body.is-menu-visible {
 }
 
 body.is-loading {
+  // @include transition(all 200ms ease-in-out 0s);
+  .page-wrapper {
+    @include opacity(0);
+  }
   #banner {
-    h1 {
+    // @include transition(all 500ms ease-in 0s);
+    .inner {
       @include vendor('transform', 'scale(0.95)');
       @include opacity(0);
       &::before, &::after {
@@ -2155,8 +2116,8 @@ body.is-loading {
       }
     }
     #header, .scroll-btn span {
-      @include transition(all 400ms ease-in-out 0s);
-      @include vendor('transform', 'scale(0.95)');
+      // @include transition(all 350ms ease-in-out 0s);
+      @include vendor('transform', 'scale(0.75)');
       @include opacity(0);
     }
     &::after {
@@ -2171,13 +2132,19 @@ body.is-loading {
     //   @include opacity(1);
     // }
   }
+  &.designer, &.developer {
+    *, *:before, *:after {
+      @include vendor('animation', 'none !important');
+      @include vendor('transition', 'none !important');
+    }
+  }
 }
 
 #menu-alt {
   .menu-page-link {
     display: inline-block;
-    background: transparent !important; 
-    color: rgba(#fff, 0.8); 
+    background: transparent !important;
+    color: rgba(#fff, 0.8);
     font-size: 110%;
     line-height: 0.75;
   }
@@ -2194,19 +2161,20 @@ body.is-loading {
 .landing {
   &.alt {
     .menu-page-link {
-      @include transition(all 200ms ease 0s); 
+      @include transition(all 250ms ease-in-out 0s);
       color: rgba(#fff, 0.8);
       font-size: 115%;
       font-weight: 500;
       text-shadow: 0 0.5px 3px  rgba(#000, 0.5);
       &:hover, &:active {
         color: #fff;
-        text-shadow: 0 0.5px 5px rgba(#000, 0.65);
+        text-shadow: 0 0.5px 7px rgba(#000, 0.65);
+        border-bottom: 2px solid darken(_palette(accent2, bg), 5%);
       }
     }
   }
   #banner {
-    @include vendor('background-image', ('linear-gradient(top, rgba(7,4,5,0.35), rgba(7,4,5,0.35))', 'url("#{$baseurl}/banner.jpg")'));
+    @include vendor('background-image', ('linear-gradient(top, rgba(10,10,13,0.35), rgba(10,10,13,0.35))', 'url("#{$baseurl}/banner.jpg")'));
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2214,8 +2182,18 @@ body.is-loading {
 }
 
 #one {
-  background: _palette(bg) !important;  
-  padding: 2.5em 0 7em;
+  background: _palette(bg) !important;
+  height: 33vw;
+  padding: 2.5em 0 0;
+  &::after {
+    @include linear-gradient(bottom right, transparent, transparent 50%, _palette(bg) 50%, _palette(bg));
+    display: block;
+    position: relative;
+    content: '';
+    width: 100%;
+    height: 11vw;
+    top: -28.75vw;
+  }
   .inner {
     position: relative;
     top: -104%;
@@ -2239,9 +2217,12 @@ body.is-loading {
 }
 
 #two {
+  // background: linear-gradient(rgba(#8B92A8, 0.55), rgba(#8B92A8, 0.55)), url("#{$baseurl}/p5.png");
   background: _palette(accent5, bg) !important;
-  height: 44vw;
-  padding: 0 0 7vw;
+  // background: url("#{$baseurl}/p2.png");
+  // background: #EEE url(//d1qmdf3vop2l07.cloudfront.net/teal-worm.cloudvent.net/compressed/9a30e6c6c75344e5bd217bbe9720ef3e.png);
+  height: 55vw;
+  padding: 9.5vw 0 8vw;
   .inner {
     top: -35%;
     margin: 0 auto;
@@ -2259,6 +2240,7 @@ body.is-loading {
     }
   }
   &::before {
+    // background: linear-gradient(rgba(#8B92A8, 0.55), rgba(#8B92A8, 0.55)), url("#{$baseurl}/p5.png");
     @include linear-gradient(top left, transparent, transparent 50%, _palette(accent5, bg) 50%, _palette(accent5, bg));
   }
 }
@@ -2274,7 +2256,7 @@ body.is-loading {
     }
   }
   &::before {
-    @include linear-gradient(top right, transparent, transparent 50%, _palette(bg) 50%, _palette(bg)); 
+    @include linear-gradient(top right, transparent, transparent 50%, _palette(bg) 50%, _palette(bg));
     display: block;
     position: relative;
     content: '';
@@ -2304,17 +2286,21 @@ body.is-loading {
 }
 
 #four {
+  @include vendor('background-image', ('linear-gradient(top, rgba(7,4,5,0.5), rgba(7,4,5,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
   max-height: 250px;
   .inner {
     @include vendor('display', 'flex');
     header {
       @include vendor('order', '1');
       width: 70%;
-      padding: 0 3vw 0 2.5vw;
+      padding: 0 3vw 0 1vw;
       h2 {
         color: _palette(fg-bold);
         font-size: 4vw;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.035em;
         line-height: 1.15;
         text-align: left;
         margin: 0.7em 0 0.35em 0;
@@ -2328,12 +2314,13 @@ body.is-loading {
         line-height: 1.45;
         text-align: left;
         width: 465px;
-      }      
+        margin-left: 0.35em;
+      }
       button.fit {
         color: _palette(fg-bold);
       }
     }
-    
+
     .actions {
       @include vendor('order', '2');
       width: 30%;
@@ -2380,15 +2367,12 @@ body.is-loading {
         padding: 0;
       }
       header {
-        // padding-right: 0;
         width: 100%;
       }
       .actions {
         max-width: none;
         width: 75%;
         margin: 2em auto 1.5em;
-        // margin-left: auto;
-        // margin-right: auto;
         .button {
           height: 3em;
           line-height: 3;
@@ -2413,7 +2397,6 @@ body.is-loading {
     }
   }
   .content-desc {
-    // vertical-align: top;
     margin-top: 2.5em;
   }
   .img-container {
@@ -2424,7 +2407,7 @@ body.is-loading {
   }
   h2 {
     font-size: 4.25vw;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.035em;
     line-height: 1.4;
     border-color: rgba(#fff, 0.25);
     margin-top: 0;
@@ -2456,7 +2439,7 @@ body.is-loading {
   > header {
     background-color: #fff;
     text-align: center;
-    
+
     h2 {
       color: _palette(bg);
       font-size: 2.75em;
@@ -2465,7 +2448,7 @@ body.is-loading {
       margin: auto;
       padding: 0.75em 0 0.25em 0;
     }
-    
+
     p {
       background-color: #fff;
       color: inherit;
@@ -2473,7 +2456,7 @@ body.is-loading {
       text-transform: uppercase;
       top: 0;
       margin: 0;
-      
+
       a {
         color: inherit;
       }
@@ -2486,19 +2469,19 @@ body.is-loading {
     @include padding(1em, 1em);
     background: _palette(accent7, bg);
     text-align: left;
-    
+
     h2 {
       font-size: 0;
       margin: 0;
       color: _palette(accent7, fg);
     }
-    
+
     p {
       color: _palette(bg);
       letter-spacing: _size(letter-spacing-alt);
       text-transform: uppercase;
       top: 0;
-      
+
       a {
         color: inherit;
       }
@@ -2514,9 +2497,8 @@ body.is-loading {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    // padding: 5.75em 0 6.25em 0 !important;
     padding: 5.25em 0 5.5em !important;
-    
+
     h1 {
       color: rgba(#fff, 0.85);
       font-family: _font(hdr-family);
@@ -2527,38 +2509,39 @@ body.is-loading {
       margin: 0 auto;
       text-shadow: 0px 2px 10px rgba(#000, 0.5) !important;
     }
-    
+
     p {
       color: inherit;
+      font-size: 15pt;
       letter-spacing: _size(letter-spacing-alt);
       text-transform: uppercase;
       top: 0;
-      
+
       a {
         color: inherit;
       }
     }
-    
+
     @include breakpoint(xlarge) {
       @include padding(8em, 0);
     }
-    
+
     @include breakpoint(large) {
       @include padding(8em, 3em);
     }
-    
+
     @include breakpoint(medium) {
       @include padding(6em, 3em);
     }
-    
+
     @include breakpoint(small) {
-      @include padding(3em, 3em);  
+      @include padding(3em, 3em);
       h2 {
         font-size: 10vw;
       }
     }
   }
-  
+
   > section > div {
     width: 100%;
     > div {
@@ -2593,44 +2576,48 @@ body.is-loading {
   .icons {
     font-size: 1.65em;
     margin: 0.5em 0;
+    svg {
+      color: rgba(#fff, 0.45);
+      transition: all 300ms ease-in-out;
+    }
     a {
-      color: mix(_palette(bg), #fff, 55%); //rgba(225,235,255,0.55);
+      color: rgba(#fff, 0.45);
       text-shadow: 0 1px 3px rgba(#000, 0.6) !important;
-      &:hover {
+      &:hover svg {
         color: _palette(fg);
       }
     }
     li {
       @include position(relative, null null null -3px);
+      font-size: 1em;
       padding: 0 0.55em 0 0;
       &:nth-child(1) {
-        font-size: _font(hdr-size-large);
-        top: 1.5px;
+        font-size: 1.1em;
       }
-      &:nth-child(3) {
-        font-size: _font(hdr-size-med);
-        top: 0px;
-      }
-      &:nth-child(4) {
-        font-size: _font(hdr-size-med);
-        top: -0.5px;
-      }
-      &:nth-child(5) {
-        font-size: _font(hdr-size-med);
-        top: 0.5px;
-      }
-      &:nth-child(6) {
-        font-size: _font(hdr-size-med);
-        top: -5.5px;
-      }
+      // &:nth-child(3) {
+      //   font-size: _font(hdr-size-med);
+      //   top: 0px;
+      // }
+      // &:nth-child(4) {
+      //   font-size: _font(hdr-size-med);
+      //   top: -0.5px;
+      // }
+      // &:nth-child(5) {
+      //   font-size: _font(hdr-size-med);
+      //   top: 0.5px;
+      // }
+      // &:nth-child(6) {
+      //   font-size: _font(hdr-size-med);
+      //   top: -5.5px;
+      // }
     }
   }
-  
+
   .copyright {
-    color: rgba(#fff, 0.5);
+    color: rgba(#fff, 0.55);
     font-family: _font(hdr-family);
     font-size: 0.6em;
-    letter-spacing: _size(letter-spacing-alt);
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     list-style: none;
     margin-bottom: 1em;
@@ -2641,7 +2628,7 @@ body.is-loading {
       line-height: _font(hdr-lheight-smaller);
       border-left: solid 1px _palette(fg-light);
       padding-left: 1em;
-      
+
       &:first-child {
         border-left: 0;
         margin-left: 0;
@@ -2662,7 +2649,7 @@ body.is-loading {
       .jekyll-link:hover {
         color: lighten(_palette(accent6, bg), 5%) !important;
       }
-        
+
       @include breakpoint(xsmall) {
         display: block;
         line-height: _font(hdr-lheight-normal);
@@ -2672,19 +2659,17 @@ body.is-loading {
       }
     }
   }
-  
+
   @include breakpoint(medium) {
     @include padding(4em, 3em);
   }
-  
+
   @include breakpoint(small) {
     @include padding(3em, 2em);
   }
 }
 
 .radar-container {
-  // display: flex;
-  // position: relative;
   max-width: 65%;
   margin: 0;
 }
@@ -2705,9 +2690,9 @@ body.is-loading {
   #search-container {
     vertical-align: middle;
     #icon {
-      font-family: 'FontAwesome';
-      content: "\foo2";
       @include position(relative, 1.65em null null 0.6em);
+      // font-family: 'Font Awesome 5 Free';
+      // content: "\foo2";
       color: #A2A2A2;
       top: 1.75em;
     }
@@ -2815,7 +2800,7 @@ body.is-loading {
       line-height: 2;
       text-align: center;
       margin: 0;
-      
+
       > a {
         font-weight: 700;
         color: _palette(bg);
@@ -2849,9 +2834,6 @@ body.is-loading {
     box-shadow: 0 3px 0 0 _palette(accent6, shadow);
     .ico-home:before {
       @include position(relative, 2px null null -5px);
-      // position: relative;
-      // top: 2px;
-      // left: -5px;
       font-size: _font(hdr-size-med);
       margin-right: 0 0.1em;
     }
@@ -2868,10 +2850,10 @@ body.is-loading {
 }
 
 body.landing {
-  #page-wrapper {
-    @include vendor('background-image', ('linear-gradient(top, rgba(7,4,5,0.35), rgba(7,4,5,0.35))', 'url("#{$baseurl}/banner.jpg")'));
+  .page-wrapper {
+    @include opacity(1);
+    // @include vendor('background-image', ('linear-gradient(top, rgba(7,4,5,0.35), rgba(7,4,5,0.35))', 'url("#{$baseurl}/banner.jpg")'));
     background-size: contain;
-    // background-position: top;
     background-position: bottom;
   }
   #footer {
@@ -2880,41 +2862,29 @@ body.landing {
   }
 }
 
-body.designer {
-  #page-wrapper {
-    @include vendor('background-image', ('linear-gradient(top, rgba(7,4,5,0.35), rgba(7,4,5,0.35))', 'url("#{$baseurl}/design.jpg")'));
-  }
-}
-
-body.developer {
-  #page-wrapper {
-    @include vendor('background-image', ('linear-gradient(top, rgba(7,4,5,0.35), rgba(7,4,5,0.35))', 'url("#{$baseurl}/dev.jpg")'));
-  }
-}
-
 body.is-mobile {
   &.landing {
-    #page-wrapper {
+    .page-wrapper {
       // background: none;
       // padding-bottom: 5vh;
       // background-position: bottom;
     }
-    
+
     .menu-page-link {
       font-size: 1.25em;
     }
-    
+
     #banner {
       // @include vendor('background-image', ('linear-gradient(top, rgba(7,4,5,0.35), rgba(7,4,5,0.35))', 'url("#{$baseurl}/banner.jpg")'));
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
     }
-    
+
     .wrapper.style4 {
       padding: 1.5em 0;
     }
-    
+
     #footer {
       @include linear-gradient(lighten(_palette(bg), 1.5%), darken(_palette(bg), 6.5%));
     }
@@ -2946,7 +2916,7 @@ body.is-mobile {
 }
 .col-5 {
   text-align: right;
-  margin-left: 2em;
+  margin-left: 0.75em;
   margin-right: 0.75em !important;
 }
 .col-6 {
@@ -2963,6 +2933,7 @@ body.is-mobile {
 }
 
 body {
+  background: _palette(bg);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2970,8 +2941,6 @@ body {
   margin: 0;
   padding-top: 0;
 }
-
-// .nobullet { list-style-type: none; }
 
 .works_inprogress {
   font-family: _font(prose-family);
@@ -3002,6 +2971,7 @@ body {
 .mfp-container {
   padding: 0 25px !important;
   .mfp-close {
+    background: transparent;
     cursor: pointer !important;
   }
   .mfp-bottom-bar {
@@ -3050,102 +3020,6 @@ body {
   margin: 0 12px 12px 0;
 }
 
-#flip-container {
-  @include vendor('order', '1');
-  @include calc(width, "1/2*96%");
-  position: relative;
-  display: inline-block;
-  border-radius: 0;
-  height: 268px;
-  overflow: hidden;
-  margin: auto !important;
-  perspective: 1000;
-  z-index: 1;
-  
-  @include breakpoint(xlarge) {
-    @include calc(width, "1/3*96%");
-  }
-  
-  @include breakpoint(large) {
-    @include calc(width, "1/3*98%");
-  }
-  
-  @include breakpoint(1080px) {
-    @include calc(width, "1/3*98%");
-    .face.back {
-      > h4 {
-        font-family: _font(hdr-family);
-        font-size: 2.25em;
-        font-weight: _font(hdr-thin);
-        line-height: _font(ctrl-lheight-smaller);
-        margin:	0.8em auto 0.55em;
-        text-transform: none !important;
-      }
-      > p {
-        font-size: _font(prose-size-small);
-        font-weight: _font(prose-light);
-        letter-spacing: 0.08em;
-      }
-    }
-  }
-  
-  @include breakpoint(medium) {
-    @include calc(width, "1/2*96%");
-  }
-  
-  @include breakpoint(small) {
-    @include calc(width, "1/2*98%");
-  }
-}
-
-#flip-card {
-  width: 100%;
-  height: 100%;
-  margin: 0 !important;
-  @include transform-style(preserve-3d);
-  @include transition(all 1.25s ease-in-out);
-  @include transition-delay(0.5s);
-  &:hover, &:active {
-    @include transition(all 1.25s ease-in-out);
-    @include transition-delay(all 0.25s);
-  }
-}
-#flip-container:hover #flip-card {
-  @include transform(rotateY(180deg));
-}
-.click-area {
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  top: 0;
-  left: 0;
-}
-.face {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0 !important;
-  overflow: hidden;
-  vertical-align: middle;
-  @include backface-visibility(hidden);
-  > img {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    align-self: center;
-    object-fit: cover;
-    overflow: hidden;
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    width: auto;
-    border-radius: 0;
-  }
-}
-
 .mfizz-icon {
   text-align: center;
   font-size: 38px;
@@ -3192,16 +3066,23 @@ body.body-small .mfizz-icon {
   border: 1px solid #30333b;
   border-radius: 2px;
   box-shadow: 0 0 4px rgba(#000, 0.4);
-  margin: -1.5px -0.5px;
+  margin: 0.025em 0.025em;
   cursor: default;
   overflow: hidden;
+  vertical-align: bottom;
   &:nth-child(n+3) {
     vertical-align: top !important;
-  }
-  &:nth-child(n+5) {
     margin-top: 5px;
   }
-  
+  &:nth-child(n+5) {
+    // margin-bottom: 5px;
+  }
+
+  &.odd:last-child {
+    display: block;
+    left: 2%;
+  }
+
   .mask,
   .content {
     position: absolute;
@@ -3212,14 +3093,14 @@ body.body-small .mfizz-icon {
     vertical-align: middle !important;
     overflow: hidden;
   }
-  
+
   .mask {
     @include transition(all 600ms ease-in-out 0s);
     @include opacity(0);
     background: rgba(25,28,30,0.45);
     padding: 10px;
   }
-  
+
   img {
     @include transition(all 300ms linear 0s);
     @include transform(translate(-50%,-50%));
@@ -3239,7 +3120,7 @@ body.body-small .mfizz-icon {
       background: _palette(bg);
     }
   }
-  
+
   h4 {
     @include transform(translateY(-100px));
     @include transition(all 500ms ease-in-out 0s);
@@ -3247,24 +3128,24 @@ body.body-small .mfizz-icon {
     position: relative;
     color: rgba(#fff, 0.9) !important;
     font-size: 2.4em;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.035em;
     line-height: 1.1;
     text-align: center;
     text-transform: uppercase;
     margin: 3% 0 0 0;
     padding: 2.5vh 1vw 1vh;
   }
-  
+
   p {
     @include transform(translateY(100px));
     @include transition(all 300ms ease-in-out 0s);
     @include opacity(0);
     position: relative;
-    color: rgba(#fff, 0.9);
-    // font-size: 1.65vw;
+    color: rgba(#fff, 0.95);
     font-size: 110%;
     font-weight: 500;
     text-align: center;
+    text-shadow: 0 1px 0.5px rgba(#000, 0.6);
     letter-spacing: 0.035em;
     line-height: 1.5;
     width: 90%;
@@ -3272,7 +3153,7 @@ body.body-small .mfizz-icon {
     margin: 0.35em auto 2em;
     padding: 0 25px;
   }
-  
+
   a.button {
     @include transition(all 350ms ease-in-out 0s, !important);
     @include opacity(0);
@@ -3358,6 +3239,7 @@ body.body-small .mfizz-icon {
     }
   }
 }
+
 
 {% if site.custom_extensions == 'yes' %}
 {% include _my/custom.scss %}
