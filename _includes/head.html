@@ -4,9 +4,9 @@
   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <title>{% if page.title %}{{ page.title }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.desc %}{{ page.desc | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% seo %}
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ '/fonts/Avenir-Next/AvenirNext.min.css' | prepend: site.baseurl }}"/>
+  <link rel="canonical" href="{{ page.url | prepend: site.url }}">
   <link rel="stylesheet" href="{{ '/css/magnific-popup.min.css' | prepend: site.baseurl }}"/>
   <link rel="stylesheet" href="{{ '/css/animate.min.css' | prepend: site.baseurl }}"/>
   <link rel="stylesheet" href="{{ '/css/tooltipster.bundle.min.css' | prepend: site.baseurl }}"/>
