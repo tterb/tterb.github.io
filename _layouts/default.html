@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   {% include head.html %}
   <body class="{{ page.title | downcase }}">
     {% if page.layout == 'landing' %}
-      <div id="{{ page.title | downcase }}-wrapper" class="page-wrapper animsition">
+      <div id="{{ page.title | downcase }}-wrapper" class="page-wrapper">
     {% else %}
-      <div id="{{ page.title | downcase }}-wrapper" class="page-wrapper animsition">
+      <div id="{{ page.title | downcase }}-wrapper" class="page-wrapper">
     {% endif %}
       {% include header.html %}
       {% if page.header %}
@@ -20,4 +20,5 @@
       {% include scripts.html %}
     </div>
   </body>
+  <script>document.documentElement.classList.remove("no-js");</script>
 </html>
