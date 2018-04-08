@@ -1,0 +1,31 @@
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translate3d(0, 100%, 0); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translate3d(100%, 0, 0); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes pulse {
+  0% { @include transform(scale(1)); }
+  50% { @include transform(scale(1.25)); }
+  100% { @include transform(scale(1)); }
+}
+
+@keyframes dip {
+  0% { @include transform(translateY(10px)); }
+  100% { @include transform(translateY(0)); }
+}
+
+@keyframes press {
+  0% { @include transform(rotate(-45deg) translate(0, 0)); }
+  15% { @include transform(rotate(-45deg) translate(-10px, 10px)); }
+  35% { @include transform(rotate(-45deg) translate(0, 0)); }
+}
