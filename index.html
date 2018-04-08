@@ -30,7 +30,8 @@ priority: 1.0
   </div>
 </section>
 
-<section id="two" class="wrapper style1 special mid-content angled">
+<!-- Two -->
+<section id="two" class="wrapper style1 special mid-content">
   <div class="inner" data-link="{{ '/design' | prepend: site.baseurl }}">
     <div class="col col-5 img-container">
       <img src="{{ '/css/images/vector.svg' | prepend: site.baseurl }}" alt="col-img"/>
@@ -52,7 +53,7 @@ priority: 1.0
     </header>
     <div class="project-tiles tile-container">
     {% for project in site.data.landing %}
-      <div class="tile">
+        <div class="tile">
         <img alt="{{ project.title }}" src="{{ site.baseurl }}{% if project.image %}/images/landing/{{ project.image }}{% endif %}" data-full="{{ site.baseurl }}/images/landing/{{ project.image }}" class="{% if project.image %} tile-image {% else %} no-image {% endif %}"/>
         <div class="mask">
           <h4>{{ project.title }}</h4>
