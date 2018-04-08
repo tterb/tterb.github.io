@@ -1642,6 +1642,10 @@ button, .button {
       }
     }
   }
+  @include breakpoint(small) {
+    font-size: 11pt;
+    width: 35vw;
+  }
 }
 
 .landing-menu {
@@ -1688,18 +1692,18 @@ body.is-menu-visible {
   z-index: 999999; // so 'X' appears above menu
 
   h1 {
-    @include vendor('transition', 'color 0.35s ease');
-    @include vendor('transition', 'opacity #{_duration(transitions)} ease');
-    @include transition(all 100ms ease 0s);
-    @include position(absolute, -0.075em null null 0.75em);
+    @include vendor('transition', 'color 0.35s ease-in-out');
+    @include vendor('transition', 'opacity #{_duration(transitions)} ease-in-out');
+    @include transition(all 100ms ease-in-out 0s);
+    // @include position(absolute, -0.075em null null 0.75em);
     // position: absolute;
-    height: inherit;
     line-height: 1.9;
+    text-transform: none;
+    height: inherit;
     top: 0;
     left: 0.6em;
-    text-transform: none;
     &:hover {
-      @include vendor('transition', 'color 0.35s ease');
+      @include transition(color 0.35s ease-in-out);
       color: #DADEE2;
     }
 
@@ -1845,7 +1849,9 @@ body.is-menu-visible {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 23px;
+  // padding-top: 23px;
+  margin-right: 1vw;
+  padding: 3.5vw 0 0;
   outline: 0;
   z-index: _misc(z-index-base) + 2;
   span, span::before, span::after {
@@ -1855,7 +1861,7 @@ body.is-menu-visible {
     background: #fff;
     content: "";
     width: 75%;
-    height: 2.5px;
+    height: 3px;
     border-radius: 100px;
   }
   span {
@@ -1984,37 +1990,30 @@ body.is-menu-visible {
   }
 
   @include breakpoint(small) {
-    height: 75vh;
+    height: 85vh;
     min-height: 0;
     padding: 11em 0.55em 5em;
-
     .inner {
-      top: -5vh;
+      top: -6.5vh;
     }
-
     h1 {
       width: 80%;
       padding: 0 9.5vw 2.15vw 5.25vw;
     }
-
     p {
       font-size: 2.25vw;
       margin-bottom: 4em;
     }
-
     br {
       display: none;
     }
-
     ul {
       width: 65%;
       margin: auto;
     }
-
     #bannerButton {
       font-size: 1.75vw;
     }
-
     .more {
       display: none;
     }
@@ -2145,6 +2144,18 @@ body.is-loading {
       }
     }
   }
+  .menu-toggle {
+    span, span::before, span::after {
+      @include transition(all 500ms ease-in-out);
+      background: #fff;
+    }
+    &.active span {
+      background: transparent;
+      &::before, &::after {
+        background-color: #fff;
+      }
+    }
+  }
   #banner {
     @include vendor('background-image', ('linear-gradient(top, rgba(10,10,13,0.35), rgba(10,10,13,0.35))', 'url("#{$baseurl}/banner.jpg")'));
     background-position: center center;
@@ -2246,7 +2257,7 @@ body.is-loading {
   position: relative;
   min-height: 85vh;
   box-shadow: 0 3px 12px rgba(#000, 0.45);
-  padding: 1vw 0 11vw;
+  padding: 1vw 0 14vw;
   .inner {
     top: -105%;
     width: 90%;
@@ -2256,9 +2267,9 @@ body.is-loading {
     @include linear-gradient(top right, transparent, transparent 50%, _palette(accent1, bg) 50%, _palette(accent1, bg));
     top: -12vw;
   }
-  @include breakpoint(small) {
-    min-height: 90vh;
-  }
+  // @include breakpoint(small) {
+  //   min-height: 90vh;
+  // }
 }
 
 #four {
@@ -2271,7 +2282,8 @@ body.is-loading {
     display: flex;
     header {
       @include vendor('order', '1');
-      width: 70%;
+      // width: 70%;
+      width: 65vw;
       padding: 0 3vw 0 1vw;
       h2 {
         color: _palette(fg-bold);
@@ -2290,7 +2302,7 @@ body.is-loading {
         line-height: 1.45;
         text-align: left;
         width: 465px;
-        // margin-left: 0.35em;
+        margin: 0;
       }
       button.fit {
         color: _palette(fg-bold);
@@ -2352,7 +2364,7 @@ body.is-loading {
       }
       .actions {
         max-width: none;
-        width: 65%;
+        width: 60%;
         margin: 1.5em auto;
         .button {
           font-size: 2.25vw;
@@ -3099,7 +3111,7 @@ body.body-small .mfizz-icon {
     line-height: 1.1;
     text-align: center;
     text-transform: uppercase;
-    margin: 3% 0 0 0;
+    margin: 3% 0 2% 0;
     padding: 2.5vh 1vw 1vh;
   }
 
@@ -3171,7 +3183,7 @@ body.body-small .mfizz-icon {
   }
   @include breakpoint(medium) {
     h4 {
-      font-size: 2.3em;
+      font-size: 2.2em;
       margin-top: 2.5%;
     }
     p {
