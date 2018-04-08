@@ -7,8 +7,7 @@
 <script src="{{ '/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/smoothState.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/magnific-popup.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/js/tooltipster.bundle.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/js/typed.min.js' | prepend: site.baseurl }}"></script>
+<link src="{{ '/js/modernizr.min.js' | prepend: site.baseurl }}"/>
 <script src="{{ '/js/main.min.js' | prepend: site.baseurl }}"></script>
 
 <script>
@@ -25,46 +24,24 @@ $(document).ready(function() {
     },
     gallery: {
       enabled: true,
-      navigateByImgClick: true,
+      navigateByImgClick: false,
       tPrev: 'Previous', // title for left button
       tNext: 'Next',     // title for right button
       tCounter: '<span class="mfp-counter">%curr% of %total%</span>'    // markup of counter
     },
     image: {
       markup: '<div class="mfp-figure">'+'<div class="mfp-close fa fa-close"></div>'+'<div class="mfp-img"></div>'+'<div class="mfp-bottom-bar">'+'<div class="mfp-title"></div>'+'<div class="mfp-desc"></div>'+'<div class="mfp-counter"></div>'+'</div>'+'</div>',
-      verticalFit: true
+      titleSrc: 'title',
+      verticalFit: true,
+      preloader: true
     },
-    removalDelay: 300
+    removalDelay: 400
   });
 });
 </script>
 
 <script>window.FontAwesomeConfig = { searchPseudoElements: true }</script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-
-{% if page.layout == "post" %}
-  <script src="{{ '/js/scroll-top.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-  <script>
-  $(function() {
-    clip = $('<img />').attr({'class':'clipboard tooltip', 'src':'/css/images/clipboard.png', 'title':'Copied to clipboard' });
-    $('pre.highlight').append(clip);
-    $(".tooltip").tooltipster({
-      animation: "fade",
-      trigger: "click",
-      delay: 200
-    });
-    $("pre.highlight .clipboard").on("click", function(e) {
-      e.preventDefault();
-      var temp = document.createElement("input");
-      temp.setAttribute("value", $(this).parent().children('code').text()),
-      document.body.appendChild(temp),
-      temp.select(),
-      document.execCommand("copy"),
-      document.body.removeChild(temp)
-    })
-  });
-  </script>
-{% endif %}
 
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script>
@@ -84,13 +61,6 @@ $(document).ready(function() {
       }
       $this.toggleClass('active');
     });
-
-    $('.filtered .works-item-link').magnificPopup({
-      type: 'inline',
-      gallery: { enabled: true },
-      mainClass: 'unica',
-      removalDelay: 300
-    });
   }(jQuery));
 
   $('.mid-content .inner').click(function() {
@@ -99,64 +69,67 @@ $(document).ready(function() {
   });
 </script>
 
-<script>
-  // Add clipboard button to code-blocks
-  $(function() {
-    clip = $('<img />').attr({'class':'clipboard tooltip', 'src':'/css/images/clipboard.png', 'title':'Copied to clipboard' });
-    $('pre.highlight').append(clip);
-    $(".tooltip").tooltipster({
-      animation: "fade",
-      trigger: "click",
-      delay: 200
-    });
-    $("pre.highlight .clipboard").on("click", function(e) {
-      e.preventDefault();
-      var temp = document.createElement("input");
-      temp.setAttribute("value", $(this).parent().children('code').text()),
-      document.body.appendChild(temp),
-      temp.select(),
-      document.execCommand("copy"),
-      document.body.removeChild(temp)
-    })
-  });
-</script>
-
-{% if page.title == 404 %}
-<script>
-  $(function() {
-    $('.typed').typed({
-      strings: [
-        "Oops! <br/>" +
-        "><span class='caret'>$</span> You might have mis-typed the URL, <br/> ^1" +
-        "><span class='caret'>$</span> or maybe the page has been moved. <br/> ^500" +
-        "><span class='caret'>$</span> Anyways, there is nothing to see here... <br/> ^500" +
-        "><span class='caret'>$</span> Would you like to return to the <a href='#'>homepage</a> (Y/N)?"
-      ],
-      stringsElement: '#strings',
-      showCursor: true,
-      cursorChar: '|',
-      autoInsertCss: true,
-      typeSpeed: 10,
-      loop: false,
-      showCursor: false
-    });
-    $('#term-input').focus();
-    $('#term-input').on('keydown', function(e) {
-      if (e.keyCode === 13) {
+{% if page.layout == "post" %}
+  <script src="{{ '/js/scroll-top.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script src="{{ '/js/tooltipster.bundle.min.js' | prepend: site.baseurl }}"></script>
+  <script>
+    $(function() {
+      clip = $('<img />').attr({'class':'clipboard tooltip', 'src':'/css/images/clipboard.png', 'title':'Copied to clipboard' });
+      $('pre.highlight').append(clip);
+      $(".tooltip").tooltipster({
+        animation: "fade",
+        trigger: "click",
+        delay: 200
+      });
+      $("pre.highlight .clipboard").on("click", function(e) {
         e.preventDefault();
-        if ($(this).val() === 'y') {
-          url = 'http://brettstevenson.io/index.html';
-          console.log(url)
-          $(location).attr('href', url);
-        }
-      }
+        var temp = document.createElement("input");
+        temp.setAttribute("value", $(this).parent().children('code').text()),
+        document.body.appendChild(temp),
+        temp.select(),
+        document.execCommand("copy"),
+        document.body.removeChild(temp)
+      })
     });
-  });
-</script>
+  </script>
+{% elsif page.title == 404 %}
+  <script src="{{ '/js/typed.min.js' | prepend: site.baseurl }}"></script>
+  <script>
+    $(function() {
+      $('.typed').typed({
+        strings: [
+          "Oops! <br/>" +
+          "><span class='caret'>$</span> You might have mis-typed the URL, <br/> ^1" +
+          "><span class='caret'>$</span> or maybe the page has been moved. <br/> ^500" +
+          "><span class='caret'>$</span> Anyways, there is nothing to see here... <br/> ^500" +
+          "><span class='caret'>$</span> Would you like to return to the <a href='#'>homepage</a> (Y/N)?"
+        ],
+        stringsElement: '#strings',
+        showCursor: true,
+        cursorChar: '|',
+        autoInsertCss: true,
+        typeSpeed: 10,
+        loop: false,
+        showCursor: false
+      });
+      $('#term-input').focus();
+      $('#term-input').on('keydown', function(e) {
+        if (e.keyCode === 13) {
+          e.preventDefault();
+          if ($(this).val() === 'y') {
+            url = 'http://brettstevenson.io/';
+            $(location).attr('href', url);
+          }
+        }
+      });
+    });
+  </script>
 {% endif %}
 
 <noscript>
   <link rel="stylesheet" href="{{ '/css/normalize.min.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="{{ '/fonts/Avenir-Next/AvenirNext.min.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="{{ '/fonts/Gotham-HTF/GothamHTF.min.css' | prepend: site.baseurl }}"/>
   <link rel="stylesheet" href="{{ '/fonts/Iconfont/iconfont.min.css' | prepend: site.baseurl }}"/>
   <!-- <link rel="stylesheet" href="{{ '/css/vendor/disqus.css' | prepend: site.baseurl }}"> -->
 </noscript>
