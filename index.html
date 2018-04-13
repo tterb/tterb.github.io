@@ -18,14 +18,14 @@ priority: 1.0
 <section id="one" class="wrapper style1 special mid-content">
   <div class="gradient"></div>
   <div class="inner" data-link="{{ '/dev' | prepend: site.baseurl }}">
-    <div class="col col-3 content-desc">
+    <div class="col content-desc">
       <a href="{{ '/dev' | prepend: site.baseurl }}">
         <h2>Hello World</h2>
         <p> As a developer, I have experience working in both front and back-end development and enjoy experimenting with new frameworks and platforms, while striving to create tools that myself and others can enjoy.</p>
       </a>
     </div>
-    <div class="col col-4 img-container">
-      <img src="{{ '/css/images/code.svg' | prepend: site.baseurl }}" alt="col-img"/>
+    <div class="col img-container">
+      <img src="{{ '/css/images/code.svg' | prepend: site.baseurl }}" alt="code"/>
     </div>
   </div>
 </section>
@@ -33,10 +33,10 @@ priority: 1.0
 <!-- Two -->
 <section id="two" class="wrapper style1 special mid-content">
   <div class="inner" data-link="{{ '/design' | prepend: site.baseurl }}">
-    <div class="col col-5 img-container">
-      <img src="{{ '/css/images/vector.svg' | prepend: site.baseurl }}" alt="col-img"/>
+    <div class="col img-container">
+      <img src="{{ '/css/images/vector.svg' | prepend: site.baseurl }}" alt="pen-tool"/>
     </div>
-    <div class="col col-6 content-desc">
+    <div class="col content-desc">
       <a href="{{ '/design' | prepend: site.baseurl }}">
         <h2>Lorem Ipsum</h2>
         <p> As a designer, my primary focus is in UI and graphic design, where I utilize tools such as Adobe Illustrator, Photoshop, Cinema 4D, as well as various web-based languages, preprocessors, and frameworks.</p>
@@ -79,3 +79,10 @@ priority: 1.0
     </ul>
   </div>
 </section>
+<!-- <script>
+$(window).on('resize', function() {
+  var win = $(this);
+  if (win.width() < 514) {
+    $('html').addClass('mobile');
+});
+</script> -->
