@@ -1,5 +1,5 @@
 {
-  "name": "jonsn0w.github.io",
+  "name": "tterb.github.io",
   "version": "1.0.0",
   "description": "A personal website for my projects, designs and blog",
   "main": "Gulpfile.js",
@@ -33,14 +33,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JonSn0w/JonSn0w.github.io.git"
+    "url": "git+https://github.com/tterb/tterb.github.io.git"
   },
   "author": "Brett Stevenson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JonSn0w/JonSn0w.github.io/issues"
+    "url": "https://github.com/tterb/tterb.github.io/issues"
   },
-  "homepage": "https://github.com/JonSn0w/JonSn0w.github.io#readme",
+  "homepage": "https://github.com/tterb/tterb.github.io#readme",
   "jspm": {
     "dependencies": {
       "jquery": "npm:jquery@^3.2.1"
