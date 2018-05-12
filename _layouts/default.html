@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   {% include head.html %}
-  <body class="{{ page.title | downcase }}">
-    {% if page.layout == 'landing' %}
-      <div id="{{ page.title | downcase }}-wrapper" class="page-wrapper">
-    {% else %}
-      <div id="{{ page.title | downcase }}-wrapper" class="page-wrapper">
-    {% endif %}
+  <body class="{{ page.title | replace: " ", "-" | downcase }}">
+    <div id="{{ page.title | replace: " ", "-" | downcase }}-wrapper" class="page-wrapper">
       {% include header.html %}
       {% if page.header %}
         {{ content }}
