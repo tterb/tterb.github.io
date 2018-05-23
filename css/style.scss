@@ -1,4 +1,4 @@
----
+// ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
@@ -16,6 +16,7 @@
 @import 'designer';
 @import 'developer';
 @import 'mailing';
+@import 'overlay';
 @import 'resume';
 @import 'post';
 @import 'progressbars';
@@ -605,7 +606,7 @@ input, textarea {
 
   img {
     display: block;
-    border-radius: 3px;
+    border-radius: 0;
   }
 
   &.left {
@@ -1551,7 +1552,7 @@ button, .button {
   width: 265px;
   height: 100%;
   max-width: 80%;
-  box-shadow: 0px 0 20px rgba(#000, 0.5);
+  box-shadow: 0 0 10px rgba(#000, 0.7);
   padding: 2em 1.5em;
   overflow-y: auto;
   z-index: _misc(z-index-base) - 1;
@@ -1708,15 +1709,17 @@ body.is-menu-visible {
       padding-left: 1.5vw;
       .header-logo {
         position: relative;
-        top: 8px;
+        top: 10px;
         left: 2px;
         width: 30px;
+        transform: scale(1);
+        transition: transform 500ms linear 100ms, opacity 750ms ease-in-out;
         opacity: 0.8;
       }
       span {
         display: none;
         padding-top: 3px;
-        padding-left: 11px;
+        padding-left: 14px;
         vertical-align: top;
       }
       @include breakpoint(small) {
@@ -1726,10 +1729,13 @@ body.is-menu-visible {
         @include opacity(1);
         color: rgba(#fff, 0.95);
         .header-logo {
+          transform: scale(1.05);
+          transition: transform 400ms linear 50ms, opacity 750ms ease-in-out;
           opacity: 0.95;
         }
         span {
           display: inline-block;
+          // transition: all 100ms ease-in-out;
         }
       }
     }
@@ -2059,7 +2065,7 @@ body.is-menu-visible {
   }
   &:hover {
     span {
-      @include transition(all 400ms ease 0ms);
+      @include transition(all 400ms ease 50ms);
       @include animation(none);
       width: 25px;
       height: 25px;
@@ -2074,12 +2080,10 @@ body.is-menu-visible {
 }
 
 body.is-loading {
-  // @include transition(all 200ms ease-in-out 0s);
   .page-wrapper {
     @include opacity(0);
   }
   #banner {
-    // @include transition(all 500ms ease-in 0s);
     .inner {
       @include vendor('transform', 'scale(0.95)');
       @include opacity(0);
@@ -2088,21 +2092,12 @@ body.is-loading {
       }
     }
     #header, .scroll-btn span {
-      // @include transition(all 350ms ease-in-out 0s);
       @include vendor('transform', 'scale(0.75)');
       @include opacity(0);
     }
     &::after {
       @include opacity(1);
     }
-    // #header, .btn-circle {
-    //   // @include transition(all 400ms ease-in-out 0s);
-    //   @include vendor('transform', 'scale(0.95)');
-    //   @include opacity(0);
-    // }
-    // &::after {
-    //   @include opacity(1);
-    // }
   }
   &.designer, &.developer {
     *, *:before, *:after {
@@ -2140,12 +2135,6 @@ body.is-loading {
       }
     }
   }
-  // &:hover, &:focus {
-  //   color: #fff;
-  //   a::after {
-  //     transform: scale3d(1,1,1);
-  //   }
-  // }
 }
 
 .landing {
@@ -2156,22 +2145,9 @@ body.is-loading {
       font-size: 115%;
       font-weight: 500;
       text-shadow: 0 0.5px 3px  rgba(#000, 0.5);
-      // &::after {
-      //   display: block
-      //   content: '';
-      //   border-top: 10px solid rgba(#fff,0);
-      //   border-bottom: 3px solid #2EBED2;
-      //   transition: transform 250ms ease-in-out;
-      //   transform: scale3d(0,1,1);
-      //   transform-origin: bottom left;
-      // }
       &:hover, &:active {
         color: #fff;
         text-shadow: 0 0.5px 7px rgba(#000, 0.65);
-        // &::after {
-        //   transform: scale3d(1,1,1);
-        // }
-        // border-bottom: 2px solid darken(_palette(accent2, bg), 5%);
       }
     }
   }
@@ -2303,9 +2279,6 @@ body.is-loading {
     @include linear-gradient(top right, transparent, transparent 50%, _palette(accent1, bg) 50%, _palette(accent1, bg));
     top: -12vw;
   }
-  // @include breakpoint(small) {
-  //   min-height: 90vh;
-  // }
 }
 
 #four {
@@ -2560,7 +2533,7 @@ body.is-loading {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding: 5.25em 0 5.5em !important;
+    padding: 5em 0 5.5em !important;
 
     h1 {
       color: rgba(#fff, 0.85);
@@ -2720,72 +2693,92 @@ body.is-loading {
   right: 60px;
 }
 
+// #search {
+//   width: 100%;
+//   margin: 3.25em auto 1.5em;
+//   #search-container {
+//     vertical-align: middle;
+//     #icon {
+//       @include position(relative, 1.65em null null 0.6em);
+//       color: #A2A2A2;
+//       top: 1.75em;
+//     }
+//     ul {
+//       position: absolute;
+//       list-style-type: none;
+//       width: 85%;
+//       margin: 0;
+//       padding: 0.25em 0 0 0.4em;
+//       z-index: (_misc(z-index-base) / 110);
+//       li {
+//         background-color: #E3E6E9;
+//         font-family: _font(ctrl-family);
+//         font-size: 0.9em;
+//         line-height: 2;
+//         margin-left: 0;
+//         padding: 0.1em 0 0.1em 0.35em;
+//         border: 1px solid #A2A6AA;
+//         border-bottom-width: 0px;
+//         border-radius: 0;
+//         &:first-child {
+//           border-top-left-radius: 5px;
+//           border-top-right-radius: 5px;
+//         }
+//         &:nth-child(2n) {
+//           background-color: #F0F0F0;
+//         }
+//         &:nth-child(-1n) {
+//           border-bottom: 1px solid #A8A8A8;
+//         }
+//         &:last-child {
+//           border-bottom: 1px solid #A8A8A8;
+//           border-bottom-left-radius: 5px;
+//           border-bottom-right-radius: 5px;
+//         }
+//         &:hover {
+//           background-color: _palette(bg);
+//           color: mix(_palette(bg), #fff, 15%);
+//         }
+//         a {
+//           width: 100%;
+//           margin: auto;
+//           padding: 5px;
+//           padding-left: 7px;
+//         }
+//       }
+//     }
+//   }
+//   #search-input {
+//     display: inline-block;
+//     background: rgba(#000, 0.065);
+//     font-size: _font(hdr-size-smaller);
+//     box-sizing: border-box;
+//     height: 2.1em;
+//     width: 100%;
+//     border-radius: 13px;
+//     border: 1px inset rgba(75,75,75,0.075);
+//     box-shadow: inset 0 0 5px rgba(#000, 0.2);
+//     padding: 0.5em 0.5em 0.5em 2.35em;
+//   }
+// }
+
 #search {
-  width: 80%;
-  margin: 3.25em auto 1.5em;
-  #search-container {
-    vertical-align: middle;
-    #icon {
-      @include position(relative, 1.65em null null 0.6em);
-      color: #A2A2A2;
-      top: 1.75em;
+  position: relative;
+  // width: 100%;
+  text-align: right;
+  right: 0.5em;
+  margin: 0 auto 1.5em;
+  .fa-search {
+    position: relative;
+    color: #AAA;
+    font-size: 2em;
+    top: 1em;
+    right: 2em;
+    transition: all 350ms ease-in-out; 
+    cursor: pointer;
+    &:hover, &:active {
+      color: #555;
     }
-    ul {
-      position: absolute;
-      list-style-type: none;
-      width: 85%;
-      margin: 0;
-      padding: 0.25em 0 0 0.4em;
-      z-index: (_misc(z-index-base) / 110);
-      li {
-        background-color: #E3E6E9;
-        font-family: _font(ctrl-family);
-        font-size: 0.9em;
-        line-height: 2;
-        margin-left: 0;
-        padding: 0.1em 0 0.1em 0.35em;
-        border: 1px solid #A2A6AA;
-        border-bottom-width: 0px;
-        border-radius: 0;
-        &:first-child {
-          border-top-left-radius: 5px;
-          border-top-right-radius: 5px;
-        }
-        &:nth-child(2n) {
-          background-color: #F0F0F0;
-        }
-        &:nth-child(-1n) {
-          border-bottom: 1px solid #A8A8A8;
-        }
-        &:last-child {
-          border-bottom: 1px solid #A8A8A8;
-          border-bottom-left-radius: 5px;
-          border-bottom-right-radius: 5px;
-        }
-        &:hover {
-          background-color: _palette(bg);
-          color: mix(_palette(bg), #fff, 15%);
-        }
-        a {
-          width: 100%;
-          margin: auto;
-          padding: 5px;
-          padding-left: 7px;
-        }
-      }
-    }
-  }
-  #search-input {
-    display: inline-block;
-    background: rgba(#000, 0.065);
-    font-size: _font(hdr-size-smaller);
-    box-sizing: border-box;
-    height: 2.1em;
-    width: 100%;
-    border-radius: 13px;
-    border: 1px inset rgba(75,75,75,0.075);
-    box-shadow: inset 0 0 5px rgba(#000, 0.2);
-    padding: 0.5em 0.5em 0.5em 2.35em;
   }
 }
 
