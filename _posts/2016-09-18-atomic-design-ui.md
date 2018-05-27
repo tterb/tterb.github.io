@@ -1,11 +1,11 @@
 ---
-priority: 0.7
+priority: 0.8
 title: Atomic Design UI
 description: A modern and refined interface for Atom that easily adapts to any dark syntax-theme
 keywords: "atomic, design, ui, theme, monokai, atom, code, text, editor, syntax, highlighting, theme, monokai, sublime, package, jekyll, blog, github"
 date: 2016-08-23
 categories: blog project
-options: readme
+options: readme, featured, med, wide
 image: atomic-design.png
 header: https://cloud.githubusercontent.com/assets/16360374/22689194/ab4e61f4-ece4-11e6-8732-b613ffaeb2e7.png
 repo: Atomic-Design-UI
@@ -13,10 +13,9 @@ tags:
   - Atom
   - design
   - UI
+  - editor
   - syntax
-  - code editor
   - projects
-  - featured
 ---
 
 <!-- Badges -->
@@ -51,7 +50,7 @@ tags:
 
 <br>
 
-___________________________  
+___________________________
 
 <!-- Features -->
 <img src="https://cloud.githubusercontent.com/assets/16360374/22630566/57595f88-ebb1-11e6-835d-e84330b188e3.png" width="900" alt="features" title="Features"/>
@@ -61,7 +60,7 @@ ___________________________
 <p align="center">
   <i>Atomic Design</i> features a carefully selected color&ndash;palette and meticulously styled components, <br>
   which provides the interface with a sense of depth, receptiveness, and adaptability. <br>
-  Allowing this theme to be wonderfully complimented by any dark syntax theme.  
+  Allowing this theme to be wonderfully complimented by any dark syntax theme.
 </p>
 <br>
 
@@ -91,7 +90,7 @@ ___________________________
 
 <br>
 
-___________________________  
+___________________________
 
 <!-- Install -->
 <img src="https://cloud.githubusercontent.com/assets/16360374/22630327/e71bd0c4-ebac-11e6-956d-8b1e8da21d1b.png" width="900" alt="install" title="Install">
@@ -104,7 +103,7 @@ $ apm install atomic-design-ui
   After installation, the theme can be activated by going to the **Themes** section in the *Settings* view and selecting it from the *UI Theme* drop-down menu.
 
 <!-- <br>
-___________________________  
+___________________________
 
 ## Settings:
   Once selected, you can select the &nbsp;<img src="https://cloud.githubusercontent.com/assets/16360374/21959455/1719f490-da7d-11e6-9137-65089a686d52.png" height="18" Title="Settings">&nbsp; icon to access the modular aspects of the theme. This includes the ability to decide whether to use a light or dark tree-view and whether you would prefer to use the default icons or the custom icons included with this theme.
@@ -115,7 +114,7 @@ ___________________________
 
 <br>
 
-___________________________  
+___________________________
 
 <!-- Screenshots -->
 <img src="https://cloud.githubusercontent.com/assets/16360374/22630324/e71af8ac-ebac-11e6-9458-fe0301d4c028.png" width="900" alt="screenshot" title="Screenshot"/>
@@ -145,8 +144,8 @@ ___________________________
 [Atom Dark UI]: https://github.com/atom/atom-dark-ui
 [Atomic Monokai]: https://atom.io/themes/atomic-monokai-syntax
 [Atom packages]: https://atom.io/packages
-[packages]: https://github.com/JonSn0w/atomic-delight-ui/wiki/packages
-[syntax-theme]: https://github.com/JonSn0w/atom-delight-syntax
+[packages]: https://github.com/tterb/atomic-delight-ui/wiki/packages
+[syntax-theme]: https://github.com/tterb/atom-delight-syntax
 [Fonts]: https://atom.io/packages/fonts
 
 [apm]: https://atom.io/themes
@@ -157,4 +156,4 @@ ___________________________
 [Markdown]: https://cloud.githubusercontent.com/assets/16360374/18231352/9642c068-726c-11e6-857a-7e3d76293f88.png
 [Settings-View]: https://cloud.githubusercontent.com/assets/16360374/18231373/3048eb88-726d-11e6-9ae8-a87e24c11f67.png
 
-<!-- [Essential Atom Packages]: https://jonsn0w.github.io/projects/2016/08/22/essential-atom-packages.html -->
+<!-- [Essential Atom Packages]: https://tterb.github.io/projects/2016/08/22/essential-atom-packages.html -->

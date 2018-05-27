@@ -1,43 +1,37 @@
 ---
-priority: 0.6
+priority: 0.7
 title: Essential Atom Packages
 description: A spotlight for noteworthy Atom packages
-keywords: "atom,code, text, editor, packages, spotlight, list, essential, jekyll, blog, github"
+desc: Some insights for make you feel at home with your new editor
+keywords: "atom, code, text, editor, packages, spotlight, list, essential, jekyll, blog, github"
 date: 2016-08-22
 update: 2017-02-18
 categories: blog
-options: halfhead, update, closer
+options: halfhead, update, closer, featured, med, wide
 image: atom-banner.jpg
 tags:
   - Atom
-  - packages
-  - themes
-  - essential
-  - top
-  - text
+  - software
   - editor
+  - tools
+  - review
   - spotlight
-  - featured
 ---
 
 <!-- Intro -->
-As a long-time Sublime Text user, I&rsquo;ve recently made the transition to using <img class="inline" src="http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/Atomic%20Monokai/atom_zps8lz1oett.png" width="20" alt="atom"/> [**Atom**](https://atom.io/) as my go&ndash;to code editor after falling in love with it&rsquo;s package selection and &ldquo;*hackable*&rdquo; nature. I also know from experience that changes like these can be a little bewildering, so I thought others might benefit from a simple resource to started configuring their Atomic workspace.  
- 
-> If you&rsquo;d like to skip the busy-work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the simple instructions.
+As a long-time Sublime Text user, I&rsquo;ve recently made the transition to using <img class="inline" src="http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/Atomic%20Monokai/atom_zps8lz1oett.png" width="20" alt="atom"/> [**Atom**](https://atom.io/) as my go&ndash;to code editor after falling in love with it&rsquo;s package selection and &ldquo;*hackable*&rdquo; nature. I also know from experience that changes like these can be a little bewildering, so I thought others might benefit from a simple resource to started configuring their Atomic workspace.
 
-As a long-time Sublime Text user, I&rsquo;ve recently made the transition to using <img class="inline" src="http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/Atomic%20Monokai/atom_zps8lz1oett.png" width="20" alt="atom"/> [**Atom**](https://atom.io/) as my go&ndash;to code editor after falling in love with it&rsquo;s package selection and &ldquo;*hackable*&rdquo; nature. I also know from experience that changes like these can be a little bewildering, so I thought others might benefit from a simple resource to started configuring their Atomic workspace.  
+## Installing packages
 
-## Installing packages  
-
-All of the featured packages are published through [apm](https://github.com/atom/apm) and can be installed via the following command:  
+All of the featured packages are published through [apm](https://github.com/atom/apm) and can be installed via the following command:
 
 ```shell
-$ apm install <package-name>  
-```  
+$ apm install <package-name>
+```
 
-<br>  
+<br>
 > If you&rsquo;d like to skip the busy-work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the simple instructions.
-  
+
 <div class="h-note">
   If you&rsquo;d like to skip the busy&ndash;work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the simple instructions.
 </div>
@@ -50,7 +44,7 @@ $ apm install <package-name>
   If you&rsquo;d like to skip the busy&ndash;work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the simple instructions.
 </div>
 
-<hr>    
+<hr>
 
 ## Getting Started
   * [**Fonts**](https://atom.io/packages/fonts) &#8211; a nice collection of 45+ of the best monospaced fonts.
@@ -64,36 +58,36 @@ $ apm install <package-name>
   * [**Pigments**](https://atom.io/packages/pigments) &#8211; displays RGB/Hex colors in project files for improved readability when working with color palettes.
   * [**Color Picker**](https://atom.io/packages/color-picker) &#8211; a simple package that makes selecting colors and getting their RGB or hex-values a breeze.
   * [**TODO Show**](https://atom.io/packages/todo-show) &#8211; a package that finds all **TODO**, **NOTE**, **FIXME**, ect... comment tags in your project and organizes them into a table.
-  * [**Atom Bracket Highlight**](https://atom.io/packages/atom-bracket-highlight) &#8211; eases code navigation by increasing the visibility of matching code brackets. 
+  * [**Atom Bracket Highlight**](https://atom.io/packages/atom-bracket-highlight) &#8211; eases code navigation by increasing the visibility of matching code brackets.
   * [**Markdown Preview Plus**](https://atom.io/packages/markdown-preview-plus) &#8211; provides an enhanced, real&ndash;time preview of markdown documents for easy editing.
   * [**Git Time Machine**](https://atom.io/packages/git-time-machine) &#8211; allows users to open a bubble plot of the current files git history and access previous versions.
   * [**ZenTabs**](https://atom.io/packages/zentabs) &#8211; allows you to limit the number of tabs that can be open in a window by cleaning up inactive tabs when new ones are opened.
 <br>
 
 
-## Sublime*-ish*  
+## Sublime*-ish*
   * [**Atomic Monokai**](https://atom.io/packages/atomic-monokai-syntax) &#8211; Okay I may be biased, but I think many Sublime Text users will feel right at home with this syntax&ndash;theme.
   * [**Atomic Design**](https://atom.io/packages/atomic-design-ui) &#8211; Again biased, but if you&rsquo;re using Atomic Monokai or a similar dark syntax&ndash;theme, I suggest you check out this awesome UI&ndash;theme.
-  * [**Highlight Selected**](https://atom.io/packages/highlight-selected) &#8211; highlights all instances of the selected element within the open file. 
-  * [**Minimap**](https://atom.io/packages/minimap) &#8211; applies a &lsquo;*Sublime&ndash;esque*&rsquo; minimized code view to the frame for easy navigation.  
+  * [**Highlight Selected**](https://atom.io/packages/highlight-selected) &#8211; highlights all instances of the selected element within the open file.
+  * [**Minimap**](https://atom.io/packages/minimap) &#8211; applies a &lsquo;*Sublime&ndash;esque*&rsquo; minimized code view to the frame for easy navigation.
     - [**Cursorline**](https://atom.io/packages/minimap-cursorline) &#8211; a plugin which displays your active cursor-line on your Minimap.
     - [**Highlight-Selected**](https://atom.io/packages/minimap-highlight-selected) &#8211; Adds *Highlight-Selected* functionality to your Minimap.
-    - [**Git-Diff**](https://atom.io/packages/minimap-git-diff)  &#8211; While this featured isn&rsquo;t actually available in Sublime Text, it can be very helpful when using the Minimap to navigating files. 
+    - [**Git-Diff**](https://atom.io/packages/minimap-git-diff)  &#8211; While this featured isn&rsquo;t actually available in Sublime Text, it can be very helpful when using the Minimap to navigating files.
   * [**Project Manager**](https://atom.io/packages/project-manager) &#8211; delivers a familiar workflow for navigating projects and project&ndash;specific settings.
 <br>
 
 
 ## Just for Fun
   * [**Activate Power Mode**](https://atom.io/packages/activate-power-mode) &#8211; a fun package which adds a little bit more excitement to writing code. Although
-  personally, I found the constant animations and shaking to be a little overwhelming, so I chose to disabled that package and instead
+  personally, I found the constant animations and shaking to be a little disorienting, so I chose to disabled that package and instead
   replaced it with [**Activate Power Mode Delete**](https://atom.io/packages/activate-power-mode-delete).
-  <br>  
+  <br>
   <br>
 
-  <div class="h-note">If you&rsquo;d like to skip the busy-work and conveniently install the featured packages, you can use the download link at the below and follow the simple instructions.</div>  
+  <div class="h-note">If you&rsquo;d like to skip the busy-work and conveniently install the featured packages, you can use the download link at the below and follow the simple instructions.</div>
 
-<br><br>  
+<br><br>
 
-<button class="button bottom"><a href="{{ site.url }}/download/atom-package-list.zip">Download the list</a></button>
+<button class="button bottom special"><a href="{{ site.url }}/assets/download/atom-package-list.zip">Download the list</a></button>
 
-[1]:{{ site.url }}/download/atom-package-list.zip
+[1]:{{ site.url }}/assets/download/atom-package-list.zip

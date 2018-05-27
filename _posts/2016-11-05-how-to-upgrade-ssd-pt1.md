@@ -1,22 +1,18 @@
 ---
-priority: 0.7
+priority: 0.9
 title: Upgrading the SSD on a Razer Blade
 description: A tutorial on how to upgrade the SSD on a Razer Blade or similar laptop
 keywords: "how, upgrade, SSD, razer, blade, tech, laptop, data, recovery, tutorial"
 date: 2016-10-05
 categories: blog
-options: fullhead
+options: fullhead, featured, lg
 image: razer-blade.jpg
 tags:
-  - SSD
   - Razer
-  - Razer Blade
   - laptop
   - tech
   - how-to
   - tutorial
-  - tools
-  - featured
 ---
 
   When upgrading the SSD on my 2015 Razer Blade, I found many inquiries, yet limited resources on the topic. As a result, I figured I would make this guide seeing as the process was fairly straight&ndash;forward and the results were both beneficial and cost-effective.
@@ -84,11 +80,11 @@ tags:
     <img src="https://cloud.githubusercontent.com/assets/16360374/20454386/9d73af46-adf4-11e6-9d66-5c71dab08c20.png" height="350" alt="example" title="example"/>
   </p><br>
 
-  <br>  
+  <br>
 
   <p class="h-note"> Depending on the amount of data on your internal drive, cloning may take awhile. I would recommend you do this when you won&rsquo;t be needing to use your computer too heavily.</p>
 
-<br>  
+<br>
 <hr>
 Once the cloning process is complete, **[continue to Part 2]**
 
@@ -104,4 +100,4 @@ Once the cloning process is complete, **[continue to Part 2]**
 [Compressed air]: https://www.amazon.com/Compressed-Professional-Blow-Off-Electronics/dp/B015UNJZAC/ref=sr_1_2?ie=UTF8&qid=1479548500&sr=8-2-spons&keywords=compressed+air&psc=1
 [free options]: https://www.lifewire.com/free-backup-software-tools-2617964
 [ZTC Thunder]: https://www.amazon.com/gp/product/B00KQ4LNJC/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1
-[continue to Part 2]: https://JonSn0w.github.io/blog/how-to-upgrade-ssd-pt2.html
+[continue to Part 2]: https://tterb.github.io/blog/how-to-upgrade-ssd-pt2.html

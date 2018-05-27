@@ -14,10 +14,8 @@ tags:
   - terminal
   - bash
   - tools
-  - fun
-  - web scraper
   - python
-  - project
+  - projects
 ---
 
 <p align="center">
@@ -25,9 +23,9 @@ tags:
 </p>
 
 ## Description:
-**Urban Dictionary Therapy** is a simple command-line rehabilitation program for coping with those long frustrating days of programming. Utilizing this program and the information generously donated by the online community, you too can return to your work as a more successful, functioning member of society. More importantly, Urban Dictionary Therapy provides you with the much needed liberation without the temptations that come with opening up a new tab in your browser.  
-Though, this is only one of the many wonderful ways this package can benefit your life. Maybe you&rsquo;re looking for a substitute for the obligatory ```fortune``` package in your command-line greeting or just simply looking for a way to expand your vocabulary?  
-No matter what the issue, **Urban Dictionary Therapy** provides a perfect answer to all your woes.  
+**Urban Dictionary Therapy** is a simple command-line rehabilitation program for coping with those long frustrating days of programming. Utilizing this program and the information generously donated by the online community, you too can return to your work as a more successful, functioning member of society. More importantly, Urban Dictionary Therapy provides you with the much needed liberation without the temptations that come with opening up a new tab in your browser.
+Though, this is only one of the many wonderful ways this package can benefit your life. Maybe you&rsquo;re looking for a substitute for the obligatory ```fortune``` package in your command-line greeting or just simply looking for a way to expand your vocabulary?
+No matter what the issue, **Urban Dictionary Therapy** provides a perfect answer to all your woes.
 
 <br>
 
@@ -47,10 +45,10 @@ This package requires that you have Python3, as well as BeautifulSoup4. On OS X 
 ```shell
   $ pip3 install bs4
 ```
-***Note:*** To my knowledge, Python3 is also included in the new *Bash on Windows* linux-subsystem for Windows 10.  
+***Note:*** To my knowledge, Python3 is also included in the new *Bash on Windows* linux-subsystem for Windows 10.
 
 
-Furthermore, you can also make the program executable from anywhere in your file&ndash;system with the command `./UDTherapy.py` by adding the program directory to your *PATH* and by modifying the program permissions using the command:  
+Furthermore, you can also make the program executable from anywhere in your file&ndash;system with the command `./UDTherapy.py` by adding the program directory to your *PATH* and by modifying the program permissions using the command:
 ```shell
   $ chmod +x UDTherapy.py
 ```

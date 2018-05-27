@@ -7,8 +7,6 @@ categories: blog
 options: nohead
 background-image: posts\under_construction.png
 tags:
-  - under construction
-  - jekyll
 ---
 
 I&rsquo;m in the process of redesigning this website, though my previous site will remain active in the meantime.
