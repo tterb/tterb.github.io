@@ -17,7 +17,7 @@
               {% assign sorted_pages = site.pages | sort: 'key','last' %}
               {% for my_page in sorted_pages %}
                 {% if my_page.title %}
-                  {% unless my_page.options contains 'nomenu' or my_page.title == 'Contact' %}
+                  {% unless my_page.options contains 'nomenu' %}
                   <li class="menu-page-link"><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
                   {% endunless %}
                 {% endif %}
