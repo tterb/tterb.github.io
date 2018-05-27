@@ -7,11 +7,12 @@
   {% seo %}
 
   <link rel="canonical" href="{{ page.url | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ '/css/magnific-popup.min.css' | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ '/css/animate.min.css' | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ '/css/tooltipster.bundle.min.css' | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.baseurl }}"/>
-  <!-- <link rel="stylesheet" href="{{ "/css/pygment.css" | prepend: site.baseurl }}"/> -->
+  <!-- <link rel="stylesheet" href="{{ '/assets/fonts/Avenir-Next/AvenirNext.min.css' | prepend: site.baseurl }}"/> -->
+  <!-- <link rel="stylesheet" href="{{ '/assets/fonts/Gotham-HTF/GothamHTF.min.css' | prepend: site.baseurl }}"/> -->
+  <link rel="stylesheet" href="{{ '/assets/css/animate.min.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/tooltipster.bundle.min.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/magnific-popup.min.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}"/>
 
   {% if page.image %}
     {% assign first_char = page.image | slice: 0 %}
@@ -23,14 +24,14 @@
         {% assign imageurl = page.image | prepend: site.baseurl %}
       {% endif %}
     {% else %}
-      {% assign imageurl = page.image | prepend: "/images/" | prepend: site.baseurl %}
+      {% assign imageurl = page.image | prepend: "/assets/img/" | prepend: site.baseurl %}
     {% endif %}
   <style>
     #main > header {
-      background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url("{{ imageurl }}");
-      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url("{{ imageurl }}");
-      background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url("{{ imageurl }}");
-      background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url("{{ imageurl }}");
+      background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ imageurl }}");
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ imageurl }}");
+      background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ imageurl }}");
+      background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ imageurl }}");
     }
   </style>
   {% endif %}
