@@ -15,7 +15,7 @@
   tag: UI
 
 - title: PlayMusic
-  desc: A mockup created to provide a preview of the features and variants of the <a href="http://brettstevenson.io/PlayMusic/">PlayMusic</a> Rainmeter skin
+  desc: A mockup created to provide a preview of the features and variants of the [PlayMusic](http://brettstevenson.io/PlayMusic/) Rainmeter skin
   tool: Illustrator
   image: PlayMusic.png
   tag: UI
@@ -27,13 +27,13 @@
   tag: logo
 
 - title: Notifications
-  desc: A collection of Bootstrap-inspired, UI notifications designed for <a href="http://brettstevenson.io/Hyde/">Hyde</a>
+  desc: A collection of Bootstrap inspired, UI notifications designed for [Hyde](http://brettstevenson.io/Hyde/)
   image: Notifications.png
   tool: Illustrator
   tag: UI
 
 - title: Flat Monokai
-  desc: A flat interpretation of the <a href="http://brettstevenson.io/Atomic-Monokai-Syntax/">Atomic Monokai</a> syntax-highlighting package for Atom
+  desc: A flat interpretation of the [Atomic Monokai](http://brettstevenson.io/Atomic-Monokai-Syntax/) syntax-highlighting package for Atom
   image: FlatMonokai.png
   tool: Illustrator
 
