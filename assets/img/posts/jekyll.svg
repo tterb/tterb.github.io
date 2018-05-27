@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 820 547">
+  <path fill="#1A111A" d="M0 0h820v547H0V0z"/>
+  <path fill="#BB0023" d="M461.82 170.8c0-2.78-.76-8.5-.76-8.5-1.36-.12-14.75 4-20.26 6.48-4.5 1.7-8.44 4.45-12.5 6.98-3.88 2.42-8.03 4.87-12.78 4.52-.55 0-49.5-4.73-55.7-6.3-4.4-1.12-8.7-3.13-13.4-1.6-.08 2.9-.2 5.8-.2 8.72-.02 65.98-.02 131.95-.02 197.94v1.17h.03c.62 34.7 28.9 62.6 63.75 62.6 11.4 0 44.55-4.3 58.23-43.8 4.8-40.6-6.3-189.5-6.3-228.1z"/>
+  <path fill="#C82E36" fill-rule="evenodd" d="M460.68 162.33c6.13-1.06 12.54.12 12.93 5.8.1 2.08-.3 123.76.2 182.57.3 30.72.4 66.18-30.5 83.4-7.9 4.44-18.5 7.43-27.6 8.46 4.4-.6 9.3-2.57 13.2-4.47 20.4-10.7 29.8-18.2 32-52.7l-.1-216.2v-6.9z" clip-rule="evenodd"/>
+  <path fill="#9E2B2C" fill-rule="evenodd" d="M346.45 172.38c5.47-3.3 10.48-2.28 16.46-1 30.9 7.75 39.6 8.75 49.8 7.4 2.8-.4 5.6-.84 8.3-1.4 4.5-.97 6.3-1.9 9-2.6-4 3.43-9.2 6.9-14.4 8.23-23.3 5.7-48.63-5.6-56.7-7.4-4.03-1.2-8.12-2.3-12.3-3.2z" clip-rule="evenodd"/>
+  <circle cx="404.37" cy="108.27" r="3.57" fill="#66583C" fill-rule="evenodd" clip-rule="evenodd"/>
+  <circle cx="424.36" cy="245.78" r="11.67" fill="#D24D42" fill-rule="evenodd" clip-rule="evenodd"/>
+  <circle cx="434.99" cy="214.13" r="8.52" fill="#D24C42" fill-rule="evenodd" clip-rule="evenodd"/>
+  <circle cx="420.61" cy="126.97" r="9.21" fill="#67583C" fill-rule="evenodd" clip-rule="evenodd"/>
+  <circle cx="393.54" cy="182.15" r="19.46" fill="#D24D42" fill-rule="evenodd" clip-rule="evenodd"/>
+  <defs>
+    <circle id="a" cx="393.54" cy="182.15" r="19.46"/>
+  </defs>
+  <clipPath id="b">
+    <use xlink:href="#a" overflow="visible"/>
+  </clipPath>
+  <path fill="#67583C" fill-rule="evenodd" d="M373.6 177.7l44.3 2.97-10.07-21.28-29.84 1.4" clip-path="url(#b)" clip-rule="evenodd"/>
+  <path fill="#BF6A49" fill-rule="evenodd" d="M367.04 172.08s24.53 8.27 47.9 6.6c23.38-1.66.33 4.13.33 4.13s-19.4 6.3-46.2-4.4c-26.8-10.7-2.03-6.3-2.03-6.3z" clip-path="url(#b)" clip-rule="evenodd"/>
+</svg>
