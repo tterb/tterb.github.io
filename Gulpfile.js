@@ -1,150 +1,115 @@
 var gulp = require('gulp'),
-    fs = require('fs'),
-    glob = require('glob'),
-    shell = require('gulp-shell'),
-    critical = require('critical'),
-    minifyHTML = require('gulp-minify-html'),
+    csso = require('gulp-csso'),
     sass = require('gulp-sass'),
     uncss = require('gulp-uncss'),
-    importCss = require('gulp-import-css'),
-    minifyCSS = require('gulp-minify-css'),
-    autoprefixer = require('gulp-autoprefixer'),
-    rsync = require('gulp-rsync'),
-    rename = require('gulp-rename'),
-    replace = require('gulp-replace'),
+    cp = require('child_process'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    plumber = require('gulp-plumber'),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    jpegtran = require('imagemin-jpegtran'),
-    gifsicle = require('imagemin-gifsicle'),
-    optipng = require('imagemin-optipng'),
-    concat = require('gulp-concat-util'),
-    download = require('gulp-download');
+    browserSync = require('browser-sync'),
+    autoprefixer = require('gulp-autoprefixer');
 
-// Jekyll
-gulp.task('jekyll', function() {
-  return gulp.src('index.html', { read: false })
-    .pipe(shell(['jekyll build']));
+var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
+var messages = {
+    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+};
+
+/*
+ * Build the Jekyll Site
+ * runs a child process in node that runs the jekyll commands
+ */
+gulp.task('jekyll-build', function(done) {
+  browserSync.notify(messages.jekyllBuild);
+  return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
+    .on('close', done);
 });
 
-// HTML
-gulp.task('optimize-html', function() {
-    return gulp.src('_site/**/*.html')
-        .pipe(minifyHTML({
-            quotes: true
-        }))
-        .pipe(replace(/<link href=\"\/css\/style.scss\"[^>]*>/, function(s) {
-            var style = fs.readFileSync('_site/css/style.scss', 'utf8');
-            return '<style>\n' + style + '\n</style>';
-        }))
-        .pipe(gulp.dest('_site/'));
+/*
+ * Rebuild Jekyll & reload browserSync
+ */
+gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
+  browserSync.reload();
 });
 
-// Javascript
-gulp.task('javascript', ['jekyll'], function() {
-    return gulp.src('js/main.js', { read: false })
-        .pipe(shell(['jspm install']))
-        .pipe(shell(['jspm bundle-sfx js/main _site/js/min.js --minify --no-mangle']));
+/*
+ * Build the jekyll site and launch browser-sync
+ */
+gulp.task('browser-sync', ['jekyll-build'], function() {
+  browserSync({
+    server: {
+      baseDir: '_site'
+    }
+  });
 });
 
-// CSS
-gulp.task('optimize-css', function() {
-   return gulp.src('_site/css/style.scss')
-       .pipe(autoprefixer())
-       .pipe(uncss({
-           html: ['_site/**/*.html'],
-           ignore: []
-       }))
-       .pipe(minifyCss({keepBreaks: false}))
-       .pipe(gulp.dest('_site/css/'));
-});
-
-// Eliminate render-blocking CSS
-gulp.task('include-css', function() {
-  return gulp.src('_site/**/*.html')
-    .pipe(replace(/<link href=\"\/css\/style.scss\"[^>]*>/, function(s) {
-      var style = fs.readFileSync('_site/css/style.scss', 'utf8');
-      return '<style>\n' + style + '\n</style>';
+/*
+* Compile and minify sass
+*/
+gulp.task('sass', function() {
+  gulp.src(['src/sass/*.scss','src/sass/**/*.scss'])
+    .pipe(plumber())
+    .pipe(sass({
+      includePaths: ['src/sass'],
+      onError: browserSync.notify
     }))
-    .pipe(gulp.dest('_site/'));
+    .pipe(gulp.dest('assets/css'))
+    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+    // .pipe(uncss({
+      // html: ['_site/*.html','_site/**/*.html'],
+      // ignore: []
+    // }))
+    .pipe(csso())
+    .pipe(browserSync.reload({ stream:true }))
+    .pipe(gulp.dest('assets/css/'));
 });
 
-// Eliminate render-blocking CSS in above-the-fold content
-gulp.task('styles:critical', function() {
-    return gulp.src('src/styles/critical.css')
-    .pipe(minifyCSS())
-    .pipe(concat.header('<style>'))
-    .pipe(concat.footer('</style>'))
-    .pipe(rename({
-        basename: 'criticalCSS',
-        extname: '.html'
-      }))
-    .pipe(gulp.dest('_includes/'));
+/*
+* Compile fonts
+*/
+gulp.task('fonts', function() {
+  gulp.src('src/fonts/**/*.{otf,ttf,eot,woff,woff2,css}')
+  .pipe(plumber())
+  .pipe(gulp.dest('assets/fonts/'));
+})
+
+/*
+ * Minify images
+ */
+gulp.task('imagemin', function() {
+  return gulp.src('src/img/**/*.{jpg,png,gif,webp}')
+    .pipe(plumber())
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(gulp.dest('assets/img/'));
 });
 
-// Optimize Images
-gulp.task('optimize-images', function () {
-    return gulp.src(['_site/**/*.jpg', '_site/**/*.jpeg', '_site/**/*.gif', '_site/**/*.png'])
-        .pipe(imagemin({
-            progressive: false,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant(), jpegtran(), gifsicle()]
-        }))
-        .pipe(gulp.dest('_site/'));
+/**
+ * Compile and minify js
+ */
+gulp.task('js', function(){
+  return gulp.src('src/js/*.js')
+    .pipe(plumber())
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js/'))
+    .pipe(browserSync.reload({ stream:true }))
 });
 
-// Purge cache
-gulp.task('purge-cache', function() {
-  var options = {
-    token: config.cloudflareToken,
-    email: config.cloudflareEmail,
-    domain: config.cloudflareDomain
-  };
-  cloudflare(options);
+gulp.task('watch', function() {
+  gulp.watch(['src/sass/*.scss','src/sass/**/*.scss'], ['sass']);
+  // gulp.watch('_sass/**/*.scss', ['sass', 'jekyll-rebuild']);
+  gulp.watch('src/js/*.js', ['js']);
+  gulp.watch('src/fonts/**/*.{tff,woff,woff2}', ['fonts']);
+  gulp.watch(['src/img/*.{jpg,png,gif}','src/img/**/*.{jpg,png,gif}'], ['imagemin']);
+  // gulp.watch(['**/*.*', '!_site/**/*', '!node_modules/**/*','!.sass-cache/**/*' ], ['jekyll-rebuild']);
+  gulp.watch(['**/*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
-// Remove unused CSS
-gulp.task('uncss', function() {
-  return gulp.src([
-      'css/style.scss'
-      // 'node_modules/bootstrap/dist/css/bootstrap-theme.css'
-    ])
-    .pipe(uncss({
-      html: [
-        'http://127.0.0.1:4000/',
-        'http://127.0.0.1:4000/dev/',
-        'http://127.0.0.1:4000/design/',
-        'http://127.0.0.1:4000/blog/',
-        'http://127.0.0.1:4000/contact/'
-        'http://127.0.0.1:4000/404/'
-      ]
-    }))
-    .pipe(gulp.dest('css/uncss/'));
+gulp.task('serve', function () {
+    browserSync.init({server: {baseDir: '_site/'}});
+    // Reloads page when some of the already built files changed:
+    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
-// Google Analytics
-gulp.task('fetch-analytics', function() {
-  return download('https://www.google-analytics.com/analytics.js')
-    .pipe(gulp.dest('js/'));
-});
-
-// // Deployment
-// gulp.task('sync', function() {
-//     return gulp.src(['_site/**'])
-//         .pipe(rsync({
-//             root: '_site',
-//             hostname: '',
-//             username: '',
-//             destination: 'public_html',
-//             incremental: true,
-//             exclude: []
-//         }));
-// });
-
-// Run (Default)
-gulp.task('default', ['javascript', 'optimize-css', 'include-css',  'optimize-html', 'optimize-images', 'styles:critical']);
-
-// Run: Build
-gulp.task('build', ['javascript', 'optimize-css', 'include-css',  'optimize-html', 'optimize-images', 'styles:critical', 'fetch-analytics']);
-
-// Run: Clean
-gulp.task('clean', ['uncss']);
+// gulp.task('default', ['js', 'sass', 'fonts', 'browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch'])
