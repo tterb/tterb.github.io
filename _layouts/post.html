@@ -1,130 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
   {% include head.html %}
   {% include header.html %}
-    <main class="content" role="main">
-      <article class="post">
-        {% if page.options contains "fullhead" %}
-          <section class="post-image fullhead">
-            {% if page.image %}
-              <div id="post-banner" alt="banner" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/images/posts/{{ page.image | prepend: site.baseurl }});height:100vh;"></div>
-            {% endif %}
-            <div class="post-meta fullhead">
-              <h1 class="post-title">{{ page.title }}</h1>
-              <div class="cf post-meta-text">
-                <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
-              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.owner.name }}</h4>
-              <span id="post-date">on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
-              </div>
-              <div class="scroll-arrow">
-                <a href="#top" class="more scrolly"><i class="fa fa-angle-down"></i></a>
-              </div>
-            </div>
-          </section>
-        {% elsif page.options contains "nohead" %}
-          <section class="nopostimage">
-            <div class="post-meta">
-              <h1 class="post-title">{{ page.title }}</h1>
-              <div class="cf post-meta-text">
-                <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
-                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.owner.name }}</h4>
-                <span id="date">on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
-              </div>
-            </div>
-          </section>
-        {% elsif page.options contains "readme" %}
-          <section class="readme">
-            {% if page.header %}
-              <img class="post-header" alt="{{ page.title }}" src="{{ page.header | prepend: site.baseurl }}"/>
-            <!-- <h4>{{ page.desc }}</h4> -->
-            {% else %}
-              <h1 class="post-header">{{ page.title }}</h1>
-            {% endif %}
-            {% if page.options contains "subhead" %}
-              <h4 class="post-subheader">{{ page.desc }}</h4>
-            {% endif %}
-          </section>
-        {% else %}
-          <section class="post-image" style="height:50%;">
-            {% if page.image %}
-              <div id="post-banner" style="background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/images/posts/{{ page.image | prepend: site.baseurl }});"></div>
-            {% endif %}
-            <div class="post-meta" style="height:46%;">
-              <h1 class="post-title">{{ page.title }}</h1>
-              <div class="cf post-meta-text">
-                <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
-                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.owner.name }}</h4>
-                <span id="date">on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
-              </div>
-            </div>
-          </section>
-        {% endif %}
-        {% if page.options contains "readme" %}
-          <section class="readme-content">
-            <a name="top"></a>
-            {% if page.preview %}<img id="preview" src="{{ page.preview }}" alt="Preview" target="_blank"/>{% endif %}
-            <br>
-            {{ content }}
-            <a href="#" id="back-to-top" title="Back to top"><img src="/css/images/top-arrow.png" alt="Back to top"/></a>
-          </section>
-        {% else %}
-          <section class="written-content">
-            <a name="top"></a>
-            {{ content }}
-            <a href="#" id="back-to-top" title="Back to top"><img src="/css/images/top-arrow.png" alt="Back to top"/></a>
-          </section>
-        {% endif %}
-        {% if page.options contains "closer" %}
-          <div class="post-closer cf">
-            <div class="isLeft">
-              <h5 class="index-headline featured"><span>Written by</span></h5>
-              <section class="author">
-                <div class="author-image" alt="avatar" style="background-image: url({{ site.blog_logo | prepend: site.baseurl }})">Blog Logo</div>
-                <div class="author-info">
-                  <h4>{{ site.owner.name }}</h4>
-                  <p class="bio">{{ author.bio }}</p>
-                  <hr style="width: 90%;">
-                  <p class="sub published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
-                  {% if page.update %}
-                    <p class="sub updated">Last updated <time datetime="{{ page.update | date: "%F %R" }}">{{ page.update | date_to_string }}</time></p>
-                  {% endif %}
-                </div>
-              </section>
-            </div>
+  <main class="post-content" role="main">
+    <div class="post">
+      <a class="back-post" href="{{ '/blog' | prepend: site.baseurl }}"><i class="fa fa-chevron-left"></i><span class="animated fadeIn">Back to Blog</span></a>
+      {% if page.options contains "fullhead" %}
+        <section class="post-image fullhead">
+          {% if page.image %}
+            <div id="post-banner" alt="banner" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(/assets/img/posts/{{ page.image | prepend: site.baseurl }});height:100vh;"></div>
+          {% endif %}
+          <div class="post-meta fullhead">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <!-- <a class="scroll-btn scrolly animated fadeInUp" href="#top"><span></span>Scroll</a> -->
+            <!-- <div class="scroll-arrow">
+              <a href="#content" class="more scrolly"><i class="fa fa-angle-down"></i></a>
+            </div> -->
           </div>
-        {% elsif page.update %}
-          <div class="update-container">
-            <!-- <span class="update-date">This page was last updated at {{ "now" | date: "%b %d, %Y" }}</span> -->
-            <span class="update-date">Last updated on <time datetime="{{ page.update | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
+          <a class="scroll-btn scrolly animated fadeInUp" href="#content"><span></span>Scroll</a>
+        </section>
+      {% elsif page.options contains "nohead" %}
+        <section class="nopostimage">
+          <!-- <div class="post-meta"> -->
+            <h1 class="post-title">{{ page.title }}</h1>
+          <!-- </div> -->
+        </section>
+      {% elsif page.options contains "readme" %}
+        <section class="readme">
+          {% if page.header %}
+            <img class="post-header" alt="{{ page.title }}" src="{{ page.header | prepend: site.baseurl }}"/>
+          {% else %}
+            <h1 class="post-header">{{ page.title }}</h1>
+          {% endif %}
+          {% if page.options contains "subhead" %}
+            <h4 class="post-subheader">{{ page.desc }}</h4>
+          {% endif %}
+        </section>
+      {% else %}
+        <section class="post-image" style="{% if page.image %} background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/assets/img/posts/{{ page.image | prepend: site.baseurl }}); {% endif %}">
+          <div class="post-meta" style="{% if page.image %} background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/assets/img/posts/{{ page.image | prepend: site.baseurl }}); {% endif %}">
+            <h1 class="post-title">{{ page.title }}</h1>
           </div>
-        {% endif %}
-        {% if site.disqus %}
-          <div id="disqus_thread"></div>
-          <script type="text/javascript">
-              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-              var disqus_shortname = '{{site.disqus}}'; // required: replace example with your forum shortname
+        </section>
+      {% endif %}
+      {% if page.options contains "readme" %}
+        <section class="readme-content written-content">
+          <a name="top"></a>
+          {% if page.preview %}<img id="preview" src="{{ page.preview }}" alt="Preview" target="_blank" rel="noopener"/>{% endif %}
+          <br>
+          {{ content }}
+          <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/css/img/top-arrow.png" alt="Back to Top"/></a>
+        </section>
+      {% else %}
+        <div class="post-wrapper">
+          <section id="content" class="written-content">
+            <a name="top"></a>
+            <!-- <div class="date-container"><span class="date"><strong>{{ page.date | date: "%d" }}</strong>&nbsp;{{ page.date | date: "%b" }}</span>
+            <svg class="ico-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/assets/img/sprite-icons.svg#calendar" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div> -->
+            {{ content }}
+            <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/css/img/top-arrow.png" alt="Back to Top"/></a>
+            <div class="post-closer cf">
+              <!-- <div class="isLeft"> -->
+                <section class="author">
+                  <div class="author-image" alt="avatar" style="background-image: url({{ site.owner.avatar | prepend: site.baseurl }})"></div>
+                  <div class="author-info">
+                    <h4>{{ site.owner.name }}</h4>
+                    <p class="bio">{{ author.bio }}</p>
+                    <hr>
+                    <p class="sub published">Published <time datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+                    {% if page.update %}
+                      <p class="sub updated">Last updated <time datetime="{{ page.update | date: "%F %R" }}">{{ page.update | date: "%B %d, %Y" }}</time></p>
+                    {% endif %}
+                  </div>
+                </section>
+              <!-- </div> -->
+            </div>
+          </section>
+        </div>
+      {% endif %}
+      <!-- <div class="post-closer cf">
+        <div class="isLeft">
+          <section class="author">
+            <div class="author-image" alt="avatar" style="background-image: url({{ site.owner.avatar | prepend: site.baseurl }})"></div>
+            <div class="author-info">
+              <h4>{{ site.owner.name }}</h4>
+              <p class="bio">{{ author.bio }}</p>
+              <hr>
+              <p class="sub published">Published <time datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+              {% if page.update %}
+                <p class="sub updated">Last updated <time datetime="{{ page.update | date: "%F %R" }}">{{ page.update | date: "%B %d, %Y" }}</time></p>
+              {% endif %}
+            </div>
+          </section>
+        </div>
+      </div> -->
+      {% if site.disqus %}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = '{{ site.disqus }}'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      {% endif %}
+    </div>
+  </main>
 
-              /* * * DON'T EDIT BELOW THIS LINE * * */
-              (function() {
-                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-              })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        {% endif %}
-      </article>
-    </main>
-
-    {% include scripts.html %}
-    {% include footer.html %}
-    {% if page.options contains "dropcap" %}
-      <script type="text/javascript" src="{{ '/js/dropcap.min.js' | prepend: site.baseurl }}"></script>
-      <script>
-        $(document).ready(function() {
-          var dropcaps = document.querySelectorAll(".dropcap");
-          window.Dropcap.layout(dropcaps, 2);
-        });
-      </script>
-    {% endif %}
+  {% include scripts.html %}
+  {% include footer.html %}
+  {% if page.options contains "dropcap" %}
+    <script type="text/javascript" src="{{ '/assets/js/dropcap.min.js' | prepend: site.baseurl }}"></script>
+    <script>
+      $(document).ready(function() {
+        var dropcaps = document.querySelectorAll(".dropcap");
+        window.Dropcap.layout(dropcaps, 2);
+      });
+    </script>
+  {% endif %}
 </html>
