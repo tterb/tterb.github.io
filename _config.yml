@@ -79,6 +79,18 @@ social:
     - https://twitter.com/bstevensondev
     - https://bstevenson.deviantart.com/
 
+share:
+  - facebook
+  - twitter
+  - google-plus
+  - linkedin 
+  - pinterest 
+  - reddit
+  - tumblr
+  - pocket
+  # - wordpress
+  - email
+
 plugins:
   - jemoji
   - jekyll-gist
