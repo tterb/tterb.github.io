@@ -99,9 +99,9 @@
 
   $(document).ready(function() {
     // Improve code-block formatting
-    $('code').each(function() {
-      if($(this).height() < 30)
-        $(this).css('padding', '0.55em 1em 0.65em');
+    $('.highlighter-rouge').each(function() {
+      if($(this).height() > 55)
+        $(this).addClass('code-block');
     });
   });
   
