@@ -1,25 +1,26 @@
 ---
 layout: none
 title: 404
-options: fullwidth, nomenu, nolanding, nobreadcrumb
+options: fullwidth, nomenu, nolanding
 permalink: /404.html
 script-includes:
-  - /js/typed.min.js
+  - assets/js/typed.min.js
 script: |
   $(function() {
     $('.typed').typed({
       strings: [
-        "Oops! <br/>" + "><span class='caret'>$</span> You might have mis-typed the URL, <br/> ^1" + "><span class='caret'>$</span> or maybe the page has been moved. <br/> ^500" + "><span class='caret'>$</span> Anyways, there is nothing to see here... <br/> ^500" + "><span class='caret'>$</span> Would you like to return to the <a href='#'>homepage</a> (Y/N)?"
+        "Oops! <br/>" + "><span class='caret'>$</span> You might have mis-typed the URL, <br/> ^1" + "><span class='caret'>$</span> or maybe the page has been moved. <br/> ^500" + "><span class='caret'>$</span> Anyways, there is nothing to see here... <br/> ^500" + "><span class='caret'>$</span> Would you like to return to the <a href='https://brettstevenson.io'>homepage</a> (Y/N)?"
       ],
-      stringsElement: '#strings', showCursor: true, cursorChar: '|', autoInsertCss: true, typeSpeed: 10, loop: false, showCursor: false
+      stringsElement: '#strings', showCursor: false, cursorChar: '█', autoInsertCss: true, typeSpeed: 10, loop: false
     });
     $('#term-input').focus();
     $('#term-input').on('keydown', function(e) {
       if (e.keyCode === 13) {
         e.preventDefault();
-        if ($(this).val() === 'y') {
-          url = 'http://brettstevenson.io/';
-          $(location).attr('href', url);
+        if ($(this).val().toLowerCase() === 'y') {
+          $(location).attr('href', 'https://brettstevenson.io');
+        } else if ($(this).val().toLowerCase() === 'n') {
+          location.reload();
         }
       }
     });
@@ -32,9 +33,9 @@ script: |
     <div class="terminal">
       <div class="window-title">
         <div class="win-buttons">
-          <a id="close" class="term-button" href="#"></a>
-          <a id="min" class="term-button" href="#"></a>
-          <a id="max" class="term-button" href="#"></a>
+          <a id="close" class="term-button" href="{{ site.url }}"></a>
+          <a id="min" class="term-button" href=""></a>
+          <a id="max" class="term-button" href=""></a>
         </div>
         <span class="title">404</span></div>
       <div class="message">
