@@ -1,5 +1,5 @@
 
-<header id="header" {% if page.layout == 'landing' %} class="landing alt" {% elsif page.options contains 'readme' %} class="readme" {% elsif page.layout == 'post' %}{% unless page.options contains 'readme' %} class="alt" {% endunless %}{% endif %}>
+<header id="header" {% if page.layout == 'landing' %} class="landing alt" {% elsif page.layout == 'post' %} class="alt {% if page.options contains 'readme' %}readme{% endif %}"{% endif %}>
   <h1><a href="{{ '/index.html' | prepend: site.baseurl }}">
   {% if site.logo %}
     <img class="header-logo" src="{{ site.logo | prepend: site.baseurl }}"/><span class="animated fadeIn">Brett Stevenson</span>
