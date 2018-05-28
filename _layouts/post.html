@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+  {% include post-meta.html %}
   {% include head.html %}
   {% include header.html %}
   <main class="post-content" role="main">
-    <div class="post">
+    <div class="{% if page.options contains 'readme' %}readme-post{% endif %} post">
       <a class="back-post" href="{{ '/blog' | prepend: site.baseurl }}"><i class="fa fa-chevron-left"></i><span class="animated fadeIn">Back to Blog</span></a>
       {% if page.options contains "fullhead" %}
         <section class="post-image fullhead">
@@ -26,16 +27,7 @@
           <!-- </div> -->
         </section>
       {% elsif page.options contains "readme" %}
-        <section class="readme">
-          {% if page.header %}
-            <img class="post-header" alt="{{ page.title }}" src="{{ page.header | prepend: site.baseurl }}"/>
-          {% else %}
-            <h1 class="post-header">{{ page.title }}</h1>
-          {% endif %}
-          {% if page.options contains "subhead" %}
-            <h4 class="post-subheader">{{ page.desc }}</h4>
-          {% endif %}
-        </section>
+        <section class="readme-header"></section>
       {% else %}
         <section class="post-image" style="{% if page.image %} background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/assets/img/posts/{{ page.image | prepend: site.baseurl }}); {% endif %}">
           <div class="post-meta" style="{% if page.image %} background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/assets/img/posts/{{ page.image | prepend: site.baseurl }}); {% endif %}">
@@ -46,6 +38,11 @@
       {% if page.options contains "readme" %}
         <section class="readme-content written-content">
           <a name="top"></a>
+          {% if page.header %}
+            <img src="{{ page.header }}"/>
+          {% else %}
+            <h1>{{ page.title }}</h1>
+          {% endif %}
           {% if page.preview %}<img id="preview" src="{{ page.preview }}" alt="Preview" target="_blank" rel="noopener"/>{% endif %}
           <br>
           {{ content }}
@@ -60,40 +57,23 @@
             {{ content }}
             <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/css/img/top-arrow.png" alt="Back to Top"/></a>
             <div class="post-closer cf">
-              <!-- <div class="isLeft"> -->
-                <section class="author">
-                  <div class="author-image" alt="avatar" style="background-image: url({{ site.owner.avatar | prepend: site.baseurl }})"></div>
-                  <div class="author-info">
-                    <h4>{{ site.owner.name }}</h4>
-                    <p class="bio">{{ author.bio }}</p>
-                    <hr>
-                    <p class="sub published">Published <time datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
-                    {% if page.update %}
-                      <p class="sub updated">Last updated <time datetime="{{ page.update | date: "%F %R" }}">{{ page.update | date: "%B %d, %Y" }}</time></p>
-                    {% endif %}
-                  </div>
-                </section>
-              <!-- </div> -->
+              <section class="author">
+                <div class="author-image" alt="avatar" style="background-image: url({{ site.owner.avatar | prepend: site.baseurl }})"></div>
+                <div class="author-info">
+                  <h4>{{ site.owner.name }}</h4>
+                  {% if author.bio %}<p class="bio">{{ author.bio }}</p>{% endif %}
+                  <hr>
+                  <p class="sub published">Published <time datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+                  {% if page.update %}
+                    <p class="sub updated">Last updated <time datetime="{{ page.update | date: "%F %R" }}">{{ page.update | date: "%B %d, %Y" }}</time></p>
+                  {% endif %}
+                </div>
+              </section>
             </div>
+            {% include share-buttons.html %}
           </section>
         </div>
       {% endif %}
-      <!-- <div class="post-closer cf">
-        <div class="isLeft">
-          <section class="author">
-            <div class="author-image" alt="avatar" style="background-image: url({{ site.owner.avatar | prepend: site.baseurl }})"></div>
-            <div class="author-info">
-              <h4>{{ site.owner.name }}</h4>
-              <p class="bio">{{ author.bio }}</p>
-              <hr>
-              <p class="sub published">Published <time datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
-              {% if page.update %}
-                <p class="sub updated">Last updated <time datetime="{{ page.update | date: "%F %R" }}">{{ page.update | date: "%B %d, %Y" }}</time></p>
-              {% endif %}
-            </div>
-          </section>
-        </div>
-      </div> -->
       {% if site.disqus %}
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -110,16 +90,6 @@
       {% endif %}
     </div>
   </main>
-
   {% include scripts.html %}
   {% include footer.html %}
-  {% if page.options contains "dropcap" %}
-    <script type="text/javascript" src="{{ '/assets/js/dropcap.min.js' | prepend: site.baseurl }}"></script>
-    <script>
-      $(document).ready(function() {
-        var dropcaps = document.querySelectorAll(".dropcap");
-        window.Dropcap.layout(dropcaps, 2);
-      });
-    </script>
-  {% endif %}
 </html>
