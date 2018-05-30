@@ -178,7 +178,7 @@
     border-radius: 2px;
     vertical-align: top;
     line-height: _font(hdr-lheight-smaller);
-    margin: 0.5em 0.2em !important;
+    margin: 0.5em 0.2em;
     padding: 0 !important;
     &:first-child {
       margin-left: 0;
@@ -199,7 +199,7 @@
     position: relative;
     color: #AAA;
     font-size: 2em;
-    top: 1em;
+    top: 0.5em;
     right: 2em;
     transition: all 350ms ease-in-out; 
     cursor: pointer;
@@ -371,6 +371,46 @@ hr {
         &:hover .title, &:active .title {
           color: saturate(lighten(_palette(accent2, bg), 15%), 5%) !important;
           // text-shadow: 0 0.5px 1px rgba(#000, 0.2);
+        }
+      }
+    }
+  }
+}
+
+body.is-mobile {
+  #blog {
+    .post-list > li {
+      width: 80%;
+      margin: 0.5em 10% !important;
+    }
+    .featured-box {
+      height: 38vh;
+      .content {
+        height: 38%;
+        .featured-title {
+          font-size: 4.25vw;
+        }
+      }
+      .footer {
+        display: none;
+      }
+    }
+    #search {
+      .fa-search {
+        font-size: 1.5em;
+        top: 0.5em;
+        right: 1em;
+      }
+    }
+    #archive {
+      padding: 1.25em 0.5em 6em;
+      .archive-post {
+        margin: 0 1em;
+        .date-container {
+          font-size: 14px;
+        }
+        .post-link .title {
+          font-size: 1em;
         }
       }
     }
