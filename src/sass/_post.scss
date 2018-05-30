@@ -427,7 +427,6 @@
       }
     }
     code {
-      // background: hsl(270, 4%, 20%);
       background: hsl(270, 4%, 20%);
       color: hsl(270, 8%, 86%);
       font-size: 11pt;
@@ -882,7 +881,7 @@
 
 @media(max-width: 767px) {
   .h-note,.h-tip,.h-warning {
-    margin: 25px 0
+    margin: 25px 0;
   }
 }
 
@@ -1500,4 +1499,27 @@
   width: 80%;
   margin: auto;
   padding-bottom: 1em;
+}
+
+body.is-mobile {
+  .post-image {
+    height: 34vmax !important;
+    .post-title {
+      display: table-cell !important;
+    }
+  }
+  .post-header {
+    display: none;
+  }
+  .back-post {
+    font-size: 28px;
+    top: 0.45em;
+  }
+  .written-content {
+    line-height: 1.45;
+    width: 90%;
+  }
+  #back-to-top {
+    display: none;
+  }
 }
