@@ -91,14 +91,34 @@
       })
     }
   });
+  
+  // Scroll Reveal config
+  (function ($) {
+    "use strict";
+    window.sr = ScrollReveal({ duration: 1000, reset: false });
+    sr.reveal('#one .inner', 10);
+    sr.reveal('#two .inner', 10);
+    sr.reveal('#back-to-top', 25);
 
+    $('.filter li').on('click', function() {
+      var $this = $(this),
+      isActive = $this.hasClass( 'active' ),
+      group = isActive ? 'all' : $this.data('group');
+      if (!isActive) {
+        $('.filter .active').removeClass('active');
+      }
+      $this.toggleClass('active');
+    });
+  }(jQuery));
+
+  // Asychronous Google-font loading
   $(function() {
-    var $fonts = "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Montserrat:100,100i,200,200i,300,300i,400,400i,600,600i,800,800i,900,900i|Spectral:300,300i,400,400i,500,500i,600,600i,700,700i,900,900i|Source+Code+Pro:200,300,400,500,600,700,900";
+    var $fonts = 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Montserrat:400,400i,600,600i,800,800i|Spectral:300,300i,500,500i,700,700i|Source+Code+Pro:300,400,600,700';
     document.createStyleSheet ? document.createStyleSheet($fonts) : $('head').append($('<link rel="stylesheet" href="' + $fonts + '" type="text/css" media="screen" />'))
   })
 
+  // Improve code-block formatting
   $(document).ready(function() {
-    // Improve code-block formatting
     $('.highlighter-rouge').each(function() {
       if($(this).height() > 55)
         $(this).addClass('code-block');
