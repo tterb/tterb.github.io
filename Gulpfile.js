@@ -8,6 +8,7 @@ const del          = require('del');
 const gulp         = require('gulp');
 const gutil        = require('gulp-util');
 const imagemin     = require('gulp-imagemin');
+const pngquant     = require('imagemin-pngquant');
 const notify       = require('gulp-notify');
 const postcss      = require('gulp-postcss');
 const rename       = require('gulp-rename');
@@ -47,7 +48,7 @@ gulp.task('build:styles:critical', function() {
 });
 
 // Build all styles
-gulp.task('build:styles', ['build:styles:main']);
+gulp.task('build:styles', ['build:styles:main', 'build:styles:critical']);
 
 // Delete CSS
 gulp.task('clean:styles', function(callback) {
@@ -104,7 +105,7 @@ gulp.task('fonts', function() {
     .on('error', gutil.log);
 });
 
-// Delete processed fonts
+// Delete processed font files
 gulp.task('clean:fonts', function(callback) {
   del([paths.jekyllFontFiles, paths.siteFontFiles]);
   callback();
@@ -116,7 +117,8 @@ gulp.task('build:images', function() {
     .pipe(imagemin({ 
       optimizationLevel: 3, 
       progressive: true, 
-      interlaced: true 
+      interlaced: true,
+      use: [pngquant()]
     }))
     .pipe(gulp.dest(paths.jekyllImageFiles))
     .pipe(gulp.dest(paths.siteImageFiles))
@@ -129,11 +131,26 @@ gulp.task('clean:images', function(callback) {
   callback();
 });
 
+// Place download files in proper location
+gulp.task('build:downloads', function() {
+  return gulp.src(paths.downloadFiles + '/**/*.zip')
+    .pipe(rename(function(path) {path.dirname = '';}))
+    .pipe(gulp.dest(paths.jekyllDownloadFiles))
+    .pipe(gulp.dest(paths.siteDownloadFiles))
+    .pipe(browserSync.stream())
+    .on('error', gutil.log);
+});
+
+// Delete processed download files
+gulp.task('clean:downloads', function(callback) {
+  del([paths.jekyllDownloadFiles, paths.siteDownloadFiles]);
+  callback();
+});
+
 // Run jekyll build command
 gulp.task('build:jekyll', function() {
-  var shellCommand = 'bundle exec jekyll build';
   return gulp.src('')
-    .pipe(run(shellCommand))
+    .pipe(run('bundle exec jekyll build --config _config.yml'))
     .on('error', gutil.log);
 });
 
@@ -143,21 +160,10 @@ gulp.task('clean:jekyll', function(callback) {
   callback();
 });
 
-// Main clean task
-// Deletes _site directory and processed assets
-gulp.task('clean', ['clean:jekyll', 'clean:styles', 'clean:scripts', 'clean:images', 'clean:fonts']
-);
-
-// Build site
-gulp.task('build', function(callback) {
-  runSequence(['build:scripts', 'build:images', 'build:styles', 'build:fonts'], 'build:jekyll', callback);
-});
-
 // Run jekyll build command using local config
 gulp.task('build:jekyll:local', function() {
-  var shellCommand = 'bundle exec jekyll build';
   return gulp.src('')
-    .pipe(run(shellCommand))
+    .pipe(run('bundle exec jekyll build'))
     .on('error', gutil.log);
 });
 
@@ -202,5 +208,14 @@ gulp.task('serve', ['build'], function() {
   gulp.watch('_data/**.*+(yml|yaml|csv|json)', ['build:jekyll:watch']);
 });
 
+// Build site
+gulp.task('build', function(callback) {
+  runSequence(['build:scripts', 'build:images', 'build:styles', 'build:fonts', 'build:downloads'], 'build:jekyll', callback);
+});
+
+// Deletes _site directory and processed assets
+gulp.task('clean', ['clean:jekyll', 'clean:styles', 'clean:scripts', 'clean:images', 'clean:fonts', 'clean:downloads']
+);
+
 // Default Task: build site
-gulp.task('default', ['clean','build']);
+gulp.task('default', ['build']);
