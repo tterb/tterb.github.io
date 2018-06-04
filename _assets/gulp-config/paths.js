@@ -8,32 +8,37 @@ paths.siteDir          = '_site/';        // The resulting static site.
 paths.siteAssetsDir    = '_site/assets/'; // The resulting static site's assets.
 
 // Folder naming conventions.
-paths.postFolderName   = '_posts';
-paths.draftFolderName  = '_drafts';
-paths.fontFolderName   = 'fonts';
-paths.imageFolderName  = 'img';
-paths.scriptFolderName = 'js';
-paths.stylesFolderName = 'styles';
+paths.postFolder   = '_posts';
+paths.draftFolder  = '_drafts';
+paths.fontFolder   = 'fonts';
+paths.imageFolder  = 'img';
+paths.scriptFolder = 'js';
+paths.stylesFolder = 'styles';
+paths.downloadFolder = 'download';
 
 // Asset files locations.
-paths.sassFiles   = paths.assetsDir + paths.stylesFolderName;
-paths.jsFiles     = paths.assetsDir + paths.scriptFolderName;
-paths.imageFiles  = paths.assetsDir + paths.imageFolderName;
-paths.fontFiles   = paths.assetsDir + paths.fontFolderName;
+paths.sassFiles     = paths.assetsDir + paths.stylesFolder;
+paths.jsFiles       = paths.assetsDir + paths.scriptFolder;
+paths.imageFiles    = paths.assetsDir + paths.imageFolder;
+paths.fontFiles     = paths.assetsDir + paths.fontFolder;
+paths.downloadFiles = paths.assetsDir + paths.downloadFolder;
 
 // Jekyll files locations.
-paths.jekyllPostFiles  = paths.jekyllDir       + paths.postFolderName;
-paths.jekyllDraftFiles = paths.jekyllDir       + paths.draftFolderName;
-paths.jekyllCssFiles   = paths.jekyllAssetsDir + paths.stylesFolderName;
-paths.jekyllJsFiles    = paths.jekyllAssetsDir + paths.scriptFolderName;
-paths.jekyllImageFiles = paths.jekyllAssetsDir + paths.imageFolderName;
-paths.jekyllFontFiles  = paths.jekyllAssetsDir + paths.fontFolderName;
+paths.jekyllPostFiles  = paths.jekyllDir       + paths.postFolder;
+paths.jekyllDraftFiles = paths.jekyllDir       + paths.draftFolder;
+paths.jekyllCssFiles   = paths.jekyllAssetsDir + paths.stylesFolder;
+paths.jekyllJsFiles    = paths.jekyllAssetsDir + paths.scriptFolder;
+paths.jekyllImageFiles = paths.jekyllAssetsDir + paths.imageFolder;
+paths.jekyllFontFiles  = paths.jekyllAssetsDir + paths.fontFolder;
+paths.imageFolder;
+paths.jekyllDownloadFiles  = paths.jekyllAssetsDir + paths.downloadFolder;
 
 // Site files locations.
-paths.siteCssFiles   = paths.siteAssetsDir + paths.stylesFolderName;
-paths.siteJsFiles    = paths.siteAssetsDir + paths.scriptFolderName;
-paths.siteImageFiles = paths.siteAssetsDir + paths.imageFolderName;
-paths.siteFontFiles  = paths.siteAssetsDir + paths.fontFolderName;
+paths.siteCssFiles   = paths.siteAssetsDir + paths.stylesFolder;
+paths.siteJsFiles    = paths.siteAssetsDir + paths.scriptFolder;
+paths.siteImageFiles = paths.siteAssetsDir + paths.imageFolder;
+paths.siteFontFiles  = paths.siteAssetsDir + paths.fontFolder;
+paths.siteDownloadFiles  = paths.siteAssetsDir + paths.downloadFolder;
 
 // Glob patterns by file type.
 paths.sassPattern     = '/**/*.scss';
