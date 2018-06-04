@@ -6,8 +6,6 @@ paths.jekyllDir        = '';              // The files Jekyll will handle.
 paths.jekyllAssetsDir  = 'assets/';       // The asset files Jekyll will handle.
 paths.siteDir          = '_site/';        // The resulting static site.
 paths.siteAssetsDir    = '_site/assets/'; // The resulting static site's assets.
-paths.styleGuideAssets = '_styleguide_assets';
-paths.styleGuideDir    = 'styleguide';
 
 // Folder naming conventions.
 paths.postFolderName   = '_posts';
@@ -36,7 +34,6 @@ paths.siteCssFiles   = paths.siteAssetsDir + paths.stylesFolderName;
 paths.siteJsFiles    = paths.siteAssetsDir + paths.scriptFolderName;
 paths.siteImageFiles = paths.siteAssetsDir + paths.imageFolderName;
 paths.siteFontFiles  = paths.siteAssetsDir + paths.fontFolderName;
-paths.siteStyleGuide = paths.siteDir       + paths.styleGuideDir;
 
 // Glob patterns by file type.
 paths.sassPattern     = '/**/*.scss';
@@ -64,20 +61,6 @@ paths.siteHtmlFilesGlob = paths.siteDir + paths.htmlPattern;
 // HTML pages to run through the accessibility test.
 paths.htmlTestFiles = [
   '_site/**/*.html',
-  '!_site/2015/**/*.*',
-  '!_site/2016/**/*.*',
-  '!_site/2017/**/*.*',
-  '!_site/mission-and-values/**/*.*',
-  '!_site/news/**/*.*',
-  '!_site/styleguide/**/*.*',
-  '!_site/team/**/*.*',
-  '!_site/work/**/*.*',
-  '!_site/blog/tag/cartography/index.html',
-  '!_site/blog/tag/front-end-dev/index.html',
-  '!_site/blog/tag/drupalcamp/index.html',
-  '!_site/blog/tag/drupalcon/index.html',
-  '!_site/blog/tag/efficiency/index.html',
-  '!_site/blog/tag/tridug/index.html'
 ];
 
 module.exports = paths;
