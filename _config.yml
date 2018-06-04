@@ -63,11 +63,11 @@ defaults:
   - scope:
       path: _posts
     values:
-      layout: post2
+      layout: post
   - scope:
       path: _drafts
     values:
-      layout: post2
+      layout: post
 
 # For Jekyll-SEO-tag
 logo: "/assets/img/logo.png"
