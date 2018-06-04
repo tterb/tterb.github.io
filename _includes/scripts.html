@@ -1,38 +1,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script src="{{ '/assets/js/jquery.scrolly.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/assets/js/jquery.scrollex.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/assets/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/assets/js/skel.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/assets/js/util.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/assets/js/smoothState.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/assets/js/modernizr.min.js' | prepend: site.baseurl }}"/></script>
-<script src="{{ '/assets/js/magnific-popup.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/assets/js/main.min.js' | prepend: site.baseurl }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}" type="text/javascript" async></script>
+
+<!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel-layout.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel-viewport.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.poptrox/2.5.1/jquery.poptrox.min.js"></script> -->
 
 <script>window.FontAwesomeConfig = { searchPseudoElements: true }</script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 
 <script>
-  (function ($) {
-    "use strict";
-    window.sr = ScrollReveal({ duration: 1000, reset: false });
-    sr.reveal('#one .inner', 10);
-    sr.reveal('#two .inner', 10);
-    sr.reveal('#back-to-top', 25);
-
-    $('.filter li').on('click', function() {
-      var $this = $(this),
-      isActive = $this.hasClass( 'active' ),
-      group = isActive ? 'all' : $this.data('group');
-      if (!isActive) {
-        $('.filter .active').removeClass('active');
-      }
-      $this.toggleClass('active');
-    });
-  }(jQuery));
-
   $('.mid-content .inner').click(function() {
     window.location = $(this).attr('data-link');
     return false;
@@ -40,8 +19,8 @@
 </script>
 
 {% if page.layout == "post" %}
-  <script src="{{ '/assets/js/scroll-top.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-  <script src="{{ '/assets/js/tooltipster.bundle.min.js' | prepend: site.baseurl }}"></script>
+  <script src="{{ '/assets/js/scroll-top.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script src="{{ '/assets/js/tooltipster.js' | prepend: site.baseurl }}"></script>
   <script>
     $('.written-content').children('img').each(function() {
       $(this).attr('class','post-img')
@@ -53,28 +32,47 @@
   </script>
   <script>
     $(function() {
-      clip = $('<img />').attr({'class':'clipboard tooltip', 'src':'/assets/css/img/clipboard.png', 'title':'Copied to clipboard' });
+      clip = $('<img />').attr({'class':'clipboard tooltip', 'src':'/assets/img/clipboard.png', 'alt':'Copy to clipboard', 'title':'Copied to clipboard' });
       $('pre.highlight').append(clip);
       $(".tooltip").tooltipster({
         animation: "fade",
         trigger: "click",
         delay: 200
       });
-      $("pre.highlight .clipboard").on("click", function(e) {
+      $('pre.highlight .clipboard').on('click', function(e) {
         e.preventDefault();
-        var temp = document.createElement("input");
-        temp.setAttribute("value", $(this).parent().children('code').text()),
+        var temp = document.createElement('input');
+        temp.setAttribute('value', $(this).parent().children('code').text()),
         document.body.appendChild(temp),
         temp.select(),
-        document.execCommand("copy"),
+        document.execCommand('copy'),
         document.body.removeChild(temp)
       })
+    });
+
+    $('.share-button').on('click', function() {  
+      $(this).addClass('open');
+    });
+    $('.share-items').draggable({ 
+      axis: 'x',
+      containment: '.share-items-wrapper'
+    });
+    $('.share-item').on('click', function() {
+       $('.share-button').addClass('shared');
+       setTimeout(function() {
+        $('.share-button').addClass('thankyou');
+      }, 800);
+      setTimeout(function() {
+        $('.share-button').removeClass('open');
+        $('.share-button').removeClass('shared');
+        $('.share-button').removeClass('thankyou');
+      }, 2500);
     });
   </script>
 {% endif %}
 
 {% if page.title == "Contact" %}
-  <script src="{{ '/assets/js/jquery.validate.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script src="{{ '/assets/js/jquery.validate.js' | prepend: site.baseurl }}" type="text/javascript"></script>
   <script>
     $("#sendemail").validate({
       rules: {
@@ -91,7 +89,7 @@
 {% endif %}
 
 <!-- Show menu overlay + Jekyll Simple Search option -->
-<script src="{{ '/assets/js/jekyll-search.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ '/assets/js/jekyll-search.js' | prepend: site.baseurl }}" type="text/javascript"></script>
 <script>
   $(document).ready(function() {
     $('.search-field').simpleJekyllSearch({
@@ -132,10 +130,15 @@
 </script>
 
 <noscript>
-  <link rel="stylesheet" href="{{ '/assets/css/normalize.min.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
   <link rel="stylesheet" href="{{ '/assets/fonts/Avenir-Next/AvenirNext.min.css' | prepend: site.baseurl }}"/>
   <link rel="stylesheet" href="{{ '/assets/fonts/Gotham-HTF/GothamHTF.min.css' | prepend: site.baseurl }}"/>
   <link rel="stylesheet" href="{{ '/assets/fonts/Iconfont/iconfont.min.css' | prepend: site.baseurl }}"/>
+</noscript>
+
+<noscript>
+  <link href="{{ '/assets/styles/main.css' | prepend: site.baseurl }}" rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Montserrat:400,400i,600,600i,800,800i|Spectral:300,300i,500,500i,700,700i|Source+Code+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
 </noscript>
 
 {% for include in page.script-includes %}
