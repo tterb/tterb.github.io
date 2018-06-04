@@ -1,0 +1,35 @@
+<div class="share-button">
+  <div class="lid"><span class="fas fa-share-alt" title="Share"></span></div>
+  <div class="share-items-wrapper">
+      <div class="share-items">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbrettstevenson.io&quote=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;" class="share-item facebook">      
+          <span class="fab fa-facebook-f" title="Share on Facebook"></span>
+        </a>
+        <a href="{{ page.url }}" data-show-count="false" class="share-item twitter">
+          <span class="fab fa-twitter" title="Tweet"></span>
+        </a>
+        <a href="https://plus.google.com/share?url=http%3A%2F%2Fbrettstevenson.io" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;" class="share-item google-plus">
+          <span class="fab fa-google-plus-g" title="Share on Google+"></span>
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.url | prepend: site.baseurl | prepend: site.url }}" class="share-item linkedin popup">
+          <span class="fab fa-linkedin-in" title="Share on LinkedIn"></span>
+        </a>
+        <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fbrettstevenson.io&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;" class="share-item pinterest">
+          <span class="fab fa-pinterest-p" title="Pin it"></span>
+        </a>
+        <a href="https://tumblr.com/share/link?url={{ page.url | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="share-item tumblr">
+          <span class="fab fa-tumblr" title="Post to Tumblr"></span>
+        </a>
+        <a href="http://www.reddit.com/submit?url=http%3A%2F%2Fbrettstevenson.io&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;" class="share-item reddit">
+          <span class="fab fa-reddit-alien" title="Post on Reddit"></span>
+        </a>
+        <!-- <a href="https://getpocket.com/save?url={{ page.url | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="share-item pocket">
+          <span class="fab fa-get-pocket" title="Save to Pocket"></span>
+        </a> -->
+        <a href="mailto:?subject={{ page.title }}&body={{ page.url | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="share-item email" data-proofer-ignore>
+          <span class="fas fa-at" title="Send via email"></span>
+        </a>
+      </div>
+    </div>
+  <div class="thank-you">Thank you</div>
+</div>
