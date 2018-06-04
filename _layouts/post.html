@@ -29,8 +29,8 @@
       {% elsif page.options contains "readme" %}
         <section class="readme-header"></section>
       {% else %}
-        <section class="post-image" style="{% if page.image %} background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/assets/img/posts/{{ page.image | prepend: site.baseurl }}); {% endif %}">
-          <div class="post-meta" style="{% if page.image %} background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/assets/img/posts/{{ page.image | prepend: site.baseurl }}); {% endif %}">
+        <section class="post-image" style="{% if page.image %} background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url({{ page.image | prepend: '/assets/img/posts/' | prepend: site.baseurl }}); {% endif %}">
+          <div class="post-meta">
             <h1 class="post-title">{{ page.title }}</h1>
           </div>
         </section>
@@ -40,38 +40,56 @@
           <a name="top"></a>
           {% if page.header %}
             <img src="{{ page.header }}"/>
-          {% else %}
-            <h1>{{ page.title }}</h1>
           {% endif %}
-          {% if page.preview %}<img id="preview" src="{{ page.preview }}" alt="Preview" target="_blank" rel="noopener"/>{% endif %}
+          <!-- {% if page.preview %}<img id="preview" src="{{ page.preview }}" alt="Preview" target="_blank" rel="noopener"/>{% endif %} -->
           <br>
+          <h1 class="post-title">{{ page.title }}</h1>
           {{ content }}
-          <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/css/img/top-arrow.png" alt="Back to Top"/></a>
+          <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
         </section>
       {% else %}
         <div class="post-wrapper">
+          <div class="post-header">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="date-container">
+              <span class="date"><strong>{{ page.date | date: "%d" }}</strong>&nbsp;{{ page.date | date: "%b" }}</span>
+              <svg class="ico-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/assets/img/sprite-icons.svg#calendar" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            </div>
+          </div>
           <section id="content" class="written-content">
             <a name="top"></a>
-            <!-- <div class="date-container"><span class="date"><strong>{{ page.date | date: "%d" }}</strong>&nbsp;{{ page.date | date: "%b" }}</span>
-            <svg class="ico-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/assets/img/sprite-icons.svg#calendar" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div> -->
             {{ content }}
-            <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/css/img/top-arrow.png" alt="Back to Top"/></a>
+            <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
             <div class="post-closer cf">
-              <section class="author">
-                <div class="author-image" alt="avatar" style="background-image: url({{ site.owner.avatar | prepend: site.baseurl }})"></div>
-                <div class="author-info">
-                  <h4>{{ site.owner.name }}</h4>
-                  {% if author.bio %}<p class="bio">{{ author.bio }}</p>{% endif %}
-                  <hr>
-                  <p class="sub published">Published <time datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
-                  {% if page.update %}
-                    <p class="sub updated">Last updated <time datetime="{{ page.update | date: "%F %R" }}">{{ page.update | date: "%B %d, %Y" }}</time></p>
-                  {% endif %}
-                </div>
-              </section>
+              <div class="isLeft">
+                <section class="author">
+                  <div class="author-image" alt="avatar" style="background-image: url({{ site.owner.avatar | prepend: site.baseurl }})"></div>
+                  <div class="author-info">
+                    <h4>{{ site.owner.name }}</h4>
+                    {% if author.bio %}<p class="bio">{{ author.bio }}</p>{% endif %}
+                    <hr>
+                    <p class="sub published">Published <time datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+                    {% if page.update %}
+                      <p class="sub updated">Last updated <time datetime="{{ page.update | date: "%F %R" }}">{{ page.update | date: "%b %d, %Y" }}</time></p>
+                    {% endif %}
+                  </div>
+                </section>
+              </div>
+              <div class="isRight">
+                <h5>Share this post</h5>
+                {% include share-buttons.html %}
+              </div>
             </div>
-            {% include share-buttons.html %}
           </section>
+        </div>
+        <div class="PageNavigation">
+          {% if page.previous.url %}
+            <a class="prev" href="{{page.previous.url}}">
+              <span class="fas fa-chevron-left"></span> &nbsp;{{page.previous.title}}</a>
+          {% endif %}
+          {% if page.next.url %}
+            <a class="next" href="{{page.next.url}}">{{page.next.title}}&nbsp; <span class="fas fa-chevron-right"></span></a>
+          {% endif %}
         </div>
       {% endif %}
       {% if site.disqus %}
