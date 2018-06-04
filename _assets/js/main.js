@@ -96,10 +96,15 @@
   (function ($) {
     "use strict";
     window.sr = ScrollReveal({ duration: 1000, reset: false });
-    sr.reveal('#one .inner', 10);
-    sr.reveal('#two .inner', 10);
-    sr.reveal('#back-to-top', 25);
-
+    if ($('body.landing').length) {
+      sr.reveal('#one .inner', 10);
+      sr.reveal('#two .inner', 10);
+    }
+    else if ($('.post').length) {
+      sr.reveal('#back-to-top', 25);
+    }
+    // sr.reveal('#three .tile', 25);
+    // sr.reveal('#three', 10);
     $('.filter li').on('click', function() {
       var $this = $(this),
       isActive = $this.hasClass( 'active' ),
