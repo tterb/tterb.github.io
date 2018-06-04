@@ -5,15 +5,12 @@ keywords: "how,upgrade,SSD,harddrive,razer,blade,laptop,data,recovery,tutorial"
 date: 2016-10-06
 categories: blog
 options: halfhead
+image: razer-blade.jpg
 tags:
-  - SSD
   - Razer
-  - Razer Blade
   - laptop
-  - recovery
   - tutorial
   - tech
-  - tools
   - how-to
 ---
 

@@ -11,16 +11,16 @@
   desc: A Rainmeter skin that provides thousands of Google Play Music users with the ability to access their music tastefully from their desktop.
   image: PlayMusic.png
 
-- title: Atomic Design UI
+- title: Atomic Design
   permalink: /Atomic-Design-UI/
   repo: atomic-design-ui
-  desc: A theme that provides a dark, modern, and refined interface for Atom, featuring modifications that focus on improving the user experience and adaptability.
+  desc: A UI-theme that provides a dark, modern, and refined interface for Atom, featuring modifications that focus on improving the user experience and adaptability.
   image: AtomicDesign.png
 
 - title: UD Therapy
   permalink: /projects/Urban-Dictionary-Therapy/
   repo: Urban-Dictionary-Therapy
-  desc: A simple command-line rehabilitation program for coping with those long frustrating days of programming.
+  desc: A simple command-line rehabilitation program for coping with long, frustrating days of programming.
   image: UDTherapy.png
 
 - title: Github Calendar

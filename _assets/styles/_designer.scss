@@ -1,0 +1,74 @@
+#designer {
+  padding: 0 !important;
+  ul {
+    padding-left: 1.25em;
+    li {
+      color: _palette(accent1,fg);
+      font-family: ('Open Sans', Helvetica, sans-serif) !important;
+      font-size: _font(hdr-size-small);
+      padding-left: 0;
+      &::before {
+        font-size: _font(hdr-size-large);
+      }
+      &:hover {
+        color: _palette(accent1, fg-bold);
+        &::before {
+          color: _palette(accent1, fg);
+        }
+      }
+    }
+  }
+
+  #about {
+    background: _palette(bg);
+    padding: 3em 0 10em;
+    &::after {
+      background: linear-gradient(to bottom right, transparent, transparent 50%, _palette(bg) 50%, _palette(bg));
+    }
+  }
+
+  #four {
+    background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url("/assets/img/design.jpg") !important;
+    background-position: bottom;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    padding: 2em 0 !important;
+  }
+}
+
+.webp #designer #four {
+  background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url("/assets/img/design.webp") !important;
+}
+
+.design-tiles {
+  // .mask {
+  //   padding: 20px;
+  // }
+  h4 {
+    margin-top: 4% !important;
+  }
+  .button {
+    height: 2.75em;
+  }
+  img {
+    filter: grayscale(10%);
+  }
+}
+
+.mfp-container {
+  .mfp-arrow {
+    position: absolute;
+    background: transparent !important;
+    color: #fff;
+    top: 49%;
+    box-shadow: none;
+    cursor: pointer;
+    z-index: 99999;
+    &.fa-chevron-left {
+      left: 6.5%;
+    }
+    &.fa-chevron-right {
+      right: 6.5%;
+    }
+  }
+}

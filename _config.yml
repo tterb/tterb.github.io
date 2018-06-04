@@ -15,10 +15,11 @@ owner:
   name: Brett Stevenson # or company name
   email: BStevensonDev@gmail.com
   url: https://brettstevenson.io
-  avatar: "/images/avatar.png"
+  avatar: "/assets/img/avatar.png"
 first_published: 2015 # if migrating another site, the year of your first publish
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://brettstevenson.io" # the base hostname & protocol for your site
+disqus: brettstevenson
 
 social_links:
   github: https://github.com/tterb
@@ -52,7 +53,7 @@ sass:
  style: compressed
 
 include: ['_pages','.htaccess']
-exclude: ['site.bat','compose.rb','README.md','Gulpfile.js','.sass-lint.yml','package.json','node_modules','jspm_packages','fonts/*.html', '_pages/stuff.html', 'js/*_.*']
+exclude: ['vendor','_assets','node_modules','jspm_packages','Gemfile','Gemfile.lock','Gulpfile.js','.sass-lint.yml','package.json','README.md','**/fonts/*.html', '**/**/*_.*']
 
 defaults:
   - scope:
@@ -62,14 +63,14 @@ defaults:
   - scope:
       path: _posts
     values:
-      layout: post
+      layout: post2
   - scope:
       path: _drafts
     values:
-      layout: post
+      layout: post2
 
 # For Jekyll-SEO-tag
-logo: "/images/logo.png"
+logo: "/assets/img/logo.png"
 social:
   name: Brett Stevenson
   links:
@@ -77,6 +78,18 @@ social:
     - https://linkedin.com/in/brett-stevenson/
     - https://twitter.com/bstevensondev
     - https://bstevenson.deviantart.com/
+
+share:
+  - facebook
+  - twitter
+  - google-plus
+  - linkedin 
+  - pinterest 
+  - reddit
+  - tumblr
+  - pocket
+  # - wordpress
+  - email
 
 plugins:
   - jemoji

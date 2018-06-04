@@ -25,7 +25,7 @@ priority: 1.0
       </a>
     </div>
     <div class="col img-container">
-      <img src="{{ '/css/images/code.svg' | prepend: site.baseurl }}" alt="code"/>
+      <img src="{{ '/assets/img/code.svg' | prepend: site.baseurl }}" alt="code"/>
     </div>
   </div>
 </section>
@@ -34,7 +34,7 @@ priority: 1.0
 <section id="two" class="wrapper style1 special mid-content">
   <div class="inner" data-link="{{ '/design' | prepend: site.baseurl }}">
     <div class="col img-container">
-      <img src="{{ '/css/images/vector.svg' | prepend: site.baseurl }}" alt="pen-tool"/>
+      <img src="{{ '/assets/img/vector.svg' | prepend: site.baseurl }}" alt="pen-tool"/>
     </div>
     <div class="col content-desc">
       <a href="{{ '/design' | prepend: site.baseurl }}">
@@ -54,7 +54,7 @@ priority: 1.0
     <div class="project-tiles tile-container">
     {% for project in site.data.landing %}
         <div class="tile">
-        <img alt="{{ project.title }}" src="{{ site.baseurl }}{% if project.image %}/images/landing/{{ project.image }}{% endif %}" data-full="{{ site.baseurl }}/images/landing/{{ project.image }}" class="{% if project.image %} tile-image {% else %} no-image {% endif %}"/>
+        <img alt="{{ project.title }}" src="{{ site.baseurl }}{% if project.image %}/assets/img/landing/{{ project.image }}{% endif %}" data-full="{{ site.baseurl }}/assets/img/landing/{{ project.image }}" class="{% if project.image %} tile-image {% else %} no-image {% endif %}"/>
         <div class="mask">
           <h4>{{ project.title }}</h4>
           <p>{{ project.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>

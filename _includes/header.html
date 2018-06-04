@@ -1,5 +1,5 @@
 
-<header id="header" {% if page.layout == 'landing' %} class="landing alt" {% elsif page.options contains 'readme' %} class="readme" {% elsif page.layout == 'post' %}{% unless page.options contains 'readme' %} class="alt" {% endunless %}{% endif %}>
+<header id="header" {% if page.layout == 'landing' %} class="landing alt" {% elsif page.layout == 'post' %} class="alt {% if page.options contains 'readme' %}readme{% endif %}"{% endif %}>
   <h1><a href="{{ '/index.html' | prepend: site.baseurl }}">
   {% if site.logo %}
     <img class="header-logo" src="{{ site.logo | prepend: site.baseurl }}"/><span class="animated fadeIn">Brett Stevenson</span>
@@ -17,7 +17,7 @@
               {% assign sorted_pages = site.pages | sort: 'key','last' %}
               {% for my_page in sorted_pages %}
                 {% if my_page.title %}
-                  {% unless my_page.options contains 'nomenu' or my_page.title == 'Contact' %}
+                  {% unless my_page.options contains 'nomenu' %}
                   <li class="menu-page-link"><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
                   {% endunless %}
                 {% endif %}
