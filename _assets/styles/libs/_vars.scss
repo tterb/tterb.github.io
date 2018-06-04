@@ -131,11 +131,11 @@ $palette: (
   ),
 
   accent2: (
-    bg:				    #53BAB1,
+    bg:				    #53BAB8,
     fg-bold:		  rgba(#fff, 0.95),
-    fg:						mix(#53BAB1, #fff, 22%),
-    fg-light:		  mix(#53BAB1, #fff, 40%),
-    shadow:       desaturate(darken(#53BAB1, 20%), 30%),
+    fg:						mix(#53BAB8, #fff, 22%),
+    fg-light:		  mix(#53BAB8, #fff, 40%),
+    shadow:       desaturate(darken(#53BAB8, 20%), 30%),
     border:				rgba(#000, 0.125),
     border-bg:		rgba(#fff, 0.075),
     border2:			rgba(#000, 0.25),
