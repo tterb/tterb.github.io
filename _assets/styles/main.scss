@@ -4,6 +4,9 @@
 @import 'libs/mixins';
 @import 'libs/skel';
 @import 'libs/vars';
+@import 'libs/animate';
+@import 'libs/magnific-popup';
+@import 'libs/tooltipster';
 @import '404';
 @import 'blog';
 @import 'contact';
@@ -2332,7 +2335,7 @@ body.is-loading {
       }
       .button {
         font-size: 0.9em;
-        line-height: 2.8;
+        line-height: 3;
         &.outline {
           height: 3em;
           line-height: 3;
