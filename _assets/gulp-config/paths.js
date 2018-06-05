@@ -46,12 +46,14 @@ paths.jsPattern       = '/**/*.js';
 paths.imagePattern    = '/**/*.+(jpg|JPG|jpeg|JPEG|png|PNG|svg|SVG|gif|GIF|webp|WEBP|tif|TIF)';
 paths.markdownPattern = '/**/*.+(md|MD|markdown|MARKDOWN)';
 paths.htmlPattern     = '/**/*.html';
+paths.fontPattern     = '/**/*.+(ttf|TTF|otf|OTF|woff|WOFF|woff2|WOFF2|eot|EOT|css|CSS)'
 paths.xmlPattern      = '/**/*.xml';
 
 // Asset files globs
 paths.sassFilesGlob  = paths.sassFiles  + paths.sassPattern;
 paths.jsFilesGlob    = paths.jsFiles    + paths.jsPattern;
 paths.imageFilesGlob = paths.imageFiles + paths.imagePattern;
+paths.fontFilesGlob  = paths.fontFiles  + paths.fontPattern;
 
 // Jekyll files globs
 paths.jekyllPostFilesGlob  = paths.jekyllPostFiles  + paths.markdownPattern;

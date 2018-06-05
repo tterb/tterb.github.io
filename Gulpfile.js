@@ -97,7 +97,7 @@ gulp.task('build:fonts', ['fonts']);
 
 // Place fonts in proper location
 gulp.task('fonts', function() {
-  return gulp.src(paths.fontFiles + '/**/**.*')
+  return gulp.src(paths.fontFilesGlob)
     .pipe(rename(function(path) {path.dirname = '';}))
     .pipe(gulp.dest(paths.jekyllFontFiles))
     .pipe(gulp.dest(paths.siteFontFiles))
@@ -158,6 +158,14 @@ gulp.task('build:jekyll', function() {
 gulp.task('clean:jekyll', function(callback) {
   del(['_site']);
   callback();
+});
+
+// Runs jekyll build command using test config.
+gulp.task('build:jekyll:test', function() {
+  var shellCommand = 'bundle exec jekyll build --config _config.yml, _config.test.yml';
+  return gulp.src('')
+    .pipe(run(shellCommand))
+    .on('error', gutil.log);
 });
 
 // Run jekyll build command using local config
