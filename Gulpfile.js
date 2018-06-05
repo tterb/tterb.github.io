@@ -221,6 +221,12 @@ gulp.task('build', function(callback) {
   runSequence(['build:scripts', 'build:images', 'build:styles', 'build:fonts', 'build:downloads'], 'build:jekyll', callback);
 });
 
+gulp.task('build:test', function (callback) {
+  runSequence('clean', ['build:scripts', 'build:images', 'build:styles', 'build:fonts', 'build:downloads'],
+    'build:jekyll:test',
+    callback);
+});
+
 // Deletes _site directory and processed assets
 gulp.task('clean', ['clean:jekyll', 'clean:styles', 'clean:scripts', 'clean:images', 'clean:fonts', 'clean:downloads']
 );
