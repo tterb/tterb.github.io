@@ -1,66 +1,416 @@
----
-# From: http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/
-layout: null
-sitemap:
-  exclude: 'yes'
----
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{ site.url }}/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <loc>https://brettstevenson.io/</loc>
+    <lastmod>2018-06-05T02:19:15-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  {% for post in site.posts %}
-    {% unless post.published == false %}
+  
+    
     <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.lastmod %}
-        <lastmod>{{ post.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif post.date %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      {% if post.changefreq %}
-        <changefreq>{{ post.changefreq }}</changefreq>
-      {% else %}
+      <loc>https://brettstevenson.io/blog/improving-the-accessibility-of-jekyll.html</loc>
+      
+        <lastmod>2017-07-01T00:00:00-07:00</lastmod>
+      
+      
         <changefreq>weekly</changefreq>
-      {% endif %}
-      {% if post.priority %}
-        <priority>{{ post.priority }}</priority>
-      {% else if post.tags contains featured %}
-        <priority>0.9</priority>
-      {% else %}
-        <priority>0.7</priority>
-      {% endif %}
+      
+      
+        <priority>0.85</priority>
+      
     </url>
-    {% endunless %}
-  {% endfor %}
-  {% for page in site.html_pages %}
-    {% unless page.sitemap_exclude == "yes" %}
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/windows-app-store.html</loc>
+      
+        <lastmod>2017-06-20T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.7</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/projects/urban-dictionary-therapy.html</loc>
+      
+        <lastmod>2017-05-12T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.6</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/optimizing-jekyll.html</loc>
+      
+        <lastmod>2017-04-10T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/site-reconstruction.html</loc>
+      
+        <lastmod>2017-03-31T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/projects/atomic-delight.html</loc>
+      
+        <lastmod>2016-11-16T00:00:00-08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/how-to-upgrade-ssd-pt2.html</loc>
+      
+        <lastmod>2016-10-06T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.7</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/how-to-upgrade-ssd-pt1.html</loc>
+      
+        <lastmod>2016-10-05T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.9</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/atom-file-icons.html</loc>
+      
+        <lastmod>2016-09-29T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.6</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/projects/atomic-design-ui.html</loc>
+      
+        <lastmod>2016-08-23T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.8</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/projects/atomic-monokai.html</loc>
+      
+        <lastmod>2016-08-23T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.6</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/essential-atom-packages.html</loc>
+      
+        <lastmod>2016-08-22T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.7</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/projects/github-calendar.html</loc>
+      
+        <lastmod>2016-08-20T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.4</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/projects/playmusic.html</loc>
+      
+        <lastmod>2016-08-18T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.6</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/under-construction.html</loc>
+      
+        <lastmod>2016-08-17T00:00:00-07:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+  
+    
       <url>
-        <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-          {% if page.lastmod %}
-            <lastmod>{{ page.lastmod | date: "%Y-%m-%d" }}</lastmod>
-          {% elsif page.date %}
-            <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-          {% else %}
-            <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-          {% endif %}
-          {% if page.changefreq %}
-            <changefreq>{{ page.changefreq }}</changefreq>
-          {% else %}
+        <loc>https://brettstevenson.io/404.html</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
             <changefreq>weekly</changefreq>
-          {% endif %}
-          {% if page.priority %}
-            <priority>{{ page.priority }}</priority>
-          {% else %}
+          
+          
             <priority>0.5</priority>
-          {% endif %}
+          
       </url>
-    {% endunless %}
-  {% endfor %}
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/blog/</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/contact-failed/</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/contact-success/</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/contact/</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/credits/</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/design</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/dev</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>1.0</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/subscribe/</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/resume</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/tags/</loc>
+          
+            <lastmod>2018-06-05T02:19:15-07:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
 </urlset>

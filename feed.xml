@@ -1,30 +1,907 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | replace: '<br />', ', ' | strip_html | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Brett Stevenson</title>
+    <description>Developer &amp;#x1f784; Designer &amp;#x1f784; Student</description>
+    <link>https://brettstevenson.io/</link>
+    <atom:link href="https://brettstevenson.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 05 Jun 2018 02:19:15 -0700</pubDate>
+    <lastBuildDate>Tue, 05 Jun 2018 02:19:15 -0700</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Improving the Accessibility of Jekyll</title>
+        <description>&lt;p&gt;Due to it’s simplicity, &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/a&gt; offers many advantages over other blogging platforms, including increased loading speeds, securtity, and server–side consistency. In the words of it’s creators,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jekyll does what you tell it to do – no more, no less. It doesn’t try to outsmart users by making bold assumptions, nor does it burden them with needless complexity and configuration. Put simply, Jekyll gets out of your way and allows you to concentrate on what truly matters: your content.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Also, for those in a hurry to get their blog up and running, the Jekyll community has also created a large assortment of easily customizable free and paid themes. So no matter your goals, you’re guarenteed to find a theme that suits your needs.
+  Additionally, Jekyll’s integration with &lt;a href=&quot;https://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt; provides users with free web-hosting for each GitHub profile, potentially saving hundreds of dollars in hosting costs for blogs with high traffic.&lt;/p&gt;
+
+&lt;h4 align=&quot;center&quot;&gt;So why does this platform seem isolated to the developer community?&lt;/h4&gt;
+
+&lt;p&gt;A major aspect of Jekyll is that it uses markdown for writing and formatting blog posts. For most developers, writing in markdown quickly becomes second nature from writing project documentation on &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; or similar version control repository sites. Though, for the less technically–inclined, this foreign markup can be intimidating at first glance, consequently turning off many potential users.&lt;/p&gt;
+
+&lt;p&gt;In response, I’ve began development of &lt;a href=&quot;https://github.com/Hyde/&quot;&gt;&lt;strong&gt;Hyde&lt;/strong&gt;&lt;/a&gt;, a Jekyll–inspired markdown editor that aims to improve the accessibility of writing blog posts in markdown by providing an experience that’s akin to writing in a word processor or online text formatting field, while still exposing users to the markdown syntax.
+  Although still in it’s infancy, &lt;strong&gt;Hyde&lt;/strong&gt; currently features a formatting toolbar, side–by–side HTML and rendered Markdown live–preview, sync–scrolling, as well as syntax–highlighting for markdown and GFM–compatible HTML with a collection of syntax themes.
+  Additionally, through future developments, I hope to also incorporate automated &lt;a href=&quot;https://jekyllrb.com/docs/frontmatter/&quot;&gt;YAML front-matter&lt;/a&gt; creation, git-integration, and many more features.&lt;/p&gt;
+
+&lt;p&gt;If you are a current or prospective &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; user that’s interested in this project, feel free to share any suggestions or features you’d like to see in the future via &lt;a href=&quot;https://github.com/Hyde/&quot;&gt;&lt;strong&gt;Github&lt;/strong&gt;&lt;/a&gt; or the link below!&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;button bottom special&quot;&gt;
+    &lt;a class=&quot;&quot; href=&quot;/contact/&quot; style=&quot;padding-left: 4px;&quot;&gt;Contact Me&lt;/a&gt;
+  &lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 01 Jul 2017 00:00:00 -0700</pubDate>
+        <link>https://brettstevenson.io/blog/improving-the-accessibility-of-jekyll.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/improving-the-accessibility-of-jekyll.html</guid>
+        
+        <category>markdown</category>
+        
+        <category>jekyll</category>
+        
+        <category>editor</category>
+        
+        <category>Github pages</category>
+        
+        <category>electron</category>
+        
+        <category>projects</category>
+        
+        
+        <category>blog</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>The Future of the Windows App Store</title>
+        <description>&lt;p&gt;Since Microsoft’s announcement of their new Chrome OS alternative, &lt;a href=&quot;https://www.microsoft.com/en-us/windows/windows-10-s&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;Windows 10 S&lt;/strong&gt;&lt;/a&gt;, which in short, is a version of Windows 10 that boasts improved security and performance while &lt;em&gt;exclusively&lt;/em&gt; supporting applications from the &lt;a href=&quot;https://www.microsoft.com/en-us/store/apps/windows?icid=CNavAppsWindowsApps&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Windows App Store&lt;/a&gt;, I have been interested to see the subsequent effect this would have on the Windows App Store.&lt;/p&gt;
+
+&lt;p&gt;Whereas, Google’s &lt;a href=&quot;https://www.chromium.org/chromium-os&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Chrome OS&lt;/a&gt; was launched with exclusive support of applications from their thriving &lt;a href=&quot;https://chrome.google.com/webstore/category/collection/for_your_desktop&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Chrome Web Store&lt;/a&gt; which had been long associated with the popular web browser, Microsoft’s Windows App Store has never recieved the same positive reception from its users.
+As an active Windows user, like many others, my experiences with the Windows App Store have been brief and often left much to be desired. A caveat, which presumably held great influence over Microsoft’s recent shift away from the smartphone market. Thus, resulting in a further decline of the stores contents.&lt;/p&gt;
+
+&lt;p&gt;However, recent developments seem to suggest that the evolution of Windows 10 S, in addition to the integration of the &lt;a href=&quot;https://docs.microsoft.com/en-us/windows/uwp/get-started/whats-a-uwp&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Universal Windows Platform&lt;/a&gt; (UWP), may have been enough to bring major developers and services to the store. Most notably, the recent addition of iTunes, Spotify, and even many popular &lt;a href=&quot;https://www.theverge.com/circuitbreaker/2017/5/11/15625320/ubuntu-suse-linux-fedora-windows-store-microsoft-build-2017&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;linux distributions&lt;/a&gt;. Likewise, we’ve also seen the addition of many apps from independent developers, including a long-time favorite of mine, &lt;a href=&quot;https://www.googleplaymusicdesktopplayer.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Play Music Desktop Player&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, while the current state of the Windows Store may not rival the app stores behemoths of Google or Apple, with the introduction of Windows 10 S and the continued addition of apps from these established brands, Microsoft may still be able to turn the tides on the Windows Stores vexatious past.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 20 Jun 2017 00:00:00 -0700</pubDate>
+        <link>https://brettstevenson.io/blog/windows-app-store.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/windows-app-store.html</guid>
+        
+        <category>Windows 10</category>
+        
+        <category>Microsoft</category>
+        
+        <category>tech</category>
+        
+        <category>tools</category>
+        
+        <category>discussion</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Urban Dictionary Therapy</title>
+        <description>&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/25802132/cfcd58de-33a5-11e7-8cf8-81f18f6f7af8.png&quot; width=&quot;750&quot; alt=&quot;preview&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; is a simple command-line rehabilitation program for coping with those long frustrating days of programming. Utilizing this program and the information generously donated by the online community, you too can return to your work as a more successful, functioning member of society. More importantly, Urban Dictionary Therapy provides you with the much needed liberation without the temptations that come with opening up a new tab in your browser.
+Though, this is only one of the many wonderful ways this package can benefit your life. Maybe you’re looking for a substitute for the obligatory &lt;code class=&quot;highlighter-rouge&quot;&gt;fortune&lt;/code&gt; package in your command-line greeting or just simply looking for a way to expand your vocabulary?
+No matter what the issue, &lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; provides a perfect answer to all your woes.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Arguments&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;-s&lt;/em&gt; or &lt;em&gt;–search&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;Prints a definition for the specified term&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;-a&lt;/em&gt; or &lt;em&gt;–all&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;Prints a whole page of definitions&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;-wotd&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;Prints the “&lt;em&gt;Word of the Day&lt;/em&gt;”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;-h&lt;/em&gt; or &lt;em&gt;–help&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;Prints a list of accepted arguments and their functionality&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;setup&quot;&gt;Setup:&lt;/h2&gt;
+&lt;p&gt;This package requires that you have Python3, as well as BeautifulSoup4. On OS X and Linux systems Python3 should be installed by default. Once Python is installed you can download &lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/&quot;&gt;BeautifulSoup&lt;/a&gt; with the command:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip3 install bs4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; To my knowledge, Python3 is also included in the new &lt;em&gt;Bash on Windows&lt;/em&gt; linux-subsystem for Windows 10.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, you can also make the program executable from anywhere in your file–system with the command &lt;code class=&quot;highlighter-rouge&quot;&gt;./UDTherapy.py&lt;/code&gt; by adding the program directory to your &lt;em&gt;PATH&lt;/em&gt; and by modifying the program permissions using the command:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;chmod +x UDTherapy.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 12 May 2017 00:00:00 -0700</pubDate>
+        <link>https://brettstevenson.io/blog/projects/urban-dictionary-therapy.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/projects/urban-dictionary-therapy.html</guid>
+        
+        <category>urban dictionary</category>
+        
+        <category>command-line</category>
+        
+        <category>terminal</category>
+        
+        <category>bash</category>
+        
+        <category>tools</category>
+        
+        <category>python</category>
+        
+        <category>projects</category>
+        
+        
+        <category>blog</category>
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>Optimizing Jekyll</title>
+        <description>&lt;p&gt;Upon launching my new redesigned website, I’ve been spending the some time optimizing the site performance and load speeds using &lt;strong&gt;&lt;a href=&quot;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Ftterb.github.io%2F&amp;amp;tab=mobile&quot;&gt;Google PageSpeed Insights&lt;/a&gt;&lt;/strong&gt;.
+  Therefore, I thought I would take a second to share with you my discoveries and also recommend a few helpful resources for improving the performance of your own Jekyll website.
+  Using these methods, I have managed to receive the following PageSpeed rating. Though this is still a work-in-progress, and I will be adding &lt;a href=&quot;#updates&quot;&gt;updates&lt;/a&gt; as I explore this topic further.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://user-images.githubusercontent.com/16360374/27520456-f313f3de-59c0-11e7-81ce-40273d1ffcbb.png&quot; class=&quot;shadow&quot; width=&quot;800&quot; alt=&quot;PageSpeed&quot; style=&quot;margin-bottom:0.5em&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p class=&quot;h-note&quot; style=&quot;margin-bottom:3em&quot;&gt;In an effort not to repeat the information in the articles listed below, I'll only share findings that weren't explicitly discussed in any of the following resources.&lt;/p&gt;
+
+&lt;h3 id=&quot;optimize-your-own-images&quot;&gt;Optimize your own images&lt;/h3&gt;
+&lt;p&gt;As with most websites, when I first launched the new design, the biggest hindrance to my websites loading speed was the size of the images on my page. Though, after observing the disappointing quality of the “&lt;em&gt;optimized&lt;/em&gt;” images provided by PageSpeed Insights, I instead elected to use &lt;strong&gt;&lt;a href=&quot;https://www.gimp.org/&quot;&gt;GIMP&lt;/a&gt;&lt;/strong&gt; to manually decrease and compress my images to preserve the image quality until PageSpeeds requirements were satisfied.
+  I would highly recommend doing the same, particularly for images that are featured in various places throughout your website.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;resources&quot;&gt;Resources:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://medium.com/@dimitrikoenig/scoring-100-on-googles-pagespeed-insights-with-jekyll-adcbbb229baf&quot;&gt;Scoring 100 on Google’s PageSpeed Insights with Jekyll&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://chrishallahan.com/blog/pass-google-pagespeed-performance-test&quot;&gt;How to get your Jekyll + GitHub pages website to pass Google’s PageSpeed Tests&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://o.zasadnyy.com/blog/optimized-jekyll-site-with-grunt/&quot;&gt;Optimized Jekyll site with Grunt&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;the-results&quot;&gt;The Results&lt;/h3&gt;
+&lt;p&gt;I’ve provided my resulting Gulpfile below, though it’s also available via &lt;strong&gt;&lt;a href=&quot;https://gist.github.com/tterb/741b353d9a2a19947d2b10a9c94de21f&quot;&gt;gist&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;shell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-shell'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;minifyHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-minify-html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;sass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-sass'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;importCss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-import-css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;autoprefixer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-autoprefixer'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;uncss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-uncss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;minifyCss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-minify-css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;rename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-rename'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;glob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'glob'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;imagemin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-imagemin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;pngquant&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'imagemin-pngquant'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;jpegtran&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'imagemin-jpegtran'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;gifsicle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'imagemin-gifsicle'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;optipng&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'imagemin-optipng'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-replace'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;concat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-concat-util'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;uncss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-uncss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;minifyCSS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-minify-css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;critical&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'critical'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;download&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-download'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Jekyll&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jekyll'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'index.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jekyll build'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// HTML&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'optimize-html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/**/*.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;minifyHTML&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;quotes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&amp;lt;link href=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;\/&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;style.scss&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;[^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;*&amp;gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readFileSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/css/style.scss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'utf8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;style&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;n'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;n&amp;lt;/style&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Javascript&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'javascript'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jekyll'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'js/main.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jspm install'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jspm bundle-sfx js/main _site/js/min.js --minify --no-mangle'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// CSS&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'optimize-css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/css/style.scss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;autoprefixer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uncss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+           &lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/**/*.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+           &lt;span class=&quot;na&quot;&gt;ignore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;minifyCss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;keepBreaks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/css/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Eliminate render-blocking CSS&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'include-css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/**/*.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&amp;lt;link href=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;\/&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;style.scss&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;[^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;*&amp;gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readFileSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/css/style.scss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'utf8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;style&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;n'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;n&amp;lt;/style&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Eliminate render-blocking CSS in above-the-fold content&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'styles:critical'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'src/sass/critical.css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;minifyCSS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;style&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;footer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;/style&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;basename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'criticalCSS'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;extname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.html'&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_includes/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Optimize Images&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'optimize-images'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/**/*.jpg'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'_site/**/*.jpeg'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'_site/**/*.gif'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'_site/**/*.png'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imagemin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;progressive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;svgoPlugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;removeViewBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pngquant&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jpegtran&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gifsicle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'_site/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Purge cache&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'purge-cache'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cloudflareToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cloudflareEmail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;domain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cloudflareDomain&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;cloudflare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Remove unused CSS&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'uncss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;'css/style.scss'&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uncss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// your site pages here&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;'http://127.0.0.1:4000/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'css/uncss/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Google Analytics&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fetch-analytics'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'https://www.google-analytics.com/analytics.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'assets/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Run (Default)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'default'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'javascript'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'optimize-css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'include-css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;'optimize-html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'optimize-images'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'styles:critical'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fetch-analytics'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Run: Build&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'build'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'javascript'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'optimize-css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'include-css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;'optimize-html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'optimize-images'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'styles:critical'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fetch-analytics'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Run: Clean&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'clean'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'uncss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;updates&quot;&gt;Updates&lt;/h2&gt;
+
+&lt;h3 id=&quot;leveraging-browser-caching&quot;&gt;Leveraging browser caching&lt;/h3&gt;
+&lt;p&gt;Since sharing my original post, I’ve since found a way to resolve the persistent “Leverage browser caching” issue, which was ironically referencing Google’s own analytics tools.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Google Analytics&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fetch-analytics'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'https://www.google-analytics.com/analytics.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'assets/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// or whatever folder you want it in&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This way, a new version of the &lt;code class=&quot;highlighter-rouge&quot;&gt;analytics.js&lt;/code&gt; file is downloaded on each deployment, rather than utilizing Google’s remote file. Therefore, you should also instead include your local &lt;code class=&quot;highlighter-rouge&quot;&gt;analytics.js&lt;/code&gt; file in your html.&lt;/p&gt;
+
+&lt;!--------------------------------- Links -------------------------------------&gt;
+
+</description>
+        <pubDate>Mon, 10 Apr 2017 00:00:00 -0700</pubDate>
+        <link>https://brettstevenson.io/blog/optimizing-jekyll.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/optimizing-jekyll.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>web</category>
+        
+        <category>performance</category>
+        
+        <category>PageSpeed</category>
+        
+        <category>gulp</category>
+        
+        <category>grunt</category>
+        
+        <category>javascript</category>
+        
+        <category>cloudflare</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Site Reconstruction...</title>
+        <description>&lt;p&gt;I’m in the process of redesigning this website, though my previous site will remain active in the meantime.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 31 Mar 2017 00:00:00 -0700</pubDate>
+        <link>https://brettstevenson.io/blog/site-reconstruction.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/site-reconstruction.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Atomic Delight</title>
+        <description>&lt;!-- Badges --&gt;
+&lt;p align=&quot;right&quot;&gt;
+	&lt;a href=&quot;https://atom.io/themes/atomic-delight-syntax&quot;&gt;
+		&lt;img src=&quot;https://img.shields.io/apm/v/atomic-delight-syntax.svg?&quot; height=&quot;20&quot; alt=&quot;version&quot; title=&quot;Version&quot; /&gt;&amp;nbsp;&amp;nbsp;
+	&lt;/a&gt;
+	&lt;a href=&quot;https://opensource.org/licenses/MIT&quot;&gt;
+		&lt;img src=&quot;https://img.shields.io/apm/l/atomic-delight-syntax.svg?&quot; height=&quot;20&quot; alt=&quot;license&quot; title=&quot;License&quot; /&gt;&amp;nbsp;&amp;nbsp;
+	&lt;/a&gt;
+    &lt;img src=&quot;https://img.shields.io/apm/dm/atomic-delight-syntax.svg?maxAge=2592000?&quot; height=&quot;20&quot; alt=&quot;downloads&quot; title=&quot;Downloads&quot; /&gt;&amp;nbsp;&amp;nbsp;
+	&lt;a href=&quot;https://atom.io/themes/atomic-delight-syntax&quot;&gt;
+		&lt;img src=&quot;https://badges.frapsoft.com/os/v1/open-source.svg?v=103&quot; height=&quot;20&quot; alt=&quot;open source&quot; title=&quot;Open Source&quot; /&gt;&amp;nbsp;&amp;nbsp;
+	&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+	&amp;lt;p align=&quot;center&quot;&amp;gt;
+    &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20731580/d7ad7bbc-b63f-11e6-8410-a26fd36b4b8e.png&quot; width=&quot;950&quot; alt=&quot;screenshot&quot; title=&quot;Screenshot&quot; /&gt;
+  &amp;lt;/p&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Atomic Delight&lt;/strong&gt; syntax and UI-themes are delightfully light variants of the popular [&lt;em&gt;Atomic Monokai&lt;/em&gt;] syntax-theme and its corresponding [&lt;em&gt;Atomic Design&lt;/em&gt;] UI-theme.
+  Created with the knowledge that many programmers prefer to have both a light and a dark syntax-theme to cycle between, this syntax and UI–theme allows programmers to do so with a sense of familiarity.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Install:&lt;/h2&gt;
+&lt;p&gt;These packages are distributed with [&lt;em&gt;apm&lt;/em&gt;]. After &lt;a href=&quot;https://github.com/atom/apm#installing&quot;&gt;installing apm&lt;/a&gt;, you can install these themes with the commands.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;apm install atomic-delight-syntax
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;apm install atomic-delight-ui
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After installation, these theme can be easily activated by going to the &lt;strong&gt;Themes&lt;/strong&gt; section in the &lt;em&gt;Settings&lt;/em&gt; view and selecting them from the &lt;em&gt;UI&lt;/em&gt; and &lt;em&gt;Syntax&lt;/em&gt; drop-down menus.
+&lt;br /&gt;
+&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;___&lt;/p&gt;
+
+&lt;h2 id=&quot;screenshots&quot;&gt;Screenshots:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Coming soon…&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;___&lt;/p&gt;
+
+&lt;h2 id=&quot;other-recommended-packages&quot;&gt;Other Recommended Packages:&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+  &lt;em&gt;For more useful packages, check out my list of&lt;/em&gt; [&lt;strong&gt;&lt;em&gt;Essential Atom Packages&lt;/em&gt;&lt;/strong&gt;], &lt;em&gt;which I’ll continue to keep up to date as I explore and familiarize myself with the editor and it’s community.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;___&lt;/p&gt;
+
+&lt;p align=&quot;right&quot;&gt;
+    &lt;span class=&quot;badge-paypal&quot;&gt;&lt;a href=&quot;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=E6RKPR34SH6CU&quot; alt=&quot;donate&quot; title=&quot;Donate&quot;&gt;
+    &lt;img src=&quot;https://img.shields.io/badge/paypal-donate-yellow.svg&quot; height=&quot;20&quot; alt=&quot;donate&quot; title=&quot;Donate&quot; /&gt;&lt;/a&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;
+&lt;/p&gt;
+
+&lt;!-------------------------------- Links --------------------------------------&gt;
+
+</description>
+        <pubDate>Wed, 16 Nov 2016 00:00:00 -0800</pubDate>
+        <link>https://brettstevenson.io/blog/projects/atomic-delight.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/projects/atomic-delight.html</guid>
+        
+        <category>UI</category>
+        
+        <category>Atom</category>
+        
+        <category>syntax</category>
+        
+        <category>editor</category>
+        
+        <category>design</category>
+        
+        <category>projects</category>
+        
+        
+        <category>blog</category>
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>Upgrading the SSD on a Razer Blade (pt 2)</title>
+        <description>&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20456020/80f8afd0-ae1f-11e6-8cab-b147675cd539.jpg&quot; height=&quot;200&quot; alt=&quot;razer blade&quot; title=&quot;Razer Blade&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;supplies&quot;&gt;Supplies:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The new &lt;a href=&quot;https://www.amazon.com/Samsung-850-EVO-Internal-MZ-N5E500BW/dp/B00TGIW1XG/ref=sr_1_13?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1479538259&amp;amp;sr=1-13&amp;amp;keywords=m.2+ssd+cable&quot;&gt;M.2 SATA III SSD hard drive&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/B00KQ4LNJC/ref=oh_aui_detailpage_o06_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;M.2 SATA III SSD enclosure &amp;amp; adapter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.macrium.com/reflectfree.aspx&quot;&gt;Macrium Reflect Free&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/B01FAN2MLQ/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;T5 torx screwdriver&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Compressed-Professional-Blow-Off-Electronics/dp/B015UNJZAC/ref=sr_1_2?ie=UTF8&amp;amp;qid=1479548500&amp;amp;sr=8-2-spons&amp;amp;keywords=compressed+air&amp;amp;psc=1&quot;&gt;Compressed air&lt;/a&gt; (&lt;em&gt;optional&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;step-four-installation&quot;&gt;Step Four: &lt;strong&gt;Installation&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Now that you’ve cloned your internal drive, you’re ready to get started installing your new hard drive.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;After your laptop is powered off, you will first need to remove the 10 T5 screws on the underside, shown in the photo below. This is where the aforementioned &lt;a href=&quot;https://www.amazon.com/gp/product/B01FAN2MLQ/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;T5 torx screwdriver&lt;/a&gt; will come in handy. I would also recommend keeping the screws in a small empty cup, prescription bottle, or whatever else you have at your disposal, as they are small and you don’t want to lose track of them.
+  &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20454747/a82808b0-adfe-11e6-975f-e01a3eb4b2d8.jpg&quot; height=&quot;350&quot; alt=&quot;screws&quot; title=&quot;Screws&quot; /&gt;
+  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Next you will want to remove the backplate and identify the where the SSD, located under the ribbon cable circled below in red. To disconnect the ribbon cable, you will want to carefully lift up on the small black tab on its connector, which will release the ribbon cable.
+  &lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; The placement may differ on other laptops, but should be similarly visible.
+  &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20454874/f68ce730-ae00-11e6-80fb-c6522741915d.jpg&quot; height=&quot;300&quot; alt=&quot;components&quot; title=&quot;Components&quot; /&gt;
+  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You will now want to remove the phillips–head screw attaching the SSD to the motherboard, at which time you will be free to gently remove the hard drive from its connector. Though, when removing the drive be careful to maintain the placement of the sticky pad beneath it, as you will use it to help adhere the new drive to the board.
+  &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;
+  	&lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20454748/abc02c28-adfe-11e6-8ea8-dff5bf482dd1.jpg&quot; height=&quot;350&quot; alt=&quot;hard drive&quot; title=&quot;Hard drive&quot; /&gt;
+  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once the old hard drive is removed, you may now remove your new drive from the SSD enclosure and install it in place of the old drive. First inserting it into the M.2 SATA III connector, then screwing it into the motherboard.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You may now reconnect the ribbon cable, placing it inside of the connector and gently pressing down on the tab you lifted earlier to lock it into place.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-five-optional-spring-cleaning&quot;&gt;Step Five (&lt;em&gt;optional&lt;/em&gt;): &lt;strong&gt;Spring cleaning&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;While you’ve already got your laptop open, you might as well utilize the opportunity to do a little maintenance. If you already have &lt;a href=&quot;https://www.amazon.com/Compressed-Professional-Blow-Off-Electronics/dp/B015UNJZAC/ref=sr_1_2?ie=UTF8&amp;amp;qid=1479548500&amp;amp;sr=8-2-spons&amp;amp;keywords=compressed+air&amp;amp;psc=1&quot;&gt;compressed air&lt;/a&gt; on hand, it can be beneficial to blow out some of the dust and debris that tends to collect around your fans and other internals. As a result, your laptop should run cooler, causing its fans to spin up less often.
+  &lt;br /&gt;&lt;/p&gt;
+&lt;p class=&quot;h-warning&quot;&gt;Also, I must advise that you **[don't use a vacuum]** for this cleaning as it can cause static electricity, which is bad news for the sensitive components inside your laptop.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-six-enjoy&quot;&gt;Step Six: &lt;strong&gt;Enjoy!&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Fasten the backplate using the T5 screws you removed earlier, boot up your computer as usual, and enjoy your upgraded Razer Blade!&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--------------------------------- Links -------------------------------------&gt;
+</description>
+        <pubDate>Thu, 06 Oct 2016 00:00:00 -0700</pubDate>
+        <link>https://brettstevenson.io/blog/how-to-upgrade-ssd-pt2.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/how-to-upgrade-ssd-pt2.html</guid>
+        
+        <category>Razer</category>
+        
+        <category>laptop</category>
+        
+        <category>tutorial</category>
+        
+        <category>tech</category>
+        
+        <category>how-to</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Upgrading the SSD on a Razer Blade</title>
+        <description>&lt;p&gt;When upgrading the SSD on my 2015 Razer Blade, I found many inquiries, yet limited resources on the topic. As a result, I figured I would make this guide seeing as the process was fairly straight–forward and the results were both beneficial and cost-effective.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20456077/939ebbfa-ae21-11e6-925c-6a0d4c60a4ca.png&quot; height=&quot;275&quot; alt=&quot;razer blade&quot; title=&quot;Razer Blade&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;choosing-your-drive&quot;&gt;Choosing your Drive&lt;/h2&gt;
+&lt;p&gt;If you’ve already chosen your new SSD you can skip ahead to &lt;a href=&quot;#step1&quot;&gt;&lt;strong&gt;Step One&lt;/strong&gt;&lt;/a&gt;, but for those of you who haven’t I thought I’d provide you with a few notable options.
+  I personally chose to upgrade my original 256gb SSD to a 500gb &lt;a href=&quot;https://www.amazon.com/Samsung-850-EVO-Internal-MZ-N5E500BW/dp/B00TGIW1XG/ref=sr_1_13?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1479538259&amp;amp;sr=1-13&amp;amp;keywords=m.2+ssd+cable&quot;&gt;Samsung 850 EVO&lt;/a&gt; as they can be found affordably online and provide a performance increase over the stock SSD. Yet, I also know others who have had success with the &lt;a href=&quot;https://www.amazon.com/Crucial-256GB-Internal-Solid-CT256M550SSD4/dp/B00ITFZTHC/ref=sr_1_fkmr0_2?ie=UTF8&amp;amp;qid=1479540595&amp;amp;sr=8-2-fkmr0&amp;amp;keywords=crucial%2Bm500%2Bm.2%2Bsata&amp;amp;th=1&quot;&gt;Crucial M550&lt;/a&gt; series of hard drives as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;supplies&quot;&gt;Supplies:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The new &lt;a href=&quot;https://www.amazon.com/Samsung-850-EVO-Internal-MZ-N5E500BW/dp/B00TGIW1XG/ref=sr_1_13?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1479538259&amp;amp;sr=1-13&amp;amp;keywords=m.2+ssd+cable&quot;&gt;M.2 SATA III SSD hard drive&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/B00KQ4LNJC/ref=oh_aui_detailpage_o06_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;M.2 SATA III SSD enclosure &amp;amp; adapter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.macrium.com/reflectfree.aspx&quot;&gt;Macrium Reflect Free&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/B01FAN2MLQ/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;T5 torx screwdriver&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Compressed-Professional-Blow-Off-Electronics/dp/B015UNJZAC/ref=sr_1_2?ie=UTF8&amp;amp;qid=1479548500&amp;amp;sr=8-2-spons&amp;amp;keywords=compressed+air&amp;amp;psc=1&quot;&gt;Compressed air&lt;/a&gt; (&lt;em&gt;optional&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;step-one-back-it-up&quot;&gt;Step One: &lt;strong&gt;Back it up&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a name=&quot;step1&quot;&gt;&lt;/a&gt;
+  Before you get started, make sure you backup all of your data if you haven’t already. We’ve all made the mistake — and we’ve all felt like an idiot after. &lt;strong&gt;Trust me&lt;/strong&gt;. There are plenty of &lt;a href=&quot;https://www.lifewire.com/free-backup-software-tools-2617964&quot;&gt;free options&lt;/a&gt; available, so there’s no reason to skip this essential step.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-two-prepare-the-new-hard-drive&quot;&gt;Step Two: &lt;strong&gt;Prepare the new hard drive&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Now, you’re going to insert the new M.2 SATA III SSD into the hard drive enclosure. I used the &lt;a href=&quot;https://www.amazon.com/gp/product/B00KQ4LNJC/ref=oh_aui_detailpage_o06_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;ZTC Thunder&lt;/a&gt; enclosure, as it was compatible, affordable, and had good reviews. So you aren’t sure which one to buy, that one is a safe bet. Though, no matter which one you get, once disassembled, the circuit board that the hard drive is connected to will be almost identical. First, you will want to plug the hard drive into the connector, then use the provided screw(s) and standoff to secure the SSD to the board and reassemble your enclosure.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20453970/89a96ac4-ade9-11e6-9a3b-5dc8290c8ada.jpg&quot; height=&quot;325&quot; align=&quot;center&quot; alt=&quot;enclosure&quot; title=&quot;Enclosure&quot; /&gt;
+  &lt;/p&gt;
+
+&lt;h2 id=&quot;step-three-cloning&quot;&gt;Step Three: &lt;strong&gt;Cloning&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;This is the part where a lot of people can feel bewildered by either the complexity or cost of the available software. Yet, if you follow these instructions you should be able to complete this task for free, without a hitch.
+  &lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;First, you’ll need to download &lt;a href=&quot;http://www.macrium.com/reflectfree.aspx&quot;&gt;Macrium Reflect Free&lt;/a&gt;. This is available as a 30–day free trial, which includes all features necessary to clone your hard drive.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connect your new hard drive (&lt;em&gt;inside the enclosure&lt;/em&gt;) via a SATA to USB cable, which was probably included with your SSD enclosure.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After opening the Macrium Reflect software, you will see both your new and internal hard drive within the &lt;strong&gt;Create a Backup&lt;/strong&gt; tab. You will now want to select your internal drive, titled &lt;em&gt;MBR&lt;/em&gt; in the example image, and insure that your new hard drive is in the lower window. Now click the &lt;strong&gt;&lt;em&gt;Clone this disk&lt;/em&gt;&lt;/strong&gt; button circled in red, below.
+  &lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20454261/29f2ed38-adf0-11e6-959e-8c12611a4dbb.png&quot; height=&quot;300&quot; alt=&quot;example&quot; title=&quot;example&quot; /&gt;
+  &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;This will open a new dialogue window. In the destination section, click the &lt;strong&gt;&lt;em&gt;Select a disk to clone to…&lt;/em&gt;&lt;/strong&gt; link and select your new SSD.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You can now drag and drop all of the partitions from your internal drive to your new hard drive, as shown by the red arrow below.
+  Though, if there are already established partitions on your new target disk, you’ll need to select each one and click the &lt;strong&gt;&lt;em&gt;Delete Existing partition&lt;/em&gt;&lt;/strong&gt; link before you’ll be able to drag and resize partitions from the source drive.
+  &lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;
+  	&lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20454353/78777002-adf3-11e6-940a-27002b3846d9.png&quot; height=&quot;350&quot; alt=&quot;example&quot; title=&quot;example&quot; /&gt;
+  &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In most cases, your new hard drive will be larger than your existing internal drive. So you will now want to use the circled icon to resize the primary partition that you’ve dragged to your new drive to fill the remaining capacity. You can do this by dragging the icon to the right until it fills the remaining space, in turn, maximizing the storage that will be at your disposal after installation. Once the partition size has been set, you can now click &lt;strong&gt;&lt;em&gt;Ok&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You will then be shown a summary screen where you can  review your settings checked that everything is in order. Once you’re finished reviewing your options, click &lt;strong&gt;&lt;em&gt;Finish&lt;/em&gt;&lt;/strong&gt;.
+  &lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20454386/9d73af46-adf4-11e6-9d66-5c71dab08c20.png&quot; height=&quot;350&quot; alt=&quot;example&quot; title=&quot;example&quot; /&gt;
+  &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;h-note&quot;&gt; Depending on the amount of data on your internal drive, cloning may take awhile. I would recommend doing this when you won&amp;rsquo;t need to use your computer too heavily.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Once the cloning process is complete, &lt;strong&gt;&lt;a href=&quot;https://tterb.github.io/blog/how-to-upgrade-ssd-pt2.html&quot;&gt;continue to Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--------------------------------- Links -------------------------------------&gt;
+</description>
+        <pubDate>Wed, 05 Oct 2016 00:00:00 -0700</pubDate>
+        <link>https://brettstevenson.io/blog/how-to-upgrade-ssd-pt1.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/how-to-upgrade-ssd-pt1.html</guid>
+        
+        <category>Razer</category>
+        
+        <category>laptop</category>
+        
+        <category>tech</category>
+        
+        <category>how-to</category>
+        
+        <category>tutorial</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Atom File Icons</title>
+        <description>&lt;p&gt;&lt;br /&gt;
+&lt;!-- Preview Image --&gt;
+  &lt;img class=&quot;center&quot; src=&quot;https://cloud.githubusercontent.com/assets/16360374/18630210/c95248d4-7e1f-11e6-8dda-c6c590dd53b3.png&quot; width=&quot;750&quot; align=&quot;center&quot; margin=&quot;auto&quot; alt=&quot;preview&quot; title=&quot;Preview&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!-- Description --&gt;
+&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
+&lt;p&gt;I’ve often found that looking through the files of a large project in a file manager can be a tedious process, worsened by the added difficult of discerning different file-types. In response, I’ve created this collection of icons to be tastefully unique, while also providing improved visual grepping that allows for much quicker navigation of project files.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; If you’d like to request an icon for a file-type that isn’t already included in the collection, make sure to submit your suggestions &lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/issues/new&quot;&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt;.
+Additionally, while I do my best to fulfill any submitted icon requests, feel free to create/contribute your own using the provided &lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/AI/AtomFileIcons.ai&quot;&gt;Illustrator file&lt;/a&gt;.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;includes&quot;&gt;Includes:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/coffee.png&quot;&gt;CoffeeScript&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/cpp.png&quot;&gt;C++&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/cs.png&quot;&gt;C#&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/css.png&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/exe.png&quot;&gt;EXE&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/go.png&quot;&gt;Go&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/hs.png&quot;&gt;Haskell&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/html.png&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/java.png&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/js.png&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/json.png&quot;&gt;JSON&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/less.png&quot;&gt;Less&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/lua.png&quot;&gt;Lua&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/md.png&quot;&gt;Markdown&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/pl.png&quot;&gt;Perl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/py.png&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/rb.png&quot;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/rs.png&quot;&gt;Rust&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/scss.png&quot;&gt;SCSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tterb/Atom-File-Icons/blob/master/PNG/txt.png&quot;&gt;Text&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[TypeScript](https://github.com/tterb/Atom-File-Icons/blob/master/PNG/ts.pn&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 29 Sep 2016 00:00:00 -0700</pubDate>
+        <link>https://brettstevenson.io/blog/atom-file-icons.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/atom-file-icons.html</guid>
+        
+        <category>Atom</category>
+        
+        <category>icons</category>
+        
+        <category>editor</category>
+        
+        <category>design</category>
+        
+        <category>Illustrator</category>
+        
+        <category>UI</category>
+        
+        <category>projects</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Atomic Design UI</title>
+        <description>&lt;!-- Badges --&gt;
+&lt;p align=&quot;right&quot;&gt;
+	&lt;a href=&quot;https://atom.io/themes/atomic-design-ui&quot;&gt;
+		&lt;img src=&quot;https://img.shields.io/apm/v/atomic-design-ui.svg?&quot; height=&quot;20&quot; alt=&quot;version&quot; title=&quot;Version&quot; /&gt;&amp;nbsp;
+	&lt;/a&gt;
+	&lt;a href=&quot;https://opensource.org/licenses/MIT&quot;&gt;
+		&lt;img src=&quot;https://img.shields.io/apm/l/atomic-design-ui.svg?&quot; height=&quot;20&quot; alt=&quot;license&quot; title=&quot;License&quot; /&gt;&amp;nbsp;
+	&lt;/a&gt;
+    &lt;img src=&quot;https://img.shields.io/apm/dm/atomic-design-ui.svg?maxAge=2592000?&quot; height=&quot;20&quot; alt=&quot;downloads&quot; title=&quot;Downloads&quot; /&gt;&amp;nbsp;
+	&lt;a href=&quot;https://atom.io/themes/atomic-design-ui&quot;&gt;
+		&lt;img src=&quot;https://badges.frapsoft.com/os/v1/open-source.svg?v=103&quot; height=&quot;20&quot; alt=&quot;open source&quot; title=&quot;Open Source&quot; /&gt;&amp;nbsp;
+	&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;!-- Screenshot --&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/22501240/cceae3f4-e81c-11e6-88d2-b50141920552.png&quot; width=&quot;950&quot; alt=&quot;preview&quot; title=&quot;Preview&quot; /&gt;
+&lt;/p&gt;
+
+&lt;!-- Description --&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/22630325/e71b3d12-ebac-11e6-864a-de9714611240.png&quot; width=&quot;900&quot; alt=&quot;description&quot; title=&quot;Description&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Atomic Design&lt;/em&gt; aims to provide a modern and refined interface to compliment any dark syntax–theme, featuring modifications that focus on improving the user experience and adaptability. Similarly, this theme also includes a custom icon set and improved integration of some of the most common &lt;a href=&quot;https://atom.io/packages&quot;&gt;Atom packages&lt;/a&gt;.
+  The screenshot above features the &lt;strong&gt;&lt;a href=&quot;https://atom.io/themes/atomic-monokai-syntax&quot;&gt;Atomic Monokai&lt;/a&gt;&lt;/strong&gt; syntax–theme and &lt;em&gt;Source Code Pro&lt;/em&gt; via the &lt;a href=&quot;https://atom.io/packages/fonts&quot;&gt;Fonts&lt;/a&gt; package.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;In Progress&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Experimenting with functionalities to improve adaptability.&lt;/li&gt;
+  &lt;li&gt;Adding improved integration for more common packages.&lt;/li&gt;
+  &lt;li&gt;Improving custom icon integration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!-- Features --&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/22630566/57595f88-ebb1-11e6-835d-e84330b188e3.png&quot; width=&quot;900&quot; alt=&quot;features&quot; title=&quot;Features&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 align=&quot;center&quot;&gt;Dark Refined Interface&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;i&gt;Atomic Design&lt;/i&gt; features a carefully selected color&amp;ndash;palette and meticulously styled components, &lt;br /&gt;
+  which provides the interface with a sense of depth, receptiveness, and adaptability. &lt;br /&gt;
+  Allowing this theme to be wonderfully complimented by any dark syntax theme.
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 align=&quot;center&quot;&gt;Package Styling&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;
+  This UI&amp;ndash;theme includes supplementary styling for an expanding collection of popular Atom &lt;br /&gt;
+  packages, providing the same refined interface to all aspects of the user experience.
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 align=&quot;center&quot;&gt;Custom Icon Set&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;i&gt;Atomic Design&lt;/i&gt; also features a custom icon set, which aims to integrate distinct custom icons &lt;br /&gt;
+  with the best aspects of popular icon packages to provide improved
+  visual&amp;ndash;grepping of &lt;br /&gt;
+  project files, while also preventing the alignment issues that plague &lt;br /&gt; many icon package and theme combinations.
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 align=&quot;center&quot;&gt;Modular Theme-Settings&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;
+  This UI&amp;ndash;theme includes custom settings, which allow users to fine&amp;ndash;tune various aspects of &lt;br /&gt;
+  the interface to suit their preference. These settings are accessible via &lt;br /&gt;
+  the &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/22728369/572ca3fc-ed92-11e6-8f35-5f1da6078b4f.png&quot; height=&quot;23&quot; alt=&quot;settings&quot; /&gt; button,
+  once the theme is enabled.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!-- Install --&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/22630327/e71bd0c4-ebac-11e6-956d-8b1e8da21d1b.png&quot; width=&quot;900&quot; alt=&quot;install&quot; title=&quot;Install&quot; /&gt;
+This package is distributed via &lt;em&gt;&lt;a href=&quot;https://atom.io/themes&quot;&gt;apm&lt;/a&gt;&lt;/em&gt;. After &lt;a href=&quot;https://github.com/atom/apm#installing&quot;&gt;installing apm&lt;/a&gt;, you can install the UI–theme with this command.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;apm install atomic-design-ui
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After installation, the theme can be activated by going to the &lt;strong&gt;Themes&lt;/strong&gt; section in the &lt;em&gt;Settings&lt;/em&gt; view and selecting it from the &lt;em&gt;UI Theme&lt;/em&gt; drop-down menu.&lt;/p&gt;
+
+&lt;!-- &lt;br&gt;
+___________________________
+
+## Settings:
+  Once selected, you can select the &amp;nbsp;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/21959455/1719f490-da7d-11e6-9137-65089a686d52.png&quot; height=&quot;18&quot; Title=&quot;Settings&quot;&gt;&amp;nbsp; icon to access the modular aspects of the theme. This includes the ability to decide whether to use a light or dark tree-view and whether you would prefer to use the default icons or the custom icons included with this theme.
+
+  &lt;!-- &lt;p align=&quot;center&quot;&gt;
+  &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/21487851/ca232202-cb8a-11e6-9913-c34b03eec4ea.png&quot; width=&quot;275&quot; title=&quot;Settings&quot;&gt;
+  &lt;/p&gt; --&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!-- Screenshots --&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/22630324/e71af8ac-ebac-11e6-9458-fe0301d4c028.png&quot; width=&quot;900&quot; alt=&quot;screenshot&quot; title=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://cloud.githubusercontent.com/assets/16360374/18231369/234c6126-726d-11e6-8858-d9ed8df8e7e3.png&quot;&gt;Java&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://cloud.githubusercontent.com/assets/16360374/18231558/6cba7498-7271-11e6-9575-d4448e5910d5.png&quot;&gt;HTML&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://cloud.githubusercontent.com/assets/16360374/18231352/9642c068-726c-11e6-857a-7e3d76293f88.png&quot;&gt;Markdown&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://cloud.githubusercontent.com/assets/16360374/18231373/3048eb88-726d-11e6-9ae8-a87e24c11f67.png&quot;&gt;Settings-View&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;!-- *For more useful packages, check out my list of* **[Essential Atom Packages]**, *which I'll continue to keep up to date as I explore and familiarize myself with the editor and it's community.*
+&lt;br&gt; --&gt;&lt;/p&gt;
+
+&lt;!-- ___________________________  --&gt;
+&lt;p align=&quot;right&quot;&gt;
+  &lt;span class=&quot;badge-paypal&quot;&gt;&lt;a href=&quot;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=E6RKPR34SH6CU&quot; alt=&quot;donate&quot; title=&quot;Donate&quot;&gt;
+    &lt;img src=&quot;https://img.shields.io/badge/paypal-donate-yellow.svg&quot; height=&quot;20&quot; alt=&quot;donate&quot; title=&quot;Donate&quot; /&gt;&lt;/a&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;
+&lt;/p&gt;
+
+&lt;!-------------------------------- Links --------------------------------------&gt;
+
+&lt;!-- [Essential Atom Packages]: https://tterb.github.io/projects/2016/08/22/essential-atom-packages.html --&gt;
+</description>
+        <pubDate>Tue, 23 Aug 2016 00:00:00 -0700</pubDate>
+        <link>https://brettstevenson.io/blog/projects/atomic-design-ui.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/projects/atomic-design-ui.html</guid>
+        
+        <category>Atom</category>
+        
+        <category>design</category>
+        
+        <category>UI</category>
+        
+        <category>editor</category>
+        
+        <category>syntax</category>
+        
+        <category>projects</category>
+        
+        
+        <category>blog</category>
+        
+        <category>projects</category>
+        
+      </item>
+    
   </channel>
 </rss>
