@@ -24,7 +24,7 @@ disqus: brettstevenson
 social_links:
   github: https://github.com/tterb
   deviantart: https://bstevenson.deviantart.com/
-  dribbble: https://dribbble.com/JonSn0w
+  dribbble: https://dribbble.com/tterb
   linkedin-in: https://www.linkedin.com/in/brett-stevenson-0a035a72
   twitter: https://twitter.com/BStevensonDev
   email: /contact/
@@ -94,29 +94,10 @@ share:
 plugins:
   - jemoji
   - jekyll-gist
-  - jekyll-admin
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-autoprefixer
   - jekyll-redirect-from
   - jekyll-github-metadata
-
-html_proofer:
-  check_favicon: true
-  check_html: true
-  allow_hash_href: true
-  http_status_ignore: [999,522,403]
-  file_ignore:
-    - /a.*regexp*/
-    - a_string
-    - fonts/*
-    - _posts/*
-    - blog/*
-  url_ignore:
-    - /Hyde/
-    - /PlayMusic/
-    - /Atomic-Design-UI/
-    - /GithubCalendar/
 
 # to initialize arrays in assignments (assign myarr = site.empty_array)
 # (easier to grok than assign myarr = '' | split',')
