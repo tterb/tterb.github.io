@@ -9,8 +9,9 @@ sitemap:
   priority: 0.9
 ---
 
+{% include overlay.html %}
+
 {% if site.posts %}
-  {% if site.tags.featured %}
   <section id="blog" class="wrapper alt style6">
     <div class="inner">
       <header class="major"><h2>Featured</h2></header>
@@ -18,15 +19,15 @@ sitemap:
     <ul class="post-list">
     {% assign sorted_posts = site.posts | sort: 'key' %}
     {% for post in sorted_posts %}
-      {% if post.tags contains "featured" %}
-        {% capture post_thumb %} {{ post.image | prepend: '/images/posts/thumbnails/' | prepend: site.baseurl }} {% endcapture %}
+      {% if post.options contains "featured" %}
+        {% capture post_thumb %} {{ post.image | prepend: '/assets/img/posts/thumbnails/' | prepend: site.baseurl }} {% endcapture %}
         <li>
           <section class="featured-box">
             <a href="{{ post.url | prepend: site.baseurl }}" class="image featured">
               {% if post_thumb %}
-                <img src="{{ post.image | prepend: '/images/posts/thumbnails/' | prepend: site.baseurl }}" alt="{{ post.title }}"/>
+                <img src="{{ post.image | prepend: '/assets/img/posts/thumbnails/' | prepend: site.baseurl }}" alt="{{ post.title }}"/>
               {% else %}
-                <img src="{{ post.image | prepend: '/images/posts/' | prepend: site.baseurl }}" alt="{{ post.title }}"/>
+                <img src="{{ post.image | prepend: '/assets/img/posts/' | prepend: site.baseurl }}" alt="{{ post.title }}"/>
               {% endif %}
             </a>
             <div class="content">
@@ -36,17 +37,16 @@ sitemap:
               </p>
             </div>
             <div class="footer">
-              <a href="{{ post.url | prepend: site.baseurl }}" class="featured-button">More...</a>
+              <button class="featured-button"><a href="{{ post.url | prepend: site.baseurl }}">More</a></button>
             </div>
           </section>
         </li>
       {% endif %}
     {% endfor %}
     </ul>
-  {% endif %}
 
   <div id="search">
-    {% include search.html %}
+    <div class="btn-search"><span class="fa fa-search"></span></div>
   </div>
 
   <div id="archive">
@@ -56,10 +56,11 @@ sitemap:
       {% assign n = post.date | date: "%Y" %}
       {% if n != p %}
         {% assign p = n %}
-        <br/><hr/><h5 class="year">{{ n }}</h5>
+        <hr/><h5 class="year">{{ n }}</h5>
       {% endif %}
       <li class="archive-post">
-        <p class="date-container"><span class="date">{{ post.date | date: "%b %d" }}</span></p>&nbsp;
+        <!-- <svg class="ico-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/assets/img/sprite-icons.svg#calendar" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> -->
+        <p class="date-container"><span class="date">{{ post.date | date: "%d %b" }}</span></p>&nbsp;
         <a class="post-link" href="{{ post.url }}">
           <b class="title">{{ post.title }}</b>&nbsp;
           {{ post.description | strip_html | truncate: 64 }}
