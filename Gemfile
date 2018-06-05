@@ -19,12 +19,15 @@ gem 'jekyll', '>= 3.1.2'
 #  gem "jekyll-github-metadata", "~> 1.0"
 # end
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+gem 'github-pages'
 gem 'jemoji'
 gem 'jekyll-gist'
-gem 'jekyll-admin'
-gem 'jekyll-seo-tag'
-gem 'jekyll-paginate'
-gem 'jekyll-autoprefixer'
-gem 'jekyll-redirect-from'
 gem 'jekyll-github-metadata'
+gem 'jekyll-paginate'
+gem 'jekyll-picture-tag'
+gem 'jekyll-redirect-from'
+gem 'jekyll-seo-tag'
 gem 'html-proofer'
+gem 'scss_lint'
+gem 'travis'
