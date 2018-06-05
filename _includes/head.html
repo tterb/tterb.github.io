@@ -3,15 +3,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <title>{% if page.title %}{{ page.title }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.desc %}{{ page.desc | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if page.desc %}{{ page.desc | strip_html | strip_newlines | truncate: 180 }}{% else %}{{ site.description }}{% endif %}"/>
+  
   {% seo %}
+
+  {% if page.layout == 'post' %}
+    {% include post-meta.html %}
+  {% endif %}
 
   <link rel="canonical" href="{{ page.url | prepend: site.url }}">
   <script src="{{ '/assets/js/async-css.js' | prepend: site.baseurl }}" type="text/javascript"></script>
   <style>{% include critical.css %}</style>
   
-  <!-- <link rel="stylesheet" href="{{ '/assets/fonts/Avenir-Next/AvenirNext.min.css' | prepend: site.baseurl }}"/> -->
-  <!-- <link rel="stylesheet" href="{{ '/assets/fonts/Gotham-HTF/GothamHTF.min.css' | prepend: site.baseurl }}"/> -->
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
   <link rel="stylesheet" href="{{ '/assets/styles/main.css' | prepend: site.baseurl }}"/>
 
