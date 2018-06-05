@@ -1,8 +1,8 @@
 ---
-layout: none
+layout: blank
 title: Resume
 permalink: /resume
-options: fullwidth, nomenu, nohead, nolanding, nobreadcrumb
+options: fullwidth, nomenu, nohead, nolanding
 desc: A formal resume of my work and experience.
 image: logo.png
 sitemap:
@@ -12,7 +12,7 @@ sitemap:
 <section class="resume">
   <div id="sidebar" class="sidebar">
     <div class="img-container">
-      <img src="/images/{{ page.image | prepend: site.baseurl }}" alt="avatar" class="resume-image"/>
+      <img src="/assets/img/{{ page.image | prepend: site.baseurl }}" alt="avatar" class="resume-image"/>
     </div>
     <div class="side-skills section" >
       <h3>Skills</h3>
@@ -28,13 +28,13 @@ sitemap:
     <div id="contact" class="section">
       <h3>Contact</h3>
       <ul class="icons">
-        {% for socloc in site.social %}
+        {% for socloc in site.social_links %}
           {% if socloc[1] %}
             {% if socloc[0] == 'email' %}
               <li><a href="{{ socloc[1] }}" class="fa fa-envelope-o"><span class="label">E-mail</span></a></li>
             {% else %}
               {% unless socloc[0] == 'dribbble' %}
-                <li><a target="_blank" href="{{ socloc[1] }}" class="fa fa-{{ socloc[0] }}">
+                <li><a target="_blank" href="{{ socloc[1] }}" class="fa fa-{{ socloc[0] }}" rel="noopener">
                 <span class="label">{{ socloc[0] }}</span></a></li>
               {% endunless %}
             {% endif %}
@@ -94,18 +94,18 @@ sitemap:
         </div>
         <div class="right">
           <div class=entry>
-            <h5><a href="{{ '/Hyde' | prepend: site.social.github }}" target="_blank">Hyde</a></h5>
+            <h5><a href="{{ '/Hyde' | prepend: site.social_links.github }}" target="_blank" rel="noopener">Hyde</a></h5>
             <h6><i>Javascript</i> <i class="fa fa-circle"></i> 2017 &ndash; Current</h6>
             <p>An Electron-based markdown editor that aims to improve the accessibility of Jekyll as a blogging platform for developers and non-developers, alike.</p>
           </div>
           <div class=entry>
-            <h5><a href="{{ '/PlayMusic' | prepend: site.social.github }}" target="_blank">PlayMusic</a></h5>
+            <h5><a href="{{ '/PlayMusic' | prepend: site.social_links.github }}" target="_blank" rel="noopener">PlayMusic</a></h5>
             <h6><i>Lua</i> <i class="fa fa-circle"></i> 2016 &ndash; Current</h6>
             <p>A Rainmeter skin that provides thousands of Google Play Music users the ability to easily access their active media from their desktop.</p>
           </div>
           <div class=entry>
-            <h5 style="margin-bottom: 0.5em;"><a href="{{ site.social.github }}" target="_blank">Much More...</a></h5>
-            <p>Though, this is only a small sample of my many active projects and contributions. If you&rsquo;d like to see more, feel free to explore more of my projects on <strong><a href="{{ site.social.github }}" target="_blank">GitHub</a></strong></p>
+            <h5 style="margin-bottom: 0.5em;"><a href="{{ site.social_links.github }}" target="_blank" rel="noopener">Much More...</a></h5>
+            <p>Though, this is only a small sample of my many active projects and contributions. If you&rsquo;d like to see more, feel free to explore more of my projects on <strong><a href="{{ site.social_links.github }}" target="_blank" rel="noopener">GitHub</a></strong></p>
           </div>
         </div>
       </div>
