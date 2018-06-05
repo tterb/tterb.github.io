@@ -2,12 +2,12 @@
 priority: 0.7
 title: Essential Atom Packages
 description: A spotlight for noteworthy Atom packages
-desc: Some insights for make you feel at home with your new editor
+desc: Some insights to help you feel more at home with your new editor
 keywords: "atom, code, text, editor, packages, spotlight, list, essential, jekyll, blog, github"
 date: 2016-08-22
 update: 2017-02-18
 categories: blog
-options: halfhead, update, closer, featured, med, wide
+options: halfhead, featured
 image: atom-banner.jpg
 tags:
   - Atom
@@ -30,18 +30,9 @@ $ apm install <package-name>
 ```
 
 <br>
-> If you&rsquo;d like to skip the busy-work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the simple instructions.
-
-<div class="h-note">
-  If you&rsquo;d like to skip the busy&ndash;work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the simple instructions.
-</div>
 
 <div class="h-tip">
-  If you&rsquo;d like to skip the busy&ndash;work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the simple instructions.
-</div>
-
-<div class="h-warning">
-  If you&rsquo;d like to skip the busy&ndash;work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the simple instructions.
+  If you&rsquo;d like to skip the busy&ndash;work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the included steps.
 </div>
 
 <hr>
@@ -88,6 +79,6 @@ $ apm install <package-name>
 
 <br><br>
 
-<button class="button bottom special"><a href="{{ site.url }}/assets/download/atom-package-list.zip">Download the list</a></button>
+<button class="button bottom special"><a href="{{ '/assets/download/atom-package-list.zip' | prepend: site.baseurl }}">Download the list</a></button>
 
-[1]:{{ site.url }}/assets/download/atom-package-list.zip
+[1]:{{ site.baseurl }}/assets/download/atom-package-list.zip

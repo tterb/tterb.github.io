@@ -4,8 +4,8 @@ title: Atomic Design UI
 description: A modern and refined interface for Atom that easily adapts to any dark syntax-theme
 keywords: "atomic, design, ui, theme, monokai, atom, code, text, editor, syntax, highlighting, theme, monokai, sublime, package, jekyll, blog, github"
 date: 2016-08-23
-categories: blog project
-options: readme, featured, med, wide
+categories: blog projects
+options: readme, featured
 image: atomic-design.png
 header: https://cloud.githubusercontent.com/assets/16360374/22689194/ab4e61f4-ece4-11e6-8732-b613ffaeb2e7.png
 repo: Atomic-Design-UI
@@ -132,9 +132,6 @@ ___________________________
 <p align="right">
   <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" alt="donate" title="Donate">
     <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="20" alt="donate" title="Donate"/></a></span>&nbsp;&nbsp;
-   <a href="https://gitter.im/Atomic-Design-UI/Lobby">
-    <img src="https://badges.gitter.im/Atomic-Design-UI/Lobby.svg" height="20" alt="gitter" title="Gitter"/>
-  </a>
 </p>
 
 

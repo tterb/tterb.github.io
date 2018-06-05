@@ -4,7 +4,7 @@ title: Atomic Delight
 description: A delightfully light Syntax & UI-theme for Atom
 keywords: "atomic,delight,syntax,ui,theme,customization,atom,text,editor,monokai,design,light,bright,modern,jekyll,blog,github"
 date: 2016-11-16
-categories: blog project
+categories: blog projects
 options: readme
 repo: Atomic-Delight-UI
 header: https://cloud.githubusercontent.com/assets/16360374/20373562/755d85e6-ac27-11e6-933e-ff55e40488c2.png
@@ -71,9 +71,6 @@ ___________________________
 <p align="right">
     <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" alt="donate" title="Donate">
     <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="20" alt="donate" title="Donate"></a></span>&nbsp;&nbsp;
- 	<a href="https://gitter.im/Atomic-Design-UI/Lobby">
-      <img src="https://badges.gitter.im/Atomic-Design-UI/Lobby.svg" height="20" alt="gitter" title="Gitter">
-  </a>
 </p>
 
 

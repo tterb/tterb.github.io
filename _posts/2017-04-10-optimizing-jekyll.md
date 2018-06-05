@@ -1,6 +1,6 @@
 ---
 priority: 0.5
-title: Jekyll Website Performance
+title: Optimizing Jekyll
 description: Some insight into how to improve the performance of your Jekyll website
 date: 2017-04-10
 categories: blog
@@ -19,7 +19,7 @@ tags:
 
   Upon launching my new redesigned website, I've been spending the some time optimizing the site performance and load speeds using **[Google PageSpeed Insights]**.
   Therefore, I thought I would take a second to share with you my discoveries and also recommend a few helpful resources for improving the performance of your own Jekyll website.
-  Using these methods, I have managed to receive the following PageSpeed rating. Though this is still a work-in-progress, and I will be adding [updates](#update) as I explore this topic further.
+  Using these methods, I have managed to receive the following PageSpeed rating. Though this is still a work-in-progress, and I will be adding [updates](#updates) as I explore this topic further.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/16360374/27520456-f313f3de-59c0-11e7-81ce-40273d1ffcbb.png" class="shadow" width="800" alt="PageSpeed" style="margin-bottom:0.5em"/>
@@ -181,7 +181,7 @@ gulp.task('clean', ['uncss']);
 
 <hr>
 
-<h2>Updates</h2>
+## Updates
 
 ### Leveraging browser caching
   Since sharing my original post, I&rsquo;ve since found a way to resolve the persistent &ldquo;Leverage browser caching&rdquo; issue, which was ironically referencing Google&rsquo;s own analytics tools.

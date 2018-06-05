@@ -4,7 +4,7 @@ title: Urban Dictionary Therapy
 description: A simple rehabilitation program for coping with long frustrating days of programming
 keywords: "urban, dictionary, therapy, UDTherapy, command-line, cmd, command, prompt, terminal, bash, unix, tool, script, funny, web, scraper, python, , windows, OSX, linux, jekyll, blog, github"
 date: 2017-05-12
-categories: blog project
+categories: blog projects
 options: readme subhead
 header: https://cloud.githubusercontent.com/assets/16360374/25799898/d2fe937e-339b-11e7-81a5-b70a54b580d9.png
 repo: Urban-Dictionary-Therapy

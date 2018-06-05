@@ -4,7 +4,7 @@ title: Atomic Monokai
 description: A Monokai-flavored syntax-highlighting theme for Atom
 keywords: "atomic, monokai, atom, code, text, editor, syntax, highlighting, theme, monokai, sublime, packages, spotlight, jekyll, blog, github"
 date: 2016-08-23
-categories: blog project
+categories: blog projects
 options: readme
 header: https://cloud.githubusercontent.com/assets/16360374/21070257/355d0990-be37-11e6-8461-827b5c2dfe6d.png
 repo: Atomic-Monokai-Syntax

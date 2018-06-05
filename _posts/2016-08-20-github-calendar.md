@@ -4,7 +4,7 @@ title: Github Calendar
 description: A Rainmeter skin that displays the users GitHub contribution calendar
 keywords: "git, contribution, calendar, rainmeter, skin, desktop, jekyll, blog, github"
 date: 2016-08-20
-categories: blog project
+categories: blog projects
 options: readme subhead
 header: http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/GithubCalendar/git2_zpsjx72lsmu.png
 repo: GithubCalendar

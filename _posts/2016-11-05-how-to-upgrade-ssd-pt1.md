@@ -5,7 +5,8 @@ description: A tutorial on how to upgrade the SSD on a Razer Blade or similar la
 keywords: "how, upgrade, SSD, razer, blade, tech, laptop, data, recovery, tutorial"
 date: 2016-10-05
 categories: blog
-options: fullhead, featured, lg
+options: fullhead, featured, collection
+next: how-to-upgrade-ssd-pt2.html
 image: razer-blade.jpg
 tags:
   - Razer
@@ -82,7 +83,7 @@ tags:
 
   <br>
 
-  <p class="h-note"> Depending on the amount of data on your internal drive, cloning may take awhile. I would recommend you do this when you won&rsquo;t be needing to use your computer too heavily.</p>
+  <p class="h-note"> Depending on the amount of data on your internal drive, cloning may take awhile. I would recommend doing this when you won&rsquo;t need to use your computer too heavily.</p>
 
 <br>
 <hr>

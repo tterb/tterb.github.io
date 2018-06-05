@@ -4,7 +4,7 @@ title: PlayMusic
 description: A Simple Rainmeter skin for Google Play Music
 keywords: "google, play, music, desktop, player, gpm, rainmeter, skin, packages, spotlight, jekyll, blog, github"
 date: 2016-08-18
-categories: blog project
+categories: blog projects
 options: readme
 image: googleplaymusic.jpg
 header: https://cloud.githubusercontent.com/assets/16360374/23640973/ac0fe0a0-02a5-11e7-91a1-fc9eb72514de.png
@@ -140,11 +140,6 @@ The addition of selectable accent colors allows users to add a splash of color t
 <br>
 
 ------------------------------------------------------------------------------
-<p align="right">
-  <a href="https://gitter.im/tterb/PlayMusic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
-    <img src="https://badges.gitter.im/tterb/PlayMusic.svg" height="23" alt="gitter" title="Gitter"/>
-  </a>
-</p>
 
 
 <!---------------------------------- Links ------------------------------------>
