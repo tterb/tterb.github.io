@@ -6,27 +6,11 @@ redirect-from: /developer/
 options: fullwidth
 desc: As a developer, I have experience working in both front and back-end development and enjoy experimenting with new frameworks and platforms, while striving to create tools that myself and others can enjoy.
 image: dev.jpg
-background-image: dev.jpg
 sitemap:
   priority: 0.9
 ---
 
-<script src="https://JonSn0w.github.io/github-buttons/buttons.js"></script>
-<!-- <script>
-function($) {
-  $(document).ready(function() {
-    resize_to_fit();
-  });
-  function resize_to_fit() {
-    var fontsize = $('.title h3').css('font-size');
-    $('.title h3').css('fontSize', parseFloat(fontsize) - 1);
-
-    if($('.title h3').height() >= $('.title').height()) {
-      resize_to_fit();
-    }
-  }
-}
-</script> -->
+<!-- <script src="https://tterb.github.io/github-buttons/buttons.js"></script> -->
 <section id="developer" class="wrapper special">
   <section id="about" class="wrapper style1 special">
     <div class="inner">
@@ -35,12 +19,13 @@ function($) {
         <p>{{ page.desc }}</p>
       </header>
       <section id="dev-calendar">
-        <script src="{{ '/js/github-calendar.min.js' | prepend: site.baseurl }}"></script>
+        <script src="{{ '/assets/js/github-calendar.min.js' | prepend: site.baseurl }}">GitHubCalendar(".calendar", "tterb");</script>
         <div class="calendar">
           Loading contribution data...
         </div>
-        <script>GitHubCalendar(".calendar", "JonSn0w");</script>
+        <script>GitHubCalendar(".calendar", "tterb");</script>
       </section>
+      <!-- <img src="http://ghchart.rshah.org/tterb" alt="Tterb's Github Chart" /> -->
     </div>
   </section>
   <section id="three" class="wrapper style2 special angled">
@@ -51,19 +36,19 @@ function($) {
       <div class="project-tiles">
       {% for project in site.data.projects %}
         <div class="tile">
-          <img alt="{{ project.title }}" src="{{ site.baseurl }}{% if project.image %}/images/projects/{{ project.image }}{% else %}banner.jpg{% endif %}" data-full="{{ site.baseurl }}{% if project.image %}/images/projects/{{ project.image }}{% else %}banner.jpg{% endif %}"/>
+          <img alt="{{ project.title }}" src="{{ site.baseurl }}{% if project.image %}/assets/img/projects/{{ project.image }}{% else %}banner.jpg{% endif %}" data-full="{{ site.baseurl }}{% if project.image %}/assets/img/projects/{{ project.image }}{% else %}banner.jpg{% endif %}"/>
           <div class="mask">
             <h4>{{ project.title }}</h4>
             <p>{{ project.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
             <!-- <awesome-button href="{{ site.baseurl }}{% if project.permalink %}{{ project.permalink }}{% else %}{{ project.repo }}{% endif %}">More</awesome-button> -->
-            <a class="button special info" href="{{ site.baseurl }}{% if project.permalink %}{{ project.permalink }}{% else %}{{ project.repo }}{% endif %}">Read More</a>
+            <a class="button special info" href="{% if project.permalink %}{% if project.permalink contains 'blog/projects' %}{{ project.permalink | prepend: site.baseurl }}{% else %}{{ project.permalink | prepend: site.url }}{% endif %}{% else %}{{ project.repo | prepend: '/' | prepend: site.social-links.github }}{% endif %}">Read More</a>
           </div>
         </div>
       {% endfor %}
       </div>
     </div>
   </section>
-  
+
 <!-- </section> -->
   <section id="four" class="wrapper style4">
     <div class="inner">
@@ -72,7 +57,7 @@ function($) {
         <p>Check out more of my projects and contributions on GitHub or contact me for more information.</p>
       </header>
       <ul class="actions vertical">
-        <li><a href="{{ site.social.github }}" class="button fit special">GitHub</a></li>
+        <li><a href="{{ site.social_links.github }}" class="button fit special">GitHub</a></li>
         <li><a href="{{ '/contact/' | prepend: site.baseurl }}" class="button fit">Contact</a></li>
       </ul>
     </div>
