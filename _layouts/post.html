@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  {% include post-meta.html %}
   {% include head.html %}
   {% include header.html %}
   <main class="post-content" role="main">
@@ -39,7 +38,7 @@
         <section class="readme-content written-content">
           <a name="top"></a>
           {% if page.header %}
-            <img src="{{ page.header }}"/>
+            <img src="{{ page.header }}" alt="{{ page.title }}"/>
           {% endif %}
           <!-- {% if page.preview %}<img id="preview" src="{{ page.preview }}" alt="Preview" target="_blank" rel="noopener"/>{% endif %} -->
           <br>
