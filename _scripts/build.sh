@@ -10,10 +10,10 @@ bundle check || bundle install
 npm install
 
 # Build the site.
-gulp
+# gulp
 
 # Checkout `master` and remove everything.
-git clone https://${GH_TOKEN}@github.com/tterb/tterb.github.io.git ../tterb.github.io.master
+git clone https://github.com/tterb/tterb.github.io.git ../tterb.github.io.master
 cd ../tterb.github.io.master
 git checkout master
 rm -rf *
@@ -32,4 +32,4 @@ git status
 git add -A .
 git status
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push --quiet origin `master` > /dev/null 2>&1
+git push origin master
