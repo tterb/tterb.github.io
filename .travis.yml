@@ -19,6 +19,7 @@ before_install:
 - rvm use 2.1
 - gem install bundler
 - bundle check || bundle install
+- npm install -g gulp
 deploy:
   provider: script
   script: "./_scripts/build.sh"
