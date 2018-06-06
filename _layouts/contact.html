@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  {% include head.html %}
+  <body class="{{ page.title | downcase }}" style="background-image: url({{ page.image | prepend: '/assets/img/' | prepend: site.baseurl }});">
+    {% include header.html %}
+    <div class="{{ page.title | downcase }}-wrapper">
+      <h1>{{ page.title }}</h1>
+      <div class="form-container">
+        {% if page.sub %}<h3>{{ page.sub }}</h3>{% endif %}
+        {{ content }}
+      </div>
+      {% include footer.html %}
+      {% include scripts.html %}
+    </div>
+  </body>
+  <script>document.documentElement.classList.remove("no-js");</script>
+</html>
