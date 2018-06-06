@@ -24,7 +24,7 @@
   
 - title: GitHub Calendar
   category: projects
-  permalink: /blog/projects/GithubCalendar/
+  permalink: /blog/projects/github-calendar.html
   repo: githubcalendar
   desc: A Rainmeter skin that displays the user's GitHub contribution calendar on their desktop.
   icon: github
