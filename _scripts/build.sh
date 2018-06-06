@@ -7,7 +7,7 @@ set -e
 bundle check || bundle install
 # NPM install if needed.
 . $HOME/.nvm/nvm.sh && nvm install 6.1 && nvm use 6.1
-npm install
+npm install -g
 
 # Build the site.
 gulp
