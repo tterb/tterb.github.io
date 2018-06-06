@@ -16,7 +16,7 @@ npm install
 gulp
 
 # Checkout `master` and remove everything
-git clone https://github.com/tterb/tterb.github.io.git ../tterb.github.io.master --depth=1
+git clone https://github.com/tterb/tterb.github.io ../tterb.github.io.master --depth 1
 cd ../tterb.github.io.master
 git checkout master
 rm -rf *
