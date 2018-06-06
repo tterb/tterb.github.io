@@ -53,7 +53,7 @@ sass:
  style: compressed
 
 include: ['_pages','.htaccess']
-exclude: ['vendor','_assets','node_modules','jspm_packages','Gemfile','Gemfile.lock','Gulpfile.js','.sass-lint.yml','package.json','README.md','**/fonts/*.html', '**/**/*_.*']
+exclude: ['vendor','_assets','node_modules','jspm_packages','Gemfile','Gemfile.lock','Gulpfile.js','.sass-lint.yml','package.json','package-lock.json','TODO.md','**/fonts/*.html', '**/**/*_.*']
 
 defaults:
   - scope:
@@ -86,8 +86,8 @@ share:
   - linkedin 
   - pinterest 
   - reddit
-  - tumblr
-  - pocket
+  # - tumblr
+  # - pocket
   # - wordpress
   - email
 
