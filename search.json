@@ -5,7 +5,7 @@
       "category"   : "",
       "tags"       : "markdown, jekyll, editor, Github pages, electron, and projects",
       "url"        : "/blog/improving-the-accessibility-of-jekyll.html",
-      "date"       : "2017-07-01 00:00:00 -0700",
+      "date"       : "2017-07-01 00:00:00 +0000",
       "shortdate"  : "Jul 01, 2017"
     } ,
   
@@ -14,7 +14,7 @@
       "category"   : "",
       "tags"       : "Windows 10, Microsoft, tech, tools, and discussion",
       "url"        : "/blog/windows-app-store.html",
-      "date"       : "2017-06-20 00:00:00 -0700",
+      "date"       : "2017-06-20 00:00:00 +0000",
       "shortdate"  : "Jun 20, 2017"
     } ,
   
@@ -23,7 +23,7 @@
       "category"   : "",
       "tags"       : "urban dictionary, command-line, terminal, bash, tools, python, and projects",
       "url"        : "/blog/projects/urban-dictionary-therapy.html",
-      "date"       : "2017-05-12 00:00:00 -0700",
+      "date"       : "2017-05-12 00:00:00 +0000",
       "shortdate"  : "May 12, 2017"
     } ,
   
@@ -32,7 +32,7 @@
       "category"   : "",
       "tags"       : "jekyll, web, performance, PageSpeed, gulp, grunt, javascript, and cloudflare",
       "url"        : "/blog/optimizing-jekyll.html",
-      "date"       : "2017-04-10 00:00:00 -0700",
+      "date"       : "2017-04-10 00:00:00 +0000",
       "shortdate"  : "Apr 10, 2017"
     } ,
   
@@ -41,7 +41,7 @@
       "category"   : "",
       "tags"       : "",
       "url"        : "/blog/site-reconstruction.html",
-      "date"       : "2017-03-31 00:00:00 -0700",
+      "date"       : "2017-03-31 00:00:00 +0000",
       "shortdate"  : "Mar 31, 2017"
     } ,
   
@@ -50,7 +50,7 @@
       "category"   : "",
       "tags"       : "UI, Atom, syntax, editor, design, and projects",
       "url"        : "/blog/projects/atomic-delight.html",
-      "date"       : "2016-11-16 00:00:00 -0800",
+      "date"       : "2016-11-16 00:00:00 +0000",
       "shortdate"  : "Nov 16, 2016"
     } ,
   
@@ -59,7 +59,7 @@
       "category"   : "",
       "tags"       : "Razer, laptop, tutorial, tech, and how-to",
       "url"        : "/blog/how-to-upgrade-ssd-pt2.html",
-      "date"       : "2016-10-06 00:00:00 -0700",
+      "date"       : "2016-10-06 00:00:00 +0000",
       "shortdate"  : "Oct 06, 2016"
     } ,
   
@@ -68,7 +68,7 @@
       "category"   : "",
       "tags"       : "Razer, laptop, tech, how-to, and tutorial",
       "url"        : "/blog/how-to-upgrade-ssd-pt1.html",
-      "date"       : "2016-10-05 00:00:00 -0700",
+      "date"       : "2016-10-05 00:00:00 +0000",
       "shortdate"  : "Oct 05, 2016"
     } ,
   
@@ -77,7 +77,7 @@
       "category"   : "",
       "tags"       : "Atom, icons, editor, design, Illustrator, UI, and projects",
       "url"        : "/blog/atom-file-icons.html",
-      "date"       : "2016-09-29 00:00:00 -0700",
+      "date"       : "2016-09-29 00:00:00 +0000",
       "shortdate"  : "Sep 29, 2016"
     } ,
   
@@ -86,7 +86,7 @@
       "category"   : "",
       "tags"       : "Atom, design, UI, editor, syntax, and projects",
       "url"        : "/blog/projects/atomic-design-ui.html",
-      "date"       : "2016-08-23 00:00:00 -0700",
+      "date"       : "2016-08-23 00:00:00 +0000",
       "shortdate"  : "Aug 23, 2016"
     } ,
   
@@ -95,7 +95,7 @@
       "category"   : "",
       "tags"       : "Atom, syntax, design, UI, and projects",
       "url"        : "/blog/projects/atomic-monokai.html",
-      "date"       : "2016-08-23 00:00:00 -0700",
+      "date"       : "2016-08-23 00:00:00 +0000",
       "shortdate"  : "Aug 23, 2016"
     } ,
   
@@ -104,7 +104,7 @@
       "category"   : "",
       "tags"       : "Atom, software, editor, tools, review, and spotlight",
       "url"        : "/blog/essential-atom-packages.html",
-      "date"       : "2016-08-22 00:00:00 -0700",
+      "date"       : "2016-08-22 00:00:00 +0000",
       "shortdate"  : "Aug 22, 2016"
     } ,
   
@@ -113,7 +113,7 @@
       "category"   : "",
       "tags"       : "Github, Rainmeter, and projects",
       "url"        : "/blog/projects/github-calendar.html",
-      "date"       : "2016-08-20 00:00:00 -0700",
+      "date"       : "2016-08-20 00:00:00 +0000",
       "shortdate"  : "Aug 20, 2016"
     } ,
   
@@ -122,7 +122,7 @@
       "category"   : "",
       "tags"       : "Google, music, Rainmeter, and projects",
       "url"        : "/blog/projects/playmusic.html",
-      "date"       : "2016-08-18 00:00:00 -0700",
+      "date"       : "2016-08-18 00:00:00 +0000",
       "shortdate"  : "Aug 18, 2016"
     } ,
   
@@ -131,7 +131,7 @@
       "category"   : "",
       "tags"       : "",
       "url"        : "/blog/under-construction.html",
-      "date"       : "2016-08-17 00:00:00 -0700",
+      "date"       : "2016-08-17 00:00:00 +0000",
       "shortdate"  : "Aug 17, 2016"
     } 
   
