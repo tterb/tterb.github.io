@@ -58,7 +58,7 @@ priority: 1.0
         <div class="mask">
           <h4>{{ project.title }}</h4>
           <p>{{ project.desc | markdownify | strip_html | strip_newlines | escape_once }}</p>
-          <a class="button special info" href="{% if project.permalink %}{% if project.permalink contains 'blog/projects' %}{{ project.permalink | prepend: site.baseurl }}{% else %}{{ project.permalink | prepend: site.url }}{% endif %}{% else %}{{ project.repo | prepend: '/' | prepend: site.social-links.github }}{% endif %}">Read More</a>
+          <a class="button special info" href="{% if project.permalink %}{% if project.permalink contains 'blog/projects' %}{{ project.permalink | prepend: site.baseurl }}{% else %}{{ project.permalink | prepend: site.url }}{% endif %}{% else %}{{ project.repo | prepend: '/' | prepend: site.social_links.github }}{% endif %}">Read More</a>
         </div>
       </div>
     {% endfor %}
