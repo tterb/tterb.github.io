@@ -15,8 +15,8 @@
   <script src="{{ '/assets/js/async-css.js' | prepend: site.baseurl }}" type="text/javascript"></script>
   <style>{% include critical.css %}</style>
   
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
   <link rel="stylesheet" href="{{ '/assets/styles/main.css' | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.min.css"/>
 
   {% if page.image %}
     {% assign first_char = page.image | slice: 0 %}
