@@ -1,7 +1,7 @@
 ---
 key: 1
 title: Developer
-permalink: /dev
+permalink: /dev/
 redirect-from: /developer/
 options: fullwidth
 desc: As a developer, I have experience working in both front and back-end development and enjoy experimenting with new frameworks and platforms, while striving to create tools that myself and others can enjoy.
@@ -19,11 +19,11 @@ sitemap:
         <p>{{ page.desc }}</p>
       </header>
       <section id="dev-calendar">
-        <script src="{{ '/assets/js/github-calendar.min.js' | prepend: site.baseurl }}">GitHubCalendar(".calendar", "tterb");</script>
+        <script src="{{ '/assets/js/github-calendar.js' | prepend: site.baseurl }}">GitHubCalendar('.calendar', 'tterb');</script>
         <div class="calendar">
           Loading contribution data...
         </div>
-        <script>GitHubCalendar(".calendar", "tterb");</script>
+        <script>GitHubCalendar('.calendar', 'tterb');</script>
       </section>
       <!-- <img src="http://ghchart.rshah.org/tterb" alt="Tterb's Github Chart" /> -->
     </div>
