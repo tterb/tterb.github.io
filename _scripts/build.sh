@@ -16,9 +16,8 @@ npm install
 gulp
 
 # Checkout `master` and remove everything
-git clone https://${GH_TOKEN}@github.com/tterb/tterb.github.io.git ../tterb.github.io.master --depth 1
+git clone -b master https://${GH_TOKEN}@github.com/tterb/tterb.github.io.git ../tterb.github.io.master --depth 1
 cd ../tterb.github.io.master
-git checkout master
 rm -rf *
 
 # Copy generated HTML site from source branch in original repository
