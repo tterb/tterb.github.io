@@ -3,9 +3,9 @@
     {% for social in site.social_links %}
       {% if social[1] %}
         {% if social[0] != 'email' %}
-          <li><a target="_blank" href="{{ social[1] }}" rel="noopener"><span class="fab fa-{{ social[0] }}"></span></a></li>
+          <li><a target="_blank" href="{{ social[1] }}" rel="noopener"><span class="fab fa-fw fa-{{ social[0] }}"></span></a></li>
         {% else %}
-          <li><a href="{{ social[1] }}"><span class="far fa-envelope"></span></a></li>
+          <li><a href="{{ social[1] }}"><span class="fas fa-fw fa-envelope"></span></a></li>
         {% endif %}
       {% endif %}
     {% endfor %}
