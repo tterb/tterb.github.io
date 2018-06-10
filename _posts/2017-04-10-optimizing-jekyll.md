@@ -8,15 +8,19 @@ options: halfhead
 image: web-performance.png
 tags:
   - jekyll
-  - web
+  - web development
   - performance
-  - PageSpeed
   - gulp
-  - grunt
   - javascript
+  - node.js
+  - github pages
   - cloudflare
 ---
-
+  
+  <p class="h-tip">
+  For a more up-to-date and comprehensive explanation this subject has been revisited <a href="https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html">here</a>
+  </p>
+  
   Upon launching my new redesigned website, I've been spending the some time optimizing the site performance and load speeds using **[Google PageSpeed Insights]**.
   Therefore, I thought I would take a second to share with you my discoveries and also recommend a few helpful resources for improving the performance of your own Jekyll website.
   Using these methods, I have managed to receive the following PageSpeed rating. Though this is still a work-in-progress, and I will be adding [updates](#updates) as I explore this topic further.
@@ -47,23 +51,21 @@ tags:
 var gulp = require('gulp'),
     shell = require('gulp-shell'),
     minifyHTML = require('gulp-minify-html'),
+    minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-sass'),
     importCss = require('gulp-import-css'),
     autoprefixer = require('gulp-autoprefixer'),
-    uncss = require('gulp-uncss'),
-    minifyCss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
-    glob = require('glob'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     jpegtran = require('imagemin-jpegtran'),
     gifsicle = require('imagemin-gifsicle'),
     optipng = require('imagemin-optipng'),
     replace = require('gulp-replace'),
+    glob = require('glob'),
     fs = require('fs'),
     concat = require('gulp-concat-util'),
     uncss = require('gulp-uncss'),
-    minifyCSS = require('gulp-minify-css'),
     critical = require('critical');
     download = require('gulp-download');
 
