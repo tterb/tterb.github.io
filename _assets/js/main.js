@@ -1,8 +1,8 @@
 
 /* sweetScroll load */
-document.addEventListener("DOMContentLoaded", () => {
-  const sweetScroll = new SweetScroll({ trigger: '.scroll-btn' });
-}, false);
+// document.addEventListener("DOMContentLoaded", () => {
+//   const sweetScroll = new SweetScroll({ trigger: '.scroll-btn' });
+// }, false);
 
 (function($) {
   skel.breakpoints({
@@ -192,4 +192,89 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  // var filterizd = $('.filter-container').filterizr({
+  //   animationDuration: 0.5,    // in seconds
+  //   filter: 'all',             // Initial filter
+  //   callbacks: { 
+  //     onFilteringStart: function() { },
+  //     onFilteringEnd: function() { alignTiles() },
+  //     onShufflingStart: function() { },
+  //     onShufflingEnd: function() { alignTiles() },
+  //     onSortingStart: function() { },
+  //     onSortingEnd: function() { alignTiles() }
+  //   },
+  //   controlsSelector: '',      // Selector for custom controls
+  //   delay: 0,                  // Transition delay in ms
+  //   delayMode: 'progressive',  // 'progressive' or 'alternate'
+  //   easing: 'ease-out',
+  //   filterOutCss: {            // Filtering out animation
+  //     // position: 'relative',
+  //     opacity: 0,
+  //     margin: '0 0.025em',
+  //     transform: 'translate3d(0)'
+  //     // transform: 'scale(0.5)'
+  //   },
+  //   filterInCss: {             // Filtering in animation
+  //     // position: 'relative',
+  //     opacity: 0,
+  //     margin: '0 0.025em',
+  //     transform: 'translate3d(0)'
+  //     // transform: 'scale(1)',
+  //   },
+  //   layout: 'sameSize',        // See layouts
+  //   multifilterLogicalOperator: 'or',
+  //   selector: '.filter-container',
+  //   setupControls: true // Should be false if controlsSelector is set
+  // });
+  
+  // $('.tile').mouseenter(function() {
+  //   // console.log('mouseover');
+  //   tiles = getValues();
+  //   target = $(this);
+  //   targetIndex = 0;
+  //   $(tiles).each(function() {
+  //     if(target == $(this).element) {
+  //       targetIndex = $(this).index;
+  //     }
+  //   });
+  //   console.log(targetIndex);
+  //   var mod = parseInt(targetIndex/2);
+  //   $('.tile').each(function(index) {
+  //     if(mod < parseInt(index/2)) {
+  //       tiles[index].y += 100;
+  //       $(this).css('transform', 'translateY('+tiles[index].y+')');
+  //     }
+  //   });
+  // });
+  
+  // function getValues() {
+  //   var tiles = [];
+  //   $('.tile').each(function(index) {
+  //     var matrix = $(this).css('transform').replace(/[^0-9\-.,]/g, '').split(',');
+  //     var tile = {
+  //       index: index,
+  //       element: $(this),
+  //       x: parseFloat(matrix[12] || matrix[4]),
+  //       y: parseFloat(matrix[13] || matrix[5])
+  //     };
+  //     tiles.push(tile);
+  //   });
+  //   return tiles;
+  // }
+  
+  // alignTiles();
+  // 
+  // function alignTiles(row) {
+  //   row = row || 2;
+  //   var tiles = $('.tile');
+  //   $('.tile.top').removeClass('top');
+  //   for(var i = 0; i < tiles.length; i++) {
+  //     // tiles.eq(i).css('transform', '');
+  //     if(i < row) {
+  //       tiles.eq(i).addClass('top');
+  //     }
+  //   }
+  // }
+  
+  // $('.design-tiles .tile').poptrox()
 })(jQuery);
