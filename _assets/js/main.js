@@ -1,3 +1,9 @@
+
+/* sweetScroll load */
+document.addEventListener("DOMContentLoaded", () => {
+  const sweetScroll = new SweetScroll({ trigger: '.scroll-btn' });
+}, false);
+
 (function($) {
   skel.breakpoints({
     xlarge:	'(max-width: 1680px)',
@@ -54,12 +60,14 @@
           }
         });
     }
-    // Fix: Placeholder polyfill.
-    $('form').placeholder();
-    skel.on('+medium -medium', function() {
-      $.prioritize('.important\\28 medium\\29',
-        skel.breakpoint('medium').active);
-    });
+    // Fix: Placeholder polyfill
+    if($('form').length) {
+      $('form').placeholder();
+      skel.on('+medium -medium', function() {
+        $.prioritize('.important\\28 medium\\29',
+          skel.breakpoint('medium').active);
+      });
+    }
 
     $('.scrolly').scrolly({
       speed: 1200,
@@ -118,14 +126,14 @@
 
   // Asychronous Google-font loading
   $(function() {
-    var $fonts = 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Montserrat:400,400i,600,600i,800,800i|Spectral:300,300i,500,500i,700,700i|Source+Code+Pro:300,400,600,700';
+    var $fonts = 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Spectral:300,300i,500,500i,700,700i|Source+Code+Pro:300,400,600,700';
     document.createStyleSheet ? document.createStyleSheet($fonts) : $('head').append($('<link rel="stylesheet" href="' + $fonts + '" type="text/css" media="screen" />'))
   })
 
   // Improve code-block formatting
   $(document).ready(function() {
     $('.highlighter-rouge').each(function() {
-      if($(this).height() > 55)
+      if($(this).height() > 65)
         $(this).addClass('code-block');
     });
   });
@@ -184,5 +192,4 @@
     });
   });
   
-  // $('.design-tiles .tile').poptrox()
 })(jQuery);
