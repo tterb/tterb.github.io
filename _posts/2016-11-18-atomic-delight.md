@@ -11,10 +11,11 @@ header: https://cloud.githubusercontent.com/assets/16360374/20373562/755d85e6-ac
 tags:
   - UI
   - Atom
-  - syntax
-  - editor
-  - design
-  - projects
+  - Syntax
+  - Editor
+  - Design
+  - Customization
+  - Projects
 ---
 
 <!-- Badges -->

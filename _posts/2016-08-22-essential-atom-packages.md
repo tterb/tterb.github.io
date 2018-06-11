@@ -11,11 +11,12 @@ options: halfhead, featured
 image: atom-banner.jpg
 tags:
   - Atom
-  - software
-  - editor
-  - tools
-  - review
-  - spotlight
+  - Software
+  - Editor
+  - Tools
+  - Customization
+  - Review
+  - Spotlight
 ---
 
 <!-- Intro -->

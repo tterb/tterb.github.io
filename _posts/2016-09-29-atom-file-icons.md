@@ -10,12 +10,13 @@ header: https://cloud.githubusercontent.com/assets/16360374/22404140/a46933d4-e5
 repo: Atom-File-Icons
 tags:
   - Atom
-  - icons
-  - editor
-  - design
+  - Icons
+  - Editor
+  - Design
   - Illustrator
   - UI
-  - projects
+  - Customization
+  - Projects
 ---
 
 <br/>

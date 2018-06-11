@@ -11,7 +11,7 @@ repo: GithubCalendar
 tags:
   - Github
   - Rainmeter
-  - projects
+  - Projects
 ---  
 
 <br>  

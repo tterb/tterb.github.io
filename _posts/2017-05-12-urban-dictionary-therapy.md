@@ -9,13 +9,11 @@ options: readme subhead
 header: https://cloud.githubusercontent.com/assets/16360374/25799898/d2fe937e-339b-11e7-81a5-b70a54b580d9.png
 repo: Urban-Dictionary-Therapy
 tags:
-  - urban dictionary
-  - command-line
-  - terminal
-  - bash
-  - tools
-  - python
-  - projects
+  - Urban Dictionary
+  - Command-line
+  - Bash
+  - Python
+  - Projects
 ---
 
 <p align="center">

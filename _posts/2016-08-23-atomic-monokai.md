@@ -10,10 +10,11 @@ header: https://cloud.githubusercontent.com/assets/16360374/21070257/355d0990-be
 repo: Atomic-Monokai-Syntax
 tags:
   - Atom
-  - syntax
-  - design
+  - Syntax
+  - Design
   - UI
-  - projects
+  - Customization
+  - Projects
 ---
 
 <!-- Badges -->

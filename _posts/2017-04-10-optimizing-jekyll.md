@@ -7,14 +7,14 @@ categories: blog
 options: halfhead
 image: web-performance.png
 tags:
-  - jekyll
-  - web development
-  - performance
-  - gulp
-  - javascript
-  - node.js
-  - github pages
-  - cloudflare
+  - Jekyll
+  - Web Development
+  - Performance
+  - Gulp
+  - Javascript
+  - Node.js
+  - GitHub Pages
+  - Cloudflare
 ---
   
   <p class="h-tip">

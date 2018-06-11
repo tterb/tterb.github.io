@@ -9,12 +9,13 @@ options: halfhead, featured
 image: jekyll.png
 header: jekyll.png
 tags:
-  - markdown
-  - jekyll
-  - editor
-  - Github pages
-  - electron
-  - projects
+  - Markdown
+  - Jekyll
+  - Editor
+  - GitHub Pages
+  - Tools
+  - Electron
+  - Projects
 ---
 
   Due to it&rsquo;s simplicity, [**Jekyll**][jekyll] offers many advantages over other blogging platforms, including increased loading speeds, securtity, and server&ndash;side consistency. In the words of it&rsquo;s creators,

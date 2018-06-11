@@ -9,10 +9,11 @@ prev: how-to-upgrade-ssd-pt1.html
 image: razer-blade.jpg
 tags:
   - Razer
-  - laptop
-  - tutorial
-  - tech
-  - how-to
+  - Laptop
+  - Tutorial
+  - Tech
+  - Tools
+  - How-To
 ---
 
 <p align="center">

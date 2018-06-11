@@ -11,12 +11,10 @@ repo: yt2mp3
 tags:
   - YouTube
   - MP3
-  - command-line
-  - terminal
-  - bash
-  - tools
-  - python
-  - projects
+  - Command-line
+  - Bash
+  - Python
+  - Projects
 ---
 
 <p class="badges">

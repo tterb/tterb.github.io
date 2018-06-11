@@ -7,12 +7,12 @@ categories: blog
 options: halfhead
 image: web-performance.png
 tags:
-  - jekyll
-  - web development
-  - performance
-  - gulp
-  - javascript
-  - github pages
+  - Jekyll
+  - Web Development
+  - Performance
+  - Gulp
+  - Javascript
+  - GitHub Pages
 ---
 
 While the previous entry on optimizing your Jekyll site provided some basics to optimizing your Jekyll site performance, in this post I want to focus on providing a more comprehensive explanation of how you can create a more enjoyable development experience with the magic of [**Gulp**](https://gulpjs.com/).  

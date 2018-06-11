@@ -11,9 +11,9 @@ header: https://cloud.githubusercontent.com/assets/16360374/23640973/ac0fe0a0-02
 repo: PlayMusic
 tags:
   - Google
-  - music
+  - Music
   - Rainmeter
-  - projects
+  - Projects
 ---
 
 <!-- Badges -->
