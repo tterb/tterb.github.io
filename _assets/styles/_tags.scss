@@ -1,0 +1,77 @@
+
+.tags-wrapper {
+  background: _palette(accent1, bg);
+  border: 0 !important;
+  padding: 3em 8%;
+  outline: none !important;
+  .tags-list {
+    // text-align: center;
+    text-align: left;
+    width: 80%;
+    margin: 1em auto 3em 3%;
+  }
+  hr {
+    margin: 1em 0 1.5em;
+  }
+  .tag-entry {
+    display: inline-block;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.45;
+    text-decoration: none;
+    color: darken(_palette(accent2, bg), 5%);
+    border: 1px solid darken(_palette(accent2, bg), 5%);
+    border-radius: .313rem;
+    padding: .25rem .625rem;
+    margin-right: .125rem;
+    margin-bottom: .5rem;
+    transition: all 350ms ease-in-out;
+    &:hover, &.active {
+      background: darken(_palette(accent2, bg), 5%);
+      // color: darken(_palette(accent2, bg), 15%);
+      color: _palette(accent1, bg);
+      font-weight: 600;
+      // border: 1px outset _palette(accent2, bg)
+      box-shadow: 0.5px 0.5px 0 1px #268e8c;
+    }
+    &.active {
+      box-shadow: 0.5px 0 0 1px #268e8c;
+      transform: translateY(1px);
+    }
+  }
+  .tag-title {
+    // display: block;
+    color: darken(_palette(accent2, bg), 5%);
+    font-size: 1.75em;
+    font-weight: 500;
+    margin-bottom: 0.25em;
+    cursor: default;
+  }
+  .tag-posts {
+    list-style: none;
+    vertical-align: top;
+    margin: 0.5em 0.6em 2.5em 0;
+    padding: 0;
+    ul {
+      margin-left: 3vw;
+    }
+    li {
+      margin-left: 1.5em;
+      margin-bottom: 0;
+      .post-link {
+        .title {
+          font-size: 1.15em;
+          font-weight: 600;
+        }
+        &:hover .title, &:active .title {
+          color: saturate(lighten(_palette(accent2, bg), 15%), 5%) !important;
+          // text-shadow: 0 0.5px 1px rgba(#000, 0.2);
+        }
+      }
+      .date-container {
+        min-width: 102px;
+        max-width: 102px;
+      }
+    }
+  }
+}
