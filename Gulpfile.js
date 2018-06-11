@@ -4,18 +4,19 @@ const autoprefixer = require('autoprefixer');
 const browserSync  = require('browser-sync').create();
 const cleancss     = require('gulp-clean-css');
 const concat       = require('gulp-concat');
+const cssnano      = require('cssnano');
 const del          = require('del');
 const gulp         = require('gulp');
 const gutil        = require('gulp-util');
 const imagemin     = require('gulp-imagemin');
 const pngquant     = require('imagemin-pngquant');
-const notify       = require('gulp-notify');
 const postcss      = require('gulp-postcss');
 const rename       = require('gulp-rename');
 const run          = require('gulp-run');
 const runSequence  = require('run-sequence');
 const sass         = require('gulp-ruby-sass');
-const uglify       = require('gulp-uglify');
+const uncss        = require('uncss');
+const uglify       = require('gulp-uglify-es').default;
 
 // Include paths file
 const paths = require('./_assets/gulp-config/paths');
@@ -27,8 +28,8 @@ gulp.task('build:styles:main', function() {
     style: 'compressed',
     trace: true,
     loadPath: [paths.sassFiles]
-  }).pipe(postcss([autoprefixer({ browsers: ['last 2 versions']}) ]))
-    .pipe(cleancss())
+  }).pipe(postcss([autoprefixer({ browsers: ['last 2 versions']}), cssnano()]))
+    // .pipe(postcss([uncss({ html: paths.jekyllHtmlFilesGlob })]))
     .pipe(gulp.dest(paths.jekyllCssFiles))
     .pipe(gulp.dest(paths.siteCssFiles))
     .pipe(browserSync.stream())
@@ -41,8 +42,8 @@ gulp.task('build:styles:critical', function() {
     style: 'compressed',
     trace: true,
     loadPath: [paths.sassFiles]
-  }).pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
-    .pipe(cleancss())
+  }).pipe(postcss([autoprefixer({ browsers: ['last 2 versions'] }), cssnano()]))
+    // .pipe(postcss([uncss({ html: paths.sitePages })]))
     .pipe(gulp.dest('_includes'))
     .on('error', gutil.log);
 });
@@ -218,7 +219,7 @@ gulp.task('serve', ['build'], function() {
 
 // Build site
 gulp.task('build', function(callback) {
-  runSequence(['build:scripts', 'build:images', 'build:styles', 'build:fonts', 'build:downloads'], 'build:jekyll', callback);
+  runSequence(['build:scripts', 'build:styles', 'build:images', 'build:fonts', 'build:downloads'], 'build:jekyll', callback);
 });
 
 gulp.task('build:test', function (callback) {
