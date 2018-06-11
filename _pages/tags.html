@@ -1,46 +1,63 @@
 ---
-title: "Tags"
+title: Tags
 permalink: /tags/
-description: "Take a look at my beautiful tags."
-options: fullwidth, nomenu, nolanding, nobreadcrumb
+description:
+options: fullwidth, nomenu, nolanding
 image: bark.jpg
-background-image: bark.jpg
 ---
 
-<div class="tags">
+<div class="tags-wrapper">
   <section class="tags-list">
-  {% assign tags_list = site.tags %}
+  {% assign tags_list = site.tags | sort %}
     {% if tags_list.first[0] == null %}
       {% for tag in tags_list %}
-        <a class="tag-entry" data-scroll href="#{{ tag | slugify }}">{{ tag }}</a>
+        <a class="tag-entry scrolly scroll-btn" href="#{{ tag | slugify }}-tag" data-scroll>{{ tag }}</a>
       {% endfor %}
     {% else %}
       {% for tag in tags_list %}
-        <a class="tag-entry" data-scroll href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        {% if tag[1].size > 1 %}
+          <a class="tag-entry scrolly scroll-btn" href="#{{ tag[0] | slugify }}-tag" data-scroll>{{ tag[0] }}</a>
+        {% endif %}
       {% endfor %}
     {% endif %}
   {% assign tags_list = nil %}
   </section>
 
   <section class="tags-content">
-  {% for tag in site.tags  %}
-    <span class="tag-title tag-entry" id="{{ tag[0] | slugify }}">{{ tag[0] }}</span>
-    <ul class="tag-posts">
-      {% assign pages_list = tag[1] %}
+  {% assign tags_list = site.tags | sort %}
+  {% for tag in tags_list %}
+    {% if tag[1].size > 1 %}
+      <div id="{{ tag[0] | slugify }}-tag" class="tag-container">
+      <hr>
+      <!-- <span class="fas fa-hashtag"></span> -->
+      <span class="tag-title">{{ tag[0] }}</span>
+      <ul class="tag-posts">
+      {% assign pages_list = tag[1] | sort | reverse %}
       {% for post in pages_list %}
         {% if post.title != null %}
           {% if group == null or group == post.group %}
-            <li><a class="post-link" href="{{ site.url }}{{ post.url }}">
+            <li class="archive-post">
+              <p class="date-container"><span class="date">{{ post.date | date: "%b %d, %Y" }}</span></p>&nbsp;
+              <a class="post-link" href="{{ post.url }}">
+                <b class="title">{{ post.title }}</b>&nbsp;
+                {{ post.description | strip_html | truncate: 64 }}
+              </a>
+            </li>
+            <!-- <li><a class="post-link" href="{{ site.url }}{{ post.url }}">
               <b class="title">{{ post.title }}</b>&nbsp;
-              {{ post.desc | strip_html | truncatewords: 10 }}
+              {{ post.desc | strip_html | truncatewords: 10, "..." }}
               <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
-            </a></li>
+            </a></li> -->
           {% endif %}
         {% endif %}
       {% endfor %}
+      {% assign tags_list = nil %}
       {% assign pages_list = nil %}
       {% assign group = nil %}
-    </ul>
+      </ul>
+    </div>
+    {% endif %}
   {% endfor %}
   </section>
 </div>
+<a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
