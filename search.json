@@ -1,9 +1,27 @@
 [
   
     {
+      "title"      : "Optimizing Jekyll with Gulp",
+      "category"   : "",
+      "tags"       : "Jekyll, Web Development, Performance, Gulp, Javascript, and GitHub Pages",
+      "url"        : "/blog/optimizing-jekyll-with-gulp-revisited.html",
+      "date"       : "2018-06-01 00:00:00 +0000",
+      "shortdate"  : "Jun 01, 2018"
+    } ,
+  
+    {
+      "title"      : "YouTube to MP3",
+      "category"   : "",
+      "tags"       : "YouTube, MP3, Command-line, Bash, Python, and Projects",
+      "url"        : "/blog/project/youtube-to-mp3.html",
+      "date"       : "2018-05-27 00:00:00 +0000",
+      "shortdate"  : "May 27, 2018"
+    } ,
+  
+    {
       "title"      : "Improving the Accessibility of Jekyll",
       "category"   : "",
-      "tags"       : "markdown, jekyll, editor, Github pages, electron, and projects",
+      "tags"       : "Markdown, Jekyll, Editor, GitHub Pages, Tools, Electron, and Projects",
       "url"        : "/blog/improving-the-accessibility-of-jekyll.html",
       "date"       : "2017-07-01 00:00:00 +0000",
       "shortdate"  : "Jul 01, 2017"
@@ -12,7 +30,7 @@
     {
       "title"      : "The Future of the Windows App Store",
       "category"   : "",
-      "tags"       : "Windows 10, Microsoft, tech, tools, and discussion",
+      "tags"       : "Windows 10, Microsoft, Tech, Tools, and Discussion",
       "url"        : "/blog/windows-app-store.html",
       "date"       : "2017-06-20 00:00:00 +0000",
       "shortdate"  : "Jun 20, 2017"
@@ -21,7 +39,7 @@
     {
       "title"      : "Urban Dictionary Therapy",
       "category"   : "",
-      "tags"       : "urban dictionary, command-line, terminal, bash, tools, python, and projects",
+      "tags"       : "Urban Dictionary, Command-line, Bash, Python, and Projects",
       "url"        : "/blog/projects/urban-dictionary-therapy.html",
       "date"       : "2017-05-12 00:00:00 +0000",
       "shortdate"  : "May 12, 2017"
@@ -30,7 +48,7 @@
     {
       "title"      : "Optimizing Jekyll",
       "category"   : "",
-      "tags"       : "jekyll, web, performance, PageSpeed, gulp, grunt, javascript, and cloudflare",
+      "tags"       : "Jekyll, Web Development, Performance, Gulp, Javascript, Node.js, GitHub Pages, and Cloudflare",
       "url"        : "/blog/optimizing-jekyll.html",
       "date"       : "2017-04-10 00:00:00 +0000",
       "shortdate"  : "Apr 10, 2017"
@@ -48,7 +66,7 @@
     {
       "title"      : "Atomic Delight",
       "category"   : "",
-      "tags"       : "UI, Atom, syntax, editor, design, and projects",
+      "tags"       : "UI, Atom, Syntax, Editor, Design, Customization, and Projects",
       "url"        : "/blog/projects/atomic-delight.html",
       "date"       : "2016-11-16 00:00:00 +0000",
       "shortdate"  : "Nov 16, 2016"
@@ -57,7 +75,7 @@
     {
       "title"      : "Upgrading the SSD on a Razer Blade (pt 2)",
       "category"   : "",
-      "tags"       : "Razer, laptop, tutorial, tech, and how-to",
+      "tags"       : "Razer, Laptop, Tutorial, Tech, Tools, and How-To",
       "url"        : "/blog/how-to-upgrade-ssd-pt2.html",
       "date"       : "2016-10-06 00:00:00 +0000",
       "shortdate"  : "Oct 06, 2016"
@@ -66,7 +84,7 @@
     {
       "title"      : "Upgrading the SSD on a Razer Blade",
       "category"   : "",
-      "tags"       : "Razer, laptop, tech, how-to, and tutorial",
+      "tags"       : "Razer, Laptop, Tech, Tools, How-To, and Tutorial",
       "url"        : "/blog/how-to-upgrade-ssd-pt1.html",
       "date"       : "2016-10-05 00:00:00 +0000",
       "shortdate"  : "Oct 05, 2016"
@@ -75,7 +93,7 @@
     {
       "title"      : "Atom File Icons",
       "category"   : "",
-      "tags"       : "Atom, icons, editor, design, Illustrator, UI, and projects",
+      "tags"       : "Atom, Icons, Editor, Design, Illustrator, UI, Customization, and Projects",
       "url"        : "/blog/atom-file-icons.html",
       "date"       : "2016-09-29 00:00:00 +0000",
       "shortdate"  : "Sep 29, 2016"
@@ -84,16 +102,16 @@
     {
       "title"      : "Atomic Design UI",
       "category"   : "",
-      "tags"       : "Atom, design, UI, editor, syntax, and projects",
+      "tags"       : "Atom, Design, UI, Editor, Syntax, Customization, and Projects",
       "url"        : "/blog/projects/atomic-design-ui.html",
-      "date"       : "2016-08-23 00:00:00 +0000",
-      "shortdate"  : "Aug 23, 2016"
+      "date"       : "2016-09-18 00:00:00 +0000",
+      "shortdate"  : "Sep 18, 2016"
     } ,
   
     {
       "title"      : "Atomic Monokai",
       "category"   : "",
-      "tags"       : "Atom, syntax, design, UI, and projects",
+      "tags"       : "Atom, Syntax, Design, UI, Customization, and Projects",
       "url"        : "/blog/projects/atomic-monokai.html",
       "date"       : "2016-08-23 00:00:00 +0000",
       "shortdate"  : "Aug 23, 2016"
@@ -102,7 +120,7 @@
     {
       "title"      : "Essential Atom Packages",
       "category"   : "",
-      "tags"       : "Atom, software, editor, tools, review, and spotlight",
+      "tags"       : "Atom, Software, Editor, Tools, Customization, Review, and Spotlight",
       "url"        : "/blog/essential-atom-packages.html",
       "date"       : "2016-08-22 00:00:00 +0000",
       "shortdate"  : "Aug 22, 2016"
@@ -111,7 +129,7 @@
     {
       "title"      : "Github Calendar",
       "category"   : "",
-      "tags"       : "Github, Rainmeter, and projects",
+      "tags"       : "Github, Rainmeter, and Projects",
       "url"        : "/blog/projects/github-calendar.html",
       "date"       : "2016-08-20 00:00:00 +0000",
       "shortdate"  : "Aug 20, 2016"
@@ -120,7 +138,7 @@
     {
       "title"      : "PlayMusic",
       "category"   : "",
-      "tags"       : "Google, music, Rainmeter, and projects",
+      "tags"       : "Google, Music, Rainmeter, and Projects",
       "url"        : "/blog/projects/playmusic.html",
       "date"       : "2016-08-18 00:00:00 +0000",
       "shortdate"  : "Aug 18, 2016"

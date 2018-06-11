@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <title>Optimizing Jekyll with Gulp - Brett Stevenson</title>
+  <meta name="description" content="Developer &#x1f784; Designer &#x1f784; Student"/>
+  
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Optimizing Jekyll with Gulp | Brett Stevenson</title>
+<meta property="og:title" content="Optimizing Jekyll with Gulp" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An explanation of how to optimize your Jekyll website using Gulp" />
+<meta property="og:description" content="An explanation of how to optimize your Jekyll website using Gulp" />
+<link rel="canonical" href="https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html" />
+<meta property="og:url" content="https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html" />
+<meta property="og:site_name" content="Brett Stevenson" />
+<meta property="og:image" content="https://brettstevenson.io/web-performance.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-06-01T00:00:00+00:00" />
+<script type="application/ld+json">
+{"name":null,"description":"An explanation of how to optimize your Jekyll website using Gulp","url":"https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html","headline":"Optimizing Jekyll with Gulp","dateModified":"2018-06-01T00:00:00+00:00","datePublished":"2018-06-01T00:00:00+00:00","sameAs":null,"@type":"BlogPosting","author":null,"image":"https://brettstevenson.io/web-performance.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://brettstevenson.io/assets/img/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+    <!-- Open graph tags -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html">
+<meta name="twitter:url" content="https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html">
+<meta property="og:image" content="https://brettstevenson.io/assets/img/posts/web-performance.png">
+<meta property="og:site_name" content="Brett Stevenson">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@vdaubry">
+<meta name="twitter:creator" content="@vdaubry">
+
+
+  <meta property="og:title" content="Optimizing Jekyll with Gulp">
+  <meta name="twitter:title" content="Optimizing Jekyll with Gulp">
+
+
+
+  <meta property="og:description" content="An explanation of how to optimize your Jekyll website using Gulp">
+  <meta name="twitter:description" content="An explanation of how to optimize your Jekyll website using Gulp">
+
+
+
+  <meta property="og:image" content="https://brettstevenson.io/assets/img/posts/web-performance.png">
+  <meta name="twitter:image:src" content="https://brettstevenson.io/https://brettstevenson.io/assets/img/posts/web-performance.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-06-01T00:00:00+00:00">
+  <meta property="article:author" content="">
+
+
+
+  
+    <meta property="article:section" content="blog">
+  
+
+
+
+  
+    <meta property="article:tag" content="Jekyll">
+  
+    <meta property="article:tag" content="Web Development">
+  
+    <meta property="article:tag" content="Performance">
+  
+    <meta property="article:tag" content="Gulp">
+  
+    <meta property="article:tag" content="Javascript">
+  
+    <meta property="article:tag" content="GitHub Pages">
+  
+
+
+  
+
+  <link rel="canonical" href="https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html">
+  <script src="/assets/js/async-css.js" type="text/javascript"></script>
+  <style>.col-wrapper:after{content:"";display:table;clear:both}.col-wrapper{font-size:15px;color:#fefefe;margin-left:-2px}.columns{display:inline}.col{float:left;margin-bottom:1px;padding-left:2px}.col-2{width:calc(70% - 2px)}.col-3{width:calc(30% - 2px)}.col-4{width:calc(100% - 2px)}@media screen and (max-width:800px){.col-1,.col-2,.col-3,.col-4{width:calc(100% - 2px)}}@media screen and (max-width:600px){.col{float:none;width:calc(100% - 2px)}}.margin-bot{color:#fefefe!important;margin-bottom:4px}.post-meta{color:#fefefe;font-size:_font(prose-size-large)!important}.block{min-height:240px}.block .block-body{margin:0 4.5em 50px 30px;min-height:140px;height:100%;text-align:left}@keyframes a{0%{transform:rotate(-45deg) translate(0)}15%{transform:rotate(-45deg) translate(-10px,10px)}35%{transform:rotate(-45deg) translate(0)}}*,.row,:after,:before{box-sizing:border-box}.row{border-bottom:1px solid transparent}.row>*{float:left;box-sizing:border-box}.row:after,.row:before{content:"";display:block;clear:both;height:0}.row.uniform>*>:first-child{margin-top:0}.row.uniform>*>:last-child{margin-bottom:0}.row.\30 \25>*{padding:0}.row.\30 \25{margin:0 0 -1px}.row.uniform.\30 \25>*{padding:0}.row.uniform.\30 \25{margin:0 0 -1px}.row>*{padding:0 0 0 1.5em}.row{margin:0 0 -1px -1.5em}.row.uniform>*{padding:1.5em 0 0 1.5em}.row.uniform{margin:-1.5em 0 -1px -1.5em}.row.\32 00\25>*{padding:0 0 0 3em}.row.\32 00\25{margin:0 0 -1px -3em}.row.uniform.\32 00\25>*{padding:3em 0 0 3em}.row.uniform.\32 00\25{margin:-3em 0 -1px -3em}.row.\31 50\25>*{padding:0 0 0 2.25em}.row.\31 50\25{margin:0 0 -1px -2.25em}.row.uniform.\31 50\25>*{padding:2.25em 0 0 2.25em}.row.uniform.\31 50\25{margin:-2.25em 0 -1px -2.25em}.row.\35 0\25>*{padding:0 0 0 .75em}.row.\35 0\25{margin:0 0 -1px -.75em}.row.uniform.\35 0\25>*{padding:.75em 0 0 .75em}.row.uniform.\35 0\25{margin:-.75em 0 -1px -.75em}.row.\32 5\25>*{padding:0 0 0 .375em}.row.\32 5\25{margin:0 0 -1px -.375em}.row.uniform.\32 5\25>*{padding:.375em 0 0 .375em}.row.uniform.\32 5\25{margin:-.375em 0 -1px -.375em}.\31 2u,.\31 2u\24{width:100%;clear:none;margin-left:0}.\31 1u,.\31 1u\24{width:91.6666666667%;clear:none;margin-left:0}.\31 0u,.\31 0u\24{width:83.3333333333%;clear:none;margin-left:0}.\39 u,.\39 u\24{width:75%;clear:none;margin-left:0}.\38 u,.\38 u\24{width:66.6666666667%;clear:none;margin-left:0}.\37 u,.\37 u\24{width:58.3333333333%;clear:none;margin-left:0}.\36 u,.\36 u\24{width:50%;clear:none;margin-left:0}.\35 u,.\35 u\24{width:41.6666666667%;clear:none;margin-left:0}.\34 u,.\34 u\24{width:33.3333333333%;clear:none;margin-left:0}.\33 u,.\33 u\24{width:25%;clear:none;margin-left:0}.\32 u,.\32 u\24{width:16.6666666667%;clear:none;margin-left:0}.\31 u,.\31 u\24{width:8.3333333333%;clear:none;margin-left:0}.\31 0u\24+*,.\31 1u\24+*,.\31 2u\24+*,.\31 u\24+*,.\32 u\24+*,.\33 u\24+*,.\34 u\24+*,.\35 u\24+*,.\36 u\24+*,.\37 u\24+*,.\38 u\24+*,.\39 u\24+*{clear:left}.\-11u{margin-left:91.6666666667%}.\-10u{margin-left:83.3333333333%}.\-9u{margin-left:75%}.\-8u{margin-left:66.6666666667%}.\-7u{margin-left:58.3333333333%}.\-6u{margin-left:50%}.\-5u{margin-left:41.6666666667%}.\-4u{margin-left:33.3333333333%}.\-3u{margin-left:25%}.\-2u{margin-left:16.6666666667%}.\-1u{margin-left:8.3333333333%}@media screen and (min-width:1680px){.row>*{padding:0 0 0 1.5em}.row{margin:0 0 -1px -1.5em}.row.uniform>*{padding:1.5em 0 0 1.5em}.row.uniform{margin:-1.5em 0 -1px -1.5em}.row.\32 00\25>*{padding:0 0 0 3em}.row.\32 00\25{margin:0 0 -1px -3em}.row.uniform.\32 00\25>*{padding:3em 0 0 3em}.row.uniform.\32 00\25{margin:-3em 0 -1px -3em}.row.\31 50\25>*{padding:0 0 0 2.25em}.row.\31 50\25{margin:0 0 -1px -2.25em}.row.uniform.\31 50\25>*{padding:2.25em 0 0 2.25em}.row.uniform.\31 50\25{margin:-2.25em 0 -1px -2.25em}.row.\35 0\25>*{padding:0 0 0 .75em}.row.\35 0\25{margin:0 0 -1px -.75em}.row.uniform.\35 0\25>*{padding:.75em 0 0 .75em}.row.uniform.\35 0\25{margin:-.75em 0 -1px -.75em}.row.\32 5\25>*{padding:0 0 0 .375em}.row.\32 5\25{margin:0 0 -1px -.375em}.row.uniform.\32 5\25>*{padding:.375em 0 0 .375em}.row.uniform.\32 5\25{margin:-.375em 0 -1px -.375em}.\31 2u\24\28xlarge\29,.\31 2u\28xlarge\29{width:100%;clear:none;margin-left:0}.\31 1u\24\28xlarge\29,.\31 1u\28xlarge\29{width:91.6666666667%;clear:none;margin-left:0}.\31 0u\24\28xlarge\29,.\31 0u\28xlarge\29{width:83.3333333333%;clear:none;margin-left:0}.\39 u\24\28xlarge\29,.\39 u\28xlarge\29{width:75%;clear:none;margin-left:0}.\38 u\24\28xlarge\29,.\38 u\28xlarge\29{width:66.6666666667%;clear:none;margin-left:0}.\37 u\24\28xlarge\29,.\37 u\28xlarge\29{width:58.3333333333%;clear:none;margin-left:0}.\36 u\24\28xlarge\29,.\36 u\28xlarge\29{width:50%;clear:none;margin-left:0}.\35 u\24\28xlarge\29,.\35 u\28xlarge\29{width:41.6666666667%;clear:none;margin-left:0}.\34 u\24\28xlarge\29,.\34 u\28xlarge\29{width:33.3333333333%;clear:none;margin-left:0}.\33 u\24\28xlarge\29,.\33 u\28xlarge\29{width:25%;clear:none;margin-left:0}.\32 u\24\28xlarge\29,.\32 u\28xlarge\29{width:16.6666666667%;clear:none;margin-left:0}.\31 u\24\28xlarge\29,.\31 u\28xlarge\29{width:8.3333333333%;clear:none;margin-left:0}.\31 0u\24\28xlarge\29+*,.\31 1u\24\28xlarge\29+*,.\31 2u\24\28xlarge\29+*,.\31 u\24\28xlarge\29+*,.\32 u\24\28xlarge\29+*,.\33 u\24\28xlarge\29+*,.\34 u\24\28xlarge\29+*,.\35 u\24\28xlarge\29+*,.\36 u\24\28xlarge\29+*,.\37 u\24\28xlarge\29+*,.\38 u\24\28xlarge\29+*,.\39 u\24\28xlarge\29+*{clear:left}.\-11u\28xlarge\29{margin-left:91.6666666667%}.\-10u\28xlarge\29{margin-left:83.3333333333%}.\-9u\28xlarge\29{margin-left:75%}.\-8u\28xlarge\29{margin-left:66.6666666667%}.\-7u\28xlarge\29{margin-left:58.3333333333%}.\-6u\28xlarge\29{margin-left:50%}.\-5u\28xlarge\29{margin-left:41.6666666667%}.\-4u\28xlarge\29{margin-left:33.3333333333%}.\-3u\28xlarge\29{margin-left:25%}.\-2u\28xlarge\29{margin-left:16.6666666667%}.\-1u\28xlarge\29{margin-left:8.3333333333%}}@media screen and (min-width:1280px){.row>*{padding:0 0 0 1.5em}.row{margin:0 0 -1px -1.5em}.row.uniform>*{padding:1.5em 0 0 1.5em}.row.uniform{margin:-1.5em 0 -1px -1.5em}.row.\32 00\25>*{padding:0 0 0 3em}.row.\32 00\25{margin:0 0 -1px -3em}.row.uniform.\32 00\25>*{padding:3em 0 0 3em}.row.uniform.\32 00\25{margin:-3em 0 -1px -3em}.row.\31 50\25>*{padding:0 0 0 2.25em}.row.\31 50\25{margin:0 0 -1px -2.25em}.row.uniform.\31 50\25>*{padding:2.25em 0 0 2.25em}.row.uniform.\31 50\25{margin:-2.25em 0 -1px -2.25em}.row.\35 0\25>*{padding:0 0 0 .75em}.row.\35 0\25{margin:0 0 -1px -.75em}.row.uniform.\35 0\25>*{padding:.75em 0 0 .75em}.row.uniform.\35 0\25{margin:-.75em 0 -1px -.75em}.row.\32 5\25>*{padding:0 0 0 .375em}.row.\32 5\25{margin:0 0 -1px -.375em}.row.uniform.\32 5\25>*{padding:.375em 0 0 .375em}.row.uniform.\32 5\25{margin:-.375em 0 -1px -.375em}.\31 2u\24\28large\29,.\31 2u\28large\29{width:100%;clear:none;margin-left:0}.\31 1u\24\28large\29,.\31 1u\28large\29{width:91.6666666667%;clear:none;margin-left:0}.\31 0u\24\28large\29,.\31 0u\28large\29{width:83.3333333333%;clear:none;margin-left:0}.\39 u\24\28large\29,.\39 u\28large\29{width:75%;clear:none;margin-left:0}.\38 u\24\28large\29,.\38 u\28large\29{width:66.6666666667%;clear:none;margin-left:0}.\37 u\24\28large\29,.\37 u\28large\29{width:58.3333333333%;clear:none;margin-left:0}.\36 u\24\28large\29,.\36 u\28large\29{width:50%;clear:none;margin-left:0}.\35 u\24\28large\29,.\35 u\28large\29{width:41.6666666667%;clear:none;margin-left:0}.\34 u\24\28large\29,.\34 u\28large\29{width:33.3333333333%;clear:none;margin-left:0}.\33 u\24\28large\29,.\33 u\28large\29{width:25%;clear:none;margin-left:0}.\32 u\24\28large\29,.\32 u\28large\29{width:16.6666666667%;clear:none;margin-left:0}.\31 u\24\28large\29,.\31 u\28large\29{width:8.3333333333%;clear:none;margin-left:0}.\31 0u\24\28large\29+*,.\31 1u\24\28large\29+*,.\31 2u\24\28large\29+*,.\31 u\24\28large\29+*,.\32 u\24\28large\29+*,.\33 u\24\28large\29+*,.\34 u\24\28large\29+*,.\35 u\24\28large\29+*,.\36 u\24\28large\29+*,.\37 u\24\28large\29+*,.\38 u\24\28large\29+*,.\39 u\24\28large\29+*{clear:left}.\-11u\28large\29{margin-left:91.6666666667%}.\-10u\28large\29{margin-left:83.3333333333%}.\-9u\28large\29{margin-left:75%}.\-8u\28large\29{margin-left:66.6666666667%}.\-7u\28large\29{margin-left:58.3333333333%}.\-6u\28large\29{margin-left:50%}.\-5u\28large\29{margin-left:41.6666666667%}.\-4u\28large\29{margin-left:33.3333333333%}.\-3u\28large\29{margin-left:25%}.\-2u\28large\29{margin-left:16.6666666667%}.\-1u\28large\29{margin-left:8.3333333333%}}@media screen and (max-width:900px){.row>*{padding:0 0 0 1.5em}.row{margin:0 0 -1px -1.5em}.row.uniform>*{padding:1.5em 0 0 1.5em}.row.uniform{margin:-1.5em 0 -1px -1.5em}.row.\32 00\25>*{padding:0 0 0 3em}.row.\32 00\25{margin:0 0 -1px -3em}.row.uniform.\32 00\25>*{padding:3em 0 0 3em}.row.uniform.\32 00\25{margin:-3em 0 -1px -3em}.row.\31 50\25>*{padding:0 0 0 2.25em}.row.\31 50\25{margin:0 0 -1px -2.25em}.row.uniform.\31 50\25>*{padding:2.25em 0 0 2.25em}.row.uniform.\31 50\25{margin:-2.25em 0 -1px -2.25em}.row.\35 0\25>*{padding:0 0 0 .75em}.row.\35 0\25{margin:0 0 -1px -.75em}.row.uniform.\35 0\25>*{padding:.75em 0 0 .75em}.row.uniform.\35 0\25{margin:-.75em 0 -1px -.75em}.row.\32 5\25>*{padding:0 0 0 .375em}.row.\32 5\25{margin:0 0 -1px -.375em}.row.uniform.\32 5\25>*{padding:.375em 0 0 .375em}.row.uniform.\32 5\25{margin:-.375em 0 -1px -.375em}.\31 2u\24\28medium\29,.\31 2u\28medium\29{width:100%;clear:none;margin-left:0}.\31 1u\24\28medium\29,.\31 1u\28medium\29{width:91.6666666667%;clear:none;margin-left:0}.\31 0u\24\28medium\29,.\31 0u\28medium\29{width:83.3333333333%;clear:none;margin-left:0}.\39 u\24\28medium\29,.\39 u\28medium\29{width:75%;clear:none;margin-left:0}.\38 u\24\28medium\29,.\38 u\28medium\29{width:66.6666666667%;clear:none;margin-left:0}.\37 u\24\28medium\29,.\37 u\28medium\29{width:58.3333333333%;clear:none;margin-left:0}.\36 u\24\28medium\29,.\36 u\28medium\29{width:50%;clear:none;margin-left:0}.\35 u\24\28medium\29,.\35 u\28medium\29{width:41.6666666667%;clear:none;margin-left:0}.\34 u\24\28medium\29,.\34 u\28medium\29{width:33.3333333333%;clear:none;margin-left:0}.\33 u\24\28medium\29,.\33 u\28medium\29{width:25%;clear:none;margin-left:0}.\32 u\24\28medium\29,.\32 u\28medium\29{width:16.6666666667%;clear:none;margin-left:0}.\31 u\24\28medium\29,.\31 u\28medium\29{width:8.3333333333%;clear:none;margin-left:0}.\31 0u\24\28medium\29+*,.\31 1u\24\28medium\29+*,.\31 2u\24\28medium\29+*,.\31 u\24\28medium\29+*,.\32 u\24\28medium\29+*,.\33 u\24\28medium\29+*,.\34 u\24\28medium\29+*,.\35 u\24\28medium\29+*,.\36 u\24\28medium\29+*,.\37 u\24\28medium\29+*,.\38 u\24\28medium\29+*,.\39 u\24\28medium\29+*{clear:left}.\-11u\28medium\29{margin-left:91.6666666667%}.\-10u\28medium\29{margin-left:83.3333333333%}.\-9u\28medium\29{margin-left:75%}.\-8u\28medium\29{margin-left:66.6666666667%}.\-7u\28medium\29{margin-left:58.3333333333%}.\-6u\28medium\29{margin-left:50%}.\-5u\28medium\29{margin-left:41.6666666667%}.\-4u\28medium\29{margin-left:33.3333333333%}.\-3u\28medium\29{margin-left:25%}.\-2u\28medium\29{margin-left:16.6666666667%}.\-1u\28medium\29{margin-left:8.3333333333%}}@media screen and (max-width:740px){.row>*{padding:0 0 0 1.5em}.row{margin:0 0 -1px -1.5em}.row.uniform>*{padding:1.5em 0 0 1.5em}.row.uniform{margin:-1.5em 0 -1px -1.5em}.row.\32 00\25>*{padding:0 0 0 3em}.row.\32 00\25{margin:0 0 -1px -3em}.row.uniform.\32 00\25>*{padding:3em 0 0 3em}.row.uniform.\32 00\25{margin:-3em 0 -1px -3em}.row.\31 50\25>*{padding:0 0 0 2.25em}.row.\31 50\25{margin:0 0 -1px -2.25em}.row.uniform.\31 50\25>*{padding:2.25em 0 0 2.25em}.row.uniform.\31 50\25{margin:-2.25em 0 -1px -2.25em}.row.\35 0\25>*{padding:0 0 0 .75em}.row.\35 0\25{margin:0 0 -1px -.75em}.row.uniform.\35 0\25>*{padding:.75em 0 0 .75em}.row.uniform.\35 0\25{margin:-.75em 0 -1px -.75em}.row.\32 5\25>*{padding:0 0 0 .375em}.row.\32 5\25{margin:0 0 -1px -.375em}.row.uniform.\32 5\25>*{padding:.375em 0 0 .375em}.row.uniform.\32 5\25{margin:-.375em 0 -1px -.375em}.\31 2u\24\28small\29,.\31 2u\28small\29{width:100%;clear:none;margin-left:0}.\31 1u\24\28small\29,.\31 1u\28small\29{width:91.6666666667%;clear:none;margin-left:0}.\31 0u\24\28small\29,.\31 0u\28small\29{width:83.3333333333%;clear:none;margin-left:0}.\39 u\24\28small\29,.\39 u\28small\29{width:75%;clear:none;margin-left:0}.\38 u\24\28small\29,.\38 u\28small\29{width:66.6666666667%;clear:none;margin-left:0}.\37 u\24\28small\29,.\37 u\28small\29{width:58.3333333333%;clear:none;margin-left:0}.\36 u\24\28small\29,.\36 u\28small\29{width:50%;clear:none;margin-left:0}.\35 u\24\28small\29,.\35 u\28small\29{width:41.6666666667%;clear:none;margin-left:0}.\34 u\24\28small\29,.\34 u\28small\29{width:33.3333333333%;clear:none;margin-left:0}.\33 u\24\28small\29,.\33 u\28small\29{width:25%;clear:none;margin-left:0}.\32 u\24\28small\29,.\32 u\28small\29{width:16.6666666667%;clear:none;margin-left:0}.\31 u\24\28small\29,.\31 u\28small\29{width:8.3333333333%;clear:none;margin-left:0}.\31 0u\24\28small\29+*,.\31 1u\24\28small\29+*,.\31 2u\24\28small\29+*,.\31 u\24\28small\29+*,.\32 u\24\28small\29+*,.\33 u\24\28small\29+*,.\34 u\24\28small\29+*,.\35 u\24\28small\29+*,.\36 u\24\28small\29+*,.\37 u\24\28small\29+*,.\38 u\24\28small\29+*,.\39 u\24\28small\29+*{clear:left}.\-11u\28small\29{margin-left:91.6666666667%}.\-10u\28small\29{margin-left:83.3333333333%}.\-9u\28small\29{margin-left:75%}.\-8u\28small\29{margin-left:66.6666666667%}.\-7u\28small\29{margin-left:58.3333333333%}.\-6u\28small\29{margin-left:50%}.\-5u\28small\29{margin-left:41.6666666667%}.\-4u\28small\29{margin-left:33.3333333333%}.\-3u\28small\29{margin-left:25%}.\-2u\28small\29{margin-left:16.6666666667%}.\-1u\28small\29{margin-left:8.3333333333%}}@media screen and (max-width:480px){.row>*{padding:0 0 0 1.5em}.row{margin:0 0 -1px -1.5em}.row.uniform>*{padding:1.5em 0 0 1.5em}.row.uniform{margin:-1.5em 0 -1px -1.5em}.row.\32 00\25>*{padding:0 0 0 3em}.row.\32 00\25{margin:0 0 -1px -3em}.row.uniform.\32 00\25>*{padding:3em 0 0 3em}.row.uniform.\32 00\25{margin:-3em 0 -1px -3em}.row.\31 50\25>*{padding:0 0 0 2.25em}.row.\31 50\25{margin:0 0 -1px -2.25em}.row.uniform.\31 50\25>*{padding:2.25em 0 0 2.25em}.row.uniform.\31 50\25{margin:-2.25em 0 -1px -2.25em}.row.\35 0\25>*{padding:0 0 0 .75em}.row.\35 0\25{margin:0 0 -1px -.75em}.row.uniform.\35 0\25>*{padding:.75em 0 0 .75em}.row.uniform.\35 0\25{margin:-.75em 0 -1px -.75em}.row.\32 5\25>*{padding:0 0 0 .375em}.row.\32 5\25{margin:0 0 -1px -.375em}.row.uniform.\32 5\25>*{padding:.375em 0 0 .375em}.row.uniform.\32 5\25{margin:-.375em 0 -1px -.375em}.\31 2u\24\28xsmall\29,.\31 2u\28xsmall\29{width:100%;clear:none;margin-left:0}.\31 1u\24\28xsmall\29,.\31 1u\28xsmall\29{width:91.6666666667%;clear:none;margin-left:0}.\31 0u\24\28xsmall\29,.\31 0u\28xsmall\29{width:83.3333333333%;clear:none;margin-left:0}.\39 u\24\28xsmall\29,.\39 u\28xsmall\29{width:75%;clear:none;margin-left:0}.\38 u\24\28xsmall\29,.\38 u\28xsmall\29{width:66.6666666667%;clear:none;margin-left:0}.\37 u\24\28xsmall\29,.\37 u\28xsmall\29{width:58.3333333333%;clear:none;margin-left:0}.\36 u\24\28xsmall\29,.\36 u\28xsmall\29{width:50%;clear:none;margin-left:0}.\35 u\24\28xsmall\29,.\35 u\28xsmall\29{width:41.6666666667%;clear:none;margin-left:0}.\34 u\24\28xsmall\29,.\34 u\28xsmall\29{width:33.3333333333%;clear:none;margin-left:0}.\33 u\24\28xsmall\29,.\33 u\28xsmall\29{width:25%;clear:none;margin-left:0}.\32 u\24\28xsmall\29,.\32 u\28xsmall\29{width:16.6666666667%;clear:none;margin-left:0}.\31 u\24\28xsmall\29,.\31 u\28xsmall\29{width:8.3333333333%;clear:none;margin-left:0}.\31 0u\24\28xsmall\29+*,.\31 1u\24\28xsmall\29+*,.\31 2u\24\28xsmall\29+*,.\31 u\24\28xsmall\29+*,.\32 u\24\28xsmall\29+*,.\33 u\24\28xsmall\29+*,.\34 u\24\28xsmall\29+*,.\35 u\24\28xsmall\29+*,.\36 u\24\28xsmall\29+*,.\37 u\24\28xsmall\29+*,.\38 u\24\28xsmall\29+*,.\39 u\24\28xsmall\29+*{clear:left}.\-11u\28xsmall\29{margin-left:91.6666666667%}.\-10u\28xsmall\29{margin-left:83.3333333333%}.\-9u\28xsmall\29{margin-left:75%}.\-8u\28xsmall\29{margin-left:66.6666666667%}.\-7u\28xsmall\29{margin-left:58.3333333333%}.\-6u\28xsmall\29{margin-left:50%}.\-5u\28xsmall\29{margin-left:41.6666666667%}.\-4u\28xsmall\29{margin-left:33.3333333333%}.\-3u\28xsmall\29{margin-left:25%}.\-2u\28xsmall\29{margin-left:16.6666666667%}.\-1u\28xsmall\29{margin-left:8.3333333333%}}@media screen and (max-width:260px){.row>*{padding:0 0 0 1.5em}.row{margin:0 0 -1px -1.5em}.row.uniform>*{padding:1.5em 0 0 1.5em}.row.uniform{margin:-1.5em 0 -1px -1.5em}.row.\32 00\25>*{padding:0 0 0 3em}.row.\32 00\25{margin:0 0 -1px -3em}.row.uniform.\32 00\25>*{padding:3em 0 0 3em}.row.uniform.\32 00\25{margin:-3em 0 -1px -3em}.row.\31 50\25>*{padding:0 0 0 2.25em}.row.\31 50\25{margin:0 0 -1px -2.25em}.row.uniform.\31 50\25>*{padding:2.25em 0 0 2.25em}.row.uniform.\31 50\25{margin:-2.25em 0 -1px -2.25em}.row.\35 0\25>*{padding:0 0 0 .75em}.row.\35 0\25{margin:0 0 -1px -.75em}.row.uniform.\35 0\25>*{padding:.75em 0 0 .75em}.row.uniform.\35 0\25{margin:-.75em 0 -1px -.75em}.row.\32 5\25>*{padding:0 0 0 .375em}.row.\32 5\25{margin:0 0 -1px -.375em}.row.uniform.\32 5\25>*{padding:.375em 0 0 .375em}.row.uniform.\32 5\25{margin:-.375em 0 -1px -.375em}.\31 2u\24\28dinky\29,.\31 2u\28dinky\29{width:100%;clear:none;margin-left:0}.\31 1u\24\28dinky\29,.\31 1u\28dinky\29{width:91.6666666667%;clear:none;margin-left:0}.\31 0u\24\28dinky\29,.\31 0u\28dinky\29{width:83.3333333333%;clear:none;margin-left:0}.\39 u\24\28dinky\29,.\39 u\28dinky\29{width:75%;clear:none;margin-left:0}.\38 u\24\28dinky\29,.\38 u\28dinky\29{width:66.6666666667%;clear:none;margin-left:0}.\37 u\24\28dinky\29,.\37 u\28dinky\29{width:58.3333333333%;clear:none;margin-left:0}.\36 u\24\28dinky\29,.\36 u\28dinky\29{width:50%;clear:none;margin-left:0}.\35 u\24\28dinky\29,.\35 u\28dinky\29{width:41.6666666667%;clear:none;margin-left:0}.\34 u\24\28dinky\29,.\34 u\28dinky\29{width:33.3333333333%;clear:none;margin-left:0}.\33 u\24\28dinky\29,.\33 u\28dinky\29{width:25%;clear:none;margin-left:0}.\32 u\24\28dinky\29,.\32 u\28dinky\29{width:16.6666666667%;clear:none;margin-left:0}.\31 u\24\28dinky\29,.\31 u\28dinky\29{width:8.3333333333%;clear:none;margin-left:0}.\31 0u\24\28dinky\29+*,.\31 1u\24\28dinky\29+*,.\31 2u\24\28dinky\29+*,.\31 u\24\28dinky\29+*,.\32 u\24\28dinky\29+*,.\33 u\24\28dinky\29+*,.\34 u\24\28dinky\29+*,.\35 u\24\28dinky\29+*,.\36 u\24\28dinky\29+*,.\37 u\24\28dinky\29+*,.\38 u\24\28dinky\29+*,.\39 u\24\28dinky\29+*{clear:left}.\-11u\28dinky\29{margin-left:91.6666666667%}.\-10u\28dinky\29{margin-left:83.3333333333%}.\-9u\28dinky\29{margin-left:75%}.\-8u\28dinky\29{margin-left:66.6666666667%}.\-7u\28dinky\29{margin-left:58.3333333333%}.\-6u\28dinky\29{margin-left:50%}.\-5u\28dinky\29{margin-left:41.6666666667%}.\-4u\28dinky\29{margin-left:33.3333333333%}.\-3u\28dinky\29{margin-left:25%}.\-2u\28dinky\29{margin-left:16.6666666667%}.\-1u\28dinky\29{margin-left:8.3333333333%}}#banner{display:-ms-flexbox;display:flex;position:relative;height:108vh;min-height:35em;text-align:left;-ms-flex-pack:center;justify-content:center;-ms-flex-direction:column;flex-direction:column;box-shadow:0 2px 18px rgba(0,0,0,.2),inset 0 -100px 200px rgba(32,30,31,.95);cursor:default;overflow:hidden}#banner .inner{position:relative;top:-10.5vh!important}#banner h1{display:inline-block;position:relative;color:hsla(0,0%,100%,.925);font-family:Gotham HTF,Avenir Next,Open Sans,Helvetica Neue,sans-serif;font-size:9.75vw;font-weight:800;letter-spacing:.04em;line-height:1;text-transform:none;text-shadow:0 2px 15px rgba(0,0,0,.85);transform:scale(1);transition:transform .5s ease,opacity .5s ease;padding:0 9.5vw 2.15vw 5.5vw;margin:0;opacity:.95}#banner h1 .accent{font-family:Open Sans,Avenir Next,Helvetica Neue,sans-serif!important;color:#53bab8;margin-left:-2px;margin-right:-5px}@media screen and (min-width:1680px){#banner h1{font-size:8.75vw;padding-top:2vh}}#banner h3{color:hsla(0,0%,100%,.75);font-family:Avenir Next,Open Sans,Helvetica Neue,sans-serif;font-size:2.05vw;font-weight:400;letter-spacing:.1em;text-transform:uppercase;text-align:left;margin:0 0 1vw 6vw}#banner h3 svg.fa-circle{fill:hsla(0,0%,100%,.25);width:6px!important;top:.75px;margin:0 9px 0 8px}#banner:after{transition:opacity 3s ease-in-out 1.25s;display:block;position:absolute;background:#030303;content:"";top:0;left:0;width:100%;height:100%;pointer-events:none;opacity:0}@media screen and (max-width:740px){#banner{height:75vh;min-height:0;padding:11em .55em 5em}#banner .inner{top:-6.5vh}#banner h1{width:80%}#banner br{display:none}}.scroll-btn{position:absolute;display:inline-block;color:transparent!important;text-align:center;top:89vh;left:50%;transition:all .25s ease-in-out 25ms;z-index:1}.scroll-btn span{position:absolute;left:50%;width:24px;height:24px;margin-left:-12px;border-left:3px solid hsla(0,0%,100%,.7);border-bottom:3px solid hsla(0,0%,100%,.7);transform:rotate(-45deg);animation:a 2s infinite}.scroll-btn:hover span{width:25px;height:25px;border-left:4px solid hsla(0,0%,100%,.85);border-bottom:4px solid hsla(0,0%,100%,.85);transition:all .4s ease 50ms;animation:none}.landing.alt .menu-page-link{color:hsla(0,0%,100%,.8);font-size:115%;font-weight:500;text-shadow:0 .5px 3px rgba(0,0,0,.5);transition:all .25s ease-in-out}.landing.alt .menu-page-link:active,.landing.alt .menu-page-link:hover{color:#fff;text-shadow:0 .5px 7px rgba(0,0,0,.65)}.landing .menu-toggle span,.landing .menu-toggle span:after,.landing .menu-toggle span:before{background:#fff;transition:all .5s ease-in-out}.landing .menu-toggle.active span{background:transparent}.landing .menu-toggle.active span:after,.landing .menu-toggle.active span:before{background-color:#fff}.landing #banner{background-image:linear-gradient(180deg,rgba(10,10,13,.35),rgba(10,10,13,.35)),url(/assets/img/banner.jpg);background-position:50%;background-repeat:no-repeat;background-size:cover}</style>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+  <link rel="stylesheet" href="/assets/styles/main.css"/>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.min.css"/>
+
+  
+    
+    
+  <style>
+    #main > header {
+      background-image: -moz-linear-gradient(top, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("/assets/img/web-performance.png");
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("/assets/img/web-performance.png");
+      background-image: -ms-linear-gradient(top, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("/assets/img/web-performance.png");
+      background-image: linear-gradient(top, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("/assets/img/web-performance.png");
+    }
+  </style>
+  
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="Brett Stevenson" href="https://brettstevenson.io/feed.xml"/>
+</head>
+
+  
+<header id="header"  class="alt ">
+  <h1><a href="/index.html">
+  
+    <img class="header-logo" src="/assets/img/logo.png" alt="logo"/><span class="animated fadeIn">Brett Stevenson</span>
+  
+  </a></h1>
+  <nav id="nav">
+    <ul>
+      <li class="special">
+        
+          <a class="menu-toggle" id="menuToggle" href="#menu"><span></span></a>
+        
+        <div id="menu"  class="post-menu" >
+          <ul class="menu-page-list">
+            <li class="menu-page-link"><a href="/index.html">Home</a></li>
+            
+            
+              
+                
+                <li class="menu-page-link"><a href="/dev/">Developer</a></li>
+                
+              
+            
+              
+                
+                <li class="menu-page-link"><a href="/design/">Designer</a></li>
+                
+              
+            
+              
+                
+                <li class="menu-page-link"><a href="/blog/">Blog</a></li>
+                
+              
+            
+              
+                
+              
+            
+              
+                
+                <li class="menu-page-link"><a href="/contact/">Contact</a></li>
+                
+              
+            
+              
+                
+              
+            
+              
+                
+              
+            
+              
+                
+              
+            
+              
+                
+              
+            
+              
+            
+              
+            
+              
+                
+              
+            
+              
+            
+              
+            
+              
+                
+              
+            
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="post-content" role="main">
+    <div class=" post">
+      <a class="back-post" href="/blog"><i class="fa fa-chevron-left"></i><span class="animated fadeIn">Back to Blog</span></a>
+      
+        <section class="post-image" style=" background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/assets/img/posts/web-performance.png); ">
+          <div class="post-meta">
+            <h1 class="post-title">Optimizing Jekyll with Gulp</h1>
+          </div>
+        </section>
+      
+      
+        <div class="post-wrapper">
+          <div class="post-header">
+            <h1 class="post-title">Optimizing Jekyll with Gulp</h1>
+            <div class="date-container">
+              <span class="date"><strong>01</strong>&nbsp;Jun</span>
+              <svg class="ico-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/assets/img/sprite-icons.svg#calendar" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            </div>
+          </div>
+          <section id="content" class="written-content">
+            <a name="top"></a>
+            <p>While the previous entry on optimizing your Jekyll site provided some basics to optimizing your Jekyll site performance, in this post I want to focus on providing a more comprehensive explanation of how you can create a more enjoyable development experience with the magic of <a href="https://gulpjs.com/"><strong>Gulp</strong></a>.<br />
+To get started, lets first discuss the basic workflow and file structure that we’ll be working with. As shown in the image below, we’ll be storing our site assets in the <code class="highlighter-rouge">_assets/</code> directory.</p>
+
+<p><img src="https://user-images.githubusercontent.com/16360374/41198467-d19ceefc-6c31-11e8-8e5d-2134612ebf50.png" alt="file tree" style="width:60%" /></p>
+
+<p>This will allow these files to be processed from within our <a href="https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed">Gulpfile</a>, while remaining ignored by Jekyll. Though, a more in-depth explaination of the file-structure will be provided during each of the respective tasks.</p>
+
+<h2 id="defining-paths">Defining Paths</h2>
+<p>One of the first things that probably stands out is the <code class="highlighter-rouge">gulp-config/paths.js</code> file. In a practice I’ve borrowed from <a href="https://github.com/savaslabs/savaslabs.github.io/">savaslabs</a>, the purpose of this file is to define the paths that will be used within our Gulpfile, allowing for cleaner code and increased modularity. Given a similar file-structure, the file should be as follows:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">paths</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="c1">// Directory locations.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">assetsDir</span>        <span class="o">=</span> <span class="s1">'_assets/'</span><span class="p">;</span>      <span class="c1">// The files Gulp will handle.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllDir</span>        <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>              <span class="c1">// The files Jekyll will handle.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllAssetsDir</span>  <span class="o">=</span> <span class="s1">'assets/'</span><span class="p">;</span>       <span class="c1">// The asset files Jekyll will handle.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">siteDir</span>          <span class="o">=</span> <span class="s1">'_site/'</span><span class="p">;</span>        <span class="c1">// The resulting static site.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">siteAssetsDir</span>    <span class="o">=</span> <span class="s1">'_site/assets/'</span><span class="p">;</span> <span class="c1">// The resulting static site's assets.</span>
+
+<span class="c1">// Folder naming conventions.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">postFolder</span>   <span class="o">=</span> <span class="s1">'_posts'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">draftFolder</span>  <span class="o">=</span> <span class="s1">'_drafts'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">fontFolder</span>   <span class="o">=</span> <span class="s1">'fonts'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">imageFolder</span>  <span class="o">=</span> <span class="s1">'img'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">scriptFolder</span> <span class="o">=</span> <span class="s1">'js'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">stylesFolder</span> <span class="o">=</span> <span class="s1">'styles'</span><span class="p">;</span>
+
+<span class="c1">// Asset files locations.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">sassFiles</span>   <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">assetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">stylesFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jsFiles</span>     <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">assetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">scriptFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">imageFiles</span>  <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">assetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">imageFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">fontFiles</span>   <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">assetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">fontFolder</span><span class="p">;</span>
+
+<span class="c1">// Jekyll files locations.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllPostFiles</span>  <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllDir</span>       <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">postFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllDraftFiles</span> <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllDir</span>       <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">draftFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllCssFiles</span>   <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllAssetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">stylesFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllJsFiles</span>    <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllAssetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">scriptFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllImageFiles</span> <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllAssetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">imageFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllFontFiles</span>  <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllAssetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">fontFolder</span><span class="p">;</span>
+
+<span class="c1">// Site files locations.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">siteCssFiles</span>   <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">siteAssetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">stylesFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">siteJsFiles</span>    <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">siteAssetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">scriptFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">siteImageFiles</span> <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">siteAssetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">imageFolder</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">siteFontFiles</span>  <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">siteAssetsDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">fontFolder</span><span class="p">;</span>
+
+<span class="c1">// Glob patterns by file type.</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">sassPattern</span>     <span class="o">=</span> <span class="s1">'/**/*.scss'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jsPattern</span>       <span class="o">=</span> <span class="s1">'/**/*.js'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">imagePattern</span>    <span class="o">=</span> <span class="s1">'/**/*.+(jpg|JPG|jpeg|JPEG|png|PNG|svg|SVG|gif|GIF|webp|WEBP|tif|TIF)'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">markdownPattern</span> <span class="o">=</span> <span class="s1">'/**/*.+(md|MD|markdown|MARKDOWN)'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">htmlPattern</span>     <span class="o">=</span> <span class="s1">'/**/*.html'</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">xmlPattern</span>      <span class="o">=</span> <span class="s1">'/**/*.xml'</span><span class="p">;</span>
+
+<span class="c1">// Asset files globs</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">sassFilesGlob</span>  <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">sassFiles</span>  <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">sassPattern</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jsFilesGlob</span>    <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jsFiles</span>    <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jsPattern</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">imageFilesGlob</span> <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">imageFiles</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">imagePattern</span><span class="p">;</span>
+
+<span class="c1">// Jekyll files globs</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllPostFilesGlob</span>  <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllPostFiles</span>  <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">markdownPattern</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllDraftFilesGlob</span> <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllDraftFiles</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">markdownPattern</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllHtmlFilesGlob</span>  <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllDir</span>        <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">htmlPattern</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllXmlFilesGlob</span>   <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllDir</span>        <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">xmlPattern</span><span class="p">;</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllImageFilesGlob</span> <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllImageFiles</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">imagePattern</span><span class="p">;</span>
+
+<span class="c1">// Site files globs</span>
+<span class="nx">paths</span><span class="p">.</span><span class="nx">siteHtmlFilesGlob</span> <span class="o">=</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">siteDir</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">htmlPattern</span><span class="p">;</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">paths</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="dependencies">Dependencies</h2>
+<p>To get started with our Gulpfile, we first need to define and install the packages we’ll be using.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Gulpfile.js</span>
+
+<span class="kd">const</span> <span class="nx">autoprefixer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'autoprefixer'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">browserSync</span>  <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'browser-sync'</span><span class="p">).</span><span class="nx">create</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">concat</span>       <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-concat'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cssnano</span>      <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cssnano'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">del</span>          <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'del'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">gulp</span>         <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">gutil</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-util'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">imagemin</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-imagemin'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">pngquant</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'imagemin-pngquant'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">postcss</span>      <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-postcss'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">rename</span>       <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-rename'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">run</span>          <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-run'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">runSequence</span>  <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'run-sequence'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">sass</span>         <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-ruby-sass'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">uglify</span>       <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-uglify-es'</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>  <span class="c1">// For es6 support</span>
+
+<span class="c1">// Include paths from the created paths.js file</span>
+<span class="kd">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./_assets/gulp-config/paths'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Now, you <em>could</em> manually install all of these packages independantly, but in-case you’re looking for a shortcut, I’ve compiled the following command to allow you to conveniently install them all at once.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i <span class="nt">-D</span> autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
+</code></pre></div></div>
+
+<h2 id="styles">Styles</h2>
+<p>To optimize our site’s stylesheets, we’re first going to compile our main Sass file and utilize autoprefixer and cssnano to add the necessary vendor-prefixes and optimize the resulting CSS. Additionally, the use of <a href="https://github.com/postcss/postcss">PostCSS</a> allows us to perform both of these processes while only parsing the CSS once. All of which, produces a single stylesheet that gets placed in our <code class="highlighter-rouge">assets</code> and <code class="highlighter-rouge">_site/assets</code> directories.</p>
+<p class="h-note">
+  If you&rsquo;re really looking to squeeze out all the performance possible, you can check out the [CSS minification benchmark](https://github.com/GoalSmashers/css-minification-benchmark) and see which one works best for you.
+</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Process styles, add vendor-prefixes, minify, then</span>
+<span class="c1">// output the file to the appropriate location</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:styles:main'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">sass</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">sassFiles</span> <span class="o">+</span> <span class="s1">'/main.scss'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">style</span><span class="p">:</span> <span class="s1">'compressed'</span><span class="p">,</span>
+    <span class="na">trace</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">loadPath</span><span class="p">:</span> <span class="p">[</span><span class="nx">paths</span><span class="p">.</span><span class="nx">sassFiles</span><span class="p">]</span>
+  <span class="p">}).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">postcss</span><span class="p">([</span><span class="nx">autoprefixer</span><span class="p">({</span> <span class="na">browsers</span><span class="p">:</span> <span class="p">[</span><span class="s1">'last 2 versions'</span><span class="p">]}),</span> <span class="nx">cssnano</span><span class="p">()]))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllCssFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">siteCssFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">browserSync</span><span class="p">.</span><span class="nx">stream</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'error'</span><span class="p">,</span> <span class="nx">gutil</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>To further optimize our stylesheet delivery we are going to want to ensure that we prioritize the most important and immediately utilized styles. This can be accomplished by creating a <code class="highlighter-rouge">critical.scss</code> file that includes only the critical and above-the-fold styling of your site to be loaded before the rest of your stylesheets, resulting in improved page-load speeds.<br />
+To accomplish this, we will perform the same optimizations as the previous stylesheets, though we will pipe the output to a CSS file to the <code class="highlighter-rouge">_includes/</code> directory, rather than the <code class="highlighter-rouge">assets/</code> directory, so that it can be included in the sites <code class="highlighter-rouge">head.html</code>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create and process critical CSS file to be included in head</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:styles:critical'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">sass</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">sassFiles</span> <span class="o">+</span> <span class="s1">'/critical.scss'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">style</span><span class="p">:</span> <span class="s1">'compressed'</span><span class="p">,</span>
+    <span class="na">trace</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">loadPath</span><span class="p">:</span> <span class="p">[</span><span class="nx">paths</span><span class="p">.</span><span class="nx">sassFiles</span><span class="p">]</span>
+  <span class="p">}).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">postcss</span><span class="p">([</span> <span class="nx">autoprefixer</span><span class="p">({</span> <span class="na">browsers</span><span class="p">:</span> <span class="p">[</span><span class="s1">'last 2 versions'</span><span class="p">]</span> <span class="p">}),</span> <span class="nx">cssnano</span><span class="p">()]))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="s1">'_includes'</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'error'</span><span class="p">,</span> <span class="nx">gutil</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Build all styles</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:styles'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:styles:main'</span><span class="p">,</span> <span class="s1">'build:styles:critical'</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h2 id="scripts">Scripts</h2>
+<p>Within the <code class="highlighter-rouge">js/</code> directory, you’ll notice there are two subdirectories. The purpose of these directories is to differentiate global javascript files from those that are only needed on certain pages. Consequently, the global third-party javsacript files should be placed within the <code class="highlighter-rouge">libs/</code> subdirectory, while the <code class="highlighter-rouge">local/</code> subdirectory is reserved for scripts that are only included on specific pages. This allows for the concatenation of the global javascript files, while preserving the distinction of the local javscript files so they may be individually included as necessary.<br />
+For this process we will need to create three tasks, two for processing the global and the local scripts, and a third task that calls them both.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Concatenate and uglify global JS files and output the</span>
+<span class="c1">// result to the appropriate location</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:scripts:global'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">([</span>
+    <span class="nx">paths</span><span class="p">.</span><span class="nx">jsFiles</span> <span class="o">+</span> <span class="s1">'/lib'</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jsPattern</span><span class="p">,</span>
+    <span class="nx">paths</span><span class="p">.</span><span class="nx">jsFiles</span> <span class="o">+</span> <span class="s1">'/*.js'</span>
+  <span class="p">])</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">concat</span><span class="p">(</span><span class="s1">'main.js'</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">uglify</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllJsFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">siteJsFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'error'</span><span class="p">,</span> <span class="nx">gutil</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Uglify local JS files and output the result to the</span>
+<span class="c1">// appropriate location</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:scripts:local'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jsFiles</span> <span class="o">+</span> <span class="s1">'/local'</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">jsPattern</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">uglify</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllJsFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">siteJsFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'error'</span><span class="p">,</span> <span class="nx">gutil</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Build all scripts</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:scripts'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:scripts:global'</span><span class="p">,</span> <span class="s1">'build:scripts:local'</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h2 id="images">Images</h2>
+<p>If you’ve read my previous installment on this topic, this task should look pretty familiar. Though, it’s important to note that this task is not intended to lessen the importance of choosing the correct image size and filetype, which are integral to optimizing your site’s images. Nevertheless, image optimization can often take some trial and error, so it’s usually best to expirement a bit.<br />
+Additionally, this task currently optimizes all of your site’s images, rather than only processing new images, in most cases, making this the most time-consuming build processes. As a result, if your site has a lot of images it may be beneficial to remove this task from the default <code class="highlighter-rouge">build</code> task, and instead run this task manually when new images are added, rather than with each build.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Optimize and copy image files</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:images'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">imageFilesGlob</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">imagemin</span><span class="p">({</span> 
+      <span class="na">optimizationLevel</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> 
+      <span class="na">progressive</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
+      <span class="na">interlaced</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">use</span><span class="p">:</span> <span class="p">[</span><span class="nx">pngquant</span><span class="p">()]</span>
+    <span class="p">}))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllImageFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">siteImageFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">browserSync</span><span class="p">.</span><span class="nx">stream</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="fonts">Fonts</h2>
+<p>The task for processing the fonts is fairly simple, we simply want to collect all of the files from the <code class="highlighter-rouge">fonts/</code> subdirectories and place them all within the resulting <code class="highlighter-rouge">assets/fonts/</code> directory.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Place fonts in proper location</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:fonts'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">fontFiles</span> <span class="o">+</span> <span class="s1">'/**/**.*'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">rename</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span> <span class="p">{</span><span class="nx">path</span><span class="p">.</span><span class="nx">dirname</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;}))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllFontFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">siteFontFiles</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">browserSync</span><span class="p">.</span><span class="nx">stream</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'error'</span><span class="p">,</span> <span class="nx">gutil</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="jekyll">Jekyll</h2>
+<p>Now it’s time to setup the basic Jekyll build process, as well as browser-sync for the convenient auto-reload functionality.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Run jekyll build command.</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:jekyll'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">shellCommand</span> <span class="o">=</span> <span class="s1">'bundle exec jekyll build --config _config.yml'</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">run</span><span class="p">(</span><span class="nx">shellCommand</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'error'</span><span class="p">,</span> <span class="nx">gutil</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Special tasks for building and reloading BrowserSync</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:jekyll:watch'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:jekyll:local'</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">browserSync</span><span class="p">.</span><span class="nx">reload</span><span class="p">();</span>
+  <span class="nx">callback</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:scripts:watch'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:scripts'</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">browserSync</span><span class="p">.</span><span class="nx">reload</span><span class="p">();</span>
+  <span class="nx">callback</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// Serve site and watch files</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'serve'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build'</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">browserSync</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+    <span class="na">server</span><span class="p">:</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">siteDir</span><span class="p">,</span>
+    <span class="na">ghostMode</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// Toggle to mirror clicks, reloads etc (performance)</span>
+    <span class="na">logFileChanges</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">logLevel</span><span class="p">:</span> <span class="s1">'debug'</span><span class="p">,</span>
+    <span class="na">open</span><span class="p">:</span> <span class="kc">true</span>       <span class="c1">// Toggle to auto-open page when starting</span>
+  <span class="p">});</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">([</span><span class="s1">'_config.yml'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'build:jekyll:watch'</span><span class="p">]);</span>
+  <span class="c1">// Watch .scss files and pipe changes to browserSync</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'_assets/styles/**/*.scss'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:styles'</span><span class="p">]);</span>
+  <span class="c1">// Watch .js files</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'_assets/js/**/*.js'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:scripts:watch'</span><span class="p">]);</span>
+  <span class="c1">// Watch image files and pipe changes to browserSync</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'_assets/img/**/*'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:images'</span><span class="p">]);</span>
+  <span class="c1">// Watch posts</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'_posts/**/*.+(md|markdown|MD)'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:jekyll:watch'</span><span class="p">]);</span>
+  <span class="c1">// Watch drafts if --drafts flag was passed</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">drafts</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'_drafts/*.+(md|markdown|MD)'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:jekyll:watch'</span><span class="p">]);</span>
+  <span class="p">}</span>
+  <span class="c1">// Watch html and markdown files</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">([</span><span class="s1">'**/*.+(html|md|markdown|MD)'</span><span class="p">,</span> <span class="s1">'!_site/**/*.*'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'build:jekyll:watch'</span><span class="p">]);</span>
+  <span class="c1">// Watch RSS feed</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'feed.xml'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:jekyll:watch'</span><span class="p">]);</span>
+  <span class="c1">// Watch data files</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'_data/**.*+(yml|yaml|csv|json)'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build:jekyll:watch'</span><span class="p">]);</span>
+<span class="p">});</span>
+
+<span class="c1">// Build site</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">runSequence</span><span class="p">([</span><span class="s1">'build:scripts'</span><span class="p">,</span> <span class="s1">'build:styles'</span><span class="p">,</span> <span class="s1">'build:images'</span><span class="p">,</span> <span class="s1">'build:fonts'</span><span class="p">,</span> <span class="s1">'build:downloads'</span><span class="p">],</span> <span class="s1">'build:jekyll'</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="cleaning-up">Cleaning up</h2>
+<p>Following the <a href="http://deviq.com/boy-scout-rule/">Boy Scout Rule</a>, we’re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an “<em>undo</em>” button for the gulp tasks we’ve created.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Delete CSS</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'clean:styles'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">del</span><span class="p">([</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllCssFiles</span> <span class="o">+</span> <span class="s1">'main.css'</span><span class="p">,</span>
+    <span class="nx">paths</span><span class="p">.</span><span class="nx">siteCssFiles</span> <span class="o">+</span> <span class="s1">'main.css'</span><span class="p">,</span>
+    <span class="s1">'_includes/critical.css'</span>
+  <span class="p">]);</span>
+  <span class="nx">callback</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// Delete processed JS</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'clean:scripts'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">del</span><span class="p">([</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllJsFiles</span> <span class="o">+</span> <span class="s1">'main.js'</span><span class="p">,</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">siteJsFiles</span> <span class="o">+</span> <span class="s1">'main.js'</span><span class="p">]);</span>
+  <span class="nx">callback</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// Delete processed images</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'clean:images'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">del</span><span class="p">([</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllImageFiles</span><span class="p">,</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">siteImageFiles</span><span class="p">]);</span>
+  <span class="nx">callback</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// Delete processed font files</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'clean:fonts'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">del</span><span class="p">([</span><span class="nx">paths</span><span class="p">.</span><span class="nx">jekyllFontFiles</span><span class="p">,</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">siteFontFiles</span><span class="p">]);</span>
+  <span class="nx">callback</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// Delete the entire _site directory</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'clean:jekyll'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">del</span><span class="p">([</span><span class="s1">'_site'</span><span class="p">]);</span>
+  <span class="nx">callback</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// Deletes _site directory and processed assets</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'clean'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'clean:jekyll'</span><span class="p">,</span> <span class="s1">'clean:styles'</span><span class="p">,</span> <span class="s1">'clean:scripts'</span><span class="p">,</span> <span class="s1">'clean:images'</span><span class="p">,</span> <span class="s1">'clean:fonts'</span><span class="p">,</span> <span class="s1">'clean:downloads'</span><span class="p">]</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="tldr">tldr;</h2>
+<p>Here’s a <a href="https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed">gist</a> with the resulting Gulpfile.js</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>While this Gulpfile provides a lot of optimization and added convenience to just about any site, there is still definitely room for improvement. Feel free to contact me or leave a comment with any improvements or suggestions!</p>
+
+            <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
+            <div class="post-closer cf">
+              <div class="isLeft">
+                <section class="author">
+                  <div class="author-image" alt="avatar" style="background-image: url(/assets/img/avatar.png)"></div>
+                  <div class="author-info">
+                    <h4>Brett Stevenson</h4>
+                    
+                    <hr>
+                    <p class="sub published">Published <time datetime="2018-06-01">June 01, 2018</time></p>
+                    
+                  </div>
+                </section>
+              </div>
+              <div class="isRight">
+                <h5>Share this post</h5>
+                <div class="share-button">
+  <div class="lid"><span class="fas fa-share-alt" title="Share"></span></div>
+  <div class="share-items-wrapper">
+      <div class="share-items">
+        
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbrettstevenson.io&quote=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;" class="share-item facebook">      
+            <span class="fab fa-facebook-f" title="Share on Facebook"></span>
+          </a>
+        
+        
+          <a href="/blog/optimizing-jekyll-with-gulp-revisited.html" data-show-count="false" class="share-item twitter">
+            <span class="fab fa-twitter" title="Tweet"></span>
+          </a>
+        
+        
+          <a href="https://plus.google.com/share?url=http%3A%2F%2Fbrettstevenson.io" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;" class="share-item google-plus">
+            <span class="fab fa-google-plus-g" title="Share on Google+"></span>
+          </a>
+        
+        
+          <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/optimizing-jekyll-with-gulp-revisited.html" class="share-item linkedin popup">
+            <span class="fab fa-linkedin-in" title="Share on LinkedIn"></span>
+          </a>
+        
+        
+          <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fbrettstevenson.io&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;" class="share-item pinterest">
+            <span class="fab fa-pinterest-p" title="Pin it"></span>
+          </a>
+        
+        
+        
+          <a href="http://www.reddit.com/submit?url=http%3A%2F%2Fbrettstevenson.io&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;" class="share-item reddit">
+            <span class="fab fa-reddit-alien" title="Post on Reddit"></span>
+          </a>
+        
+        
+        
+          <a href="mailto:?subject=Optimizing%20Jekyll%20with%20Gulp&amp;body=/blog/optimizing-jekyll-with-gulp-revisited.html" target="_blank" class="share-item email" data-proofer-ignore>
+            <span class="fas fa-at" title="Share via email"></span>
+          </a>
+        
+      </div>
+    </div>
+  <div class="thank-you">Thank you</div>
+</div>
+
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/project/youtube-to-mp3.html">
+              <span class="fas fa-chevron-left"></span> &nbsp;YouTube to MP3</a>
+          
+          
+        </div>
+      
+      
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'brettstevenson'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+    </div>
+  </main>
+  <script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script src="/assets/js/sweet-scroll.min.js" type="text/javascript" async></script>
+<script src="/assets/js/main.js" type="text/javascript" async></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.poptrox/2.5.1/jquery.poptrox.min.js"></script> -->
+
+<script>window.FontAwesomeConfig = { searchPseudoElements: true }</script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+<script>
+  $('.mid-content .inner').click(function() {
+    window.location = $(this).attr('data-link');
+    return false;
+  });
+</script>
+
+
+  <script src="/assets/js/scroll-top.js" type="text/javascript"></script>
+  <script src="/assets/js/tooltipster.js"></script>
+  <script>
+    $('.written-content').children('img').each(function() {
+      $(this).attr('class','post-img')
+      $(this).attr('data-mfp-src',$(this).attr('src'))
+      $(this).attr('data-full',$(this).attr('src'))
+      $(this).attr('desc',$(this).attr('alt'))
+      $(this).attr('data-effect','mfp-zoom-in')
+    });
+  </script>
+  <script>
+    $(function() {
+      clip = $('<img />').attr({'class':'clipboard tooltip', 'src':'/assets/img/clipboard.png', 'alt':'Copy to clipboard', 'title':'Copied to clipboard' });
+      $('pre.highlight').append(clip);
+      $(".tooltip").tooltipster({
+        animation: "fade",
+        trigger: "click",
+        delay: 200
+      });
+      $('pre.highlight .clipboard').on('click', function(e) {
+        e.preventDefault();
+        var temp = document.createElement('input');
+        temp.setAttribute('value', $(this).parent().children('code').text()),
+        document.body.appendChild(temp),
+        temp.select(),
+        document.execCommand('copy'),
+        document.body.removeChild(temp)
+      })
+    });
+    
+    $('.share-button').on('click', function() {  
+      $(this).addClass('open');
+    });
+    $('.share-items').draggable({ 
+      axis: 'x',
+      containment: '.share-items-wrapper'
+    });
+    $('.share-item').on('click', function() {
+       $('.share-button').addClass('shared');
+       setTimeout(function() {
+        $('.share-button').addClass('thankyou');
+      }, 800);
+      setTimeout(function() {
+        $('.share-button').removeClass('open');
+        $('.share-button').removeClass('shared');
+        $('.share-button').removeClass('thankyou');
+      }, 2500);
+    });
+  </script>
+
+
+
+
+<!-- Show menu overlay + Jekyll Simple Search option -->
+<script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+<script>
+  $(document).ready(function() {
+    $('.search-field').simpleJekyllSearch({
+      jsonFile: '/search.json',
+      template: '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
+      searchResults: '.search-wrapper .results',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+      searchResultsTitle: '<h4>Results</h4>',
+      noResults: '<p>No results found</p>',
+      exclude: ['Welcome']
+    });
+  });
+  
+  (function($, window, undefined) {
+    var closeOverlay = function() {
+      $('.nav-wrapper, .search-wrapper').removeAttr('style');
+      $('.nav-form, .search-form').removeClass('active');
+      $('body').removeClass('nav-overlay search-overlay');
+    };
+
+    $('.btn-search').on('click', function() {
+      $('.search-wrapper').css({ display: 'block' });
+      $('.search-form').addClass('active');
+      $('.search-form').find('input').focus();
+      $('body').addClass('search-overlay');
+    });
+
+    $('.search-wrapper .btn-close').on('click', function() {
+      closeOverlay();
+    });
+
+    $(document).on('keyup', function(e) {
+      if (e.keyCode === 27) {
+        closeOverlay();
+      }
+    });
+  })(jQuery, window);
+</script>
+
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+  <link href="/assets/styles/main.css" rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Spectral:300,300i,500,500i,700,700i|Source+Code+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/fonts/AvenirNext.css"/>
+  <link rel="stylesheet" href="/assets/fonts/GothamHTF.css"/>
+  <link rel="stylesheet" href="/assets/fonts/iconfont.css"/>
+</noscript>
+
+
+
+
+
+  <footer id="footer">
+  <ul class="icons">
+    
+      
+        
+          <li><a target="_blank" href="https://github.com/tterb" rel="noopener"><span class="fab fa-fw fa-github"></span></a></li>
+        
+      
+    
+      
+        
+          <li><a target="_blank" href="https://bstevenson.deviantart.com/" rel="noopener"><span class="fab fa-fw fa-deviantart"></span></a></li>
+        
+      
+    
+      
+        
+          <li><a target="_blank" href="https://twitter.com/BStevensonDev" rel="noopener"><span class="fab fa-fw fa-twitter"></span></a></li>
+        
+      
+    
+      
+        
+          <li><a target="_blank" href="https://dribbble.com/tterb" rel="noopener"><span class="fab fa-fw fa-dribbble"></span></a></li>
+        
+      
+    
+      
+        
+          <li><a target="_blank" href="https://www.linkedin.com/in/brett-stevenson-0a035a72" rel="noopener"><span class="fab fa-fw fa-linkedin-in"></span></a></li>
+        
+      
+    
+      
+        
+          <li><a href="/contact/"><span class="fas fa-fw fa-envelope"></span></a></li>
+        
+      
+    
+  </ul>
+  <ul class="copyright">
+    <li>&copy;
+      
+      
+        
+        
+          2015,
+        
+      
+      2018
+      <a href="/">
+        
+          Brett Stevenson
+        
+      </a>
+    </li>
+    <!-- <li><i class="fa fa-code"></i> with <i class="fa fa-heart"></i>&nbsp;</li> -->
+    <li>Powered by <a href="http://jekyllrb.com" class="jekyll-link" role="link" target="_blank" rel="noopener">Jekyll</a></li>
+  </ul>
+</footer>
+
+</html>
