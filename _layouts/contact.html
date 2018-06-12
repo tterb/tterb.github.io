@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   {% include head.html %}
-  <body class="{{ page.title | downcase }}" style="background-image: url({{ page.image | prepend: '/assets/img/' | prepend: site.baseurl }});">
+  <body class="{{ page.title | replace: " ", "-" | downcase }} is-loading" style="background-image: url({{ page.image | prepend: '/assets/img/' | prepend: site.baseurl }});">
     {% include header.html %}
     <div class="{{ page.title | downcase }}-wrapper">
       <h1>{{ page.title }}</h1>

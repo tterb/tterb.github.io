@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   {% include head.html %}
-  <body class="{{ page.title | replace: " ", "-" | downcase }}">
+  <body class="{{ page.title | replace: " ", "-" | downcase }} is-loading">
     <div id="{{ page.title | replace: " ", "-" | downcase }}-wrapper" class="page-wrapper">
       {% include header.html %}
       {% if page.header %}
