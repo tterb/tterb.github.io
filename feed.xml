@@ -5,8 +5,8 @@
     <description>Developer &amp;#x1f784; Designer &amp;#x1f784; Student</description>
     <link>https://brettstevenson.io/</link>
     <atom:link href="https://brettstevenson.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Jun 2018 07:57:11 +0000</pubDate>
-    <lastBuildDate>Mon, 11 Jun 2018 07:57:11 +0000</lastBuildDate>
+    <pubDate>Tue, 12 Jun 2018 00:59:38 +0000</pubDate>
+    <lastBuildDate>Tue, 12 Jun 2018 00:59:38 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -14,7 +14,7 @@
         <description>&lt;p&gt;While the previous entry on optimizing your Jekyll site provided some basics to optimizing your Jekyll site performance, in this post I want to focus on providing a more comprehensive explanation of how you can create a more enjoyable development experience with the magic of &lt;a href=&quot;https://gulpjs.com/&quot;&gt;&lt;strong&gt;Gulp&lt;/strong&gt;&lt;/a&gt;.&lt;br /&gt;
 To get started, lets first discuss the basic workflow and file structure that we’ll be working with. As shown in the image below, we’ll be storing our site assets in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_assets/&lt;/code&gt; directory.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/16360374/41198467-d19ceefc-6c31-11e8-8e5d-2134612ebf50.png&quot; alt=&quot;file tree&quot; style=&quot;width:60%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/16360374/41262490-f9d106b4-6d95-11e8-9e2d-c63b80bfdd45.png&quot; alt=&quot;file tree&quot; style=&quot;width:60%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This will allow these files to be processed from within our &lt;a href=&quot;https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed&quot;&gt;Gulpfile&lt;/a&gt;, while remaining ignored by Jekyll. Though, a more in-depth explaination of the file-structure will be provided during each of the respective tasks.&lt;/p&gt;
 
