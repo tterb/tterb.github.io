@@ -1,13 +1,13 @@
 @import 'layout';
-@import 'libs/functions';
-@import 'libs/keyframes';
-@import 'libs/mixins';
-@import 'libs/skel';
-@import 'libs/breakpoints';
 @import 'libs/vars';
+@import 'libs/skel';
+@import 'libs/mixins';
+@import 'libs/keyframes';
+@import 'libs/functions';
+@import 'libs/breakpoints';
 @import 'libs/animate';
-@import 'libs/magnific-popup';
 @import 'libs/tooltipster';
+@import 'libs/magnific-popup';
 @import '404';
 @import 'blog';
 @import 'contact';
@@ -17,6 +17,7 @@
 @import 'overlay';
 @import 'resume';
 @import 'post';
+@import 'tags';
 @import 'progressbars';
 @import 'syntax-highlighting';
 @import 'landing';

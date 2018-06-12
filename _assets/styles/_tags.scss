@@ -3,7 +3,6 @@
   background: _palette(accent1, bg);
   border: 0 !important;
   padding: 3em 8%;
-  outline: none !important;
   .tags-list {
     // text-align: center;
     text-align: left;
@@ -46,6 +45,9 @@
     font-weight: 500;
     margin-bottom: 0.25em;
     cursor: default;
+  }
+  .tag-container {
+    outline: none !important;
   }
   .tag-posts {
     list-style: none;

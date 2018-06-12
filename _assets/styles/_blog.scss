@@ -210,17 +210,19 @@
 }
 
 #archive {
+  width: 85vw;
   border: 0 !important;
-  margin: 0 0.75em;
-  padding: 1.25em 2.55em 6em 3em;
+  margin: 0 auto;
+  padding: 1.25em 0 6em;
+  // margin: 0 0.75em;
+  // padding: 1.25em 2.55em 6em 3em;
   .year {
     color: lighten(#30333b, 10%);
     font-size: 1.75em;
     font-weight: _font(ctrl-bold);
-    // font-size: normal !important;
     letter-spacing: 0.05em;
     line-height: 1 !important;
-    margin: 0.5em auto 0.65em;
+    margin: 0.45em auto;
   }
 
   ul {
@@ -302,78 +304,6 @@ hr {
   }
   .year {
     margin-left: 0.75em;
-  }
-}
-
-
-/***********
-*** TAGS ***
-************/
-.tags-wrapper {
-  background: _palette(accent1, bg);
-  border: 0 !important;
-  // margin: 1.875rem auto;
-  padding: 3em;
-  .tags-list {
-    text-align: center;
-    width: 85%;
-    margin: 0 auto 3em;
-  }
-  .tag-entry {
-    display: inline-block;
-    font-size: 1.75rem;
-    font-weight: 400;
-    line-height: 1.45;
-    text-decoration: none;
-    color: darken(_palette(accent2, bg), 5%);
-    border: 1px solid darken(_palette(accent2, bg), 5%);
-    border-radius: .313rem;
-    padding: .25rem .625rem;
-    margin-right: .125rem;
-    margin-bottom: .5rem;
-    transition: all 350ms ease-in-out;
-    &:hover {
-      background: darken(_palette(accent2, bg), 5%);
-      // color: darken(_palette(accent2, bg), 15%);
-      color: _palette(accent1, bg);
-      font-weight: 600;
-      border: 1px outset _palette(accent2, bg)
-    }
-  }
-  .tag-title {
-    // display: block;
-    color: darken(_palette(accent2, bg), 5%);
-    font-size: 1.75em;
-    font-weight: 500;
-    margin-bottom: 0.25em;
-    cursor: default;
-  }
-  .tag-posts {
-    list-style: none;
-    vertical-align: top;
-    margin: 0.5em 0.6em 2.5em;
-    padding: 0;
-    ul {
-      margin-left: 3vw;
-    }
-    li {
-      margin-bottom: 0.5em;
-      .post-link {
-        .title {
-          font-size: 1.15em;
-          font-weight: 600;
-        }
-        .entry-date {
-          display: block;
-          font-size: 1.3rem;
-          font-weight: normal;
-        }
-        &:hover .title, &:active .title {
-          color: saturate(lighten(_palette(accent2, bg), 15%), 5%) !important;
-          // text-shadow: 0 0.5px 1px rgba(#000, 0.2);
-        }
-      }
-    }
   }
 }
 

@@ -17,11 +17,6 @@
         height: 100vh;
         margin-bottom: 2vw;
       }
-      // &:hover {
-      //   + .back-post {
-      //     opacity: 1;
-      //   }
-      // }
       .post-meta {
         display: table;
         position: absolute;
@@ -65,7 +60,6 @@
         vertical-align: middle;
         max-width: 85%;
         margin: 0 auto;
-        // padding: 13vh 0;
       }
     }
   }
@@ -83,7 +77,7 @@
     height: 4px;
     width: 25%;
     top: -10px;
-    left: 6px;
+    left: 10px;
   }
   .post-title {
     // display: table-cell;
@@ -108,7 +102,7 @@
     letter-spacing: 0;
     text-align: right;
     line-height: 1.6;
-    top: -36px;
+    top: -25px;
     right: 12px;
     .date, strong, svg {
       color: rgba(#000, 0.75);
@@ -191,15 +185,12 @@
   }
   
   .highlighter-rouge.code-block {
-    // width: 130%;
-    // margin-left: -12%;
-    margin: 0.5em 0 3em;
+    margin: 0.5em 0 1em;
     code {
       margin: 0 6% 0 3%;
       padding: 1em 1.5em 1.5em;
     }
     .clipboard {
-      // right: 6.2em;
       right: 8.25%;
       bottom: 3.25em;
     }
@@ -396,8 +387,8 @@
   line-height: 30px;
   text-align: center;
   text-decoration: none;
-  width: 42px !important;
-  height: 42px !important;
+  // width: 42px !important;
+  // height: 42px !important;
   right: 21px;
   bottom: 10vh;
   border: 0;
@@ -407,6 +398,8 @@
   z-index: _misc(z-index-base) * 5;
   cursor: pointer;
   img {
+    width: 45px !important;
+    height: 45px !important;
     box-shadow: none !important;
   }
   &.show {
@@ -739,7 +732,6 @@ body.is-mobile {
     display: inline-block;
     min-width: 267px;
     max-width: 35%;
-    // margin-top: 20px;
     margin: 20px -1.5em 0 0;
     float: right;
     transition: all 300ms ease;
@@ -792,7 +784,6 @@ body.is-mobile {
     padding: 0;
   }
   p {
-    // color: rgba(#000, 0.65);
     font-size: 14px;
     font-weight: _font(normal);
     line-height: 1.5;

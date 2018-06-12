@@ -1,21 +1,7 @@
-@import 'layout';
-@import 'libs/functions';
-@import 'libs/keyframes';
 @import 'libs/mixins';
 @import 'libs/skel';
+@import 'libs/keyframes';
 @import 'libs/breakpoints';
-@import 'libs/vars';
-// @import 'landing';
-
-$baseurl:       '/../assets/img';
-// @include skel-breakpoints((
-//   xlarge:  '(min-width: 1680px)',
-//   large:   '(min-width: 1280px)',
-//   medium:  '(max-width: 900px)',
-//   small:   '(max-width: 740px)',
-//   xsmall:  '(max-width: 480px)',
-//   dinky:   '(max-width: 260px)'
-// ));
 
 #banner {
   display: flex;
@@ -36,9 +22,8 @@ $baseurl:       '/../assets/img';
     display: inline-block;
     position: relative;
     color: rgba(#fff, 0.925);
-    // font-family: 'Open Sans','Helvetica Neue',Arial, sans-serif !important;
-    font-family: _font(hdr-family);
-    font-size: 9.75vw;
+    font-family: 'Gotham HTF', 'Avenir Next', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10vw;
     font-weight: 800;
     letter-spacing: 0.04em;
     line-height: 1;
@@ -51,7 +36,7 @@ $baseurl:       '/../assets/img';
     opacity: 0.95;
     .accent {
       font-family: 'Open Sans', 'Avenir Next', 'Helvetica Neue', sans-serif !important;
-      color: _palette(accent2, bg);
+      color: #53BAB8;
       margin-left: -2px;
       margin-right: -5px;
     }
@@ -63,7 +48,7 @@ $baseurl:       '/../assets/img';
 
   h3 {
     color: rgba(#fff, 0.75);
-    font-family: _font(ctrl-family);
+    font-family: 'Avenir Next', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2.05vw;
     font-weight: 400;
     letter-spacing: 0.1em;
@@ -79,16 +64,16 @@ $baseurl:       '/../assets/img';
   }
 
   &::after {
-    @include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out 1.25s');
     display: block;
     position: absolute;
-    background: darken(_palette(bg),10%);
+    background: darken(#1B1B1E, 10%);
     content: '';
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
+    transition: opacity 1s ease-in-out 250ms;
     opacity: 0;
   }
 
@@ -106,35 +91,34 @@ $baseurl:       '/../assets/img';
       display: none;
     }
   }
-}
-
-.scroll-btn {
-  position: absolute;
-  display: inline-block;
-  color: transparent !important;
-  text-align: center;
-  top: 89vh;
-  left: 50%;
-  transition: all 250ms ease-in-out 25ms;
-  z-index: 9999;
-  span {
+  .scroll-btn {
     position: absolute;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 3px solid rgba(#fff, 0.7);
-    border-bottom: 3px solid rgba(#fff, 0.7);
-    transform: rotate(-45deg);
-    animation: press 2s infinite;
-  }
-  &:hover span {
-    width: 25px;
-    height: 25px;
-    border-left: 4px solid rgba(#fff, 0.85);
-    border-bottom: 4px solid rgba(#fff, 0.85);
-    transition: all 400ms ease 50ms;
-    animation: none;
+    display: inline-block;
+    color: transparent !important;
+    text-align: center;
+    top: 89vh;
+    left: 49%;
+    transition: all 250ms ease-in-out 25ms;
+    z-index: 9999;
+    span {
+      position: absolute;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      border-left: 3px solid rgba(#fff, 0.7);
+      border-bottom: 3px solid rgba(#fff, 0.7);
+      transform: rotate(-45deg);
+      animation: press 2s infinite;
+    }
+    &:hover span {
+      width: 25px;
+      height: 25px;
+      border-left: 4px solid rgba(#fff, 0.85);
+      border-bottom: 4px solid rgba(#fff, 0.85);
+      transition: all 400ms ease 50ms;
+      animation: none;
+    }
   }
 }
 
@@ -165,9 +149,37 @@ $baseurl:       '/../assets/img';
     }
   }
   #banner {
-    @include vendor('background-image', ('linear-gradient(to bottom, rgba(10,10,13,0.35), rgba(10,10,13,0.35))', 'url("#{$baseurl}/banner.jpg")'));
+    @include vendor('background-image', ('linear-gradient(to bottom, rgba(10,10,13,0.35), rgba(10,10,13,0.35))', 'url("/../assets/img/banner.jpg")'));
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+body.is-loading {
+  .page-wrapper {
+    opacity: 0;
+  }
+  #banner {
+    .inner {
+      transform: scale(0.95);
+      opacity: 0;
+      &::before, &::after {
+        width: 0;
+      }
+    }
+    #header, .scroll-btn span {
+      transform: scale(0.75);
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+  &.designer, &.developer {
+    *, *:before, *:after {
+      transition: none !important;
+      animation: none !important;
+    }
   }
 }

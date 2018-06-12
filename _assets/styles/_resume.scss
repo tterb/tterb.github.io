@@ -16,7 +16,7 @@ $sidebar-color: #2a303a;
   height: 100%;
   width: 100%;
   * {
-    font-family: 'Open Sans','Montserrat', sans-serif !important;
+    font-family: 'Open Sans', Arial, sans-serif !important;
   }
   .fa.fa-circle {
     font-size: 30% !important;
@@ -217,10 +217,10 @@ $sidebar-color: #2a303a;
         letter-spacing: 0.02em;
         color: #4A4A4A;
         color: rgba(#000, 0.8);
-        border-bottom: 3px solid _palette(accent4, bg);
+        border-bottom: 3px solid _palette(accent3, bg);
         white-space: nowrap;
         &::after {
-          background: _palette(accent4, bg);
+          background: _palette(accent3, bg);
           height: 3px;
           animation: 1s ease-out 0s 1 growFromLeft;
         }
@@ -248,7 +248,7 @@ $sidebar-color: #2a303a;
       a {
         color: rgba(#000, 0.8);
         &:hover {
-          color: darken(_palette(accent4, bg), 14%) !important;
+          color: darken(_palette(accent3, bg), 14%) !important;
         }
       }
     }
@@ -279,7 +279,7 @@ $sidebar-color: #2a303a;
     a {
       color: #30a5c0;
       &:hover, &:active {
-        color: saturate(_palette(accent4, bg), 15%);
+        color: saturate(_palette(accent3, bg), 15%);
       }
     }
   }

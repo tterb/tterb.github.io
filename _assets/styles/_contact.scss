@@ -1,74 +1,4 @@
-// #contact {
-//   padding: 2.5em 0 0.5em;
-//   ul {
-//     padding: 2.5em 0 1em;
-//     &.actions {
-//       width: 24vw;
-//       li > * {
-//         max-width: 100%;
-//       }
-//       @include breakpoint(small) {
-//         width: 60vw;
-//       }
-//     }
-//   }
-// }
-// 
-// #sendemail {
-//   > div {
-//     width: 90%;
-//     margin: auto;
-//     padding-right: 1.5em;
-//     > ul {
-//       position: relative;
-//       margin: 1em 39.25% 0;
-//       > li {
-//         margin: 0;
-//       }
-//       @include breakpoint(small) {
-//         margin: 1em 20% 0;
-//       }
-//     }
-//   }
-// }
-// 
-// #response {
-//   padding: 14vh 0 5vh 0;
-//   .text {
-//     padding-bottom: 2.5em;
-//     h4 {
-//       font-size: 2em;
-//       font-weight: 800;
-//       letter-spacing: 0.165em;
-//       line-height: 1.25;
-//       text-align: center;
-//       margin-bottom: 0.5em;
-//     }
-//     p {
-//       font-family: _font(ctrl-family);
-//       line-height: 2;
-//       text-align: center;
-//       margin: 0;
-// 
-//       a {
-//         font-weight: 700;
-//         color: _palette(bg);
-//         &:hover, &:active {
-//           color: _palette(accent1, bg);
-//         }
-//       }
-//     }
-//   }
-//   li {
-//     display: flex;
-//     justify-content: center;
-//     vertical-align: middle;
-//     .button {
-//       min-width: 18vw !important;
-//     }
-//   }
-// }
-// 
+
 .contact-success, .contact-failed {
   .wrapper {
     background: _palette(accent1, bg);
@@ -78,7 +8,8 @@
 
 .contact-wrapper {
   display: flex;
-  background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.5), rgba(darken(_palette(accent4, bg),25%), 0.5));
+  background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.5), rgba(darken(_palette(accent3, bg),25%), 0.5));
+  // background: rgba(#000, 0.45);
   width: 100%;
   min-height: 100vh;
   flex-wrap: wrap;
@@ -99,7 +30,7 @@
     margin: 1em auto 6em;
     padding: 1.5em 4em;
     h3 {
-      color: rgba(#000, 0.6);
+      color: rgba(#000, 0.8);
       font-size: 1.95em;
       letter-spacing: 0;
       text-align: center;
@@ -114,6 +45,7 @@
     }
     .input-wrapper {
       position: relative;
+      background: #fafafa;
       border-bottom: none !important;
       margin-bottom: 10px;
       padding-left: 3px;
@@ -169,14 +101,15 @@
         transition: all 400ms;
       }
     }
-    input, textarea { 
+    input[type='text'], input[type='email'], textarea { 
+      background: transparent !important;
       + .focus-input::after {
         top: 40px;
         left: 1px !important;
       }
       &:focus {
         + .focus-input::before {
-          background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.75), rgba(darken(_palette(accent4, bg), 15%), 0.75));
+          background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.75), rgba(darken(_palette(accent3, bg), 15%), 0.75));
         }
         + .focus-input::after {
           top: 13px;
@@ -189,9 +122,14 @@
         top: 20px;
         left: 1px;
       }
-      &:focus + .focus-input::after {
-        top: 13px;
-        left: 1px;
+      &:focus {
+        + .focus-input::before {
+          background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.75), rgba(darken(_palette(accent3, bg), 15%), 0.75)) !important;
+        }
+        + .focus-input::after {
+          top: 13px;
+          left: 1px;
+        }
       }
     }
   }
