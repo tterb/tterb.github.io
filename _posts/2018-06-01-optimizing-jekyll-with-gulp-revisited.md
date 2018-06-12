@@ -5,7 +5,7 @@ description: An explanation of how to optimize your Jekyll website using Gulp
 date: 2018-06-1
 categories: blog
 options: halfhead
-image: web-performance.png
+image: gulp.jpg
 tags:
   - Jekyll
   - Web Development
@@ -18,7 +18,7 @@ tags:
 While the previous entry on optimizing your Jekyll site provided some basics to optimizing your Jekyll site performance, in this post I want to focus on providing a more comprehensive explanation of how you can create a more enjoyable development experience with the magic of [**Gulp**](https://gulpjs.com/).  
 To get started, lets first discuss the basic workflow and file structure that we&rsquo;ll be working with. As shown in the image below, we'll be storing our site assets in the `_assets/` directory.  
 
-<img src="https://user-images.githubusercontent.com/16360374/41198467-d19ceefc-6c31-11e8-8e5d-2134612ebf50.png" alt="file tree" style="width:60%"/>  
+<img src="https://user-images.githubusercontent.com/16360374/41262490-f9d106b4-6d95-11e8-9e2d-c63b80bfdd45.png" alt="file tree" style="width:60%"/>  
 
 This will allow these files to be processed from within our [Gulpfile](https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed), while remaining ignored by Jekyll. Though, a more in-depth explaination of the file-structure will be provided during each of the respective tasks.
 
