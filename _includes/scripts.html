@@ -1,7 +1,6 @@
 <script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js" async></script>
-<script src="{{ '/assets/js/sweet-scroll.min.js' | prepend: site.baseurl }}" type="text/javascript" async></script>
 <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}" type="text/javascript" async></script>
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.poptrox/2.5.1/jquery.poptrox.min.js"></script> -->
@@ -93,43 +92,45 @@
   </script>
 {% endif %}
 
-<!-- Show menu overlay + Jekyll Simple Search option -->
-<script src="{{ '/assets/js/jekyll-search.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-<script>
-  $(document).ready(function() {
-    $('.search-field').simpleJekyllSearch({
-      jsonFile: '{{ site.baseurl }}/search.json',
-      template: '<li><a href="{{ site.baseurl }}{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
-      searchResults: '.search-wrapper .results',
-      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-      searchResultsTitle: '<h4>Results</h4>',
-      noResults: '<p>No results found</p>',
-      exclude: ['Welcome']
+{% if page.title == "Blog" %}
+  <!-- Show menu overlay + Jekyll Simple Search option -->
+  <script src="{{ '/assets/js/jekyll-search.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      $('.search-field').simpleJekyllSearch({
+        jsonFile: '{{ site.baseurl }}/search.json',
+        template: '<li><a href="{{ site.baseurl }}{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
+        searchResults: '.search-wrapper .results',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        searchResultsTitle: '<h4>Results</h4>',
+        noResults: '<p>No results found</p>',
+        exclude: ['Welcome']
+      });
     });
-  });
-  
-  (function($, window, undefined) {
-    var closeOverlay = function() {
-      $('.nav-wrapper, .search-wrapper').removeAttr('style');
-      $('.nav-form, .search-form').removeClass('active');
-      $('body').removeClass('nav-overlay search-overlay');
-    };
-    $('.btn-search').on('click', function() {
-      $('.search-wrapper').css({ display: 'block' });
-      $('.search-form').addClass('active');
-      $('.search-form').find('input').focus();
-      $('body').addClass('search-overlay');
-    });
-    $('.search-wrapper .btn-close').on('click', function() {
-      closeOverlay();
-    });
-    $(document).on('keyup', function(e) {
-      if (e.keyCode === 27) {
+    
+    (function($, window, undefined) {
+      var closeOverlay = function() {
+        $('.nav-wrapper, .search-wrapper').removeAttr('style');
+        $('.nav-form, .search-form').removeClass('active');
+        $('body').removeClass('nav-overlay search-overlay');
+      };
+      $('.btn-search').on('click', function() {
+        $('.search-wrapper').css({ display: 'block' });
+        $('.search-form').addClass('active');
+        $('.search-form').find('input').focus();
+        $('body').addClass('search-overlay');
+      });
+      $('.search-wrapper .btn-close').on('click', function() {
         closeOverlay();
-      }
-    });
-  })(jQuery, window);
-</script>
+      });
+      $(document).on('keyup', function(e) {
+        if (e.keyCode === 27) {
+          closeOverlay();
+        }
+      });
+    })(jQuery, window);
+  </script>
+{% endif %}
 
 {% for include in page.script-includes %}
   {% assign test = include | slice: 0,2 %}
