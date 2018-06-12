@@ -1,9 +1,9 @@
 <script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js" async></script>
 <script src="{{ '/assets/js/sweet-scroll.min.js' | prepend: site.baseurl }}" type="text/javascript" async></script>
 <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}" type="text/javascript" async></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.poptrox/2.5.1/jquery.poptrox.min.js"></script> -->
 
 <script>window.FontAwesomeConfig = { searchPseudoElements: true }</script>
@@ -114,18 +114,15 @@
       $('.nav-form, .search-form').removeClass('active');
       $('body').removeClass('nav-overlay search-overlay');
     };
-
     $('.btn-search').on('click', function() {
       $('.search-wrapper').css({ display: 'block' });
       $('.search-form').addClass('active');
       $('.search-form').find('input').focus();
       $('body').addClass('search-overlay');
     });
-
     $('.search-wrapper .btn-close').on('click', function() {
       closeOverlay();
     });
-
     $(document).on('keyup', function(e) {
       if (e.keyCode === 27) {
         closeOverlay();
@@ -133,15 +130,6 @@
     });
   })(jQuery, window);
 </script>
-
-<noscript>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
-  <link href="{{ '/assets/styles/main.css' | prepend: site.baseurl }}" rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Spectral:300,300i,500,500i,700,700i|Source+Code+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ '/assets/fonts/AvenirNext.css' | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ '/assets/fonts/GothamHTF.css' | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ '/assets/fonts/iconfont.css' | prepend: site.baseurl }}"/>
-</noscript>
 
 {% for include in page.script-includes %}
   {% assign test = include | slice: 0,2 %}
@@ -156,6 +144,6 @@
   {{ page.script }}
   </script>
 {% endif %}
-{% if jekyll.environment == "production" %}
-  <script src='assets/js/analytics.min.js'></script>
-{% endif %}
+{% comment %}{% if jekyll.environment == "production" %}
+  <script src='assets/js/analytics.js'></script>
+{% endif %}{% endcomment %}
