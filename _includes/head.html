@@ -14,18 +14,14 @@
   <link rel="canonical" href="{{ page.url | prepend: site.url }}">
   <script src="{{ '/assets/js/load-css.js' | prepend: site.baseurl }}" type="text/javascript"></script>
   <style>{% include critical.css %}</style>
-  
-  <!-- <link rel="preload" as="style" href="{{ '/assets/styles/main.css' | prepend: site.baseurl }}"/> -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
-  <link rel="preload" as="style" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.min.css"/>
 
   <noscript>
-    <link href="{{ '/assets/styles/main.css' | prepend: site.baseurl }}" rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Spectral:300,300i,500,500i,700,700i|Source+Code+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Spectral:300,300i,500,500i,700,700i|Source+Code+Pro:300,400,600,700' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="{{ '/assets/fonts/AvenirNext.css' | prepend: site.baseurl }}"/>
     <link rel="stylesheet" href="{{ '/assets/fonts/GothamHTF.css' | prepend: site.baseurl }}"/>
     <link rel="stylesheet" href="{{ '/assets/fonts/iconfont.css' | prepend: site.baseurl }}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+    <link href="{{ '/assets/styles/main.css' | prepend: site.baseurl }}" rel='stylesheet' type='text/css'/>
   </noscript>
 
   {% if page.image %}
