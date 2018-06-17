@@ -4,12 +4,12 @@
 
 $syntax-hue:          270;
 $syntax-saturation:    4%;
-$syntax-brightness:   25%;
+$syntax-brightness:   19%;
 
 $base:       hsl($syntax-hue, $syntax-saturation, $syntax-brightness);
-$text:       hsl($syntax-hue, 9%, 87%);
+$text:       hsl($syntax-hue, 9%, 89%);
 $subtle:     hsl($syntax-hue, 8%, 43%);
-$highlight:  hsl($syntax-hue, 9%, 90%);
+$highlight:  hsl($syntax-hue, 9%, 94%);
 $red:        hsl(  5, 48%, 51%);
 $orange:     hsl( 21, 86%, 70%);
 $yellow:     hsl( 40, 98%, 78%);
@@ -23,6 +23,10 @@ $err:        $red;
 pre.highlight {
   background: $base;
   color: $text;
+}
+
+pre.highlight code {
+  background: $base !important;
 }
 
 .highlight {

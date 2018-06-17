@@ -8,8 +8,8 @@
 
 .contact-wrapper {
   display: flex;
-  background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.5), rgba(darken(_palette(accent3, bg),25%), 0.5));
-  // background: rgba(#000, 0.45);
+  // background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.5), rgba(darken(_palette(accent3, bg),25%), 0.5));
+  background: rgba(#000, 0.45);
   width: 100%;
   min-height: 100vh;
   flex-wrap: wrap;
@@ -23,7 +23,7 @@
   }
   .form-container {
     background: #fafafa;
-    width: 80%;
+    width: 75%;
     height: 95%;
     border-radius: 15px;
     box-shadow: 0 0 8px rgba(#000, 0.6);
@@ -51,8 +51,7 @@
       padding-left: 3px;
     }
     .textarea-wrapper {
-      margin-top: 1em;
-      padding-top: 1em;
+      margin-top: 0.75em;
     }
     input[type='text'], input[type='email'] {
       width: 85%;
@@ -92,7 +91,7 @@
       &::after {
         display: block;
         position: absolute;
-        color: #666;
+        color: #888;
         content: attr(data-placeholder);
         font-size: 13px;
         line-height: 1.2;
@@ -112,10 +111,14 @@
           background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.75), rgba(darken(_palette(accent3, bg), 15%), 0.75));
         }
         + .focus-input::after {
+          color: #555;
           top: 13px;
           left: 1px;
         }
       }
+    }
+    textarea:focus + .focus-input::before {
+      background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.75), rgba(darken(_palette(accent3, bg), 15%), 0.75));
     }
     textarea {
       + .focus-input::after {
@@ -127,10 +130,16 @@
           background: linear-gradient(45deg, rgba(_palette(accent2, bg), 0.75), rgba(darken(_palette(accent3, bg), 15%), 0.75)) !important;
         }
         + .focus-input::after {
-          top: 13px;
+          color: #555;
+          top: 5px;
           left: 1px;
         }
       }
     }
   }
+}
+
+.contact-submit {
+  margin: 1.5em 35% 1em;
+  padding: 2em 0 0  !important;
 }

@@ -24,8 +24,8 @@
   100% { transform: translateY(0); }
 }
 
-@keyframes press {
+@keyframes bounce {
   0% { transform: rotate(-45deg) translate(0, 0); }
-  15% { transform: rotate(-45deg) translate(-10px, 10px); }
-  35% { transform: rotate(-45deg) translate(0, 0); }
+  30% { transform: rotate(-45deg) translate(-10px, 10px); }
+  50% { transform: rotate(-45deg) translate(0, 0); }
 }
