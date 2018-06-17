@@ -65,7 +65,7 @@ $font: (
   ctrl-normal:              400,
   ctrl-light:               300,
   ctrl-thin:                100,
-  prose-family:	   	    ('Lora', 'Georgia', 'Garamond', serif),
+  prose-family:	   	     ('Lora', 'Georgia', 'Garamond', serif),
   prose-size-h1:         2.75em,
   prose-size-h2:         2.15em,
   prose-size-h3:          1.9em,
@@ -88,10 +88,10 @@ $font: (
   prose-bold:               600,
   prose-normal:             400,
   prose-light:              300,
-  fixed-family: 		    ('Source Code Pro', 'Inconsolata', 'Monaco', monospace),
+  fixed-family: 		    ('Fira Code', 'Inconsolata', 'Monaco', monospace),
   fixed-size:              11pt,
   fixed-inline-size:     10.5pt,
-  fixed-lheight:           1.75,
+  fixed-lheight:            1.5,
   letter-spacing:       0.075em
 );
 
