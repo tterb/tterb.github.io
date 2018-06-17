@@ -4,9 +4,10 @@ title: 404
 options: fullwidth, nomenu, nolanding
 permalink: /404.html
 script-includes:
-  - assets/js/typed.js
+  - /assets/js/typed.js
 script: |
   $(function() {
+    $('.noscript').hide();
     $('.typed').typed({
       strings: [
         "Oops! <br/>" + "><span class='caret'>$</span> You might have mis-typed the URL, <br/> ^1" + "><span class='caret'>$</span> or maybe the page has been moved. <br/> ^500" + "><span class='caret'>$</span> Anyways, there is nothing to see here... <br/> ^500" + "><span class='caret'>$</span> Would you like to return to the <a href='https://brettstevenson.io'>homepage</a> (Y/N)?"
@@ -41,6 +42,7 @@ script: |
       <div class="message">
         <span class='prompt'><span class='user'>root</span><span class="at">@</span><span class="path">~/404</span>><span class="caret">$</span> </span>
         <span class="typed"></span>
+        <span class="noscript">Oops! <br/> ><span class='caret'>$</span> You might have mis-typed the URL, <br/> ><span class='caret'>$</span> or maybe the page has been moved. <br/> ><span class='caret'>$</span> Anyways, there is nothing to see here... <br/> ><span class='caret'>$</span> Would you like to return to the <a href='https://brettstevenson.io'>homepage</a> (Y/N)?</span>
         <form>&gt;<span class="caret">$</span>
           <input id="term-input" type="text"/>
         </form>
