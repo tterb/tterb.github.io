@@ -56,7 +56,10 @@ function(b) {
     }
   }
 }(this);
-var $fonts = "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Spectral:300,300i,500,500i,700,700i|Source+Code+Pro:300,400,600,700";
+var $fonts = "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Merriweather:300,300i,400,400i,700,700i,900,900i";
 loadCSS($fonts);
-loadCSS("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css")
+loadCSS("/assets/fonts/AvenirNext.css");
+loadCSS("/assets/fonts/GothamHTF.css");
+loadCSS("/assets/fonts/FiraCode.css");
+loadCSS("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
 loadCSS("/assets/styles/main.css");
