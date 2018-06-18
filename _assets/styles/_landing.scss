@@ -1651,7 +1651,7 @@ body.is-menu-visible {
     background: linear-gradient(to bottom, lighten(_palette(bg), 4.5%), lighten(_palette(bg), 0.5%));
     position: fixed;
     // background: lighten(_palette(bg), 3%);
-    top: 2px/3px;
+    top: 0;
     left: 0;
     box-shadow: 0 0 4px rgba(#000, 0.4);
     .menu-page-link:hover {
