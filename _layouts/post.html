@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   {% include head.html %}
-  {% include header.html %}
   <body class="post-content" role="main">
+    {% include header.html %}
     <div class="{% if page.options contains 'readme' %}readme-post{% endif %} post">
       <a class="back-post" href="{{ '/blog' | prepend: site.baseurl }}"><i class="fa fa-chevron-left"></i><span class="animated fadeIn">Back to Blog</span></a>
       {% if page.options contains "fullhead" %}
@@ -62,6 +62,8 @@
             <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
             <div class="post-tags-container">
               <span>Tags:&nbsp;</span> 
+              {% assign post_tags = page.tags %}
+              {% assign site_tags = site.tags %}
               <ul class="post-tags inline">
               {% for tag in page.tags %}
                 {% assign tag_id = tag | prepend: "#" | append: "-tag" | slugify %}
