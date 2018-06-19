@@ -5,8 +5,8 @@
     <description>Developer &amp;#x1f784; Designer &amp;#x1f784; Student</description>
     <link>https://brettstevenson.io/</link>
     <atom:link href="https://brettstevenson.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Jun 2018 18:58:11 +0000</pubDate>
-    <lastBuildDate>Thu, 14 Jun 2018 18:58:11 +0000</lastBuildDate>
+    <pubDate>Tue, 19 Jun 2018 09:18:43 +0000</pubDate>
+    <lastBuildDate>Tue, 19 Jun 2018 09:18:43 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -114,14 +114,14 @@ To get started, lets first discuss the basic workflow and file structure that we
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;styles&quot;&gt;Styles&lt;/h2&gt;
-&lt;p&gt;To optimize our site’s stylesheets, we’re first going to compile our main Sass file and utilize autoprefixer and cssnano to add the necessary vendor-prefixes and optimize the resulting CSS. Additionally, the use of &lt;a href=&quot;https://github.com/postcss/postcss&quot;&gt;PostCSS&lt;/a&gt; allows us to perform both of these processes while only parsing the CSS once. All of which, produces a single stylesheet that gets placed in our &lt;code class=&quot;highlighter-rouge&quot;&gt;assets&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_site/assets&lt;/code&gt; directories.&lt;/p&gt;
+&lt;p&gt;To optimize our site’s stylesheets, we’re first going to compile our main Sass file and utilize &lt;em&gt;autoprefixer&lt;/em&gt; and &lt;em&gt;cssnano&lt;/em&gt; to add the necessary vendor-prefixes and optimize the resulting CSS. Additionally, the use of &lt;a href=&quot;https://github.com/postcss/postcss&quot;&gt;PostCSS&lt;/a&gt; allows us to perform both of these processes while only parsing the CSS once. All of which, produces a single stylesheet that gets placed in our &lt;code class=&quot;highlighter-rouge&quot;&gt;assets&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_site/assets&lt;/code&gt; directories.&lt;/p&gt;
 &lt;p class=&quot;h-note&quot;&gt;
-  If you&amp;rsquo;re really looking to squeeze out all the performance possible, you can check out the [CSS minification benchmark](https://github.com/GoalSmashers/css-minification-benchmark) and see which one works best for you.
+  If you&amp;rsquo;re really looking to squeeze out all the performance possible, you can check out the &lt;a href=&quot;https://github.com/GoalSmashers/css-minification-benchmark&quot;&gt;CSS minification benchmark&lt;/a&gt; and see which one works best for you.
 &lt;/p&gt;
 
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Process styles, add vendor-prefixes, minify, then&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// output the file to the appropriate location&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'build:styles:main'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'build:styles:main'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sassFiles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/main.scss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'compressed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -185,8 +185,10 @@ For this process we will need to create three tasks, two for processing the glob
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
-&lt;p&gt;If you’ve read my previous installment on this topic, this task should look pretty familiar. Though, it’s important to note that this task is not intended to lessen the importance of choosing the correct image size and filetype, which are integral to optimizing your site’s images. Nevertheless, image optimization can often take some trial and error, so it’s usually best to expirement a bit.&lt;br /&gt;
-Additionally, this task currently optimizes all of your site’s images, rather than only processing new images, in most cases, making this the most time-consuming build processes. As a result, if your site has a lot of images it may be beneficial to remove this task from the default &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; task, and instead run this task manually when new images are added, rather than with each build.&lt;/p&gt;
+&lt;p&gt;If you’ve read my previous installment on this topic, this task should look pretty familiar. Though, it’s important to note that this task is not intended to lessen the importance of choosing the correct image size and filetype, which are integral to optimizing your site’s images.&lt;/p&gt;
+
+&lt;!-- Nevertheless, image optimization can often take some trial and error, so it&amp;rsquo;s usually best to expirement a bit.   --&gt;
+&lt;p&gt;Additionally, this task currently optimizes all of your site’s images, rather than only processing new images, in most cases, making this the most time-consuming build processes. As a result, if your site has a lot of images it may be beneficial to remove this task from the default &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; task, and instead run this task manually when new images are added, rather than with each build.&lt;/p&gt;
 
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Optimize and copy image files&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'build:images'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -316,8 +318,7 @@ Additionally, this task currently optimizes all of your site’s images, rather 
 &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;tldr&quot;&gt;tldr;&lt;/h2&gt;
-&lt;p&gt;Here’s a &lt;a href=&quot;https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed&quot;&gt;gist&lt;/a&gt; with the resulting Gulpfile.js&lt;/p&gt;
+&lt;p class=&quot;h-tldr&quot;&gt;Here&amp;rsquo;s a &lt;a href=&quot;https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed&quot;&gt;gist&lt;/a&gt; with the resulting Gulpfile.js&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;While this Gulpfile provides a lot of optimization and added convenience to just about any site, there is still definitely room for improvement. Feel free to contact me or leave a comment with any improvements or suggestions!&lt;/p&gt;
@@ -351,6 +352,10 @@ Additionally, this task currently optimizes all of your site’s images, rather 
   &lt;a href=&quot;https://github.com/tterb/yt2mp3/blob/master/LICENSE&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/license/tterb/yt2mp3.svg&quot; alt=&quot;License&quot; /&gt;&lt;/a&gt;
 &lt;/p&gt;
 
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://user-images.githubusercontent.com/16360374/41496879-b19ce040-70fe-11e8-90c0-0f3e67839bf1.gif&quot; alt=&quot;preview&quot; width=&quot;700&quot; /&gt;
+&lt;/p&gt;
+
 &lt;h2 id=&quot;description&quot;&gt;Description&lt;/h2&gt;
 &lt;p&gt;A program that simplifies the process of downloading and converting Youtube videos to MP3 files from the command-line. All you need is the video URL or the name of the artist/track you’re looking for.&lt;br /&gt;
 Once downloaded, the program will also embed the output file with the appropriate metadata and cover art via the iTunes API.&lt;/p&gt;
@@ -365,44 +370,17 @@ Once downloaded, the program will also embed the output file with the appropriat
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python yt2mp3.py &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Once complete, the resulting MP3 file will be saved to your &lt;em&gt;Downloads&lt;/em&gt; directory, with the following file-structure &lt;code class=&quot;highlighter-rouge&quot;&gt;Music/{artist}/{track}.mp3&lt;/code&gt;.&lt;/p&gt;
-
 &lt;h4 id=&quot;options&quot;&gt;Options:&lt;/h4&gt;
+&lt;p&gt;| Arguments        |                                                  |
+|:—————-:|————————————————–|
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-t, --track&lt;/code&gt;    | Specify the track name query                     |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-a, --artist&lt;/code&gt;   | Specify the artist name query                    |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-u, --url&lt;/code&gt;      | Specify a Youtube URL or ID                      |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-q, --quiet&lt;/code&gt;    | Suppress program command-line output             |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-p, --progress&lt;/code&gt; | Display a command-line progress bar              |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-h, --help&lt;/code&gt;     | Displays information on usage and functionality  |&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Arguments&lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-t, --track&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Specify the track name query&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-a, --artist&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Specify the artist name query&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-u, --url&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Specify a Youtube URL or ID&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-q, --quiet&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Suppress program command-line output&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-p, --progress&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Display a command-line progress bar&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-h, --help&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Displays information on usage and functionality&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;Once complete, the resulting MP3 file will be saved to your &lt;em&gt;Downloads&lt;/em&gt; directory, with the following file-structure &lt;code class=&quot;highlighter-rouge&quot;&gt;Music/{artist}/{track}.mp3&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; Displaying the progress bar currently has a significant impact on download performance, due to &lt;a href=&quot;https://github.com/nficano/pytube/issues/180&quot;&gt;#180&lt;/a&gt;.&lt;/p&gt;
 
@@ -422,9 +400,6 @@ pip install &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-
-&lt;h2 id=&quot;disclaimer&quot;&gt;&lt;em&gt;Disclaimer&lt;/em&gt;&lt;/h2&gt;
-&lt;p&gt;This program is distributed with the sole intent of being used on non-copyrighted material or copyrighted material for which the user holds the copyright. Use of this program outside of the aforementioned conditions is not permitted.&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
         <link>https://brettstevenson.io/blog/project/youtube-to-mp3.html</link>
@@ -834,7 +809,7 @@ No matter the issue, &lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; provi
       <item>
         <title>Atomic Delight</title>
         <description>&lt;!-- Badges --&gt;
-&lt;p align=&quot;right&quot;&gt;
+&lt;p class=&quot;badges&quot;&gt;
 	&lt;a href=&quot;https://atom.io/themes/atomic-delight-syntax&quot;&gt;
 		&lt;img src=&quot;https://img.shields.io/apm/v/atomic-delight-syntax.svg?&quot; height=&quot;20&quot; alt=&quot;version&quot; title=&quot;Version&quot; /&gt;&amp;nbsp;&amp;nbsp;
 	&lt;/a&gt;
