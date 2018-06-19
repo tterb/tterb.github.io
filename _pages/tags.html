@@ -15,9 +15,7 @@ image: bark.jpg
       {% endfor %}
     {% else %}
       {% for tag in tags_list %}
-        {% if tag[1].size > 1 %}
-          <a class="tag-entry scrolly scroll-btn" href="#{{ tag[0] | slugify }}-tag" data-scroll>{{ tag[0] }}</a>
-        {% endif %}
+        <a class="tag-entry scrolly scroll-btn" href="#{{ tag[0] | slugify }}-tag" data-scroll>{{ tag[0] }}</a>
       {% endfor %}
     {% endif %}
   {% assign tags_list = nil %}
@@ -26,7 +24,6 @@ image: bark.jpg
   <section class="tags-content">
   {% assign tags_list = site.tags | sort %}
   {% for tag in tags_list %}
-    {% if tag[1].size > 1 %}
       <div id="{{ tag[0] | slugify }}-tag" class="tag-container">
       <hr>
       <!-- <span class="fas fa-hashtag"></span> -->
@@ -56,7 +53,6 @@ image: bark.jpg
       {% assign group = nil %}
       </ul>
     </div>
-    {% endif %}
   {% endfor %}
   </section>
 </div>
