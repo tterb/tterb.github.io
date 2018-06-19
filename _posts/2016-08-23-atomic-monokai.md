@@ -18,7 +18,7 @@ tags:
 ---
 
 <!-- Badges -->
-<p align="right">
+<p class="badges">
     <a href="https://atom.io/themes/atomic-monokai-syntax">
 	    <img src="https://img.shields.io/apm/v/atomic-monokai-syntax.svg?" height="20" alt="version"/>&nbsp;
     </a>

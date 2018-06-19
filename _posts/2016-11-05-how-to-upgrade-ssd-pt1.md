@@ -1,11 +1,11 @@
 ---
 priority: 0.9
 title: Upgrading the SSD on a Razer Blade
-description: A tutorial on how to upgrade the SSD on a Razer Blade or similar laptop
+description: A guide to upgrading the SSD on a Razer Blade laptop
 keywords: "how, upgrade, SSD, razer, blade, tech, laptop, data, recovery, tutorial"
 date: 2016-10-05
 categories: blog
-options: fullhead, featured, collection
+options: fullhead, featured, collection, lg
 next: how-to-upgrade-ssd-pt2.html
 image: razer-blade.jpg
 tags:

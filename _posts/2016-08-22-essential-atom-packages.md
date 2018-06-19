@@ -7,7 +7,7 @@ keywords: "atom, code, text, editor, packages, spotlight, list, essential, jekyl
 date: 2016-08-22
 update: 2017-02-18
 categories: blog
-options: halfhead, featured
+options: featured, lg
 image: atom-banner.jpg
 tags:
   - Atom
@@ -20,7 +20,7 @@ tags:
 ---
 
 <!-- Intro -->
-As a long-time Sublime Text user, I&rsquo;ve recently made the transition to using <img class="inline" src="http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/Atomic%20Monokai/atom_zps8lz1oett.png" width="20" alt="atom"/> [**Atom**](https://atom.io/) as my go&ndash;to code editor after falling in love with it&rsquo;s package selection and &ldquo;*hackable*&rdquo; nature. I also know from experience that changes like these can be a little bewildering, so I thought others might benefit from a simple resource to started configuring their Atomic workspace.
+As a long-time Sublime Text user, I&rsquo;ve recently made the transition to using <img class="inline" src="https://user-images.githubusercontent.com/16360374/41584818-231060ca-735d-11e8-90e3-d7ad66a20f85.png" width="20" alt="atom"/> [Atom](https://atom.io/) as my go&ndash;to code editor after falling in love with it&rsquo;s package selection and &ldquo;*hackable*&rdquo; nature. I also know from experience that changes like these can be a little bewildering, so I thought others might benefit from a simple resource to started configuring their Atomic workspace.
 
 ## Installing packages
 
@@ -30,12 +30,7 @@ All of the featured packages are published through [apm](https://github.com/atom
 $ apm install <package-name>
 ```
 
-<br>
-
-<div class="h-tip">
-  If you&rsquo;d like to skip the busy&ndash;work and conveniently install the featured packages, you can use the download link at the bottom of the page and follow the included steps.
-</div>
-
+<br>  
 <hr>
 
 ## Getting Started
@@ -72,11 +67,11 @@ $ apm install <package-name>
 ## Just for Fun
   * [**Activate Power Mode**](https://atom.io/packages/activate-power-mode) &#8211; a fun package which adds a little bit more excitement to writing code. Although
   personally, I found the constant animations and shaking to be a little disorienting, so I chose to disabled that package and instead
-  replaced it with [**Activate Power Mode Delete**](https://atom.io/packages/activate-power-mode-delete).
+  replaced it with [Activate Power Mode Delete](https://atom.io/packages/activate-power-mode-delete).
   <br>
   <br>
 
-  <div class="h-note">If you&rsquo;d like to skip the busy-work and conveniently install the featured packages, you can use the download link at the below and follow the simple instructions.</div>
+  <div class="h-note">If you&rsquo;d like to skip the busy-work and conveniently install the featured packages, you can use the download link below and follow the simple instructions.</div>
 
 <br><br>
 

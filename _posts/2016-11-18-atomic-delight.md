@@ -19,7 +19,7 @@ tags:
 ---
 
 <!-- Badges -->
-<p align="right">
+<p class="badges">
 	<a href="https://atom.io/themes/atomic-delight-syntax">
 		<img src="https://img.shields.io/apm/v/atomic-delight-syntax.svg?" height="20" alt="version" title="Version">&nbsp;&nbsp;
 	</a>

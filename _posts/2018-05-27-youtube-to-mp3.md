@@ -24,7 +24,7 @@ tags:
 </p>  
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/16360374/41496879-b19ce040-70fe-11e8-90c0-0f3e67839bf1.gif" width="700"/>
+  <img src="https://user-images.githubusercontent.com/16360374/41496879-b19ce040-70fe-11e8-90c0-0f3e67839bf1.gif" alt="preview" width="700"/>
 </p>
 
 ## Description  

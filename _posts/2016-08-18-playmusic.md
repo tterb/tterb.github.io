@@ -17,7 +17,7 @@ tags:
 ---
 
 <!-- Badges -->
-<p align="right">
+<p class="badges">
   <a href="https://github.com/tterb/PlayMusic/releases">
     <img src="https://img.shields.io/badge/version-1.2.1-brightgreen.svg" height="21" alt="version"/>
   </a>

@@ -1,10 +1,10 @@
 ---
-priority: 0.5
+priority: 0.15
 title: Optimizing Jekyll with Gulp
 description: An explanation of how to optimize your Jekyll website using Gulp
 date: 2018-06-1
 categories: blog
-options: halfhead
+options: featured
 image: gulp.jpg
 tags:
   - Jekyll
@@ -122,15 +122,15 @@ npm i -D autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util g
 ```
 
 ## Styles  
-To optimize our site&rsquo;s stylesheets, we&rsquo;re first going to compile our main Sass file and utilize autoprefixer and cssnano to add the necessary vendor-prefixes and optimize the resulting CSS. Additionally, the use of [PostCSS](https://github.com/postcss/postcss) allows us to perform both of these processes while only parsing the CSS once. All of which, produces a single stylesheet that gets placed in our `assets` and `_site/assets` directories.  
+To optimize our site&rsquo;s stylesheets, we&rsquo;re first going to compile our main Sass file and utilize *autoprefixer* and *cssnano* to add the necessary vendor-prefixes and optimize the resulting CSS. Additionally, the use of [PostCSS](https://github.com/postcss/postcss) allows us to perform both of these processes while only parsing the CSS once. All of which, produces a single stylesheet that gets placed in our `assets` and `_site/assets` directories.  
 <p class="h-note">
-  If you&rsquo;re really looking to squeeze out all the performance possible, you can check out the [CSS minification benchmark](https://github.com/GoalSmashers/css-minification-benchmark) and see which one works best for you.
+  If you&rsquo;re really looking to squeeze out all the performance possible, you can check out the <a href="https://github.com/GoalSmashers/css-minification-benchmark">CSS minification benchmark</a> and see which one works best for you.
 </p>
 
 ```js
 // Process styles, add vendor-prefixes, minify, then
 // output the file to the appropriate location
-gulp.task('build:styles:main', function() {
+gulp.task('build:styles:main', () => {
   return sass(paths.sassFiles + '/main.scss', {
     style: 'compressed',
     trace: true,
@@ -196,7 +196,9 @@ gulp.task('build:scripts', ['build:scripts:global', 'build:scripts:local']);
 ```
 
 ## Images  
-If you&rsquo;ve read my previous installment on this topic, this task should look pretty familiar. Though, it&rsquo;s important to note that this task is not intended to lessen the importance of choosing the correct image size and filetype, which are integral to optimizing your site&rsquo;s images. Nevertheless, image optimization can often take some trial and error, so it&rsquo;s usually best to expirement a bit.  
+If you&rsquo;ve read my previous installment on this topic, this task should look pretty familiar. Though, it&rsquo;s important to note that this task is not intended to lessen the importance of choosing the correct image size and filetype, which are integral to optimizing your site&rsquo;s images. 
+
+<!-- Nevertheless, image optimization can often take some trial and error, so it&rsquo;s usually best to expirement a bit.   -->
 Additionally, this task currently optimizes all of your site&rsquo;s images, rather than only processing new images, in most cases, making this the most time-consuming build processes. As a result, if your site has a lot of images it may be beneficial to remove this task from the default `build` task, and instead run this task manually when new images are added, rather than with each build.  
 
 ```js
@@ -331,8 +333,7 @@ gulp.task('clean', ['clean:jekyll', 'clean:styles', 'clean:scripts', 'clean:imag
 );
 ```
 
-## tldr;
-Here&rsquo;s a [gist](https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed) with the resulting Gulpfile.js
+<p class="h-tldr">Here&rsquo;s a <a href="https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed">gist</a> with the resulting Gulpfile.js</p>
 
 ## Conclusion  
 While this Gulpfile provides a lot of optimization and added convenience to just about any site, there is still definitely room for improvement. Feel free to contact me or leave a comment with any improvements or suggestions!

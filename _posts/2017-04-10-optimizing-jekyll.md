@@ -4,7 +4,7 @@ title: Optimizing Jekyll
 description: Some insight into how to improve the performance of your Jekyll website
 date: 2017-04-10
 categories: blog
-options: halfhead
+options:
 image: web-performance.png
 tags:
   - Jekyll
