@@ -34,7 +34,7 @@
   height: 18em;
   border-radius: 2px;
   border-bottom: solid 1px #ccc;
-  box-shadow: 2px 2px 5px rgba(#000, 0.35) !important;
+  box-shadow: 1px 1px 5px rgba(#000, 0.35) !important;
   .image.featured {
     display: inline;
     position: relative;
@@ -166,10 +166,10 @@
   font-size: _font(hdr-size-small);
   text-align: left;
   width: 96vw;
-  margin: 0 2vw 1.5em 3vw;
   vertical-align: middle;
   align-content: center;
-
+  margin: 0 3vw 1.5em;
+  padding: 0;
   > li {
     display: inline-block;
     width: 23.5%;
@@ -183,6 +183,9 @@
     &:first-child {
       margin-left: 0;
     }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   @include breakpoint(small) {
@@ -194,7 +197,7 @@
   position: relative;
   text-align: right;
   right: 0.5em;
-  margin: 0 auto 1em;
+  margin: 1em auto 0.5em;
   .fa-search {
     position: relative;
     color: #AAA;
@@ -235,7 +238,7 @@
   color: rgba(#000, 0.8);
   font-family: _font(ctrl-family);
   font-size: _font(hdr-size-smaller);
-  margin: 0 4em;
+  margin: 0 3em;
   padding: 4px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -278,7 +281,7 @@
     color: rgba(#000, 0.7) !important;
     padding-left: 4px;
     cursor: pointer;
-    transition: all 250ms ease-in-out;
+    transition: all 200ms ease-in-out;
     &:hover, &:active {
       color: darken(_palette(accent2, bg), 2%) !important;
       text-shadow: none !important;
