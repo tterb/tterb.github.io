@@ -1,31 +1,32 @@
 - title: Hyde
   category: projects
   permalink: /Hyde/
-  repo: hyde
+  repo: Hyde
   desc: An Electron-based markdown editor that aims to improve the accessibility of making beautiful documents with markdown.
+  category: javascript
   icon: code
   image: Hyde.png
   
 - title: PlayMusic
   category: projects
   permalink: /PlayMusic/
-  repo: playmusic
+  repo: PlayMusic
   desc: A Rainmeter skin that provides Google Play Music users the ability to access their music tastefully on their desktop.
+  category: lua
   icon: headphones
   image: PlayMusic.png
+
+- title: Youtube to MP3
+  category: projects
+  repo: yt2mp3
+  desc: A command-line program that simplifies the process of downloading and converting Youtube videos to MP3 files with metadata from the iTunes API. 
+  image: yt2mp3.png
 
 - title: Atomic Design
   category: projects
   permalink: /Atomic-Design-UI/
   repo: atomic-design-ui
   desc: A refined dark interface for Atom, featuring modifications that focus on improving the user experience and adaptability.
+  category: web
   icon: laptop
   image: AtomicDesign.png
-  
-- title: GitHub Calendar
-  category: projects
-  permalink: /blog/projects/github-calendar.html
-  repo: githubcalendar
-  desc: A Rainmeter skin that displays the user's GitHub contribution calendar on their desktop.
-  icon: github
-  image: GithubCalendar.png
