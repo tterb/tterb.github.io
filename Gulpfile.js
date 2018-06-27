@@ -8,6 +8,7 @@ const cssnano      = require('cssnano');
 const del          = require('del');
 const gulp         = require('gulp');
 const gutil        = require('gulp-util');
+const newer        = require('gulp-newer');
 const imagemin     = require('gulp-imagemin');
 const pngquant     = require('imagemin-pngquant');
 const postcss      = require('gulp-postcss');
@@ -115,6 +116,7 @@ gulp.task('clean:fonts', function(callback) {
 // Optimize and copy image files
 gulp.task('build:images', function() {
   return gulp.src(paths.imageFilesGlob)
+    .pipe(newer(paths.siteImageFiles))
     .pipe(imagemin({ 
       optimizationLevel: 3, 
       progressive: true, 
@@ -222,10 +224,8 @@ gulp.task('build', function(callback) {
   runSequence(['build:scripts', 'build:styles', 'build:images', 'build:fonts', 'build:downloads'], 'build:jekyll', callback);
 });
 
-gulp.task('build:test', function (callback) {
-  runSequence('clean', ['build:scripts', 'build:images', 'build:styles', 'build:fonts', 'build:downloads'],
-    'build:jekyll:test',
-    callback);
+gulp.task('test', function(callback) {
+  runSequence('clean', ['build:scripts', 'build:styles', 'build:images', 'build:fonts', 'build:downloads'], 'build:jekyll:test', callback);
 });
 
 // Deletes _site directory and processed assets
