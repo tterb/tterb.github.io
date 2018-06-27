@@ -4,7 +4,8 @@
   <body class="{{ page.title | replace: " ", "-" | downcase }} is-loading">
     <div id="page-wrapper">
       {{ content }}
-      {% include scripts.html %}
     </div>
   </body>
+  <script>document.documentElement.classList.remove("no-js");</script>
+  {% include scripts.html %}
 </html>

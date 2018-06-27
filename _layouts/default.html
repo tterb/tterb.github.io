@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   {% include head.html %}
-  <body class="{{ page.title | replace: " ", "-" | downcase }} is-loading">
+  <body class="{{ page.title | slugify }} is-loading">
     <div id="{{ page.title | replace: " ", "-" | downcase }}-wrapper" class="page-wrapper">
-      {% include header.html %}
-      {% if page.header %}
-        {{ content }}
-      {% else %}
-        <article {% if page.image %} id="main" {% elsif page.options contains 'minihead' %} id="minihead" {% else %} id="fullhead" {% endif %}>
-          {% include header-inner.html %}
+        {% include header.html %}
+        {% if page.header %}
           {{ content }}
-        </article>
-      {% endif %}
+        {% else %}
+          <article {% if page.image %} id="main" {% elsif page.options contains 'minihead' %} id="minihead" {% else %} id="fullhead" {% endif %}>
+            {% include header-inner.html %}
+            {{ content }}
+          </article>
+        {% endif %}
       {% include footer.html %}
       {% include scripts.html %}
     </div>
