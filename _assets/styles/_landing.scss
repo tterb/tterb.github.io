@@ -1322,7 +1322,7 @@ button, .button {
       max-width: 80%;
       font-size: _font(hdr-size-med);
       margin: auto;
-      padding: 3em 0;
+      padding: 1em 0;
       @include breakpoint(small) {
         font-size: _font(hdr-size-small);
       }
@@ -1577,7 +1577,7 @@ body.is-menu-visible {
       opacity: 0.9;
       .header-logo {
         position: relative;
-        top: 10px;
+        top: -5px;
         left: 2px;
         width: 30px;
         transform: scale(1);
@@ -1602,7 +1602,9 @@ body.is-menu-visible {
           opacity: 0.95;
         }
         span {
-          display: inline-block;
+          display: inline-block; 
+          position: relative;
+          top: -14px;
           // transition: all 100ms ease-in-out;
         }
       }
