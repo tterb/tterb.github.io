@@ -1,9 +1,8 @@
-#header h1{
-  display: none;
-}
-
 .post-content {
   background: #fbfbfb;
+  #header h1 {
+    display: none;
+  }
   .post {
     .post-image {
       position: relative;
@@ -122,22 +121,24 @@
 }
 
 .written-content {
-  color: rgba(#000, 0.8);
-  line-height: 1.55;
+  color: rgba(#000, 0.75);
+  font-size: 17.5px;
+  line-height: 1.6;
   width: 80%;
   margin: auto;
-  padding: 2.5em 1em 2em;
+  padding: 2.5em 2em 2em;
   h1, h2, h3, h4, h5, h6 {
     color: rgba(#000,0.95);
     letter-spacing: -0.5px;
     text-transform: none;
+    margin-top: 1em;
     &.bordered {
       border-bottom: 1px solid #e0e0e0;
     }
   }
   h2 {
     line-height: 1.5;
-    margin-bottom: 0.35em;
+    margin-bottom: 0.25em;
   }
   h4 {
     font-size: 1.5em;
@@ -214,7 +215,7 @@
       float: right;
       transition: all 300ms ease-in-out;
       cursor: pointer;
-      opacity: 0;
+      opacity: 0.2;
     }
     &:hover .clipboard {
       opacity: 0.7;
@@ -353,7 +354,7 @@
     display: block !important;
     content: "" !important;
     line-height: 22px !important;
-    margin-top: 10px !important;
+    margin-top: 15px !important;
   }
 }
 
@@ -379,11 +380,11 @@
 
 .h-note, .h-tip, .h-tldr, .h-warning {
   color: rgba(#000, 0.85);
-  font-size: 0.975em !important;
+  font-size: 0.9em !important;
   letter-spacing: 0.035em;
   line-height: 1.4 !important;
   text-shadow: none;
-  width: 85%;
+  width: 90%;
   border-left-width: 5px;
   border-left-style: solid;
   border-radius: 6px;
@@ -456,8 +457,8 @@
   // width: 42px !important;
   // height: 42px !important;
   // right: 75px;
-  right: 7vw;
-  bottom: 10vh;
+  right: 4vw;
+  bottom: 8vh;
   border: 0;
   border-radius: 2px;
   transition: opacity 250ms ease-in-out;
@@ -485,7 +486,7 @@
   color: rgba(#fff, 0.5);
   font-size: 32px;
   min-width: 40px;
-  top: 0.2em;
+  top: 0.1em;
   left: 0.55em;
   z-index: 999999;
   span {
@@ -792,30 +793,36 @@ body.is-mobile {
   display: flex;
   width: 95%;
   border-top: 1px solid rgba(#000, 0.1);
-  margin: 3.5em 0.5em 0;
-  padding-top: 10px;
+  margin: 2em 0.5em 0;
+  padding-top: 1.5em;
   .post-tags {
     display: inline;
+    margin-bottom: 1em;
     padding-left: 2px;
     .post-tag-item {
       background: rgba(#edecee, 0.9);
-      font-size: 0.9em;
+      font-size: 0.85em;
       border-radius: 4px;
-      box-shadow: 0 2px 4px -2px rgba(#000,0.4);
+      box-shadow: 0 1.5px 4px -2px rgba(#000, 0.4);
       margin-right: 3px;
       margin-bottom: 10px;
       padding: 2px 8px;
+      transition: all 350ms ease-in-out;
       a {
-        color: rgba(#000, 0.9);
+        color: rgba(#000, 0.65);
         &:hover {
-          color: #3DB0E5;
+          color: rgba(#000, 0.8);
         }
+      }
+      &:hover {
+        box-shadow: 0 2px 5px -2px rgba(#000, 0.7) !important;
       }
     }
   }
   span {
     font-size: 1.1em;
     font-weight: 500;
+    padding-right: 0.5em;
   }
 }
 
@@ -823,7 +830,7 @@ body.is-mobile {
   font-family: _font(ctrl-family);
   width: 100%;
   margin: 0 0 1em;
-  padding: 3em 0 1em;
+  padding: 2em 0 1em;
   box-sizing: border-box;
   float: left;
   .isLeft {
@@ -836,7 +843,7 @@ body.is-mobile {
     display: inline-block;
     min-width: 267px;
     max-width: 35%;
-    margin: 20px -2.5em 0 0;
+    margin: 16px -2.5em 0 0;
     float: right;
     transition: all 300ms ease;
   }
