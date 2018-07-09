@@ -203,9 +203,9 @@
 <section id="banner">
   <div class="inner animated fadeIn">
     <h1 role="heading" aria-level="1">Hi<span class="accent" style="margin-right:-10px;">,</span> I<span class="accent">'</span>m <br/>Brett Stevenson<span class="accent">.</span></h1>
-    <h3>Developer<span class="fa fa-circle"></span>Designer<span class="fa fa-circle"></span>Student</h3>
+    <h3>Developer<span class="fas fa-circle"></span>Designer<span class="fas fa-circle"></span>Student</h3>
   </div>
-  <a class="scroll-btn scrolly animated fadeInUp" href="#one"><span></span>Scroll</a>
+  <a class="scroll-btn animated fadeInUp" href="#one" data-scroll><span></span>Scroll</a>
 </section>
 
 <!-- One -->
@@ -247,7 +247,7 @@
     </header>
     <div class="project-tiles tile-container">
     
-        <div class="tile">
+      <div class="tile" data-category="javascript">
         <img alt="Hyde" src="/assets/img/landing/Hyde.png" data-full="/assets/img/landing/Hyde.png" class=" tile-image "/>
         <div class="mask">
           <h4>Hyde</h4>
@@ -256,7 +256,7 @@
         </div>
       </div>
     
-        <div class="tile">
+      <div class="tile" data-category="lua">
         <img alt="PlayMusic" src="/assets/img/landing/PlayMusic.png" data-full="/assets/img/landing/PlayMusic.png" class=" tile-image "/>
         <div class="mask">
           <h4>PlayMusic</h4>
@@ -265,7 +265,7 @@
         </div>
       </div>
     
-        <div class="tile">
+      <div class="tile" data-category="projects">
         <img alt="Youtube to MP3" src="/assets/img/landing/yt2mp3.png" data-full="/assets/img/landing/yt2mp3.png" class=" tile-image "/>
         <div class="mask">
           <h4>Youtube to MP3</h4>
@@ -274,7 +274,7 @@
         </div>
       </div>
     
-        <div class="tile">
+      <div class="tile" data-category="web">
         <img alt="Atomic Design" src="/assets/img/landing/AtomicDesign.png" data-full="/assets/img/landing/AtomicDesign.png" class=" tile-image "/>
         <div class="mask">
           <h4>Atomic Design</h4>
@@ -300,13 +300,13 @@
     </ul>
   </div>
 </section>
-<!-- <script>
+<script>
 $(window).on('resize', function() {
   var win = $(this);
   if (win.width() < 514) {
     $('html').addClass('mobile');
 });
-</script> -->
+</script>
 
       <footer id="footer">
   <ul class="icons">
