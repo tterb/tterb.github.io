@@ -25,6 +25,12 @@
   image: YogaDesign.png
   tool: illustrator
   tag: logo
+  
+- title: Atomic Monokai Pro
+  desc:  A syntax-highlighting theme based on a modern interpretation of the popular monokai color palette. Featuring modifications that better emphasize crucial code, allowing more trivial aspects of the syntax to fade into the background
+  image: MonokaiPro.png
+  tool: Code
+  tag: UI
 
 - title: Notifications
   desc: A collection of Bootstrap inspired, UI notifications designed for [Hyde](http://brettstevenson.io/Hyde/)
@@ -32,10 +38,10 @@
   tool: Illustrator
   tag: UI
 
-- title: Flat Monokai
-  desc: A flat interpretation of the [Atomic Monokai](http://brettstevenson.io/Atomic-Monokai-Syntax/) syntax-highlighting package for Atom
-  image: FlatMonokai.png
-  tool: Illustrator
+# - title: Flat Monokai
+#   desc: A flat interpretation of the [Atomic Monokai](http://brettstevenson.io/Atomic-Monokai-Syntax/) syntax-highlighting package for Atom
+#   image: FlatMonokai.png
+#   tool: Illustrator
 
 - title: TypeFace
   desc: A familiar face created in Adobe Illustrator using only manipulated type characters

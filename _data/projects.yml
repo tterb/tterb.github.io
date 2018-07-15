@@ -19,7 +19,7 @@
   
 - title: Youtube to MP3
   repo: yt2mp3
-  desc: A program that simplifies the process of downloading and converting Youtube videos to MP3 files with metadata from the iTunes API. 
+  desc: A program that simplifies the process of searching, downloading and converting Youtube videos to MP3 files with metadata from the iTunes API. 
   image: yt2mp3.png
 
 - title: UD Therapy
