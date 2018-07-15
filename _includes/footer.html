@@ -1,5 +1,5 @@
 <footer id="footer">
-  <ul class="icons">
+  <ul class="icons inline">
     {% for social in site.social_links %}
       {% if social[1] %}
         {% if social[0] != 'email' %}
@@ -10,7 +10,7 @@
       {% endif %}
     {% endfor %}
   </ul>
-  <ul class="copyright">
+  <ul class="copyright inline">
     <li>&copy;
       {% assign thisyear = site.time | date: "%Y" %}
       {% if site.first_published %}
