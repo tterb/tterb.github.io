@@ -18,11 +18,22 @@ $sidebar-color: #2a303a;
   * {
     font-family: 'Open Sans', Arial, sans-serif !important;
   }
-  .fa.fa-circle {
-    font-size: 30% !important;
+  .fa-circle {
+    // position: relative;
     color: rgba(#000, 0.65) !important;
     text-shadow: none !important;
-    top: -4px;
+    // top: -3px;
+    width: 10px;
+  }
+}
+
+h6 {
+  .fa-circle {
+    position: relative;
+    color: rgba(#000, 0.65) !important;
+    text-shadow: none !important;
+    top: -3px;
+    width: 10px;
   }
 }
   
@@ -39,7 +50,7 @@ $sidebar-color: #2a303a;
     z-index: 99999;
     .img-container {
       width: 100%;
-      margin: 2.05em auto 2.35em;
+      margin: 2em auto 2.05em;
       img {
         display: block;
         background-size: cover;
@@ -87,13 +98,13 @@ $sidebar-color: #2a303a;
     #contact {
       position: relative;
       top: 2.5vh;
-      padding: 3em 0 0;
+      padding: 1.2em 0 0;
       .icons {
         color: rgba(#fff, 0.55);
         // font-size: 110%;
         line-height: 1.5;
         text-align: center;
-        margin: 0.35em auto 1em;
+        margin: 0.15em auto 1em;
         padding: 0.25em 0.75em;
         li {
           font-size: 165%;
@@ -152,7 +163,7 @@ $sidebar-color: #2a303a;
       line-height: 1.025;
       color: darken($sidebar-color, 2%);
       max-width: 700px;
-      margin-bottom: 0.12em;
+      margin: 0.1em 0;
     }
     h4 {
       color: rgba(#000, 0.75);
@@ -162,8 +173,11 @@ $sidebar-color: #2a303a;
       text-shadow: none !important;
       text-transform: none;
       padding-left: 6px;
-      i {
+      .fa-circle {
+        position: relative;
         text-shadow: none !important;
+        top: 2px;
+        width: 6px;
       }
     }
   }
