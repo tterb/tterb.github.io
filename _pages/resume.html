@@ -1,7 +1,7 @@
 ---
 layout: blank
 title: Resume
-permalink: /resume
+permalink: /resume/
 options: fullwidth, nomenu, nohead, nolanding
 desc: A formal resume of my work and experience.
 image: logo.png
@@ -12,7 +12,7 @@ sitemap:
 <section class="resume">
   <div id="sidebar" class="sidebar">
     <div class="img-container">
-      <img src="/assets/img/{{ page.image | prepend: site.baseurl }}" alt="avatar" class="resume-image"/>
+      <img src="{{ '/assets/img/avatar.png' | prepend: site.baseurl }}" alt="avatar" class="resume-image"/>
     </div>
     <div class="side-skills section" >
       <h3>Skills</h3>
@@ -31,10 +31,10 @@ sitemap:
         {% for socloc in site.social_links %}
           {% if socloc[1] %}
             {% if socloc[0] == 'email' %}
-              <li><a href="{{ socloc[1] }}" class="fa fa-envelope-o"><span class="label">E-mail</span></a></li>
+              <li><a href="{{ socloc[1] }}" class="fas fa-fw fa-envelope"><span class="label">E-mail</span></a></li>
             {% else %}
               {% unless socloc[0] == 'dribbble' %}
-                <li><a target="_blank" href="{{ socloc[1] }}" class="fa fa-{{ socloc[0] }}" rel="noopener">
+                <li><a target="_blank" href="{{ socloc[1] }}" class="fab fa-fw fa-{{ socloc[0] }}" rel="noopener">
                 <span class="label">{{ socloc[0] }}</span></a></li>
               {% endunless %}
             {% endif %}
@@ -47,7 +47,7 @@ sitemap:
     <div class="resume-content">
       <div class="head">
         <h1 class="name">Brett Stevenson</h1>
-        <h4 class="desc">Developer <span class="fa fa-circle"></span> Designer <span class="fa fa-circle"></span> Student</h4>
+        <h4 class="desc">Developer <span class="fas fa-circle"></span> Designer <span class="fas fa-circle"></span> Student</h4>
       </div>
       <!-- <hr> -->
       <div class="resume-section">
@@ -61,12 +61,12 @@ sitemap:
         <div class="right">
           <div class=entry>
             <h5>Open Source</h5>
-            <h6><i>Developer</i> <i class="fa fa-circle"></i> 2015 &ndash; Current</h6>
+            <h6><i>Developer</i> <i class="fas fa-circle"></i> 2015 &ndash; Current</h6>
             <p>Since my introduction to the open-source community, I&rsquo;ve been inspired by the expansiveness of freely and cooperatively developing great software. This has led me to continuously create and contribute to a variety of open-source projects.</p>
           </div>
           <div class=entry>
             <h5>Web Development</h5>
-            <h6><i>Developer/Designer</i> <i class="fa fa-circle"></i> 2014 &ndash; 2015</h6>
+            <h6><i>Developer/Designer</i> <i class="fas fa-circle"></i> 2014 &ndash; 2015</h6>
             <p>Prior to my pursuit of a degree in Computer Science, I explored website development when a group I participated in was in need of a website. This experience led to further freelance web development offers and the discovery of my love for programming.</p>
           </div>
         </div>
@@ -78,12 +78,12 @@ sitemap:
         <div class="right">
           <div class=entry>
             <h5>Cal State Monterey Bay</h5>
-            <h6><i>Software Engineering</i> <i class="fa fa-circle"></i> 2018 &ndash; Current</h6>
+            <h6><i>Software Engineering</i> <i class="fas fa-circle"></i> 2018 &ndash; Current</h6>
             <p>Upon transferring to CSUMB, I've continued pursuing my degree in Computer Science with a declared concentration in Software Engineering.</p>
           </div>
           <div class=entry>
             <h5>Cabrillo College</h5>
-            <h6><i>Computer Science</i> <i class="fa fa-circle"></i> 2015 &ndash; 2017</h6>
+            <h6><i>Computer Science</i> <i class="fas fa-circle"></i> 2015 &ndash; 2017</h6>
             <p>Upon moving to Santa Cruz, California, I enrolled in Cabrillo College where I began pursuing a degree in Computer Science, while also taking courses to explore my passions for graphic design and digital media.</p>
           </div>
         </div>
@@ -95,17 +95,17 @@ sitemap:
         <div class="right">
           <div class=entry>
             <h5><a href="{{ '/Hyde' | prepend: site.social_links.github }}" target="_blank" rel="noopener">Hyde</a></h5>
-            <h6><i>Javascript</i> <i class="fa fa-circle"></i> 2017 &ndash; Current</h6>
+            <h6><i>Javascript</i> <i class="fas fa-circle"></i> 2017 &ndash; Current</h6>
             <p>An Electron-based markdown editor that aims to improve the accessibility of Jekyll as a blogging platform for developers and non-developers, alike.</p>
           </div>
           <div class=entry>
             <h5><a href="{{ '/yt2mp3' | prepend: site.social_links.github }}" target="_blank" rel="noopener">YT2MP3</a></h5>
-            <h6><i>Python</i> <i class="fa fa-circle"></i> 2018 &ndash; Current</h6>
+            <h6><i>Python</i> <i class="fas fa-circle"></i> 2018 &ndash; Current</h6>
             <p>A program that simplifies the process of searching, downloading and converting Youtube videos to MP3 files with metadata from the iTunes API.</p>
           </div>
           <div class=entry>
             <h5><a href="{{ '/PlayMusic' | prepend: site.social_links.github }}" target="_blank" rel="noopener">PlayMusic</a></h5>
-            <h6><i>Lua</i> <i class="fa fa-circle"></i> 2016 &ndash; Current</h6>
+            <h6><i>Lua</i> <i class="fas fa-circle"></i> 2016 &ndash; Current</h6>
             <p>A Rainmeter skin that provides thousands of Google Play Music users the ability to easily access their active media from their desktop.</p>
           </div>
           <div class=entry>
