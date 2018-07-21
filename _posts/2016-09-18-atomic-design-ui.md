@@ -5,7 +5,7 @@ description: A modern and refined interface for Atom
 keywords: "atomic, design, ui, theme, monokai, atom, code, text, editor, syntax, highlighting, theme, monokai, sublime, package, jekyll, blog, github"
 date: 2016-09-18
 categories: blog projects
-options: readme
+options: readme, featured
 image: atomic-design.png
 header: https://cloud.githubusercontent.com/assets/16360374/22689194/ab4e61f4-ece4-11e6-8732-b613ffaeb2e7.png
 repo: Atomic-Design-UI

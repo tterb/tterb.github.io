@@ -24,12 +24,15 @@ tags:
 </p>  
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/16360374/41496879-b19ce040-70fe-11e8-90c0-0f3e67839bf1.gif" alt="preview" width="700"/>
+  <img src="https://user-images.githubusercontent.com/16360374/42410056-a417e33e-8198-11e8-8c43-f60b6a6037dc.gif" alt="preview" width="650"/>
 </p>
 
 ## Description  
-A program that simplifies the process of downloading and converting Youtube videos to MP3 files from the command-line. All you need is the video URL or the name of the artist/track you're looking for.  
-Once downloaded, the program will also embed the output file with the appropriate metadata and cover art via the iTunes API.  
+This program simplifies the process of searching, downloading and converting Youtube videos to MP3 files from the command-line. All you need is the video URL or the name of the artist/track you're looking for.  
+The program will attempt to retrieve data for a song matching the provided input by querying the iTunes API and use the data to find a corresponding YouTube video, if a URL is not provided. The video will then be downloaded, converted, and the gathered data will be used to populate the metadata of the MP3.  
+Once finished, the resulting MP3 file will be saved to your *Downloads* directory, with the following file-structure `Music/{artist}/{track}.mp3`.  
+
+***Note:*** If a URL is provided and no match is found for the song data, the user will be prompted for the track/artist and the video thumbnail will be used as the album artwork.  
 
 ## Install  
 You can install the program with the following command:
@@ -40,20 +43,21 @@ pip install yt2mp3
 ## Usage  
 The program can executed via Python 3 as follows:  
 ```sh
-python yt2mp3.py [-options]
+yt2mp3 [-options]
 ```
 
 #### Options:  
-| Arguments        |                                                  |
-|:----------------:|--------------------------------------------------|
-| `-t, --track`    | Specify the track name query                     |
-| `-a, --artist`   | Specify the artist name query                    |
-| `-u, --url`      | Specify a Youtube URL or ID                      |
-| `-q, --quiet`    | Suppress program command-line output             |
-| `-p, --progress` | Display a command-line progress bar              |
-| `-h, --help`     | Displays information on usage and functionality  |  
-
-Once complete, the resulting MP3 file will be saved to your *Downloads* directory, with the following file-structure `Music/{artist}/{track}.mp3`. 
+| Arguments         |                                                       |
+|-------------------|-------------------------------------------------------|
+| `-t, --track`     | Specify the track name query                          |
+| `-a, --artist`    | Specify the artist name query                         |
+| `-u, --url`       | Specify a Youtube URL or ID                           |
+| `-p, --playlist`  | Specify a Youtube playlist URL or ID                  |
+| `-o, --overwrite` | Overwrite the file if one exists in output directory  |
+| `-q, --quiet`     | Suppress program command-line output                  |
+| `-v, --verbose`   | Display a command-line progress bar                   |
+| `--version`       | Show the version number and exit                      |
+| `-h, --help`      | Display information on usage and functionality       |  
 
 ***Note:*** Displaying the progress bar currently has a significant impact on download performance, due to [#180](https://github.com/nficano/pytube/issues/180).  
 

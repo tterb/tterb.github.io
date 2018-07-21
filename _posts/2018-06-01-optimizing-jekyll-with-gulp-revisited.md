@@ -1,7 +1,7 @@
 ---
 priority: 0.15
 title: Optimizing Jekyll with Gulp
-description: An explanation of how to optimize your Jekyll website using Gulp
+description: An exploration of optimizing your Jekyll website using Gulp
 date: 2018-06-1
 categories: blog
 options: featured
@@ -102,6 +102,7 @@ const cssnano      = require('cssnano');
 const del          = require('del');
 const gulp         = require('gulp');
 const gutil        = require('gulp-util');
+const newer        = require('gulp-newer');
 const imagemin     = require('gulp-imagemin');
 const pngquant     = require('imagemin-pngquant');
 const postcss      = require('gulp-postcss');
@@ -118,7 +119,7 @@ const paths = require('./_assets/gulp-config/paths');
 Now, you *could* manually install all of these packages independantly, but in-case you&rsquo;re looking for a shortcut, I&rsquo;ve compiled the following command to allow you to conveniently install them all at once.  
 
 ```sh
-npm i -D autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
+npm i -D autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-newer gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
 ```
 
 ## Styles  
@@ -233,7 +234,7 @@ gulp.task('build:fonts', function() {
 ```
 
 ## Jekyll  
-Now it&rsquo;s time to setup the basic Jekyll build process, as well as browser-sync for the convenient auto-reload functionality.
+Now it&rsquo;s time to setup the basic Jekyll build process and browser-sync for the convenient auto-reload functionality.
 
 ```js
 // Run jekyll build command.
@@ -292,7 +293,7 @@ gulp.task('build', function(callback) {
 ```
 
 ## Cleaning up  
-Following the [Boy Scout Rule](http://deviq.com/boy-scout-rule/), we&rsquo;re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an &ldquo;*undo*&rdquo; button for the gulp tasks we&rsquo;ve created.
+In accordance with the [Boy Scout Rule](http://deviq.com/boy-scout-rule/), we&rsquo;re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an &ldquo;*undo*&rdquo; button for the gulp tasks we&rsquo;ve created.
 
 ```js
 // Delete CSS
