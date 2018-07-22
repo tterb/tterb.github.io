@@ -1,20 +1,21 @@
 ---
 priority: 0.6
-title: Python Testing
-description: Introduction to Python testing
+title: Testing Python
+description: Introduction to python testing with pytest
 keywords: ""
-date: 2018-02-09
+date: 2018-07-21
 categories: blog
-options: halfhead, update, closer
+options:
 image: python-testing.jpg
 tags:
   - python
   - testing
 ---
 
+
 # Why?
 
-Although I've become accustomed to writing bash scripts to automate the testing of my command-line applications, upon being introduced to Ruby testing while reading Michael Hartl's [The Ruby on Rails Tutorial](https://www.railstutorial.org/book), I was surprised by how much easier debugging is when you're able to write tests for each component of the program, rather than just the input/output. So given my proclivity for Python, I instantly began to wonder about the process of implementing similar tests in Python.  
+Though I've become accustomed to writing bash scripts to automate the testing of my command-line applications, upon being introduced to Ruby testing while reading Michael Hartl's [The Ruby on Rails Tutorial](https://www.railstutorial.org/book), I was surprised by how much easier debugging is when you're able to write tests for each component of the program, rather than just the input/output of my bash scripts. So given my proclivity for Python, I instantly became curious about the process of implementing similar tests in Python.  
 
 # Okay, How?  
 
@@ -25,7 +26,7 @@ Before we start writing tests, we need to create a new file with the following c
 ```sh
 $ pytest
 ```
-<p class="h-tip">I prefer running pytest with the `-v` or `--verbose` flag, as this prints the test that is being run and whether it passed/failed.</p>
+<p class="h-tip">I prefer running pytest with the <code class="highlighter-rouge">-v</code> or <code class="highlighter-rouge">--verbose</code> flag, as this prints the test that is being run and whether it passed/failed.</p>
 
 
 # Basic Testing  
@@ -63,7 +64,6 @@ def test_get_playlist():
     assert playlist == video_list
 ```
 
-
 # Using Fixtures  
 
 To introduce the idea of fixtures, we'll write a test that requires that we have a `Song` object, which stores the data necessary for downloading and setting the ID3 tags of the output mp3 file. Therefore, it's understandable that a similar `Song` object may be necessary to test multiple functionalities of the program. That's where fixtures come in.  
@@ -79,7 +79,7 @@ def test_song():
 While, you can see that there's not a lot of code that goes into creating the object, it's best to follow the [DRY](https://deviq.com/don-t-repeat-yourself/) principal and avoid redundancy.  
 Now that our fixture is defined, we are going to use it to write two tests to check the program's ability to download a video and convert the video to an mp3.  
 To test the program's download functionality, we'll utilize the fact that the `yt2mp3.download()` function returns the filepath when the download is successful by asserting that the returned filepath exists.  
-<p class="h-note">Notice that we've provided our `test_song` fixture as a parameter of the test function.</p>
+<p class="h-note">Notice that we've provided our <code class="highlighter-rouge">test_song</code> fixture as a parameter of the test function.</p>
 
 ```python
 def test_video_download(test_song):
@@ -115,4 +115,4 @@ def test_convert_mp3(test_song):
 # Conclusion  
 
 Now we already have tests that cover a significant amount of the programs processes, without requiring a whole lot of work(*or code*). 
-Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I'll be updating this post or posting a follow-up with more helpful info as I become more familiar with Python testing.
+Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I'll be updating this post or posting a follow-up with more helpful info as I become increasingly versed in Python testing.
