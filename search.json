@@ -1,6 +1,15 @@
 [
   
     {
+      "title"      : "Testing Python",
+      "category"   : "",
+      "tags"       : "python and testing",
+      "url"        : "/blog/testing-python.html",
+      "date"       : "2018-07-21 00:00:00 +0000",
+      "shortdate"  : "Jul 21, 2018"
+    } ,
+  
+    {
       "title"      : "Optimizing Jekyll with Gulp",
       "category"   : "",
       "tags"       : "Jekyll, Web Development, Performance, Gulp, Javascript, and GitHub Pages",
@@ -16,15 +25,6 @@
       "url"        : "/blog/project/youtube-to-mp3.html",
       "date"       : "2018-05-27 00:00:00 +0000",
       "shortdate"  : "May 27, 2018"
-    } ,
-  
-    {
-      "title"      : "Python Testing",
-      "category"   : "",
-      "tags"       : "python and testing",
-      "url"        : "/blog/testing-python.html",
-      "date"       : "2018-02-09 00:00:00 +0000",
-      "shortdate"  : "Feb 09, 2018"
     } ,
   
     {

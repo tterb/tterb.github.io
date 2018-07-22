@@ -4,23 +4,23 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <title>Python Testing - Brett Stevenson</title>
+  <title>Testing Python - Brett Stevenson</title>
   <meta name="description" content="Developer &#x1f784; Designer &#x1f784; Student"/>
   
   <!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Python Testing | Brett Stevenson</title>
-<meta property="og:title" content="Python Testing" />
+<title>Testing Python | Brett Stevenson</title>
+<meta property="og:title" content="Testing Python" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Introduction to Python testing" />
-<meta property="og:description" content="Introduction to Python testing" />
+<meta name="description" content="Introduction to python testing with pytest" />
+<meta property="og:description" content="Introduction to python testing with pytest" />
 <link rel="canonical" href="https://brettstevenson.io/blog/testing-python.html" />
 <meta property="og:url" content="https://brettstevenson.io/blog/testing-python.html" />
 <meta property="og:site_name" content="Brett Stevenson" />
 <meta property="og:image" content="https://brettstevenson.io/python-testing.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-09T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-07-21T00:00:00+00:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Introduction to Python testing","url":"https://brettstevenson.io/blog/testing-python.html","headline":"Python Testing","dateModified":"2018-02-09T00:00:00+00:00","datePublished":"2018-02-09T00:00:00+00:00","sameAs":null,"@type":"BlogPosting","author":null,"image":"https://brettstevenson.io/python-testing.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://brettstevenson.io/assets/img/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://brettstevenson.io/blog/testing-python.html"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"Introduction to python testing with pytest","url":"https://brettstevenson.io/blog/testing-python.html","headline":"Testing Python","dateModified":"2018-07-21T00:00:00+00:00","datePublished":"2018-07-21T00:00:00+00:00","sameAs":null,"@type":"BlogPosting","author":null,"image":"https://brettstevenson.io/python-testing.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://brettstevenson.io/assets/img/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://brettstevenson.io/blog/testing-python.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -36,13 +36,13 @@
 <meta name="twitter:creator" content="@vdaubry">
 
 
-  <meta property="og:title" content="Python Testing">
-  <meta name="twitter:title" content="Python Testing">
+  <meta property="og:title" content="Testing Python">
+  <meta name="twitter:title" content="Testing Python">
 
 
 
-  <meta property="og:description" content="Introduction to Python testing">
-  <meta name="twitter:description" content="Introduction to Python testing">
+  <meta property="og:description" content="Introduction to python testing with pytest">
+  <meta name="twitter:description" content="Introduction to python testing with pytest">
 
 
 
@@ -53,7 +53,7 @@
 
 
 
-  <meta property="article:published_time" content="2018-02-09T00:00:00+00:00">
+  <meta property="article:published_time" content="2018-07-21T00:00:00+00:00">
   <meta property="article:author" content="">
 
 
@@ -197,16 +197,16 @@
       
         <section class="post-image" style=" background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(/assets/img/posts/python-testing.jpg); ">
           <div class="post-meta">
-            <h1 class="post-title">Python Testing</h1>
+            <h1 class="post-title">Testing Python</h1>
           </div>
         </section>
       
       
         <div class="post-wrapper">
           <div class="post-header">
-            <h1 class="post-title">Python Testing</h1>
+            <h1 class="post-title">Testing Python</h1>
             <div class="date-container">
-              <span class="date"><strong style="margin-right:-2px">09</strong>&nbsp;Feb&nbsp;<strong>2018</strong></span>
+              <span class="date"><strong style="margin-right:-2px">21</strong>&nbsp;Jul&nbsp;<strong>2018</strong></span>
               <svg class="ico-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/assets/img/sprite-icons.svg#calendar" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
             </div>
           </div>
@@ -214,7 +214,7 @@
             <a name="top"></a>
             <h1 id="why">Why?</h1>
 
-<p>Although I’ve become accustomed to writing bash scripts to automate the testing of my command-line applications, upon being introduced to Ruby testing while reading Michael Hartl’s <a href="https://www.railstutorial.org/book">The Ruby on Rails Tutorial</a>, I was surprised by how much easier debugging is when you’re able to write tests for each component of the program, rather than just the input/output. So given my proclivity for Python, I instantly began to wonder about the process of implementing similar tests in Python.</p>
+<p>Though I’ve become accustomed to writing bash scripts to automate the testing of my command-line applications, upon being introduced to Ruby testing while reading Michael Hartl’s <a href="https://www.railstutorial.org/book">The Ruby on Rails Tutorial</a>, I was surprised by how much easier debugging is when you’re able to write tests for each component of the program, rather than just the input/output of my bash scripts. So given my proclivity for Python, I instantly became curious about the process of implementing similar tests in Python.</p>
 
 <h1 id="okay-how">Okay, How?</h1>
 
@@ -224,7 +224,7 @@
 <p>Before we start writing tests, we need to create a new file with the following convention, <code class="highlighter-rouge">test_{filename}.py</code>. This is so that <a href="https://github.com/pytest-dev/pytest">pytest</a> can accurately identify the files that contain tests to execute, when we run from the command-line, as shown below:</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pytest
 </code></pre></div></div>
-<p class="h-tip">I prefer running pytest with the `-v` or `--verbose` flag, as this prints the test that is being run and whether it passed/failed.</p>
+<p class="h-tip">I prefer running pytest with the <code class="highlighter-rouge">-v</code> or <code class="highlighter-rouge">--verbose</code> flag, as this prints the test that is being run and whether it passed/failed.</p>
 
 <h1 id="basic-testing">Basic Testing</h1>
 
@@ -277,7 +277,7 @@ So we need to:</p>
 <p>While, you can see that there’s not a lot of code that goes into creating the object, it’s best to follow the <a href="https://deviq.com/don-t-repeat-yourself/">DRY</a> principal and avoid redundancy.<br />
 Now that our fixture is defined, we are going to use it to write two tests to check the program’s ability to download a video and convert the video to an mp3.<br />
 To test the program’s download functionality, we’ll utilize the fact that the <code class="highlighter-rouge">yt2mp3.download()</code> function returns the filepath when the download is successful by asserting that the returned filepath exists.</p>
-<p class="h-note">Notice that we've provided our `test_song` fixture as a parameter of the test function.</p>
+<p class="h-note">Notice that we've provided our <code class="highlighter-rouge">test_song</code> fixture as a parameter of the test function.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_video_download</span><span class="p">(</span><span class="n">test_song</span><span class="p">):</span>
     <span class="n">video_path</span> <span class="o">=</span> <span class="n">yt2mp3</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">test_song</span><span class="o">.</span><span class="n">video_url</span><span class="p">)</span>
@@ -310,7 +310,7 @@ To test the program’s download functionality, we’ll utilize the fact that th
 <h1 id="conclusion">Conclusion</h1>
 
 <p>Now we already have tests that cover a significant amount of the programs processes, without requiring a whole lot of work(<em>or code</em>). 
-Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I’ll be updating this post or posting a follow-up with more helpful info as I become more familiar with Python testing.</p>
+Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I’ll be updating this post or posting a follow-up with more helpful info as I become increasingly versed in Python testing.</p>
 
             <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
             <div class="post-tags-container">
@@ -335,7 +335,7 @@ Hopefully, these examples have provided you a launchpad for testing your own pyt
                     <h4>Brett Stevenson</h4>
                     
                     <hr>
-                    <p class="sub published">Published <time datetime="2018-02-09">February 09, 2018</time></p>
+                    <p class="sub published">Published <time datetime="2018-07-21">July 21, 2018</time></p>
                     
                   </div>
                 </section>
@@ -379,7 +379,7 @@ Hopefully, these examples have provided you a launchpad for testing your own pyt
         
         
         
-          <a href="mailto:?subject=Python%20Testing&amp;body=/blog/testing-python.html" target="_blank" class="share-item email" data-proofer-ignore>
+          <a href="mailto:?subject=Testing%20Python&amp;body=/blog/testing-python.html" target="_blank" class="share-item email" data-proofer-ignore>
             <span class="fas fa-at" title="Share via email"></span>
           </a>
         
@@ -394,11 +394,9 @@ Hopefully, these examples have provided you a launchpad for testing your own pyt
         </div>
         <div class="PageNavigation">
           
-            <a class="prev" href="/blog/improving-the-accessibility-of-jekyll.html">
-              <span class="fas fa-chevron-left"></span> &nbsp;Improving the Accessibility of Jekyll</a>
+            <a class="prev" href="/blog/optimizing-jekyll-with-gulp-revisited.html">
+              <span class="fas fa-chevron-left"></span> &nbsp;Optimizing Jekyll with Gulp</a>
           
-          
-            <a class="next" href="/blog/project/youtube-to-mp3.html">YouTube to MP3&nbsp; <span class="fas fa-chevron-right"></span></a>
           
         </div>
       
