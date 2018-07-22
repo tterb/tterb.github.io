@@ -11,8 +11,8 @@
 <title>Optimizing Jekyll with Gulp | Brett Stevenson</title>
 <meta property="og:title" content="Optimizing Jekyll with Gulp" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An explanation of how to optimize your Jekyll website using Gulp" />
-<meta property="og:description" content="An explanation of how to optimize your Jekyll website using Gulp" />
+<meta name="description" content="An exploration of optimizing your Jekyll website using Gulp" />
+<meta property="og:description" content="An exploration of optimizing your Jekyll website using Gulp" />
 <link rel="canonical" href="https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html" />
 <meta property="og:url" content="https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html" />
 <meta property="og:site_name" content="Brett Stevenson" />
@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-06-01T00:00:00+00:00" />
 <script type="application/ld+json">
-{"name":null,"description":"An explanation of how to optimize your Jekyll website using Gulp","url":"https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html","headline":"Optimizing Jekyll with Gulp","dateModified":"2018-06-01T00:00:00+00:00","datePublished":"2018-06-01T00:00:00+00:00","sameAs":null,"@type":"BlogPosting","author":null,"image":"https://brettstevenson.io/gulp.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://brettstevenson.io/assets/img/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"An exploration of optimizing your Jekyll website using Gulp","url":"https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html","headline":"Optimizing Jekyll with Gulp","dateModified":"2018-06-01T00:00:00+00:00","datePublished":"2018-06-01T00:00:00+00:00","sameAs":null,"@type":"BlogPosting","author":null,"image":"https://brettstevenson.io/gulp.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://brettstevenson.io/assets/img/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -41,8 +41,8 @@
 
 
 
-  <meta property="og:description" content="An explanation of how to optimize your Jekyll website using Gulp">
-  <meta name="twitter:description" content="An explanation of how to optimize your Jekyll website using Gulp">
+  <meta property="og:description" content="An exploration of optimizing your Jekyll website using Gulp">
+  <meta name="twitter:description" content="An exploration of optimizing your Jekyll website using Gulp">
 
 
 
@@ -304,6 +304,7 @@ To get started, lets first discuss the basic workflow and file structure that we
 <span class="kd">const</span> <span class="nx">del</span>          <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'del'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">gulp</span>         <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">gutil</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-util'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">newer</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-newer'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">imagemin</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-imagemin'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">pngquant</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'imagemin-pngquant'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">postcss</span>      <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-postcss'</span><span class="p">);</span>
@@ -319,7 +320,7 @@ To get started, lets first discuss the basic workflow and file structure that we
 
 <p>Now, you <em>could</em> manually install all of these packages independantly, but in-case you’re looking for a shortcut, I’ve compiled the following command to allow you to conveniently install them all at once.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i <span class="nt">-D</span> autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i <span class="nt">-D</span> autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-newer gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
 </code></pre></div></div>
 
 <h2 id="styles">Styles</h2>
@@ -429,7 +430,7 @@ For this process we will need to create three tasks, two for processing the glob
 </code></pre></div></div>
 
 <h2 id="jekyll">Jekyll</h2>
-<p>Now it’s time to setup the basic Jekyll build process, as well as browser-sync for the convenient auto-reload functionality.</p>
+<p>Now it’s time to setup the basic Jekyll build process and browser-sync for the convenient auto-reload functionality.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Run jekyll build command.</span>
 <span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build:jekyll'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -487,7 +488,7 @@ For this process we will need to create three tasks, two for processing the glob
 </code></pre></div></div>
 
 <h2 id="cleaning-up">Cleaning up</h2>
-<p>Following the <a href="http://deviq.com/boy-scout-rule/">Boy Scout Rule</a>, we’re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an “<em>undo</em>” button for the gulp tasks we’ve created.</p>
+<p>In accordance with the <a href="http://deviq.com/boy-scout-rule/">Boy Scout Rule</a>, we’re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an “<em>undo</em>” button for the gulp tasks we’ve created.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Delete CSS</span>
 <span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'clean:styles'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>

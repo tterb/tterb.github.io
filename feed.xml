@@ -5,8 +5,8 @@
     <description>Developer &amp;#x1f784; Designer &amp;#x1f784; Student</description>
     <link>https://brettstevenson.io/</link>
     <atom:link href="https://brettstevenson.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Jul 2018 11:23:01 +0000</pubDate>
-    <lastBuildDate>Thu, 19 Jul 2018 11:23:01 +0000</lastBuildDate>
+    <pubDate>Sun, 22 Jul 2018 02:03:14 +0000</pubDate>
+    <lastBuildDate>Sun, 22 Jul 2018 02:03:14 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -95,6 +95,7 @@ To get started, lets first discuss the basic workflow and file structure that we
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;del&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'del'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gutil&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-util'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newer&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-newer'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imagemin&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-imagemin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pngquant&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'imagemin-pngquant'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;postcss&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-postcss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -110,7 +111,7 @@ To get started, lets first discuss the basic workflow and file structure that we
 
 &lt;p&gt;Now, you &lt;em&gt;could&lt;/em&gt; manually install all of these packages independantly, but in-case you’re looking for a shortcut, I’ve compiled the following command to allow you to conveniently install them all at once.&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-newer gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;styles&quot;&gt;Styles&lt;/h2&gt;
@@ -220,7 +221,7 @@ For this process we will need to create three tasks, two for processing the glob
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
-&lt;p&gt;Now it’s time to setup the basic Jekyll build process, as well as browser-sync for the convenient auto-reload functionality.&lt;/p&gt;
+&lt;p&gt;Now it’s time to setup the basic Jekyll build process and browser-sync for the convenient auto-reload functionality.&lt;/p&gt;
 
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Run jekyll build command.&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'build:jekyll'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -278,7 +279,7 @@ For this process we will need to create three tasks, two for processing the glob
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;cleaning-up&quot;&gt;Cleaning up&lt;/h2&gt;
-&lt;p&gt;Following the &lt;a href=&quot;http://deviq.com/boy-scout-rule/&quot;&gt;Boy Scout Rule&lt;/a&gt;, we’re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an “&lt;em&gt;undo&lt;/em&gt;” button for the gulp tasks we’ve created.&lt;/p&gt;
+&lt;p&gt;In accordance with the &lt;a href=&quot;http://deviq.com/boy-scout-rule/&quot;&gt;Boy Scout Rule&lt;/a&gt;, we’re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an “&lt;em&gt;undo&lt;/em&gt;” button for the gulp tasks we’ve created.&lt;/p&gt;
 
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Delete CSS&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'clean:styles'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -353,12 +354,15 @@ For this process we will need to create three tasks, two for processing the glob
 &lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-  &lt;img src=&quot;https://user-images.githubusercontent.com/16360374/41496879-b19ce040-70fe-11e8-90c0-0f3e67839bf1.gif&quot; alt=&quot;preview&quot; width=&quot;700&quot; /&gt;
+  &lt;img src=&quot;https://user-images.githubusercontent.com/16360374/42410056-a417e33e-8198-11e8-8c43-f60b6a6037dc.gif&quot; alt=&quot;preview&quot; width=&quot;650&quot; /&gt;
 &lt;/p&gt;
 
 &lt;h2 id=&quot;description&quot;&gt;Description&lt;/h2&gt;
-&lt;p&gt;A program that simplifies the process of downloading and converting Youtube videos to MP3 files from the command-line. All you need is the video URL or the name of the artist/track you’re looking for.&lt;br /&gt;
-Once downloaded, the program will also embed the output file with the appropriate metadata and cover art via the iTunes API.&lt;/p&gt;
+&lt;p&gt;This program simplifies the process of searching, downloading and converting Youtube videos to MP3 files from the command-line. All you need is the video URL or the name of the artist/track you’re looking for.&lt;br /&gt;
+The program will attempt to retrieve data for a song matching the provided input by querying the iTunes API and use the data to find a corresponding YouTube video, if a URL is not provided. The video will then be downloaded, converted, and the gathered data will be used to populate the metadata of the MP3.&lt;br /&gt;
+Once finished, the resulting MP3 file will be saved to your &lt;em&gt;Downloads&lt;/em&gt; directory, with the following file-structure &lt;code class=&quot;highlighter-rouge&quot;&gt;Music/{artist}/{track}.mp3&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; If a URL is provided and no match is found for the song data, the user will be prompted for the track/artist and the video thumbnail will be used as the album artwork.&lt;/p&gt;
 
 &lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
 &lt;p&gt;You can install the program with the following command:&lt;/p&gt;
@@ -367,20 +371,21 @@ Once downloaded, the program will also embed the output file with the appropriat
 
 &lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
 &lt;p&gt;The program can executed via Python 3 as follows:&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python yt2mp3.py &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yt2mp3 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;options&quot;&gt;Options:&lt;/h4&gt;
-&lt;p&gt;| Arguments        |                                                  |
-|:—————-:|————————————————–|
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-t, --track&lt;/code&gt;    | Specify the track name query                     |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-a, --artist&lt;/code&gt;   | Specify the artist name query                    |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-u, --url&lt;/code&gt;      | Specify a Youtube URL or ID                      |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-q, --quiet&lt;/code&gt;    | Suppress program command-line output             |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-p, --progress&lt;/code&gt; | Display a command-line progress bar              |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-h, --help&lt;/code&gt;     | Displays information on usage and functionality  |&lt;/p&gt;
-
-&lt;p&gt;Once complete, the resulting MP3 file will be saved to your &lt;em&gt;Downloads&lt;/em&gt; directory, with the following file-structure &lt;code class=&quot;highlighter-rouge&quot;&gt;Music/{artist}/{track}.mp3&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;| Arguments         |                                                       |
+|——————-|——————————————————-|
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-t, --track&lt;/code&gt;     | Specify the track name query                          |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-a, --artist&lt;/code&gt;    | Specify the artist name query                         |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-u, --url&lt;/code&gt;       | Specify a Youtube URL or ID                           |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-p, --playlist&lt;/code&gt;  | Specify a Youtube playlist URL or ID                  |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-o, --overwrite&lt;/code&gt; | Overwrite the file if one exists in output directory  |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-q, --quiet&lt;/code&gt;     | Suppress program command-line output                  |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-v, --verbose&lt;/code&gt;   | Display a command-line progress bar                   |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;--version&lt;/code&gt;       | Show the version number and exit                      |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;-h, --help&lt;/code&gt;      | Display information on usage and functionality       |&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; Displaying the progress bar currently has a significant impact on download performance, due to &lt;a href=&quot;https://github.com/nficano/pytube/issues/180&quot;&gt;#180&lt;/a&gt;.&lt;/p&gt;
 
@@ -421,6 +426,121 @@ pip install &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
         <category>blog</category>
         
         <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Python Testing</title>
+        <description>&lt;h1 id=&quot;why&quot;&gt;Why?&lt;/h1&gt;
+
+&lt;p&gt;Although I’ve become accustomed to writing bash scripts to automate the testing of my command-line applications, upon being introduced to Ruby testing while reading Michael Hartl’s &lt;a href=&quot;https://www.railstutorial.org/book&quot;&gt;The Ruby on Rails Tutorial&lt;/a&gt;, I was surprised by how much easier debugging is when you’re able to write tests for each component of the program, rather than just the input/output. So given my proclivity for Python, I instantly began to wonder about the process of implementing similar tests in Python.&lt;/p&gt;
+
+&lt;h1 id=&quot;okay-how&quot;&gt;Okay, How?&lt;/h1&gt;
+
+&lt;p&gt;After a bit of research into the available testing frameworks, I decided on &lt;a href=&quot;https://github.com/pytest-dev/pytest&quot;&gt;pytest&lt;/a&gt; due to the balance of capability and ease-of-use. Additionally, we’ll be writing a few tests for my &lt;a href=&quot;https://github.com/tterb/yt2mp3&quot;&gt;yt2mp3&lt;/a&gt; program, which I had previously been testing using one of the aforementioned bash scripts.&lt;/p&gt;
+
+&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+&lt;p&gt;Before we start writing tests, we need to create a new file with the following convention, &lt;code class=&quot;highlighter-rouge&quot;&gt;test_{filename}.py&lt;/code&gt;. This is so that &lt;a href=&quot;https://github.com/pytest-dev/pytest&quot;&gt;pytest&lt;/a&gt; can accurately identify the files that contain tests to execute, when we run from the command-line, as shown below:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pytest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p class=&quot;h-tip&quot;&gt;I prefer running pytest with the `-v` or `--verbose` flag, as this prints the test that is being run and whether it passed/failed.&lt;/p&gt;
+
+&lt;h1 id=&quot;basic-testing&quot;&gt;Basic Testing&lt;/h1&gt;
+
+&lt;p&gt;To get started, the first test we’re going to write is going to ensure that the program is able to accurately retrieve the title of a YouTube video when given a URL.&lt;br /&gt;
+For this we’re going to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Get the URL for a YouTube video with a known title&lt;/li&gt;
+  &lt;li&gt;provide the URL to the yt2mp3.getVideoTitle() function&lt;/li&gt;
+  &lt;li&gt;Check that the function returns the expected video title&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pytest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# We're not using 'os' in this test but we will later&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_video_title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'https://www.youtube.com/watch?v=C0DPdy98e4c'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getVideoTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'TEST VIDEO'&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You’ll notice that the only difference in this function is that pytest uses an &lt;code class=&quot;highlighter-rouge&quot;&gt;assert&lt;/code&gt;-statement where you might usually expect a &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt;-statement.&lt;/p&gt;
+
+&lt;p&gt;Similarly, we can also write a test to check that the &lt;code class=&quot;highlighter-rouge&quot;&gt;yt2mp3.getVideoList()&lt;/code&gt; function successfully retrieves the URLs for each video in the provided playlist. For this test, I’ve created a simple test playlist that features three videos to keep the number of URLs manageable and prevent modifications from changing the expected result.&lt;br /&gt;
+So we need to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Provide the URL for our test playlist&lt;/li&gt;
+  &lt;li&gt;Provide a list of the URLs for each video in the playlist&lt;/li&gt;
+  &lt;li&gt;Check that the function returns a list that matches the defined list&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_get_playlist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'https://www.youtube.com/playlist?list=PLGqB3S8f_uiLkCQziivGYI3zNtLJvfUWm'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;video_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://www.youtube.com/watch?v=_FrOQC-zEog'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://www.youtube.com/watch?v=yvPr9YV7-Xw'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://www.youtube.com/watch?v=-EzURpTF5c8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;playlist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getVideoList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;playlist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;video_list&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;using-fixtures&quot;&gt;Using Fixtures&lt;/h1&gt;
+
+&lt;p&gt;To introduce the idea of fixtures, we’ll write a test that requires that we have a &lt;code class=&quot;highlighter-rouge&quot;&gt;Song&lt;/code&gt; object, which stores the data necessary for downloading and setting the ID3 tags of the output mp3 file. Therefore, it’s understandable that a similar &lt;code class=&quot;highlighter-rouge&quot;&gt;Song&lt;/code&gt; object may be necessary to test multiple functionalities of the program. That’s where fixtures come in.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@pytest.fixture&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_song&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getSongData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Bold as Love'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Jimi Hendrix'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'video_url'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getVideoURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'track_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'artist_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Song&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;While, you can see that there’s not a lot of code that goes into creating the object, it’s best to follow the &lt;a href=&quot;https://deviq.com/don-t-repeat-yourself/&quot;&gt;DRY&lt;/a&gt; principal and avoid redundancy.&lt;br /&gt;
+Now that our fixture is defined, we are going to use it to write two tests to check the program’s ability to download a video and convert the video to an mp3.&lt;br /&gt;
+To test the program’s download functionality, we’ll utilize the fact that the &lt;code class=&quot;highlighter-rouge&quot;&gt;yt2mp3.download()&lt;/code&gt; function returns the filepath when the download is successful by asserting that the returned filepath exists.&lt;/p&gt;
+&lt;p class=&quot;h-note&quot;&gt;Notice that we've provided our `test_song` fixture as a parameter of the test function.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_video_download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test_song&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;video_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test_song&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;video_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;video_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once the program passes the above test, we now know that we have a video in the &lt;code class=&quot;highlighter-rouge&quot;&gt;~/Downloads/Music/temp/&lt;/code&gt; directory that we can use to test the program’s conversion to mp3. Additionally, since the &lt;code class=&quot;highlighter-rouge&quot;&gt;yt2mp3.convertToMP3()&lt;/code&gt; function also returns the output filepath we are able to use a similar method for validation as we saw in the previous test, by checking the existance of the output path.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_convert_mp3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test_song&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;temp_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expanduser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'~/Downloads/Music/temp/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;video_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;song_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convertToMP3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;video_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test_song&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;song_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Though, the &lt;code class=&quot;highlighter-rouge&quot;&gt;yt2mp3.convertToMP3()&lt;/code&gt; is also responsible for deleting the converted video file after the conversion. Luckily, we’re also able to validate this process within the same test by adding another condition and a bit of additional logging.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_convert_mp3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test_song&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;errors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;temp_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expanduser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'~/Downloads/Music/temp/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;video_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;song_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convertToMP3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;video_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test_song&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;video_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'The video file wasn&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;t deleted after conversion'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;song_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'The output MP3 file doesn&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;t exist'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'errors occured:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Now we already have tests that cover a significant amount of the programs processes, without requiring a whole lot of work(&lt;em&gt;or code&lt;/em&gt;). 
+Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I’ll be updating this post or posting a follow-up with more helpful info as I become more familiar with Python testing.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 09 Feb 2018 00:00:00 +0000</pubDate>
+        <link>https://brettstevenson.io/blog/testing-python.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/testing-python.html</guid>
+        
+        <category>python</category>
+        
+        <category>testing</category>
+        
+        
+        <category>blog</category>
         
       </item>
     
@@ -803,92 +923,6 @@ No matter the issue, &lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; provi
         
         
         <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Atomic Delight</title>
-        <description>&lt;!-- Badges --&gt;
-&lt;p class=&quot;badges&quot;&gt;
-	&lt;a href=&quot;https://atom.io/themes/atomic-delight-syntax&quot;&gt;
-		&lt;img src=&quot;https://img.shields.io/apm/v/atomic-delight-syntax.svg?&quot; height=&quot;20&quot; alt=&quot;version&quot; title=&quot;Version&quot; /&gt;&amp;nbsp;&amp;nbsp;
-	&lt;/a&gt;
-	&lt;a href=&quot;https://opensource.org/licenses/MIT&quot;&gt;
-		&lt;img src=&quot;https://img.shields.io/apm/l/atomic-delight-syntax.svg?&quot; height=&quot;20&quot; alt=&quot;license&quot; title=&quot;License&quot; /&gt;&amp;nbsp;&amp;nbsp;
-	&lt;/a&gt;
-    &lt;img src=&quot;https://img.shields.io/apm/dm/atomic-delight-syntax.svg?maxAge=2592000?&quot; height=&quot;20&quot; alt=&quot;downloads&quot; title=&quot;Downloads&quot; /&gt;&amp;nbsp;&amp;nbsp;
-	&lt;a href=&quot;https://atom.io/themes/atomic-delight-syntax&quot;&gt;
-		&lt;img src=&quot;https://badges.frapsoft.com/os/v1/open-source.svg?v=103&quot; height=&quot;20&quot; alt=&quot;open source&quot; title=&quot;Open Source&quot; /&gt;&amp;nbsp;&amp;nbsp;
-	&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;
-	&amp;lt;p align=&quot;center&quot;&amp;gt;
-    &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20731580/d7ad7bbc-b63f-11e6-8410-a26fd36b4b8e.png&quot; width=&quot;950&quot; alt=&quot;screenshot&quot; title=&quot;Screenshot&quot; /&gt;
-  &amp;lt;/p&amp;gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Atomic Delight&lt;/strong&gt; syntax and UI-themes are delightfully light variants of the popular [&lt;em&gt;Atomic Monokai&lt;/em&gt;] syntax-theme and its corresponding [&lt;em&gt;Atomic Design&lt;/em&gt;] UI-theme.
-  Created with the knowledge that many programmers prefer to have both a light and a dark syntax-theme to cycle between, this syntax and UI–theme allows programmers to do so with a sense of familiarity.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;install&quot;&gt;Install:&lt;/h2&gt;
-&lt;p&gt;These packages are distributed with [&lt;em&gt;apm&lt;/em&gt;]. After &lt;a href=&quot;https://github.com/atom/apm#installing&quot;&gt;installing apm&lt;/a&gt;, you can install these themes with the commands.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;apm install atomic-delight-syntax
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;apm install atomic-delight-ui
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After installation, these theme can be easily activated by going to the &lt;strong&gt;Themes&lt;/strong&gt; section in the &lt;em&gt;Settings&lt;/em&gt; view and selecting them from the &lt;em&gt;UI&lt;/em&gt; and &lt;em&gt;Syntax&lt;/em&gt; drop-down menus.
-&lt;br /&gt;
-&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;___&lt;/p&gt;
-
-&lt;h2 id=&quot;screenshots&quot;&gt;Screenshots:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Coming soon…&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;___&lt;/p&gt;
-
-&lt;h2 id=&quot;other-recommended-packages&quot;&gt;Other Recommended Packages:&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-  &lt;em&gt;For more useful packages, check out my list of&lt;/em&gt; [&lt;strong&gt;&lt;em&gt;Essential Atom Packages&lt;/em&gt;&lt;/strong&gt;], &lt;em&gt;which I’ll continue to keep up to date as I explore and familiarize myself with the editor and it’s community.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;___&lt;/p&gt;
-
-&lt;p align=&quot;right&quot;&gt;
-    &lt;span class=&quot;badge-paypal&quot;&gt;&lt;a href=&quot;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=E6RKPR34SH6CU&quot; alt=&quot;donate&quot; title=&quot;Donate&quot;&gt;
-    &lt;img src=&quot;https://img.shields.io/badge/paypal-donate-yellow.svg&quot; height=&quot;20&quot; alt=&quot;donate&quot; title=&quot;Donate&quot; /&gt;&lt;/a&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;
-&lt;/p&gt;
-
-&lt;!-------------------------------- Links --------------------------------------&gt;
-
-</description>
-        <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
-        <link>https://brettstevenson.io/blog/projects/atomic-delight.html</link>
-        <guid isPermaLink="true">https://brettstevenson.io/blog/projects/atomic-delight.html</guid>
-        
-        <category>UI</category>
-        
-        <category>Atom</category>
-        
-        <category>Syntax</category>
-        
-        <category>Editor</category>
-        
-        <category>Design</category>
-        
-        <category>Customization</category>
-        
-        <category>Projects</category>
-        
-        
-        <category>blog</category>
-        
-        <category>projects</category>
         
       </item>
     

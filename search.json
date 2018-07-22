@@ -19,6 +19,15 @@
     } ,
   
     {
+      "title"      : "Python Testing",
+      "category"   : "",
+      "tags"       : "python and testing",
+      "url"        : "/blog/testing-python.html",
+      "date"       : "2018-02-09 00:00:00 +0000",
+      "shortdate"  : "Feb 09, 2018"
+    } ,
+  
+    {
       "title"      : "Improving the Accessibility of Jekyll",
       "category"   : "",
       "tags"       : "Markdown, Jekyll, Editor, GitHub Pages, Tools, Electron, and Projects",
@@ -61,15 +70,6 @@
       "url"        : "/blog/site-reconstruction.html",
       "date"       : "2017-03-31 00:00:00 +0000",
       "shortdate"  : "Mar 31, 2017"
-    } ,
-  
-    {
-      "title"      : "Atomic Delight",
-      "category"   : "",
-      "tags"       : "UI, Atom, Syntax, Editor, Design, Customization, and Projects",
-      "url"        : "/blog/projects/atomic-delight.html",
-      "date"       : "2016-11-16 00:00:00 +0000",
-      "shortdate"  : "Nov 16, 2016"
     } ,
   
     {

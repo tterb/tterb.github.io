@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://brettstevenson.io/</loc>
-    <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+    <lastmod>2018-07-22T02:03:14+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -33,6 +33,21 @@
       
       
         <priority>0.8</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/testing-python.html</loc>
+      
+        <lastmod>2018-02-09T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.6</priority>
       
     </url>
     
@@ -102,21 +117,6 @@
       <loc>https://brettstevenson.io/blog/site-reconstruction.html</loc>
       
         <lastmod>2017-03-31T00:00:00+00:00</lastmod>
-      
-      
-        <changefreq>weekly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://brettstevenson.io/blog/projects/atomic-delight.html</loc>
-      
-        <lastmod>2016-11-16T00:00:00+00:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -267,7 +267,7 @@
       <url>
         <loc>https://brettstevenson.io/404.html</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -282,7 +282,7 @@
       <url>
         <loc>https://brettstevenson.io/blog/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -297,7 +297,7 @@
       <url>
         <loc>https://brettstevenson.io/contact-failed/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -312,7 +312,7 @@
       <url>
         <loc>https://brettstevenson.io/contact-success/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -327,7 +327,7 @@
       <url>
         <loc>https://brettstevenson.io/contact/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -342,7 +342,7 @@
       <url>
         <loc>https://brettstevenson.io/credits/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -357,7 +357,7 @@
       <url>
         <loc>https://brettstevenson.io/design/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -372,7 +372,7 @@
       <url>
         <loc>https://brettstevenson.io/dev/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -387,7 +387,7 @@
       <url>
         <loc>https://brettstevenson.io/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -402,7 +402,7 @@
       <url>
         <loc>https://brettstevenson.io/subscribe/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -417,7 +417,7 @@
       <url>
         <loc>https://brettstevenson.io/resume/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -432,7 +432,7 @@
       <url>
         <loc>https://brettstevenson.io/tags/</loc>
           
-            <lastmod>2018-07-19T11:23:01+00:00</lastmod>
+            <lastmod>2018-07-22T02:03:14+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
