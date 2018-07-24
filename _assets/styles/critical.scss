@@ -1,7 +1,12 @@
 @import 'libs/mixins';
 @import 'libs/skel';
-@import 'libs/keyframes';
 @import 'libs/breakpoints';
+
+@keyframes scroll-bounce {
+  0% { transform: rotate(-45deg) translate(0, 0, 0); */}
+  30% { transform: rotate(-45deg) translate(-10px, 10px, 0); }
+  50% { transform: rotate(-45deg) translate(0, 0, 0); }
+}
 
 #banner {
   display: flex;
@@ -103,14 +108,14 @@
     z-index: 9999;
     span {
       position: absolute;
-      left: 50%;
+      // left: 50%;
       width: 24px;
       height: 24px;
       margin-left: -12px;
       border-left: 3px solid rgba(#fff, 0.7);
       border-bottom: 3px solid rgba(#fff, 0.7);
-      transform: rotate(-45deg);
-      animation: bounce 2s infinite;
+      transform: rotate(-45deg) !important;
+      animation: scroll-bounce 2s infinite;
     }
     &:hover span {
       width: 25px;
