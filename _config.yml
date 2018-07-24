@@ -47,10 +47,17 @@ mailaction: https://formspree.io/bstevensondev@gmail.com
 permalink: /:categories/:title.html
 
 # permalink: /:title.html
+# markdown: kramdown
+# highlighter: rouge
+# sass:
+#   style: compressed
+
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
 sass:
- style: compressed
+  style: compressed
 
 include: ['_pages','.htaccess']
 exclude: ['vendor','_assets','node_modules','jspm_packages','Gemfile','Gemfile.lock','Gulpfile.js','.sass-lint.yml','package.json','package-lock.json','TODO.md','**/fonts/*.html', '**/**/*_.*']
@@ -98,7 +105,3 @@ plugins:
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-github-metadata
-
-# to initialize arrays in assignments (assign myarr = site.empty_array)
-# (easier to grok than assign myarr = '' | split',')
-empty_array: []
