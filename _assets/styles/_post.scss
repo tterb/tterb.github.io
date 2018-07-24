@@ -88,7 +88,6 @@
     line-height: 1.2;
     text-align: left;
     text-shadow: none;
-    // width: 84%;
     width: 80%;
     vertical-align: middle;
     margin: 0 auto 0 0;
@@ -101,9 +100,7 @@
     letter-spacing: 0;
     text-align: right;
     line-height: 1.6;
-    // top: -25px;
-    // right: 12px;
-    top: -15px;
+    top: -10px;
     right: 8px;
     .date, strong, svg {
       color: rgba(#000, 0.75);
@@ -123,10 +120,10 @@
 .written-content {
   color: rgba(#000, 0.75);
   font-size: 17.5px;
-  line-height: 1.6;
+  line-height: 1.4;
   width: 80%;
   margin: auto;
-  padding: 2.5em 2em 2em;
+  padding: 2em;
   h1, h2, h3, h4, h5, h6 {
     color: rgba(#000,0.95);
     letter-spacing: -0.5px;
@@ -146,7 +143,7 @@
   }
   
   p {
-    margin-bottom: 1.25em;
+    margin-bottom: 1.15em;
   }
   
   a {
@@ -162,6 +159,10 @@
     }
   }
   
+  ul {
+    line-height: 1.6;
+  }
+  
   img {
     display: block;
     margin: 1em auto;
@@ -173,6 +174,11 @@
     }
   }
   
+  em {
+    font-style: italic;
+    letter-spacing: 0.025em;
+  }
+  
   hr {
     width: 98%;
     margin: 1.5em auto 1.75em;
@@ -182,10 +188,10 @@
     font-family: _font(fixed-family);
     font-size: _font(fixed-size);
     -webkit-overflow-scrolling: touch;
-    margin: 0 0 2em;
+    margin: 0;
     code {
       display: block;
-      // background-color: hsl(270, 4%, 21%);
+      background-color: hsl(270, 4%, 21%);
       color: hsl(270, 9%, 89%);
       font-family: _font(fixed-family) !important;
       font-size: 0.95em;
@@ -196,20 +202,19 @@
       font-smoothing: antialiased !important;
       text-rendering: optimizeLegibility;
       text-transform: none;
-      // margin: auto;
-      // padding: 0.9em 1.25em 1em;
-      width: 86%;
+      width: 95%;
       border-radius: 10px;
-      margin: 0 6% 0 4%;
-      padding: 0.75em 1.5em;
+      margin: auto;
+      margin: 0 auto 0 1.5%;
+      padding: 1em 1.25em 1em 1.15em;
       white-space: pre-wrap;
       overflow: hidden;
     }
     .clipboard {
       display: inline-block;
       position: relative;
-      right: 6.75vw;
-      bottom: 3.15em;
+      right: 3.25em;
+      bottom: 3.25em;
       width: 12px;
       height: auto;
       float: right;
@@ -223,14 +228,12 @@
   }
   
   .highlighter-rouge.code-block {
-    margin: 1.5em 0;
+    margin: 1.25em 0 !important;
     code {
       letter-spacing: 0.02em;
-      margin: 0 6% 0 4%;
-      padding: 1.25em 1.85em 1.5em;
     }
     .clipboard {
-      right: 12%;
+      right: 5.75%;
       bottom: 3.25em;
     }
   }
@@ -353,8 +356,8 @@
   br {
     display: block !important;
     content: "" !important;
-    line-height: 22px !important;
-    margin-top: 15px !important;
+    line-height: 20px !important;
+    margin-top: 10px !important;
   }
 }
 
@@ -409,6 +412,9 @@
     line-height: 1.4 !important;
     margin-bottom: 0.15em !important;
   }
+  code {
+    background: rgba(#000, 0.075) !important;
+  }
   @media(max-width: 767px) {
     margin: 25px 0;
   }
@@ -454,9 +460,6 @@
   line-height: 30px;
   text-align: center;
   text-decoration: none;
-  // width: 42px !important;
-  // height: 42px !important;
-  // right: 75px;
   right: 4vw;
   bottom: 8vh;
   border: 0;
@@ -472,9 +475,6 @@
   }
   &.show {
     opacity: 0.25 !important;
-    // img {
-    //   opacity: 0.25;
-    // }
     &:hover, &:active {
       opacity: 0.65 !important;
     }
@@ -539,13 +539,12 @@
 .share-button {
   position: relative;
   background: #eee;
-  // line-height: 36px;
   font-size: 1.8em;
   text-align: center;
   width: 40px;
   height: 40px;
   top: 50%;
-  left: 2.75em;
+  left: 2.5em;
   border-radius: 100%;
   user-select: none;
   box-shadow: 0 1px 3px rgba(#000, 0.5);
@@ -568,7 +567,6 @@
     top: 0;
     left: 0;
     content: '';
-    // box-shadow: 0 0 0 50px #36bfa6;
     box-sizing: content-box;
     transform: translate(0,0);
     border-radius: 50px;
@@ -600,7 +598,7 @@
     position: relative;
     color: rgba(#000, 0.7);
     font-size: 0.75em;
-    top: -16px;
+    top: -20px;
     left: -1px;
     transition: all 300ms;
   }
@@ -822,7 +820,7 @@ body.is-mobile {
   span {
     font-size: 1.1em;
     font-weight: 500;
-    padding-right: 0.5em;
+    padding: 0.125em 0.5em 0 0;
   }
 }
 
@@ -930,7 +928,6 @@ body.is-mobile {
     margin: 1em 5%;
     &:hover, &:active {
       border: none;
-      // border-bottom: 1px dotted rgba(#000, 0.8);
     }
   }
   .next {

@@ -1,0 +1,135 @@
+/*
+* Syntax highlighting styles
+*/
+
+$syntax-hue:          270;
+$syntax-saturation:    4%;
+$syntax-brightness:   19%;
+
+$base:       hsl($syntax-hue, $syntax-saturation, $syntax-brightness);
+$text:       hsl($syntax-hue, 9%, 89%);
+$subtle:     hsl($syntax-hue, 8%, 45%);
+$highlight:  hsl($syntax-hue, 9%, 94%);
+$red:        hsl(  5, 48%, 51%);
+$orange:     hsl( 21, 86%, 70%);
+$yellow:     hsl( 40, 98%, 78%);
+$green:      hsl( 98, 64%, 68%);
+$blue:       hsl(195, 83%, 73%);
+$purple:     hsl(246, 80%, 80%);
+$magenta:    hsl(350, 100%, 70%);
+$err:        $red;
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: $text;
+	background: none;
+	text-shadow: 0 1px rgba(#000, 0.3);
+	font-family: _font(fixed-family);
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 0 1em;
+	margin: 0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	background: $base;
+	padding: .1em;
+	white-space: normal;
+}
+
+.token {
+	&.comment,
+	&.prolog,
+	&.doctype,
+	&.cdata {
+		color: $subtle;
+	}
+
+	&.punctuation {
+		color: $text;
+	}
+	
+	&.property,
+	&.tag,
+	&.constant,
+	&.symbol,
+	&.deleted {
+		color: $magenta;
+	}
+
+	&.boolean,
+	&.number {
+		color: $purple;
+	}
+
+	&.selector,
+	&.attr-name,
+	&.string,
+	&.char,
+	&.builtin,
+	&.inserted {
+		color: $yellow;
+	}
+
+	&.operator {
+		color: $magenta;
+	}
+
+	&.entity,
+	&.url,
+	&.variable {
+		color: $text;
+	}
+
+	&.atrule,
+	&.attr-value,
+	&.function {
+		color: $green;
+	}
+
+	&.keyword {
+		color: $blue;
+	}
+
+	&.regex,
+	&.important {
+		color: $orange;
+	}
+
+	&.important,
+	&.bold {
+		font-weight: bold;
+	}
+	&.italic {
+		font-style: italic;
+	}
+
+	&.entity {
+		cursor: help;
+	}
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: $text;
+}
+
+.namespace {
+	opacity: 0.7;
+}
