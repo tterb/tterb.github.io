@@ -60,10 +60,9 @@
             <a name="top"></a>
             {{ content }}
             <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
+            <!-- Tags -->
             <div class="post-tags-container">
-              <span>Tags:&nbsp;</span> 
-              {% assign post_tags = page.tags %}
-              {% assign site_tags = site.tags %}
+              <span>Tags:</span>
               <ul class="post-tags inline">
               {% for tag in page.tags %}
                 {% assign tag_id = tag | prepend: "#" | append: "-tag" | slugify %}
@@ -71,6 +70,7 @@
               {% endfor %}
               </ul>
             </div>
+            <!-- Closer -->
             <div class="post-closer cf">
               <div class="isLeft">
                 <section class="author">
