@@ -2,7 +2,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js" async></script>
 <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}" type="text/javascript" async></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.poptrox/2.5.1/jquery.poptrox.min.js"></script> -->
 
 <script>window.FontAwesomeConfig = { searchPseudoElements: true }</script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
@@ -14,14 +13,8 @@
   });
 </script>
 
-<!-- <script>
-  import SweetScroll from 'sweet-scroll';
-  document.addEventListener("DOMContentLoaded", () => {
-    const sweetScroll = new SweetScroll({ trigger: '.scroll-btn' });
-  }, false);
-</script> -->
-
 {% if page.layout == "post" %}
+  <script src="{{ '/assets/js/prism.js' | prepend: site.baseurl }}" type="text/javascript"></script>
   <script src="{{ '/assets/js/scroll-top.js' | prepend: site.baseurl }}" type="text/javascript"></script>
   <script src="{{ '/assets/js/tooltipster.js' | prepend: site.baseurl }}"></script>
   <script>
