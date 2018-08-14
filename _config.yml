@@ -52,6 +52,23 @@ permalink: /:categories/:title.html
 # sass:
 #   style: compressed
 
+plugins:
+  - jemoji
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-paginate-v2
+  - jekyll-redirect-from
+  - jekyll-github-metadata
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: 'blog3/page:num'
+  title: ':title'
+  sort_field: 'date'
+  sort_reverse: true
+  indexpage: 'index'
+  
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -97,11 +114,3 @@ share:
   # - pocket
   # - wordpress
   - email
-
-plugins:
-  - jemoji
-  - jekyll-gist
-  - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-redirect-from
-  - jekyll-github-metadata
