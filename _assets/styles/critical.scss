@@ -2,24 +2,6 @@
 @import 'libs/skel';
 @import 'libs/breakpoints';
 
-@keyframes scroll-bounce {
-  from, 25%, 53%, 80%, to { 
-    transform: rotate(-45deg) translate3d(0, 0, 0);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  40%, 43% { 
-    transform: rotate(-45deg) translate3d(20px, -20px, 0); 
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  }
-  60% { 
-    transform: rotate(-45deg) translate3d(10px, -10px, 0);
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  }
-  90% {
-    transform: rotate(-45deg) translate3d(3px, -3px, 0);
-  }
-}
-
 
 #banner {
   display: flex;
@@ -49,7 +31,7 @@
     text-shadow: 0 2px 15px rgba(#000, 0.85);
     transform: scale(1);
     transition: transform 500ms ease, opacity 500ms ease;
-    padding: 0 9.5vw 2.15vw 5.5vw;
+    padding: 0 9.5vw 2vw 5.5vw;
     margin: 0;
     opacity: 0.95;
     .accent {
@@ -63,7 +45,6 @@
       padding-top: 2vh;
     }
   }
-
   h3 {
     color: rgba(#fff, 0.75);
     font-family: 'Avenir Next', 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -143,34 +124,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    .scroll-btn {
-      position: absolute;
-      display: inline-block;
-      color: transparent !important;
-      text-align: center;
-      top: 89vh;
-      left: 49%;
-      transition: all 250ms ease-in-out 25ms;
-      z-index: 9999;
-      span {
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        border-left: 3px solid rgba(#fff, 0.7);
-        border-bottom: 3px solid rgba(#fff, 0.7);
-        transform: rotate(-45deg) !important;
-        animation-name: scroll-bounce;
-        animation-duration: 2s;
-      }
-      &:hover span {
-        width: 25px;
-        height: 25px;
-        border-left: 4px solid rgba(#fff, 0.85);
-        border-bottom: 4px solid rgba(#fff, 0.85);
-        transition: all 400ms ease 50ms;
-        animation: none;
-      }
-    }
   }
 }
 
@@ -211,7 +164,7 @@ body.is-loading {
   left: 0;
   line-height: 3;
   transition: all 500ms ease;
-  z-index: 999999; // so 'X' appears above menu
+  z-index: 999999 !important; // so 'X' appears above menu
   h1 {
     line-height: 1.9;
     text-transform: none;
@@ -434,6 +387,7 @@ body.is-loading {
     position: fixed !important;
     transform: translate(9px, -30px);
     transition: transform 1s linear;
+    z-index: 9999999 !important;
     span {
       background-color: transparent;
       &::before {
