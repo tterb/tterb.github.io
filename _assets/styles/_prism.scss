@@ -130,6 +130,10 @@ pre[class*="language-"] {
 	color: $text;
 }
 
+.language-bash .token.function {
+	color: $blue;
+}
+
 .namespace {
 	opacity: 0.7;
 }
