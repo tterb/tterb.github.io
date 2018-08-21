@@ -8,7 +8,7 @@ site owner, should the topic be duplicated elsewhere
 {% if page.author %}
   {% assign auth = site.data.authors[page.author] %}
   {% if auth.disqus_shortname %}
-    <div id="disqus_thread" class="disqus"></div>
+    <div id="disqus_thread" class="disqus-container"></div>
     <script>
     /**
      * See https://disqus.com/admin/universalcode/#configuration-variables
