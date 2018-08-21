@@ -517,7 +517,7 @@
   color: rgba(#fff, 0.5);
   font-size: 32px;
   min-width: 40px;
-  top: 0.1em;
+  top: -0.075em;
   left: 0.55em;
   z-index: 999999;
   span {
@@ -576,18 +576,17 @@
   text-align: center;
   width: 40px;
   height: 40px;
-  top: 50%;
   left: 2.5em;
   border-radius: 100%;
   user-select: none;
   box-shadow: 0 1px 3px rgba(#000, 0.5);
   vertical-align: middle;
   transition: all 300ms ease-in-out;
-  margin-top: 0;
+  margin-top: 0.5em;
   margin-left: -75px;
   overflow: hidden;
   &.open {
-    width: 215px;
+    width: 195px;
     height: 45px;
     left: calc(50% - 60px);
     border-radius: 25px;
@@ -631,7 +630,7 @@
     position: relative;
     color: rgba(#000, 0.7);
     font-size: 0.75em;
-    top: -20px;
+    top: -21px;
     left: -1px;
     transition: all 300ms;
   }
@@ -747,7 +746,7 @@
 }
 .open .share-item {
   transform: translateX(0) rotate(0);  
-  margin-left: 4px;
+  margin-left: 6px;
 }
 .share-items {
   position: absolute;
@@ -764,7 +763,7 @@
   left: 0;
   height: 100%;  
   width: 215px;
-  left: 55.5%;
+  left: 62%;
   margin-left: -117px;
 }
 .shared .share-item {
@@ -790,12 +789,12 @@
 }
 
 // Disqus styling
-#disqus_thread {
+.disqus-container {
   width: 80%;
-  margin: auto;
+  // max-width: 720px;
+  margin: 0 auto 2em;
   padding-bottom: 1em;
 }
-
 
 body.is-mobile {
   .post-image {
@@ -950,9 +949,9 @@ body.is-mobile {
 
 .PageNavigation {
   display: block;
-  font-size: 14px;
-  width: 85%;
-  margin: 2em auto 3.5em;
+  font-size: 15px;
+  width: 80%;
+  margin: 2em auto 3em;
   overflow: hidden;
   a {
     display: block;
@@ -961,7 +960,11 @@ body.is-mobile {
     float: left;
     margin: 1em 5%;
     &:hover, &:active {
+      color: _palette(link-hover);
       border: none;
+      .fa-chevron-left, .fa-chevron-right {
+        color: rgba(#000, 0.8);
+      }
     }
   }
   .next {
