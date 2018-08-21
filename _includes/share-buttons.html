@@ -3,48 +3,43 @@
   <div class="share-items-wrapper">
       <div class="share-items">
         {% if site.share contains 'facebook' %}
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbrettstevenson.io&quote=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;" class="share-item facebook">      
+          <a class="share-item facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl | prepend: site.url }}" title="Share on Facebook" target="_blank">
             <span class="fab fa-facebook-f" title="Share on Facebook"></span>
           </a>
         {% endif %}
         {% if site.share contains 'twitter' %}
-          <a href="{{ page.url }}" data-show-count="false" class="share-item twitter">
+          <a class="share-item twitter" href="https://twitter.com/intent/tweet?text=%22{{ page.title | url_escape }}%22{{ ' by @bstevensondev' | url_escape }}&url={{ page.url | prepend: site.baseurl | prepend: site.url | url_escape }}" data-show-count="false" target="_blank">
             <span class="fab fa-twitter" title="Tweet"></span>
           </a>
         {% endif %}
         {% if site.share contains 'google-plus' %}
-          <a href="https://plus.google.com/share?url=http%3A%2F%2Fbrettstevenson.io" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;" class="share-item google-plus">
-            <span class="fab fa-google-plus-g" title="Share on Google+"></span>
+          <a class="share-item google-plus" href="https://plus.google.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}" title="Share on Google+" target="_blank">
+            <span class="fab fa-fw fa-google-plus-g" title="Share on Google+"></span>
           </a>
         {% endif %}
         {% if site.share contains 'linkedin' %}
-          <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.url | prepend: site.baseurl | prepend: site.baseurl }}" class="share-item linkedin popup">
-            <span class="fab fa-linkedin-in" title="Share on LinkedIn"></span>
-          </a>
-        {% endif %}
-        {% if site.share contains 'pinterest' %}
-          <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fbrettstevenson.io&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;" class="share-item pinterest">
-            <span class="fab fa-pinterest-p" title="Pin it"></span>
+          <a class="share-item linkedin popup" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.url | prepend: site.baseurl | prepend: site.baseurl | prepend: site.url }}" target="_blank">
+            <span class="fab fa-fw fa-linkedin-in" title="Share on LinkedIn"></span>
           </a>
         {% endif %}
         {% if site.share contains 'tumblr' %}
-          <a href="https://tumblr.com/share/link?url={{ page.url | prepend: site.baseurl | prepend: site.baseurl }}" target="_blank" class="share-item tumblr">
-            <span class="fab fa-tumblr" title="Post to Tumblr"></span>
+          <a class="share-item tumblr" href="https://tumblr.com/share/link?url={{ page.url | prepend: site.baseurl | prepend: site.baseurl }}" target="_blank">
+            <span class="fab fa-fw fa-tumblr" title="Post to Tumblr"></span>
           </a>
         {% endif %}
         {% if site.share contains 'reddit' %}
-          <a href="http://www.reddit.com/submit?url=http%3A%2F%2Fbrettstevenson.io&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;" class="share-item reddit">
-            <span class="fab fa-reddit-alien" title="Post on Reddit"></span>
+          <a class="share-item reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fbrettstevenson.io&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+            <span class="fab fa-fw fa-reddit-alien" title="Post on Reddit"></span>
           </a>
         {% endif %}
         {% if site.share contains 'pocket' %}
-          <a href="https://getpocket.com/save?url={{ page.url | prepend: site.baseurl | prepend: site.baseurl }}" target="_blank" class="share-item pocket">
-            <span class="fab fa-get-pocket" title="Save to Pocket"></span>
+          <a class="share-item pocket" href="https://getpocket.com/save?url={{ page.url | prepend: site.baseurl | prepend: site.baseurl }}" target="_blank">
+            <span class="fab fa-fw fa-get-pocket" title="Save to Pocket"></span>
           </a>
         {% endif %}
         {% if site.share contains 'email' %}
-          <a href="mailto:?subject={{ page.title | replace: ' ', '%20' }}&amp;body={{ page.url | prepend: site.baseurl | prepend: site.baseurl }}" target="_blank" class="share-item email" data-proofer-ignore>
-            <span class="fas fa-at" title="Share via email"></span>
+          <a class="share-item email" href="mailto:?subject={{ page.title | replace: ' ', '%20' }}&amp;body=Check out this article!%0D%0A{{ page.url | prepend: site.baseurl | prepend: site.url }}" data-proofer-ignore>
+            <span class="fas fa-fw fa-at" title="Share via email"></span>
           </a>
         {% endif %}
       </div>
