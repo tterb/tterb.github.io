@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   {% include head.html %}
+  {% include post-meta }
   <body class="post-content" role="main">
     {% include header.html %}
     <div class="{% if page.options contains 'readme' %}readme-post{% endif %} post">
@@ -12,18 +13,12 @@
           {% endif %}
           <div class="post-meta fullhead">
             <h1 class="post-title">{{ page.title }}</h1>
-            <!-- <a class="scroll-btn scrolly animated fadeInUp" href="#top"><span></span>Scroll</a> -->
-            <!-- <div class="scroll-arrow">
-              <a href="#content" class="more scrolly"><i class="fa fa-angle-down"></i></a>
-            </div> -->
           </div>
           <a class="scroll-btn scrolly animated fadeInUp" href="#content"><span></span>Scroll</a>
         </section>
       {% elsif page.options contains "nohead" %}
         <section class="nopostimage">
-          <!-- <div class="post-meta"> -->
-            <h1 class="post-title">{{ page.title }}</h1>
-          <!-- </div> -->
+          <h1 class="post-title">{{ page.title }}</h1>
         </section>
       {% elsif page.options contains "readme" %}
         <section class="readme-header"></section>
@@ -40,7 +35,6 @@
           {% if page.header %}
             <img src="{{ page.header }}" alt="{{ page.title }}"/>
           {% endif %}
-          <!-- {% if page.preview %}<img id="preview" src="{{ page.preview }}" alt="Preview" target="_blank" rel="noopener"/>{% endif %} -->
           <br>
           <h1 class="post-title">{{ page.title }}</h1>
           <hr>
@@ -60,9 +54,11 @@
             <a name="top"></a>
             {{ content }}
             <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
+            <!-- Emojicom -->
+            <!-- <div id="emojicom-widget-inline" class="emojicom-panel"></div> -->
             <!-- Tags -->
             <div class="post-tags-container">
-              <span>Tags:</span>
+              <span>Tags:</span> 
               <ul class="post-tags inline">
               {% for tag in page.tags %}
                 {% assign tag_id = tag | prepend: "#" | append: "-tag" | slugify %}
@@ -103,8 +99,12 @@
           {% endif %}
         </div>
       {% endif %}
+      <!-- Start emojicom.io widget -->
+      <!-- <script>window.EMOJICOM_WIDGET = { campaign: "tY5WQeGoy1Yyf79dPGA4" };</script>
+      <script src="https://cdn.emojicom.io/embed/widget.js" async></script> -->
+      <!-- End emojicom.io widget -->
       {% if site.disqus %}
-        <div id="disqus_thread"></div>
+        <div id="disqus_thread" class="disqus-container"></div>
         <script type="text/javascript">
           /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
           var disqus_shortname = '{{ site.disqus }}'; // required: replace example with your forum shortname
