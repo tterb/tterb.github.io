@@ -1,5 +1,7 @@
 .post-content {
   background: #fcfcfc;
+  transition: opacity 350ms ease-in-out, background-color 300ms ease-in-out;
+  opacity: 1;
   #header h1 {
     display: none;
   }

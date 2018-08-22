@@ -31,7 +31,7 @@
     text-shadow: 0 2px 15px rgba(#000, 0.85);
     transform: scale(1);
     transition: transform 500ms ease, opacity 500ms ease;
-    padding: 0 9.5vw 2vw 5.5vw;
+    padding: 0 9.5vw 2vw 6.5vw;
     margin: 0;
     opacity: 0.95;
     .accent {
@@ -54,7 +54,7 @@
     letter-spacing: 0.075em;
     text-transform: uppercase;
     text-align: left;
-    margin: 0 0 1vw 6vw;
+    margin: 0 0 1vw 7vw;
     svg.fa-circle {
       fill: rgba(#fff, 0.25);
       width: 6px !important;
@@ -153,6 +153,18 @@ body.is-loading {
       animation: none !important;
     }
   }
+  &.post-content {
+    background: #1b1b1e;
+    transform: scale(0.95);
+    transition: opacity 350ms ease-in-out, background-color 300ms ease-in-out;
+    opacity: 0;
+    &::before, &::after {
+      width: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
 }
 
 /* Header */
@@ -164,7 +176,7 @@ body.is-loading {
   left: 0;
   line-height: 3;
   transition: all 500ms ease;
-  z-index: 999999 !important; // so 'X' appears above menu
+  z-index: 999999999; // so 'X' appears above menu
   h1 {
     line-height: 1.9;
     text-transform: none;
@@ -299,7 +311,7 @@ body.is-loading {
     }
   }
   &.readme {
-    margin-top: 5px;
+    margin-top: 10px;
     h1 {
       color: #1B1B1E;
       a:hover, a:active {
@@ -418,8 +430,7 @@ body.is-loading {
     background: transparent !important;
     font-size: 110%;
     font-weight: 400;
-    line-height: 0.75;
-    text-transform: capitalize;
+    line-height: 1;
     a {
       color: rgba(#fff, 0.85) !important;
       &::after {
