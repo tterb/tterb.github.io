@@ -1,0 +1,66 @@
+
+- title: Jekyll
+  url: https://jekyllrb.com/
+  license: MIT license
+  
+- title: Bootstrap
+  url: https://getbootstrap.com/
+  license: MIT License
+
+- title: FontAwesome
+  url: https://fortawesome.github.io/Font-Awesome/
+  author: Dave Gandy
+  license: MIT License
+
+- title: FiraCode 
+  url: https://github.com/tonsky/FiraCode
+  author: Nikita Prokopov
+  license: SIL Open Font License
+
+- title: PrismJS
+  url: https://prismjs.com/
+  license: MIT License
+
+- title: Animate.css
+  url: https://daneden.github.io/animate.css/
+  author: Daniel Eden
+  license: MIT License
+
+- title: Tooltipster
+  url: http://iamceege.github.io/tooltipster/
+  author: Caleb Jacob & Louis Ameline
+  license: MIT License
+  
+- title: Typed.js
+  url: http://www.mattboldt.com/demos/typed-js/
+  author: Matt Boldt
+  license: MIT License
+
+- title: Magnific-Popup
+  url: http://dimsemenov.com/plugins/magnific-popup/
+  author: Dmitry Semenov
+  license: MIT License
+  
+- title: SmoothState
+  url: http://smoothstate.com/
+  author: Miguel Pérez
+  license: MIT License
+  
+- title: ScrollReveal
+  url: https://scrollrevealjs.org/
+  license: GPL 3.0 License
+
+- title: Simple Jekyll Search
+  url: http://www.jekyll-plugins.com/plugins/simple-jekyll-search
+  author: Christian Fei
+  license: MIT License
+  
+- title: jQuery validation
+  url: http://jqueryvalidation.org/
+  author: Jörn Zaefferer
+  license: MIT License
+  
+- title: jQuery
+  url: https://jquery.com/
+  author: jQuery Foundation
+  license: MIT License
