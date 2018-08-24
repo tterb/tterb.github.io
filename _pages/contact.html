@@ -12,33 +12,24 @@ sitemap:
 ---
 
 <section class="wrapper style2">
-  <form id="sendemail" method="POST">
+  <form accept-charset="UTF-8" action="https://usebasin.com/f/9d19a5ddd1f8" method="POST">
     <input type='hidden' name='_next' value='{{ '/contact-success' | prepend: site.baseurl | prepend: site.url }}'/>
-    <input type="text" name="_gotcha" style="display:none" />
-    <!-- <input type="hidden" value="dog" id="type1"/>
-    <input type="hidden" value="cow" id="type2"/>
-    <input type="hidden" value="cat" id="type3"/> -->
+    <input type="text" name="_gotcha" style="display:none">
     <div class="row uniform">
       <div class="12u$ input-wrapper">
-        <input type="text" name="name" id="name" value=""/>
+        <input type="text" name="name" id="name" value="" required>
         <span class="focus-input" data-placeholder="NAME"></span>
       </div>
       <div class="12u$ input-wrapper">
-        <input required type="email" name="_replyto" id="email" value=""/>
+        <input type="email" name="email" id="email" value="" required>
         <span class="focus-input" data-placeholder="EMAIL"></span>
       </div>
-      <!-- <div class="12u$">
-        <input required type="text" minlength="2" name="subject" id="subject" value="" placeholder="Subject"/>
-      </div> -->
       <div class="12u$ input-wrapper textarea-wrapper">
-        <textarea required name="textbody" id="textbody" rows="7"></textarea>
+        <textarea name="textbody" id="textbody" rows="7" required></textarea>
         <span class="focus-input" data-placeholder="MESSAGE"></span>
       </div>
-      <!-- <div class="12u$">
-        <input type="text" name="country" id="country" value="" placeholder="What animal is this emoji? =^.^="/>
-      </div> -->
       <div class="actions contact-submit">
-        <div><input type="submit" value="Send Message" class="button special"/></div>
+        <div><input type="submit" value="Send Message" class="button special"></div>
       </div>
     </div>
     <input type="hidden" name="success"
@@ -46,8 +37,20 @@ sitemap:
     <input type="hidden" name="failure"
            value="{{ '/contact-failure' | prepend: site.baseurl | prepend: site.url }}"/>
   </form>
-  <script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+  function onSubmit(token) {
+    document.getElementById("invisible-recaptcha-form").submit();
+  }
+</script>
+
+<form id="invisible-recaptcha-form">
+  ...
+  <button class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Submit</button>
+</form>
+  <!-- <script>
     var contactform =  document.getElementById('sendemail');
     contactform.setAttribute('action', '//formspree.io/' + 'b'+'stevenson'+'dev'+'@'+'gmail'+'.'+'com');
-  </script>
+  </script> -->
 </section>
