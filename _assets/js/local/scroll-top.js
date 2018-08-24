@@ -1,19 +1,18 @@
 if ($("#back-to-top").length) {
   var scrollTrigger = 200,
-  backToTop = function() {
-    var a = $(window).scrollTop();
-    var b = (Math.min($(document).height(), $(window).height()) - 1250);
+  checkOffset = function() {
+    var b = $(document).height() - $(window).scrollTop()
     $(window).scroll(function() {
-      if (a > scrollTrigger && a < b) {
+      if ($(window).scrollTop() > scrollTrigger) {
         $("#back-to-top").addClass("show")
       } else {
         $("#back-to-top").removeClass("show")
       }
     });
   };
-  backToTop();
+  checkOffset();
   $(window).on("scroll", function() {
-    backToTop()
+    checkOffset()
   });
   $("#back-to-top").on("click", function(a) {
     a.preventDefault();
