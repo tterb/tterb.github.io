@@ -63,7 +63,7 @@ plugins:
 pagination:
   enabled: true
   per_page: 4
-  permalink: 'blog3/page:num'
+  permalink: 'blog/page:num'
   title: ':title'
   sort_field: 'date'
   sort_reverse: true
