@@ -497,20 +497,20 @@
   bottom: 8vh;
   border: 0;
   border-radius: 2px;
-  transition: opacity 250ms ease-in-out;
   opacity: 0;
+  transition: opacity 350ms ease-in-out;
   z-index: _misc(z-index-base) * 5;
   cursor: pointer;
+  &.show {
+    opacity: 0.2 !important;
+    &:hover, &:active {
+      opacity: 0.6 !important;
+    }
+  }
   img {
     width: 45px !important;
     height: 45px !important;
     box-shadow: none !important;
-  }
-  &.show {
-    opacity: 0.25 !important;
-    &:hover, &:active {
-      opacity: 0.65 !important;
-    }
   }
 }
 
@@ -794,7 +794,7 @@
 .disqus-container {
   width: 80%;
   // max-width: 720px;
-  margin: 0 auto 2em;
+  margin: 0 auto;
   padding-bottom: 1em;
 }
 
@@ -912,7 +912,7 @@ body.is-mobile {
     font-size: 1.5em;
     font-weight: _font(prose-extrabold);
     text-transform: capitalize;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.02em;
     line-height: 0.65;
     margin: 6px 0 0 0;
     padding: 0 0 0 10px;
@@ -969,7 +969,15 @@ body.is-mobile {
       }
     }
   }
+  .prev {
+    &:hover {
+      transform: translateX(-10px);
+    }
+  }
   .next {
     text-align: right;
+    &:hover {
+      transform: translateX(10px);
+    }
   }
 }
