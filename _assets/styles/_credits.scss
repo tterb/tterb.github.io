@@ -1,0 +1,36 @@
+.credits {
+  .credit-title {
+    color: rgba(#000, 0.75);
+    font-family: _font(hdr-family);
+    font-size: 2em;
+    font-weight: 900;
+    padding: 0.5em 1em;
+  }
+  .credit-list {
+    color: rgba(#000, 0.6);
+    font-family: _font(ctrl-family) !important;
+    font-size: 1.1em;
+    list-style-type: none;
+    padding-left: 2.5em;
+    li {
+      line-height: 1.75 !important;
+      clear: both;
+      > a {
+        color: _palette(bg);
+        font-weight: 600 !important;
+        &:hover, &:active {
+          color: darken(_palette(accent2, bg), 5%);
+          text-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+#credits {
+  margin: 0;
+  padding: 2em 3em;
+  > dd {
+    margin-left: 0.5em;
+  }
+}
