@@ -8,8 +8,8 @@ categories: blog
 options:
 image: python-testing.jpg
 tags:
-  - python
-  - testing
+  - Python
+  - Testing
 ---
 
 

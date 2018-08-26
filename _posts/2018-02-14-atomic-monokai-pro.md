@@ -18,14 +18,14 @@ tags:
 
 <p class="badges">
   <a href="https://atom.io/themes/atomic-design-ui">
-    <img src="https://img.shields.io/apm/v/atomic-monokai-pro-syntax.svg?" title="Version">&nbsp;
+    <img src="https://img.shields.io/apm/v/atomic-monokai-pro-syntax.svg?" alt="Version">&nbsp;
   </a>
   <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/apm/l/atomic-monokai-pro-syntax.svg?" title="License">&nbsp;
+    <img src="https://img.shields.io/apm/l/atomic-monokai-pro-syntax.svg?" alt="License">&nbsp;
   </a>
-    <img src="https://img.shields.io/apm/dm/atomic-monokai-pro-syntax.svg?maxAge=2592000?" title="Downloads">&nbsp;
+    <img src="https://img.shields.io/apm/dm/atomic-monokai-pro-syntax.svg?maxAge=2592000?" alt="Downloads">&nbsp;
   <a href="https://atom.io/themes/atomic-monokai-pro-syntax">
-    <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" title="Open Source">&nbsp;
+    <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" alt="Open Source">&nbsp;
   </a>
 </p>  
 
