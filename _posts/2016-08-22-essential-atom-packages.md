@@ -10,13 +10,12 @@ categories: blog
 options: featured, lg
 image: atom-banner.jpg
 tags:
+  - Spotlight
   - Atom
   - Software
-  - Editor
   - Tools
-  - Customization
+  - Packages
   - Review
-  - Spotlight
 ---
 
 <!-- Intro -->
@@ -26,7 +25,7 @@ As a long-time Sublime Text user, I&rsquo;ve recently made the transition to usi
 
 All of the featured packages are published through [apm](https://github.com/atom/apm) and can be installed via the following command:
 
-```shell
+```bash
 $ apm install <package-name>
 ```
 

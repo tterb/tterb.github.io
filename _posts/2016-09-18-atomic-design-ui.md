@@ -1,7 +1,7 @@
 ---
 priority: 0.5
 title: Atomic Design UI
-description: A modern and refined interface for Atom
+description: A modern and refined user-interface for Atom
 keywords: "atomic, design, ui, theme, monokai, atom, code, text, editor, syntax, highlighting, theme, monokai, sublime, package, jekyll, blog, github"
 date: 2016-09-18
 categories: blog projects
@@ -13,7 +13,6 @@ tags:
   - Atom
   - Design
   - UI
-  - Editor
   - Syntax
   - Customization
   - Projects
@@ -97,7 +96,7 @@ ___________________________
 <img src="https://cloud.githubusercontent.com/assets/16360374/22630327/e71bd0c4-ebac-11e6-956d-8b1e8da21d1b.png" width="900" alt="install" title="Install">
 This package is distributed via *[apm]*. After [installing apm], you can install the UI&ndash;theme with this command.
 
-```shell
+```bash
 $ apm install atomic-design-ui
 ```
 

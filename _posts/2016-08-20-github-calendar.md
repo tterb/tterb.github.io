@@ -6,9 +6,11 @@ keywords: "git, contribution, calendar, rainmeter, skin, desktop, jekyll, blog, 
 date: 2016-08-20
 categories: blog projects
 options: readme subhead
+image: github-calendar.png
 header: http://i32.photobucket.com/albums/d2/therealbrettstevenson/Github/GithubCalendar/git2_zpsjx72lsmu.png
 repo: GithubCalendar
 tags:
+  - C#
   - Github
   - Rainmeter
   - Projects

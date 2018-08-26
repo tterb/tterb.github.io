@@ -10,6 +10,7 @@ image: googleplaymusic.jpg
 header: https://cloud.githubusercontent.com/assets/16360374/23640973/ac0fe0a0-02a5-11e7-91a1-fc9eb72514de.png
 repo: PlayMusic
 tags:
+  - Lua
   - Google
   - Music
   - Rainmeter

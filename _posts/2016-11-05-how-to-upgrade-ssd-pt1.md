@@ -9,12 +9,12 @@ options: fullhead, featured, collection, lg
 next: how-to-upgrade-ssd-pt2.html
 image: razer-blade.jpg
 tags:
+  - Tutorial
   - Razer
   - Laptop
   - Tech
   - Tools
   - How-To
-  - Tutorial
 ---
 
   When upgrading the SSD on my 2015 Razer Blade, I found many inquiries, yet limited resources on the topic. As a result, I figured I would make this guide seeing as the process was fairly straight&ndash;forward and the results were both beneficial and cost-effective.

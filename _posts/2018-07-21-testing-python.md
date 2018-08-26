@@ -1,7 +1,7 @@
 ---
 priority: 0.6
 title: Testing Python
-description: Introduction to python testing with pytest
+description: Introduction to Python testing with pytest
 keywords: ""
 date: 2018-07-21
 categories: blog
@@ -15,15 +15,15 @@ tags:
 
 # Why?
 
-Though I've become accustomed to writing bash scripts to automate the testing of my command-line applications, upon being introduced to Ruby testing while reading Michael Hartl's [The Ruby on Rails Tutorial](https://www.railstutorial.org/book), I was surprised by how much easier debugging is when you're able to write tests for each component of the program, rather than just the input/output of my bash scripts. So given my proclivity for Python, I instantly became curious about the process of implementing similar tests in Python.  
+Though I've become accustomed to writing bash scripts to automate the testing of my command&ndash;line applications, upon being introduced to Ruby testing while reading Michael Hartl&rsquo;s [The Ruby on Rails Tutorial](https://www.railstutorial.org/book), I was surprised by how much easier debugging is when you&rsquo;re able to write tests for each component of the program, rather than just the input/output of my bash scripts. So given my proclivity for Python, I instantly became curious about the process of implementing similar tests in Python.  
 
 # Okay, How?  
 
-After a bit of research into the available testing frameworks, I decided on [pytest](https://github.com/pytest-dev/pytest) due to the balance of capability and ease-of-use. Additionally, we'll be writing a few tests for my [yt2mp3](https://github.com/tterb/yt2mp3) program, which I had previously been testing using one of the aforementioned bash scripts.  
+After a bit of research into the available testing frameworks, I decided on [pytest](https://github.com/pytest-dev/pytest) due to the balance of capability and ease&ndash;of&ndash;use. Additionally, we&rsquo;ll be writing a few tests for my [yt2mp3](https://github.com/tterb/yt2mp3) program, which I had previously been testing using one of the aforementioned bash scripts.  
 
 # Setup  
-Before we start writing tests, we need to create a new file with the following convention, `test_{filename}.py`. This is so that [pytest](https://github.com/pytest-dev/pytest) can accurately identify the files that contain tests to execute, when we run from the command-line, as shown below:
-```sh
+Before we start writing tests, we need to create a new file with the following convention, `test_{filename}.py`. This is so that [pytest](https://github.com/pytest-dev/pytest) can accurately identify the files that contain tests to execute, when we run from the command&ndash;line, as shown below:
+```bash
 $ pytest
 ```
 <p class="h-tip">I prefer running pytest with the <code class="highlighter-rouge">-v</code> or <code class="highlighter-rouge">--verbose</code> flag, as this prints the test that is being run and whether it passed/failed.</p>
@@ -31,8 +31,8 @@ $ pytest
 
 # Basic Testing  
 
-To get started, the first test we're going to write is going to ensure that the program is able to accurately retrieve the title of a YouTube video when given a URL.  
-For this we're going to:  
+To get started, the first test we&rsquo;re going to write is going to ensure that the program is able to accurately retrieve the title of a YouTube video when given a URL.  
+For this we&rsquo;re going to:  
   * Get the URL for a YouTube video with a known title
   * provide the URL to the yt2mp3.getVideoTitle() function
   * Check that the function returns the expected video title
@@ -45,12 +45,11 @@ def test_video_title():
     url = 'https://www.youtube.com/watch?v=C0DPdy98e4c'
     title = yt2mp3.getVideoTitle(url)
     assert title == 'TEST VIDEO'
-
 ```
 
-You'll notice that the only difference in this function is that pytest uses an `assert`-statement where you might usually expect a `return`-statement.  
+You&rsquo;ll notice that the only difference in this function is that pytest uses an `assert`&ndash;statement where you might usually expect a `return`&ndash;statement.  
 
-Similarly, we can also write a test to check that the `yt2mp3.getVideoList()` function successfully retrieves the URLs for each video in the provided playlist. For this test, I've created a simple test playlist that features three videos to keep the number of URLs manageable and prevent modifications from changing the expected result.  
+Similarly, we can also write a test to check that the `yt2mp3.getVideoList()` function successfully retrieves the URLs for each video in the provided playlist. For this test, I&rsquo;ve created a simple test playlist that features three videos to keep the number of URLs manageable and prevent modifications from changing the expected result.  
 So we need to:  
   * Provide the URL for our test playlist
   * Provide a list of the URLs for each video in the playlist
@@ -66,7 +65,7 @@ def test_get_playlist():
 
 # Using Fixtures  
 
-To introduce the idea of fixtures, we'll write a test that requires that we have a `Song` object, which stores the data necessary for downloading and setting the ID3 tags of the output mp3 file. Therefore, it's understandable that a similar `Song` object may be necessary to test multiple functionalities of the program. That's where fixtures come in.  
+To introduce the idea of fixtures, we&rsquo;ll write a test that requires that we have a `Song` object, which stores the data necessary for downloading and setting the ID3 tags of the output mp3 file. Therefore, it&rsquo;s understandable that a similar `Song` object may be necessary to test multiple functionalities of the program. That&rsquo;s where fixtures come in.  
 
 ```python
 @pytest.fixture
@@ -76,10 +75,10 @@ def test_song():
     yt2mp3.Song(data)
 ```
 
-While, you can see that there's not a lot of code that goes into creating the object, it's best to follow the [DRY](https://deviq.com/don-t-repeat-yourself/) principal and avoid redundancy.  
-Now that our fixture is defined, we are going to use it to write two tests to check the program's ability to download a video and convert the video to an mp3.  
-To test the program's download functionality, we'll utilize the fact that the `yt2mp3.download()` function returns the filepath when the download is successful by asserting that the returned filepath exists.  
-<p class="h-note">Notice that we've provided our <code class="highlighter-rouge">test_song</code> fixture as a parameter of the test function.</p>
+While, you can see that there&rsquo;s not a lot of code that goes into creating the object, it&rsquo;s best to follow the [DRY](https://deviq.com/don-t-repeat-yourself/) principal and avoid redundancy.  
+Now that our fixture is defined, we are going to use it to write two tests to check the program&rsquo;s ability to download a video and convert the video to an mp3.  
+To test the program&rsquo;s download functionality, we&rsquo;ll utilize the fact that the `yt2mp3.download()` function returns the filepath when the download is successful by asserting that the returned filepath exists.  
+<p class="h-note">Notice that we&rsquo;ve provided our <code class="highlighter-rouge">test_song</code> fixture as a parameter of the test function.</p>
 
 ```python
 def test_video_download(test_song):
@@ -97,7 +96,7 @@ def test_convert_mp3(test_song):
     assert os.path.exists(song_path)
 ```
 
-Though, the `yt2mp3.convertToMP3()` is also responsible for deleting the converted video file after the conversion. Luckily, we're also able to validate this process within the same test by adding another condition and a bit of additional logging.
+Though, the `yt2mp3.convertToMP3()` is also responsible for deleting the converted video file after the conversion. Luckily, we&rsquo;re also able to validate this process within the same test by adding another condition and a bit of additional logging.
 
 ```python
 def test_convert_mp3(test_song):
@@ -115,4 +114,4 @@ def test_convert_mp3(test_song):
 # Conclusion  
 
 Now we already have tests that cover a significant amount of the programs processes, without requiring a whole lot of work(*or code*). 
-Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I'll be updating this post or posting a follow-up with more helpful info as I become increasingly versed in Python testing.
+Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I&rsquo;ll be updating this post or posting a follow&ndash;up with more helpful info as I become increasingly versed in Python testing.

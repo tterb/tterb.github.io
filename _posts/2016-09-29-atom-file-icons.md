@@ -6,13 +6,13 @@ keywords: "atom, file, icons, filetype, ico, png, icns, customization, theme, de
 date: 2016-09-29
 categories: blog
 options: readme, subhead
+image: atom-file-icons.png
 header: https://cloud.githubusercontent.com/assets/16360374/22404140/a46933d4-e5df-11e6-9d13-00cb87228bff.png
 repo: Atom-File-Icons
 tags:
+  - Design
   - Atom
   - Icons
-  - Editor
-  - Design
   - Illustrator
   - UI
   - Customization

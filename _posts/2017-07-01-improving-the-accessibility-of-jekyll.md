@@ -9,12 +9,12 @@ options: featured
 image: jekyll.png
 header: jekyll.png
 tags:
-  - Markdown
   - Jekyll
+  - Markdown
   - Editor
-  - GitHub Pages
   - Tools
   - Electron
+  - Javascript
   - Projects
 ---
 

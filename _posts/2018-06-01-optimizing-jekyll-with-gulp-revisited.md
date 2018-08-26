@@ -2,23 +2,23 @@
 priority: 0.15
 title: Optimizing Jekyll with Gulp
 description: An exploration of optimizing your Jekyll website using Gulp
-date: 2018-06-1
+date: 2018-06-01
 categories: blog
 options: featured
 image: gulp.jpg
 tags:
+  - Javascript
   - Jekyll
   - Web Development
   - Performance
   - Gulp
-  - Javascript
   - GitHub Pages
 ---
 
 While the previous entry on optimizing your Jekyll site provided some basics to optimizing your Jekyll site performance, in this post I want to focus on providing a more comprehensive explanation of how you can create a more enjoyable development experience with the magic of [**Gulp**](https://gulpjs.com/).  
 To get started, lets first discuss the basic workflow and file structure that we&rsquo;ll be working with. As shown in the image below, we'll be storing our site assets in the `_assets/` directory.  
 
-<img src="https://user-images.githubusercontent.com/16360374/41262490-f9d106b4-6d95-11e8-9e2d-c63b80bfdd45.png" alt="file tree" style="width:60%"/>  
+<img src="https://user-images.githubusercontent.com/16360374/41262490-f9d106b4-6d95-11e8-9e2d-c63b80bfdd45.png" alt="file tree" style="width:50%"/>  
 
 This will allow these files to be processed from within our [Gulpfile](https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed), while remaining ignored by Jekyll. Though, a more in-depth explaination of the file-structure will be provided during each of the respective tasks.
 
@@ -118,7 +118,7 @@ const paths = require('./_assets/gulp-config/paths');
 
 Now, you *could* manually install all of these packages independantly, but in-case you&rsquo;re looking for a shortcut, I&rsquo;ve compiled the following command to allow you to conveniently install them all at once.  
 
-```sh
+```bash
 npm i -D autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-newer gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
 ```
 
@@ -337,4 +337,4 @@ gulp.task('clean', ['clean:jekyll', 'clean:styles', 'clean:scripts', 'clean:imag
 <p class="h-tldr">Here&rsquo;s a <a href="https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed">gist</a> with the resulting Gulpfile.js</p>
 
 ## Conclusion  
-While this Gulpfile provides a lot of optimization and added convenience to just about any site, there is still definitely room for improvement. Feel free to contact me or leave a comment with any improvements or suggestions!
+While this Gulpfile provides a lot of optimization and added convenience to just about any site, there is definitely still room for improvement. Feel free to contact me or leave a comment with any improvements or suggestions!

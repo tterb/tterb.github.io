@@ -9,10 +9,10 @@ options: readme subhead
 header: https://cloud.githubusercontent.com/assets/16360374/25799898/d2fe937e-339b-11e7-81a5-b70a54b580d9.png
 repo: Urban-Dictionary-Therapy
 tags:
+  - Python
   - Urban Dictionary
   - Command-line
   - Bash
-  - Python
   - Projects
 ---
 
@@ -40,14 +40,14 @@ No matter the issue, **Urban Dictionary Therapy** provides a perfect answer to a
 
 ## Setup:
 This package requires that you have Python 3, as well as BeautifulSoup4. On OS X and Linux systems Python 3 should be installed by default. Once Python is installed you can download [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) with the command:
-```shell
+```bash
   $ pip3 install bs4
 ```
 ***Note:*** To my knowledge, Python3 is also included in the new *Bash on Windows* linux-subsystem for Windows 10.
 
 
 Furthermore, you can also make the program executable from anywhere in your file&ndash;system with the command `./UDTherapy.py` by adding the program directory to your *PATH* and by modifying the program permissions using the command:
-```shell
+```bash
   $ chmod +x UDTherapy.py
 ```
 

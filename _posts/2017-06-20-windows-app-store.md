@@ -8,6 +8,7 @@ categories: blog
 options:
 image: windows-banner.jpg
 tags:
+  - Discuss
   - Windows 10
   - Microsoft
   - Tech

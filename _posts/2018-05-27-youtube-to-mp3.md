@@ -50,13 +50,13 @@ The program only requires that you have Python 3.4+ and [ffmpeg](https://www.ffm
 
 ### Install  
 You can install the program with the following command:  
-```sh
+```bash
 $ pip install yt2mp3
 ```
 
 ## Usage  
 The program can be executed via the as follows:  
-```sh
+```bash
 $ yt2mp3 [-options]
 ```
 
@@ -86,7 +86,7 @@ Further documentation is available on [Read The Docs](https://yt2mp3.readthedocs
 ## Development  
 If you'd like to contribute to the project, you can download and install the program with the following commands:  
 
-```sh
+```bash
 # Clone the repository / most up to date is on saftyBranch
 $ git clone https://github.com/tterb/yt2mp3
 
