@@ -11,7 +11,10 @@ task :test do
       :url_swap => { 
         'https://brettstevenson.io/dev' => '/dev', 
         'https://brettstevenson.io/design' => '/design', 
-        'https://brettstevenson.io/blog' => '/blog'
+        'https://brettstevenson.io/blog' => '/blog',
+        'https://brettstevenson.io/archive' => '/archive',
+        'https://brettstevenson.io/tags' => '/tags',
+        'https://brettstevenson.io/credits' => '/credits'
       },
       :parallel => { :in_processes => 4 },
       :only_4xx => true,
