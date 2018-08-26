@@ -23,16 +23,16 @@ $(document).ready(function() {
     var link_html = '';
     for (var i = current - limit; i < current; i++) {
       if (i > 0 && i !== 1) {
-        link_html += '<a href="' + baseUrl + 'blog3/page' + i + '" class="page-link page-num">' + i + '</a>';
+        link_html += '<a href="' + baseUrl + 'blog/page' + i + '" class="page-link page-num">' + i + '</a>';
       } else if (i === 1) {
-        link_html += '<a href="' + baseUrl + 'blog3" class="page-link page-num">' + i + '</a>';
+        link_html += '<a href="' + baseUrl + 'blog" class="page-link page-num">' + i + '</a>';
       }
     }
     link_html += '<span class="page-link page-num active">' + current + '</span>';
     
     for (var j = current + 1; j <= current + limit; j++) {
       if (j <= total) {
-        link_html += '<a href="' + baseUrl + 'blog3/page' + j + '" class="page-link page-num">' + j + '</a>';
+        link_html += '<a href="' + baseUrl + 'blog/page' + j + '" class="page-link page-num">' + j + '</a>';
       }
     }
     $('#page-link-container').html(link_html);
