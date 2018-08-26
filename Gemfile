@@ -20,7 +20,6 @@ gem 'jekyll', '>= 3.1.2'
 # end
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
-gem 'github-pages'
 gem 'jemoji'
 gem 'jekyll-gist'
 gem 'jekyll-github-metadata'
