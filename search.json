@@ -3,7 +3,7 @@
     {
       "title"      : "Testing Python",
       "category"   : "",
-      "tags"       : "python and testing",
+      "tags"       : "Python and Testing",
       "url"        : "/blog/testing-python.html",
       "date"       : "2018-07-21 00:00:00 +0000",
       "shortdate"  : "Jul 21, 2018"
@@ -12,7 +12,7 @@
     {
       "title"      : "Optimizing Jekyll with Gulp",
       "category"   : "",
-      "tags"       : "Jekyll, Web Development, Performance, Gulp, Javascript, and GitHub Pages",
+      "tags"       : "Javascript, Jekyll, Web Development, Performance, Gulp, and GitHub Pages",
       "url"        : "/blog/optimizing-jekyll-with-gulp-revisited.html",
       "date"       : "2018-06-01 00:00:00 +0000",
       "shortdate"  : "Jun 01, 2018"
@@ -21,16 +21,25 @@
     {
       "title"      : "YouTube to MP3",
       "category"   : "",
-      "tags"       : "YouTube, MP3, Command-line, Bash, Python, and Projects",
+      "tags"       : "Python, YouTube, MP3, Command-line, Bash, and Projects",
       "url"        : "/blog/project/youtube-to-mp3.html",
       "date"       : "2018-05-27 00:00:00 +0000",
       "shortdate"  : "May 27, 2018"
     } ,
   
     {
+      "title"      : "Atomic Monokai Pro",
+      "category"   : "",
+      "tags"       : "Atom, Syntax, Design, UI, and Projects",
+      "url"        : "/blog/project/atomic-monokai-pro.html",
+      "date"       : "2018-02-14 00:00:00 +0000",
+      "shortdate"  : "Feb 14, 2018"
+    } ,
+  
+    {
       "title"      : "Improving the Accessibility of Jekyll",
       "category"   : "",
-      "tags"       : "Markdown, Jekyll, Editor, GitHub Pages, Tools, Electron, and Projects",
+      "tags"       : "Jekyll, Markdown, Editor, Tools, Electron, Javascript, and Projects",
       "url"        : "/blog/improving-the-accessibility-of-jekyll.html",
       "date"       : "2017-07-01 00:00:00 +0000",
       "shortdate"  : "Jul 01, 2017"
@@ -39,7 +48,7 @@
     {
       "title"      : "The Future of the Windows App Store",
       "category"   : "",
-      "tags"       : "Windows 10, Microsoft, Tech, Tools, and Discussion",
+      "tags"       : "Discuss, Windows 10, Microsoft, Tech, Tools, and Discussion",
       "url"        : "/blog/windows-app-store.html",
       "date"       : "2017-06-20 00:00:00 +0000",
       "shortdate"  : "Jun 20, 2017"
@@ -48,7 +57,7 @@
     {
       "title"      : "Urban Dictionary Therapy",
       "category"   : "",
-      "tags"       : "Urban Dictionary, Command-line, Bash, Python, and Projects",
+      "tags"       : "Python, Urban Dictionary, Command-line, Bash, and Projects",
       "url"        : "/blog/projects/urban-dictionary-therapy.html",
       "date"       : "2017-05-12 00:00:00 +0000",
       "shortdate"  : "May 12, 2017"
@@ -64,18 +73,9 @@
     } ,
   
     {
-      "title"      : "Site Reconstruction...",
-      "category"   : "",
-      "tags"       : "",
-      "url"        : "/blog/site-reconstruction.html",
-      "date"       : "2017-03-31 00:00:00 +0000",
-      "shortdate"  : "Mar 31, 2017"
-    } ,
-  
-    {
       "title"      : "Upgrading the SSD on a Razer Blade (pt 2)",
       "category"   : "",
-      "tags"       : "Razer, Laptop, Tutorial, Tech, Tools, and How-To",
+      "tags"       : "Tutorial, Razer, Laptop, Tech, Tools, and How-To",
       "url"        : "/blog/how-to-upgrade-ssd-pt2.html",
       "date"       : "2016-10-06 00:00:00 +0000",
       "shortdate"  : "Oct 06, 2016"
@@ -84,7 +84,7 @@
     {
       "title"      : "Upgrading the SSD on a Razer Blade",
       "category"   : "",
-      "tags"       : "Razer, Laptop, Tech, Tools, How-To, and Tutorial",
+      "tags"       : "Tutorial, Razer, Laptop, Tech, Tools, and How-To",
       "url"        : "/blog/how-to-upgrade-ssd-pt1.html",
       "date"       : "2016-10-05 00:00:00 +0000",
       "shortdate"  : "Oct 05, 2016"
@@ -93,7 +93,7 @@
     {
       "title"      : "Atom File Icons",
       "category"   : "",
-      "tags"       : "Atom, Icons, Editor, Design, Illustrator, UI, Customization, and Projects",
+      "tags"       : "Design, Atom, Icons, Illustrator, UI, Customization, and Projects",
       "url"        : "/blog/atom-file-icons.html",
       "date"       : "2016-09-29 00:00:00 +0000",
       "shortdate"  : "Sep 29, 2016"
@@ -102,25 +102,16 @@
     {
       "title"      : "Atomic Design UI",
       "category"   : "",
-      "tags"       : "Atom, Design, UI, Editor, Syntax, Customization, and Projects",
+      "tags"       : "Atom, Design, UI, Syntax, Customization, and Projects",
       "url"        : "/blog/projects/atomic-design-ui.html",
       "date"       : "2016-09-18 00:00:00 +0000",
       "shortdate"  : "Sep 18, 2016"
     } ,
   
     {
-      "title"      : "Atomic Monokai",
-      "category"   : "",
-      "tags"       : "Atom, Syntax, Design, UI, Customization, and Projects",
-      "url"        : "/blog/projects/atomic-monokai.html",
-      "date"       : "2016-08-23 00:00:00 +0000",
-      "shortdate"  : "Aug 23, 2016"
-    } ,
-  
-    {
       "title"      : "Essential Atom Packages",
       "category"   : "",
-      "tags"       : "Atom, Software, Editor, Tools, Customization, Review, and Spotlight",
+      "tags"       : "Spotlight, Atom, Software, Tools, Packages, and Review",
       "url"        : "/blog/essential-atom-packages.html",
       "date"       : "2016-08-22 00:00:00 +0000",
       "shortdate"  : "Aug 22, 2016"
@@ -129,7 +120,7 @@
     {
       "title"      : "Github Calendar",
       "category"   : "",
-      "tags"       : "Github, Rainmeter, and Projects",
+      "tags"       : "C#, Github, Rainmeter, and Projects",
       "url"        : "/blog/projects/github-calendar.html",
       "date"       : "2016-08-20 00:00:00 +0000",
       "shortdate"  : "Aug 20, 2016"
@@ -138,7 +129,7 @@
     {
       "title"      : "PlayMusic",
       "category"   : "",
-      "tags"       : "Google, Music, Rainmeter, and Projects",
+      "tags"       : "Lua, Google, Music, Rainmeter, and Projects",
       "url"        : "/blog/projects/playmusic.html",
       "date"       : "2016-08-18 00:00:00 +0000",
       "shortdate"  : "Aug 18, 2016"

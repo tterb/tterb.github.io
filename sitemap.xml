@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://brettstevenson.io/</loc>
-    <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+    <lastmod>2018-08-26T10:49:25+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -42,6 +42,21 @@
       <loc>https://brettstevenson.io/blog/project/youtube-to-mp3.html</loc>
       
         <lastmod>2018-05-27T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.8</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://brettstevenson.io/blog/project/atomic-monokai-pro.html</loc>
+      
+        <lastmod>2018-02-14T00:00:00+00:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -114,21 +129,6 @@
   
     
     <url>
-      <loc>https://brettstevenson.io/blog/site-reconstruction.html</loc>
-      
-        <lastmod>2017-03-31T00:00:00+00:00</lastmod>
-      
-      
-        <changefreq>weekly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
       <loc>https://brettstevenson.io/blog/how-to-upgrade-ssd-pt2.html</loc>
       
         <lastmod>2016-10-06T00:00:00+00:00</lastmod>
@@ -183,21 +183,6 @@
       
       
         <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://brettstevenson.io/blog/projects/atomic-monokai.html</loc>
-      
-        <lastmod>2016-08-23T00:00:00+00:00</lastmod>
-      
-      
-        <changefreq>weekly</changefreq>
-      
-      
-        <priority>0.6</priority>
       
     </url>
     
@@ -267,7 +252,7 @@
       <url>
         <loc>https://brettstevenson.io/404.html</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -280,9 +265,9 @@
   
     
       <url>
-        <loc>https://brettstevenson.io/blog/</loc>
+        <loc>https://brettstevenson.io/archive/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -297,7 +282,7 @@
       <url>
         <loc>https://brettstevenson.io/contact-failed/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -312,7 +297,7 @@
       <url>
         <loc>https://brettstevenson.io/contact-success/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -327,7 +312,7 @@
       <url>
         <loc>https://brettstevenson.io/contact/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -342,7 +327,7 @@
       <url>
         <loc>https://brettstevenson.io/credits/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -357,7 +342,7 @@
       <url>
         <loc>https://brettstevenson.io/design/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -372,7 +357,7 @@
       <url>
         <loc>https://brettstevenson.io/dev/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -387,7 +372,7 @@
       <url>
         <loc>https://brettstevenson.io/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -402,7 +387,7 @@
       <url>
         <loc>https://brettstevenson.io/subscribe/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -417,7 +402,7 @@
       <url>
         <loc>https://brettstevenson.io/resume/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>
@@ -432,7 +417,67 @@
       <url>
         <loc>https://brettstevenson.io/tags/</loc>
           
-            <lastmod>2018-08-14T08:47:02+00:00</lastmod>
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/blog/</loc>
+          
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/blog/page2/</loc>
+          
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/blog/page3/</loc>
+          
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
+          
+          
+            <changefreq>weekly</changefreq>
+          
+          
+            <priority>0.5</priority>
+          
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://brettstevenson.io/blog/page4/</loc>
+          
+            <lastmod>2018-08-26T10:49:25+00:00</lastmod>
           
           
             <changefreq>weekly</changefreq>

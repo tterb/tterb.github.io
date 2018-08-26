@@ -5,23 +5,23 @@
     <description>Developer &amp;#x1f784; Designer &amp;#x1f784; Student</description>
     <link>https://brettstevenson.io/</link>
     <atom:link href="https://brettstevenson.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Aug 2018 08:47:02 +0000</pubDate>
-    <lastBuildDate>Tue, 14 Aug 2018 08:47:02 +0000</lastBuildDate>
-    <generator>Jekyll v3.6.2</generator>
+    <pubDate>Sun, 26 Aug 2018 10:49:25 +0000</pubDate>
+    <lastBuildDate>Sun, 26 Aug 2018 10:49:25 +0000</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
     
       <item>
         <title>Testing Python</title>
         <description>&lt;h1 id=&quot;why&quot;&gt;Why?&lt;/h1&gt;
 
-&lt;p&gt;Though I’ve become accustomed to writing bash scripts to automate the testing of my command-line applications, upon being introduced to Ruby testing while reading Michael Hartl’s &lt;a href=&quot;https://www.railstutorial.org/book&quot;&gt;The Ruby on Rails Tutorial&lt;/a&gt;, I was surprised by how much easier debugging is when you’re able to write tests for each component of the program, rather than just the input/output of my bash scripts. So given my proclivity for Python, I instantly became curious about the process of implementing similar tests in Python.&lt;/p&gt;
+&lt;p&gt;Though I’ve become accustomed to writing bash scripts to automate the testing of my command–line applications, upon being introduced to Ruby testing while reading Michael Hartl’s &lt;a href=&quot;https://www.railstutorial.org/book&quot;&gt;The Ruby on Rails Tutorial&lt;/a&gt;, I was surprised by how much easier debugging is when you’re able to write tests for each component of the program, rather than just the input/output of my bash scripts. So given my proclivity for Python, I instantly became curious about the process of implementing similar tests in Python.&lt;/p&gt;
 
 &lt;h1 id=&quot;okay-how&quot;&gt;Okay, How?&lt;/h1&gt;
 
-&lt;p&gt;After a bit of research into the available testing frameworks, I decided on &lt;a href=&quot;https://github.com/pytest-dev/pytest&quot;&gt;pytest&lt;/a&gt; due to the balance of capability and ease-of-use. Additionally, we’ll be writing a few tests for my &lt;a href=&quot;https://github.com/tterb/yt2mp3&quot;&gt;yt2mp3&lt;/a&gt; program, which I had previously been testing using one of the aforementioned bash scripts.&lt;/p&gt;
+&lt;p&gt;After a bit of research into the available testing frameworks, I decided on &lt;a href=&quot;https://github.com/pytest-dev/pytest&quot;&gt;pytest&lt;/a&gt; due to the balance of capability and ease–of–use. Additionally, we’ll be writing a few tests for my &lt;a href=&quot;https://github.com/tterb/yt2mp3&quot;&gt;yt2mp3&lt;/a&gt; program, which I had previously been testing using one of the aforementioned bash scripts.&lt;/p&gt;
 
 &lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
-&lt;p&gt;Before we start writing tests, we need to create a new file with the following convention, &lt;code class=&quot;highlighter-rouge&quot;&gt;test_{filename}.py&lt;/code&gt;. This is so that &lt;a href=&quot;https://github.com/pytest-dev/pytest&quot;&gt;pytest&lt;/a&gt; can accurately identify the files that contain tests to execute, when we run from the command-line, as shown below:&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pytest
+&lt;p&gt;Before we start writing tests, we need to create a new file with the following convention, &lt;code class=&quot;highlighter-rouge&quot;&gt;test_{filename}.py&lt;/code&gt;. This is so that &lt;a href=&quot;https://github.com/pytest-dev/pytest&quot;&gt;pytest&lt;/a&gt; can accurately identify the files that contain tests to execute, when we run from the command–line, as shown below:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pytest
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p class=&quot;h-tip&quot;&gt;I prefer running pytest with the &lt;code class=&quot;highlighter-rouge&quot;&gt;-v&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;--verbose&lt;/code&gt; flag, as this prints the test that is being run and whether it passed/failed.&lt;/p&gt;
 
@@ -42,10 +42,9 @@ For this we’re going to:&lt;/p&gt;
     &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'https://www.youtube.com/watch?v=C0DPdy98e4c'&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getVideoTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'TEST VIDEO'&lt;/span&gt;
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;You’ll notice that the only difference in this function is that pytest uses an &lt;code class=&quot;highlighter-rouge&quot;&gt;assert&lt;/code&gt;-statement where you might usually expect a &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt;-statement.&lt;/p&gt;
+&lt;p&gt;You’ll notice that the only difference in this function is that pytest uses an &lt;code class=&quot;highlighter-rouge&quot;&gt;assert&lt;/code&gt;–statement where you might usually expect a &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt;–statement.&lt;/p&gt;
 
 &lt;p&gt;Similarly, we can also write a test to check that the &lt;code class=&quot;highlighter-rouge&quot;&gt;yt2mp3.getVideoList()&lt;/code&gt; function successfully retrieves the URLs for each video in the provided playlist. For this test, I’ve created a simple test playlist that features three videos to keep the number of URLs manageable and prevent modifications from changing the expected result.&lt;br /&gt;
 So we need to:&lt;/p&gt;
@@ -76,7 +75,7 @@ So we need to:&lt;/p&gt;
 &lt;p&gt;While, you can see that there’s not a lot of code that goes into creating the object, it’s best to follow the &lt;a href=&quot;https://deviq.com/don-t-repeat-yourself/&quot;&gt;DRY&lt;/a&gt; principal and avoid redundancy.&lt;br /&gt;
 Now that our fixture is defined, we are going to use it to write two tests to check the program’s ability to download a video and convert the video to an mp3.&lt;br /&gt;
 To test the program’s download functionality, we’ll utilize the fact that the &lt;code class=&quot;highlighter-rouge&quot;&gt;yt2mp3.download()&lt;/code&gt; function returns the filepath when the download is successful by asserting that the returned filepath exists.&lt;/p&gt;
-&lt;p class=&quot;h-note&quot;&gt;Notice that we've provided our &lt;code class=&quot;highlighter-rouge&quot;&gt;test_song&lt;/code&gt; fixture as a parameter of the test function.&lt;/p&gt;
+&lt;p class=&quot;h-note&quot;&gt;Notice that we&amp;rsquo;ve provided our &lt;code class=&quot;highlighter-rouge&quot;&gt;test_song&lt;/code&gt; fixture as a parameter of the test function.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_video_download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test_song&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;video_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test_song&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;video_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -109,15 +108,15 @@ To test the program’s download functionality, we’ll utilize the fact that th
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 
 &lt;p&gt;Now we already have tests that cover a significant amount of the programs processes, without requiring a whole lot of work(&lt;em&gt;or code&lt;/em&gt;). 
-Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I’ll be updating this post or posting a follow-up with more helpful info as I become increasingly versed in Python testing.&lt;/p&gt;
+Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I’ll be updating this post or posting a follow–up with more helpful info as I become increasingly versed in Python testing.&lt;/p&gt;
 </description>
         <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
         <link>https://brettstevenson.io/blog/testing-python.html</link>
         <guid isPermaLink="true">https://brettstevenson.io/blog/testing-python.html</guid>
         
-        <category>python</category>
+        <category>Python</category>
         
-        <category>testing</category>
+        <category>Testing</category>
         
         
         <category>blog</category>
@@ -129,7 +128,7 @@ Hopefully, these examples have provided you a launchpad for testing your own pyt
         <description>&lt;p&gt;While the previous entry on optimizing your Jekyll site provided some basics to optimizing your Jekyll site performance, in this post I want to focus on providing a more comprehensive explanation of how you can create a more enjoyable development experience with the magic of &lt;a href=&quot;https://gulpjs.com/&quot;&gt;&lt;strong&gt;Gulp&lt;/strong&gt;&lt;/a&gt;.&lt;br /&gt;
 To get started, lets first discuss the basic workflow and file structure that we’ll be working with. As shown in the image below, we’ll be storing our site assets in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_assets/&lt;/code&gt; directory.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/16360374/41262490-f9d106b4-6d95-11e8-9e2d-c63b80bfdd45.png&quot; alt=&quot;file tree&quot; style=&quot;width:60%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/16360374/41262490-f9d106b4-6d95-11e8-9e2d-c63b80bfdd45.png&quot; alt=&quot;file tree&quot; style=&quot;width:50%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This will allow these files to be processed from within our &lt;a href=&quot;https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed&quot;&gt;Gulpfile&lt;/a&gt;, while remaining ignored by Jekyll. Though, a more in-depth explaination of the file-structure will be provided during each of the respective tasks.&lt;/p&gt;
 
@@ -226,7 +225,7 @@ To get started, lets first discuss the basic workflow and file structure that we
 
 &lt;p&gt;Now, you &lt;em&gt;could&lt;/em&gt; manually install all of these packages independantly, but in-case you’re looking for a shortcut, I’ve compiled the following command to allow you to conveniently install them all at once.&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-newer gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; autoprefixer browser-sync del gulp gulp-cssnano gulp-concat gulp-util gulp-newer gulp-imagemin imagemin-pngquant gulp-notify gulp-postcss gulp-ruby-sass gulp-run gulp-rename gulp-uglify-es run-sequence
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;styles&quot;&gt;Styles&lt;/h2&gt;
@@ -437,11 +436,13 @@ For this process we will need to create three tasks, two for processing the glob
 &lt;p class=&quot;h-tldr&quot;&gt;Here&amp;rsquo;s a &lt;a href=&quot;https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed&quot;&gt;gist&lt;/a&gt; with the resulting Gulpfile.js&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;While this Gulpfile provides a lot of optimization and added convenience to just about any site, there is still definitely room for improvement. Feel free to contact me or leave a comment with any improvements or suggestions!&lt;/p&gt;
+&lt;p&gt;While this Gulpfile provides a lot of optimization and added convenience to just about any site, there is definitely still room for improvement. Feel free to contact me or leave a comment with any improvements or suggestions!&lt;/p&gt;
 </description>
         <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
         <link>https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html</link>
         <guid isPermaLink="true">https://brettstevenson.io/blog/optimizing-jekyll-with-gulp-revisited.html</guid>
+        
+        <category>Javascript</category>
         
         <category>Jekyll</category>
         
@@ -450,8 +451,6 @@ For this process we will need to create three tasks, two for processing the glob
         <category>Performance</category>
         
         <category>Gulp</category>
-        
-        <category>Javascript</category>
         
         <category>GitHub Pages</category>
         
@@ -463,13 +462,23 @@ For this process we will need to create three tasks, two for processing the glob
       <item>
         <title>YouTube to MP3</title>
         <description>&lt;p class=&quot;badges&quot;&gt;
-  &lt;img src=&quot;https://img.shields.io/pypi/v/yt2mp3.svg&quot; alt=&quot;PyPi&quot; /&gt;
-  &lt;img src=&quot;https://pypip.in/py_versions/yt2mp3/badge.svg&quot; alt=&quot;PyPI - Python Version&quot; /&gt;
-  &lt;a href=&quot;https://github.com/tterb/yt2mp3/blob/master/LICENSE&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/license/tterb/yt2mp3.svg&quot; alt=&quot;License&quot; /&gt;&lt;/a&gt;
+&lt;!-- CI Status --&gt;
+  &lt;a href=&quot;https://travis-ci.org/tterb/yt2mp3&quot;&gt;&lt;img src=&quot;https://travis-ci.org/tterb/yt2mp3.svg?branch=master&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;
+  &lt;!--Project version--&gt;
+  &lt;a href=&quot;https://pypi.python.org/pypi/yt2mp3/&quot;&gt;&lt;img src=&quot;https://img.shields.io/pypi/v/yt2mp3.svg&quot; alt=&quot;PyPi Version&quot; /&gt;&lt;/a&gt;
+  &lt;!-- CodeCov --&gt;
+  &lt;a href=&quot;https://codecov.io/gh/tterb/yt2mp3&quot;&gt;&lt;img src=&quot;https://codecov.io/gh/tterb/yt2mp3/branch/master/graph/badge.svg&quot; alt=&quot;CodeCov&quot; /&gt;&lt;/a&gt;
+  &lt;!-- Docs Status --&gt;
+  &lt;a href=&quot;https://yt2mp3.readthedocs.io/en/latest/?badge=latest&quot;&gt;&lt;img src=&quot;https://readthedocs.org/projects/yt2mp3/badge/?version=latest&quot; alt=&quot;Documentation Status&quot; /&gt;&lt;/a&gt;
+  &lt;!-- Python version --&gt;
+  &lt;a href=&quot;https://pypi.python.org/pypi/yt2mp3/&quot;&gt;&lt;img src=&quot;https://pypip.in/py_versions/yt2mp3/badge.svg&quot; alt=&quot;PyPI Python Versions&quot; /&gt;&lt;/a&gt;
+  &lt;!-- &lt;a href=&quot;http://pepy.tech/badge/yt2mp3&quot;&gt;&lt;img src=&quot;http://pepy.tech/badge/yt2mp3&quot; alt=&quot;Downloads&quot;/&gt;&lt;/a&gt; --&gt;
+  &lt;!--License--&gt;
+  &lt;a href=&quot;https://opensource.org/licenses/MIT&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/License-MIT-yellow.svg&quot; alt=&quot;License&quot; /&gt;&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-  &lt;img src=&quot;https://user-images.githubusercontent.com/16360374/42410056-a417e33e-8198-11e8-8c43-f60b6a6037dc.gif&quot; alt=&quot;preview&quot; width=&quot;650&quot; /&gt;
+  &lt;img src=&quot;https://cdn.rawgit.com/tterb/yt2mp3/d96b8c70/docs/images/terminal.svg&quot; alt=&quot;preview&quot; width=&quot;750&quot; /&gt;
 &lt;/p&gt;
 
 &lt;h2 id=&quot;description&quot;&gt;Description&lt;/h2&gt;
@@ -477,44 +486,89 @@ For this process we will need to create three tasks, two for processing the glob
 The program will attempt to retrieve data for a song matching the provided input by querying the iTunes API and use the data to find a corresponding YouTube video, if a URL is not provided. The video will then be downloaded, converted, and the gathered data will be used to populate the metadata of the MP3.&lt;br /&gt;
 Once finished, the resulting MP3 file will be saved to your &lt;em&gt;Downloads&lt;/em&gt; directory, with the following file-structure &lt;code class=&quot;highlighter-rouge&quot;&gt;Music/{artist}/{track}.mp3&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; If a URL is provided and no match is found for the song data, the user will be prompted for the track/artist and the video thumbnail will be used as the album artwork.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; If a URL is provided and no match is found for the song data, the program will prompt the user for the track/artist and the YouTube thumbnail will be used as the album artwork.&lt;/p&gt;
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
 
-&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+&lt;h3 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h3&gt;
+&lt;p&gt;The program only requires that you have Python 3.4+ and &lt;a href=&quot;https://www.ffmpeg.org/&quot;&gt;ffmpeg&lt;/a&gt; or &lt;a href=&quot;https://www.libav.org/&quot;&gt;libav&lt;/a&gt; installed. For more information, check out the &lt;a href=&quot;https://yt2mp3.readthedocs.io/en/latest/additional_setup.html&quot;&gt;additional setup&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;install&quot;&gt;Install&lt;/h3&gt;
 &lt;p&gt;You can install the program with the following command:&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install yt2mp3
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;yt2mp3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
-&lt;p&gt;The program can executed via Python 3 as follows:&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yt2mp3 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;p&gt;The program can be executed via the as follows:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yt2mp3 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;options&quot;&gt;Options:&lt;/h4&gt;
-&lt;p&gt;| Arguments         |                                                       |
-|——————-|——————————————————-|
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-t, --track&lt;/code&gt;     | Specify the track name query                          |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-a, --artist&lt;/code&gt;    | Specify the artist name query                         |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-u, --url&lt;/code&gt;       | Specify a Youtube URL or ID                           |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-p, --playlist&lt;/code&gt;  | Specify a Youtube playlist URL or ID                  |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-o, --overwrite&lt;/code&gt; | Overwrite the file if one exists in output directory  |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-q, --quiet&lt;/code&gt;     | Suppress program command-line output                  |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-v, --verbose&lt;/code&gt;   | Display a command-line progress bar                   |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;--version&lt;/code&gt;       | Show the version number and exit                      |
-| &lt;code class=&quot;highlighter-rouge&quot;&gt;-h, --help&lt;/code&gt;      | Display information on usage and functionality       |&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; Displaying the progress bar currently has a significant impact on download performance, due to &lt;a href=&quot;https://github.com/nficano/pytube/issues/180&quot;&gt;#180&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-t, --track&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Specify the track name query&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-a, --artist&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Specify the artist name query&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-u, --url&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Specify a Youtube URL or ID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-p, --playlist&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Specify a Youtube playlist URL or ID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-o, --overwrite&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Overwrite the file if one exists in output directory&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-r, --resolution&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Specify the resolution for the cover-art&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-q, --quiet&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Suppress program command-line output&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-v, --verbose&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Display a command-line progress bar&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--version&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Show the version number and exit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-h, --help&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Display information on usage and functionality&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; Displaying the progress bar with the &lt;code class=&quot;highlighter-rouge&quot;&gt;-v, --verbose&lt;/code&gt; flag currently has a significant impact on download performance, due to &lt;a href=&quot;https://github.com/nficano/pytube/issues/180&quot;&gt;#180&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;documentation&quot;&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;Further documentation is available on &lt;a href=&quot;https://yt2mp3.readthedocs.io/en/latest/&quot;&gt;Read The Docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;development&quot;&gt;Development&lt;/h2&gt;
-&lt;p&gt;You can download and install the app with the following commands:&lt;/p&gt;
+&lt;p&gt;If you’d like to contribute to the project, you can download and install the program with the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Clone the repository / most up to date is on saftyBranch&lt;/span&gt;
-git clone https://github.com/tterb/yt2mp3
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Clone the repository / most up to date is on saftyBranch&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/tterb/yt2mp3
 
 &lt;span class=&quot;c&quot;&gt;# Navigate to the directory&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;yt2mp3
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;yt2mp3
 
 &lt;span class=&quot;c&quot;&gt;# Install program dependencies&lt;/span&gt;
-pip install &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -525,6 +579,8 @@ pip install &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
         <link>https://brettstevenson.io/blog/project/youtube-to-mp3.html</link>
         <guid isPermaLink="true">https://brettstevenson.io/blog/project/youtube-to-mp3.html</guid>
         
+        <category>Python</category>
+        
         <category>YouTube</category>
         
         <category>MP3</category>
@@ -533,7 +589,63 @@ pip install &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
         
         <category>Bash</category>
         
-        <category>Python</category>
+        <category>Projects</category>
+        
+        
+        <category>blog</category>
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Atomic Monokai Pro</title>
+        <description>&lt;p class=&quot;badges&quot;&gt;
+  &lt;a href=&quot;https://atom.io/themes/atomic-design-ui&quot;&gt;
+    &lt;img src=&quot;https://img.shields.io/apm/v/atomic-monokai-pro-syntax.svg?&quot; alt=&quot;Version&quot; /&gt;&amp;nbsp;
+  &lt;/a&gt;
+  &lt;a href=&quot;https://opensource.org/licenses/MIT&quot;&gt;
+    &lt;img src=&quot;https://img.shields.io/apm/l/atomic-monokai-pro-syntax.svg?&quot; alt=&quot;License&quot; /&gt;&amp;nbsp;
+  &lt;/a&gt;
+    &lt;img src=&quot;https://img.shields.io/apm/dm/atomic-monokai-pro-syntax.svg?maxAge=2592000?&quot; alt=&quot;Downloads&quot; /&gt;&amp;nbsp;
+  &lt;a href=&quot;https://atom.io/themes/atomic-monokai-pro-syntax&quot;&gt;
+    &lt;img src=&quot;https://badges.frapsoft.com/os/v1/open-source.svg?v=103&quot; alt=&quot;Open Source&quot; /&gt;&amp;nbsp;
+  &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://user-images.githubusercontent.com/16360374/35130498-07363c66-fc76-11e7-99c9-9bd7844ab1be.png&quot; alt=&quot;preview&quot; width=&quot;820&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://atom.io/themes/atomic-monokai-pro-syntax&quot;&gt;&lt;strong&gt;Atomic Monokai Pro&lt;/strong&gt;&lt;/a&gt; features a modern interpretation of the popular monokai color palette. Based on the &lt;a href=&quot;https://www.monokai.pro/&quot;&gt;Monokai Pro&lt;/a&gt; syntax-theme for Sublime Text and VSCode, this adaptated theme brings the same great enhancements to &lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt;.&lt;br /&gt;
+Additionally, this theme also features modifications to better emphasize crucial code, while allowing more trivial aspects of the syntax to fade into the background. In turn, allowing for easier and more effective analysis and visual-grepping.&lt;/p&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+
+&lt;p&gt;This theme can be installed from within Atom or via the command:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;apm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;atomic-monokai-pro-syntax 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;After installation, you can activated by going to the &lt;strong&gt;Settings &amp;gt; Themes&lt;/strong&gt; section and selecting it from the &lt;strong&gt;Syntax Themes&lt;/strong&gt; drop-down menu.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&quot;float:left;margin: 0 0 2em&quot;&gt;&lt;a href=&quot;https://atom.io/themes/atomic-monokai-pro-syntax&quot;&gt;&lt;img src=&quot;https://apm-badges.herokuapp.com/apm/atomic-monokai-pro-syntax.svg?theme=one-dark&quot; alt=&quot;apm badge&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+        <link>https://brettstevenson.io/blog/project/atomic-monokai-pro.html</link>
+        <guid isPermaLink="true">https://brettstevenson.io/blog/project/atomic-monokai-pro.html</guid>
+        
+        <category>Atom</category>
+        
+        <category>Syntax</category>
+        
+        <category>Design</category>
+        
+        <category>UI</category>
         
         <category>Projects</category>
         
@@ -576,17 +688,17 @@ pip install &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
         <link>https://brettstevenson.io/blog/improving-the-accessibility-of-jekyll.html</link>
         <guid isPermaLink="true">https://brettstevenson.io/blog/improving-the-accessibility-of-jekyll.html</guid>
         
-        <category>Markdown</category>
-        
         <category>Jekyll</category>
         
-        <category>Editor</category>
+        <category>Markdown</category>
         
-        <category>GitHub Pages</category>
+        <category>Editor</category>
         
         <category>Tools</category>
         
         <category>Electron</category>
+        
+        <category>Javascript</category>
         
         <category>Projects</category>
         
@@ -609,6 +721,8 @@ As an active Windows user, like many others, my experiences with the Windows App
         <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
         <link>https://brettstevenson.io/blog/windows-app-store.html</link>
         <guid isPermaLink="true">https://brettstevenson.io/blog/windows-app-store.html</guid>
+        
+        <category>Discuss</category>
         
         <category>Windows 10</category>
         
@@ -671,12 +785,12 @@ No matter the issue, &lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; provi
 
 &lt;h2 id=&quot;setup&quot;&gt;Setup:&lt;/h2&gt;
 &lt;p&gt;This package requires that you have Python 3, as well as BeautifulSoup4. On OS X and Linux systems Python 3 should be installed by default. Once Python is installed you can download &lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/&quot;&gt;BeautifulSoup&lt;/a&gt; with the command:&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip3 install bs4
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bs4
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; To my knowledge, Python3 is also included in the new &lt;em&gt;Bash on Windows&lt;/em&gt; linux-subsystem for Windows 10.&lt;/p&gt;
 
 &lt;p&gt;Furthermore, you can also make the program executable from anywhere in your file–system with the command &lt;code class=&quot;highlighter-rouge&quot;&gt;./UDTherapy.py&lt;/code&gt; by adding the program directory to your &lt;em&gt;PATH&lt;/em&gt; and by modifying the program permissions using the command:&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;chmod +x UDTherapy.py
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x UDTherapy.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -685,13 +799,13 @@ No matter the issue, &lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; provi
         <link>https://brettstevenson.io/blog/projects/urban-dictionary-therapy.html</link>
         <guid isPermaLink="true">https://brettstevenson.io/blog/projects/urban-dictionary-therapy.html</guid>
         
+        <category>Python</category>
+        
         <category>Urban Dictionary</category>
         
         <category>Command-line</category>
         
         <category>Bash</category>
-        
-        <category>Python</category>
         
         <category>Projects</category>
         
@@ -914,19 +1028,6 @@ No matter the issue, &lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; provi
       </item>
     
       <item>
-        <title>Site Reconstruction...</title>
-        <description>&lt;p&gt;I’m in the process of redesigning this website, though my previous site will remain active in the meantime.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 31 Mar 2017 00:00:00 +0000</pubDate>
-        <link>https://brettstevenson.io/blog/site-reconstruction.html</link>
-        <guid isPermaLink="true">https://brettstevenson.io/blog/site-reconstruction.html</guid>
-        
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
         <title>Upgrading the SSD on a Razer Blade (pt 2)</title>
         <description>&lt;p align=&quot;center&quot;&gt;
   &lt;img src=&quot;https://cloud.githubusercontent.com/assets/16360374/20456020/80f8afd0-ae1f-11e6-8cab-b147675cd539.jpg&quot; height=&quot;200&quot; alt=&quot;razer blade&quot; title=&quot;Razer Blade&quot; /&gt;
@@ -1004,11 +1105,11 @@ No matter the issue, &lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; provi
         <link>https://brettstevenson.io/blog/how-to-upgrade-ssd-pt2.html</link>
         <guid isPermaLink="true">https://brettstevenson.io/blog/how-to-upgrade-ssd-pt2.html</guid>
         
+        <category>Tutorial</category>
+        
         <category>Razer</category>
         
         <category>Laptop</category>
-        
-        <category>Tutorial</category>
         
         <category>Tech</category>
         
@@ -1126,6 +1227,8 @@ No matter the issue, &lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; provi
         <link>https://brettstevenson.io/blog/how-to-upgrade-ssd-pt1.html</link>
         <guid isPermaLink="true">https://brettstevenson.io/blog/how-to-upgrade-ssd-pt1.html</guid>
         
+        <category>Tutorial</category>
+        
         <category>Razer</category>
         
         <category>Laptop</category>
@@ -1135,8 +1238,6 @@ No matter the issue, &lt;strong&gt;Urban Dictionary Therapy&lt;/strong&gt; provi
         <category>Tools</category>
         
         <category>How-To</category>
-        
-        <category>Tutorial</category>
         
         
         <category>blog</category>
