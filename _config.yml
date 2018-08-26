@@ -62,7 +62,7 @@ plugins:
 
 pagination:
   enabled: true
-  per_page: 5
+  per_page: 4
   permalink: 'blog3/page:num'
   title: ':title'
   sort_field: 'date'
@@ -108,8 +108,8 @@ share:
   - twitter
   - google-plus
   - linkedin 
-  - pinterest 
-  - reddit
+  # - pinterest 
+  # - reddit
   # - tumblr
   # - pocket
   # - wordpress
