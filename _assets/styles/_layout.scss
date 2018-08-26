@@ -30,7 +30,6 @@ $on-laptop:        800px;
 }
 
 .col {
-  // display: block;
   float: left;
   margin-bottom: $spacing-unit / 4;
   padding-left: $spacing-unit / 2;
@@ -76,12 +75,8 @@ $on-laptop:        800px;
 }
 
 .post-meta {
-  // position: relative;
   color: #fefefe;
   font-size: _font(prose-size-large) !important;
-  // left: 5px;
-  // top: 28%;
-  // text-align: left;
 }
 
 /**
