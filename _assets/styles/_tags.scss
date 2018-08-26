@@ -4,10 +4,9 @@
   border: 0 !important;
   padding: 3em 8%;
   .tags-list {
-    // text-align: center;
-    text-align: left;
-    width: 80%;
-    margin: 1em auto 3em 3%;
+    text-align: center;
+    width: 85%;
+    margin: 1em auto 3em;
   }
   hr {
     margin: 1em 0 1.5em;
@@ -66,8 +65,8 @@
           font-weight: 600;
         }
         &:hover .title, &:active .title {
-          color: saturate(lighten(_palette(accent2, bg), 15%), 5%) !important;
-          // text-shadow: 0 0.5px 1px rgba(#000, 0.2);
+          color: saturate(lighten(_palette(accent2, bg), 12%), 5%) !important;
+          text-shadow: none;
         }
       }
       .date-container {
