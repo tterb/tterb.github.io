@@ -112,6 +112,14 @@
     } else if ($('body.blog').length) {
       sr.reveal('post-card', 20);
     }
+    // else if ($('.post').length) {
+    //   sr.reveal('#back-to-top', 25);
+    // }
+    // else if ($('.blog').length) {
+    //   sr2.reveal('.boxer', 25);
+    // }
+    // sr.reveal('#three .tile', 25);
+    // sr.reveal('#three', 10);
     $('.filter li').on('click', function() {
       var $this = $(this),
       isActive = $this.hasClass( 'active' ),
@@ -188,4 +196,64 @@
       removalDelay: 400
     });
   });
+  
+  // var filterizd = $('.filter-container').filterizr({
+  //   animationDuration: 0.5,    // in seconds
+  //   filter: 'all',             // Initial filter
+  //   callbacks: { 
+  //     onFilteringStart: function() { },
+  //     onFilteringEnd: function() { alignTiles() },
+  //     onShufflingStart: function() { },
+  //     onShufflingEnd: function() { alignTiles() },
+  //     onSortingStart: function() { },
+  //     onSortingEnd: function() { alignTiles() }
+  //   },
+  //   controlsSelector: '',      // Selector for custom controls
+  //   delay: 0,                  // Transition delay in ms
+  //   delayMode: 'progressive',  // 'progressive' or 'alternate'
+  //   easing: 'ease-out',
+  //   filterOutCss: {            // Filtering out animation
+  //     // position: 'relative',
+  //     opacity: 0,
+  //     margin: '0 0.025em',
+  //     transform: 'translate3d(0)'
+  //     // transform: 'scale(0.5)'
+  //   },
+  //   filterInCss: {             // Filtering in animation
+  //     // position: 'relative',
+  //     opacity: 0,
+  //     margin: '0 0.025em',
+  //     transform: 'translate3d(0)'
+  //     // transform: 'scale(1)',
+  //   },
+  //   layout: 'sameSize',        // See layouts
+  //   multifilterLogicalOperator: 'or',
+  //   selector: '.filter-container',
+  //   setupControls: true // Should be false if controlsSelector is set
+  // });
+  
+// $(document).ready(function() {
+//   $(".animsition").animsition({
+//     inClass: 'fade-in-left',
+//     outClass: 'fade-out-left',
+//     inDuration: 1500,
+//     outDuration: 800,
+//     linkElement: '.animsition-link',
+//     // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+//     loading: true,
+//     loadingParentElement: 'body', //animsition wrapper element
+//     loadingClass: 'animsition-loading',
+//     loadingInner: '', // e.g '<img src="loading.svg" />'
+//     timeout: false,
+//     timeoutCountdown: 5000,
+//     onLoadEvent: true,
+//     browser: [ 'animation-duration', '-webkit-animation-duration'],
+//     // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+//     // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+//     overlay : false,
+//     overlayClass : 'animsition-overlay-slide',
+//     overlayParentElement : 'body',
+//     transition: function(url){ window.location.href = url; }
+//   });
+// });
 })(jQuery);
