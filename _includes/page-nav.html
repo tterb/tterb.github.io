@@ -1,3 +1,4 @@
+<div>Previous: {{ paginator.previous_page }}</div>
 <nav class="pagination">
   <input type="hidden" id="total_pages" value="{{ paginator.total_pages }}">
   <input type="hidden" id="current_pages" value="{{ paginator.page }}">
@@ -5,7 +6,7 @@
   <div class="page-links">
     {% if paginator.previous_page %} 
       {% if paginator.previous_page == 1 %}
-        <a href="blog/" class="page-link" title="Previous Page">&laquo;</a> 
+        <a href="/blog/" class="page-link" title="Previous Page">&laquo;</a> 
       {% else %}
         <a href="{{ site.basurl }}/blog/page{{ paginator.previous_page }}/" class="page-link" title="Previous Page">&laquo;</a> 
       {% endif %}
