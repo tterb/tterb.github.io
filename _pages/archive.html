@@ -1,0 +1,30 @@
+---
+key: 9
+title: Archive
+permalink: /archive
+options: fullwidth
+desc: An archive of my blog posts
+image: blog.jpg
+sitemap:
+  priority: 0.5
+---
+
+<div id="archive">
+  <ul>
+  {% assign p = 'now' | date: "%Y" %}
+  {% for post in site.posts %}
+    {% assign n = post.date | date: "%Y" %}
+    {% if n != p %}
+      {% assign p = n %}
+      <hr/><h5 class="year">{{ n }}</h5>
+    {% endif %}
+    <li class="archive-post">
+      <p class="date-container"><span class="date">{{ post.date | date: "%d %b" }}</span></p>&nbsp;
+      <a class="post-link" href="{{ post.url }}">
+        <b class="title">{{ post.title }}</b>&nbsp;
+        {{ post.description | strip_html | truncate: 64 }}
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
