@@ -171,7 +171,7 @@
         tCounter: '<span class="mfp-counter">%curr% of %total%</span>'    // markup of counter
       },
       image: {
-        markup: '<div class="mfp-figure">'+'<div class="mfp-close fa fa-close"></div>'+'<div class="mfp-img"></div>'+'<div class="mfp-bottom-bar">'+'<div class="mfp-title"></div>'+'<div class="mfp-desc"></div>'+'<div class="mfp-counter"></div>'+'</div>'+'</div>',
+        markup: '<div class="mfp-figure">'+'<div class="mfp-close fas fa-close"></div>'+'<div class="mfp-img"></div>'+'<div class="mfp-bottom-bar">'+'<div class="mfp-title"></div>'+'<div class="mfp-desc"></div>'+'<div class="mfp-counter"></div>'+'</div>'+'</div>',
         titleSrc: 'title',
         verticalFit: true,
         preloader: true
@@ -188,7 +188,7 @@
         tCounter: '<span class="mfp-counter">%curr% of %total%</span>'    // markup of counter
       },
       image: {
-        markup: '<div class="mfp-figure">'+'<div class="mfp-close fa fa-close"></div>'+'<div class="mfp-img"></div>'+'<div class="mfp-bottom-bar">'+'<div class="mfp-title"></div>'+'<div class="mfp-desc"></div>'+'<div class="mfp-counter"></div>'+'</div>'+'</div>',
+        markup: '<div class="mfp-figure">'+'<div class="mfp-close fas fa-close"></div>'+'<div class="mfp-img"></div>'+'<div class="mfp-bottom-bar">'+'<div class="mfp-title"></div>'+'<div class="mfp-desc"></div>'+'<div class="mfp-counter"></div>'+'</div>'+'</div>',
         titleSrc: 'title',
         verticalFit: true,
         preloader: true
