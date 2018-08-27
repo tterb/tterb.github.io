@@ -32,7 +32,7 @@
     "uncss": "^0.16.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp build && rake test"
   },
   "repository": {
     "type": "git",
