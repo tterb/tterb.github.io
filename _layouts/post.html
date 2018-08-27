@@ -5,7 +5,7 @@
   <body class="post-content is-loading" role="main">
     {% include header.html %}
     <div class="{% if page.options contains 'readme' %}readme-post{% endif %} post">
-      <a class="back-post" href="{{ '/blog' | prepend: site.baseurl }}"><i class="fa fa-chevron-left"></i><span class="animated fadeIn">Back to Blog</span></a>
+      <a class="back-post" href="{{ '/blog' | prepend: site.baseurl }}"><i class="fas fa-chevron-left"></i><span class="animated fadeIn">Back to Blog</span></a>
       {% if page.options contains "fullhead" %}
         <section class="post-image animated fadeInDown fullhead">
           {% if page.image %}
@@ -39,7 +39,7 @@
           <h1 class="post-title">{{ page.title }}</h1>
           <hr>
           {{ content }}
-          <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
+          <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.svg" alt="Back to Top"/></a>
         </section>
       {% else %}
         <div class="post-wrapper">
@@ -53,7 +53,7 @@
           <section id="content" class="written-content">
             <a name="top"></a>
             {{ content }}
-            <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.png" alt="Back to Top"/></a>
+            <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.svg" alt="Back to Top"/></a>
             <!-- Emojicom -->
             <!-- <div id="emojicom-widget-inline" class="emojicom-panel"></div> -->
             <!-- Tags -->
