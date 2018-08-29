@@ -11,12 +11,14 @@ sitemap:
 
 <div id="archive">
   <ul>
-  {% assign p = 'now' | date: "%Y" %}
+  {% assign current = 'now' | date: "%Y" %}
   {% for post in site.posts %}
-    {% assign n = post.date | date: "%Y" %}
-    {% if n != p %}
-      {% assign p = n %}
-      <hr/><h5 class="year">{{ n }}</h5>
+    {% assign year = post.date | date: "%Y" %}
+    {% if post == site.posts.first %}
+      <h5 class="year">{{ year }}</h5>
+    {% elsif year != current %}
+      {% assign current = year %}
+      <hr/><h5 class="year">{{ year }}</h5>
     {% endif %}
     <li class="archive-post">
       <p class="date-container"><span class="date">{{ post.date | date: "%d %b" }}</span></p>&nbsp;
