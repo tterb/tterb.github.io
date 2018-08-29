@@ -325,6 +325,7 @@
 .sidebar-tags {
   vertical-align: baseline;
   ul {
+    text-align: left;
     width: 95%;
     margin: 0.5em auto 0;
     padding: 0;
@@ -357,41 +358,157 @@
   position: relative;
   left: 50%;
   margin: 8px auto 0;
-    .page-links {
-      position: relative;
-      border: 1px solid #E7EAF1;
-      border-radius: 3px;
-      background-color: #fff;
-      padding: 0 8px;
-      overflow: auto;
-      box-shadow: 0 1px 3px rgba(0, 37, 55, 0.06);
-      @include breakpoint(medium) {
-        left: -50%;
-      } 
-    }
-    .page-link {
-      display: block;
-      float: left;
-      width: 34px;
-      height: 34px;
-      margin: 6px;
-      font-size: 16px;
-      color: #A9B0BC;
-      line-height: 34px;
-      text-align: center;
-      border-radius: 2px;
-      cursor: pointer; 
-      &:hover {
-        color: #8F98AA;
-        background-color: #EEF0F4; 
-      }
-    }
-    .active {
+  .page-links {
+    position: relative;
+    border: 1px solid #E7EAF1;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 0 8px;
+    overflow: auto;
+    box-shadow: 0 1px 3px rgba(0, 37, 55, 0.06);
+    @include breakpoint(medium) {
+      left: -50%;
+    } 
+  }
+  .page-link {
+    display: block;
+    float: left;
+    width: 34px;
+    height: 34px;
+    margin: 6px;
+    font-size: 16px;
+    color: #A9B0BC;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer; 
+    &:hover {
       color: #8F98AA;
       background-color: #EEF0F4; 
     }
-    #page-link-container {
-      display: inline-block;
-      float: left; 
+  }
+  .active {
+    color: #8F98AA;
+    background-color: #EEF0F4; 
+  }
+  #page-link-container {
+    display: inline-block;
+    float: left; 
+  }
+}
+
+/* Archive page */
+#archive {
+  width: 85vw;
+  border: 0 !important;
+  margin: 0 auto;
+  padding: 3em 0 6em;
+  .year {
+    color: lighten(#30333b, 10%);
+    font-size: 1.75em;
+    font-weight: _font(ctrl-bold);
+    letter-spacing: 0.05em;
+    line-height: 1 !important;
+    margin: 0.45em auto;
+  }
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  .post-link {
+    position: relative;
+    top: 3px;
+    white-space: nowrap !important;
+    &:hover .title, &:active .title {
+      color: saturate(darken(_palette(accent2, bg), 8%), 5%) !important;
+      text-shadow: none !important; //0 0.5px 0.5px rgba(#000, 0.2);
     }
+    .title {
+      font-family: _font(hdr-family);
+      font-size: _font(hdr-size-large);
+      font-weight: _font(hdr-bold);
+      letter-spacing: 0.03em;
+      color: rgba(#000, 0.7) !important;
+      padding-left: 4px;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      &:hover, &:active {
+        color: darken(_palette(accent2, bg), 2%) !important;
+        text-shadow: none !important;
+      }
+    }
+  }
+
+  hr {
+    position: relative;
+    border-top: 1px solid rgba(48,56,64,0.2);
+    width: 95%;
+    margin: 1em auto;
+    opacity: 0.5;
+    &:nth-child(2) {
+      border-color: rgba(#000, 0);
+    }
+  }
+}
+.archive-post {
+  color: rgba(#000, 0.8);
+  font-family: _font(ctrl-family);
+  font-size: _font(hdr-size-smaller);
+  margin: 0 3em;
+  padding: 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+  .date-container {
+    display: inline-flex;
+    font-size: 18px;
+    text-align: right;
+    min-width: 65px;
+    max-width: 65px;
+    vertical-align: middle;
+    margin: auto;
+    .date {
+      color: rgba(#000,0.55);
+      font-family: _font(hdr-family);
+      font-size: _font(hdr-size-xxsmall) !important;
+      text-align: right;
+      min-width: 100%;
+      max-width: 100%;
+      padding: 2px 8px 2px 0;
+      border-right: 0.5px solid rgba(#000, 0.5);
+    }
+  }
+}
+
+@include breakpoint(small) {
+  .archive-post {
+    margin-left: 4.5vw;
+    margin-right: 7.5vw;
+  }
+  .year {
+    margin-left: 0.75em;
+  }
+}
+
+body.is-mobile {
+  #blog {
+    .post-list > li {
+      width: 80%;
+      margin: 0.5em 10% !important;
+    }
+  }
+  #archive {
+    padding: 1.25em 0.5em 6em;
+    .archive-post {
+      margin: 0 1em;
+      .date-container {
+        font-size: 14px;
+      }
+      .post-link .title {
+        font-size: 1em;
+      }
+    }
+  }
   }
