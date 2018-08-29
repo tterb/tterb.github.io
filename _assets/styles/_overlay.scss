@@ -54,7 +54,6 @@ body.search-overlay {
   left: -200px;
   width: 100%;
   opacity: 0;
-
   &.active {
     top: 0;
     left: 0;
@@ -67,6 +66,7 @@ body.search-overlay {
   }
 
   .overlay-header {
+    color: rgba(#fff, 0.9);
     font-size: 2em;
     border: none !important;
     border-bottom: 1px solid rgba(#fff, 0.8) !important;
@@ -111,26 +111,30 @@ body.search-overlay {
     width: 100%;
     top: 6em;
     outline: 0;
+    list-style: none;
     margin: 0 0 5px;
     padding: 0;
-
-    .entry-date {
-      display: none;
-      color: rgba(#fff, 0.75);
-      float: right;
-    }
-    
     h4 {
-      margin: 0.25em 0 0.5em;
+      margin: 0.35em 0;
     }
-
     li {
-      font-size: 1em;
-      margin: 0 10px;
-      padding: 3px 10px;
-
+      margin: 0 0.75em;
+      padding-left: 0.25em;
+      vertical-align: middle;
+      a {
+        font-size: 1.25em;
+        vertical-align: middle;
+        .entry-date {
+          display: block;
+          color: rgba(#fff, 0.75);
+          font-size: 0.8em;
+          float: right;
+          padding: 0.25em 1em 0 0;
+          vertical-align: middle;
+        }
+      }
       &:hover {
-        background: rgba(#fff, 0.075);
+        background: rgba(#fff, 0.065);
         transition: all 350ms ease-in-out;
         // border: 1px dashed #FFFFFF;
       }
@@ -138,14 +142,9 @@ body.search-overlay {
   }
 }
 
-.search-form .results .entry-date {
-  display: block;
-  float: right;
-}
-
 .search-wrapper {
   position: relative;
-  top: -33vh;
+  top: -20vh;
   border: 0 !important;
   margin: auto;
   transition: all 350ms ease-in-out;
@@ -156,7 +155,7 @@ body.search-overlay {
       height: 2.55em;
       border: 0;
       border-radius: 0;
-      padding: 0 2em 0 0.5em;
+      padding: 0 2em 0 0.25em;
       outline: 0;
       &::-webkit-input-placeholder { 
         color: rgba(#fff, 0.65) !important;
