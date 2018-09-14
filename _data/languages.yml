@@ -1,14 +1,14 @@
--   id: Java
-    xp: 8
 -   id: Python
     xp: 8
+-   id: Java
+    xp: 7
 -   id: Javascript
     xp: 6
 -   id: C++
     xp: 4
 -   id: Ruby
-    xp: 4
+    xp: 3
 -   id: HTML/CSS
     xp: 8
--   id: Lua
-    xp: 3
+# -   id: Lua
+#     xp: 3
