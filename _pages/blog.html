@@ -20,13 +20,15 @@ sitemap:
       {% for post in paginator.posts %}
         {% if post.image %}
         <li class="post-card">
-          <div class="img-cont clearfix">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+          <div class="card-img-container clearfix">
             <a href="{{ post.url | prepend: site.baseurl }}" class="image featured">
               <img src="{{ post.image | prepend: '/assets/img/posts/' | prepend: site.baseurl }}" alt="{{ post.title }}"/>
             </a>
           </div>
-          <div class="card-cont clearfix">
-            <h2>{{ post.title }}</h2>
+          </a>
+          <div class="card-content clearfix">
+            <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
             <p>{{ post.description | strip_html | truncatewords: 25, "..." }}</p>
             <div class="card-detail clearfix">
               <ul class="card-tags">
