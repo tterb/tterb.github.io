@@ -1,14 +1,8 @@
-/***
-* RESUME
-***/
+/*
+ * RESUME
+ */
 
 $sidebar-color: #2a303a;
-
-@keyframes growFromLeft {
-  0% { transform: scaleX(0) }
-  75% { transform: scaleX(1.2) }
-  100% { transform: scaleX(1) }
-}
 
 .resume {
   background-color: _palette(white);
@@ -16,13 +10,11 @@ $sidebar-color: #2a303a;
   height: 100%;
   width: 100%;
   * {
-    font-family: 'Open Sans', Arial, sans-serif !important;
+    font-family: 'Open Sans','Avenir Next','Helvetica Neue',Arial, sans-serif !important;
   }
   .fa-circle {
-    // position: relative;
     color: rgba(#000, 0.65) !important;
     text-shadow: none !important;
-    // top: -3px;
     width: 10px;
   }
 }
@@ -50,12 +42,12 @@ h6 {
     z-index: 99999;
     .img-container {
       width: 100%;
-      margin: 2em auto 2.05em;
+      margin: 2.1em auto 2em;
       img {
         display: block;
         background-size: cover;
-        width: 70%;
-        height: auto;
+        width: 175px;
+        height: 175px;
         max-width: 200px;
         border-radius: 100%;
         box-shadow: 0 0 25px rgba(#000, 0.7);
@@ -68,16 +60,10 @@ h6 {
         width: 80%;
         max-width: 225px;
         margin: 1px auto;
-        // .white-text {
-          // color: rgba(#fff, 0.75);
-        // }
         .progress {
           background: lighten($sidebar-color, 5%);
           box-shadow: 2px 1px 3px rgba(#000, 0.4);
           margin-top: 3px;
-          > div {
-            // box-shadow: 2px 1px 5px rgba(#000, 0.85);
-          }
         }
       }
     }
@@ -98,19 +84,20 @@ h6 {
     #contact {
       position: relative;
       top: 2.5vh;
-      padding: 1.2em 0 0;
+      padding: 3em 0 0;
       .icons {
         color: rgba(#fff, 0.55);
-        // font-size: 110%;
         line-height: 1.5;
         text-align: center;
         margin: 0.15em auto 1em;
         padding: 0.25em 0.75em;
         li {
-          font-size: 165%;
+          font-size: 160%;
+          text-align: center;
           width: 15%;
           min-width: 30px;
           max-width: 35px;
+          vertical-align: middle;
           margin: 0 auto;
           padding: 0 5px;
           text-shadow: 0 0 5px rgba(#000,0.65) !important;
@@ -118,18 +105,13 @@ h6 {
             color: rgba(#fff, 0.85) !important;
           }
           &:first-child {
-            position: relative;
-            font-size: 165%;
             padding-left: 0;
-          }
-          &:nth-child(2) {
-            position: relative;
-            font-size: 150%;
+            padding-right: 0;
           }
           &:last-child {
             position: relative;
-            font-size: 150%;
-            top: -2px;
+            font-size: 158%;
+            top: 2px;
           }
         }
       }
@@ -153,13 +135,13 @@ h6 {
     float: left;
     margin: 0 auto;
     padding-left: 2em;
-    padding-bottom: 4em;
+    padding-bottom: 3em;
   .head {
     margin: 1.5em 0 2.75em 0;
     h1 {
       font-size: 10.15vw;
       font-weight: _font(hdr-black);
-      letter-spacing: 0.03em;
+      letter-spacing: 0.01em;
       line-height: 1.025;
       color: darken($sidebar-color, 2%);
       max-width: 700px;
@@ -236,7 +218,6 @@ h6 {
         &::after {
           background: _palette(accent3, bg);
           height: 3px;
-          animation: 1s ease-out 0s 1 growFromLeft;
         }
       }
     }
@@ -291,13 +272,42 @@ h6 {
       font-weight: _font(ctrl-bold) !important;
     }
     a {
-      color: #30a5c0;
+      color: _palette(link);
       &:hover, &:active {
-        color: saturate(_palette(accent3, bg), 15%);
+        color: _palette(link-hover);
       }
     }
   }
   &:last-child p {
     margin: 0.35em 0 1.55em;
+  }
+}
+
+body.resume header {
+  h1 {
+    display: none;
+  }
+  .menu-toggle {
+    span, span::before, span::after {
+      background: rgba(#000, 0.35); 
+    }
+    &:hover {
+      span, span::before, span::after {
+        background: rgba(#000, 0.85);
+      }
+    }
+    &.active {
+      span {
+        background: transparent;
+      }
+      span::before, span::after {
+        background: rgba(#fff, 0.65); 
+      }
+      &:hover {
+        span::before, span::after {
+          background: rgba(#fff, 0.9);
+        }
+      }
+    }
   }
 }
