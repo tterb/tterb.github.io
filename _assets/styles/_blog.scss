@@ -1,5 +1,5 @@
 #blog {
-  background: #f7f8fa;
+  background: #f9fafc;
   width: 90vw;
   min-height: 25em;
   margin: auto;
@@ -39,14 +39,14 @@
       display: inline-block;
       position: relative;
       color: #fff;
-      font-size: 12vw;
+      font-size: 13vw;
       font-weight: 900;
       letter-spacing: normal;
       line-height: 1.4;
       text-align: center;
       text-shadow: none !important;
       top: 0.5em;
-      left: -2.375em;
+      left: -2.075em;
       // border-bottom: 2px solid hsla(240,1%,54%,0.45);
       margin: 0 auto;
     }
@@ -87,15 +87,14 @@
     transition: all 350ms ease-in-out;
     &:hover {
       // box-shadow: 0.5px 1px 10px rgba(#000, 0.5);
-      box-shadow: 0 0 1px rgba(39,44,49,0.1), 0 3px 16px rgba(39,44,49,0.07);
+      box-shadow: 0 0 1px rgba(39,44,49,0.1), 0 3px 16px rgba(39,44,49,0.15);
       transform: translate3D(0,-0.5px,0);
       transition: all 350ms ease;
     }
-    .img-cont {
+    .card-img-container {
       display: inline;
       position: relative;
       min-width: 100%;
-      // height: 300px;
       object-fit: cover;
       overflow: hidden;
       a {
@@ -112,7 +111,7 @@
         }
       }
     }
-    .card-cont {
+    .card-content {
       color: rgba(#000, 0.85);
       height: auto;
       padding: 0 1.25em;
@@ -121,12 +120,12 @@
         letter-spacing: 0.015em;
         line-height: 1.15;
         text-transform: none;
-        width: 90%;
+        width: 82%;
         margin-top: 0.35em !important;
         padding-bottom: 0.2em !important;
       }
       p {
-        margin: 0.5em 0 1.25em 0.25em;
+        margin: 0.65em 0.25em 1.25em;
       }
       .card-detail {
         width: 100%;
@@ -324,6 +323,7 @@
 
 .sidebar-tags {
   vertical-align: baseline;
+  padding: 0.85em 0.05em !important;
   ul {
     text-align: left;
     width: 95%;
@@ -335,8 +335,8 @@
   }
 }
 
-.card-tag-item {
-  background: rgba(#edecee, 0.9);
+.card-tag-item, .post-tag-item {
+  background: rgba(#ebeaec, 0.95);
   font-size: 0.85em;
   border-radius: 4px;
   box-shadow: 0 1.5px 4px -2px rgba(#000, 0.4);
@@ -348,9 +348,14 @@
     color: rgba(#000, 0.65);
   }
   &:hover {
+    background: rgba(#e5e4e6, 0.9);
     color: rgba(#000, 0.8);
     box-shadow: 0 2px 5px -2px rgba(#000, 0.7) !important;
   }
+}
+
+.card-tag-item {
+  margin-right: 5px;
 }
 
 .pagination {
