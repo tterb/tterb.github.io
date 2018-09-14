@@ -570,6 +570,7 @@ ul {
   }
   &.inline {
     list-style: none !important;
+    padding-left: 0;
     li {
       display: inline-block;
     }
@@ -1451,7 +1452,6 @@ button, .button {
         margin-bottom: 0.5em !important;
         padding-bottom: 0.5em !important;
       }
-
       > a {
         display: block;
         color: rgba(#fff, 0.75);
@@ -1473,6 +1473,23 @@ button, .button {
       }
     }
   }
+  .menu-social-list {
+    position: absolute;
+    left: 32px;
+    bottom: 5px;
+    width: auto;
+    margin: auto;
+    margin-bottom: 10px;
+    li {
+      color: rgba(#fff, 0.4);
+      font-size: 1.5em;
+      padding-left: 0.25em;
+      a:hover {
+        color: rgba(#fff, 0.8);
+      }
+    }
+  }
+  
   .close {
     display: none;
     position: absolute;
@@ -1489,17 +1506,6 @@ button, .button {
     transition: opacity 250ms ease-in-out;
     cursor: pointer;
     opacity: 0.5;
-  }
-
-  &.post-menu {
-    background-color: _palette(bg) !important;
-    ul > li {
-      color: _palette(fg-bold);
-      border-top: solid 1px rgba(#fff, 0.15);
-      &:first-child {
-        border-top: none;
-      }
-    }
   }
   @include breakpoint(small) {
     font-size: 11pt;
