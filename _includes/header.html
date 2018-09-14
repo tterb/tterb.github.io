@@ -1,45 +1,20 @@
 
-<header id="header" {% if page.layout == 'landing' %} class="landing alt" {% elsif page.layout == 'post' %} class="alt {% if page.options contains 'readme' %}readme{% endif %}"{% endif %} style="z-index:999999">
-  <h1><a href="{{ '/index.html' | prepend: site.baseurl }}">
-  {% if site.logo %}
-    <img class="header-logo" src="{{ site.logo | prepend: site.baseurl }}" alt="logo"/><span class="animated fadeIn">Brett Stevenson</span>
+<header id="header" {% if page.layout == 'landing' %} class="landing alt" {% elsif page.layout == 'post' %} class="alt {% if page.options contains 'readme' or page.title contains 'resume' %}dark{% endif %}"{% endif %} style="z-index:999999">
+  {% if page.layout == 'post' %}
+    <a class="back-post" href="{{ '/blog' | prepend: site.baseurl }}"><i class="fas fa-chevron-left"></i><span class="animated fadeIn">Back to Blog</span></a>
   {% else %}
-    {{ site.title }}
+    <h1><a href="{{ '/index.html' | prepend: site.baseurl }}">  
+    {% if site.logo %}
+      <img class="header-logo" src="{{ site.logo | prepend: site.baseurl }}" alt="logo"/><span class="animated fadeIn">Brett Stevenson</span>
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+    </a></h1>
   {% endif %}
-  </a></h1>
   <nav id="nav">
     <ul>
       <li class="special">
-        {% if page.layout == 'landing' %}
-          <div id="menu-alt" class="landing-menu animated slideInRight">
-            <ul class="menu-page-list">
-              <li class="menu-page-link"><a class="" href="{{ "/index.html" | prepend: site.baseurl }}">Home</a></li>
-              {% assign sorted_pages = site.pages | sort: 'key','last' %}
-              {% for page in sorted_pages %}
-                {% if page.title %}
-                  {% unless page.options contains 'nomenu' or page.url contains '/page' %}
-                  <li class="menu-page-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                  {% endunless %}
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </div>
-        {% else %}
-          <a class="menu-toggle" id="menuToggle" href="#menu"><span></span></a>
-        {% endif %}
-        <div id="menu" {% if page.layout == 'post' %} class="post-menu" {% elsif page.layout == 'landing' %} class="landing-menu" {% endif %}>
-          <ul class="menu-page-list ">
-            <li class="menu-page-link"><a href="{{ "/index.html" | prepend: site.baseurl }}">Home</a></li>
-            {% assign sorted_pages = site.pages | sort: 'key','last' %}
-            {% for page in sorted_pages %}
-              {% if page.title %}
-                {% unless page.options contains 'nomenu'  or page.url contains '/page' %}
-                <li class="menu-page-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                {% endunless %}
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
+        {% include menu.html %}
       </li>
     </ul>
   </nav>

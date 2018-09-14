@@ -1,0 +1,39 @@
+{% if page.layout == 'landing' %}
+  <div id="menu-alt" class="landing-menu animated slideInRight">
+    <ul class="menu-page-list">
+      <li class="menu-page-link"><a class="" href="{{ "/index.html" | prepend: site.baseurl }}">Home</a></li>
+      {% assign sorted_pages = site.pages | sort: 'key','last' %}
+      {% for page in sorted_pages %}
+        {% if page.title %}
+          {% unless page.options contains 'nomenu' or page.url contains '/page' %}
+          <li class="menu-page-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% else %}
+  <a class="menu-toggle" id="menuToggle" href="#menu"><span></span></a>
+{% endif %}
+<div id="menu" {% if page.layout == 'post' %} class="post-menu" {% elsif page.layout == 'landing' %} class="landing-menu" {% endif %}>
+  <ul class="menu-page-list">
+    <li class="menu-page-link"><a href="{{ "/index.html" | prepend: site.baseurl }}">Home</a></li>
+    {% assign sorted_pages = site.pages | sort: 'key','last' %}
+    {% for page in sorted_pages %}
+      {% if page.title %}
+        {% unless page.options contains 'nomenu'  or page.url contains '/page' %}
+        <li class="menu-page-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <ul class="menu-social-list inline">
+    {% for social in site.social_links %}
+      {% if social[1] %}
+        {% if social[0] != 'email' %}
+          <li><a target="_blank" href="{{ social[1] }}" rel="noopener"><span class="fab fa-fw fa-{{ social[0] }}"></span></a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

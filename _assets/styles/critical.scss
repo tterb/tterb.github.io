@@ -184,7 +184,7 @@ body.is-loading {
     top: 0;
     left: 0.6em;
     transition: all 100ms ease-in-out;
-    margin-top: 0.55em;
+    margin-top: 0.2em;
     &:hover {
       color: #DADEE2;
       transition: color 350ms ease-in-out;
@@ -200,12 +200,12 @@ body.is-loading {
       // top: -3px;
       top: -0.25vw;
       border: 0;
-      padding-left: 1.5vw;
+      padding-left: 1.55vw;
       opacity: 0.9;
       .header-logo {
         position: relative;
-        top: -5px;
-        left: 2px;
+        // top: -5px;
+        // left: 2px;
         width: 30px;
         transform: scale(1);
         transition: transform 500ms linear 100ms, opacity 750ms ease-in-out;
@@ -228,7 +228,7 @@ body.is-loading {
         span {
           display: inline-block; 
           position: relative;
-          top: -14px;
+          top: -8px;
           // transition: all 100ms ease-in-out;
         }
       }
@@ -253,7 +253,7 @@ body.is-loading {
         padding: 0;
         > a {
           display: block;
-          color: #fff;
+          color: #9B9B9C;
           font-size: 0.8em;
           letter-spacing: 0.225em;
           border: 0;
@@ -261,10 +261,10 @@ body.is-loading {
           margin-right: 1em;
           text-transform: uppercase;
           transition: opacity 200ms ease;
-          opacity: 0.75;
+          opacity: 1;
           &:hover, &:active {
-            transition: opacity 200ms ease;
-            opacity: 0.95;
+            color: #fff;
+            transition: color 200ms ease;
           }
         }
         &:first-child {
@@ -284,12 +284,12 @@ body.is-loading {
     }
     h1 {
       .header-logo {
-        top: -15px;
+        // top: -15px;
         width: 28px;
       }
       a:hover, a:active {
         span {
-          display: none;
+          // display: none;
         }
       }
     }
@@ -310,7 +310,7 @@ body.is-loading {
       }
     }
   }
-  &.readme {
+  &.dark {
     margin-top: 10px;
     h1 {
       color: #1B1B1E;
@@ -326,6 +326,16 @@ body.is-loading {
         span::before, span::after {
           background-color: #fff;
         }
+      }
+    }
+    .back-post {
+      color: rgba(#000, 0.5);
+      top: 0.275em;
+      &:hover, &:active {
+        color: rgba(#000, 0.65);
+      }
+      span {
+        color: rgba(#000, 0.75);
       }
     }
   }
