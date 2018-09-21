@@ -97,6 +97,7 @@
       min-width: 100%;
       object-fit: cover;
       overflow: hidden;
+      cursor: pointer;
       a {
         width: 100%;
         img {
@@ -498,10 +499,38 @@
 }
 
 body.is-mobile {
+  #blog-wrapper #main > header {
+    padding-top: 10vh;
+    h1 {
+      font-size: 20vw;
+      text-align: left;
+      top: 6.25vh;
+      left: 0;
+      width: 100%;
+      padding: 0 5%;
+    }
+  }
   #blog {
+    padding-top: 5vh; 
     .post-list > li {
       width: 80%;
       margin: 0.5em 10% !important;
+    }
+    .card-list .post-card {
+      margin-right: 0 !important;
+      margin-bottom: 3.5vh;
+      .card-img-container a img {
+        height: 25vh;
+      }
+      .card-content {
+        h2 {
+          width: 90%;
+          margin-top: 0.5vh;
+        }
+      }
+      .card-detail {
+        margin-top: 1.75vh;
+      }
     }
   }
   #archive {
@@ -516,4 +545,4 @@ body.is-mobile {
       }
     }
   }
-  }
+}

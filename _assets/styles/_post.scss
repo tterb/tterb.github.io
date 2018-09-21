@@ -796,29 +796,6 @@
   padding-bottom: 1em;
 }
 
-body.is-mobile {
-  .post-image {
-    height: 34vmax !important;
-    .post-title {
-      display: table-cell !important;
-    }
-  }
-  .post-header {
-    display: none;
-  }
-  .back-post {
-    font-size: 28px;
-    top: 0.45em;
-  }
-  .written-content {
-    line-height: 1.45;
-    width: 90%;
-  }
-  #back-to-top {
-    display: none;
-  }
-}
-
 .post-tags-container {
   display: flex;
   width: 95%;
@@ -976,5 +953,109 @@ body.is-mobile {
     &:hover {
       transform: translateX(10px);
     }
+  }
+}
+
+body.is-mobile {
+  .post-image {
+    height: 34vmax !important;
+    .post-title {
+      display: table-cell !important;
+    }
+  }
+  .post-header {
+    width: 85%;
+    padding-top: 4.5vh;
+    h1 {
+      font-size: 12vw;
+      width: 90%;
+    }
+    .date-container {
+      font-size: 4vw;
+      top: 0;
+      right: -5vw;
+    }
+  }
+  // #header.dark .back-post
+  .back-post {
+    font-size: 28px;
+    top: -2.5vh !important;
+  }
+  .written-content {
+    font-size: 4vw;
+    line-height: 1.45;
+    width: 100%;
+    padding-top: 0;
+    pre.highlight {
+      code {
+        font-size: 3.5vw;
+        overflow: scroll;
+      }
+      .clipboard {
+        right: 6vw;
+        bottom: 13vw;
+      }
+    }
+    pre[class*=language-] {
+      padding: 0;
+    }
+    .code-block {
+      margin-bottom: 0;
+      .clipboard {
+        right: 7%;
+      }
+    }
+    .h-tip, .h-note, .h-tldr, .h-warning {
+      width: 100%;
+      margin-top: 0;
+      margin-left: 0 !important;
+    }
+  }
+  .readme-content {
+    .post-title {
+      font-size: 10vw;
+      line-height: 1;
+      margin-top: 10vh;
+      margin-bottom: 0;
+    }
+    > hr {
+      margin: 2vh auto 4vh;
+    }
+  }
+  .post-closer {
+    .isLeft {
+      width: 95%;
+      float: none;
+    }
+    .isRight {
+      float: none;
+      margin-top: 0;
+      h5 {
+        display: none;
+      }
+    }
+    .author-image {
+      width: 20vw;
+      height: 20vw;
+    }
+    .author-info {
+      width: 70vw;
+      padding-top: 1.5vh;
+    }
+    .lid svg {
+      font-size: 3.75vh;
+      top: -2vh;
+      left: 0;
+    }
+    .share-item.svg {
+      font-size: 2.5vh;
+    }
+  }
+  #back-to-top {
+    display: none;
+  }
+  .PageNavigation a {
+    width: 85%;
+    margin: 1em 0;
   }
 }
