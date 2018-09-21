@@ -30,12 +30,15 @@
     margin: 1em auto 6em;
     padding: 1.5em 4em;
     h3 {
-      color: rgba(#000, 0.8);
-      font-size: 1.95em;
+      color: rgba(#000, 0.7);
+      font-size: 2em;
       letter-spacing: 0;
       text-align: center;
       text-transform: none;
       margin-bottom: 0;
+    }
+    .wrapper {
+      background: #fafafa;
     }
     form .row.uniform {
       margin: 0;
@@ -142,4 +145,29 @@
 .contact-submit {
   margin: 1.5em 35% 1em;
   padding: 2em 0 0  !important;
+}
+
+body.is-mobile {
+  .contact-wrapper {
+    padding-bottom: 1.5vh;
+    h1 {
+      font-size: 13vw;
+      margin-top: 10vh;
+    }
+    .form-container {
+      width: 90%;
+      padding: 3vh 5vh;
+      h3 {
+        font-size: 3.5vh;
+      }
+    }
+    .contact-submit {
+      width: 75%;
+      margin: 2vh 12%;
+      input {
+        height: 7.5vh;
+        width: 100%;
+      }
+    }
+  }
 }

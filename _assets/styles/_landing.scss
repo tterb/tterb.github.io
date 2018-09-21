@@ -2440,11 +2440,12 @@ body.is-mobile {
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
+      height: 55vh;
       h1 {
-        font-size: 14vw;
+        font-size: 14vw !important;
       }
       h3 {
-        font-size: 2.5vw;
+        font-size: 2.75vw !important;
         svg {
           width: 4px !important;
         }
@@ -2480,8 +2481,8 @@ body.is-mobile {
           padding-top: 0 !important;
         }
         .button {
-          font-size: 2.25vw;
-          height: 2.75em;
+          font-size: 2.25vw !important;
+          height: 5.5vw;
         }
       }
     }
