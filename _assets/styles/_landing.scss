@@ -1963,7 +1963,7 @@ body.is-menu-visible {
       letter-spacing: 0.0125em;
       line-height: 2;
       margin: 0 auto;
-      text-shadow: 0px 2px 10px rgba(#000, 0.5) !important;
+      text-shadow: 0px 2px 10px rgba(#000, 0.25) !important;
       cursor: default;
     }
     p {
@@ -2250,6 +2250,7 @@ body {
 .tile {
   display: inline-block;
   position: relative;
+  background-origin: padding-box;
   text-align: center;
   min-width: 48%;
   max-width: 48%;
@@ -2282,7 +2283,8 @@ body {
   .mask {
     background: rgba(25,28,30,0.45);
     transition: all 600ms ease-in-out;
-    padding: 10px;
+    // padding: 10px;
+    padding: 1vw;
     opacity: 0;
   }
 
@@ -2323,7 +2325,7 @@ body {
 
   p {
     position: relative;
-    color: rgba(#fff, 0.85);
+    color: rgba(#fff, 0.9);
     font-size: 110%;
     font-weight: 400 !important;
     text-align: center;
@@ -2394,7 +2396,7 @@ body {
     p {
       font-size: 1.85vw;
       width: 90%;
-      margin-bottom: 1.75em;
+      margin-bottom: 2.5vw;
     }
     .mask {
       padding: 15px 10px;
@@ -2436,7 +2438,6 @@ body.is-mobile {
       padding: 3em auto 3.5em !important;
     }
     #banner {
-      // @include vendor('background-image', ('linear-gradient(to bottom, rgba(7,4,5,0.35), rgba(7,4,5,0.35))', 'url("#{$baseurl}/banner.jpg")'));
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -2452,7 +2453,7 @@ body.is-mobile {
       }
     }
     #one {
-      padding: 3.5vh 0 0;
+      padding: 4.5vh 0 0;
     }
     #three {
       min-height: 65vh;
@@ -2475,7 +2476,6 @@ body.is-mobile {
       width: 60vw !important;
       margin: 2.5vh auto 1vh;
       li {
-        // height: 2.75em !important;
         padding-top: 3vh;
         &:first-child {
           padding-top: 0 !important;

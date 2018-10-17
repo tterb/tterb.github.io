@@ -55,7 +55,7 @@ body.search-overlay {
   width: 100%;
   opacity: 0;
   &.active {
-    top: 0;
+    top: -2em;
     left: 0;
     opacity: 1;
   }
@@ -134,9 +134,12 @@ body.search-overlay {
         }
       }
       &:hover {
-        background: rgba(#fff, 0.065);
+        background: rgba(#fff, 0.04);
         transition: all 350ms ease-in-out;
         // border: 1px dashed #FFFFFF;
+        a {
+          color: lighten(_palette(accent2, bg), 10%);
+        }
       }
     }
   }

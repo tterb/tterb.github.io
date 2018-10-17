@@ -1,9 +1,7 @@
-
-
 #developer {
   padding: 0 !important;
   #four {
-    background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url("/assets/img/dev.jpg");
+    background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.4), rgba(#000, 0.4)), url("/assets/img/dev.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +10,7 @@
 }
 
 .webp #developer #four {
-  background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url("/assets/img/dev.webp");
+  background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.4), rgba(#000, 0.4)), url("/assets/img/dev.webp");
 }
 
 #about {
@@ -214,7 +212,7 @@
 }
 
 #dev-calendar {
-  margin-top: 2em;
+  margin-top: 1em;
   padding-bottom: 1em;
   h2 {
     display: none;

@@ -16,7 +16,7 @@
   overflow: hidden;
   .inner {
     position: relative;
-    top: -10.5vh !important;
+    top: -9.5vh !important;
   }
   h1 {
     display: inline-block;
@@ -25,7 +25,7 @@
     font-family: 'Gotham HTF', 'Avenir Next', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 10vw;
     font-weight: 800;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.01em;
     line-height: 1;
     text-transform: none;
     text-shadow: 0 2px 15px rgba(#000, 0.85);
@@ -48,7 +48,7 @@
   h3 {
     color: rgba(#fff, 0.75);
     font-family: 'Avenir Next', 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2.05vw;
+    font-size: 2.5vw;
     font-weight: 400;
     // letter-spacing: 0.1em;
     letter-spacing: 0.075em;
@@ -96,10 +96,10 @@
 .landing {
   &.alt {
     .menu-page-link {
-      color: rgba(#fff, 0.8);
+      color: rgba(#fff, 0.9) !important;
       font-size: 115%;
       font-weight: 500;
-      text-shadow: 0 0.5px 3px  rgba(#000, 0.5);
+      text-shadow: 0 0.5px 3px  rgba(#000, 0.45);
       transition: all 250ms ease-in-out;
       &:hover, &:active {
         color: #fff;
@@ -213,6 +213,8 @@ body.is-loading {
       }
       span {
         display: none;
+        position: relative;
+        top: -14px;
         padding-top: 3px;
         padding-left: 14px;
         vertical-align: top;
@@ -227,8 +229,6 @@ body.is-loading {
         }
         span {
           display: inline-block; 
-          position: relative;
-          top: -8px;
           // transition: all 100ms ease-in-out;
         }
       }
@@ -297,7 +297,8 @@ body.is-loading {
       .landing-menu {
         padding: 6px 5px 10px 10px;
         ul {
-          padding-right: 1.25em !important;
+          padding-top: 1em;
+          padding-right: 2em !important;
         }
         .menu-page-link {
           font-size: 115%;

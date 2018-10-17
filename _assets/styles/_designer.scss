@@ -27,7 +27,7 @@
   }
 
   #four {
-    background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url("/assets/img/design.jpg") !important;
+    background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.4), rgba(#000, 0.4)), url("/assets/img/design.jpg") !important;
     background-position: bottom;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -36,13 +36,10 @@
 }
 
 .webp #designer #four {
-  background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url("/assets/img/design.webp") !important;
+  background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.4), rgba(#000, 0.4)), url("/assets/img/design.webp") !important;
 }
 
 .design-tiles {
-  // .mask {
-  //   padding: 20px;
-  // }
   h4 {
     margin-top: 4% !important;
   }
