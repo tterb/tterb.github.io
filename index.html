@@ -11,7 +11,7 @@ priority: 1.0
     <h1 role="heading" aria-level="1">Hi<span class="accent" style="margin-right:-10px;">,</span> I<span class="accent">'</span>m <br/>{{ site.title }}<span class="accent">.</span></h1>
     <h3>Developer<span class="fas fa-circle"></span>Designer<span class="fas fa-circle"></span>Student</h3>
   </div>
-  <a class="scroll-btn animated fadeInUp" href="#one" data-scroll><span></span>Scroll</a>
+  <a class="scroll-btn" href="#one" data-scroll><span></span>Scroll</a>
 </section>
 
 <!-- One -->
@@ -51,9 +51,9 @@ priority: 1.0
     <header class="major">
       <h2>Projects</h2>
     </header>
-    <div class="project-tiles tile-container">
+    <div class="tile-container">
     {% for project in site.data.landing %}
-      <div class="tile" data-category="{{ project.category }}">
+      <div class="tile" data-title="{{ project.title }}" data-category="{{ project.cat }}" data-sort="value">
         <img alt="{{ project.title }}" src="{{ site.baseurl }}{% if project.image %}/assets/img/landing/{{ project.image }}{% endif %}" data-full="{{ site.baseurl }}/assets/img/landing/{{ project.image }}" class="{% if project.image %} tile-image {% else %} no-image {% endif %}"/>
         <div class="mask">
           <h4>{{ project.title }}</h4>
@@ -79,10 +79,3 @@ priority: 1.0
     </ul>
   </div>
 </section>
-<script>
-$(window).on('resize', function() {
-  var win = $(this);
-  if (win.width() < 514) {
-    $('html').addClass('mobile');
-});
-</script>
