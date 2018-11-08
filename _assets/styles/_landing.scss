@@ -2260,7 +2260,7 @@ body {
   box-shadow: 0 0 4px rgba(#000, 0.4);
   vertical-align: bottom !important;
   transform: scale(1);
-  transition: all 500ms ease-in-out 100ms;
+  transition: all 500ms ease-in-out 100ms !important;
   margin: 5px 0.025em 0;
   cursor: default;
   overflow: hidden;
@@ -2301,7 +2301,7 @@ body {
     max-width: 100%;
     border-radius: 2px;
     filter: grayscale(10%);
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transition: all 300ms linear;
     &.no-image {
       background: _palette(bg);
@@ -2369,7 +2369,7 @@ body {
       opacity: 1;
     }
     img {
-      transform: scale(1.1), translate(-50%,-50%);
+      transform: scale(1.1), translate(-50%, -50%);
       filter: grayscale(0%);
     }
     .mask {
@@ -2523,6 +2523,29 @@ body.is-mobile {
       line-height: 1.5 !important;
       height: 5vw;
       width: 60%;
+    }
+  }
+}
+
+.filterizr-control {
+  ul {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    float: left;
+    li {
+      display: inline-block;
+      padding: 5px 10px;
+      cursor: pointer;
+      &.filtr-active {
+        color: _palette(accent2, bg);
+        cursor: default;
+      }
+    }
+    &.filterizr-sorting {
+    	float: right;
     }
   }
 }
