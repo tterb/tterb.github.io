@@ -4,6 +4,8 @@ permalink: /credits/
 options: nolanding, nomenu
 excerpt: People to thank
 image: bark.jpg
+style-includes:
+  - credits.css
 sitemap:
   priority: 0.3
 ---
@@ -13,7 +15,7 @@ sitemap:
   <dd>
     <ul class="credit-list">
       {% for source in site.data.credits %}
-        <li><a target="_blank" href="{{ source.url }}" rel="noopener">{{ source.title }}:</a> {% if source.author %}{{ source.author }}, {% endif %}{% if source.license %}{{ source.license }}{% endif %}</li>
+        <li><a target="_blank" href="{{ source.url }}" rel="noopener">{{ source.title }}:</a> {% if source.author %}{{ source.author }}, {% endif %}{% if source.license %}{{ source.license }} License{% endif %}</li>
       {% endfor %}
     </ul>
   </dd>
