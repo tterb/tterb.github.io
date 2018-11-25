@@ -2,7 +2,7 @@
 
 const autoprefixer = require('autoprefixer');
 const browserSync  = require('browser-sync').create();
-const cleancss     = require('gulp-clean-css');
+// const cleancss     = require('gulp-clean-css');
 const concat       = require('gulp-concat');
 const cssnano      = require('cssnano');
 const del          = require('del');
@@ -10,6 +10,7 @@ const gulp         = require('gulp');
 const gutil        = require('gulp-util');
 const newer        = require('gulp-newer');
 const imagemin     = require('gulp-imagemin');
+const plumber      = require('gulp-plumber');
 const pngquant     = require('imagemin-pngquant');
 const postcss      = require('gulp-postcss');
 const rename       = require('gulp-rename');
@@ -21,6 +22,13 @@ const uglify       = require('gulp-uglify-es').default;
 
 // Include paths file
 const paths = require('./_assets/gulp-config/paths');
+
+// error function for plumber
+var onError = function (err) {
+  gutil.beep();
+  console.log(err);
+  this.emit('end');
+};
 
 // Process styles, add vendor-prefixes, minify, then
 // output the file to the appropriate location
@@ -37,20 +45,50 @@ gulp.task('build:styles:main', function() {
     .on('error', gutil.log);
 });
 
+gulp.task('build:styles:all', function() {
+  return sass(paths.sassFiles + '**/*.scss', {
+    style: 'compressed',
+    trace: true,
+    loadPath: [paths.sassFiles]
+  }).pipe(postcss([autoprefixer({ browsers: ['last 2 versions']}), cssnano()]))
+    // .pipe(postcss([uncss({ html: paths.jekyllHtmlFilesGlob })]))
+    // .pipe(gulp.dest(paths.jekyllCssFiles))
+    // .pipe(gulp.dest(paths.siteCssFiles))
+    .pipe(gulp.dest('assets/'))
+    .pipe(gulp.dest('_site/assets/'))
+    .pipe(browserSync.stream())
+    .on('error', gutil.log);
+});
+
+// gulp.task('build:styles:local', function() {
+//   return sass(paths.sassFiles + '/local'+ paths.sassPattern, {
+//     style: 'compressed',
+//     trace: true,
+//     loadPath: [paths.sassFiles]
+//   }).pipe(postcss([autoprefixer({ browsers: ['last 2 versions']}), cssnano()]))
+//     // .pipe(postcss([uncss({ html: paths.jekyllHtmlFilesGlob })]))
+//     .pipe(gulp.dest(paths.jekyllCssFiles))
+//     .pipe(gulp.dest(paths.siteCssFiles))
+//     .pipe(browserSync.stream())
+//     .on('error', gutil.log);
+// });
+
 // Create and process critical CSS file to be included in head.html
 gulp.task('build:styles:critical', function() {
   return sass(paths.sassFiles + '/critical.scss', {
     style: 'compressed',
     trace: true,
     loadPath: [paths.sassFiles]
-  }).pipe(postcss([autoprefixer({ browsers: ['last 2 versions'] }), cssnano()]))
+  })
+  .pipe(plumber({ errorHandler: onError }))
+  .pipe(postcss([autoprefixer({ browsers: ['last 2 versions'] }), cssnano()]))
     // .pipe(postcss([uncss({ html: paths.sitePages })]))
     .pipe(gulp.dest('_includes'))
     .on('error', gutil.log);
 });
 
 // Build all styles
-gulp.task('build:styles', ['build:styles:main', 'build:styles:critical']);
+gulp.task('build:styles', ['build:styles:all', 'build:styles:critical']);
 
 // Delete CSS
 gulp.task('clean:styles', function(callback) {
@@ -94,9 +132,6 @@ gulp.task('clean:scripts', function(callback) {
   callback();
 });
 
-// Copy fonts
-gulp.task('build:fonts', ['fonts']);
-
 // Place fonts in proper location
 gulp.task('fonts', function() {
   return gulp.src(paths.fontFilesGlob)
@@ -106,6 +141,9 @@ gulp.task('fonts', function() {
     .pipe(browserSync.stream())
     .on('error', gutil.log);
 });
+
+// Copy fonts
+gulp.task('build:fonts', ['fonts']);
 
 // Delete processed font files
 gulp.task('clean:fonts', function(callback) {
@@ -189,6 +227,11 @@ gulp.task('build:scripts:watch', ['build:scripts'], function(callback) {
   callback();
 });
 
+// Build site
+gulp.task('build', function(callback) {
+  runSequence(['build:scripts', 'build:styles', /*'build:images',*/ 'build:fonts', 'build:downloads'], 'build:jekyll', callback);
+});
+
 // Serve site and watch files
 gulp.task('serve', ['build'], function() {
   browserSync.init({
@@ -216,12 +259,7 @@ gulp.task('serve', ['build'], function() {
   // Watch RSS feed
   gulp.watch('feed.xml', ['build:jekyll:watch']);
   // Watch data files
-  gulp.watch('_data/**.*+(yml|yaml|csv|json)', ['build:jekyll:watch']);
-});
-
-// Build site
-gulp.task('build', function(callback) {
-  runSequence(['build:scripts', 'build:styles', 'build:images', 'build:fonts', 'build:downloads'], 'build:jekyll', callback);
+  gulp.watch('_data/**.*+(yml|yaml|csv|json)', gulp.parallel(['build:jekyll:watch']));
 });
 
 gulp.task('test', function(callback) {
