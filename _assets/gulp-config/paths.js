@@ -1,19 +1,19 @@
 var paths = {};
 
 // Directory locations.
-paths.assetsDir        = '_assets/';      // The files Gulp will handle.
 paths.jekyllDir        = '';              // The files Jekyll will handle.
-paths.jekyllAssetsDir  = 'assets/';       // The asset files Jekyll will handle.
 paths.siteDir          = '_site/';        // The resulting static site.
+paths.assetsDir        = '_assets/';      // The files Gulp will handle.
+paths.jekyllAssetsDir  = 'assets/';       // The asset files Jekyll will handle.
 paths.siteAssetsDir    = '_site/assets/'; // The resulting static site's assets.
 
 // Folder naming conventions.
-paths.postFolder   = '_posts';
-paths.draftFolder  = '_drafts';
-paths.fontFolder   = 'fonts';
-paths.imageFolder  = 'img';
-paths.scriptFolder = 'js';
-paths.stylesFolder = 'styles';
+paths.postFolder     = '_posts';
+paths.draftFolder    = '_drafts';
+paths.fontFolder     = 'fonts';
+paths.imageFolder    = 'img';
+paths.scriptFolder   = 'js';
+paths.stylesFolder   = 'styles';
 paths.downloadFolder = 'download';
 
 // Asset files locations.
@@ -31,7 +31,7 @@ paths.jekyllJsFiles    = paths.jekyllAssetsDir + paths.scriptFolder;
 paths.jekyllImageFiles = paths.jekyllAssetsDir + paths.imageFolder;
 paths.jekyllFontFiles  = paths.jekyllAssetsDir + paths.fontFolder;
 paths.imageFolder;
-paths.jekyllDownloadFiles  = paths.jekyllAssetsDir + paths.downloadFolder;
+paths.jekyllDownloadFiles = paths.jekyllAssetsDir + paths.downloadFolder;
 
 // Site files locations.
 paths.siteCssFiles   = paths.siteAssetsDir + paths.stylesFolder;
@@ -68,6 +68,12 @@ paths.siteHtmlFilesGlob = paths.siteDir + paths.htmlPattern;
 // HTML pages to run through the accessibility test.
 paths.htmlTestFiles = [
   '_site/**/*.html',
+];
+
+paths.sitePages = [
+  './index.html',
+  './404.html',
+  '**/*.html'
 ];
 
 module.exports = paths;
