@@ -77,7 +77,7 @@ sass:
   style: compressed
 
 include: ['_pages','.htaccess']
-exclude: ['vendor','_assets','node_modules','jspm_packages','Gemfile','Gemfile.lock','Gulpfile.js','.sass-lint.yml','package.json','package-lock.json','TODO.md','**/fonts/*.html', '**/**/*_.*']
+exclude: ['README.md','vendor','_assets','node_modules','jspm_packages','Gemfile','Gemfile.lock','Gulpfile.js','.sass-lint.yml','package.json','package-lock.json','TODO.md','**/fonts/*.html', '**/**/*_.*']
 
 defaults:
   - scope:
