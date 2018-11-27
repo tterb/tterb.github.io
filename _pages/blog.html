@@ -38,9 +38,6 @@ sitemap:
       {% endfor %}
     </div>
     {% endif %}
-    {% if paginator.total_pages > 1 %}
-      {% include page-nav.html %}
-    {% endif %}
   </section>
   <div class="sidebar">
     <div class="sidebar-icons">
@@ -48,15 +45,14 @@ sitemap:
       <a href="{{ '/tags' }}"><span class="fas fa-fw fa-tags"></span></a>
       <a href="{{ '/archive' }}"><span class="fas fa-fw fa-archive"></span></a>
     </div>
-    <!-- <div class="search sidebar-block sidebar-button style1">
-      <div class="btn-search"><span class="fas fa-search"></span><h4>Search</h4></div>
-    </div>
-    <div class="archive-block sidebar-block sidebar-button style2">
-      <a class="btn-archive" href="{{ '/archive' }}"><h4>Archive</h4></a>
-    </div> -->
     <hr>
     <div class="sidebar-tags sidebar-block">
       {% popular_tags 10 %}
     </div>
   </div>
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination-container">
+      {% include page-nav.html %}
+    </div>
+  {% endif %}
 </section>
