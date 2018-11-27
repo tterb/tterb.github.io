@@ -229,7 +229,7 @@ gulp.task('build:scripts:watch', ['build:scripts'], function(callback) {
 
 // Build site
 gulp.task('build', function(callback) {
-  runSequence(['build:scripts', 'build:styles', /*'build:images',*/ 'build:fonts', 'build:downloads'], 'build:jekyll', callback);
+  runSequence(['build:scripts', 'build:styles', 'build:images', 'build:fonts', 'build:downloads'], 'build:jekyll', callback);
 });
 
 // Serve site and watch files
