@@ -27,13 +27,13 @@
   tag: logo
   
 - title: Atomic Monokai Pro
-  desc:  A syntax-highlighting theme based on a modern interpretation of the popular monokai color palette. Featuring modifications that better emphasize crucial code, allowing more trivial aspects of the syntax to fade into the background
+  desc:  A modern interpretation of the monokai color palette that emphasizes crucial code and allows trivial syntax to fade into the background
   image: MonokaiPro.png
   tool: Code
   tag: UI
 
 - title: Notifications
-  desc: A collection of Bootstrap inspired, UI notifications designed for [Hyde](http://brettstevenson.io/Hyde/)
+  desc: A collection of Bootstrap-inspired UI notifications designed for the [Hyde](http://brettstevenson.io/Hyde/) markdown editor.
   image: Notifications.png
   tool: Illustrator
   tag: UI
