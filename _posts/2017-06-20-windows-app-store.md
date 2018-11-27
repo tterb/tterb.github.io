@@ -1,6 +1,6 @@
 ---
 priority: 0.7
-title: The Future of the Windows App Store
+title: Future of the Windows App Store
 description: With Windows 10 S, there may still be hope for Windows users yet
 keywords: "Windows, Windows 10, ten, Windows 10 S, Microsoft, app store, app, store, application, mobile, tech, technology, Google, chromebook, chrome os, chrome, surface"
 date: 2017-06-20
@@ -13,7 +13,6 @@ tags:
   - Microsoft
   - Tech
   - Tools
-  - Discussion
 ---
 
 Since Microsoft&rsquo;s announcement of their new Chrome OS alternative, <a href="https://www.microsoft.com/en-us/windows/windows-10-s" target="_blank" rel="noopener">**Windows 10 S**</a>, which in short, is a version of Windows 10 that boasts improved security and performance while *exclusively* supporting applications from the <a href="https://www.microsoft.com/en-us/store/apps/windows?icid=CNavAppsWindowsApps" target="_blank" rel="noopener">Windows App Store</a>, I have been interested to see the subsequent effect this would have on the Windows App Store.

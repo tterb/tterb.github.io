@@ -21,103 +21,87 @@ tags:
 <!-- Badges -->
 <p class="badges">
 	<a href="https://atom.io/themes/atomic-design-ui">
-		<img src="https://img.shields.io/apm/v/atomic-design-ui.svg?" height="20" alt="version" title="Version"/>&nbsp;
+		<img src="https://img.shields.io/apm/v/atomic-design-ui.svg?" height="20" alt="version" title="Version"/>
 	</a>
 	<a href="https://opensource.org/licenses/MIT">
-		<img src="https://img.shields.io/apm/l/atomic-design-ui.svg?" height="20" alt="license" title="License"/>&nbsp;
+		<img src="https://img.shields.io/apm/l/atomic-design-ui.svg?" height="20" alt="license" title="License"/>
 	</a>
-    <img src="https://img.shields.io/apm/dm/atomic-design-ui.svg?maxAge=2592000?" height="20" alt="downloads" title="Downloads"/>&nbsp;
+    <img src="https://img.shields.io/apm/dm/atomic-design-ui.svg?maxAge=2592000?" height="20" alt="downloads" title="Downloads"/>
 	<a href="https://atom.io/themes/atomic-design-ui">
-		<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" height="20" alt="open source" title="Open Source"/>&nbsp;
+		<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" height="20" alt="open source" title="Open Source"/>
 	</a>
 </p>
 
 <!-- Screenshot -->
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16360374/22501240/cceae3f4-e81c-11e6-88d2-b50141920552.png" width="950" alt="preview" title="Preview"/>
-</p>
+  <img src="https://user-images.githubusercontent.com/16360374/42451361-d7f0abb0-833b-11e8-9a0f-d100109c9c45.png" alt="preview" title="Preview" width="950"/>
+</p>  
 
 <!-- Description -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/22630325/e71b3d12-ebac-11e6-864a-de9714611240.png" width="900" alt="description" title="Description"/>
+## Description  
 
-  *Atomic Design* aims to provide a modern and refined interface to compliment any dark syntax&ndash;theme, featuring modifications that focus on improving the user experience and adaptability. Similarly, this theme also includes a custom icon set and improved integration of some of the most common [Atom packages].
-  The screenshot above features the **[Atomic Monokai]** syntax&ndash;theme and *Source Code Pro* via the [Fonts] package.
+*Atomic Design* aims to provide a modern and refined interface to compliment any dark syntax-theme.<!--, featuring modifications that focus on improving the effeciency and clarity of the interface. Designed with an emphasis on clarity and efficiency, . --> In addition, this theme also includes a custom icon set and improved integration of some of the most popular [Atom packages].  
+The screenshot above features the **[Atomic Monokai Pro]** syntax-theme and the *[Operator Mono]* font.
 
-**In Progress**
+**In Progress:**
   * Experimenting with functionalities to improve adaptability.
-  * Adding improved integration for more common packages.
-  * Improving custom icon integration.
+  * Adding improved integration for common packages.
 
 <br>
 
 ___________________________
 
 <!-- Features -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/22630566/57595f88-ebb1-11e6-835d-e84330b188e3.png" width="900" alt="features" title="Features"/>
+## Features  
+
+### Dark Refined Interface  
+*Atomic Design* features a carefully selected color&ndash;palette and meticulously styled components, which provides the interface with a sense of depth, receptiveness, and adaptability. Allowing this theme to be wonderfully complimented by any dark syntax theme.  
 
 <br>
-<h3 align="center">Dark Refined Interface</h3>
-<p align="center">
-  <i>Atomic Design</i> features a carefully selected color&ndash;palette and meticulously styled components, <br>
-  which provides the interface with a sense of depth, receptiveness, and adaptability. <br>
-  Allowing this theme to be wonderfully complimented by any dark syntax theme.
-</p>
+
+### Package Styling  
+This UI&ndash;theme includes supplementary styling for an expanding collection of popular Atom packages, providing the same refined interface to all aspects of the user experience.  
+
 <br>
 
-<h3 align="center">Package Styling</h3>
-<p align="center">
-  This UI&ndash;theme includes supplementary styling for an expanding collection of popular Atom <br>
-  packages, providing the same refined interface to all aspects of the user experience.
-</p>
+### Custom Icon Set  
+*Atomic Design* also features a custom icon set, which aims to integrate distinct custom icons with the best aspects of popular icon packages to provide improved visual&ndash;grepping of project files, while also preventing the alignment issues that plague many icon package and theme combinations.  
+
 <br>
 
-<h3 align="center">Custom Icon Set</h3>
-<p align="center">
-  <i>Atomic Design</i> also features a custom icon set, which aims to integrate distinct custom icons <br>
-  with the best aspects of popular icon packages to provide improved
-  visual&ndash;grepping of <br>
-  project files, while also preventing the alignment issues that plague <br> many icon package and theme combinations.
-</p>
-<br>
-
-<h3 align="center">Modular Theme-Settings</h3>
-<p align="center">
-  This UI&ndash;theme includes custom settings, which allow users to fine&ndash;tune various aspects of <br>
-  the interface to suit their preference. These settings are accessible via <br>
-  the <img src="https://cloud.githubusercontent.com/assets/16360374/22728369/572ca3fc-ed92-11e6-8f35-5f1da6078b4f.png" height="23" alt="settings"/> button,
-  once the theme is enabled.
-</p>
+### Modular Theme-Settings  
+This UI&ndash;theme includes custom settings, which allow users to fine&ndash;tune various aspects of the interface to suit their preference. These settings are accessible via the <img src="https://cloud.githubusercontent.com/assets/16360374/22728369/572ca3fc-ed92-11e6-8f35-5f1da6078b4f.png" class="inline" height="23" alt="settings"/> button, once the theme is enabled.  
 
 <br>
 
 ___________________________
 
 <!-- Install -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/22630327/e71bd0c4-ebac-11e6-956d-8b1e8da21d1b.png" width="900" alt="install" title="Install">
+## Install  
 This package is distributed via *[apm]*. After [installing apm], you can install the UI&ndash;theme with this command.
 
 ```bash
 $ apm install atomic-design-ui
 ```
 
-  After installation, the theme can be activated by going to the **Themes** section in the *Settings* view and selecting it from the *UI Theme* drop-down menu.
+After installation, the theme can be activated by going to the **Themes** section in the *Settings* view and selecting it from the *UI Theme* drop-down menu.
 
-<!-- <br>
+<br>
+
 ___________________________
 
 ## Settings:
-  Once selected, you can select the &nbsp;<img src="https://cloud.githubusercontent.com/assets/16360374/21959455/1719f490-da7d-11e6-9137-65089a686d52.png" height="18" Title="Settings">&nbsp; icon to access the modular aspects of the theme. This includes the ability to decide whether to use a light or dark tree-view and whether you would prefer to use the default icons or the custom icons included with this theme.
-
-  <!-- <p align="center">
-  &nbsp;&nbsp;&nbsp;<img src="https://cloud.githubusercontent.com/assets/16360374/21487851/ca232202-cb8a-11e6-9913-c34b03eec4ea.png" width="275" title="Settings">
-  </p> -->
+Once selected, you can select the &nbsp;<img src="https://cloud.githubusercontent.com/assets/16360374/21959455/1719f490-da7d-11e6-9137-65089a686d52.png" class="inline" height="18" alt="settings" Title="Settings">&nbsp; icon to access the modular aspects of the theme, including: 
+  * Adaptive Tabs
+  * Light/Dark Tree-view
+  * Custom Icons
 
 <br>
 
 ___________________________
 
 <!-- Screenshots -->
-<img src="https://cloud.githubusercontent.com/assets/16360374/22630324/e71af8ac-ebac-11e6-9458-fe0301d4c028.png" width="900" alt="screenshot" title="Screenshot"/>
+## Screenshots
 
   * **[Java]**
   * **[HTML]**
@@ -125,25 +109,16 @@ ___________________________
   * **[Settings-View]**
 
 <br>
-<!-- *For more useful packages, check out my list of* **[Essential Atom Packages]**, *which I'll continue to keep up to date as I explore and familiarize myself with the editor and it's community.*
-<br> -->
-
-<!-- ___________________________  -->
-<p align="right">
-  <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6RKPR34SH6CU" alt="donate" title="Donate">
-    <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" height="20" alt="donate" title="Donate"/></a></span>&nbsp;&nbsp;
-</p>
-
 
 
 <!-------------------------------- Links -------------------------------------->
 
 [Atom Dark UI]: https://github.com/atom/atom-dark-ui
-[Atomic Monokai]: https://atom.io/themes/atomic-monokai-syntax
+[Atomic Monokai Pro]: https://atom.io/themes/atomic-monokai-pro-syntax
 [Atom packages]: https://atom.io/packages
 [packages]: https://github.com/tterb/atomic-delight-ui/wiki/packages
 [syntax-theme]: https://github.com/tterb/atom-delight-syntax
-[Fonts]: https://atom.io/packages/fonts
+[Operator Mono]: https://www.typography.com/fonts/operator/styles/
 
 [apm]: https://atom.io/themes
 [installing apm]: https://github.com/atom/apm#installing
@@ -152,5 +127,3 @@ ___________________________
 [HTML]: https://cloud.githubusercontent.com/assets/16360374/18231558/6cba7498-7271-11e6-9575-d4448e5910d5.png
 [Markdown]: https://cloud.githubusercontent.com/assets/16360374/18231352/9642c068-726c-11e6-857a-7e3d76293f88.png
 [Settings-View]: https://cloud.githubusercontent.com/assets/16360374/18231373/3048eb88-726d-11e6-9ae8-a87e24c11f67.png
-
-<!-- [Essential Atom Packages]: https://tterb.github.io/projects/2016/08/22/essential-atom-packages.html -->
