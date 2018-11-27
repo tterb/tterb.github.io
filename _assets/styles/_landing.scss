@@ -610,7 +610,7 @@ ul {
   }
 
   &.actions {
-    width: 17vw;
+    width: max-content;
     list-style: none;
     margin: auto;
     padding-left: 0;

@@ -68,6 +68,10 @@ $bg: #f5f7fa;
   }
 }
 
+.webp #blog-wrapper #main > header {
+  background-image: linear-gradient(-10deg,rgba(220,106,135,.65) 45%,rgba(20,112,154,.75)),url("/assets/img/blog.webp") !important;
+}
+
 .blog-main {
   display: inline-block;
   width: 68vw;
@@ -127,7 +131,7 @@ $bg: #f5f7fa;
     height: 101%;
     width: 20%;
     top: -1%;
-    right: 0.65%;
+    right: 0.75%;
     overflow: hidden;
     // cursor: default;
   }
@@ -142,7 +146,7 @@ $bg: #f5f7fa;
   	border-radius: 5px;
   	box-shadow: 0 0 1px rgba(#ac1c38,.1), 0 2px 6px rgba(#ac1c38,.175);
     transition: all 300ms ease-in-out;
-  	margin: 4vh 2px 3.5vh;
+  	margin: 3vh 2px 3vh;
   	padding: 6px 8px;
   	cursor: pointer;
   	z-index: 9;
@@ -235,7 +239,7 @@ $bg: #f5f7fa;
   display: inline-block;
   position: relative;
   color: rgba(#000, 0.75);
-  width: 20vw;
+  width: 21vw;
   height: 100%;
   float: right;
   margin-right: -0.65em;
@@ -371,11 +375,17 @@ $bg: #f5f7fa;
   margin-right: 5px;
 }
 
-.pagination {
-  float: left;
+.pagination-container {
+  display: block;
   position: relative;
-  // left: 50%;
-  left: 14vw;
+  width: 100%;
+  height: 5vh;
+  margin: auto;
+}
+
+.pagination {
+  position: relative;
+  width: max-content;
   border-radius: 100px;
   margin: 8px auto 0;
   .page-links {

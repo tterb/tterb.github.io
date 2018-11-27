@@ -3,7 +3,11 @@
 .contact-success, .contact-failed {
   .wrapper {
     background: _palette(accent1, bg);
-    min-height: 35vh;
+    min-height: 40vh !important;
+    padding: 5em 0;
+    .button {
+      padding: 0 3em;
+    }
   }
 }
 
@@ -144,7 +148,7 @@
 }
 
 .contact-submit {
-  margin: 1.5em 35% 1em;
+  margin: 1.5em 35% 2em;
   padding: 2em 0 0  !important;
 }
 
@@ -171,4 +175,8 @@ body.is-mobile {
       }
     }
   }
+}
+
+.g-recaptcha {
+  display: none;
 }
