@@ -3,9 +3,15 @@
     {% for social in site.social_links %}
       {% if social[1] %}
         {% if social[0] != 'email' %}
-          <li><a target="_blank" href="{{ social[1] }}" rel="noopener"><span class="fab fa-fw fa-{{ social[0] }}"></span></a></li>
+          <li><a target="_blank" href="{{ social[1] }}" rel="noopener">
+            <!-- <span class="fas fa-circle fa-stack-2x"></span> -->
+            <span class="fab fa-fw fa-{{ social[0] }}"></span>
+          </a></li>
         {% else %}
-          <li><a href="{{ social[1] }}"><span class="fas fa-fw fa-envelope"></span></a></li>
+          <li><a href="{{ social[1] }}">
+            <!-- <span class="fas fa-circle fa-stack-2x"></span> -->
+            <span class="fas fa-fw fa-envelope"></span>
+          </a></li>
         {% endif %}
       {% endif %}
     {% endfor %}
@@ -31,6 +37,7 @@
       </a>
     </li>
     <!-- <li><i class="fas fa-code"></i> with <i class="fas fa-heart"></i>&nbsp;</li> -->
+    <li><a href="{{ '../sitemap.xml' | prepend: site.baseurl }}" role="link" rel="noopener">Sitemap</a></li>
     <li>Powered by <a href="http://jekyllrb.com" class="jekyll-link" role="link" target="_blank" rel="noopener">Jekyll</a></li>
   </ul>
 </footer>
