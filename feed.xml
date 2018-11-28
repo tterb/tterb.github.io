@@ -5,8 +5,8 @@
     <description>Developer &amp;#x1f784; Designer &amp;#x1f784; Student</description>
     <link>https://brettstevenson.io/</link>
     <atom:link href="https://brettstevenson.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Nov 2018 10:14:12 +0000</pubDate>
-    <lastBuildDate>Thu, 08 Nov 2018 10:14:12 +0000</lastBuildDate>
+    <pubDate>Wed, 28 Nov 2018 17:51:33 +0000</pubDate>
+    <lastBuildDate>Wed, 28 Nov 2018 17:51:33 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -72,7 +72,7 @@ So we need to:&lt;/p&gt;
     &lt;span class=&quot;n&quot;&gt;yt2mp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Song&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;While, you can see that there’s not a lot of code that goes into creating the object, it’s best to follow the &lt;a href=&quot;https://deviq.com/don-t-repeat-yourself/&quot;&gt;DRY&lt;/a&gt; principal and avoid redundancy.&lt;br /&gt;
+&lt;p&gt;While, you can see that there’s not a lot of code that goes into creating the object, it’s best to follow the &lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY&lt;/a&gt; principal and avoid redundancy.&lt;br /&gt;
 Now that our fixture is defined, we are going to use it to write two tests to check the program’s ability to download a video and convert the video to an mp3.&lt;br /&gt;
 To test the program’s download functionality, we’ll utilize the fact that the &lt;code class=&quot;highlighter-rouge&quot;&gt;yt2mp3.download()&lt;/code&gt; function returns the filepath when the download is successful by asserting that the returned filepath exists.&lt;/p&gt;
 &lt;p class=&quot;h-note&quot;&gt;Notice that we&amp;rsquo;ve provided our &lt;code class=&quot;highlighter-rouge&quot;&gt;test_song&lt;/code&gt; fixture as a parameter of the test function.&lt;/p&gt;
@@ -393,7 +393,7 @@ For this process we will need to create three tasks, two for processing the glob
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;cleaning-up&quot;&gt;Cleaning up&lt;/h2&gt;
-&lt;p&gt;In accordance with the &lt;a href=&quot;http://deviq.com/boy-scout-rule/&quot;&gt;Boy Scout Rule&lt;/a&gt;, we’re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an “&lt;em&gt;undo&lt;/em&gt;” button for the gulp tasks we’ve created.&lt;/p&gt;
+&lt;p&gt;In accordance with the &lt;a href=&quot;http://wiki.c2.com/?BoyScoutRule&quot;&gt;Boy Scout Rule&lt;/a&gt;, we’re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an “&lt;em&gt;undo&lt;/em&gt;” button for the gulp tasks we’ve created.&lt;/p&gt;
 
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Delete CSS&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'clean:styles'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -556,7 +556,8 @@ Once finished, the resulting MP3 file will be saved to your &lt;em&gt;Downloads&
 &lt;h2 id=&quot;documentation&quot;&gt;Documentation&lt;/h2&gt;
 &lt;p&gt;Further documentation is available on &lt;a href=&quot;https://yt2mp3.readthedocs.io/en/latest/&quot;&gt;Read The Docs&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;!-- ------   --&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;development&quot;&gt;Development&lt;/h2&gt;
 &lt;p&gt;If you’d like to contribute to the project, you can download and install the program with the following commands:&lt;/p&gt;
@@ -573,7 +574,6 @@ Once finished, the resulting MP3 file will be saved to your &lt;em&gt;Downloads&
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
 </description>
         <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
         <link>https://brettstevenson.io/blog/project/youtube-to-mp3.html</link>
@@ -601,15 +601,17 @@ Once finished, the resulting MP3 file will be saved to your &lt;em&gt;Downloads&
       <item>
         <title>Atomic Monokai Pro</title>
         <description>&lt;p class=&quot;badges&quot;&gt;
-  &lt;a href=&quot;https://atom.io/themes/atomic-design-ui&quot;&gt;
-    &lt;img src=&quot;https://img.shields.io/apm/v/atomic-monokai-pro-syntax.svg?&quot; alt=&quot;Version&quot; /&gt;&amp;nbsp;
+  &lt;a href=&quot;https://atom.io/themes/atomic-monokai-pro-syntax&quot;&gt;
+    &lt;img src=&quot;https://img.shields.io/apm/v/atomic-monokai-pro-syntax.svg?&quot; alt=&quot;Version&quot; /&gt;
   &lt;/a&gt;
   &lt;a href=&quot;https://opensource.org/licenses/MIT&quot;&gt;
-    &lt;img src=&quot;https://img.shields.io/apm/l/atomic-monokai-pro-syntax.svg?&quot; alt=&quot;License&quot; /&gt;&amp;nbsp;
+    &lt;img src=&quot;https://img.shields.io/apm/l/atomic-monokai-pro-syntax.svg?&quot; alt=&quot;License&quot; /&gt;
   &lt;/a&gt;
-    &lt;img src=&quot;https://img.shields.io/apm/dm/atomic-monokai-pro-syntax.svg?maxAge=2592000?&quot; alt=&quot;Downloads&quot; /&gt;&amp;nbsp;
   &lt;a href=&quot;https://atom.io/themes/atomic-monokai-pro-syntax&quot;&gt;
-    &lt;img src=&quot;https://badges.frapsoft.com/os/v1/open-source.svg?v=103&quot; alt=&quot;Open Source&quot; /&gt;&amp;nbsp;
+    &lt;img src=&quot;https://img.shields.io/apm/dm/atomic-monokai-pro-syntax.svg?maxAge=2592000?&quot; alt=&quot;Downloads&quot; /&gt;
+  &lt;/a&gt;
+  &lt;a href=&quot;https://atom.io/themes/atomic-monokai-pro-syntax&quot;&gt;
+    &lt;img src=&quot;https://badges.frapsoft.com/os/v1/open-source.svg?v=103&quot; alt=&quot;Open Source&quot; /&gt;
   &lt;/a&gt;
 &lt;/p&gt;
 
@@ -629,11 +631,11 @@ Additionally, this theme also features modifications to better emphasize crucial
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;!-- -------- --&gt;
 
-&lt;div style=&quot;float:left;margin: 0 0 2em&quot;&gt;&lt;a href=&quot;https://atom.io/themes/atomic-monokai-pro-syntax&quot;&gt;&lt;img src=&quot;https://apm-badges.herokuapp.com/apm/atomic-monokai-pro-syntax.svg?theme=one-dark&quot; alt=&quot;apm badge&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;!-- &lt;div style=&quot;float:left;margin: 0 0 2em&quot;&gt;&lt;a href=&quot;https://atom.io/themes/atomic-monokai-pro-syntax&quot;&gt;&lt;img src=&quot;https://apm-badges.herokuapp.com/apm/atomic-monokai-pro-syntax.svg?theme=one-dark&quot; alt=&quot;apm badge&quot;&gt;&lt;/a&gt;&lt;/div&gt; --&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
 </description>
         <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
         <link>https://brettstevenson.io/blog/project/atomic-monokai-pro.html</link>
@@ -708,7 +710,7 @@ Additionally, this theme also features modifications to better emphasize crucial
       </item>
     
       <item>
-        <title>The Future of the Windows App Store</title>
+        <title>Future of the Windows App Store</title>
         <description>&lt;p&gt;Since Microsoft’s announcement of their new Chrome OS alternative, &lt;a href=&quot;https://www.microsoft.com/en-us/windows/windows-10-s&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;Windows 10 S&lt;/strong&gt;&lt;/a&gt;, which in short, is a version of Windows 10 that boasts improved security and performance while &lt;em&gt;exclusively&lt;/em&gt; supporting applications from the &lt;a href=&quot;https://www.microsoft.com/en-us/store/apps/windows?icid=CNavAppsWindowsApps&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Windows App Store&lt;/a&gt;, I have been interested to see the subsequent effect this would have on the Windows App Store.&lt;/p&gt;
 
 &lt;p&gt;Whereas, Google’s &lt;a href=&quot;https://www.chromium.org/chromium-os&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Chrome OS&lt;/a&gt; was launched with exclusive support of applications from their thriving &lt;a href=&quot;https://chrome.google.com/webstore/category/collection/for_your_desktop&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Chrome Web Store&lt;/a&gt; which had been long associated with the popular web browser, Microsoft’s Windows App Store has never recieved the same positive reception from its users.
@@ -731,8 +733,6 @@ As an active Windows user, like many others, my experiences with the Windows App
         <category>Tech</category>
         
         <category>Tools</category>
-        
-        <category>Discussion</category>
         
         
         <category>blog</category>
