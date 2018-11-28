@@ -8,13 +8,24 @@
   {% seo %}
 
   {% if page.layout == 'post' %}
+    <link rel="stylesheet" href="{{ '/assets/styles/post.css' }}"/>
     {% include post-meta.html %}
   {% endif %}
 
   <link rel="canonical" href="{{ page.url | prepend: site.url }}">
   <style>{% include critical.css %}</style>
   <script src="{{ '/assets/js/load-css.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-
+  {% if page.style-includes %}
+    {% for include in page.style-includes %}
+      {% assign test1 = include | slice: 0,2 %}
+      {% if test1 == "//" %}
+        <link rel="stylesheet" href="{{ include }}"/>
+      {% else %}
+        <link rel="stylesheet" href="{{ include | prepend: '/assets/styles/'}}"/>
+      {%endif %}
+    {% endfor %}
+  {% endif %}
+  
   <noscript>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Merriweather:300,300i,400,400i,700,700i,900,900i' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="{{ '/assets/fonts/AvenirNext.css' | prepend: site.baseurl }}"/>
@@ -45,21 +56,6 @@
     }
   </style>
   {% endif %}
-  {% if page.style-includes %}
-    {% for include in page.style-includes %}
-      {% assign test1 = include | slice: 0,2 %}
-      {% if test1 == "//" %}
-        <link rel="stylesheet" href="{{ include }}"/>
-      {% else %}
-        <link rel="stylesheet" href="{{ include | prepend: site.baseurl }}"/>
-      {%endif %}
-    {% endfor %}
-  {% endif %}
 
-  {% if page.style %}
-    <style>
-      {{ page.style }}
-    </style>
-  {% endif %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
 </head>

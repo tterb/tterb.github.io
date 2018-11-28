@@ -22,7 +22,7 @@
 }
 
 body.search-overlay {
-  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out !important;
   overflow: hidden;
   &:after {
     position: fixed;
@@ -121,6 +121,7 @@ body.search-overlay {
       margin: 0 0.75em;
       padding-left: 0.25em;
       vertical-align: middle;
+      transition: all 300ms ease-in-out;
       a {
         font-size: 1.25em;
         vertical-align: middle;
@@ -134,7 +135,7 @@ body.search-overlay {
         }
       }
       &:hover {
-        background: rgba(#fff, 0.04);
+        background: rgba(#fff, 0.1);
         transition: all 350ms ease-in-out;
         // border: 1px dashed #FFFFFF;
         a {

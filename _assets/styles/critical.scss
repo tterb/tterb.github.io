@@ -16,7 +16,7 @@
   overflow: hidden;
   .inner {
     position: relative;
-    top: -9.5vh !important;
+    top: -7.5vh !important;
   }
   h1 {
     display: inline-block;
@@ -60,6 +60,33 @@
       width: 6px !important;
       top: 0.75px;
       margin: 0 9px 0 8px;
+    }
+  }
+  .scroll-btn {
+    position: absolute;
+    display: inline-block;
+    color: transparent !important;
+    text-align: center;
+    top: 92vh;
+    left: 49%;
+    transition: all 250ms ease-in-out 25ms;
+    z-index: 9999;
+    span {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-left: 3px solid rgba(#fff, 0.7);
+      border-bottom: 3px solid rgba(#fff, 0.7);
+      transform: rotate(-45deg) !important;
+      // transform-origin: center bottom;
+    }
+    &:hover span {
+      width: 25px;
+      height: 25px;
+      border-left: 4px solid rgba(#fff, 0.85);
+      border-bottom: 4px solid rgba(#fff, 0.85);
+      transition: all 400ms ease 50ms;
+      animation: none;
     }
   }
 
@@ -128,7 +155,7 @@
 }
 
 body.is-loading {
-  .page-wrapper {
+  .page-wrapper, .wrapper {
     opacity: 0;
   }
   #banner {
@@ -286,7 +313,7 @@ body.is-loading {
       .landing-menu {
         padding: 6px 5px 10px 10px;
         ul {
-          padding-top: 1em;
+          padding-top: 0.5em;
           padding-right: 2em !important;
         }
         .menu-page-link {
@@ -320,7 +347,7 @@ body.is-loading {
     }
     .back-post {
       color: rgba(#000, 0.5);
-      top: 0.275em;
+      // top: 0.275em;
       &:hover, &:active {
         color: rgba(#000, 0.65);
       }
@@ -451,4 +478,8 @@ body.is-loading {
       }
     }
   }
+}
+
+.hidden {
+  display: none;
 }

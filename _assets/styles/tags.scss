@@ -1,3 +1,4 @@
+@import 'layout';
 
 .tags-wrapper {
   background: _palette(accent1, bg);
@@ -14,7 +15,7 @@
   .tag-entry {
     display: inline-block;
     font-size: 1.75rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.45;
     text-decoration: none;
     color: darken(_palette(accent2, bg), 5%);
@@ -28,7 +29,6 @@
       background: darken(_palette(accent2, bg), 5%);
       // color: darken(_palette(accent2, bg), 15%);
       color: _palette(accent1, bg);
-      font-weight: 600;
       // border: 1px outset _palette(accent2, bg)
       box-shadow: 0.5px 0.5px 0 1px #268e8c;
     }
@@ -65,7 +65,7 @@
           font-weight: 600;
         }
         &:hover .title, &:active .title {
-          color: saturate(lighten(_palette(accent2, bg), 12%), 5%) !important;
+          color: darken(_palette(accent2, bg), 2%);
           text-shadow: none;
         }
       }

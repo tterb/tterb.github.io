@@ -17,15 +17,17 @@ tags:
 ---
 
 <p class="badges">
-  <a href="https://atom.io/themes/atomic-design-ui">
-    <img src="https://img.shields.io/apm/v/atomic-monokai-pro-syntax.svg?" alt="Version">&nbsp;
+  <a href="https://atom.io/themes/atomic-monokai-pro-syntax">
+    <img src="https://img.shields.io/apm/v/atomic-monokai-pro-syntax.svg?" alt="Version">
   </a>
   <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/apm/l/atomic-monokai-pro-syntax.svg?" alt="License">&nbsp;
+    <img src="https://img.shields.io/apm/l/atomic-monokai-pro-syntax.svg?" alt="License">
   </a>
-    <img src="https://img.shields.io/apm/dm/atomic-monokai-pro-syntax.svg?maxAge=2592000?" alt="Downloads">&nbsp;
   <a href="https://atom.io/themes/atomic-monokai-pro-syntax">
-    <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" alt="Open Source">&nbsp;
+    <img src="https://img.shields.io/apm/dm/atomic-monokai-pro-syntax.svg?maxAge=2592000?" alt="Downloads">
+  </a>
+  <a href="https://atom.io/themes/atomic-monokai-pro-syntax">
+    <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" alt="Open Source">
   </a>
 </p>  
 
@@ -47,8 +49,8 @@ After installation, you can activated by going to the **Settings > Themes** sect
 
 <br>
 
---------
+<!-- -------- -->
 
-<div style="float:left;margin: 0 0 2em"><a href="https://atom.io/themes/atomic-monokai-pro-syntax"><img src="https://apm-badges.herokuapp.com/apm/atomic-monokai-pro-syntax.svg?theme=one-dark" alt="apm badge"></a></div>
+<!-- <div style="float:left;margin: 0 0 2em"><a href="https://atom.io/themes/atomic-monokai-pro-syntax"><img src="https://apm-badges.herokuapp.com/apm/atomic-monokai-pro-syntax.svg?theme=one-dark" alt="apm badge"></a></div> -->
 
-<br><br>
+<!-- <br><br> -->

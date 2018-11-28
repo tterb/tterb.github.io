@@ -1,3 +1,6 @@
+@import 'layout';
+@import 'prism';
+
 .post-content {
   background: #fcfcfc;
   transition: opacity 350ms ease-in-out;
@@ -148,11 +151,10 @@
     font-size: 1.5em;
     line-height: 1.5;
   }
-  
   p {
+    letter-spacing: 0.015em;
     margin-bottom: 1.15em;
   }
-  
   a {
     color: _palette(link);
     transition: color 350ms ease-in-out;
@@ -166,11 +168,6 @@
         color: _palette(link-hover) !important;
       }
     }
-  }
-  
-  ul {
-    line-height: 1.6;
-    margin-bottom: 1.5em;
   }
   
   img {
@@ -189,7 +186,13 @@
     font-style: italic;
     letter-spacing: 0.025em;
   }
-  
+  ul {
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    li {
+      letter-spacing: 0.015em;
+    }
+  }
   hr {
     width: 98%;
     margin: 1.5em auto 1.75em;
@@ -807,24 +810,22 @@
     margin-bottom: 1em;
     padding-left: 2px;
     .post-tag-item {
-      // background: rgba(#ebeaec, 0.95);
-      // font-size: 0.85em;
-      // border-radius: 4px;
-      // box-shadow: 0 1.5px 4px -2px rgba(#000, 0.4);
-      // margin-right: 3px;
-      // margin-bottom: 10px;
-      // padding: 2px 8px;
-      // transition: all 350ms ease-in-out;
+      background: rgba(#ebeaec, 0.95);
+      font-size: 0.85em;
+      border-radius: 4px;
+      box-shadow: 0 1.5px 4px -2px rgba(#000, 0.4);
+      margin-right: 3px;
+      margin-bottom: 10px;
+      padding: 2px 8px;
+      transition: all 350ms ease-in-out;
       a {
         color: rgba(#000, 0.65);
-        &:hover {
-          color: rgba(#000, 0.8);
-        }
       }
-    //   &:hover {
-    //     // box-shadow: 0 2px 5px -2px rgba(#000, 0.7) !important;
-    //     box-shadow: 0 2px 5px -2px rgba(0,0,0,.5), 1px 2px 6px 0px rgba(0,0,0,0.2) !important;
-    //   }
+      &:hover {
+        background: rgba(#e5e4e6, 0.9);
+        color: rgba(#000, 0.8);
+        box-shadow: 0 2px 5px -2px rgba(#000, 0.7) !important;
+      }
     }
   }
   span {
@@ -936,7 +937,7 @@
     float: left;
     margin: 1em 5%;
     &:hover, &:active {
-      color: _palette(link-hover);
+      color: _palette(accent2, bg);
       border: none;
       .fa-chevron-left, .fa-chevron-right {
         color: rgba(#000, 0.8);

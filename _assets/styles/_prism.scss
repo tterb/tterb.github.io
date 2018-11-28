@@ -2,21 +2,28 @@
 * Syntax highlighting styles
 */
 
-$syntax-hue:          270;
-$syntax-saturation:    4%;
-$syntax-brightness:   19%;
+$syntax-hue:          280;
+$syntax-saturation:    5%;
+$syntax-brightness:   17%;
 
 $base:       hsl($syntax-hue, $syntax-saturation, $syntax-brightness);
-$text:       hsl($syntax-hue, 9%, 89%);
-$subtle:     hsl($syntax-hue, 8%, 45%);
-$highlight:  hsl($syntax-hue, 9%, 94%);
-$red:        hsl(  5, 48%, 51%);
-$orange:     hsl( 21, 86%, 70%);
-$yellow:     hsl( 40, 98%, 78%);
-$green:      hsl( 98, 64%, 68%);
-$blue:       hsl(195, 83%, 73%);
-$purple:     hsl(246, 80%, 80%);
-$magenta:    hsl(350, 100%, 70%);
+$text:       hsl($syntax-hue, 9%, 90%);
+// $subtle:     hsl($syntax-hue, 8%, 45%);
+$subtle:     darken($text, 35%);
+$highlight:  hsl($syntax-hue, 9%, 95%);
+$red:        hsl(  2, 60%, 51%);
+// $orange:     hsl( 21, 86%, 70%);
+$orange:    hsl( 20, 96%, 69%);
+// $yellow:     hsl( 40, 98%, 78%);
+$yellow:     hsl( 43, 92%, 74%);
+// $green:      hsl( 98, 64%, 68%);
+$green:      hsl(100, 68%, 65%);
+// $blue:       hsl(195, 83%, 73%);
+$blue:       hsl(188, 78%, 63%);
+// $purple:     hsl(246, 80%, 80%);
+$purple:     hsl(246, 70%, 80%);
+// $magenta:    hsl(350, 100%, 70%);
+$magenta:    hsl(348, 100%, 70%);
 $err:        $red;
 
 code[class*="language-"],
@@ -25,18 +32,14 @@ pre[class*="language-"] {
 	background: none;
 	text-shadow: 0 1px rgba(#000, 0.3);
 	font-family: _font(fixed-family);
+	font-weight: 400;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
 	line-height: 1.5;
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
 	tab-size: 4;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
 	hyphens: none;
 }
 
@@ -82,13 +85,8 @@ pre[class*="language-"] {
 	&.attr-name,
 	&.string,
 	&.char,
-	&.builtin,
 	&.inserted {
 		color: $yellow;
-	}
-
-	&.operator {
-		color: $magenta;
 	}
 
 	&.entity,
@@ -98,6 +96,7 @@ pre[class*="language-"] {
 	}
 
 	&.atrule,
+	&.builtin,
 	&.attr-value,
 	&.function {
 		color: $green;
@@ -111,8 +110,14 @@ pre[class*="language-"] {
 	&.important {
 		color: $orange;
 	}
+	
+	&.operator,
+	&.keyword-if {
+		color: $magenta;
+	}
 
 	&.important,
+	&.operator .ow,
 	&.bold {
 		font-weight: bold;
 	}
@@ -136,4 +141,87 @@ pre[class*="language-"] {
 
 .namespace {
 	opacity: 0.7;
+}
+
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em; /* Same as .prism’s padding-top */
+	background: hsla(24, 20%, 50%,.08);
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	pointer-events: none;
+	line-height: inherit;
+	white-space: pre;
+	&:before, &:after {
+		content: none;
+	}
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+	content: attr(data-start);
+	position: absolute;
+	top: .4em;
+	left: .6em;
+	min-width: 1em;
+	padding: 0 .5em;
+	background-color: hsla(24, 20%, 50%,.4);
+	color: hsl(24, 20%, 95%);
+	font: bold 65%/1.5 sans-serif;
+	text-align: center;
+	vertical-align: .3em;
+	border-radius: 999px;
+	text-shadow: none;
+	box-shadow: 0 1px white;
+}
+
+.line-highlight[data-end]:after {
+	content: attr(data-end);
+	top: auto;
+	bottom: .4em;
+}
+
+.token a {
+	color: inherit;
+}
+
+.token.string a {
+	color: $yellow;
+}
+
+.token.string .se {
+	color: $purple;
+}
+
+.command-line-prompt {
+	border-right: 1px solid #999;
+	display: block;
+	float: left;
+	font-size: 100%;
+	letter-spacing: -1px;
+	margin-right: 1em;
+	pointer-events: none;
+	user-select: none;
+	> span:before {
+		color: #999;
+		content: ' ';
+		display: block;
+		padding-right: 0.8em;
+	}
+	> span[data-user]:before {
+		content: "[" attr(data-user) "@" attr(data-host) "] $";
+	}
+	> span[data-prompt]:before {
+		content: attr(data-prompt);
+	}
+	> span[data-user="root"]:before {
+		content: "[" attr(data-user) "@" attr(data-host) "] #";
+	}
 }

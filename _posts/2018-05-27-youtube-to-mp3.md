@@ -81,7 +81,8 @@ $ yt2mp3 [-options]
 ## Documentation  
 Further documentation is available on [Read The Docs](https://yt2mp3.readthedocs.io/en/latest/)
 
-------  
+<br>
+<!-- ------   -->
 
 ## Development  
 If you'd like to contribute to the project, you can download and install the program with the following commands:  
@@ -98,5 +99,5 @@ $ pip install -r requirements.txt
 ```
 
 <br>  
-
------
+  
+  

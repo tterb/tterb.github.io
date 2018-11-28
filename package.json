@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "A personal website for my projects, designs and blog",
   "main": "Gulpfile.js",
-  "dependencies": {
-    "chart.js": "^2.7.2",
-    "critical": "^0.8.4",
-    "jspm": "^0.16.53"
-  },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "browser-sync": "^2.23.6",
@@ -18,6 +13,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^3.0.3",
     "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.1.0",

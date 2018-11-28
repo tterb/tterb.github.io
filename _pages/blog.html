@@ -5,6 +5,8 @@ permalink: /blog/
 options: fullwidth
 desc: A place to share updates on the projects I'm working on, as well as helpful tools and tutorials relating to software development and design.
 image: blog.jpg
+style-includes:
+  - blog.css
 pagination: 
   enabled: true
   permalink: 'page:num/'
@@ -16,63 +18,41 @@ sitemap:
 <section id="blog" class="wrapper alt style6">
   <section class="blog-main">
     {% if site.posts %}
-      <ul class="card-list">
+      <div class="card-list">
       {% for post in paginator.posts %}
-        {% if post.image %}
-        <li class="post-card">
-          <a href="{{ post.url | prepend: site.baseurl }}">
-          <div class="card-img-container clearfix">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="image featured">
-              <img src="{{ post.image | prepend: '/assets/img/posts/' | prepend: site.baseurl }}" alt="{{ post.title }}"/>
-            </a>
-          </div>
-          </a>
-          <div class="card-content clearfix">
+        <div class="blog-card" onclick="location.href='{{ post.url | prepend: site.baseurl }}';" style="background-image: url({{ post.image | prepend: '/assets/img/posts/' | prepend: site.baseurl }})">
+          <div class="content-mask">
+            {% for tag in post.tags limit: 1 %}
+              {% assign tag_id = tag | prepend: "#" | append: "-tag" | slugify %}
+              <span class="card-category {{ tag | slugify }}"><a href="{{ tag_id | prepend: '/tags/#' }}">{{ tag | capitalize }}</a></span>
+            {% endfor %}
+            <!-- <span class="category">Web</span> -->
             <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
             <p>{{ post.description | strip_html | truncatewords: 25, "..." }}</p>
             <div class="card-detail clearfix">
-              <ul class="card-tags">
-                {% for tag in post.tags limit: 1 %}
-                  {% assign tag_id = tag | prepend: "#" | append: "-tag" | slugify %}
-                  <li class="card-tag-item"><a href="{{ tag_id | prepend: '/tags/#' }}">{{ tag | capitalize }}</a></li>
-                {% endfor %}
-              </ul>
-              <span class="card-date"><i class="far fa-calendar-alt"></i>{{ post.date | date: "%d %b %y" }}</span>
+              <span class="card-date"><i class="far fa-calendar-alt"></i><span>{{ post.date | date: "%d %B %Y" }}</span></span>
             </div>
           </div>
-        </li>
-        {% endif %}
+          <div class="horizontal"></div>
+        </div>
       {% endfor %}
-      </ul>
-    {% endif %}
-    {% if paginator.total_pages > 1 %}
-      {% include page-nav.html %}
+    </div>
     {% endif %}
   </section>
-  <!-- <span class="subscribe-button">
-    <button>Subscribe</button>
-  </span> -->
   <div class="sidebar">
-    <div class="search sidebar-block sidebar-button style1">
-      <div class="btn-search"><span class="fas fa-search"></span><h4>Search</h4></div>
+    <div class="sidebar-icons">
+      <a class="search-button"><span class="search-button fas fa-fw fa-search"></span></a>
+      <a href="{{ '/tags' }}"><span class="fas fa-fw fa-tags"></span></a>
+      <a href="{{ '/archive' }}"><span class="fas fa-fw fa-archive"></span></a>
     </div>
-    <div class="archive-block sidebar-block sidebar-button style2">
-      <a class="btn-archive" href="{{ '/archive' }}"><h4>Archive</h4></a>
-    </div>
-    <!-- <div class="mailing-list sidebar-block style2">
-      <h4>Join the Mailing List</h4>
-      <p>Get notified when new posts are published</p>
-      <input type="text" placeholder="Your Email"></input>
-      <button>Sign up!</button>
-    </div> -->
-    <div class="sidebar-tags sidebar-block style3">
-      <!-- <ul class="inline">
-        {% assign featured_tags = site.tags %}
-        {% for tag in featured_tags limit: 10 %}
-          <li class="card-tag-item"><a href="{{ site.baseurl }}tags/#{{ tag[0] }}" class="tag">{{ tag[0] }}</a></li>
-        {% endfor %}
-      </ul> -->
+    <hr>
+    <div class="sidebar-tags sidebar-block">
       {% popular_tags 10 %}
     </div>
   </div>
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination-container">
+      {% include page-nav.html %}
+    </div>
+  {% endif %}
 </section>

@@ -293,7 +293,7 @@ gulp.task('build', function(callback) {
 ```
 
 ## Cleaning up  
-In accordance with the [Boy Scout Rule](http://deviq.com/boy-scout-rule/), we&rsquo;re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an &ldquo;*undo*&rdquo; button for the gulp tasks we&rsquo;ve created.
+In accordance with the [Boy Scout Rule](http://wiki.c2.com/?BoyScoutRule), we&rsquo;re gonna need a few tasks to clean up after ourselves. These tasks can basically act as an &ldquo;*undo*&rdquo; button for the gulp tasks we&rsquo;ve created.
 
 ```js
 // Delete CSS

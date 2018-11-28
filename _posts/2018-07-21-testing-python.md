@@ -75,7 +75,7 @@ def test_song():
     yt2mp3.Song(data)
 ```
 
-While, you can see that there&rsquo;s not a lot of code that goes into creating the object, it&rsquo;s best to follow the [DRY](https://deviq.com/don-t-repeat-yourself/) principal and avoid redundancy.  
+While, you can see that there&rsquo;s not a lot of code that goes into creating the object, it&rsquo;s best to follow the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principal and avoid redundancy.  
 Now that our fixture is defined, we are going to use it to write two tests to check the program&rsquo;s ability to download a video and convert the video to an mp3.  
 To test the program&rsquo;s download functionality, we&rsquo;ll utilize the fact that the `yt2mp3.download()` function returns the filepath when the download is successful by asserting that the returned filepath exists.  
 <p class="h-note">Notice that we&rsquo;ve provided our <code class="highlighter-rouge">test_song</code> fixture as a parameter of the test function.</p>
