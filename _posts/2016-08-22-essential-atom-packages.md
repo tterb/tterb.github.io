@@ -74,6 +74,6 @@ $ apm install <package-name>
 
 <br><br>
 
-<button class="button bottom special"><a href="{{ '/assets/download/atom-package-list.zip' | prepend: site.baseurl }}">Download the list</a></button>
+<button class="button bottom special"><a href="{{ '/assets/downloads/atom-package-list.zip' | prepend: site.baseurl }}">Download the list</a></button>
 
-[1]:{{ site.baseurl }}/assets/download/atom-package-list.zip
+[1]:{{ site.baseurl }}/assets/downloads/atom-package-list.zip
