@@ -1,27 +1,25 @@
 // Gulpfile.js
 
-const autoprefixer = require('autoprefixer');
-const browserSync  = require('browser-sync').create();
-// const cleancss     = require('gulp-clean-css');
-const concat       = require('gulp-concat');
-const cssnano      = require('cssnano');
-const del          = require('del');
-const gulp         = require('gulp');
-const gutil        = require('gulp-util');
-const newer        = require('gulp-newer');
-const imagemin     = require('gulp-imagemin');
-const plumber      = require('gulp-plumber');
-const pngquant     = require('imagemin-pngquant');
-const postcss      = require('gulp-postcss');
-const rename       = require('gulp-rename');
-const run          = require('gulp-run');
-const runSequence  = require('run-sequence');
-const sass         = require('gulp-ruby-sass');
-const uncss        = require('uncss');
-const uglify       = require('gulp-uglify-es').default;
-
+const autoprefixer = require('autoprefixer'),
+      browserSync  = require('browser-sync').create(),
+      concat       = require('gulp-concat'),
+      cssnano      = require('cssnano'),
+      del          = require('del'),
+      gulp         = require('gulp'),
+      gutil        = require('gulp-util'),
+      newer        = require('gulp-newer'),
+      imagemin     = require('gulp-imagemin'),
+      plumber      = require('gulp-plumber'),
+      pngquant     = require('imagemin-pngquant'),
+      postcss      = require('gulp-postcss'),
+      rename       = require('gulp-rename'),
+      run          = require('gulp-run'),
+      runSequence  = require('run-sequence'),
+      sass         = require('gulp-ruby-sass'),
+      uncss        = require('uncss'),
+      uglify       = require('gulp-uglify-es').default;
 // Include paths file
-const paths = require('./_assets/gulp-config/paths');
+const paths        = require('./_assets/gulp-config/paths');
 
 // error function for plumber
 var onError = function (err) {
@@ -59,19 +57,6 @@ gulp.task('build:styles:all', function() {
     .pipe(browserSync.stream())
     .on('error', gutil.log);
 });
-
-// gulp.task('build:styles:local', function() {
-//   return sass(paths.sassFiles + '/local'+ paths.sassPattern, {
-//     style: 'compressed',
-//     trace: true,
-//     loadPath: [paths.sassFiles]
-//   }).pipe(postcss([autoprefixer({ browsers: ['last 2 versions']}), cssnano()]))
-//     // .pipe(postcss([uncss({ html: paths.jekyllHtmlFilesGlob })]))
-//     .pipe(gulp.dest(paths.jekyllCssFiles))
-//     .pipe(gulp.dest(paths.siteCssFiles))
-//     .pipe(browserSync.stream())
-//     .on('error', gutil.log);
-// });
 
 // Create and process critical CSS file to be included in head.html
 gulp.task('build:styles:critical', function() {
@@ -174,7 +159,7 @@ gulp.task('clean:images', function(callback) {
 
 // Place download files in proper location
 gulp.task('build:downloads', function() {
-  return gulp.src(paths.downloadFiles + '/**/*.zip')
+  return gulp.src(paths.downloadFiles + '/**/*.{zip,pdf}')
     .pipe(rename(function(path) {path.dirname = '';}))
     .pipe(gulp.dest(paths.jekyllDownloadFiles))
     .pipe(gulp.dest(paths.siteDownloadFiles))
