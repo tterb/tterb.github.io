@@ -391,6 +391,20 @@
     line-height: 20px !important;
     margin-top: 15px !important;
   }
+  
+  kbd {
+    background: linear-gradient(to bottom, rgba(#000, 0.015), rgba(#000, 0.04));
+    font-family: _palette(fixed-family);
+    font-size: 0.75em;
+    text-transform: none !important;
+    border: 1px solid #ECECEC;
+    border-bottom: #EAEAEA;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(#000, 0.45);
+    margin: 0;
+    padding: 3px 7px;
+    white-space: nowrap;
+  }
 }
 
 .readme-content {
