@@ -13,15 +13,15 @@ tags:
 ---
 
 
-# Why?
+## Why?
 
 Though I've become accustomed to writing bash scripts to automate the testing of my command&ndash;line applications, upon being introduced to Ruby testing while reading Michael Hartl&rsquo;s [The Ruby on Rails Tutorial](https://www.railstutorial.org/book), I was surprised by how much easier debugging is when you&rsquo;re able to write tests for each component of the program, rather than just the input/output of my bash scripts. So given my proclivity for Python, I instantly became curious about the process of implementing similar tests in Python.  
 
-# Okay, How?  
+## Okay, How?  
 
 After a bit of research into the available testing frameworks, I decided on [pytest](https://github.com/pytest-dev/pytest) due to the balance of capability and ease&ndash;of&ndash;use. Additionally, we&rsquo;ll be writing a few tests for my [yt2mp3](https://github.com/tterb/yt2mp3) program, which I had previously been testing using one of the aforementioned bash scripts.  
 
-# Setup  
+## Setup  
 Before we start writing tests, we need to create a new file with the following convention, `test_{filename}.py`. This is so that [pytest](https://github.com/pytest-dev/pytest) can accurately identify the files that contain tests to execute, when we run from the command&ndash;line, as shown below:
 ```bash
 $ pytest
@@ -29,7 +29,7 @@ $ pytest
 <p class="h-tip">I prefer running pytest with the <code class="highlighter-rouge">-v</code> or <code class="highlighter-rouge">--verbose</code> flag, as this prints the test that is being run and whether it passed/failed.</p>
 
 
-# Basic Testing  
+## Basic Testing  
 
 To get started, the first test we&rsquo;re going to write is going to ensure that the program is able to accurately retrieve the title of a YouTube video when given a URL.  
 For this we&rsquo;re going to:  
@@ -63,7 +63,7 @@ def test_get_playlist():
     assert playlist == video_list
 ```
 
-# Using Fixtures  
+## Using Fixtures  
 
 To introduce the idea of fixtures, we&rsquo;ll write a test that requires that we have a `Song` object, which stores the data necessary for downloading and setting the ID3 tags of the output mp3 file. Therefore, it&rsquo;s understandable that a similar `Song` object may be necessary to test multiple functionalities of the program. That&rsquo;s where fixtures come in.  
 
@@ -111,7 +111,7 @@ def test_convert_mp3(test_song):
     assert not errors, 'errors occured:\n{}'.format('\n'.join(errors))
 ```
 
-# Conclusion  
+## Conclusion  
 
 Now we already have tests that cover a significant amount of the programs processes, without requiring a whole lot of work(*or code*). 
 Hopefully, these examples have provided you a launchpad for testing your own python programs. Though I expect that I&rsquo;ll be updating this post or posting a follow&ndash;up with more helpful info as I become increasingly versed in Python testing.
