@@ -14,7 +14,7 @@ paths.fontFolder     = 'fonts';
 paths.imageFolder    = 'img';
 paths.scriptFolder   = 'js';
 paths.stylesFolder   = 'styles';
-paths.downloadFolder = 'download';
+paths.downloadFolder = 'downloads';
 
 // Asset files locations.
 paths.sassFiles     = paths.assetsDir + paths.stylesFolder;

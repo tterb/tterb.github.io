@@ -4,6 +4,7 @@
   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <title>{% if page.title %}{{ page.title }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.desc %}{{ page.desc | strip_html | strip_newlines | truncate: 180 }}{% else %}{{ site.description }}{% endif %}"/>
+  <meta name="google-site-verification" content="6yHQUNa73SluRgTESKxZGGnM2N1cGssWeFns1AYFXCo" />
   
   {% seo %}
 
@@ -56,6 +57,6 @@
     }
   </style>
   {% endif %}
-
+  
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
 </head>
