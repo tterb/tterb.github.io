@@ -5,15 +5,12 @@
 # a good place to store your site-specific data that you'd rather not have
 # forked or cloned. Of course, that means you'd want to back it up elsewhere.
 
-# Also, for your post bylines, add author info for yourself in `_data/authors.yml`.
-# (Using that method instead of site.owner, in case your posts get cloned with your repo.)
-
 # Site settings
 title: Brett Stevenson
-description: Developer &#x1f784; Designer &#x1f784; Student
+description: Developer, Designer, Student
 owner:
   name: Brett Stevenson # or company name
-  email: BStevensonDev@gmail.com
+  email: bstevensondev@gmail.com
   url: https://brettstevenson.io
   avatar: "/assets/img/avatar.png"
 first_published: 2015 # if migrating another site, the year of your first publish
@@ -41,7 +38,7 @@ works_in_progress: yes
 custom_extensions: no
 
 # Contact page action
-mailaction: https://formspree.io/bstevensondev@gmail.com
+mailaction: https://usebasin.com/f/9d19a5ddd1f8
 
 # Build settings
 permalink: /:categories/:title.html
@@ -53,12 +50,13 @@ permalink: /:categories/:title.html
 #   style: compressed
 
 plugins:
-  - jemoji
   - jekyll-gist
-  - jekyll-seo-tag
-  - jekyll-paginate-v2
-  - jekyll-redirect-from
   - jekyll-github-metadata
+  - jekyll-paginate-v2
+  - jekyll-picture-tag
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jemoji
 
 pagination:
   enabled: true

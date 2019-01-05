@@ -40,7 +40,6 @@ $bg: #f5f7fa;
       // background-image: linear-gradient(60deg, rgba(#4CA4A9, 0.75), rgba(#182C72, 0.5)), url("/assets/img/blog.jpg") !important;
       // background-image: linear-gradient(60deg, rgba(#222, 0.5), rgba(#222, 0.5)), url("/assets/img/blog.jpg") !important;
       background-image: linear-gradient(-10deg, rgba(220,106,135,0.65) 45%, rgba(20,112,154,0.75)), url("/assets/img/blog.jpg") !important;
-      // background-image: url("/assets/img/blog.jpg") !important;
       background-position: 50% 180%; 
       padding: 3.5em 0 0.75em;
     }
@@ -98,10 +97,10 @@ $bg: #f5f7fa;
 	background-repeat: no-repeat !important;
   font-family: 'Nunito', sans-serif;
 	width: 100%;
-	max-width: 750px;
-	height: 400px;
+  max-width: 65vw;
+  height: 55vh;
 	box-shadow: 4px 7px 28px rgba(0,0,0,.1), 1px 3px 8px rgba(0,0,0,0.075);
-	margin: 7vh 0;
+	margin: 6vh 0;
   transition: all 300ms ease-in-out;
 	overflow: hidden !important;
   cursor: pointer;
@@ -131,9 +130,8 @@ $bg: #f5f7fa;
     height: 101%;
     width: 20%;
     top: -1%;
-    right: 0.75%;
+    right: 0.5vw;
     overflow: hidden;
-    // cursor: default;
   }
   .card-category {
   	display: inline-block;
@@ -144,46 +142,57 @@ $bg: #f5f7fa;
   	text-align: center;
   	min-width: 45px;
   	border-radius: 5px;
-  	box-shadow: 0 0 1px rgba(#ac1c38,.1), 0 2px 6px rgba(#ac1c38,.175);
+    text-shadow: 0 1px 0.25px rgba(#000, 0.5);
+    box-shadow: 0 0 1px rgba(#000, 0.1), 0 2px 6px rgba(darken(#ac1c38, 8%), 0.175);
     transition: all 300ms ease-in-out;
-  	margin: 3vh 2px 3vh;
+  	margin: 3vh 0;
   	padding: 6px 8px;
   	cursor: pointer;
   	z-index: 9;
+    &.ruby,
     &.jekyll {
       background: #d83737;
+      box-shadow: 0 0 1px rgba(#000, 0.1), 0 2px 6px rgba(darken(#d83737, 8%), 0.175);
     }
     &.discuss {
-  		background: #eda800;
-  	}
+      background: #eda800;
+      box-shadow: 0 0 1px rgba(#000, 0.1), 0 2px 6px rgba(darken(#eda800, 8%), 0.175);
+    }
     &.lua {
-    	background: #fbc02d;
+      background: #fbc02d;
+      box-shadow: 0 0 1px rgba(#000, 0.1), 0 2px 6px rgba(darken(#fbc02d, 8%), 0.175);
     }
     &.python {
-  		background: #2aa05a;
-  	}
+      background: #2aa05a;
+      box-shadow: 0 0 1px rgba(#000,0.1), 0 2px 6px rgba(darken(#2aa05a, 8%), 0.175);
+    }
     &.atom, 
     &.tools,
+    &.open-source,
     &.spotlight {
       background: #00897b;
+      box-shadow: 0 0 1px rgba(#000, 0.1), 0 2px 6px rgba(darken(#00897b, 8%), 0.175);
     }
     &.design, 
     &.ui {
       background: #00b8d4;
+      box-shadow: 0 0 1px rgba(#000, 0.1), 0 2px 6px rgba(darken(#00b8d4, 8%), 0.175);
     }
     &.c {
       background: #039be5;
+      box-shadow: 0 0 1px rgba(#000, 0.1), 0 2px 6px rgba(darken(#039be5, 8%), 0.175);
     }
     &.tutorial {
-      background: #8d97d3;
+      background: #8d87d3;
+      box-shadow: 0 0 1px rgba(#000, 0.1), 0 2px 6px rgba(darken(#8d87d3, 8%), 0.175);
     }
-    &.web, 
-    &.jekyll, 
+    &.web,
     &.javascript {
-  		background: #e23f7e;
-  	}
+      background: #e23f7e;
+    }
   	&:hover {
-  		box-shadow: 0 0 1px rgba(#0a603a,.2), 0 3px 6px rgba(39,44,49,.25);
+      color: rgba(#fff, 0.95);
+  		box-shadow: 0 0 1px rgba(#000, 0.15), 0 2px 6px rgba(#000, 0.2);
   	}
   }
 
@@ -242,7 +251,7 @@ $bg: #f5f7fa;
   width: 21vw;
   height: 100%;
   float: right;
-  margin-right: -0.65em;
+  // margin-right: -0.65em;
   padding-top: 0.5em;
   .sidebar-icons {
     width: 80%;
@@ -589,7 +598,6 @@ body.is-mobile {
     height: 275px;
     .content-mask {
       width: 75%;
-      // height: 101%;
       top: -3px;
       padding-left: 1.25em;
       .card-category {

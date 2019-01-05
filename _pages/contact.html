@@ -13,8 +13,9 @@ sitemap:
   priority: 0.3
 ---
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <section class="wrapper style2">
-  <form accept-charset="UTF-8" action="https://usebasin.com/f/9d19a5ddd1f8" method="POST">
+  <form accept-charset="UTF-8" action="{{ site.mailaction }}" method="POST">
     <input type='hidden' name='_next' value='{{ '/contact-success' | prepend: site.baseurl | prepend: site.url }}'/>
     <input type="text" name="_gotcha" style="display:none">
     <div class="row uniform">
@@ -30,6 +31,7 @@ sitemap:
         <textarea name="textbody" id="textbody" rows="7" required></textarea>
         <span class="focus-input" data-placeholder="MESSAGE"></span>
       </div>
+      <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
       <div class="actions contact-submit">
         <div><input type="submit" value="Send Message" class="button special"></div>
       </div>
@@ -39,19 +41,9 @@ sitemap:
     <input type="hidden" name="failure"
            value="{{ '/contact-failure' | prepend: site.baseurl | prepend: site.url }}"/>
   </form>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-<script>
-  function onSubmit(token) {
-    document.getElementById("invisible-recaptcha-form").submit();
-  }
-</script>
-
-<form id="invisible-recaptcha-form">
-  <button class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Submit</button>
-</form>
   <!-- <script>
-    var contactform =  document.getElementById('sendemail');
-    contactform.setAttribute('action', '//formspree.io/' + 'b'+'stevenson'+'dev'+'@'+'gmail'+'.'+'com');
+    function onSubmit(token) {
+      document.getElementById("invisible-recaptcha-form").submit();
+    }
   </script> -->
 </section>
