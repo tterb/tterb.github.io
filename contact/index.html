@@ -13,14 +13,14 @@
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Contact" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Developer 🞄 Designer 🞄 Student" />
-<meta property="og:description" content="Developer 🞄 Designer 🞄 Student" />
+<meta name="description" content="Developer, Designer, Student" />
+<meta property="og:description" content="Developer, Designer, Student" />
 <link rel="canonical" href="https://brettstevenson.io/contact/" />
 <meta property="og:url" content="https://brettstevenson.io/contact/" />
 <meta property="og:site_name" content="Brett Stevenson" />
 <meta property="og:image" content="https://brettstevenson.io/banner.jpg" />
 <script type="application/ld+json">
-{"description":"Developer 🞄 Designer 🞄 Student","@type":"WebPage","url":"https://brettstevenson.io/contact/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://brettstevenson.io/assets/img/logo.png"}},"image":"https://brettstevenson.io/banner.jpg","headline":"Contact","@context":"http://schema.org"}</script>
+{"description":"Developer, Designer, Student","@type":"WebPage","url":"https://brettstevenson.io/contact/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://brettstevenson.io/assets/img/logo.png"}},"image":"https://brettstevenson.io/banner.jpg","headline":"Contact","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -211,7 +211,8 @@
       <h1>Contact</h1>
       <div class="form-container">
         <h3>Get in touch</h3>
-        <section class="wrapper style2">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<section class="wrapper style2">
   <form accept-charset="UTF-8" action="https://usebasin.com/f/9d19a5ddd1f8" method="POST">
     <input type='hidden' name='_next' value='https://brettstevenson.io/contact-success'/>
     <input type="text" name="_gotcha" style="display:none">
@@ -228,6 +229,7 @@
         <textarea name="textbody" id="textbody" rows="7" required></textarea>
         <span class="focus-input" data-placeholder="MESSAGE"></span>
       </div>
+      <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
       <div class="actions contact-submit">
         <div><input type="submit" value="Send Message" class="button special"></div>
       </div>
@@ -237,20 +239,10 @@
     <input type="hidden" name="failure"
            value="https://brettstevenson.io/contact-failure"/>
   </form>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-<script>
-  function onSubmit(token) {
-    document.getElementById("invisible-recaptcha-form").submit();
-  }
-</script>
-
-<form id="invisible-recaptcha-form">
-  <button class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Submit</button>
-</form>
   <!-- <script>
-    var contactform =  document.getElementById('sendemail');
-    contactform.setAttribute('action', '//formspree.io/' + 'b'+'stevenson'+'dev'+'@'+'gmail'+'.'+'com');
+    function onSubmit(token) {
+      document.getElementById("invisible-recaptcha-form").submit();
+    }
   </script> -->
 </section>
 
