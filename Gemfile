@@ -20,13 +20,13 @@ gem 'jekyll', '>= 3.1.2'
 # end
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
-gem 'jemoji'
+gem 'html-proofer'
 gem 'jekyll-gist'
 gem 'jekyll-github-metadata'
 gem 'jekyll-paginate-v2'
 gem 'jekyll-picture-tag'
 gem 'jekyll-redirect-from'
 gem 'jekyll-seo-tag'
-gem 'html-proofer'
+gem 'jemoji'
 gem 'scss_lint'
 gem 'travis', '>= 1.8.8'
