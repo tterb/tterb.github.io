@@ -1,5 +1,5 @@
 if ($('#back-to-top').length) {
-  var offset = 1400;
+  var offset = 1200;
   var scrollTrigger = 200;
   checkOffset = () => {
     var pos = $(document).height() - $(window).scrollTop();
