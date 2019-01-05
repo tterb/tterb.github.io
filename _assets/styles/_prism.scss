@@ -56,77 +56,83 @@ pre[class*="language-"] {
 	white-space: normal;
 }
 
-.token {
-	&.comment,
-	&.prolog,
-	&.doctype,
-	&.cdata {
-		color: $subtle;
-	}
+.highlight {
+	.token {
+		&.comment,
+		&.prolog,
+		&.doctype,
+		&.cdata {
+			color: $subtle;
+		}
 
-	&.punctuation {
-		color: $text;
-	}
-	
-	&.property,
-	&.tag,
-	&.constant,
-	&.symbol,
-	&.deleted {
-		color: $magenta;
-	}
+		&.punctuation {
+			color: $text;
+		}
+		
+		&.property,
+		&.tag,
+		&.constant,
+		&.symbol,
+		&.deleted {
+			color: $magenta;
+		}
 
-	&.boolean,
-	&.number {
+		&.boolean,
+		&.number {
+			color: $purple;
+		}
+
+		&.selector,
+		&.attr-name,
+		&.string,
+		&.char,
+		&.inserted {
+			color: $yellow;
+		}
+
+		&.entity,
+		&.url,
+		&.variable {
+			color: $text;
+		}
+
+		&.atrule,
+		&.builtin,
+		&.url-link,
+		&.attr-value,
+		&.function {
+			color: $green;
+		}
+
+		&.keyword {
+			color: $blue;
+		}
+
+		&.regex,
+		&.important {
+			color: $orange;
+		}
+		
+		&.operator,
+		&.keyword-if {
+			color: $magenta;
+		}
+
+		&.important,
+		&.operator .ow,
+		&.bold {
+			font-weight: bold;
+		}
+		&.italic {
+			font-style: italic;
+		}
+
+		&.entity {
+			cursor: help;
+		}
+	}
+	.nd {
 		color: $purple;
-	}
-
-	&.selector,
-	&.attr-name,
-	&.string,
-	&.char,
-	&.inserted {
-		color: $yellow;
-	}
-
-	&.entity,
-	&.url,
-	&.variable {
-		color: $text;
-	}
-
-	&.atrule,
-	&.builtin,
-	&.attr-value,
-	&.function {
-		color: $green;
-	}
-
-	&.keyword {
-		color: $blue;
-	}
-
-	&.regex,
-	&.important {
-		color: $orange;
-	}
-	
-	&.operator,
-	&.keyword-if {
-		color: $magenta;
-	}
-
-	&.important,
-	&.operator .ow,
-	&.bold {
-		font-weight: bold;
-	}
-	&.italic {
-		font-style: italic;
-	}
-
-	&.entity {
-		cursor: help;
 	}
 }
 
@@ -135,8 +141,19 @@ pre[class*="language-"] {
 	color: $text;
 }
 
-.language-bash .token.function {
-	color: $blue;
+.language-bash {
+	.token.function {
+		color: $magenta;
+		// .nb {
+		// 	color: $blue;
+		// }
+	}
+	.nt {
+		color: $orange;
+	}
+	.nv {
+		color: darken($text, 20%);
+	}
 }
 
 .namespace {
