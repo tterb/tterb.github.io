@@ -44,11 +44,11 @@
             {% endunless %}
             <div class="date-container">
               <span class="date"><strong style="margin-right:-2px">{{ page.date | date: "%d" }}</strong>&nbsp;{{ page.date | date: "%b" }}&nbsp;<strong>{{ page.date | date: "%Y" }}</strong></span>
-              <svg class="ico-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/assets/img/sprite-icons.svg#calendar" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
             </div>
           </div>
           <section id="content" class="written-content">
             <a name="top"></a>
+            <h1 class="seo-title">{{ page.title }}</h1>
             {{ content }}
             <a href="#" id="back-to-top" title="Back to Top"><img src="/assets/img/top-arrow.svg" alt="Back to Top"/></a>
             <!-- Emojicom -->
