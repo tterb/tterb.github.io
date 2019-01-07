@@ -2,24 +2,26 @@
 
 const autoprefixer = require('autoprefixer'),
       browserSync  = require('browser-sync').create(),
-      concat       = require('gulp-concat'),
       cssnano      = require('cssnano'),
       del          = require('del'),
       gulp         = require('gulp'),
-      gutil        = require('gulp-util'),
-      newer        = require('gulp-newer'),
+      concat       = require('gulp-concat'),
       imagemin     = require('gulp-imagemin'),
+      newer        = require('gulp-newer'),
       plumber      = require('gulp-plumber'),
-      pngquant     = require('imagemin-pngquant'),
       postcss      = require('gulp-postcss'),
       rename       = require('gulp-rename'),
-      run          = require('gulp-run'),
-      runSequence  = require('run-sequence'),
       sass         = require('gulp-ruby-sass'),
-      uncss        = require('uncss'),
+      run          = require('gulp-run'),
       uglify       = require('gulp-uglify-es').default;
-// Include paths file
-const paths        = require('./_assets/gulp-config/paths');
+      gutil        = require('gulp-util'),
+      jpegRecomp   = require('imagemin-jpeg-recompress'),
+      pngquant     = require('imagemin-pngquant'),
+      webp         = require('imagemin-webp'),
+      runSequence  = require('run-sequence'),
+      uncss        = require('uncss'),
+      // Include paths file
+      paths        = require('./_assets/gulp-config/paths');
 
 // error function for plumber
 var onError = function (err) {
@@ -141,10 +143,10 @@ gulp.task('build:images', function() {
   return gulp.src(paths.imageFilesGlob)
     .pipe(newer(paths.siteImageFiles))
     .pipe(imagemin({ 
-      optimizationLevel: 3, 
-      progressive: true, 
+      optimizationLevel: 3,
+      progressive: true,
       interlaced: true,
-      use: [pngquant()]
+      use: [pngquant(), jpegRecomp(), webp({quality: 75})]
     }))
     .pipe(gulp.dest(paths.jekyllImageFiles))
     .pipe(gulp.dest(paths.siteImageFiles))
