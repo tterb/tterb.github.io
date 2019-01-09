@@ -15,7 +15,7 @@ const autoprefixer = require('autoprefixer'),
       run          = require('gulp-run'),
       uglify       = require('gulp-uglify-es').default;
       gutil        = require('gulp-util'),
-      jpegRecomp   = require('imagemin-jpeg-recompress'),
+      mozjpeg      = require('imagemin-mozjpeg'),
       pngquant     = require('imagemin-pngquant'),
       webp         = require('imagemin-webp'),
       runSequence  = require('run-sequence'),
@@ -146,7 +146,7 @@ gulp.task('build:images', function() {
       optimizationLevel: 3,
       progressive: true,
       interlaced: true,
-      use: [pngquant(), jpegRecomp(), webp({quality: 75})]
+      use: [pngquant(), mozjpeg(), webp()]
     }))
     .pipe(gulp.dest(paths.jekyllImageFiles))
     .pipe(gulp.dest(paths.siteImageFiles))

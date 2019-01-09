@@ -19,7 +19,7 @@
     "gulp-run": "^1.7.1",
     "gulp-uglify-es": "^1.0.4",
     "gulp-util": "^3.0.7",
-    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^5.1.0",
     "imagemin-webp": "^5.0.0",
     "run-sequence": "^1.2.2",
