@@ -14,14 +14,6 @@
   background-image: -webkit-linear-gradient(to bottom, rgba(#000, 0.4), rgba(#000, 0.4)), url("/assets/img/dev.webp");
 }
 
-#about {
-  background: _palette(bg);
-  padding: 3em 0 9em;
-  .major {
-    margin-bottom: 1em;
-  }
-}
-
 #dev {
   font-family: _font(ctrl-family);
   font-size: _font(hdr-size-small);

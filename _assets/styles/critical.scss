@@ -11,7 +11,6 @@
   text-align: left;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 0 2px 18px rgba(#000, 0.2), inset 0 -100px 200px rgba(#201E1F, 0.95);
   cursor: default;
   overflow: hidden;
   .inner {
@@ -22,7 +21,7 @@
     display: inline-block;
     position: relative;
     color: rgba(#fff, 0.925);
-    font-family: 'Gotham HTF', 'Avenir Next', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Gotham HTF', 'Avenir Next', 'Open Sans', 'Helvetica Neue', sans-serif !important;
     font-size: 10vw;
     font-weight: 800;
     letter-spacing: 0.01em;
@@ -40,17 +39,12 @@
       margin-left: -2px;
       margin-right: -5px;
     }
-    @include breakpoint(xlarge) {
-      font-size: 8.75vw;
-      padding-top: 2vh;
-    }
   }
   h3 {
     color: rgba(#fff, 0.75);
     font-family: 'Avenir Next', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2.5vw;
     font-weight: 400;
-    // letter-spacing: 0.1em;
     letter-spacing: 0.075em;
     text-transform: uppercase;
     text-align: left;
@@ -102,21 +96,6 @@
     pointer-events: none;
     transition: opacity 1s ease-in-out 250ms;
     opacity: 0;
-  }
-
-  @include breakpoint(small) {
-    height: 75vh;
-    min-height: 0;
-    padding: 11em 0.55em 5em;
-    .inner {
-      top: -6.5vh;
-    }
-    h1 {
-      width: 80%;
-    }
-    br {
-      display: none;
-    }
   }
 }
 
@@ -211,7 +190,7 @@ body.is-loading {
     top: 0;
     left: 0.6em;
     transition: all 100ms ease-in-out;
-    margin-top: 0.2em;
+    margin-top: 0.15em;
     &:hover {
       color: #DADEE2;
       transition: color 350ms ease-in-out;

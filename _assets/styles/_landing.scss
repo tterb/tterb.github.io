@@ -179,7 +179,11 @@ hr {
 /* Section/Article */
 section, article {
   &.special {
-    text-align: center;
+    // text-align: center;
+    text-align: left;
+    header {
+      text-align: center;
+    }
   }
 }
 
@@ -212,6 +216,7 @@ header {
       border-bottom: solid 2px _palette(border);
       display: inline-block;
       padding-bottom: 0.15em;
+      text-align: center;
       &::after {
         content: '';
         display: block;
@@ -1217,9 +1222,6 @@ button, .button {
   &.style2 {
     @include wrapper(accent1);
     background-color: _palette(accent1, bg);
-    .inner {
-      padding-top: 3vh !important;
-    }
   }
 
   &.style3 {
@@ -1415,11 +1417,11 @@ body.is-menu-visible {
 }
 
 @keyframes scroll-bounce {
-  from, 25%, 53%, 75%, to { 
+  from, 25%, 55%, 75%, 95%, to { 
     transform: rotate(-45deg) translate3d(0, 0, 0);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-  40%, 43% { 
+  40%, 45% { 
     transform: rotate(-45deg) translate3d(20px, -20px, 0); 
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   }
@@ -1427,15 +1429,37 @@ body.is-menu-visible {
     transform: rotate(-45deg) translate3d(10px, -10px, 0);
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   }
-  80% {
+  78% {
     transform: rotate(-45deg) translate3d(5px, -5px, 0);
   }
 }
 
-#banner .scroll-btn span {
-  animation-name: scroll-bounce;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+#banner {
+  .scroll-btn span {
+    animation-name: scroll-bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @include breakpoint(xlarge) {
+    h1 {
+      font-size: 8.75vw;
+      padding-top: 2vh;
+    }
+  }
+  @include breakpoint(small) {
+    height: 75vh;
+    min-height: 0;
+    padding: 11em 0.55em 5em;
+    .inner {
+      top: -6.5vh;
+    }
+    h1 {
+      width: 80%;
+    }
+    br {
+      display: none;
+    }
+  }
 }
 
 #one {
@@ -1443,11 +1467,10 @@ body.is-menu-visible {
   // background-image: url("#{$baseurl}/noise.png");
   // background-color: _palette(bg);
   background: linear-gradient(rgba(_palette(bg), 0.75), rgba(_palette(bg), 0.75)), url("#{$baseurl}/noise.png");
-  height: 33vw;
+  height: 31vw;
   padding: 2.5em 0 0;
   .inner {
     position: relative;
-    // top: -104%;
     height: 30vw;
     z-index: 9;
   }
@@ -1460,16 +1483,7 @@ body.is-menu-visible {
     position: relative;
     height: 95%;
     width: 100%;
-    top: -80%;
-  }
-  &::after {
-    background: linear-gradient(to top left, transparent, transparent 50%, _palette(bg) 50%, _palette(bg));
-    display: block;
-    position: relative;
-    content: '';
-    width: 100%;
-    height: 11vw;
-    top: -28.75vw;
+    top: -85%;
   }
   @include breakpoint(small) {
     height: 35vw;
@@ -1482,7 +1496,7 @@ body.is-menu-visible {
   // background: _palette(accent5, bg) !important;
   // background: url("#{$baseurl}/p2.png");
   // background: #EEE url(//d1qmdf3vop2l07.cloudfront.net/teal-worm.cloudvent.net/compressed/9a30e6c6c75344e5bd217bbe9720ef3e.png);
-  height: 55vw;
+  // height: 55vw;
   padding: 9.5vw 0;
   .inner {
     position: relative;
@@ -1502,46 +1516,96 @@ body.is-menu-visible {
       text-shadow: 0 3px 5px _palette(accent5, shadow);
     }
   }
-  &::before {
-    // background: linear-gradient(rgba(_palette(accent5, bg), 0.75), rgba(_palette(accent5, bg), 0.75)), url("#{$baseurl}/p2.png");
-    background: linear-gradient(to bottom right, transparent, transparent 50%, _palette(accent5, bg) 50%, _palette(accent5, bg));
+}
+
+.asymmetrical {
+  position: relative !important;
+  // height: 45vw;
+  top: 11vw;
+  margin-bottom: 23vw;
+  padding: 0 !important;
+  z-index: 10;
+  .img-container {
+    margin-top: 0 !important;
+  }
+  .content-desc {
+    margin-top: 2.5vw !important;
   }
 }
 
-.angled {
-  .inner {
-    display: block;
-    position: relative;
-    width: 100%;
-    margin: -12vw auto 0;
-    header.major {
-      margin: 0 0 2em 0;
-    }
-  }
-  &::before {
-    background: linear-gradient(to bottom left, transparent, transparent 50%, _palette(bg) 50%, _palette(bg));
-    display: block;
-    position: relative;
-    content: '';
-    width: 100%;
-    height: 11vw;
-    top: -11vw;
-  }
+.asymmetrical::before,
+.asymmetrical::after {
+  display: block;
+  position: absolute;
+  background: #8b92a8;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 50%;
+  transform-origin: top left;
+  transform: skewY(-7deg);
+  z-index: -1;
+}
+
+.asymmetrical::before {
+  top: 0;
+  transform-origin: top left;
+  transform: skewY(-7deg);
+}
+
+.asymmetrical::after {
+  bottom: 0;
+  transform-origin: bottom left;
+  transform: skewY(7deg);
+}
+
+.asymmetrical-top, 
+.asymmetrical-bottom {
+  position: relative;
+  z-index: 25;
+}
+
+.asymmetrical-top::before {
+  display: block;
+  position: absolute;
+  background: _palette(accent1, bg);
+  content: "";
+  width: 100%;
+  height: 50%;
+  // top: -50%;
+  top: -12vw;
+  transform-origin: bottom left;
+  transform: skewY(6deg);
+  z-index: -1;
+}
+
+.asymmetrical-bottom {
+  margin-bottom: 11vw;
+}
+
+.asymmetrical-bottom::after {
+  display: block;
+  position: absolute;
+  background: _palette(bg);
+  content: "";
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  transform-origin: bottom left;
+  transform: skewY(6deg);
+  z-index: -1;
 }
 
 #three {
   position: relative;
   min-height: 85vh;
   box-shadow: 0 3px 12px rgba(#000, 0.45);
-  padding: 1vw 0 14vw;
+  // padding: 5vw 0 14vw;
+  padding: 0 0 8vw;
   .inner {
     top: -105%;
     width: 90%;
-    padding-top: 3vh;
-  }
-  &::before {
-    background: linear-gradient(to bottom left, transparent, transparent 50%, _palette(accent1, bg) 50%, _palette(accent1, bg));
-    top: -12vw;
+    padding-top: 2vh;
   }
   @include breakpoint(small) {
     min-height: 65vh;
@@ -1553,7 +1617,7 @@ body.is-menu-visible {
 }
 
 #four {
-  @include vendor('background-image', ('linear-gradient(to bottom, rgba(7,4,5,0.5), rgba(7,4,5,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+  @include vendor('background-image', ('linear-gradient(to bottom, rgba(7,4,5,0.45), rgba(7,4,5,0.45))', 'url("#{$baseurl}/banner.jpg")'));
   // background-position: bottom;
   background-attachment: fixed;
   background-position: initial;
@@ -1572,7 +1636,7 @@ body.is-menu-visible {
         letter-spacing: 0.035em;
         line-height: 1.15;
         text-align: left;
-        margin: 0.7em 0 0.45em 0;
+        margin: 0.45em 0 0.45em 0;
         text-shadow: 0px -2px 15px rgba(#000, 0.55) !important;
       }
       p {
@@ -1592,7 +1656,7 @@ body.is-menu-visible {
 
     .actions {
       width: 30%;
-      margin: 2em 1.75em 1.5em 0;
+      margin: 1.5em 1.75em 1.5em 0;
       order: 2;
       li > a {
         transition: all 500ms ease-in-out;
@@ -1650,6 +1714,14 @@ body.is-menu-visible {
   }
 }
 
+#about {
+  background: _palette(bg);
+  padding: 3em 0 5em;
+  .major {
+    margin-bottom: 1em;
+  }
+}
+
 .no-webp {
   #banner {
     @include vendor('background-image', ('linear-gradient(to bottom, rgba(10,10,13,0.35), rgba(10,10,13,0.35))', 'url("#{$baseurl}/banner.jpg")'));
@@ -1669,7 +1741,7 @@ body.is-menu-visible {
 }
 
 .mid-content {
-  height: 43vw;
+  // height: 43vw;
   .inner {
     display: flex;
     top: -105%;
@@ -1870,29 +1942,11 @@ body.is-menu-visible {
 /* Footer */
 #footer {
   background: linear-gradient(lighten(_palette(bg), 1.5%), darken(_palette(bg), 6.5%));
-  // background: linear-gradient(to top, #222, #2a2a2a);
   text-align: center;
   bottom: 0;
   width: 100%;
   border: 1px outset rgba(#444, 0.75);
-  // box-shadow: 0 -2px 4px rgba(#000, 0.4);
   padding: 1.95em 3em 0.65em !important;
-  // .footer-links {
-  //   text-align: left;
-  //   width: 20%;
-  //   list-style: none;
-  //   li {
-  //     font-size: 0.9em;
-  //     line-height: 1.9;
-  //   }
-  //   .link-title {
-  //     font-family: 'Gotham HTF', sans-serif;
-  //     font-size: 1.05em;
-  //     font-weight: 600;
-  //     line-height: 2.2;
-  //     border-bottom: 1px solid rgba(#fff, 0.1);
-  //   }
-  // }
   .icons {
     margin: 0.5em 5em;
     li {
@@ -1990,7 +2044,7 @@ body.is-menu-visible {
   @include breakpoint(small) {
     padding: 2vh 4vw 1vh !important;
     .icons {
-      font-size: 4vw;
+      font-size: 2vw;
       margin: 0.35em 0.75em;
       li {
         padding-right: 0.5vw !important;
@@ -1998,6 +2052,18 @@ body.is-menu-visible {
     }
     .copyright {
       font-size: 1.5vw;
+      padding-top: 0.5em;
+    }
+  }
+  @include breakpoint(xsmall) {
+    .icons {
+      font-size: 4vw;
+      li {
+        padding-right: 0.5vw !important;
+      }
+    }
+    .copyright {
+      font-size: 2vw;
       padding-top: 0.5em;
     }
   }
@@ -2152,17 +2218,21 @@ body {
   background-origin: padding-box;
   text-align: center;
   min-width: 48%;
-  max-width: 48%;
-  height: 220px;
+  width: 49.7%;
+  // height: 220px;
+  height: 32vh;
   border: 1px solid #30333b;
   border-radius: 2px;
   box-shadow: 0 0 4px rgba(#000, 0.4);
   vertical-align: bottom !important;
   transform: scale(1);
   transition: all 500ms ease-in-out 100ms !important;
-  margin: 5px 0.025em 0;
+  margin: 5px 0 0;
   cursor: default;
   overflow: hidden;
+  // &:nth-child(2n+1) {
+  //   margin-right: 0.25%;
+  // }
   &.top {
     vertical-align: top !important;
     margin-top: 0;
@@ -2260,7 +2330,7 @@ body {
     }
   }
   &:hover {
-    height: 320px;
+    height: 43vh;
     box-shadow: 0 1px 6px rgba(#000, 0.7);
     transform: scale(1, 1.0025);
     h4, p, a.button {
@@ -2340,8 +2410,9 @@ body.is-mobile {
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 55vh;
+      height: 85vh;
       h1 {
+        font-family: _font(title-family) !important;
         font-size: 14vw !important;
       }
       h3 {
@@ -2390,7 +2461,7 @@ body.is-mobile {
     background-attachment: local;
   }
   #menu {
-    width: 60%;
+    // width: 60%;
     .menu-page-link {
       font-size: 1.25em;
     }
@@ -2398,19 +2469,25 @@ body.is-mobile {
       display: none;
     }
   }
-  .angled .inner header.major {
-    margin: 0 0 3vh;
-  }
+
   #header {
     h1 a {
       top: -1vh;
       left: 1.75vw;
       .header-logo {
-        width: 6.5vw;
+        // width: 6.5vw;
+        width: 32px;
+        top: 8px;
+        left: -6px;
+        @include breakpoint(xsmall) {
+          width: 28px;
+          top: 5px;
+          left: 0;
+        }
       }
       span {
-        font-size: 4.5vw;
-        top: 0;
+        font-size: 3.5vw;
+        top: 4px;
         padding-top: 0;
         padding-left: 8px;
       }
@@ -2435,6 +2512,12 @@ body.is-mobile {
       height: 5vw;
       width: 60%;
     }
+  }
+}
+
+@include breakpoint(xsmall) {
+  .landing #banner {
+    height: 55vh !important;
   }
 }
 
